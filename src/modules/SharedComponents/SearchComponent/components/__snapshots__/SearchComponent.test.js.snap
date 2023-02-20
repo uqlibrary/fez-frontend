@@ -77,7 +77,7 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -126,7 +126,7 @@ exports[`SearchComponent should add one row for advanced search 2`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -154,7 +154,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -182,7 +182,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -210,7 +210,7 @@ exports[`SearchComponent should handle simple search text change 1`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -265,7 +265,7 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -315,7 +315,7 @@ exports[`SearchComponent should remove one row from advanced search 2`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -343,7 +343,7 @@ exports[`SearchComponent should render default view 1`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -388,7 +388,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -433,7 +433,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -461,7 +461,7 @@ exports[`SearchComponent should render simple search even if it says is advanced
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -489,7 +489,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -539,7 +539,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -588,7 +588,7 @@ exports[`SearchComponent should reset advanced search 2`] = `
       }
     }
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -633,7 +633,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -678,7 +678,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -723,7 +723,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -768,7 +768,7 @@ exports[`SearchComponent should toggle open access for advanced search 2`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -796,7 +796,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -841,7 +841,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -886,7 +886,7 @@ exports[`SearchComponent should update advanced search row on search text change
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -931,7 +931,7 @@ exports[`SearchComponent should update advanced search row on search text change
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -976,7 +976,7 @@ exports[`SearchComponent should update date range filter 1`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1026,7 +1026,7 @@ exports[`SearchComponent should update date range filter 2`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1076,7 +1076,7 @@ exports[`SearchComponent should update date range filter 3`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1121,7 +1121,7 @@ exports[`SearchComponent should update doc type values 1`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1171,7 +1171,7 @@ exports[`SearchComponent should update doc type values 2`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1216,7 +1216,7 @@ exports[`SearchComponent should update year range filter 1`] = `
     updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1267,7 +1267,7 @@ exports[`SearchComponent should update year range filter 2`] = `
       }
     }
   />
-  <WithStyles(ForwardRef(Snackbar))
+  <ForwardRef(Snackbar)
     anchorOrigin={
       Object {
         "horizontal": "left",

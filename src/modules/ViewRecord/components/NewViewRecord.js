@@ -5,9 +5,9 @@ import { useParams } from 'react-router';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
-import Chip from '@material-ui/core/Chip';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Chip from '@mui/material/Chip';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -33,11 +33,11 @@ import globalLocale from 'locale/global';
 import * as actions from 'actions';
 import { notFound } from '../../../config/routes';
 import clsx from 'clsx';
-import Badge from '@material-ui/core/Badge';
-import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
-import { makeStyles } from '@material-ui/core/styles';
+import Badge from '@mui/material/Badge';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import makeStyles from '@mui/styles/makeStyles';
 import AdminViewRecordDrawer from './AdminViewRecordDrawer';
-import { Button } from '@material-ui/core';
+import Button from '@mui/material/Button';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
 import { doesListContainItem } from 'helpers/general';
@@ -234,7 +234,6 @@ export const NewViewRecord = ({
                                         <Button
                                             variant="outlined"
                                             startIcon={getAdminRecordButtonIcon()}
-                                            color="default"
                                             onClick={handleDrawerToggle}
                                             id="adminDrawerButton"
                                             data-testid="btnAdminToggleDrawerVisibility"

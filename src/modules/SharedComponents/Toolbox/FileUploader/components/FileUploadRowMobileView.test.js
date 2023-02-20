@@ -35,7 +35,7 @@ describe('Component FileUploadRowMobileView', () => {
     });
 
     it('should render default view with styles', () => {
-        const wrapper = getElement(FileUploadRowMobileViewWithStyles, getProps());
+        const wrapper = getElement(FileUploadRowMobileViewWithStyles, getProps(), { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

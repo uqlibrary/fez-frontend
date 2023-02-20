@@ -483,6 +483,7 @@ export class FilesClass extends Component {
                             direction="row"
                             alignItems="center"
                             spacing={2}
+                            padding={0}
                             className={this.props.classes.header}
                         >
                             <Grid item xs={2} sm={1}>
@@ -493,21 +494,28 @@ export class FilesClass extends Component {
                                     {locale.viewRecord.sections.files.fileName}
                                 </Typography>
                             </Grid>
-                            <Hidden xsDown>
-                                <Grid item sm={6} md={4} data-testid="dsi-label-label">
-                                    <Typography variant="caption" gutterBottom>
-                                        {locale.viewRecord.sections.files.description}
-                                    </Typography>
-                                </Grid>
-                            </Hidden>
-                            <Hidden smDown>
-                                <Grid item md={2} data-testid="dsi-size-label">
-                                    <Typography variant="caption" gutterBottom>
-                                        {locale.viewRecord.sections.files.size}
-                                    </Typography>
-                                </Grid>
-                            </Hidden>
-                            <Grid item sm />
+                            <Grid
+                                item
+                                sm={6}
+                                md={4}
+                                data-testid="dsi-label-label"
+                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                            >
+                                <Typography variant="caption" gutterBottom>
+                                    {locale.viewRecord.sections.files.description}
+                                </Typography>
+                            </Grid>
+                            <Grid
+                                item
+                                md={2}
+                                data-testid="dsi-size-label"
+                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                            >
+                                <Typography variant="caption" gutterBottom>
+                                    {locale.viewRecord.sections.files.size}
+                                </Typography>
+                            </Grid>
+                            <Grid item sm sx={{ display: { xs: 'none', sm: 'block' } }} />
                         </Grid>
                     </div>
 
@@ -519,6 +527,7 @@ export class FilesClass extends Component {
                                 alignItems="center"
                                 key={`file-${index}`}
                                 spacing={2}
+                                padding={0}
                                 wrap={'nowrap'}
                                 className={this.props.classes.header}
                             >
@@ -551,32 +560,36 @@ export class FilesClass extends Component {
                                         disabled={item.avCheck.isInfected}
                                     />
                                 </Grid>
-                                <Hidden xsDown>
-                                    <Grid
-                                        item
-                                        sm={6}
-                                        md={4}
-                                        className={this.props.classes.dataWrapper}
-                                        data-testid={`dsi-label-${index}`}
-                                    >
-                                        <Typography variant="body2" noWrap>
-                                            {item.description}
-                                        </Typography>
-                                    </Grid>
-                                </Hidden>
-                                <Hidden smDown>
-                                    <Grid
-                                        item
-                                        md={2}
-                                        className={this.props.classes.dataWrapper}
-                                        data-testid={`dsi-size-${index}`}
-                                    >
-                                        <Typography variant="body2" noWrap>
-                                            {item.calculatedSize}
-                                        </Typography>
-                                    </Grid>
-                                </Hidden>
-                                <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
+                                <Grid
+                                    item
+                                    sm={6}
+                                    md={4}
+                                    className={this.props.classes.dataWrapper}
+                                    data-testid={`dsi-label-${index}`}
+                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                >
+                                    <Typography variant="body2" noWrap>
+                                        {item.description}
+                                    </Typography>
+                                </Grid>
+                                <Grid
+                                    item
+                                    md={2}
+                                    className={this.props.classes.dataWrapper}
+                                    data-testid={`dsi-size-${index}`}
+                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                >
+                                    <Typography variant="body2" noWrap>
+                                        {item.calculatedSize}
+                                    </Typography>
+                                </Grid>
+                                <Grid
+                                    item
+                                    sm
+                                    style={{ textAlign: 'right' }}
+                                    data-testid={`rek-oa-status-${index}`}
+                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                >
                                     <Box style={{ whiteSpace: 'nowrap' }}>
                                         <Box component={'span'} paddingRight={1}>
                                             <FileAvStateIcon

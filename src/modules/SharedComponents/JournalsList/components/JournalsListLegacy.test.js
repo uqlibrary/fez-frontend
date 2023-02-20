@@ -141,7 +141,10 @@ describe('Journal Search Results list', () => {
                         break;
                     case 'Open access':
                         // expect tooltip to match supplied data.
-                        expect(dataElement.querySelector('p').title).toEqual(fieldMap.toolTipLabel(dataItem));
+                        expect(dataElement.querySelector('p')).toHaveAttribute(
+                            'aria-label',
+                            fieldMap.toolTipLabel(dataItem),
+                        );
                         break;
                     case 'CiteScore percentile':
                         // Normalising spaces in this string, which appears to happen in the component.

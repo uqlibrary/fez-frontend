@@ -4,11 +4,11 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
@@ -28,56 +28,60 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
           </p>
         </div>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      sm={3}
+      sx={
+        Object {
+          "display": Object {
+            "md": "block",
+            "xs": "none",
+          },
+        }
+      }
     >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm={3}
+      <WithStyles(StandardRighthandCard)
+        title="Refine results"
       >
-        <WithStyles(StandardRighthandCard)
-          title="Refine results"
-        >
-          <Memo(FacetsFilter)
-            activeFacets={
-              Object {
-                "filters": Object {},
-                "ranges": Object {
-                  "Year": Object {
-                    "from": 2000,
-                    "to": 2010,
-                  },
+        <Memo(FacetsFilter)
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {
+                "Year": Object {
+                  "from": 2000,
+                  "to": 2010,
                 },
-              }
+              },
             }
-            disabled={false}
-            excludeFacetsList={
-              Array [
-                "Scopus document type",
-                "Genre",
-                "Year published",
-              ]
+          }
+          disabled={false}
+          excludeFacetsList={
+            Array [
+              "Scopus document type",
+              "Genre",
+              "Year published",
+            ]
+          }
+          facetsData={Object {}}
+          lookupFacetsList={
+            Object {
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
             }
-            facetsData={Object {}}
-            lookupFacetsList={
-              Object {
-                "Collection": "Collection (lookup)",
-                "Subject": "Subject (lookup)",
-              }
+          }
+          onFacetsChanged={[Function]}
+          renameFacetsList={
+            Object {
+              "Display type": "Work type",
+              "Subtype": "Work subtype",
             }
-            onFacetsChanged={[Function]}
-            renameFacetsList={
-              Object {
-                "Display type": "Work type",
-                "Subtype": "Work subtype",
-              }
-            }
-          />
-        </WithStyles(StandardRighthandCard)>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
+          }
+        />
+      </WithStyles(StandardRighthandCard)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -98,11 +102,11 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
     type="error"
     wiggle={null}
   />
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
@@ -122,8 +126,8 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
           </p>
         </div>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -143,11 +147,11 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
     onAction={[Function]}
     onRef={[Function]}
   />
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={9}
       xs={12}
@@ -155,15 +159,15 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
       <StandardCard
         noHeader={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         >
-          <WithStyles(ForwardRef(Typography))>
+          <ForwardRef(Typography)>
             3 out of 5 potential match(es) displayed. Select any item to claim it as your work.
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -172,7 +176,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
           }
           xs={true}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={true}
           >
@@ -208,109 +212,113 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 ]
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      sm={3}
+      sx={
+        Object {
+          "display": Object {
+            "md": "block",
+            "xs": "none",
+          },
+        }
+      }
     >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm={3}
+      <WithStyles(StandardRighthandCard)
+        title="Refine results"
       >
-        <WithStyles(StandardRighthandCard)
-          title="Refine results"
-        >
-          <Memo(FacetsFilter)
-            activeFacets={
-              Object {
-                "filters": Object {},
-                "ranges": Object {},
-              }
+        <Memo(FacetsFilter)
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
             }
-            disabled={false}
-            excludeFacetsList={
-              Array [
-                "Scopus document type",
-                "Genre",
-                "Year published",
-              ]
+          }
+          disabled={false}
+          excludeFacetsList={
+            Array [
+              "Scopus document type",
+              "Genre",
+              "Year published",
+            ]
+          }
+          facetsData={
+            Object {
+              "Display type": Object {
+                "buckets": Array [
+                  Object {
+                    "doc_count": 95,
+                    "key": 179,
+                  },
+                  Object {
+                    "doc_count": 34,
+                    "key": 130,
+                  },
+                  Object {
+                    "doc_count": 2,
+                    "key": 177,
+                  },
+                  Object {
+                    "doc_count": 2,
+                    "key": 183,
+                  },
+                  Object {
+                    "doc_count": 1,
+                    "key": 174,
+                  },
+                ],
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 3,
+              },
+              "Keywords": Object {
+                "buckets": Array [
+                  Object {
+                    "doc_count": 15,
+                    "key": "Brca1",
+                  },
+                  Object {
+                    "doc_count": 15,
+                    "key": "Oncology",
+                  },
+                  Object {
+                    "doc_count": 13,
+                    "key": "Breast cancer",
+                  },
+                  Object {
+                    "doc_count": 12,
+                    "key": "Genetics & Heredity",
+                  },
+                  Object {
+                    "doc_count": 10,
+                    "key": "Biochemistry & Molecular Biology",
+                  },
+                ],
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 641,
+              },
             }
-            facetsData={
-              Object {
-                "Display type": Object {
-                  "buckets": Array [
-                    Object {
-                      "doc_count": 95,
-                      "key": 179,
-                    },
-                    Object {
-                      "doc_count": 34,
-                      "key": 130,
-                    },
-                    Object {
-                      "doc_count": 2,
-                      "key": 177,
-                    },
-                    Object {
-                      "doc_count": 2,
-                      "key": 183,
-                    },
-                    Object {
-                      "doc_count": 1,
-                      "key": 174,
-                    },
-                  ],
-                  "doc_count_error_upper_bound": 0,
-                  "sum_other_doc_count": 3,
-                },
-                "Keywords": Object {
-                  "buckets": Array [
-                    Object {
-                      "doc_count": 15,
-                      "key": "Brca1",
-                    },
-                    Object {
-                      "doc_count": 15,
-                      "key": "Oncology",
-                    },
-                    Object {
-                      "doc_count": 13,
-                      "key": "Breast cancer",
-                    },
-                    Object {
-                      "doc_count": 12,
-                      "key": "Genetics & Heredity",
-                    },
-                    Object {
-                      "doc_count": 10,
-                      "key": "Biochemistry & Molecular Biology",
-                    },
-                  ],
-                  "doc_count_error_upper_bound": 0,
-                  "sum_other_doc_count": 641,
-                },
-              }
+          }
+          lookupFacetsList={
+            Object {
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
             }
-            lookupFacetsList={
-              Object {
-                "Collection": "Collection (lookup)",
-                "Subject": "Subject (lookup)",
-              }
+          }
+          onFacetsChanged={[Function]}
+          renameFacetsList={
+            Object {
+              "Display type": "Work type",
+              "Subtype": "Work subtype",
             }
-            onFacetsChanged={[Function]}
-            renameFacetsList={
-              Object {
-                "Display type": "Work type",
-                "Subtype": "Work subtype",
-              }
-            }
-          />
-        </WithStyles(StandardRighthandCard)>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
+          }
+        />
+      </WithStyles(StandardRighthandCard)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -318,26 +326,26 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
     >
       <WithStyles(InlineLoader)
         message="Searching for possibly your works"
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   />
@@ -348,26 +356,26 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
     >
       <WithStyles(InlineLoader)
         message="Searching for possibly your works"
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   />
@@ -378,11 +386,11 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
@@ -402,8 +410,8 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
           </p>
         </div>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -441,11 +449,11 @@ exports[`Component PossiblyMyRecords should show loader when user is filtering/p
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={9}
       xs={12}
@@ -453,27 +461,27 @@ exports[`Component PossiblyMyRecords should show loader when user is filtering/p
       <StandardCard
         noHeader={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={true}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
           >
             <WithStyles(InlineLoader)
               message="Searching for possibly your works"
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={true}
           />
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;

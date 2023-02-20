@@ -1,8 +1,8 @@
 import React from 'react';
-import { fireEvent, render } from 'test-utils';
+import { fireEvent, rtlRender } from 'test-utils';
 import { SelectedKeywordItem } from './SelectedKeywordItem';
 
-const setup = state => {
+const setup = (state, render = rtlRender) => {
     return render(<SelectedKeywordItem {...state} />);
 };
 

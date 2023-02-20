@@ -1,9 +1,9 @@
 import React from 'react';
 import KeywordsForm from './KeywordsForm';
 import { indexOf } from 'lodash';
-import { fireEvent, render } from 'test-utils';
+import { fireEvent, rtlRender } from 'test-utils';
 
-const setup = (testProps = {}) => {
+const setup = (testProps = {}, render = rtlRender) => {
     const props = {
         mode: 'add',
         onSubmit: jest.fn(),

@@ -1,8 +1,8 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
 import { JournalFieldsMap } from './JournalFieldsMap';
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
 import { sanitiseId } from 'helpers/general';
 
@@ -11,6 +11,7 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
         <Grid
             container
             spacing={0}
+            padding={0}
             id={`journal-list-data-col-2-min-${index}`}
             data-testid={`journal-list-data-col-2-min-${index}`}
             style={{ borderBottom: '1px dashed #e6e6e6' }}
@@ -42,6 +43,7 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                                     (item.showTooltip && itemData) ||
                                     ''
                                 }
+                                describeChild
                                 placement="left"
                                 disableFocusListener={!item.showTooltip || !itemData}
                                 disableHoverListener={!item.showTooltip || !itemData}

@@ -1,20 +1,9 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes, getFilenameId } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
-import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, act, createMatchMedia } from 'test-utils';
 import { openAccessConfig } from 'config';
 import * as fileUploadLocale from '../FileUploader/locale';
-
-import mediaQuery from 'css-mediaquery';
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
-
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
 
 jest.mock('context');
@@ -47,14 +36,11 @@ function setup(testProps = {}, renderer = rtlRender) {
         },
         ...restProps,
     };
-
     return renderer(<AttachedFiles {...props} />);
 }
 
 describe('AttachedFiles component', () => {
     beforeAll(() => {
-        window.matchMedia = createMatchMedia(window.innerWidth);
-
         useRecordContext.mockImplementation(() => ({
             record: recordWithDatastreams,
         }));
@@ -178,6 +164,7 @@ describe('AttachedFiles component', () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         const { getByText } = setup({ canEdit: true });
+        // each field should be in the document twice
         expect(getByText('MyUQeSpace_Researcher_Guidelines_current.pdf')).toBeInTheDocument();
         expect(getByText('My_UQ_eSpace_researcher_guidelines_2012.pdf')).toBeInTheDocument();
         expect(getByText('My_UQ_eSpace_researcher_guidelines_2014.pdf')).toBeInTheDocument();
@@ -246,13 +233,15 @@ describe('AttachedFiles component', () => {
             record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },
         }));
         useFormValuesContext.mockImplementationOnce(() => ({
-            openAccessStatusId: 453695,
+            openAccessStatusId: 453697,
         }));
         const onDateChangeFn = jest.fn();
         const { getByText, getAllByRole } = setup({
             canEdit: true,
+            disabled: false,
             dataStreams: [
                 {
+                    dsi_id: '252236',
                     dsi_pid: 'UQ:252236',
                     dsi_dsid: 'My_UQ_eSpace_UPO_guidelines_2016.pdf',
                     dsi_embargo_date: '2018-01-01',
@@ -266,6 +255,7 @@ describe('AttachedFiles component', () => {
                 },
             ],
             onDateChange: onDateChangeFn,
+            onDelete: jest.fn(),
         });
 
         act(() => {
@@ -285,6 +275,7 @@ describe('AttachedFiles component', () => {
             canEdit: true,
             dataStreams: [
                 {
+                    dsi_id: '252236',
                     dsi_pid: 'UQ:252236',
                     dsi_dsid: 'My_UQ_eSpace_UPO_guidelines_2016.pdf',
                     dsi_embargo_date: '2018-01-01',
@@ -396,6 +387,7 @@ describe('AttachedFiles component', () => {
     });
 
     it('should toggle preview', async done => {
+        window.matchMedia = createMatchMedia(1024);
         const dataStreams = [
             {
                 dsi_id: 1,

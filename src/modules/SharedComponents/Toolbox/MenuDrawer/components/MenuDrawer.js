@@ -4,17 +4,16 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as menuLocale } from 'locale/menu';
 
 // MUI 1
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import Drawer from '@material-ui/core/Drawer';
-import { withStyles } from '@material-ui/core/styles';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid';
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+import Drawer from '@mui/material/Drawer';
+import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => {
     return {
@@ -228,17 +227,15 @@ export class MenuDrawer extends Component {
                                         </ExternalLink>
                                     )}
                                 </Grid>
-                                <Hidden smUp>
-                                    <Grid item xs={2}>
-                                        <IconButton
-                                            onClick={onToggleDrawer}
-                                            aria-label={locale.closeMenuLabel}
-                                            size="small"
-                                        >
-                                            <KeyboardArrowLeft className={classes.iconButton} />
-                                        </IconButton>
-                                    </Grid>
-                                </Hidden>
+                                <Grid item xs={2} sx={{ display: { xs: 'block', sm: 'none' } }}>
+                                    <IconButton
+                                        onClick={onToggleDrawer}
+                                        aria-label={locale.closeMenuLabel}
+                                        size="small"
+                                    >
+                                        <KeyboardArrowLeft className={classes.iconButton} />
+                                    </IconButton>
+                                </Grid>
                             </Grid>
                             {// Skip nav section
                             docked && (

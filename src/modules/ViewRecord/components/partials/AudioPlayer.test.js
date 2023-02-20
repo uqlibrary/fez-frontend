@@ -65,17 +65,17 @@ describe('Audio Player Component ', () => {
             { isShallow: false },
         );
 
-        const playElement = wrapper.find('WithStyles(ForwardRef(IconButton))#playButton');
+        const playElement = wrapper.find('ForwardRef(IconButton)#playButton');
         const audio = wrapper.find('#audioPlayer');
         const pause = jest.fn();
         const play = jest.fn();
         audio.getDOMNode().pause = pause;
         audio.getDOMNode().play = play;
-        playElement.simulate('click');
+        playElement.find('button').simulate('click');
         expect(pause).toHaveBeenCalledTimes(0);
         expect(play).toHaveBeenCalledTimes(1);
-        const pauseElement = wrapper.find('WithStyles(ForwardRef(IconButton))#pauseButton');
-        pauseElement.simulate('click');
+        const pauseElement = wrapper.find('ForwardRef(IconButton)#pauseButton');
+        pauseElement.find('button').simulate('click');
         expect(pause).toHaveBeenCalledTimes(1);
         expect(play).toHaveBeenCalledTimes(1);
     });

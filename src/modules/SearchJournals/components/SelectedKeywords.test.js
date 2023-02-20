@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from 'test-utils';
+import { rtlRender } from 'test-utils';
 import { SelectedKeywords } from './SelectedKeywords';
 import locale from 'locale/components';
 
-const setup = state => {
+const setup = (state, render = rtlRender) => {
     return render(<SelectedKeywords {...{ onKeywordDelete: () => {}, ...state }} />);
 };
 

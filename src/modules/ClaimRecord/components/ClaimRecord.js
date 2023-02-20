@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Field, propTypes } from 'redux-form/immutable';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -23,7 +23,6 @@ import {
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { claimRecordConfig, pathConfig, validation } from 'config';
 import locale from 'locale/forms';
-import Hidden from '@material-ui/core/Hidden';
 import { CLAIM_PRE_CHECK } from '../../../repositories/routes';
 
 export const isClaimPreCheckResponse = error => error?.request?.responseURL?.includes?.(CLAIM_PRE_CHECK().apiUrl);
@@ -364,9 +363,7 @@ export default class ClaimRecord extends PureComponent {
                             )}
                         </Grid>
                         <Grid container spacing={3}>
-                            <Hidden xsDown>
-                                <Grid item xs />
-                            </Hidden>
+                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'contained'}
@@ -374,6 +371,7 @@ export default class ClaimRecord extends PureComponent {
                                     children={txt.cancel}
                                     disabled={this.props.submitting}
                                     onClick={this._cancelClaim}
+                                    color={'default'}
                                 />
                             </Grid>
                             {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&

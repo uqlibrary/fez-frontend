@@ -1,9 +1,8 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
 import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
-import mediaQuery from 'css-mediaquery';
 import * as actions from 'actions/journals.js';
 
 import { initialJournalSearchKeywords, initialState } from 'reducers/journals';
@@ -34,14 +33,6 @@ const setup = ({ state = {}, storeState = {}, testHistory = createMemoryHistory(
         </WithRouter>,
     );
 };
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 describe('SearchJournals', () => {
     it('should render', () => {

@@ -36,6 +36,7 @@ describe('AutoCompleteMultiSelectField component', () => {
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
         });
 
+        fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         const suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
 
@@ -50,12 +51,14 @@ describe('AutoCompleteMultiSelectField component', () => {
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
         });
 
+        fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         let suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
         act(() => {
             fireEvent.click(getByTestId('test-autocomplete-option-0', suggestions));
         });
 
+        fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
         act(() => {
@@ -78,12 +81,14 @@ describe('AutoCompleteMultiSelectField component', () => {
             getOptionLabel: option => option.rek_title,
         });
 
+        fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         let suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
         act(() => {
             fireEvent.click(getByTestId('test-autocomplete-option-0', suggestions));
         });
 
+        fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
         act(() => {
@@ -102,6 +107,7 @@ describe('AutoCompleteMultiSelectField component', () => {
             OptionTemplate,
         });
 
+        fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         const suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
         expect(getAllByTestId('option-template', suggestions).length).toBe(3);

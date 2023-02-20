@@ -66,7 +66,7 @@ describe('Component ThirdPartyLookupForm', () => {
         const wrapper = setup({ ...props });
         wrapper.instance()._handleSubmitLookup = submitMock;
 
-        const textFields = wrapper.find('WithStyles(ForwardRef(TextField))');
+        const textFields = wrapper.find('ForwardRef(TextField)');
         expect(textFields.length).toEqual(2);
 
         textFields.forEach(field => {
@@ -81,7 +81,7 @@ describe('Component ThirdPartyLookupForm', () => {
             secondaryValue: 'blah',
         });
 
-        const button = wrapper.find('WithStyles(ForwardRef(Button))');
+        const button = wrapper.find('ForwardRef(Button)');
         expect(button.length).toEqual(1);
         button.simulate('click');
 
@@ -124,7 +124,7 @@ describe('Component ThirdPartyLookupForm', () => {
             secondaryValue: '',
         });
 
-        const button = wrapper.find('WithStyles(ForwardRef(Button))');
+        const button = wrapper.find('ForwardRef(Button)');
         expect(button.length).toEqual(1);
         button.simulate('click');
 
@@ -137,7 +137,7 @@ describe('Component ThirdPartyLookupForm', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot(); // starts minimised by default
 
-        const button = wrapper.find('WithStyles(ForwardRef(IconButton))');
+        const button = wrapper.find('ForwardRef(IconButton)');
         expect(button.length).toBe(1);
 
         button.simulate('click'); // open the block
@@ -156,7 +156,7 @@ describe('Component ThirdPartyLookupForm', () => {
         };
         const wrapper = setup({ ...props });
 
-        const button = wrapper.find('WithStyles(ForwardRef(Button))');
+        const button = wrapper.find('ForwardRef(Button)');
         expect(button.length).toEqual(1);
         button.simulate('click');
 
@@ -206,7 +206,7 @@ describe('Component ThirdPartyLookupForm', () => {
         expect(primaryField.length).toEqual(1);
         primaryField.simulate('change', { target: { name: 'primaryValue', value: 'blah' } });
 
-        const button = wrapper.find('WithStyles(ForwardRef(Button))');
+        const button = wrapper.find('ForwardRef(Button)');
         expect(button.length).toEqual(1);
         button.simulate('click');
 
@@ -242,7 +242,7 @@ describe('Component ThirdPartyLookupForm', () => {
         };
         const wrapper = setup({ ...testProps });
 
-        const textFields = wrapper.find('WithStyles(ForwardRef(TextField))');
+        const textFields = wrapper.find('ForwardRef(TextField)');
         expect(textFields.length).toEqual(2);
         textFields.forEach(field => {
             field.simulate('change', { target: { name: field.props().className, value: 'blah' } });
@@ -256,7 +256,7 @@ describe('Component ThirdPartyLookupForm', () => {
             secondaryValue: 'blah',
         });
 
-        const button = wrapper.find('WithStyles(ForwardRef(Button))');
+        const button = wrapper.find('ForwardRef(Button)');
         expect(button.length).toEqual(1);
         button.simulate('click');
 

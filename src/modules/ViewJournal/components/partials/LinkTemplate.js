@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import DefaultTemplate from './DefaultTemplate';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import { formatUrlTextWithWbrTags as formatUrlText } from 'helpers/general';
 
 export const useStyles = makeStyles(() => ({

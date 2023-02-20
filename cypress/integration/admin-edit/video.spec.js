@@ -49,7 +49,6 @@ context('Video admin edit', () => {
             .find('h2')
             .should('contain', 'Work has been updated')
             .parent()
-            .siblings('div')
             .contains('button', 'View updated work')
             .click();
         cy.url().should('equal', `${baseUrl}/view/${record.rek_pid}`);

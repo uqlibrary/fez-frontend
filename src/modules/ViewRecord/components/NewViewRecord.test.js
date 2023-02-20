@@ -1,8 +1,7 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
-import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
@@ -28,14 +27,6 @@ jest.mock('react-router', () => ({
     useHistory: jest.fn(() => ({ push: jest.fn() })),
     useLocation: jest.fn(() => ({})),
 }));
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 const setup = (testProps = {}, renderer = render) => {
     const props = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import NewListEditorField from './NewListEditorField';
 import { List } from 'immutable';
-import { render, AllTheProviders } from 'test-utils';
+import { rtlRender } from 'test-utils';
 
 describe('NewListEditorField component', () => {
     it('should render new list editor component with the given array', () => {
@@ -24,11 +24,7 @@ describe('NewListEditorField component', () => {
             },
             listEditorId: 'test',
         };
-        const { asFragment } = render(
-            <AllTheProviders>
-                <NewListEditorField {...props} />
-            </AllTheProviders>,
-        );
+        const { asFragment } = rtlRender(<NewListEditorField {...props} />);
         expect(asFragment()).toMatchSnapshot();
     });
 
@@ -52,11 +48,7 @@ describe('NewListEditorField component', () => {
             },
             listEditorId: 'test',
         };
-        const { asFragment } = render(
-            <AllTheProviders>
-                <NewListEditorField {...props} />
-            </AllTheProviders>,
-        );
+        const { asFragment } = rtlRender(<NewListEditorField {...props} />);
         expect(asFragment()).toMatchSnapshot();
     });
 
@@ -73,11 +65,7 @@ describe('NewListEditorField component', () => {
             },
             listEditorId: 'test',
         };
-        const { asFragment } = render(
-            <AllTheProviders>
-                <NewListEditorField {...props} />
-            </AllTheProviders>,
-        );
+        const { asFragment } = rtlRender(<NewListEditorField {...props} />);
         expect(asFragment()).toMatchSnapshot();
     });
 });

@@ -48,7 +48,7 @@ describe('GrantListEditorHeader', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('WithStyles(ForwardRef(IconButton))').simulate('click');
+        wrapper.find('ForwardRef(IconButton)').simulate('click');
         expect(showConfirmationFn).toHaveBeenCalled();
     });
 });

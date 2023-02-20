@@ -24,9 +24,9 @@ import { THESIS_SUBMISSION_SUBTYPES, THESIS_UPLOAD_RETRIES } from 'config/genera
 
 import { useAccountContext } from 'context';
 
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 export const cancelSubmit = () => {
     window.location.assign(formLocale.thesisSubmission.cancelLink);
@@ -185,7 +185,7 @@ export const ThesisSubmission = ({
                     <Grid item>
                         <Button
                             children={thesisLocale.afterSubmit}
-                            color={!newRecordFileUploadingOrIssueError ? 'primary' : 'default'}
+                            color={!newRecordFileUploadingOrIssueError ? 'primary' : 'inherit'}
                             fullWidth
                             onClick={afterSubmit}
                             variant={'contained'}

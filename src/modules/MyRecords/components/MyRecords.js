@@ -14,8 +14,7 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import locale from 'locale/components';
 import { MY_RECORDS_BULK_EXPORT_SIZE } from 'config/general';
 import { pathConfig } from 'config';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+import Grid from '@mui/material/Grid';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {
@@ -328,24 +327,22 @@ export default class MyRecords extends PureComponent {
                             this.state.activeFacets.ranges &&
                             Object.keys(this.state.activeFacets.ranges).length > 0) ||
                         (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) && (
-                        <Hidden smDown>
-                            <Grid item md={3}>
-                                <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                    <FacetsFilter
-                                        facetsData={this.props.publicationsListFacets}
-                                        onFacetsChanged={this.facetsChanged}
-                                        activeFacets={this.state.activeFacets}
-                                        initialFacets={this.props.initialFacets}
-                                        disabled={isLoadingOrExporting}
-                                        excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                        isMyDataSetPage={this.props.location.pathname === pathConfig.dataset.mine}
-                                        renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                        lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                        showOpenAccessFilter
-                                    />
-                                </StandardRighthandCard>
-                            </Grid>
-                        </Hidden>
+                        <Grid item md={3} sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                <FacetsFilter
+                                    facetsData={this.props.publicationsListFacets}
+                                    onFacetsChanged={this.facetsChanged}
+                                    activeFacets={this.state.activeFacets}
+                                    initialFacets={this.props.initialFacets}
+                                    disabled={isLoadingOrExporting}
+                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    isMyDataSetPage={this.props.location.pathname === pathConfig.dataset.mine}
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                    showOpenAccessFilter
+                                />
+                            </StandardRighthandCard>
+                        </Grid>
                     )}
                 </Grid>
             </StandardPage>

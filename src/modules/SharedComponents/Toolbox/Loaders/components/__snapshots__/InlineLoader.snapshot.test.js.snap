@@ -8,7 +8,7 @@ exports[`Component InlineLoader should render as expected 1`] = `
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignContent="center"
     alignItems="center"
     container={true}
@@ -16,15 +16,19 @@ exports[`Component InlineLoader should render as expected 1`] = `
     justifyContent="center"
     spacing={1}
   >
-    <Hidden
-      smUp={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={true}
-      />
-    </Hidden>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
+      item={true}
+      sx={
+        Object {
+          "display": Object {
+            "sm": "none",
+            "xs": "block",
+          },
+        }
+      }
+      xs={true}
+    />
+    <ForwardRef(Grid)
       item={true}
       style={
         Object {
@@ -33,14 +37,14 @@ exports[`Component InlineLoader should render as expected 1`] = `
       }
       xs="auto"
     >
-      <WithStyles(ForwardRef(CircularProgress))
+      <ForwardRef(CircularProgress)
         aria-label="Loading"
         color="primary"
         size={18}
         thickness={2}
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       style={
         Object {
@@ -49,7 +53,7 @@ exports[`Component InlineLoader should render as expected 1`] = `
       }
       xs="auto"
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         color="primary"
         component="span"
         style={
@@ -60,16 +64,20 @@ exports[`Component InlineLoader should render as expected 1`] = `
         variant="h5"
       >
         This is a tst
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smUp={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={true}
-      />
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      sx={
+        Object {
+          "display": Object {
+            "sm": "none",
+            "xs": "block",
+          },
+        }
+      }
+      xs={true}
+    />
+  </ForwardRef(Grid)>
 </div>
 `;

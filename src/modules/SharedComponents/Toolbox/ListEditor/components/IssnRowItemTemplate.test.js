@@ -53,7 +53,7 @@ describe('IssnRowItemTemplate', () => {
             expect(asFragment()).toMatchInlineSnapshot(`
                 <DocumentFragment>
                   <span
-                    class="MuiTypography-root MuiTypography-body2"
+                    class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                   >
                     0000-0000
                   </span>

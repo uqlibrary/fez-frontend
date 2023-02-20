@@ -33,20 +33,20 @@ Object {
 exports[`Component AttributionIncomplete should render checked if record is checked 1`] = `
 <Fragment>
   <div>
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       variant="caption"
     >
       Test detail
-    </WithStyles(ForwardRef(Typography))>
+    </ForwardRef(Typography)>
   </div>
-  <WithStyles(ForwardRef(FormControlLabel))
+  <ForwardRef(FormControlLabel)
     classes={
       Object {
         "root": undefined,
       }
     }
     control={
-      <WithStyles(ForwardRef(Checkbox))
+      <ForwardRef(Checkbox)
         checked={true}
         classes={
           Object {
@@ -65,7 +65,7 @@ exports[`Component AttributionIncomplete should render checked if record is chec
     }
     disabled={false}
     label={
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         classes={
           Object {
             "root": "",
@@ -76,7 +76,7 @@ exports[`Component AttributionIncomplete should render checked if record is chec
         id="attributionIncomplete-label"
       >
         Test statement
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
     }
   />
 </Fragment>
@@ -85,20 +85,20 @@ exports[`Component AttributionIncomplete should render checked if record is chec
 exports[`Component AttributionIncomplete should render default view 1`] = `
 <Fragment>
   <div>
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       variant="caption"
     >
       Test detail
-    </WithStyles(ForwardRef(Typography))>
+    </ForwardRef(Typography)>
   </div>
-  <WithStyles(ForwardRef(FormControlLabel))
+  <ForwardRef(FormControlLabel)
     classes={
       Object {
         "root": undefined,
       }
     }
     control={
-      <WithStyles(ForwardRef(Checkbox))
+      <ForwardRef(Checkbox)
         checked={false}
         classes={
           Object {
@@ -117,7 +117,7 @@ exports[`Component AttributionIncomplete should render default view 1`] = `
     }
     disabled={false}
     label={
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         classes={
           Object {
             "root": "",
@@ -128,7 +128,7 @@ exports[`Component AttributionIncomplete should render default view 1`] = `
         id="attributionIncomplete-label"
       >
         Test statement
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
     }
   />
 </Fragment>

@@ -2,12 +2,12 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
 import { openAccessConfig } from 'config';
-import Tooltip from '@material-ui/core/Tooltip';
-import Fade from '@material-ui/core/Fade';
-import Lock from '../Icons/MUI/Lock';
-import LockOpen from '../Icons/MUI/LockOpen';
-import LockClockOutlined from '../Icons/MUI/LockClock';
+import Lock from '@mui/icons-material/Lock';
+import LockOpen from '@mui/icons-material/LockOpen';
+import LockClockOutlined from '@mui/icons-material/LockClock';
 import { makeStyles } from '@material-ui/styles';
+import Tooltip from '@mui/material/Tooltip';
+import Fade from '@mui/material/Fade';
 
 const useStyles = makeStyles({
     svg: props => props.style,

@@ -7,9 +7,11 @@ describe('Stepper component', () => {
             breakpoints: {
                 down: jest.fn(() => '@media (max-width:959.95px)'),
             },
+            spacing: jest.fn(() => '24px'),
         };
         const test = styles(theme);
         expect(theme.hexToRGBA).toBeCalled();
+        expect(theme.spacing).toBeCalled();
         expect(theme.breakpoints.down).toBeCalled();
         expect(test).toMatchSnapshot();
     });

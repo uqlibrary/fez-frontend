@@ -1,27 +1,27 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
-// import Collapse from '@material-ui/core/Collapse';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableContainer from '@material-ui/core/TableContainer';
-import Paper from '@material-ui/core/Paper';
+// import Collapse from '@mui/material/Collapse';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableContainer from '@mui/material/TableContainer';
+import Paper from '@mui/material/Paper';
 import JournalsListHeaderRow from './partials/JournalsListHeaderRow';
 import JournalsListDataRow from './partials/JournalsListDataRow';
 
 const useStyles = makeStyles(theme => ({
     journalList: {
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             display: 'grid',
             gridTemplateColumns: '80% auto 50px',
             flexWrap: 'nowrap',
             overflowX: 'scroll',
         },
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             gridTemplateColumns: 'auto auto 50px',
         },
     },
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
             ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
             : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
               /* istanbul ignore next */ {}),
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             verticalAlign: 'top',
             paddingLeft: 0,
             paddingRight: 0,

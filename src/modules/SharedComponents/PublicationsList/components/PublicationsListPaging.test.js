@@ -1,8 +1,7 @@
 import PublicationsListPagingWithStyles, { PublicationsListPaging, paginate } from './PublicationsListPaging';
-import React from 'react';
-import { createTheme, MuiThemeProvider } from '@material-ui/core';
-import { render } from 'test-utils';
 import { locale } from 'locale';
+
+// Responsiveness is handled in Cypress tests
 
 const getProps = (testProps = {}) => ({
     classes: {},
@@ -18,8 +17,9 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps = {}) {
-    return getElement(PublicationsListPaging, getProps(testProps));
+function setup(testProps = {}, testArgs = {}) {
+    const args = { isShallow: true, ...testArgs };
+    return getElement(PublicationsListPaging, getProps(testProps), args);
 }
 
 describe('PublicationsListPaging renders ', () => {
@@ -29,7 +29,7 @@ describe('PublicationsListPaging renders ', () => {
     });
 
     it('component with styles', () => {
-        const wrapper = getElement(PublicationsListPagingWithStyles, getProps());
+        const wrapper = getElement(PublicationsListPagingWithStyles, getProps(), { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -279,43 +279,6 @@ describe('PublicationsListPaging renders ', () => {
         expect(wrapper.instance().renderPageButtons()).toEqual([]);
     });
 
-    describe('PublicationsListPaging responsive rendering ', () => {
-        const testProps = {
-            pagingData: {
-                total: 20,
-                took: 10,
-                per_page: 10,
-                current_page: 1,
-                from: 1,
-                to: 10,
-            },
-            classes: {
-                nextPrevButtons: '',
-            },
-            pagingId: 'test-button',
-        };
-        const setup = (theme, testProps) => {
-            return render(
-                <MuiThemeProvider theme={theme}>
-                    <PublicationsListPaging {...testProps} />
-                </MuiThemeProvider>,
-            );
-        };
-        it('Should render page buttons at sm and above screen sizes ', () => {
-            const themeSm = createTheme({ props: { MuiWithWidth: { initialWidth: 'sm' } } });
-            const { getByTestId } = setup(themeSm, getProps(testProps));
-            expect(getByTestId(`${testProps.pagingId}-select-page-1`)).toBeInTheDocument();
-            expect(getByTestId(`${testProps.pagingId}-select-page-2`)).toBeInTheDocument();
-        });
-
-        it('Should not render page buttons at xs and below screen sizes ', () => {
-            const themeXs = createTheme({ props: { MuiWithWidth: { initialWidth: 'xs' } } });
-            const { queryByTestId } = setup(themeXs, getProps(testProps));
-
-            expect(queryByTestId(`${testProps.pagingId}-select-page-1`)).not.toBeInTheDocument();
-            expect(queryByTestId(`${testProps.pagingId}-select-page-2`)).not.toBeInTheDocument();
-        });
-    });
     describe('Pagination function', () => {
         it('should use default values if none provided', () => {
             const expectedResponse = {

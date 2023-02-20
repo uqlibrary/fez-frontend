@@ -100,17 +100,18 @@ describe('AutoCompleteAsynchronousField component', () => {
     it('should clear the input value on clicking "Clear" button ', () => {
         const onClearFn = jest.fn();
         const { getByTestId, getByTitle } = setup({
+            allowFreeText: true, // mui5 update note: this wasnt required in mui4 and i'm not sure why it's needed now
             onClear: onClearFn,
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
             fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
         });
 
         act(() => {
             fireEvent.click(getByTitle('Clear'));
         });
-
         expect(onClearFn).toBeCalled();
     });
 
@@ -121,10 +122,12 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
             fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
             fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
         });
 
@@ -168,10 +171,12 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
             fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
             fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
         });
 

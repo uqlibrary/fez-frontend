@@ -1,21 +1,17 @@
 import React from 'react';
-import { render, AllTheProviders, fireEvent } from 'test-utils';
+import { rtlRender, fireEvent } from 'test-utils';
 
 import ImageGalleryItemImage from './ImageGalleryItemImage';
 import { collectionSearchResultsImages } from 'mock/data';
 import config from 'config/imageGalleryConfig';
 import * as utils from './Utils';
 
-const setup = (props = {}) => {
+const setup = (props = {}, render = rtlRender) => {
     const testProps = {
         item: { rek_pid: 0 },
         ...props,
     };
-    return render(
-        <AllTheProviders>
-            <ImageGalleryItemImage {...testProps} />
-        </AllTheProviders>,
-    );
+    return render(<ImageGalleryItemImage {...testProps} />);
 };
 
 describe('Image Gallery Item Image', () => {

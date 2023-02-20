@@ -34,7 +34,7 @@ describe('FormViewToggler component', () => {
         const wrapper = setup();
 
         wrapper
-            .find('WithStyles(ForwardRef(Switch))')
+            .find('ForwardRef(Switch)')
             .props()
             .onChange();
         expect(toggleFn).toHaveBeenCalled();

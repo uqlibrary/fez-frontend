@@ -5,7 +5,6 @@ import moment from 'moment';
 import { makeStyles } from '@material-ui/styles';
 import Delete from '@material-ui/icons/Delete';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
@@ -380,26 +379,30 @@ export const AttachedFiles = ({
                                 {locale.fileName}
                             </Typography>
                         </Grid>
-                        <Hidden xsDown>
-                            <Grid item md={isAdminEditing ? 3 : 5} sm={isAdminEditing ? 3 : 7}>
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.description}
-                                </Typography>
-                            </Grid>
-                        </Hidden>
-                        <Hidden smDown>
-                            <Grid item md={2}>
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.size}
-                                </Typography>
-                            </Grid>
-                        </Hidden>
+                        <Grid
+                            item
+                            md={isAdminEditing ? 3 : 5}
+                            sm={isAdminEditing ? 3 : 7}
+                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                        >
+                            <Typography variant="caption" gutterBottom>
+                                {locale.description}
+                            </Typography>
+                        </Grid>
+                        <Grid item md={2} sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <Typography variant="caption" gutterBottom>
+                                {locale.size}
+                            </Typography>
+                        </Grid>
                         {isAdminEditing && (
-                            <Grid item md={3} sm={4} style={{ textAlign: 'center' }}>
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.embargoDateLabel || 'Embargo date'}
-                                </Typography>
-                            </Grid>
+                            <React.Fragment>
+                                <Grid item md={3} sm={4} style={{ textAlign: 'center' }}>
+                                    <Typography variant="caption" gutterBottom>
+                                        {locale.embargoDateLabel || 'Embargo date'}
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs />
+                            </React.Fragment>
                         )}
                     </Grid>
                 </div>
@@ -461,41 +464,48 @@ export const AttachedFiles = ({
                                                     />
                                                 )}
                                             </Grid>
-                                            <Hidden xsDown>
+                                            <Grid
+                                                item
+                                                md={isAdminEditing ? 3 : 5}
+                                                sm={isAdminEditing ? 3 : 7}
+                                                className={classes.dataWrapper}
+                                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                            >
+                                                {isAdminEditing ? (
+                                                    <TextField
+                                                        fullWidth
+                                                        onChange={onFileDescriptionChange(item.id)}
+                                                        name="fileDescription"
+                                                        defaultValue={item.description}
+                                                        id={`file-description-input-${index}`}
+                                                        textFieldId={`dsi-label-${index}`}
+                                                        inputProps={{
+                                                            maxLength: 255,
+                                                        }}
+                                                    />
+                                                ) : (
+                                                    <Typography variant="body2" noWrap>
+                                                        {item.description}
+                                                    </Typography>
+                                                )}
+                                            </Grid>
+                                            <Grid
+                                                item
+                                                sm={2}
+                                                className={classes.dataWrapper}
+                                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                            >
+                                                <Typography variant="body2" noWrap>
+                                                    {item.calculatedSize}
+                                                </Typography>
+                                            </Grid>
+                                            {!isAdminEditing && (
                                                 <Grid
                                                     item
-                                                    md={isAdminEditing ? 3 : 5}
-                                                    sm={isAdminEditing ? 3 : 7}
-                                                    className={classes.dataWrapper}
+                                                    xs
+                                                    style={{ textAlign: 'right' }}
+                                                    sx={{ display: { xs: 'none', sm: 'block' } }}
                                                 >
-                                                    {isAdminEditing ? (
-                                                        <TextField
-                                                            fullWidth
-                                                            onChange={onFileDescriptionChange(item.id)}
-                                                            name="fileDescription"
-                                                            defaultValue={item.description}
-                                                            id={`file-description-input-${index}`}
-                                                            textFieldId={`dsi-label-${index}`}
-                                                            inputProps={{
-                                                                maxLength: 255,
-                                                            }}
-                                                        />
-                                                    ) : (
-                                                        <Typography variant="body2" noWrap>
-                                                            {item.description}
-                                                        </Typography>
-                                                    )}
-                                                </Grid>
-                                            </Hidden>
-                                            <Hidden smDown>
-                                                <Grid item sm={2} className={classes.dataWrapper}>
-                                                    <Typography variant="body2" noWrap>
-                                                        {item.calculatedSize}
-                                                    </Typography>
-                                                </Grid>
-                                            </Hidden>
-                                            {!isAdminEditing && (
-                                                <Grid item xs style={{ textAlign: 'right' }}>
                                                     <Box style={{ whiteSpace: 'nowrap' }}>
                                                         <Box component={'span'} paddingRight={1}>
                                                             <FileAvStateIcon
@@ -518,15 +528,17 @@ export const AttachedFiles = ({
                                                     <Grid container wrap="nowrap">
                                                         <Grid item xs={3}>
                                                             <Box style={{ whiteSpace: 'nowrap' }}>
-                                                                <Hidden smDown>
-                                                                    <Box component={'span'} paddingRight={1}>
-                                                                        <FileAvStateIcon
-                                                                            state={item.avCheck?.state}
-                                                                            checkedAt={item.avCheck?.date}
-                                                                            id={item.id}
-                                                                        />
-                                                                    </Box>
-                                                                </Hidden>
+                                                                <Box
+                                                                    component={'span'}
+                                                                    paddingRight={1}
+                                                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                                >
+                                                                    <FileAvStateIcon
+                                                                        state={item.avCheck?.state}
+                                                                        checkedAt={item.avCheck?.date}
+                                                                        id={item.id}
+                                                                    />
+                                                                </Box>
                                                                 <Box component={'span'} paddingRight={1}>
                                                                     <OpenAccessIcon
                                                                         {...item.openAccessStatus}
@@ -572,6 +584,7 @@ export const AttachedFiles = ({
                                                                         data-testid={`delete-file-${index}`}
                                                                         onClick={onFileDelete(item.fileName)}
                                                                         disabled={disabled}
+                                                                        size="large"
                                                                     >
                                                                         <Delete />
                                                                     </IconButton>

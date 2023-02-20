@@ -1,9 +1,8 @@
 import React from 'react';
 import MyEditorialAppointments from './index';
-import { render, WithReduxStore, waitFor } from 'test-utils';
+import { render, WithReduxStore, waitFor, createMatchMedia } from 'test-utils';
 import * as MyEditorialAppointmentsActions from 'actions/myEditorialAppointments';
 import * as repository from 'repositories';
-import mediaQuery from 'css-mediaquery';
 
 const setup = (testProps = {}) => {
     return render(
@@ -12,15 +11,6 @@ const setup = (testProps = {}) => {
         </WithReduxStore>,
     );
 };
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
-
 describe('MyEditorialAppointments', () => {
     beforeEach(() => {
         window.matchMedia = createMatchMedia(1024);
