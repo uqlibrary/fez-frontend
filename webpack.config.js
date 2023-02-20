@@ -38,7 +38,6 @@ module.exports = {
         headers: { 'X-Custom-Header': 'yes' },
         historyApiFallback: true,
         host: url,
-        hot: true,
         https: false,
         open: false,
         port: port,

@@ -63,7 +63,7 @@ const webpackConfig = {
     // Where you want the output to go
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
-        filename: 'frontend-js/[name]-[hash].min.js',
+        filename: 'frontend-js/[name]-[contenthash].min.js',
         publicPath: config.publicPath,
     },
     devServer: {
@@ -109,7 +109,7 @@ const webpackConfig = {
         }),
         // new ExtractTextPlugin('[name]-[hash].min.css'),
         new MiniCssExtractPlugin({
-            filename: '[name]-[hash].min.css',
+            filename: '[name]-[contenthash].min.css',
         }),
 
         // plugin for passing in data to the js, like what NODE_ENV we are in.
@@ -134,7 +134,7 @@ const webpackConfig = {
             'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
         }),
-        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+        new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
         // Put it in the end to capture all the HtmlWebpackPlugin's
         // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
         // new OfflinePlugin({
@@ -213,7 +213,11 @@ const webpackConfig = {
             },
             {
                 test: /\.js$/,
-                loader: WebpackStrip.loader('console.log', 'dd'),
+                use: [
+                    {
+                        loader: WebpackStrip.loader('console.log', 'dd'),
+                    },
+                ],
             },
         ],
     },
