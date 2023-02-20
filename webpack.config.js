@@ -141,6 +141,10 @@ module.exports = {
                 context: join(__dirname),
             },
         }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
+            Buffer: 'buffer',
+        }),
         new webpack.DefinePlugin({
             __DEVELOPMENT__: true,
             'process.env.NODE_ENV': JSON.stringify('development'),
