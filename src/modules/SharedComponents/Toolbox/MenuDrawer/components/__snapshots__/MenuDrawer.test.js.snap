@@ -3,7 +3,7 @@
 exports[`Component MenuDrawer should render CRICOS footer 1`] = `null`;
 
 exports[`Component MenuDrawer should render empty drawer 1`] = `
-<WithStyles(ForwardRef(Drawer))
+<ForwardRef(Drawer)
   anchor="left"
   classes={
     Object {
@@ -20,7 +20,7 @@ exports[`Component MenuDrawer should render empty drawer 1`] = `
 `;
 
 exports[`Component MenuDrawer should render opened drawer with menus, divider 1`] = `
-<WithStyles(ForwardRef(Drawer))
+<ForwardRef(Drawer)
   anchor="left"
   classes={
     Object {
@@ -34,12 +34,12 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
   open={true}
   variant="temporary"
 >
-  <WithStyles(ForwardRef(List))
+  <ForwardRef(List)
     component="nav"
     id="mainMenu"
     tabIndex={-1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignContent="center"
       alignItems="center"
       classes={
@@ -51,7 +51,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       spacing={0}
       wrap="nowrap"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         sm={12}
         xs={10}
@@ -77,34 +77,38 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             test
           </div>
         </ExternalLink>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        smUp={true}
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "none",
+              "xs": "block",
+            },
+          }
+        }
+        xs={2}
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={2}
+        <ForwardRef(IconButton)
+          aria-label="Close menu"
+          onClick={[MockFunction]}
+          size="small"
         >
-          <WithStyles(ForwardRef(IconButton))
-            aria-label="Close menu"
-            onClick={[MockFunction]}
-            size="small"
-          >
-            <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+          <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
+        </ForwardRef(IconButton)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <span
       className="menu-item-container"
       key="menu-item-0"
     >
-      <WithStyles(ForwardRef(ListItem))
+      <ForwardRef(ListItem)
         button={true}
         id="menu-item-0"
         onClick={[Function]}
       >
-        <WithStyles(ForwardRef(ListItemText))
+        <ForwardRef(ListItemText)
           classes={
             Object {
               "primary": undefined,
@@ -115,21 +119,21 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
           primary="Primary text 0"
           secondary="secondary text 0"
         />
-      </WithStyles(ForwardRef(ListItem))>
+      </ForwardRef(ListItem)>
     </span>
-    <WithStyles(ForwardRef(Divider))
+    <ForwardRef(Divider)
       key="menu_item_1"
     />
     <span
       className="menu-item-container"
       key="menu-item-2"
     >
-      <WithStyles(ForwardRef(ListItem))
+      <ForwardRef(ListItem)
         button={true}
         id="menu-item-2"
         onClick={[Function]}
       >
-        <WithStyles(ForwardRef(ListItemText))
+        <ForwardRef(ListItemText)
           classes={
             Object {
               "primary": undefined,
@@ -140,9 +144,9 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
           primary="Primary text 1"
           secondary="secondary text 1"
         />
-      </WithStyles(ForwardRef(ListItem))>
+      </ForwardRef(ListItem)>
     </span>
-  </WithStyles(ForwardRef(List))>
+  </ForwardRef(List)>
   <div
     id="afterMenuDrawer"
     tabIndex={-1}
@@ -158,11 +162,11 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       00025B
     </ExternalLink>
   </div>
-</WithStyles(ForwardRef(Drawer))>
+</ForwardRef(Drawer)>
 `;
 
 exports[`Component MenuDrawer should render opened drawer with menus, divider and skip nav button 1`] = `
-<WithStyles(ForwardRef(Drawer))
+<ForwardRef(Drawer)
   anchor="left"
   classes={
     Object {
@@ -176,12 +180,12 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   open={true}
   variant="permanent"
 >
-  <WithStyles(ForwardRef(List))
+  <ForwardRef(List)
     component="nav"
     id="mainMenu"
     tabIndex={-1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignContent="center"
       alignItems="center"
       classes={
@@ -193,7 +197,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       spacing={0}
       wrap="nowrap"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         sm={12}
         xs={10}
@@ -219,24 +223,28 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
             test
           </div>
         </ExternalLink>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        smUp={true}
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "none",
+              "xs": "block",
+            },
+          }
+        }
+        xs={2}
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={2}
+        <ForwardRef(IconButton)
+          aria-label="Close menu"
+          onClick={[MockFunction]}
+          size="small"
         >
-          <WithStyles(ForwardRef(IconButton))
-            aria-label="Close menu"
-            onClick={[MockFunction]}
-            size="small"
-          >
-            <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+          <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
+        </ForwardRef(IconButton)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <div
       aria-label="Skip navigation"
       id="skipNav"
@@ -245,7 +253,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       tabIndex={1}
       type="button"
     >
-      <WithStyles(ForwardRef(Button))
+      <ForwardRef(Button)
         className="skipNavButton"
         color="primary"
         onClick={[Function]}
@@ -253,18 +261,18 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         variant="contained"
       >
         Skip navigation
-      </WithStyles(ForwardRef(Button))>
+      </ForwardRef(Button)>
     </div>
     <span
       className="menu-item-container"
       key="menu-item-0"
     >
-      <WithStyles(ForwardRef(ListItem))
+      <ForwardRef(ListItem)
         button={true}
         id="menu-item-0"
         onClick={[Function]}
       >
-        <WithStyles(ForwardRef(ListItemText))
+        <ForwardRef(ListItemText)
           classes={
             Object {
               "primary": undefined,
@@ -275,21 +283,21 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           primary="Primary text 0"
           secondary="secondary text 0"
         />
-      </WithStyles(ForwardRef(ListItem))>
+      </ForwardRef(ListItem)>
     </span>
-    <WithStyles(ForwardRef(Divider))
+    <ForwardRef(Divider)
       key="menu_item_1"
     />
     <span
       className="menu-item-container"
       key="menu-item-2"
     >
-      <WithStyles(ForwardRef(ListItem))
+      <ForwardRef(ListItem)
         button={true}
         id="menu-item-2"
         onClick={[Function]}
       >
-        <WithStyles(ForwardRef(ListItemText))
+        <ForwardRef(ListItemText)
           classes={
             Object {
               "primary": undefined,
@@ -300,9 +308,9 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           primary="Primary text 1"
           secondary="secondary text 1"
         />
-      </WithStyles(ForwardRef(ListItem))>
+      </ForwardRef(ListItem)>
     </span>
-  </WithStyles(ForwardRef(List))>
+  </ForwardRef(List)>
   <div
     id="afterMenuDrawer"
     tabIndex={-1}
@@ -318,11 +326,11 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       00025B
     </ExternalLink>
   </div>
-</WithStyles(ForwardRef(Drawer))>
+</ForwardRef(Drawer)>
 `;
 
 exports[`Component MenuDrawer should render opened drawer with menus, divider and skip nav button 2`] = `
-<WithStyles(ForwardRef(Drawer))
+<ForwardRef(Drawer)
   anchor="left"
   classes={
     Object {
@@ -336,12 +344,12 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   open={true}
   variant="permanent"
 >
-  <WithStyles(ForwardRef(List))
+  <ForwardRef(List)
     component="nav"
     id="mainMenu"
     tabIndex={-1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignContent="center"
       alignItems="center"
       classes={
@@ -353,7 +361,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       spacing={0}
       wrap="nowrap"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         sm={12}
         xs={10}
@@ -379,24 +387,28 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
             test
           </div>
         </ExternalLink>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        smUp={true}
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "none",
+              "xs": "block",
+            },
+          }
+        }
+        xs={2}
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={2}
+        <ForwardRef(IconButton)
+          aria-label="Close menu"
+          onClick={[MockFunction]}
+          size="small"
         >
-          <WithStyles(ForwardRef(IconButton))
-            aria-label="Close menu"
-            onClick={[MockFunction]}
-            size="small"
-          >
-            <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+          <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
+        </ForwardRef(IconButton)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <div
       aria-label="Skip navigation"
       id="skipNav"
@@ -405,7 +417,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       tabIndex={1}
       type="button"
     >
-      <WithStyles(ForwardRef(Button))
+      <ForwardRef(Button)
         className="skipNavButton"
         color="primary"
         onClick={[Function]}
@@ -413,18 +425,18 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         variant="contained"
       >
         Skip navigation
-      </WithStyles(ForwardRef(Button))>
+      </ForwardRef(Button)>
     </div>
     <span
       className="menu-item-container"
       key="menu-item-0"
     >
-      <WithStyles(ForwardRef(ListItem))
+      <ForwardRef(ListItem)
         button={true}
         id="menu-item-0"
         onClick={[Function]}
       >
-        <WithStyles(ForwardRef(ListItemText))
+        <ForwardRef(ListItemText)
           classes={
             Object {
               "primary": undefined,
@@ -435,21 +447,21 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           primary="Primary text 0"
           secondary="secondary text 0"
         />
-      </WithStyles(ForwardRef(ListItem))>
+      </ForwardRef(ListItem)>
     </span>
-    <WithStyles(ForwardRef(Divider))
+    <ForwardRef(Divider)
       key="menu_item_1"
     />
     <span
       className="menu-item-container"
       key="menu-item-2"
     >
-      <WithStyles(ForwardRef(ListItem))
+      <ForwardRef(ListItem)
         button={true}
         id="menu-item-2"
         onClick={[Function]}
       >
-        <WithStyles(ForwardRef(ListItemText))
+        <ForwardRef(ListItemText)
           classes={
             Object {
               "primary": undefined,
@@ -460,9 +472,9 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           primary="Primary text 1"
           secondary="secondary text 1"
         />
-      </WithStyles(ForwardRef(ListItem))>
+      </ForwardRef(ListItem)>
     </span>
-  </WithStyles(ForwardRef(List))>
+  </ForwardRef(List)>
   <div
     id="afterMenuDrawer"
     tabIndex={-1}
@@ -478,5 +490,5 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       00025B
     </ExternalLink>
   </div>
-</WithStyles(ForwardRef(Drawer))>
+</ForwardRef(Drawer)>
 `;

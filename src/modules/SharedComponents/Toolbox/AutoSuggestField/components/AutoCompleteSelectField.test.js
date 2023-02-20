@@ -40,6 +40,7 @@ describe('AutoCompleteSelectField component', () => {
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-select-field-input'));
             fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'apple' } });
         });
 
@@ -58,6 +59,7 @@ describe('AutoCompleteSelectField component', () => {
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-select-field-input'));
             fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'an' } });
         });
 
@@ -79,6 +81,7 @@ describe('AutoCompleteSelectField component', () => {
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-select-field-input'));
             fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'cherry' } });
         });
 
@@ -101,11 +104,13 @@ describe('AutoCompleteSelectField component', () => {
     it('should clear the input value on clicking "Clear" button ', () => {
         const onClearFn = jest.fn();
         const { getByTestId, getByTitle } = setup({
+            allowFreeText: true,
             clearable: true,
             onClear: onClearFn,
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-select-field-input'));
             fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'cherry' } });
         });
 
@@ -124,10 +129,12 @@ describe('AutoCompleteSelectField component', () => {
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-select-field-input'));
             fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'cherry' } });
         });
 
         act(() => {
+            fireEvent.click(getByTestId('autocomplete-select-field-input'));
             fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: '' } });
         });
 

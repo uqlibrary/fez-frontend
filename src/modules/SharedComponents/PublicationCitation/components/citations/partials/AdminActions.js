@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { debounce } from 'throttle-debounce';
 
 import { PUBLICATION_TYPES_WITH_DOI, RECORD_ACTION_URLS as defaultActions, RECORD_TYPE_RECORD } from 'config/general';
@@ -77,7 +77,13 @@ export const AdminActions = ({
 
     return (
         <React.Fragment>
-            <IconButton id="admin-actions-button" aria-label="More" aria-haspopup="true" onClick={handleClick}>
+            <IconButton
+                id="admin-actions-button"
+                aria-label="More"
+                aria-haspopup="true"
+                onClick={handleClick}
+                size="large"
+            >
                 <MoreVertIcon fontSize="small" />
             </IconButton>
             <Menu id="admin-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>

@@ -1,8 +1,8 @@
 import PartialDateForm from './PartialDateForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps, args = { isShallow: false }) {
     const props = { partialDateFormId: 'test', ...testProps };
-    return getElement(PartialDateForm, props, isShallow);
+    return getElement(PartialDateForm, props, args);
 }
 
 describe('PartialDateForm snapshots tests', () => {
@@ -14,9 +14,7 @@ describe('PartialDateForm snapshots tests', () => {
         };
 
         const wrapper = setup(props);
-
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders PartialDateForm component 2', () => {
@@ -29,8 +27,7 @@ describe('PartialDateForm snapshots tests', () => {
 
         const wrapper = setup(props);
 
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders PartialDateForm component 3', () => {
@@ -43,7 +40,6 @@ describe('PartialDateForm snapshots tests', () => {
 
         const wrapper = setup(props);
 
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ConferenceProceedingsForm renders  component 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Conference proceedings information"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -26,10 +26,44 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -54,13 +88,13 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -70,10 +104,44 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -91,8 +159,8 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -102,10 +170,44 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -123,8 +225,8 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -134,10 +236,44 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -155,8 +291,8 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -177,8 +313,8 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -188,10 +324,44 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -203,8 +373,8 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             placeholder="Type the name of the publisher"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -214,10 +384,44 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -229,20 +433,20 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             placeholder="Type the place of publication"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Editors"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         Please provide a list of editors and then select your name from the list.
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         contributorEditorId="editors"
@@ -336,17 +540,17 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="ISBN"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         You can add up to five ISBN values
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         disabled={false}
@@ -417,17 +621,17 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="ISSN"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         You can add up to five ISSN values
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         disabled={false}
@@ -517,19 +721,19 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         transformFunction={[Function]}
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Optional details"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -538,10 +742,44 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -554,8 +792,8 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             placeholder="Add any additional information"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -564,10 +802,44 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -584,9 +856,9 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

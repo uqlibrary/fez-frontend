@@ -11,11 +11,11 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -449,43 +449,44 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
                 ]
               }
             >
-              <WithStyles(ForwardRef(MenuItem))
+              <ForwardRef(MenuItem)
                 key="fix_record_action_0"
                 value="fix"
               >
                 I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
-              </WithStyles(ForwardRef(MenuItem))>
-              <WithStyles(ForwardRef(MenuItem))
+              </ForwardRef(MenuItem)>
+              <ForwardRef(MenuItem)
                 key="fix_record_action_1"
                 value="unclaim"
               >
                 I am not the author/editor/contributor of this work - I would like this work removed from my profile
-              </WithStyles(ForwardRef(MenuItem))>
+              </ForwardRef(MenuItem)>
             </Field>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -502,11 +503,11 @@ exports[`Component FixRecord componentDidUpdate() 1`] = `
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -940,22 +941,22 @@ exports[`Component FixRecord componentDidUpdate() 1`] = `
                 ]
               }
             >
-              <WithStyles(ForwardRef(MenuItem))
+              <ForwardRef(MenuItem)
                 key="fix_record_action_0"
                 value="fix"
               >
                 I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
-              </WithStyles(ForwardRef(MenuItem))>
-              <WithStyles(ForwardRef(MenuItem))
+              </ForwardRef(MenuItem)>
+              <ForwardRef(MenuItem)
                 key="fix_record_action_1"
                 value="unclaim"
               >
                 I am not the author/editor/contributor of this work - I would like this work removed from my profile
-              </WithStyles(ForwardRef(MenuItem))>
+              </ForwardRef(MenuItem)>
             </Field>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -972,29 +973,30 @@ exports[`Component FixRecord componentDidUpdate() 1`] = `
             type="done"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -1011,11 +1013,11 @@ exports[`Component FixRecord should render fix record form 1`] = `
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1449,21 +1451,21 @@ exports[`Component FixRecord should render fix record form 1`] = `
                 ]
               }
             >
-              <WithStyles(ForwardRef(MenuItem))
+              <ForwardRef(MenuItem)
                 key="fix_record_action_0"
                 value="fix"
               >
                 I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
-              </WithStyles(ForwardRef(MenuItem))>
-              <WithStyles(ForwardRef(MenuItem))
+              </ForwardRef(MenuItem)>
+              <ForwardRef(MenuItem)
                 key="fix_record_action_1"
                 value="unclaim"
               >
                 I am not the author/editor/contributor of this work - I would like this work removed from my profile
-              </WithStyles(ForwardRef(MenuItem))>
+              </ForwardRef(MenuItem)>
             </Field>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <NavigationDialogBox
           txt={
             Object {
@@ -1504,18 +1506,19 @@ exports[`Component FixRecord should render fix record form 1`] = `
           onCancelAction={[Function]}
           onRef={[Function]}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Suggest a correction"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1524,10 +1527,44 @@ exports[`Component FixRecord should render fix record form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1540,8 +1577,8 @@ exports[`Component FixRecord should render fix record form 1`] = `
                   rows={3}
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1550,10 +1587,44 @@ exports[`Component FixRecord should render fix record form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1569,11 +1640,11 @@ exports[`Component FixRecord should render fix record form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1602,19 +1673,20 @@ exports[`Component FixRecord should render fix record form 1`] = `
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1628,11 +1700,11 @@ exports[`Component FixRecord should render fix record form 1`] = `
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1654,32 +1726,33 @@ exports[`Component FixRecord should render fix record form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="fixSubmit"
@@ -1687,9 +1760,9 @@ exports[`Component FixRecord should render fix record form 1`] = `
             variant="contained"
           >
             Submit
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -1722,11 +1795,11 @@ exports[`Component FixRecord should render record citation, two actions in selec
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2160,43 +2233,44 @@ exports[`Component FixRecord should render record citation, two actions in selec
                 ]
               }
             >
-              <WithStyles(ForwardRef(MenuItem))
+              <ForwardRef(MenuItem)
                 key="fix_record_action_0"
                 value="fix"
               >
                 I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
-              </WithStyles(ForwardRef(MenuItem))>
-              <WithStyles(ForwardRef(MenuItem))
+              </ForwardRef(MenuItem)>
+              <ForwardRef(MenuItem)
                 key="fix_record_action_1"
                 value="unclaim"
               >
                 I am not the author/editor/contributor of this work - I would like this work removed from my profile
-              </WithStyles(ForwardRef(MenuItem))>
+              </ForwardRef(MenuItem)>
             </Field>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -2213,11 +2287,11 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2651,21 +2725,21 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 ]
               }
             >
-              <WithStyles(ForwardRef(MenuItem))
+              <ForwardRef(MenuItem)
                 key="fix_record_action_0"
                 value="fix"
               >
                 I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
-              </WithStyles(ForwardRef(MenuItem))>
-              <WithStyles(ForwardRef(MenuItem))
+              </ForwardRef(MenuItem)>
+              <ForwardRef(MenuItem)
                 key="fix_record_action_1"
                 value="unclaim"
               >
                 I am not the author/editor/contributor of this work - I would like this work removed from my profile
-              </WithStyles(ForwardRef(MenuItem))>
+              </ForwardRef(MenuItem)>
             </Field>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <NavigationDialogBox
           txt={
             Object {
@@ -2718,18 +2792,19 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
           onCancelAction={[Function]}
           onRef={[Function]}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Suggest a correction"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2738,10 +2813,44 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -2754,8 +2863,8 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                   rows={3}
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2764,10 +2873,44 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -2783,11 +2926,11 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2816,19 +2959,20 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2842,11 +2986,11 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2868,32 +3012,33 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="fixSubmit"
@@ -2901,9 +3046,9 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             variant="contained"
           >
             Submit
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -2920,11 +3065,11 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3358,21 +3503,21 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                 ]
               }
             >
-              <WithStyles(ForwardRef(MenuItem))
+              <ForwardRef(MenuItem)
                 key="fix_record_action_0"
                 value="fix"
               >
                 I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
-              </WithStyles(ForwardRef(MenuItem))>
-              <WithStyles(ForwardRef(MenuItem))
+              </ForwardRef(MenuItem)>
+              <ForwardRef(MenuItem)
                 key="fix_record_action_1"
                 value="unclaim"
               >
                 I am not the author/editor/contributor of this work - I would like this work removed from my profile
-              </WithStyles(ForwardRef(MenuItem))>
+              </ForwardRef(MenuItem)>
             </Field>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <NavigationDialogBox
           txt={
             Object {
@@ -3413,18 +3558,19 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
           onCancelAction={[Function]}
           onRef={[Function]}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Suggest a correction"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -3433,10 +3579,44 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3449,8 +3629,8 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                   rows={3}
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -3459,10 +3639,44 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3478,11 +3692,11 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3511,19 +3725,20 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -3537,11 +3752,11 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3563,32 +3778,33 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="fixSubmit"
@@ -3596,9 +3812,9 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             variant="contained"
           >
             Submit
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -3615,11 +3831,11 @@ exports[`Component FixRecord should render unclaim form 1`] = `
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4053,22 +4269,22 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                 ]
               }
             >
-              <WithStyles(ForwardRef(MenuItem))
+              <ForwardRef(MenuItem)
                 key="fix_record_action_0"
                 value="fix"
               >
                 I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
-              </WithStyles(ForwardRef(MenuItem))>
-              <WithStyles(ForwardRef(MenuItem))
+              </ForwardRef(MenuItem)>
+              <ForwardRef(MenuItem)
                 key="fix_record_action_1"
                 value="unclaim"
               >
                 I am not the author/editor/contributor of this work - I would like this work removed from my profile
-              </WithStyles(ForwardRef(MenuItem))>
+              </ForwardRef(MenuItem)>
             </Field>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4101,32 +4317,33 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               onRef={[Function]}
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="fixSubmit"
@@ -4134,9 +4351,9 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             variant="contained"
           >
             Submit
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>

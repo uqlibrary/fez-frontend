@@ -43,14 +43,14 @@ Object {
 `;
 
 exports[`Component CopyrightAgreement should render checked if deposit agreement accepted 1`] = `
-<WithStyles(ForwardRef(FormControlLabel))
+<ForwardRef(FormControlLabel)
   classes={
     Object {
       "root": undefined,
     }
   }
   control={
-    <WithStyles(ForwardRef(Checkbox))
+    <ForwardRef(Checkbox)
       checked={true}
       classes={
         Object {
@@ -69,7 +69,7 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
   }
   disabled={false}
   label={
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       classes={
         Object {
           "root": "",
@@ -81,20 +81,20 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
       id="test-label"
     >
       test deposit agreement
-    </WithStyles(ForwardRef(Typography))>
+    </ForwardRef(Typography)>
   }
 />
 `;
 
 exports[`Component CopyrightAgreement should render default view 1`] = `
-<WithStyles(ForwardRef(FormControlLabel))
+<ForwardRef(FormControlLabel)
   classes={
     Object {
       "root": undefined,
     }
   }
   control={
-    <WithStyles(ForwardRef(Checkbox))
+    <ForwardRef(Checkbox)
       checked={false}
       classes={
         Object {
@@ -113,7 +113,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
   }
   disabled={false}
   label={
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       classes={
         Object {
           "root": "",
@@ -125,7 +125,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       id="test-label"
     >
       test deposit agreement
-    </WithStyles(ForwardRef(Typography))>
+    </ForwardRef(Typography)>
   }
 />
 `;

@@ -7,7 +7,7 @@ context('Claim possible work', () => {
 
     const navToFirstClaim = () => {
         cy.visit('/records/possible').then(() => {
-            cy.get('[data-testid*="publication-action-"]').should('have.length', 16);
+            cy.get('[data-testid*="publication-action"]').should('have.length', 16);
             cy.get('[data-testid=publication-action-UQ641272-primary]').click();
             cy.url().should('equal', `${baseUrl}/records/claim`);
             cy.get('[data-testid="page-title"]').should('exist');
@@ -28,7 +28,7 @@ context('Claim possible work', () => {
             cy.get('[class*="StandardRighthandCard-title"] div')
                 .should('have.length', 1)
                 .should('contain', 'Refine results');
-            cy.get('[class*="MuiGrid-grid-sm-3"] .facetsFilter [class*="MuiListItem-root-"]').should('have.length', 6);
+            cy.get('[class*="MuiGrid-grid-sm-3"] .facetsFilter [class*="MuiListItem-root"]').should('have.length', 6);
         });
     });
 
@@ -55,6 +55,7 @@ context('Claim possible work', () => {
         navToFirstClaim();
         cy.contains('.StandardCard', claimFormLocale.comments.title)
             .find('textarea')
+            .first()
             .type('Test comment');
         cy.contains('button', claimFormLocale.cancel).click();
         cy.contains('[role="dialog"]', claimFormLocale.cancelWorkflowConfirmation.confirmationTitle)

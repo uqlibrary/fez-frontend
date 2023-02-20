@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 import { url } from 'config/validation';
 
 export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) => {

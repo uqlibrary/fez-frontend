@@ -1,9 +1,8 @@
-import orange from '@material-ui/core/colors/orange';
-import red from '@material-ui/core/colors/red';
-import { createTheme } from '@material-ui/core/styles';
-import createPalette from '@material-ui/core/styles/createPalette';
+import { createTheme } from '@mui/material/styles';
 
-const palette = createPalette({
+import { orange, red } from '@mui/material/colors';
+
+const palette = {
     primary: {
         light: '#962A8B',
         main: '#51247A',
@@ -22,6 +21,11 @@ const palette = createPalette({
                     'endColorstr="#962a8b",GradientType=1 )',
             },
         },
+    },
+    default: {
+        light: 'rgba(0, 0, 0, 0.87)',
+        main: '#595959',
+        dark: '#333333',
     },
     secondary: {
         light: '#f2f2f2',
@@ -51,7 +55,7 @@ const palette = createPalette({
         main: '#c80000',
         dark: '#790000',
     },
-});
+};
 
 export const mui1theme = createTheme({
     palette: palette,
@@ -66,41 +70,64 @@ export const mui1theme = createTheme({
         useNextVariants: true,
         suppressDeprecationWarnings: true,
     },
-    overrides: {
+    components: {
         MuiFormLabel: {
-            root: {
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                width: '100%',
-                textOverflow: 'ellipsis',
-                lineHeight: 'normal',
-            },
-        },
-        MuiInput: {
-            formControl: {
-                'label + &': {
-                    marginTop: 17,
+            styleOverrides: {
+                root: {
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    width: '100%',
+                    textOverflow: 'ellipsis',
                 },
             },
         },
         MuiMenuItem: {
-            root: {
-                '&$selected': {
-                    backgroundColor: '#4085C6 !important',
-                    color: '#FFFFFF',
+            styleOverrides: {
+                root: {
+                    '&.selected': {
+                        backgroundColor: '#4085C6 !important',
+                        color: '#FFFFFF',
+                    },
                 },
             },
         },
         MuiIconButton: {
-            colorInherit: {
-                color: 'none',
+            styleOverrides: {
+                colorInherit: {
+                    color: 'none',
+                },
             },
         },
         MUIDataTable: {
-            paper: {
-                boxShadow: 'none',
-                padding: 0,
-                margin: 0,
+            styleOverrides: {
+                paper: {
+                    boxShadow: 'none',
+                    padding: 0,
+                    margin: 0,
+                },
+            },
+        },
+        MuiButton: {
+            variants: [
+                {
+                    props: { variant: 'contained', color: 'default' }, // restore button default style to mui5
+                    style: {
+                        color: palette.default,
+                        boxShadow:
+                            '0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)',
+                        backgroundColor: '#e0e0e0',
+                        '&:hover': {
+                            boxShadow:
+                                '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)',
+                            backgroundColor: '#d5d5d5',
+                        },
+                    },
+                },
+            ],
+        },
+        MuiUseMediaQuery: {
+            defaultProps: {
+                noSsr: true,
             },
         },
     },
@@ -129,20 +156,38 @@ export const mui1theme = createTheme({
 
 export const adminTheme = createTheme({
     palette: palette,
-    overrides: {
+    components: {
         MuiFormLabel: {
-            root: {
-                color: '#4085C6',
+            styleOverrides: {
+                root: {
+                    color: '#4085C6',
+                },
             },
         },
         MuiInputBase: {
-            root: {
-                fontWeight: 400,
+            styleOverrides: {
+                root: {
+                    fontWeight: 400,
+                },
             },
         },
         MuiIconButton: {
-            colorInherit: {
-                color: 'none',
+            styleOverrides: {
+                colorInherit: {
+                    color: 'none',
+                },
+            },
+        },
+        MuiGrid2: {
+            styleOverrides: {
+                root: {
+                    minWidth: 'auto',
+                },
+            },
+        },
+        MuiUseMediaQuery: {
+            defaultProps: {
+                noSsr: true,
             },
         },
     },

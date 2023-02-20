@@ -10,12 +10,12 @@ import { useConfirmationState } from 'hooks';
 import { locale } from 'locale';
 
 import BulkUpdatesForm from './BulkUpdatesForm';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(
     theme => ({
         paper: {
-            [theme.breakpoints.down('xs')]: {
+            [theme.breakpoints.down('sm')]: {
                 margin: theme.spacing(1),
             },
         },

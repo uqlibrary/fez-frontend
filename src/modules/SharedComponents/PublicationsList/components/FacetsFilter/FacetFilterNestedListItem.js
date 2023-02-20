@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import { makeStyles } from '@material-ui/styles';
-import Clear from '@material-ui/icons/Clear';
-import Typography from '@material-ui/core/Typography';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import { makeStyles } from '@mui/styles';
+import Clear from '@mui/icons-material/Clear';
+import Typography from '@mui/material/Typography';
 import { sanitiseId } from 'helpers/general';
 
 const useStyles = makeStyles(

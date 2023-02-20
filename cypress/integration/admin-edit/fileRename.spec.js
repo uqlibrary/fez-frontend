@@ -203,7 +203,7 @@ context('File rename admin edit', () => {
         const originalFilename = record.fez_datastream_info[1].dsi_dsid;
 
         cy.get('[data-testid=files-section-content]').within(() => {
-            cy.get(`[data-testid=${editId}]`).should('not.exist');
+            cy.get(`[data-testid=${editId}]`).should('not.be.visible');
             cy.get(`[data-testid=${resetId}]`).should('not.exist');
             cy.get(`[data-testid=${filenameText}]`).should('contain', originalFilename);
         });

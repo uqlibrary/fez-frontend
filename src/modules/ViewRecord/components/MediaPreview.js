@@ -1,18 +1,20 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import ReactJWPlayer from 'react-jw-player';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 const useStyles = makeStyles(theme => ({
     containerPadding: {
-        padding: `${theme.spacing(1)}px 0`,
+        padding: `${theme.spacing(1)} 0`,
         [theme.breakpoints.up('sm')]: {
             padding: theme.spacing(1),
         },
@@ -34,7 +36,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
 
     return (
         <div className={classes.containerPadding} id={id}>
-            <Grid container spacing={2} justifyContent="flex-end" direction="row">
+            <Grid container spacing={2} padding={0} justifyContent="flex-end" direction="row">
                 {mediaUrl && (
                     <Grid item xs={12} sm="auto">
                         <Button
@@ -100,6 +102,9 @@ export const MediaPreview = ({ ...props }) => {
     const isVideo = mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf';
     const isPreviewable = mimeType.indexOf('image') >= 0 || mimeType.indexOf('pdf') >= 0;
     const title = isVideo ? videoTitle : imageTitle;
+    const theme = useTheme();
+    const desktopVisible = useMediaQuery(theme.breakpoints.up('sm'));
+    const mobileVisible = useMediaQuery(theme.breakpoints.down('sm'));
 
     React.useEffect(() => {
         if (imageError || (videoErrorCode && videoErrorMsg) || !videoLoading) {
@@ -116,11 +121,11 @@ export const MediaPreview = ({ ...props }) => {
                         {title}
                     </Typography>
                 </Grid>
-                <Hidden xsDown>
+                {desktopVisible && (
                     <Grid item>
                         <MediaPreviewButtons {...{ id: 'media-preview-buttons-larger-screen', ...props }} />
                     </Grid>
-                </Hidden>
+                )}
             </Grid>
             {isVideo && videoErrorMsg && videoErrorCode && (
                 <div style={{ marginTop: 12, marginBottom: 12 }}>
@@ -184,9 +189,7 @@ export const MediaPreview = ({ ...props }) => {
                     <InlineLoader message={videoLoadingMessage} />
                 </div>
             )}
-            <Hidden smUp>
-                <MediaPreviewButtons {...{ id: 'media-preview-buttons-smaller-screen', ...props }} />
-            </Hidden>
+            {mobileVisible && <MediaPreviewButtons {...{ id: 'media-preview-buttons-smaller-screen', ...props }} />}
         </React.Fragment>
     );
 };

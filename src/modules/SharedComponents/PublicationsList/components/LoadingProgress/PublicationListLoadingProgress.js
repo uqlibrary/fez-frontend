@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import { PropTypes } from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import LinearProgress from '@material-ui/core/LinearProgress';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress from '@mui/material/LinearProgress';
 import locale from 'locale/pages';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
     copy: {
@@ -26,7 +26,7 @@ export class PublicationListLoadingProgressClass extends PureComponent {
 
         return (
             <React.Fragment>
-                <Hidden xsDown>
+                <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {txt.repositories.map((item, index) => (
                         <Grid container spacing={1} key={index}>
                             <Grid item xs>
@@ -52,24 +52,21 @@ export class PublicationListLoadingProgressClass extends PureComponent {
                             )}
                         </Grid>
                     ))}
-                </Hidden>
-                <Hidden smUp>
-                    <LinearProgress
-                        variant="determinate"
-                        value={
-                            (loadingPublicationSources.totalSearchedCount /
-                                loadingPublicationSources.totalSourcesCount) *
-                            100
-                        }
-                        aria-valuenow={
-                            (loadingPublicationSources.totalSearchedCount /
-                                loadingPublicationSources.totalSourcesCount) *
-                            100
-                        }
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                    />
-                </Hidden>
+                </Box>
+                <LinearProgress
+                    sx={{ display: { xs: 'block', sm: 'none' } }}
+                    variant="determinate"
+                    value={
+                        (loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount) *
+                        100
+                    }
+                    aria-valuenow={
+                        (loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount) *
+                        100
+                    }
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                />
             </React.Fragment>
         );
     }

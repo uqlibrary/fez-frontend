@@ -8,6 +8,7 @@ Object {
       "padding": "12px 0 24px 8px",
     },
     "backgroundColor": "rgb(247, 247, 247)",
+    "padding": "24px",
   },
   "stepperLabel": Object {
     "overflow": "hidden",

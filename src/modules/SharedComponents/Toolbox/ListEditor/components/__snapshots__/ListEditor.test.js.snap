@@ -202,7 +202,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -399,7 +399,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -596,7 +596,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -621,7 +621,7 @@ exports[`ListEditor tests should add an object item and set state 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -674,7 +674,7 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -699,7 +699,7 @@ exports[`ListEditor tests should add item and set state 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -752,7 +752,7 @@ exports[`ListEditor tests should add item and set state 2`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -777,7 +777,7 @@ exports[`ListEditor tests should call default input normaliser function 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -862,7 +862,7 @@ exports[`ListEditor tests should move down an item 1`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -947,7 +947,7 @@ exports[`ListEditor tests should move up an item 1`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -977,7 +977,7 @@ exports[`ListEditor tests should process incomplete props without error 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -1007,7 +1007,7 @@ exports[`ListEditor tests should render full component as disabled 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -1037,7 +1037,7 @@ exports[`ListEditor tests should render full component with a defined className 
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -1106,7 +1106,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -1175,7 +1175,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -1258,7 +1258,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;
 
@@ -1343,6 +1343,6 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
       onMoveUp={[Function]}
     />
   </div>
-  <WithStyles(ForwardRef(FormHelperText)) />
+  <ForwardRef(FormHelperText) />
 </div>
 `;

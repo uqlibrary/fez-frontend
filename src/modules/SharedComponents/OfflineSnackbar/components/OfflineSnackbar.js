@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Snackbar from '@material-ui/core/Snackbar';
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/icons/Link';
-import LinkOff from '@material-ui/icons/LinkOff';
+import Snackbar from '@mui/material/Snackbar';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/icons-material/Link';
+import LinkOff from '@mui/icons-material/LinkOff';
 import { locale } from 'locale';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from '@mui/styles/withStyles';
 
 export const styles = theme => ({
     success: {

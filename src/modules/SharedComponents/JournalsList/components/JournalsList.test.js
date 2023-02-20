@@ -1,21 +1,11 @@
 import React from 'react';
-import { render, WithReduxStore /* ,act, fireEvent, screen*/ } from 'test-utils';
+import { render, WithReduxStore } from 'test-utils';
 
 import Immutable from 'immutable';
 import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { default as JournalsList } from './JournalsList';
 
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
-// import { sanitiseId } from 'helpers/general';
-import mediaQuery from 'css-mediaquery';
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 const defaultTestData = {
     journals: mockData.data,
@@ -30,59 +20,15 @@ const setup = ({ testData = { ...defaultTestData }, state = {} }) => {
 };
 
 describe('Journal Search Results list', () => {
-    it('should show compactView labels by default at XL breakpoint', () => {
-        window.matchMedia = createMatchMedia(1920);
-        const { queryByText, getByText } = setup({});
-        // Should default show items with compact view flags
-        JournalFieldsMap.map(item => {
-            !!item.compactView
-                ? expect(getByText(item.label)).toBeInTheDocument()
-                : expect(queryByText(item.label)).not.toBeInTheDocument();
-        });
-    });
     // coverage
-    it('should show compactView labels by default at LG breakpoint', () => {
-        window.matchMedia = createMatchMedia(1280);
-        const { queryByText, getByText } = setup({});
+    it('should show compactView labels by default', () => {
+        // This test just tests for elements in the page. See search.spec.js for breakpoint tests
+        const { queryAllByText, getAllByText } = setup({});
         // Should default show items with compact view flags
         JournalFieldsMap.map(item => {
             !!item.compactView
-                ? expect(getByText(item.label)).toBeInTheDocument()
-                : expect(queryByText(item.label)).not.toBeInTheDocument();
-        });
-    });
-    // coverage
-    it('should show compactView labels by default at MD breakpoint', () => {
-        window.matchMedia = createMatchMedia(960);
-        const { queryByText, getByText } = setup({});
-        // Should default show items with compact view flags
-        JournalFieldsMap.map(item => {
-            !!item.compactView
-                ? expect(getByText(item.label)).toBeInTheDocument()
-                : expect(queryByText(item.label)).not.toBeInTheDocument();
-        });
-    });
-    // coverage
-    it('should show compactView labels by default at SM breakpoint', () => {
-        window.matchMedia = createMatchMedia(600);
-        const { queryByText, getByText } = setup({});
-        // Should default show items with compact view flags
-        JournalFieldsMap.map(item => {
-            !!item.compactView
-                ? expect(getByText(item.label)).toBeInTheDocument()
-                : expect(queryByText(item.label)).not.toBeInTheDocument();
-        });
-    });
-
-    it('should only show two compactView labels by default at XS breakpoint', () => {
-        window.matchMedia = createMatchMedia(599);
-
-        const { queryByText, getAllByText } = setup({});
-        // Should default show items with compact view flags
-        JournalFieldsMap.slice(1).map(item => {
-            !!item.compactView
-                ? expect(getAllByText(item.label).length).toEqual(mockData.data.length)
-                : expect(queryByText(item.label)).not.toBeInTheDocument();
+                ? expect(getAllByText(item.label).length).toBeGreaterThan(0)
+                : expect(queryAllByText(item.label).length).toBe(0);
         });
     });
 

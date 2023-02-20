@@ -1,6 +1,15 @@
 import React from 'react';
 
-import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor, waitForElementToBeRemoved } from 'test-utils';
+import {
+    act,
+    render,
+    fireEvent,
+    WithReduxStore,
+    WithRouter,
+    waitFor,
+    waitForElementToBeRemoved,
+    createMatchMedia,
+} from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -9,7 +18,6 @@ import * as PushHistory from './components/functions';
 import * as UserIsAdmin from 'hooks/userIsAdmin';
 import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
-import mediaQuery from 'css-mediaquery';
 
 import CommunityList from './CommunityList';
 import * as repositories from 'repositories';
@@ -23,13 +31,6 @@ const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries:
         </WithRouter>,
     );
 };
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 describe('CommunityList form', () => {
     const testPid1 = 'UQ:12096';

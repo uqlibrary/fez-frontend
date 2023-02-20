@@ -1,19 +1,20 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 export const JournalTemplate = ({ option }) => {
     return (
         <Grid container>
             <Grid item xs={12}>
                 <Typography variant="body1" color="textPrimary">
-                    {option.jnl_title}
+                    {option?.jnl_title}
                 </Typography>
             </Grid>
             <Grid item xs={12}>
                 <Typography variant="body2" color="textSecondary">
-                    {option.fez_journal_issn.map(issn => issn.jnl_issn).join(', ')}
+                    {option?.fez_journal_issn?.map(issn => issn.jnl_issn).join(', ')}
                 </Typography>
             </Grid>
         </Grid>

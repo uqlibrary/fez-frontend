@@ -2,7 +2,7 @@ import { journalArticle } from 'mock/data/testing/records';
 // import { GrantInformationClass } from './GrantInformation';
 import GrantInformation from './GrantInformation';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         publication: journalArticle,
         history: { push: jest.fn() },
@@ -15,27 +15,23 @@ function setup(testProps = {}, args = { isShallow: true }) {
 
 describe('Grant Information Component ', () => {
     it('should render component', () => {
-        const wrapper = setup();
+        const wrapper = setup({}, { isShallow: true });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('#grantInformation').length).toEqual(1);
     });
 
     it('should render component mounted', () => {
-        const wrapper = getElement(
-            GrantInformation,
-            {
-                publication: journalArticle,
-                history: { push: jest.fn() },
-                actions: {},
-                classes: {},
-            },
-            { isShallow: false },
-        );
+        const wrapper = getElement(GrantInformation, {
+            publication: journalArticle,
+            history: { push: jest.fn() },
+            actions: {},
+            classes: {},
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not render component with empty publication', () => {
-        const wrapper = setup({ publication: {} });
+        const wrapper = setup({ publication: {} }, { isShallow: true });
         expect(toJson(wrapper)).toBe('');
     });
 
@@ -44,13 +40,9 @@ describe('Grant Information Component ', () => {
         delete publication.fez_record_search_key_grant_id;
         const wrapper = setup({ publication: publication });
 
-        const grantRow = wrapper
-            .find('GrantDetails')
-            .first()
-            .shallow();
-
-        expect(grantRow.find('[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
-        expect(grantRow.find('[data-testid="rek-grant-text-0"]').text()).toBe('');
+        const grantRow = wrapper.find('GrantDetails').first();
+        expect(grantRow.find('p[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
+        expect(grantRow.find('p[data-testid="rek-grant-text-0"]').text()).toBe('');
     });
 
     it('should not render empty grant ids', () => {
@@ -62,13 +54,10 @@ describe('Grant Information Component ', () => {
 
         const wrapper = setup({ publication: publication });
 
-        const grantRow = wrapper
-            .find('GrantDetails')
-            .first()
-            .shallow();
+        const grantRow = wrapper.find('GrantDetails').first();
 
-        expect(grantRow.find('[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
-        expect(grantRow.find('[data-testid="rek-grant-text-0"]').text()).toBe('');
+        expect(grantRow.find('p[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
+        expect(grantRow.find('p[data-testid="rek-grant-text-0"]').text()).toBe('');
     });
 
     it('should not break if grant text is not in the record', () => {

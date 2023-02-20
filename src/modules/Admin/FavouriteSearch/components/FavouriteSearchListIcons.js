@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react';
 
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
-import Check from '@material-ui/icons/Check';
-import Clear from '@material-ui/icons/Clear';
-import Delete from '@material-ui/icons/Delete';
-import Edit from '@material-ui/icons/Edit';
+import ArrowDownward from '@mui/icons-material/ArrowDownward';
+import Check from '@mui/icons-material/Check';
+import Clear from '@mui/icons-material/Clear';
+import Delete from '@mui/icons-material/Delete';
+import Edit from '@mui/icons-material/Edit';
 
 export const tableIcons = {
     Check: forwardRef((props, ref) => <Check {...props} ref={ref} id="favourite-search-list-item-save" />),

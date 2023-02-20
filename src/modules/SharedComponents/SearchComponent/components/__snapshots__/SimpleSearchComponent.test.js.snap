@@ -7,6 +7,8 @@ Object {
       "display": "none",
     },
     "backgroundColor": "test2",
+    "margin": "-4px",
+    "width": "calc(100% + 8px)",
   },
   "mobileCloseButton": Object {
     "fill": "test1",
@@ -35,6 +37,11 @@ Object {
     "height": 70,
     "width": "99%",
   },
+  "searchHeaderContainerPadding": Object {
+    "&.MuiGrid-item": Object {
+      "padding": "4px",
+    },
+  },
   "searchIconMobile": Object {
     "fill": "test2",
   },
@@ -55,12 +62,12 @@ exports[`SimpleSearchComponent should render default view 1`] = `
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
@@ -81,13 +88,13 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           type="search"
           value=""
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Click to search eSpace"
           color="primary"
           data-testid="simple-search-button"
@@ -98,16 +105,17 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           variant="contained"
         >
           Search
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
+          color="default"
           data-testid="show-advanced-search"
           fullWidth={true}
           id="show-advanced-search"
@@ -115,48 +123,14 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           variant="contained"
         >
           Advanced search
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </form>
 </Fragment>
 `;
 
-exports[`SimpleSearchComponent should render mobile view 1`] = `
-Array [
-  <Hidden
-    smUp={true}
-  >
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-    >
-      <WithStyles(ForwardRef(IconButton))
-        onClick={[Function]}
-      >
-        <Memo(ForwardRef(CloseIcon))
-          fontSize="inherit"
-        />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </Hidden>,
-  <Hidden
-    smUp={true}
-  >
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-    >
-      <WithStyles(ForwardRef(IconButton))
-        disabled={true}
-        onClick={[Function]}
-      >
-        <Memo(ForwardRef(ArrowForwardIcon))
-          fontSize="inherit"
-        />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </Hidden>,
-]
-`;
+exports[`SimpleSearchComponent should render mobile view 1`] = `null`;
 
 exports[`SimpleSearchComponent should render show prefix icon in the search box 1`] = `
 <Fragment>
@@ -168,12 +142,12 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
@@ -194,13 +168,13 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           type="search"
           value=""
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Click to search eSpace"
           color="primary"
           data-testid="simple-search-button"
@@ -211,16 +185,17 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           variant="contained"
         >
           Search
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
+          color="default"
           data-testid="show-advanced-search"
           fullWidth={true}
           id="show-advanced-search"
@@ -228,9 +203,9 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           variant="contained"
         >
           Advanced search
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </form>
 </Fragment>
 `;
@@ -245,51 +220,69 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
       }
     }
   >
-    <Hidden
-      xsDown={true}
+    <ForwardRef(Grid)
+      alignItems="center"
+      className={Object {}}
+      container={true}
+      direction="row"
+      spacing={1}
+      sx={
+        Object {
+          "display": Object {
+            "sm": "flex",
+            "xs": "none",
+          },
+        }
+      }
+      wrap="nowrap"
     >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className={Object {}}
-        container={true}
-        direction="row"
-        spacing={1}
-        wrap="nowrap"
+      <ForwardRef(Grid)
+        classes={
+          Object {
+            "item": undefined,
+          }
+        }
+        item={true}
+        xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={true}
-        >
-          <TextField
-            InputProps={
-              Object {
-                "disableUnderline": true,
-              }
+        <TextField
+          InputProps={
+            Object {
+              "disableUnderline": true,
             }
-            autoComplete="search"
-            errorText={null}
-            fullWidth={true}
-            label=""
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Search eSpace"
-            textFieldId="simple-search"
-            type="search"
-            value=""
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <Hidden
-      smUp={true}
+          }
+          autoComplete="search"
+          errorText={null}
+          fullWidth={true}
+          label=""
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Search eSpace"
+          textFieldId="simple-search"
+          type="search"
+          value=""
+        />
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "display": Object {
+            "sm": "none",
+            "xs": "block",
+          },
+        }
+      }
     >
-      <WithStyles(ForwardRef(Tooltip))
+      <ForwardRef(Tooltip)
         TransitionComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
             "propTypes": Object {
+              "addEndListener": [Function],
+              "appear": [Function],
               "children": [Function],
-              "disableStrictModeCompat": [Function],
+              "easing": [Function],
               "in": [Function],
               "onEnter": [Function],
               "onEntered": [Function],
@@ -311,14 +304,15 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
         placement="bottom-end"
         title="Search eSpace"
       >
-        <WithStyles(ForwardRef(IconButton))
+        <ForwardRef(IconButton)
           aria-label="Click to search eSpace"
           onClick={[Function]}
+          size="large"
         >
           <Memo(ForwardRef(SearchIcon)) />
-        </WithStyles(ForwardRef(IconButton))>
-      </WithStyles(ForwardRef(Tooltip))>
-    </Hidden>
+        </ForwardRef(IconButton)>
+      </ForwardRef(Tooltip)>
+    </ForwardRef(Box)>
   </form>
 </Fragment>
 `;
@@ -333,12 +327,12 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
@@ -359,13 +353,13 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           type="search"
           value="i feel lucky"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Click to search eSpace"
           color="primary"
           data-testid="simple-search-button"
@@ -376,16 +370,17 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           variant="contained"
         >
           Search
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
+          color="default"
           data-testid="show-advanced-search"
           fullWidth={true}
           id="show-advanced-search"
@@ -393,9 +388,9 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           variant="contained"
         >
           Advanced search
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </form>
 </Fragment>
 `;

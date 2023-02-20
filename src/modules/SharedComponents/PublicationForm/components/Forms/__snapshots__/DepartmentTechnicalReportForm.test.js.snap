@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DepartmentTechnicalReportForm renders  component 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Department technical report information"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -26,10 +26,44 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -50,8 +84,8 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -74,8 +108,8 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             hintText=""
             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -98,8 +132,8 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             hintText=""
             name="fez_record_search_key_org_name.rek_org_name"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -121,8 +155,8 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             name="fez_record_search_key_series.rek_series"
             placeholder=""
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -145,8 +179,8 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             hintText=""
             name="fez_record_search_key_report_number.rek_report_number"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -156,10 +190,44 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -175,8 +243,8 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -197,8 +265,8 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -207,10 +275,44 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -225,11 +327,11 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             textFieldId="rek-description"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -252,9 +354,9 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
       }
       title="Authors"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         Please provide a list of authors and then select your name from the list.
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         contributorEditorId="authors"
@@ -351,19 +453,19 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Other details"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -372,10 +474,44 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -389,8 +525,8 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             textFieldId="comments"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -399,10 +535,44 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -420,9 +590,9 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MenuItem from '@material-ui/core/MenuItem';
+import MenuItem from '@mui/material/MenuItem';
 
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 

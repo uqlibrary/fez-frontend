@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
-import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import withStyles from '@mui/styles/withStyles';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 import { FormValuesContext } from 'context';
@@ -306,7 +306,7 @@ export class FileUploadDropzone extends PureComponent {
         return (
             <Grid container>
                 <Grid item xs={12}>
-                    <div tabIndex="0" onKeyPress={this._onKeyPress} id="FileUploadDropZone">
+                    <div tabIndex={0} onKeyPress={this._onKeyPress} id="FileUploadDropZone">
                         <Dropzone
                             inputProps={{
                                 id: 'Uploader',

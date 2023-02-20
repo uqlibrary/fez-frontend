@@ -11,8 +11,8 @@ import { NewspaperNameField } from 'modules/SharedComponents/LookupFields';
 
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 export default class NewspaperArticleForm extends Component {
     static propTypes = {

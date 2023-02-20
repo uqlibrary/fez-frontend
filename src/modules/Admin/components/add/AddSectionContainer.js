@@ -7,7 +7,7 @@ import AddSection from './AddSection';
 import { publicationTypes } from 'config';
 import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING, NTRO_SUBTYPES } from 'config/general';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
-import MenuItem from '@material-ui/core/MenuItem';
+import MenuItem from '@mui/material/MenuItem';
 
 export const mapStateToProps = (state, ownProps) => {
     const selector = formValueSelector(FORM_NAME);

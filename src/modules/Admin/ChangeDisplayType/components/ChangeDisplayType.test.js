@@ -70,7 +70,7 @@ describe('ChangeDisplayType form', () => {
         wrapper.find('Field').simulate('change', { target: { name: 'rek_display_type', value: '185' } });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
+        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
     });
 
     it('should have an enabled submit button when user has selected subtype for a work type WITH subtypes', () => {
@@ -87,7 +87,7 @@ describe('ChangeDisplayType form', () => {
             .simulate('change', { target: { name: 'rek_subtype', value: 'Article (original research)' } });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
+        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
     });
 
     it('should have an disabled submit button when user has not yet selected subtype for a work type WITH subtypes', () => {
@@ -99,7 +99,7 @@ describe('ChangeDisplayType form', () => {
             .simulate('change', { target: { name: 'rek_display_type', value: rekDisplayTypeJournalArticle } });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
+        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
     });
 
     it('should render lightbox upon submit', () => {
@@ -164,9 +164,9 @@ describe('Change Display Type form - redirections', () => {
             saveRequesting: false,
             record: mockRecord1,
         });
-        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
+        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
         let submitButton = null;
-        wrapper.find('WithStyles(ForwardRef(Button))').forEach(field => {
+        wrapper.find('ForwardRef(Button)').forEach(field => {
             if (field.props().children === componentsLocale.components.changeDisplayType.submit) {
                 expect(field.props().disabled).toEqual(false);
                 submitButton = field;

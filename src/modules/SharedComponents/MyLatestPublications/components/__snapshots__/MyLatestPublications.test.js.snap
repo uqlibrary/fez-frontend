@@ -3902,28 +3902,28 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
     showAdminActions={false}
     showDefaultActions={true}
   />
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       sm="auto"
       xs={12}
     >
-      <WithStyles(ForwardRef(Button))
+      <ForwardRef(Button)
         className="blueButton"
         color="secondary"
         onClick={[Function]}
         variant="contained"
       >
         View all (137)
-      </WithStyles(ForwardRef(Button))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Button)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </Fragment>
 `;
 

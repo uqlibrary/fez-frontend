@@ -2,18 +2,19 @@
 
 exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(FormControl))
+  <ForwardRef(FormControl)
     error={false}
     style={
       Object {
         "width": "100%",
       }
     }
+    variant="standard"
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       id="test-label"
     />
-    <WithStyles(ForwardRef(Select))
+    <ForwardRef(Select)
       MenuProps={
         Object {
           "data-testid": "test-options",
@@ -40,25 +41,28 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       onBlur={[Function]}
       onChange={[Function]}
       type="text"
+      value=""
+      variant="standard"
     />
-  </WithStyles(ForwardRef(FormControl))>
+  </ForwardRef(FormControl)>
 </Fragment>
 `;
 
 exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(FormControl))
+  <ForwardRef(FormControl)
     error={true}
     style={
       Object {
         "width": "100%",
       }
     }
+    variant="standard"
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       id="test-label"
     />
-    <WithStyles(ForwardRef(Select))
+    <ForwardRef(Select)
       MenuProps={
         Object {
           "data-testid": "test-options",
@@ -86,10 +90,12 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       onBlur={[Function]}
       onChange={[Function]}
       type="text"
+      value=""
+      variant="standard"
     />
-    <WithStyles(ForwardRef(FormHelperText))>
+    <ForwardRef(FormHelperText)>
       Something bad happened
-    </WithStyles(ForwardRef(FormHelperText))>
-  </WithStyles(ForwardRef(FormControl))>
+    </ForwardRef(FormHelperText)>
+  </ForwardRef(FormControl)>
 </Fragment>
 `;

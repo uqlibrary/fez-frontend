@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../../SearchJournals/hooks';
 import { pathConfig } from '../../../config';
 
@@ -57,12 +57,12 @@ export const FavouriteJournals = () => {
     }, [page, pageSize, sortBy, sortDirection]);
     return (
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
-            <Grid container spacing={3}>
+            <Grid container spacing={3} padding={0}>
                 <Grid item xs>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} padding={0}>
                         <Grid item xs sm md={12}>
                             <StandardCard noHeader>
-                                <Grid container spacing={2}>
+                                <Grid container spacing={2} padding={0}>
                                     <FavouriteJournalsList
                                         journalsList={response}
                                         loading={loading}
@@ -79,7 +79,7 @@ export const FavouriteJournals = () => {
                                     />
                                 </Grid>
                                 <Grid style={{ paddingTop: !!response?.total ? 20 : 25 }} item xs={12}>
-                                    <Grid container spacing={2}>
+                                    <Grid container spacing={2} padding={0}>
                                         {!!response?.total && (
                                             <Grid item xs={12} sm={6} md="auto">
                                                 <LoadingButton

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
-<WithStyles(ForwardRef(Avatar))
+<ForwardRef(Avatar)
   aria-label="Photograph of  Professor undefined undefined"
   src="https://its-ss-academicportal.s3.amazonaws.com/prod/uqresearchers/photo/thumbnail_14.jpg"
   style={

@@ -5,12 +5,12 @@ exports[`Component AcknowledgementOfCountry should render component 1`] = `
   primaryHeader={true}
   title="Acknowledgement of Country"
 >
-  <WithStyles(ForwardRef(Typography))
+  <ForwardRef(Typography)
     variant="body2"
   >
     <span>
       The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
     </span>
-  </WithStyles(ForwardRef(Typography))>
+  </ForwardRef(Typography)>
 </StandardCard>
 `;

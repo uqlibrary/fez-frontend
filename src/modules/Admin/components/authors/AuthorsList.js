@@ -2,24 +2,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from 'material-table';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import { numberToWords } from 'config';
-import Hidden from '@material-ui/core/Hidden';
-import AddCircle from '@material-ui/icons/AddCircle';
-import Grid from '@material-ui/core/Grid';
-import Edit from '@material-ui/icons/Edit';
-import People from '@material-ui/icons/People';
-import PersonOutlined from '@material-ui/icons/PersonOutlined';
-import HowToRegIcon from '@material-ui/icons/HowToReg';
-import Lock from '@material-ui/icons/Lock';
-import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
-import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
-import Delete from '@material-ui/icons/Delete';
+import AddCircle from '@mui/icons-material/AddCircle';
+import Grid from '@mui/material/Grid';
+import Edit from '@mui/icons-material/Edit';
+import People from '@mui/icons-material/People';
+import PersonOutlined from '@mui/icons-material/PersonOutlined';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import Lock from '@mui/icons-material/Lock';
+import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import Delete from '@mui/icons-material/Delete';
 
 import { tableIcons } from './AuthorsListIcons';
 import OrgAffiliationTypeSelector from 'modules/SharedComponents/ContributorsEditor/components/OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from 'modules/SharedComponents/ContributorsEditor/components/NonUqOrgAffiliationFormSection';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
@@ -46,11 +46,9 @@ export const NameAsPublished = React.memo(({ icon, text, linked }) => {
     const classes = useStyles();
     return (
         <Grid container spacing={2}>
-            <Hidden xsDown>
-                <Grid item style={{ alignSelf: 'center' }}>
-                    {icon}
-                </Grid>
-            </Hidden>
+            <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                {icon}
+            </Grid>
             <Grid item className={linked ? classes.linked : ''}>
                 {text}
             </Grid>
@@ -111,11 +109,9 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                 const { rowData: contributor } = props;
                 return (
                     <Grid container spacing={2}>
-                        <Hidden xsDown>
-                            <Grid item style={{ alignSelf: 'center' }}>
-                                <PersonOutlined color="secondary" />
-                            </Grid>
-                        </Hidden>
+                        <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <PersonOutlined color="secondary" />
+                        </Grid>
                         <Grid item style={{ flexGrow: '1' }}>
                             <TextField
                                 autoFocus

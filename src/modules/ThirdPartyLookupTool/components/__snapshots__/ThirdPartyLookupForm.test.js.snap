@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ThirdPartyLookupForm should display form in minimised view 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -25,45 +25,46 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             Test Form
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Show form for Test Form"
           >
             <Memo(ForwardRef(KeyboardArrowDownIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should display form without a secondary field 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -72,23 +73,24 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             Incites
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Hide form for Incites"
           >
             <Memo(ForwardRef(KeyboardArrowUpIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
       <form>
         <p>
           tip 1
@@ -98,7 +100,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
             UTs
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="primaryValue"
             fullWidth={true}
@@ -107,40 +109,41 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
             placeholder="Enter one or more UTs, separated by a comma"
             required={true}
             value=""
+            variant="standard"
           />
         </div>
         <p />
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Submit to Incites"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
           Submit to Incites
-        </WithStyles(ForwardRef(Button))>
+        </ForwardRef(Button)>
       </form>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -149,23 +152,24 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             Test Lookup Action Fired
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Hide form for Test Lookup Action Fired"
           >
             <Memo(ForwardRef(KeyboardArrowUpIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
       <form>
         <p>
           Tip 3
@@ -175,7 +179,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
             PF 1
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="primaryValue"
             fullWidth={true}
@@ -184,40 +188,41 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
             placeholder=""
             required={true}
             value="blah"
+            variant="standard"
           />
         </div>
         <p />
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Submit 1"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
           Submit 1
-        </WithStyles(ForwardRef(Button))>
+        </ForwardRef(Button)>
       </form>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should fire the lookup action when there is a secondary field 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -226,23 +231,24 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             Test Lookup Action Fired7
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Hide form for Test Lookup Action Fired7"
           >
             <Memo(ForwardRef(KeyboardArrowUpIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
       <form>
         <p>
           Tip 7
@@ -252,7 +258,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
             PF 7
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="primaryValue"
             fullWidth={true}
@@ -261,6 +267,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
             placeholder=""
             required={true}
             value="blah"
+            variant="standard"
           />
         </div>
         <div>
@@ -268,7 +275,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
             SF 7
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="secondaryValue"
             fullWidth={true}
@@ -276,40 +283,41 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
             onChange={[Function]}
             placeholder=""
             value="blah"
+            variant="standard"
           />
         </div>
         <p />
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Submit 7"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
           Submit 7
-        </WithStyles(ForwardRef(Button))>
+        </ForwardRef(Button)>
       </form>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should show form with non-minimised form 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -318,23 +326,24 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             Test Form
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Hide form for Test Form"
           >
             <Memo(ForwardRef(KeyboardArrowUpIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
       <form>
         <p />
         <div>
@@ -342,7 +351,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
             UTs
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="primaryValue"
             fullWidth={true}
@@ -351,6 +360,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
             placeholder=""
             required={true}
             value=""
+            variant="standard"
           />
         </div>
         <div>
@@ -358,7 +368,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
             API Key
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="secondaryValue"
             fullWidth={true}
@@ -366,40 +376,41 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
             onChange={[Function]}
             placeholder=""
             value=""
+            variant="standard"
           />
         </div>
         <p />
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Submit"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
           Submit
-        </WithStyles(ForwardRef(Button))>
+        </ForwardRef(Button)>
       </form>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should submit if fields are valid where no secondary field is required 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -408,23 +419,24 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             Incites
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Hide form for Incites"
           >
             <Memo(ForwardRef(KeyboardArrowUpIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
       <form>
         <p>
           Tip 2
@@ -434,7 +446,7 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
             UTs
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="primaryValue"
             fullWidth={true}
@@ -443,40 +455,41 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
             placeholder="Enter one or more UTs, separated by a comma"
             required={true}
             value="blah"
+            variant="standard"
           />
         </div>
         <p />
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Submit to Incites"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
           Submit to Incites
-        </WithStyles(ForwardRef(Button))>
+        </ForwardRef(Button)>
       </form>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -485,45 +498,46 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             Test Form
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Show form for Test Form"
           >
             <Memo(ForwardRef(KeyboardArrowDownIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -532,23 +546,24 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             Test Form
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Hide form for Test Form"
           >
             <Memo(ForwardRef(KeyboardArrowUpIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
       <form>
         <p />
         <div>
@@ -556,7 +571,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
             UTs
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="primaryValue"
             fullWidth={true}
@@ -565,6 +580,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
             placeholder=""
             required={true}
             value=""
+            variant="standard"
           />
         </div>
         <div>
@@ -572,7 +588,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
             API Key
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="secondaryValue"
             fullWidth={true}
@@ -580,40 +596,41 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
             onChange={[Function]}
             placeholder=""
             value=""
+            variant="standard"
           />
         </div>
         <p />
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Submit"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
           Submit
-        </WithStyles(ForwardRef(Button))>
+        </ForwardRef(Button)>
       </form>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -622,45 +639,46 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             Test Form
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Show form for Test Form"
           >
             <Memo(ForwardRef(KeyboardArrowDownIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should use defaults when locale values are not provided 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -669,23 +687,24 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             this form
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Test hide this form"
           >
             <Memo(ForwardRef(KeyboardArrowUpIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
       <form>
         <p />
         <div>
@@ -693,7 +712,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
             PF3
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="primaryValue"
             fullWidth={true}
@@ -702,6 +721,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
             placeholder=""
             required={true}
             value=""
+            variant="standard"
           />
         </div>
         <div>
@@ -709,7 +729,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
             SF3
           </h4>
           <p />
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label=""
             className="secondaryValue"
             fullWidth={true}
@@ -717,42 +737,43 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
             onChange={[Function]}
             placeholder=""
             value=""
+            variant="standard"
           />
         </div>
         <p>
           test bottom tip
         </p>
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Submit"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
           Submit
-        </WithStyles(ForwardRef(Button))>
+        </ForwardRef(Button)>
       </form>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component ThirdPartyLookupForm should use locale values when provided 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       noHeader={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -761,23 +782,24 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
             }
           }
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             variant="h5"
           >
             this form
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
         >
-          <WithStyles(ForwardRef(IconButton))
+          <ForwardRef(IconButton)
             onClick={[Function]}
+            size="large"
             tooltip="Hide form for this form"
           >
             <Memo(ForwardRef(KeyboardArrowUpIcon)) />
-          </WithStyles(ForwardRef(IconButton))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(IconButton)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
       <form>
         <p />
         <div>
@@ -787,7 +809,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
           <p>
             Tip 2p
           </p>
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label="aria pf2"
             className="primaryValue"
             fullWidth={true}
@@ -796,6 +818,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
             placeholder="placeholder 2p"
             required={true}
             value=""
+            variant="standard"
           />
         </div>
         <div>
@@ -805,7 +828,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
           <p>
             tip 2S
           </p>
-          <WithStyles(ForwardRef(TextField))
+          <ForwardRef(TextField)
             aria-label="aria sf2"
             className="secondaryValue"
             fullWidth={true}
@@ -813,19 +836,20 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
             onChange={[Function]}
             placeholder="placeholder 2s"
             value=""
+            variant="standard"
           />
         </div>
         <p />
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           aria-label="Submit2"
           color="primary"
           onClick={[Function]}
           variant="contained"
         >
           Submit2
-        </WithStyles(ForwardRef(Button))>
+        </ForwardRef(Button)>
       </form>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

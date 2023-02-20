@@ -1,22 +1,21 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/global';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 
-import { makeStyles } from '@material-ui/core/styles';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Tooltip from '@material-ui/core/Tooltip';
-import IconButton from '@material-ui/core/IconButton';
-import Hidden from '@material-ui/core/Hidden';
-import Person from '@material-ui/icons/Person';
-import PersonOutlined from '@material-ui/icons/PersonOutlined';
-import HowToRegIcon from '@material-ui/icons/HowToReg';
-import Delete from '@material-ui/icons/Delete';
-import Edit from '@material-ui/icons/Edit';
-import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
-import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
-import Lock from '@material-ui/icons/Lock';
+import makeStyles from '@mui/styles/makeStyles';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Person from '@mui/icons-material/Person';
+import PersonOutlined from '@mui/icons-material/PersonOutlined';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import Delete from '@mui/icons-material/Delete';
+import Edit from '@mui/icons-material/Edit';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
+import Lock from '@mui/icons-material/Lock';
 import { ContributorRowText } from './ContributorRowText';
 import { useConfirmationState, useWidth } from 'hooks';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -40,7 +39,7 @@ export const useStyles = makeStyles(theme => ({
         borderLeft: '5px solid red',
     },
     rowSelected: {
-        backgroundColor: `${(theme.palette.accent || {}).main} !important`,
+        backgroundColor: `${(theme.palette.accent || /* istanbul ignore next */ {}).main} !important`,
         '& svg': {
             color: 'white !important',
         },
@@ -77,7 +76,7 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             marginLeft: 'auto',
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             width: '100%',
             borderTopColor: '#ddd',
             borderTopStyle: 'dashed',
@@ -129,6 +128,7 @@ export const ContributorRow = ({
     }, [contributor, index]);
 
     const _onMoveUp = React.useCallback(() => {
+        /* istanbul ignore else */
         if (!disabled && onMoveUp) {
             onMoveUp(contributor, index);
         }
@@ -136,6 +136,7 @@ export const ContributorRow = ({
     }, [contributor, index]);
 
     const _onMoveDown = React.useCallback(() => {
+        /* istanbul ignore else */
         if (!disabled && onMoveDown) {
             onMoveDown(contributor, index);
         }
@@ -222,9 +223,10 @@ export const ContributorRow = ({
                 id={`${contributorRowId}-${index}`}
             >
                 <Grid container classes={{ container: classes.listContainer }} id="contributor-row">
-                    <Hidden xsDown>
-                        <ListItemIcon classes={{ root: selectedClass }}>{getRowIcon()}</ListItemIcon>
-                    </Hidden>
+                    <ListItemIcon classes={{ root: selectedClass }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        {getRowIcon()}
+                    </ListItemIcon>
+
                     <ContributorRowText
                         index={index}
                         canEdit={canEdit}
@@ -255,6 +257,7 @@ export const ContributorRow = ({
                                     onClick={_onMoveUp}
                                     disabled={disabled || hideReorder}
                                     aria-label={moveUpHint}
+                                    size="large"
                                 >
                                     <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
@@ -273,6 +276,7 @@ export const ContributorRow = ({
                                     onClick={_onMoveDown}
                                     disabled={disabled || hideReorder}
                                     aria-label={moveDownHint}
+                                    size="large"
                                 >
                                     <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
@@ -291,6 +295,7 @@ export const ContributorRow = ({
                                     disabled={disabled || !!contributor.disabled}
                                     id={`${contributorRowId}-edit-${index}`}
                                     data-testid={`${contributorRowId}-${index}-edit`}
+                                    size="large"
                                 >
                                     <Edit classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
@@ -308,6 +313,7 @@ export const ContributorRow = ({
                                 disabled={disabled || hideDelete}
                                 id={`${contributorRowId}-delete-${index}`}
                                 data-testid={`${contributorRowId}-${index}-delete`}
+                                size="large"
                             >
                                 <Delete classes={{ root: `${selectedClass}` }} />
                             </IconButton>

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
-import OpenInNew from '@material-ui/icons/OpenInNew';
-import { makeStyles } from '@material-ui/core/styles';
+import OpenInNew from '@mui/icons-material/OpenInNew';
+import makeStyles from '@mui/styles/makeStyles';
 
 export const useStyles = makeStyles(() => ({
     externalLink: inline => ({
@@ -57,7 +57,7 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
                 id: `${rest.id}-link`,
             }}
             data-testid={`${rest.id}-link`}
-            tabIndex="0"
+            tabIndex={0}
             title={
                 rest.title ||
                 (openInNewIcon && locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)) ||

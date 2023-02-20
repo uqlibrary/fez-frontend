@@ -5,9 +5,9 @@ import { locale } from 'locale';
 import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
 
 const styles = {
     pubCounts: {

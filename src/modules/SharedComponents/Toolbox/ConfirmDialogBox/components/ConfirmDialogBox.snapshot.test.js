@@ -105,7 +105,7 @@ describe('ConfirmDialogBox snapshots tests', () => {
             onAction: testFn,
         });
         wrapper
-            .find('WithStyles(ForwardRef(Button))')
+            .find('ForwardRef(Button)')
             .get(0)
             .props.onClick();
 
@@ -120,7 +120,7 @@ describe('ConfirmDialogBox snapshots tests', () => {
         });
 
         wrapper
-            .find('WithStyles(ForwardRef(Button))')
+            .find('ForwardRef(Button)')
             .get(1)
             .props.onClick();
 
@@ -136,7 +136,7 @@ describe('ConfirmDialogBox snapshots tests', () => {
         });
 
         wrapper
-            .find('WithStyles(ForwardRef(Button))')
+            .find('ForwardRef(Button)')
             .get(1)
             .props.onClick();
 

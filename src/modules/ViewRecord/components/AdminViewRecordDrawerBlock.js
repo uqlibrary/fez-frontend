@@ -2,10 +2,10 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
-import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import IconButton from '@mui/material/IconButton';
+import FileCopyOutlinedIcon from '@mui/icons-material/FileCopyOutlined';
+import Typography from '@mui/material/Typography';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles({
     contentTitle: {
@@ -47,7 +47,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     key={`content-clipboard-${parentIndex}-${index}`}
                     id={`drawer-${variant}-content-clipboard-${parentIndex}-${index}`}
                     data-testid={`drawer-${variant}-content-clipboard-${parentIndex}-${index}`}
-                    tabIndex="0"
+                    tabIndex={0}
                     aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
                     {block.value}
@@ -73,7 +73,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     key={`content-scrollable-${parentIndex}-${index}`}
                     id={`drawer-${variant}-content-scrollable-${parentIndex}-${index}`}
                     data-testid={`drawer-${variant}-content-scrollable-${parentIndex}-${index}`}
-                    tabIndex="0"
+                    tabIndex={0}
                     aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
                     {block.value}

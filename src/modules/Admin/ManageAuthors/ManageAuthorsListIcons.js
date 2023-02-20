@@ -1,15 +1,15 @@
 import React, { forwardRef } from 'react';
 
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
-import Clear from '@material-ui/icons/Clear';
-import Delete from '@material-ui/icons/Delete';
-import Edit from '@material-ui/icons/Edit';
-import ChevronLeft from '@material-ui/icons/ChevronLeft';
-import ChevronRight from '@material-ui/icons/ChevronRight';
-import FirstPage from '@material-ui/icons/FirstPage';
-import LastPage from '@material-ui/icons/LastPage';
-import Search from '@material-ui/icons/Search';
-import GetApp from '@material-ui/icons/GetApp';
+import ArrowDownward from '@mui/icons-material/ArrowDownward';
+import Clear from '@mui/icons-material/Clear';
+import Delete from '@mui/icons-material/Delete';
+import Edit from '@mui/icons-material/Edit';
+import ChevronLeft from '@mui/icons-material/ChevronLeft';
+import ChevronRight from '@mui/icons-material/ChevronRight';
+import FirstPage from '@mui/icons-material/FirstPage';
+import LastPage from '@mui/icons-material/LastPage';
+import Search from '@mui/icons-material/Search';
+import GetApp from '@mui/icons-material/GetApp';
 
 export const tableIcons = {
     Clear: forwardRef(/* istanbul ignore next */ (props, ref) => <Clear {...props} ref={ref} />),

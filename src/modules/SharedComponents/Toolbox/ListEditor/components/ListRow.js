@@ -2,14 +2,14 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
-import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
-import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
-import Delete from '@material-ui/icons/Delete';
-import Edit from '@material-ui/icons/Edit';
-import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import Delete from '@mui/icons-material/Delete';
+import Edit from '@mui/icons-material/Edit';
+import makeStyles from '@mui/styles/makeStyles';
 import { GenericTemplate } from './GenericTemplate';
 
 const useStyles = makeStyles(() => ({
@@ -88,6 +88,7 @@ export const ListRow = ({
                                                 disabled={disabled}
                                                 id={`${listRowId}-move-up`}
                                                 data-testid={`${listRowId}-move-up`}
+                                                size="large"
                                             >
                                                 <KeyboardArrowUp />
                                             </IconButton>
@@ -104,6 +105,7 @@ export const ListRow = ({
                                                 disabled={disabled}
                                                 id={`${listRowId}-move-down`}
                                                 data-testid={`${listRowId}-move-down`}
+                                                size="large"
                                             >
                                                 <KeyboardArrowDown />
                                             </IconButton>
@@ -125,6 +127,7 @@ export const ListRow = ({
                                             disabled={disabled}
                                             id={`${listRowId}-edit`}
                                             data-testid={`${listRowId}-edit`}
+                                            size="large"
                                         >
                                             <Edit />
                                         </IconButton>
@@ -142,6 +145,7 @@ export const ListRow = ({
                                 disabled={disabled}
                                 id={`${listRowId}-delete`}
                                 data-testid={`${listRowId}-delete`}
+                                size="large"
                             >
                                 <Delete />
                             </IconButton>

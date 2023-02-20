@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
-import DeleteForever from '@material-ui/icons/DeleteForever';
+import makeStyles from '@mui/styles/makeStyles';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import DeleteForever from '@mui/icons-material/DeleteForever';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 
@@ -52,6 +52,7 @@ export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder, list
                                 disabled={disabled}
                                 id={`delete-all-${listEditorId}`}
                                 data-testid={`delete-all-${listEditorId}`}
+                                size="large"
                             >
                                 <DeleteForever />
                             </IconButton>

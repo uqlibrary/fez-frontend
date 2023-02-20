@@ -1,9 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import PropTypes from 'prop-types';
 import CommunityDataRow from './CommunityDataRow';
-import { Grid } from '@material-ui/core';
-import { Hidden } from '@material-ui/core';
+import Grid from '@mui/material/Grid';
 const useStyles = makeStyles({
     headerStyle: {
         fontWeight: 400,
@@ -38,14 +37,12 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
                     <div className={classes.collapseIcon} />
                     <div className={classes.title}>{labels.title}</div>
                 </Grid>
-                <Hidden smDown>
-                    <Grid item xs={2}>
-                        {labels.creation_date}
-                    </Grid>
-                    <Grid item xs={2}>
-                        {labels.updated_date}
-                    </Grid>
-                </Hidden>
+                <Grid item xs={2} sx={{ display: { xs: 'none', md: 'block' } }}>
+                    {labels.creation_date}
+                </Grid>
+                <Grid item xs={2} sx={{ display: { xs: 'none', md: 'block' } }}>
+                    {labels.updated_date}
+                </Grid>
                 {!!adminUser && (
                     <Grid item xs={6} md={1} className={classes.rightAlign}>
                         {labels.actions}

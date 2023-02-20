@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import { makeStyles } from '@material-ui/core/styles';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(
     theme => ({
@@ -149,7 +149,7 @@ export const NewGenericSelectField = ({
     };
 
     return (
-        <FormControl fullWidth required={required} error={!!inputError}>
+        <FormControl variant="standard" fullWidth required={required} error={!!inputError}>
             {!hideLabel && (
                 <InputLabel
                     hidden={hideLabel}
@@ -160,6 +160,7 @@ export const NewGenericSelectField = ({
                 </InputLabel>
             )}
             <Select
+                variant="standard"
                 disabled={disabled}
                 displayEmpty={displayEmpty}
                 inputProps={{

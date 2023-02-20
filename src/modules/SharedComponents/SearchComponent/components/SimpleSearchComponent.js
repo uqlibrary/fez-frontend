@@ -1,21 +1,21 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Tooltip from '@mui/material/Tooltip';
 
-import Search from '@material-ui/icons/Search';
-import Close from '@material-ui/icons/Close';
-import ArrowForward from '@material-ui/icons/ArrowForward';
+import Search from '@mui/icons-material/Search';
+import Close from '@mui/icons-material/Close';
+import ArrowForward from '@mui/icons-material/ArrowForward';
 
 import { MAX_PUBLIC_SEARCH_TEXT_LENGTH } from 'config/general';
 import { locale } from 'locale';
 
-import { withStyles } from '@material-ui/core/styles';
-import Hidden from '@material-ui/core/Hidden';
-import Fade from '@material-ui/core/Fade';
+import withStyles from '@mui/styles/withStyles';
+import Fade from '@mui/material/Fade';
 
 export const styles = theme => ({
     searchIconPrefix: {
@@ -27,6 +27,8 @@ export const styles = theme => ({
         '& input[type="search"]::-webkit-search-cancel-button': {
             display: 'none',
         },
+        width: 'calc(100% + 8px)',
+        margin: '-4px',
     },
     searchIconMobile: {
         fill: theme.palette.white.main,
@@ -56,6 +58,11 @@ export const styles = theme => ({
             fontSize: 24,
             lineHeight: 1.2,
             fontWeight: theme.typography.fontWeightNormal,
+        },
+    },
+    searchHeaderContainerPadding: {
+        '&.MuiGrid-item': {
+            padding: '4px',
         },
     },
 });
@@ -173,40 +180,51 @@ export class SimpleSearchComponent extends PureComponent {
                     {this.props.isInHeader ? (
                         <React.Fragment>
                             {/* DESKTOP in header */}
-                            <Hidden xsDown>
-                                <Grid
-                                    container
-                                    alignItems={'center'}
-                                    spacing={1}
-                                    wrap={'nowrap'}
-                                    className={classes.inHeader}
-                                    direction={'row'}
-                                >
-                                    {this.props.showPrefixIcon && (
-                                        <Grid item xs={'auto'}>
-                                            <Search className={classes.searchIconPrefix} />
-                                        </Grid>
-                                    )}
-                                    <Grid item xs>
-                                        <TextField
-                                            textFieldId="simple-search"
-                                            type="search"
-                                            autoComplete={'search'}
-                                            fullWidth
-                                            autoFocus={this.props.autoFocus}
-                                            label={''}
-                                            placeholder={txt.searchBoxPlaceholder}
-                                            onChange={this._handleSearchTextChange}
-                                            onKeyPress={this._handleSearch}
-                                            value={this.props.searchText}
-                                            InputProps={{ disableUnderline: true }}
-                                            errorText={this.searchTextValidationMessage(this.props.searchText)}
-                                        />
+                            <Grid
+                                container
+                                alignItems={'center'}
+                                spacing={1}
+                                wrap={'nowrap'}
+                                className={classes.inHeader}
+                                direction={'row'}
+                                sx={{ display: { xs: 'none', sm: 'flex' } }}
+                            >
+                                {this.props.showPrefixIcon && (
+                                    <Grid
+                                        item
+                                        xs={'auto'}
+                                        classes={{
+                                            item: classes.searchHeaderContainerPadding,
+                                        }}
+                                    >
+                                        <Search className={classes.searchIconPrefix} />
                                     </Grid>
+                                )}
+                                <Grid
+                                    item
+                                    xs
+                                    classes={{
+                                        item: classes.searchHeaderContainerPadding,
+                                    }}
+                                >
+                                    <TextField
+                                        textFieldId="simple-search"
+                                        type="search"
+                                        autoComplete={'search'}
+                                        fullWidth
+                                        autoFocus={this.props.autoFocus}
+                                        label={''}
+                                        placeholder={txt.searchBoxPlaceholder}
+                                        onChange={this._handleSearchTextChange}
+                                        onKeyPress={this._handleSearch}
+                                        value={this.props.searchText}
+                                        InputProps={{ disableUnderline: true }}
+                                        errorText={this.searchTextValidationMessage(this.props.searchText)}
+                                    />
                                 </Grid>
-                            </Hidden>
-                            {/* MOBILE in header */}
-                            <Hidden smUp>
+                            </Grid>
+                            <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+                                {/* MOBILE in header */}
                                 {!this.state.showMobile ? (
                                     <Tooltip
                                         title={txt.searchBoxPlaceholder}
@@ -217,6 +235,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         <IconButton
                                             onClick={this._handleToggleMobile}
                                             aria-label={txt.mobileSearchButtonAriaLabel}
+                                            size="large"
                                         >
                                             <Search className={classes.searchIconMobile} />
                                         </IconButton>
@@ -232,19 +251,18 @@ export class SimpleSearchComponent extends PureComponent {
                                             justifyContent={'center'}
                                         >
                                             {this.props.showMobileSearchButton && (
-                                                <Hidden smUp>
-                                                    <Grid item>
-                                                        <IconButton
-                                                            onClick={this._handleToggleMobile}
-                                                            className={classes.mobileSearchButtons}
-                                                        >
-                                                            <Close
-                                                                className={classes.mobileCloseButton}
-                                                                fontSize="inherit"
-                                                            />
-                                                        </IconButton>
-                                                    </Grid>
-                                                </Hidden>
+                                                <Grid item>
+                                                    <IconButton
+                                                        onClick={this._handleToggleMobile}
+                                                        className={classes.mobileSearchButtons}
+                                                        size="large"
+                                                    >
+                                                        <Close
+                                                            className={classes.mobileCloseButton}
+                                                            fontSize="inherit"
+                                                        />
+                                                    </IconButton>
+                                                </Grid>
                                             )}
                                             <Grid item xs zeroMinWidth>
                                                 <TextField
@@ -264,22 +282,21 @@ export class SimpleSearchComponent extends PureComponent {
                                                 />
                                             </Grid>
                                             {this.props.showMobileSearchButton && (
-                                                <Hidden smUp>
-                                                    <Grid item>
-                                                        <IconButton
-                                                            onClick={this._handleSearch}
-                                                            disabled={this.state.searchTerm.trim().length === 0}
-                                                            className={classes.mobileSearchButtons}
-                                                        >
-                                                            <ArrowForward fontSize="inherit" />
-                                                        </IconButton>
-                                                    </Grid>
-                                                </Hidden>
+                                                <Grid item>
+                                                    <IconButton
+                                                        onClick={this._handleSearch}
+                                                        disabled={this.state.searchTerm.trim().length === 0}
+                                                        className={classes.mobileSearchButtons}
+                                                        size="large"
+                                                    >
+                                                        <ArrowForward fontSize="inherit" />
+                                                    </IconButton>
+                                                </Grid>
                                             )}
                                         </Grid>
                                     </div>
                                 )}
-                            </Hidden>
+                            </Box>
                         </React.Fragment>
                     ) : (
                         <React.Fragment>
@@ -316,6 +333,7 @@ export class SimpleSearchComponent extends PureComponent {
                                 <Grid item xs={12} sm={'auto'}>
                                     <Button
                                         variant={'contained'}
+                                        color={'default'}
                                         children={txt.advancedSearchButtonText}
                                         aria-label={txt.advancedSearchButtonAriaLabel}
                                         onClick={this._handleSearchMode}
@@ -334,4 +352,4 @@ export class SimpleSearchComponent extends PureComponent {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(SimpleSearchComponent);
+export default withStyles(styles)(SimpleSearchComponent);

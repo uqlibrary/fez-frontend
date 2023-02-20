@@ -1,39 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NonUqOrgAffiliationFormSection tests  should render component with both values 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={1}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={6}
   >
-    <WithStyles(ForwardRef(TextField))
+    <ForwardRef(TextField)
       fullWidth={true}
       id="org-affiliation-name"
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
       value="Test"
+      variant="standard"
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={6}
   >
-    <WithStyles(ForwardRef(FormControl))
+    <ForwardRef(FormControl)
       fullWidth={true}
       required={true}
+      variant="standard"
     >
-      <WithStyles(ForwardRef(InputLabel))
+      <ForwardRef(InputLabel)
         id="org-affiliation-type-label"
       >
         Organisation type
-      </WithStyles(ForwardRef(InputLabel))>
-      <WithStyles(ForwardRef(Select))
+      </ForwardRef(InputLabel)>
+      <ForwardRef(Select)
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
@@ -43,100 +45,103 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
         name="org-affiliation-type"
         onChange={[MockFunction]}
         value="453987"
+        variant="standard"
       >
-        <WithStyles(ForwardRef(MenuItem))
+        <ForwardRef(MenuItem)
           disabled={true}
         >
           Select an organisation type
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453983"
           value="453983"
         >
           Library/Museum/Public Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453984"
           value="453984"
         >
           Commercial Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453985"
           value="453985"
         >
           Government
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453986"
           value="453986"
         >
           NGO
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453987"
           value="453987"
         >
           Foundation
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453988"
           value="453988"
         >
           Corporate/Industry
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453989"
           value="453989"
         >
           University
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453990"
           value="453990"
         >
           Other
-        </WithStyles(ForwardRef(MenuItem))>
-      </WithStyles(ForwardRef(Select))>
-    </WithStyles(ForwardRef(FormControl))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+        </ForwardRef(MenuItem)>
+      </ForwardRef(Select)>
+    </ForwardRef(FormControl)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`NonUqOrgAffiliationFormSection tests  should render component with defaults 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={1}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={6}
   >
-    <WithStyles(ForwardRef(TextField))
+    <ForwardRef(TextField)
       fullWidth={true}
       id="org-affiliation-name"
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
       value=""
+      variant="standard"
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={6}
   >
-    <WithStyles(ForwardRef(FormControl))
+    <ForwardRef(FormControl)
       fullWidth={true}
       required={true}
+      variant="standard"
     >
-      <WithStyles(ForwardRef(InputLabel))
+      <ForwardRef(InputLabel)
         id="org-affiliation-type-label"
       >
         Organisation type
-      </WithStyles(ForwardRef(InputLabel))>
-      <WithStyles(ForwardRef(Select))
+      </ForwardRef(InputLabel)>
+      <ForwardRef(Select)
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
@@ -146,100 +151,103 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
         name="org-affiliation-type"
         onChange={[MockFunction]}
         value=""
+        variant="standard"
       >
-        <WithStyles(ForwardRef(MenuItem))
+        <ForwardRef(MenuItem)
           disabled={true}
         >
           Select an organisation type
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453983"
           value="453983"
         >
           Library/Museum/Public Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453984"
           value="453984"
         >
           Commercial Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453985"
           value="453985"
         >
           Government
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453986"
           value="453986"
         >
           NGO
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453987"
           value="453987"
         >
           Foundation
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453988"
           value="453988"
         >
           Corporate/Industry
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453989"
           value="453989"
         >
           University
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453990"
           value="453990"
         >
           Other
-        </WithStyles(ForwardRef(MenuItem))>
-      </WithStyles(ForwardRef(Select))>
-    </WithStyles(ForwardRef(FormControl))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+        </ForwardRef(MenuItem)>
+      </ForwardRef(Select)>
+    </ForwardRef(FormControl)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`NonUqOrgAffiliationFormSection tests  should render component with organisation affiliation type value 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={1}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={6}
   >
-    <WithStyles(ForwardRef(TextField))
+    <ForwardRef(TextField)
       fullWidth={true}
       id="org-affiliation-name"
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
       value=""
+      variant="standard"
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={6}
   >
-    <WithStyles(ForwardRef(FormControl))
+    <ForwardRef(FormControl)
       fullWidth={true}
       required={true}
+      variant="standard"
     >
-      <WithStyles(ForwardRef(InputLabel))
+      <ForwardRef(InputLabel)
         id="org-affiliation-type-label"
       >
         Organisation type
-      </WithStyles(ForwardRef(InputLabel))>
-      <WithStyles(ForwardRef(Select))
+      </ForwardRef(InputLabel)>
+      <ForwardRef(Select)
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
@@ -249,100 +257,103 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
         name="org-affiliation-type"
         onChange={[MockFunction]}
         value="453987"
+        variant="standard"
       >
-        <WithStyles(ForwardRef(MenuItem))
+        <ForwardRef(MenuItem)
           disabled={true}
         >
           Select an organisation type
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453983"
           value="453983"
         >
           Library/Museum/Public Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453984"
           value="453984"
         >
           Commercial Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453985"
           value="453985"
         >
           Government
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453986"
           value="453986"
         >
           NGO
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453987"
           value="453987"
         >
           Foundation
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453988"
           value="453988"
         >
           Corporate/Industry
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453989"
           value="453989"
         >
           University
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453990"
           value="453990"
         >
           Other
-        </WithStyles(ForwardRef(MenuItem))>
-      </WithStyles(ForwardRef(Select))>
-    </WithStyles(ForwardRef(FormControl))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+        </ForwardRef(MenuItem)>
+      </ForwardRef(Select)>
+    </ForwardRef(FormControl)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`NonUqOrgAffiliationFormSection tests  should render component with organisation affiliation value 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={1}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={6}
   >
-    <WithStyles(ForwardRef(TextField))
+    <ForwardRef(TextField)
       fullWidth={true}
       id="org-affiliation-name"
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
       value="Test"
+      variant="standard"
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={6}
   >
-    <WithStyles(ForwardRef(FormControl))
+    <ForwardRef(FormControl)
       fullWidth={true}
       required={true}
+      variant="standard"
     >
-      <WithStyles(ForwardRef(InputLabel))
+      <ForwardRef(InputLabel)
         id="org-affiliation-type-label"
       >
         Organisation type
-      </WithStyles(ForwardRef(InputLabel))>
-      <WithStyles(ForwardRef(Select))
+      </ForwardRef(InputLabel)>
+      <ForwardRef(Select)
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
@@ -352,100 +363,103 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
         name="org-affiliation-type"
         onChange={[MockFunction]}
         value=""
+        variant="standard"
       >
-        <WithStyles(ForwardRef(MenuItem))
+        <ForwardRef(MenuItem)
           disabled={true}
         >
           Select an organisation type
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453983"
           value="453983"
         >
           Library/Museum/Public Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453984"
           value="453984"
         >
           Commercial Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453985"
           value="453985"
         >
           Government
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453986"
           value="453986"
         >
           NGO
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453987"
           value="453987"
         >
           Foundation
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453988"
           value="453988"
         >
           Corporate/Industry
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453989"
           value="453989"
         >
           University
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453990"
           value="453990"
         >
           Other
-        </WithStyles(ForwardRef(MenuItem))>
-      </WithStyles(ForwardRef(Select))>
-    </WithStyles(ForwardRef(FormControl))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+        </ForwardRef(MenuItem)>
+      </ForwardRef(Select)>
+    </ForwardRef(FormControl)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`NonUqOrgAffiliationFormSection tests  should render full width input fields 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={1}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={12}
   >
-    <WithStyles(ForwardRef(TextField))
+    <ForwardRef(TextField)
       fullWidth={true}
       id="org-affiliation-name"
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
       value="Test"
+      variant="standard"
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     sm={6}
     xs={12}
   >
-    <WithStyles(ForwardRef(FormControl))
+    <ForwardRef(FormControl)
       fullWidth={true}
       required={true}
+      variant="standard"
     >
-      <WithStyles(ForwardRef(InputLabel))
+      <ForwardRef(InputLabel)
         id="org-affiliation-type-label"
       >
         Organisation type
-      </WithStyles(ForwardRef(InputLabel))>
-      <WithStyles(ForwardRef(Select))
+      </ForwardRef(InputLabel)>
+      <ForwardRef(Select)
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
@@ -455,62 +469,63 @@ exports[`NonUqOrgAffiliationFormSection tests  should render full width input fi
         name="org-affiliation-type"
         onChange={[MockFunction]}
         value="453987"
+        variant="standard"
       >
-        <WithStyles(ForwardRef(MenuItem))
+        <ForwardRef(MenuItem)
           disabled={true}
         >
           Select an organisation type
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453983"
           value="453983"
         >
           Library/Museum/Public Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453984"
           value="453984"
         >
           Commercial Gallery
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453985"
           value="453985"
         >
           Government
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453986"
           value="453986"
         >
           NGO
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453987"
           value="453987"
         >
           Foundation
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453988"
           value="453988"
         >
           Corporate/Industry
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453989"
           value="453989"
         >
           University
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
+        </ForwardRef(MenuItem)>
+        <ForwardRef(MenuItem)
           key="453990"
           value="453990"
         >
           Other
-        </WithStyles(ForwardRef(MenuItem))>
-      </WithStyles(ForwardRef(Select))>
-    </WithStyles(ForwardRef(FormControl))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+        </ForwardRef(MenuItem)>
+      </ForwardRef(Select)>
+    </ForwardRef(FormControl)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
