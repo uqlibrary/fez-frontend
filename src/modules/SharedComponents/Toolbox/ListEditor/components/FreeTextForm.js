@@ -1,15 +1,15 @@
 import React, { useCallback, useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import makeStyles from '@mui/styles/makeStyles';
+import Button from '@mui/material/Button';
 import { isValidKeyword } from 'config/validation';
 import { indexOf } from 'lodash';
 
 const useStyles = makeStyles(theme => ({
-    MUITextLabel: theme.overrides.MuiFormLabel,
+    MUITextLabel: theme.components.MuiFormLabel.styleOverrides,
     remindToAdd: {
         marginTop: 8,
         color: '#f06f0d',
@@ -81,6 +81,7 @@ export const FreeTextForm = ({
         >
             <Grid item style={{ flexGrow: 1 }}>
                 <TextField
+                    variant="standard"
                     fullWidth
                     id={`${listEditorId}-input`}
                     data-testid={`${listEditorId}-input`}

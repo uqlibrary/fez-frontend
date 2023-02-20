@@ -5,9 +5,9 @@ import { default as componentLocale } from 'locale/components';
 import { pathConfig } from 'config/pathConfig';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Link } from 'react-router-dom';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import withStyles from '@mui/styles/withStyles';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
 
 const styles = theme => ({
     gridRow: {
@@ -25,7 +25,7 @@ const styles = theme => ({
         },
     },
     containerPadding: {
-        padding: `${theme.spacing(1)}px 0`,
+        padding: `${theme.spacing(1)} 0`,
         [theme.breakpoints.up('sm')]: {
             padding: theme.spacing(1),
         },
@@ -40,7 +40,7 @@ export class PublicationDetailsClass extends PureComponent {
 
     ViewRecordRow = ({ heading, data, rowId }) => (
         <div className={this.props.classes.containerPadding}>
-            <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
+            <Grid container spacing={2} padding={0} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography
                         variant="body2"

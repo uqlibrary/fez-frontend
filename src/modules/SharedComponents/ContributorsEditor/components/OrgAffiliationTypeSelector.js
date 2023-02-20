@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ } from 'config/general';
 
 export default function OrgAffilicationTypeSelector({ affiliation, onAffiliationChange, locale, error, disabled }) {
     return (
-        <FormControl fullWidth error={error}>
+        <FormControl variant="standard" fullWidth error={error}>
             <InputLabel id="org-affiliation-label">{locale.inputLabel}</InputLabel>
             <Select
+                variant="standard"
                 value={affiliation}
                 name="org-affiliation"
                 onChange={onAffiliationChange}

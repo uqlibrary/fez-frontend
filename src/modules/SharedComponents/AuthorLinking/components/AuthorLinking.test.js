@@ -1,10 +1,10 @@
 import React from 'react';
 import AuthorLinking from './AuthorLinking';
-import { render, fireEvent } from 'test-utils';
+import { rtlRender, fireEvent } from 'test-utils';
 
 import * as Hook from 'hooks/useWidth';
 
-function setup(testProps = {}) {
+function setup(testProps = {}, render = rtlRender) {
     const props = {
         authorLinkingId: 'rek-author-id',
         loggedInAuthor: { aut_id: 410 },

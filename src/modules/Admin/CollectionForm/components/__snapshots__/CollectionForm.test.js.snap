@@ -12,11 +12,12 @@ exports[`Collection form should display successfull submission screen 1`] = `
       <NavigationDialogBox
         when={false}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
+        padding={0}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -24,13 +25,14 @@ exports[`Collection form should display successfull submission screen 1`] = `
             help={Object {}}
             title="Add a missing collection"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               data-testid="community-selector"
               id="community-selector"
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -50,11 +52,11 @@ exports[`Collection form should display successfull submission screen 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -70,23 +72,25 @@ exports[`Collection form should display successfull submission screen 1`] = `
             type="done"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
+        padding={0}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={true}
           xs={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             data-testid="cancel-collection"
             disabled={false}
             fullWidth={true}
@@ -94,14 +98,14 @@ exports[`Collection form should display successfull submission screen 1`] = `
             variant="contained"
           >
             Return to the homepage
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             data-testid="submit-collection"
             fullWidth={true}
@@ -109,9 +113,9 @@ exports[`Collection form should display successfull submission screen 1`] = `
             variant="contained"
           >
             Add collection
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -129,11 +133,12 @@ exports[`Collection form should render form with only the community dropdown 1`]
       <NavigationDialogBox
         when={true}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
+        padding={0}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -141,13 +146,14 @@ exports[`Collection form should render form with only the community dropdown 1`]
             help={Object {}}
             title="Add a missing collection"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               data-testid="community-selector"
               id="community-selector"
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -167,26 +173,28 @@ exports[`Collection form should render form with only the community dropdown 1`]
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
+        padding={0}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={true}
           xs={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             data-testid="cancel-collection"
             disabled={false}
             fullWidth={true}
@@ -194,14 +202,14 @@ exports[`Collection form should render form with only the community dropdown 1`]
             variant="contained"
           >
             Return to the homepage
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             data-testid="submit-collection"
             fullWidth={true}
@@ -209,9 +217,9 @@ exports[`Collection form should render form with only the community dropdown 1`]
             variant="contained"
           >
             Add collection
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -221,55 +229,55 @@ exports[`Collection form should render success panel 1`] = `
 <StandardPage
   title="Add a missing collection"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="Collection added successfully"
       >
-        <WithStyles(ForwardRef(Typography))>
+        <ForwardRef(Typography)>
           Your new collection was created successfully.
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
     >
-      <WithStyles(ForwardRef(Button))
+      <ForwardRef(Button)
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
       >
         Add another collection
-      </WithStyles(ForwardRef(Button))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Button)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
     >
-      <WithStyles(ForwardRef(Button))
+      <ForwardRef(Button)
         color="primary"
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
       >
         Return to the homepage
-      </WithStyles(ForwardRef(Button))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Button)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -285,11 +293,12 @@ exports[`Collection form should render the full form 1`] = `
       <NavigationDialogBox
         when={true}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
+        padding={0}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -297,13 +306,14 @@ exports[`Collection form should render the full form 1`] = `
             help={Object {}}
             title="Add a missing collection"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               data-testid="community-selector"
               id="community-selector"
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -323,11 +333,11 @@ exports[`Collection form should render the full form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -335,11 +345,12 @@ exports[`Collection form should render the full form 1`] = `
             help={Object {}}
             title="Collection details"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -349,10 +360,44 @@ exports[`Collection form should render the full form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -371,8 +416,8 @@ exports[`Collection form should render the full form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -381,10 +426,44 @@ exports[`Collection form should render the full form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -404,14 +483,14 @@ exports[`Collection form should render the full form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
-                </WithStyles(ForwardRef(Typography))>
+                </ForwardRef(Typography)>
                 <Field
                   ListEditorForm={
                     Object {
@@ -476,14 +555,14 @@ exports[`Collection form should render the full form 1`] = `
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   Internal Notes (admin)
-                </WithStyles(ForwardRef(Typography))>
+                </ForwardRef(Typography)>
                 <Field
                   component={[Function]}
                   disabled={false}
@@ -495,26 +574,28 @@ exports[`Collection form should render the full form 1`] = `
                   richEditorId="internalNotes"
                   rows={5}
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
+        padding={0}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={true}
           xs={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             data-testid="cancel-collection"
             disabled={false}
             fullWidth={true}
@@ -522,14 +603,14 @@ exports[`Collection form should render the full form 1`] = `
             variant="contained"
           >
             Return to the homepage
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             data-testid="submit-collection"
             fullWidth={true}
@@ -537,9 +618,9 @@ exports[`Collection form should render the full form 1`] = `
             variant="contained"
           >
             Add collection
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>

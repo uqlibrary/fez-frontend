@@ -9,17 +9,17 @@ import { PolicyDropdown } from 'modules/Admin/components/security/PolicyDropdown
 import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, FILE_SECURITY_POLICY_PUBLIC } from '../config';
 import { selectFields } from 'locale/selectFields';
 
-import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import Attachment from '@material-ui/icons/Attachment';
-import CalendarTodayOutlined from '@material-ui/icons/CalendarTodayOutlined';
-import LockOutlined from '@material-ui/icons/LockOutlined';
-import Input from '@material-ui/core/Input';
-import { withStyles } from '@material-ui/core/styles';
+import Typography from '@mui/material/Typography';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
+import Attachment from '@mui/icons-material/Attachment';
+import CalendarTodayOutlined from '@mui/icons-material/CalendarTodayOutlined';
+import LockOutlined from '@mui/icons-material/LockOutlined';
+import Input from '@mui/material/Input';
+import withStyles from '@mui/styles/withStyles';
 
 export class FileUploadRowMobileView extends PureComponent {
     static propTypes = {

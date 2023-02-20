@@ -1,8 +1,8 @@
 import React from 'react';
 import JournalsListHeaderCol1 from './JournalsListHeaderCol1';
-import { fireEvent, render } from 'test-utils';
+import { fireEvent, rtlRender } from 'test-utils';
 
-const setup = (state = {}) => {
+const setup = (state = {}, render = rtlRender) => {
     return render(<JournalsListHeaderCol1 {...state} />);
 };
 

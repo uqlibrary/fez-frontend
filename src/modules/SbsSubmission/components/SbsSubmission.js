@@ -27,9 +27,9 @@ import { default as formLocale } from 'locale/publicationForm';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { THESIS_SUBMISSION_SUBTYPES } from 'config/general';
 
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 export default class SbsSubmission extends Component {
     static propTypes = {

@@ -2,13 +2,13 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Field, formValueSelector, change } from 'redux-form/immutable';
 
-import Grid from '@material-ui/core/Grid';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import NoIcon from '@material-ui/icons/RadioButtonUnchecked';
-import YesIcon from '@material-ui/icons/CheckCircle';
-import OpenInNew from '@material-ui/icons/OpenInNew';
+import Grid from '@mui/material/Grid';
+import InputAdornment from '@mui/material/InputAdornment';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import NoIcon from '@mui/icons-material/RadioButtonUnchecked';
+import YesIcon from '@mui/icons-material/CheckCircle';
+import OpenInNew from '@mui/icons-material/OpenInNew';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';
@@ -80,6 +80,7 @@ export const ResearcherIdentifierData = () => {
                                                 onClick={handleIsScopusIDAuthenticated}
                                                 id="aut-is-scopus-id-authenticated"
                                                 data-testid="aut-is-scopus-id-authenticated"
+                                                size="large"
                                             >
                                                 {autIsScopusIdAuthenticated ? (
                                                     <YesIcon
@@ -150,6 +151,7 @@ export const ResearcherIdentifierData = () => {
                                                       onClick={handleIsOrcidSyncEnabled}
                                                       id="aut-is-orcid-sync-enabled"
                                                       data-testid="aut-is-orcid-sync-enabled"
+                                                      size="large"
                                                   >
                                                       {autIsOrcidSyncEnabled ? (
                                                           <YesIcon

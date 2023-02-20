@@ -2,19 +2,19 @@
 
 exports[`LinkInfoTemplate component should render default view 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(Typography))
+  <ForwardRef(Typography)
     variant="body2"
   >
     <strong>
       Link: 
     </strong>
-  </WithStyles(ForwardRef(Typography))>
-  <WithStyles(ForwardRef(Typography))
+  </ForwardRef(Typography)>
+  <ForwardRef(Typography)
     variant="caption"
   >
     <strong>
       Description: 
     </strong>
-  </WithStyles(ForwardRef(Typography))>
+  </ForwardRef(Typography)>
 </Fragment>
 `;

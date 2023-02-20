@@ -5,19 +5,22 @@ import { setupStoreForMount } from 'test.setup';
 import { render } from '@testing-library/react';
 import { DashboardResearcherIdsClass, styles } from './DashboardResearcherIds';
 
+import { AllTheProviders } from 'test-utils';
+
 import { currentAuthor } from 'mock/data';
 
 jest.mock('../../../context');
 import { OrcidSyncContext } from 'context';
 
-function setup(testProps) {
+function setup(testProps, testArgs = {}) {
+    const args = { isShallow: false, ...testArgs };
     // build full props list required by the component
     const props = {
         classes: {},
         theme: {},
         ...testProps,
     };
-    return getElement(DashboardResearcherIdsClass, props);
+    return getElement(DashboardResearcherIdsClass, props, args);
 }
 
 describe('Dashboard Researcher IDs test', () => {
@@ -45,14 +48,6 @@ describe('Dashboard Researcher IDs test', () => {
         });
     });
 
-    /* it('navigateToRoute method', () => {
-        const wrapper = setup(props);
-        wrapper.instance().navigateToRoute(null, 'publons');
-        expect(testFn).toHaveBeenCalledWith(
-            'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons',
-        );
-    });*/
-
     it('Testing clicking on ID internal links', () => {
         const testValues = {
             ...props,
@@ -63,7 +58,8 @@ describe('Dashboard Researcher IDs test', () => {
             authenticated: { researcher: false, scopus: false, google_scholar: false, orcid: false },
         };
         const wrapper = setup(testValues);
-        const navigateToRoute = jest.spyOn(wrapper.instance(), 'navigateToRoute');
+
+        const navigateToRoute = jest.spyOn(wrapper.find('DashboardResearcherIdsClass').instance(), 'navigateToRoute');
         const button = wrapper.find('#orcid');
         expect(button.length).toEqual(1);
         button.forEach(button => {
@@ -143,14 +139,17 @@ describe('Dashboard Researcher IDs test', () => {
                 },
             },
         };
+
         const wrapper = render(
-            <Provider store={setupStoreForMount().store}>
-                <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
-                    <OrcidSyncContext.Provider value={context}>
-                        <DashboardResearcherIdsClass {...props} />
-                    </OrcidSyncContext.Provider>
-                </MemoryRouter>
-            </Provider>,
+            <AllTheProviders>
+                <Provider store={setupStoreForMount().store}>
+                    <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
+                        <OrcidSyncContext.Provider value={context}>
+                            <DashboardResearcherIdsClass {...props} />
+                        </OrcidSyncContext.Provider>
+                    </MemoryRouter>
+                </Provider>
+            </AllTheProviders>,
         );
         expect(wrapper.asFragment()).toMatchSnapshot();
     });

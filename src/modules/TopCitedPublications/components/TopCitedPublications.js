@@ -1,24 +1,29 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/components';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import withWidth from '@material-ui/core/withWidth';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
+import { useWidth } from 'hooks';
+
+const withWidth = () => WrappedComponent => props => {
+    const width = useWidth();
+    return <WrappedComponent {...props} width={width} />;
+};
 
 export const styles = theme => ({
     tabs: {
         [theme.breakpoints.up('sm')]: {
             margin: '-16px -16px 0px -16px',
         },
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             margin: '-16px -16px 0px -16px',
         },
         backgroundColor: theme.palette.primary.main,
@@ -111,6 +116,8 @@ export class TopCitedPublicationsClass extends PureComponent {
                             onChange={this.handleTabChange}
                             variant="fullWidth"
                             centered
+                            indicatorColor="primary"
+                            textColor="inherit"
                         >
                             {/* Tabs */}
                             {reorderedItems.map(

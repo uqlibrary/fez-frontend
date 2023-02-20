@@ -1,14 +1,13 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import TextField from '@material-ui/core/TextField';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-// MUI 1
-import Grid from '@material-ui/core/Grid';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import { withStyles } from '@material-ui/core/styles';
+import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Grid from '@mui/material/Unstable_Grid2';
+import FormHelperText from '@mui/material/FormHelperText';
+import withStyles from '@mui/styles/withStyles';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 
 import moment from 'moment';
@@ -287,16 +286,17 @@ export class PartialDateForm extends PureComponent {
         ));
         const isError = this.errors.date || this.props.hasError || '';
         return (
-            <Grid container spacing={0} id={this.props.partialDateFormId}>
+            <Grid container spacing={0} padding={0} id={this.props.partialDateFormId}>
                 <Grid item xs={12}>
                     <InputLabel error={!!isError} shrink required={this.props.required}>
                         {this.props.floatingTitle}
                     </InputLabel>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container spacing={2} style={{ marginTop: -12 }}>
+                    <Grid container spacing={2} padding={0} style={{ marginTop: -12 }}>
                         <Grid item xs={4}>
                             <TextField
+                                variant="standard"
                                 name="day"
                                 id={`${this.props.partialDateFormId}-day`}
                                 type="text"
@@ -319,6 +319,7 @@ export class PartialDateForm extends PureComponent {
                         </Grid>
                         <Grid item xs={4}>
                             <Select
+                                variant="standard"
                                 style={{ width: '100%' }}
                                 id={`${this.props.partialDateFormId}-month`}
                                 name="month"
@@ -350,6 +351,7 @@ export class PartialDateForm extends PureComponent {
                         </Grid>
                         <Grid item xs={4}>
                             <TextField
+                                variant="standard"
                                 name="year"
                                 id={`${this.props.partialDateFormId}-year`}
                                 type="text"

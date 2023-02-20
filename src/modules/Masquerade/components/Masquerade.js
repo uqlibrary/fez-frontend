@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
@@ -55,6 +55,7 @@ export default class Masquerade extends PureComponent {
                     <Grid container spacing={3} alignItems={'flex-end'} style={{ marginTop: 12 }}>
                         <Grid item xs>
                             <TextField
+                                variant="standard"
                                 fullWidth
                                 id="userName"
                                 label={txt.labels.hint}

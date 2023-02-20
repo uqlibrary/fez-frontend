@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import TextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 import PropTypes from 'prop-types';
 
 import propFilter from '../../helpers/_filterProps';
@@ -19,6 +19,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
     return (
         <Fragment>
             <TextField
+                variant="standard"
                 {...filteredProps}
                 ref={ref}
                 helperText={helperText}

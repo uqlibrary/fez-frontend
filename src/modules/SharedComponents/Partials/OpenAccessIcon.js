@@ -2,12 +2,12 @@ import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
 import { openAccessConfig } from 'config';
-import Badge from '@material-ui/core/Badge';
-import AccessTime from '@material-ui/icons/AccessTime';
-import Lock from '@material-ui/icons/Lock';
-import Tooltip from '@material-ui/core/Tooltip';
-import Fade from '@material-ui/core/Fade';
-import { withStyles } from '@material-ui/core/styles';
+import Badge from '@mui/material/Badge';
+import AccessTime from '@mui/icons-material/AccessTime';
+import Lock from '@mui/icons-material/Lock';
+import Tooltip from '@mui/material/Tooltip';
+import Fade from '@mui/material/Fade';
+import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
     badgeStyle: { width: 12, height: 12, marginLeft: -4, marginTop: 4 },

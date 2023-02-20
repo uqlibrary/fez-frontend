@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { throttle } from 'throttle-debounce';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export const AutoCompleteAsynchronousField = ({
     allowFreeText,
@@ -90,6 +90,7 @@ export const AutoCompleteAsynchronousField = ({
             setOptions([]);
         }
     }, [open]);
+
     return (
         <React.Fragment>
             <Autocomplete
@@ -106,7 +107,7 @@ export const AutoCompleteAsynchronousField = ({
                 onInputChange={handleInputChange}
                 onChange={handleChange}
                 filterOptions={filterOptions}
-                getOptionSelected={(option, value) => option.value === value.value}
+                isOptionEqualToValue={(option, value) => option.value === value.value}
                 getOptionLabel={getOptionLabel}
                 options={options}
                 loading={loading}
@@ -114,6 +115,7 @@ export const AutoCompleteAsynchronousField = ({
                 value={value}
                 renderInput={params => (
                     <TextField
+                        variant="standard"
                         {...params}
                         name={name || autoCompleteAsynchronousFieldId}
                         error={error}
@@ -147,7 +149,15 @@ export const AutoCompleteAsynchronousField = ({
                     'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
                 }}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}
-                {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
+                {...((!!OptionTemplate && {
+                    // eslint-disable-next-line react/prop-types
+                    renderOption: (props, option) => (
+                        <li {...props}>
+                            <OptionTemplate option={option} />
+                        </li>
+                    ),
+                }) ||
+                    {})}
             />
             {!!supplemental && <div style={{ marginTop: '0.5rem' }}>{supplemental}</div>}
         </React.Fragment>

@@ -44,12 +44,16 @@ describe('HelpDrawer snapshots tests', () => {
     });
 
     it('should render with styles', () => {
-        const wrapper = getElement(HelpDrawerWithStyles, {
-            open: true,
-            title: 'Test title',
-            text: 'Test text',
-            hide: jest.fn(),
-        });
+        const wrapper = getElement(
+            HelpDrawerWithStyles,
+            {
+                open: true,
+                title: 'Test title',
+                text: 'Test text',
+                hide: jest.fn(),
+            },
+            { isShallow: false },
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

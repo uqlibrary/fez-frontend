@@ -9,38 +9,38 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-up-0"
         disabled={true}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={8}
       sm={8}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -50,9 +50,9 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={3}
@@ -70,8 +70,8 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
         placeholder="Description"
         textFieldId="dsi-label-upload-0"
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -82,28 +82,28 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-down-0"
         disabled={false}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;
 
@@ -116,38 +116,38 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-up-0"
         disabled={true}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -157,9 +157,9 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={3}
@@ -177,8 +177,8 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         placeholder="Description"
         textFieldId="dsi-label-upload-0"
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={3}
@@ -213,7 +213,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         selectProps={
           Object {
             "className": undefined,
-            "input": <WithStyles(ForwardRef(Input))
+            "input": <ForwardRef(Input)
               autoFocus={false}
               classes={
                 Object {
@@ -226,20 +226,20 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         }
         value={1}
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-embargo-date-0"
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -250,28 +250,28 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-down-0"
         disabled={false}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;
 
@@ -284,38 +284,38 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-up-0"
         disabled={true}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -325,9 +325,9 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={3}
@@ -345,8 +345,8 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         placeholder="Description"
         textFieldId="dsi-label-upload-0"
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={3}
@@ -381,7 +381,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         selectProps={
           Object {
             "className": undefined,
-            "input": <WithStyles(ForwardRef(Input))
+            "input": <ForwardRef(Input)
               autoFocus={false}
               classes={
                 Object {
@@ -394,20 +394,20 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         }
         value=""
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-embargo-date-0"
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -418,28 +418,28 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-down-0"
         disabled={false}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;
 
@@ -452,38 +452,38 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-up-0"
         disabled={true}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -493,9 +493,9 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={3}
@@ -513,8 +513,8 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         placeholder="Description"
         textFieldId="dsi-label-upload-0"
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={4}
@@ -587,20 +587,20 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         required={true}
         value=""
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-embargo-date-0"
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -611,28 +611,28 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-down-0"
         disabled={false}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;
 
@@ -679,38 +679,38 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-up-0"
         disabled={true}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -720,9 +720,9 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={3}
@@ -740,8 +740,8 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         placeholder="Description"
         textFieldId="dsi-label-upload-0"
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={3}
@@ -776,7 +776,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         selectProps={
           Object {
             "className": undefined,
-            "input": <WithStyles(ForwardRef(Input))
+            "input": <ForwardRef(Input)
               autoFocus={false}
               classes={
                 Object {
@@ -789,8 +789,8 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         }
         value={5}
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={2}
     >
@@ -801,8 +801,8 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         onChange={[MockFunction]}
         value="01/01/2017"
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -813,27 +813,27 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
     wrap="nowrap"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={1}
     >
-      <WithStyles(ForwardRef(IconButton))
+      <ForwardRef(IconButton)
         data-testid="new-file-upload-down-0"
         disabled={false}
         id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
-      </WithStyles(ForwardRef(IconButton))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;

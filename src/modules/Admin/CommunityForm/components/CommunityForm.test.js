@@ -53,13 +53,13 @@ describe('Community form', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(4);
-        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
+        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
     });
 
     it('should not disable submit button if form submit has failed', () => {
         const wrapper = setup({ submitFailed: true });
-        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
-        wrapper.find('WithStyles(ForwardRef(Button))').forEach(field => {
+        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
+        wrapper.find('ForwardRef(Button)').forEach(field => {
             if (field.props().label === formLocale.thesisSubmission.submit) {
                 expect(field.props().disabled).toEqual(false);
             }

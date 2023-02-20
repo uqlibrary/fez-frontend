@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
 import { locale } from 'locale';

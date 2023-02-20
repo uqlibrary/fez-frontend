@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UnpublishedBufferCitationView test button click sets value should render empty component with no date 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   alignItems="center"
   container={true}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     style={
       Object {
@@ -14,7 +14,7 @@ exports[`UnpublishedBufferCitationView test button click sets value should rende
     }
     xs="auto"
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       variant="caption"
     >
       <i>
@@ -39,7 +39,7 @@ exports[`UnpublishedBufferCitationView test button click sets value should rende
         prefix="Updated "
         suffix="."
       />
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Typography)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

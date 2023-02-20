@@ -1,6 +1,6 @@
 import { FileIcon } from './FileIcon';
 
-jest.mock('@material-ui/styles', () => ({
+jest.mock('@mui/styles', () => ({
     makeStyles: () => () => ({}),
 }));
 

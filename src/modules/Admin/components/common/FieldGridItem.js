@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import { fieldConfig } from 'config/admin';
 import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, SUBTYPE_NON_NTRO } from 'config/general';
 import { useRecordContext, useFormValuesContext } from 'context';

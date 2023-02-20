@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 import { APP_URL } from 'config';
 import { PrintIcon, ResearchGateIcon, MendeleyIcon } from './Icons';

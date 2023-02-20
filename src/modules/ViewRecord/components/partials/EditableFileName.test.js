@@ -1,19 +1,10 @@
 import React from 'react';
-import { rtlRender, fireEvent, act, AllTheProviders } from 'test-utils';
+import { rtlRender, fireEvent, act, createMatchMedia } from 'test-utils';
 
 import EditableFileName from './EditableFileName';
 
 import { journalArticle } from 'mock/data/testing/records';
 
-import mediaQuery from 'css-mediaquery';
-
-const createMatchMedia = width => {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-};
 const id = 'test-file-name';
 const editId = `${id}-edit`;
 const resetId = `${id}-reset`;
@@ -21,7 +12,7 @@ const saveId = `${id}-save`;
 const cancelId = `${id}-cancel`;
 const editingId = `${id}-editing-input`;
 
-function setup(testProps = {}, renderer = rtlRender) {
+function setup(testProps = {}, render = rtlRender) {
     const props = {
         id,
         classes: {},
@@ -39,21 +30,16 @@ function setup(testProps = {}, renderer = rtlRender) {
         isEdited: false,
         ...testProps,
     };
-    return renderer(
-        <AllTheProviders>
-            <EditableFileName {...props} />
-        </AllTheProviders>,
-    );
+    return render(<EditableFileName {...props} />);
 }
 
-describe('Editable File Name Component ', () => {
+describe('Editable File Name Component on Desktop', () => {
     beforeAll(() => {
         window.matchMedia = createMatchMedia(1024);
     });
 
     it('should render a filename with edit control', () => {
-        const { getByTestId, getByText } = setup({});
-
+        const { getByText, getByTestId } = setup({});
         expect(getByText('test.jpg')).toBeInTheDocument();
         expect(getByTestId(editId)).toBeInTheDocument();
     });
@@ -165,7 +151,7 @@ describe('Editable File Name Component ', () => {
     });
 
     it('should handle cancel editing a filename before prior rename', () => {
-        const { getByTestId, queryByTestId, getByText } = setup();
+        const { getByText, getByTestId, queryByTestId } = setup();
 
         expect(getByTestId(editId)).toBeInTheDocument();
 
@@ -190,7 +176,7 @@ describe('Editable File Name Component ', () => {
 
     it('should handle cancel editing a filename after already renamed', () => {
         const onFileSaveFilename = jest.fn();
-        const { rerender, getByTestId, queryByTestId, getByText } = setup({ onFileSaveFilename });
+        const { rerender, getByText, getByTestId, queryByTestId } = setup({ onFileSaveFilename });
 
         expect(getByTestId(editId)).toBeInTheDocument();
 

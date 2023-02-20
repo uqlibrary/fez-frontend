@@ -4,12 +4,12 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -21,8 +21,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={false}
@@ -311,12 +311,12 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -328,8 +328,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={false}
@@ -618,12 +618,12 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -635,8 +635,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={false}
@@ -925,12 +925,12 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -942,8 +942,8 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={true}
@@ -954,7 +954,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       style={
         Object {
           "borderBottom": "1px solid rgba(224, 224, 224, 1)",
@@ -965,7 +965,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
       }
     >
       No records to display
-    </WithStyles(ForwardRef(Typography))>
+    </ForwardRef(Typography)>
   </div>
 </div>
 `;
@@ -974,12 +974,12 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -991,8 +991,8 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={true}
@@ -1038,12 +1038,12 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 1`] =
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1055,8 +1055,8 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 1`] =
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={true}
@@ -1067,7 +1067,7 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 1`] =
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       style={
         Object {
           "borderBottom": "1px solid rgba(224, 224, 224, 1)",
@@ -1078,7 +1078,7 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 1`] =
       }
     >
       No records to display
-    </WithStyles(ForwardRef(Typography))>
+    </ForwardRef(Typography)>
   </div>
 </div>
 `;
@@ -1087,12 +1087,12 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 2`] =
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1104,8 +1104,8 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 2`] =
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={true}
@@ -1151,12 +1151,12 @@ exports[`ScaleOfSignificanceListEditor tests should move down an item 1`] = `
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1168,8 +1168,8 @@ exports[`ScaleOfSignificanceListEditor tests should move down an item 1`] = `
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={false}
@@ -1269,12 +1269,12 @@ exports[`ScaleOfSignificanceListEditor tests should move up an item 1`] = `
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1286,8 +1286,8 @@ exports[`ScaleOfSignificanceListEditor tests should move up an item 1`] = `
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={false}
@@ -1387,12 +1387,12 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1404,8 +1404,8 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={true}
@@ -1416,7 +1416,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       style={
         Object {
           "borderBottom": "1px solid rgba(224, 224, 224, 1)",
@@ -1427,7 +1427,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
       }
     >
       No records to display
-    </WithStyles(ForwardRef(Typography))>
+    </ForwardRef(Typography)>
   </div>
 </div>
 `;
@@ -1436,12 +1436,12 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1453,8 +1453,8 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={true}
     hideReorder={true}
@@ -1465,7 +1465,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       style={
         Object {
           "borderBottom": "1px solid rgba(224, 224, 224, 1)",
@@ -1476,7 +1476,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
       }
     >
       No records to display
-    </WithStyles(ForwardRef(Typography))>
+    </ForwardRef(Typography)>
   </div>
 </div>
 `;
@@ -1485,12 +1485,12 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1502,8 +1502,8 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={true}
@@ -1514,7 +1514,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       style={
         Object {
           "borderBottom": "1px solid rgba(224, 224, 224, 1)",
@@ -1525,7 +1525,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
       }
     >
       No records to display
-    </WithStyles(ForwardRef(Typography))>
+    </ForwardRef(Typography)>
   </div>
 </div>
 `;
@@ -1534,12 +1534,12 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1551,8 +1551,8 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={false}
@@ -1625,12 +1625,12 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1642,8 +1642,8 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={false}
@@ -1716,12 +1716,12 @@ exports[`ScaleOfSignificanceListEditor tests should update an entry with selecte
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1733,8 +1733,8 @@ exports[`ScaleOfSignificanceListEditor tests should update an entry with selecte
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={false}
@@ -1807,12 +1807,12 @@ exports[`ScaleOfSignificanceListEditor tests should update an item with selected
 <div
   id="test-list-editor-list-editor"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
     justifyContent="flex-end"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1824,8 +1824,8 @@ exports[`ScaleOfSignificanceListEditor tests should update an item with selected
       }
     >
       <Memo(ForwardRef(AddIcon)) />
-    </WithStyles(ForwardRef(IconButton))>
-  </Styled(MuiBox)>
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
   <Memo(ListRowHeader)
     disabled={false}
     hideReorder={false}

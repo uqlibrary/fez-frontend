@@ -1,20 +1,10 @@
 import ContributorRow from './ContributorRow';
-
+import { createMatchMedia } from 'test-utils';
 import { authorsSearch } from 'mock/data';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
-import mediaQuery from 'css-mediaquery';
-import { act } from '@testing-library/react';
 
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
-
-function setup(testProps = {}, args = {}) {
-    // build full props list requied by the component
+function setup(testProps = {}, testArgs = {}) {
+    // build full props list required by the component
     const props = {
         index: 0,
         contributor: { nameAsPublished: 'A. Smith' },
@@ -46,6 +36,7 @@ function setup(testProps = {}, args = {}) {
         contributorRowId: 'test-list-row',
         ...testProps,
     };
+    const args = { isShallow: false, ...testArgs };
     return getElement(ContributorRow, props, args);
 }
 
@@ -182,71 +173,65 @@ describe('Component ContributorRow', () => {
                 canMoveUp: true,
                 onMoveUp: testFunction,
             },
-            { isShallow: true },
+            { isShallow: false },
         );
+        const button = wrapper.find('ForwardRef(KeyboardArrowUpIcon)');
 
-        const button = wrapper.find('Memo(ForwardRef(KeyboardArrowUpIcon))');
         expect(button.length).toBe(1);
 
-        const buttonDown = wrapper.find('Memo(ForwardRef(KeyboardArrowDownIcon))');
+        const buttonDown = wrapper.find('ForwardRef(KeyboardArrowDownIcon)');
         expect(buttonDown.length).toBe(0);
 
-        wrapper.find('#test-list-row-move-up-0').simulate('click');
+        wrapper
+            .find('button#test-list-row-move-up-0')
+
+            .simulate('click');
         expect(testFunction).toBeCalled();
     });
 
     it('a row with index and contributor set calls move down function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup(
-            {
-                index: 0,
-                canMoveDown: true,
-                onMoveDown: testFunction,
-            },
-            { isShallow: true },
-        );
+        const wrapper = setup({
+            index: 0,
+            canMoveDown: true,
+            onMoveDown: testFunction,
+        });
 
-        const button = wrapper.find('Memo(ForwardRef(KeyboardArrowDownIcon))');
+        const button = wrapper.find('ForwardRef(KeyboardArrowDownIcon)');
         expect(button.length).toBe(1);
 
-        wrapper.find('#test-list-row-move-down-0').simulate('click');
+        wrapper.find('button#test-list-row-move-down-0').simulate('click');
         expect(testFunction).toBeCalled();
 
-        const buttonUp = wrapper.find('Memo(ForwardRef(KeyboardArrowUpIcon))');
+        const buttonUp = wrapper.find('ForwardRef(KeyboardArrowUpIcon)');
         expect(buttonUp.length).toBe(0);
         testFunction.mockReset();
     });
 
     it('a row with index and contributor set calls assignment function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup(
-            {
-                index: 0,
-                showContributorAssignment: true,
-                onSelect: testFunction,
-            },
-            { isShallow: true },
-        );
-        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('click');
+        const wrapper = setup({
+            index: 0,
+            showContributorAssignment: true,
+            onSelect: testFunction,
+        });
+        wrapper.find('ForwardRef(ListItem)').simulate('click');
         expect(testFunction).toBeCalled;
     });
 
     it('a row with index and contributor set calls delete function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup(
-            {
-                index: 0,
-                onDelete: testFunction,
-            },
-            { isShallow: true },
-        );
-        const button = wrapper.find('Memo(ForwardRef(DeleteIcon))');
+        const wrapper = setup({
+            index: 0,
+            onDelete: testFunction,
+        });
+        const button = wrapper.find('ForwardRef(DeleteIcon)');
         expect(button.length).toBe(1);
-        wrapper.find('Memo(ForwardRef(DeleteIcon))').simulate('click');
+        wrapper.find('ForwardRef(DeleteIcon)').simulate('click');
         expect(testFunction).toBeCalled;
     });
 
-    it('should select when it is not yet selected', () => {
+    it('should select when it is not yet selected enabled', () => {
         const testFunction = jest.fn();
 
         const wrapper = setup({
@@ -259,13 +244,25 @@ describe('Component ContributorRow', () => {
             enableSelect: true,
             onSelect: testFunction,
         });
-        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('click');
+        wrapper.find('ForwardRef(ListItem)').simulate('click');
         expect(testFunction).toBeCalledWith(0);
+    });
 
-        // no-op if disabled
-        wrapper.setProps({ disabled: true });
-        testFunction.mockClear();
-        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('click');
+    it('should select when it is not yet selected disabled', () => {
+        const testFunction = jest.fn();
+
+        const wrapper = setup({
+            index: 0,
+            disabled: true,
+            contributor: {
+                selected: false,
+                nameAsPublished: 'J. Smith',
+            },
+            enableSelect: true,
+            onSelect: testFunction,
+        });
+
+        wrapper.find('ForwardRef(ListItem)').simulate('click');
         expect(testFunction).not.toBeCalled();
     });
 
@@ -283,7 +280,7 @@ describe('Component ContributorRow', () => {
         };
 
         const wrapper = setup(testObj);
-        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('click');
+        wrapper.find('ForwardRef(ListItem)').simulate('click');
         expect(testFunction).toBeCalledWith(testObj.index);
     });
 
@@ -296,13 +293,13 @@ describe('Component ContributorRow', () => {
         const wrapper = setup({ contributor, index: 0, enableSelect: true, onSelect: testFn });
 
         wrapper
-            .find('WithStyles(ForwardRef(ListItem))')
+            .find('ForwardRef(ListItem)')
             .props()
             .onKeyDown({ key: 'Enter' });
         expect(testFn).toBeCalled();
 
         testFn.mockClear();
-        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('keydown', { key: 'A' });
+        wrapper.find('ForwardRef(ListItem)').simulate('keydown', { key: 'A' });
         expect(testFn).not.toBeCalled();
     });
 
@@ -316,7 +313,7 @@ describe('Component ContributorRow', () => {
         const wrapper = setup({ contributor, index: 0, enableSelect: true, onSelect: testFn });
 
         wrapper
-            .find('WithStyles(ForwardRef(ListItem))')
+            .find('ForwardRef(ListItem)')
             .props()
             .onKeyDown({ key: 'Enter' });
         expect(testFn).not.toBeCalled();
@@ -329,11 +326,9 @@ describe('Component ContributorRow', () => {
             canEdit: true,
             onEdit: testFn,
         });
+
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper
-            .find('WithStyles(ForwardRef(IconButton))')
-            .first()
-            .simulate('click');
+        wrapper.find('button#test-list-row-edit-2').simulate('click');
         expect(testFn).toHaveBeenCalledWith(2);
     });
 
@@ -343,13 +338,13 @@ describe('Component ContributorRow', () => {
                 uqIdentifier: 123,
             },
         });
-        expect(wrapper.find('Memo(ForwardRef(HowToRegIcon))').length).toBe(1);
+        expect(wrapper.find('ForwardRef(HowToRegIcon)').length).toBe(1);
 
         const wrapper2 = setup({
             locale: {},
             disabled: true,
         });
-        expect(wrapper2.find('Memo(ForwardRef(LockIcon))').length).toBe(1);
+        expect(wrapper2.find('ForwardRef(LockIcon)').length).toBe(1);
     });
 
     it('Row should be clickable when showContributorAssignment set to true', () => {
@@ -382,14 +377,12 @@ describe('Component ContributorRow', () => {
         const onDeleteFn = jest.fn();
         const wrapper = setup({ onDelete: onDeleteFn });
 
-        act(() => {
-            wrapper.find('WithStyles(ForwardRef(IconButton))').simulate('click');
-        });
+        wrapper.find('button#test-list-row-delete-0').simulate('click');
 
         wrapper.update();
 
         wrapper
-            .find('Memo(ConfirmationBox)')
+            .find('ConfirmationBox')
             .props()
             .onAction();
         expect(onDeleteFn).toBeCalled();
@@ -410,15 +403,15 @@ describe('Component ContributorRow', () => {
             canMoveDown: true,
         });
 
-        wrapper.find('#test-list-row-move-up-0').simulate('click');
+        wrapper.find('button#test-list-row-move-up-0').simulate('click');
         expect(onMoveUpFn).not.toBeCalled();
 
-        wrapper.find('#test-list-row-move-down-0').simulate('click');
+        wrapper.find('button#test-list-row-move-down-0').simulate('click');
         expect(onMoveDownFn).not.toBeCalled();
 
-        wrapper.find('#test-list-row-delete-0').simulate('click');
+        wrapper.find('button#test-list-row-delete-0').simulate('click');
         wrapper
-            .find('Memo(ConfirmationBox)')
+            .find('ConfirmationBox')
             .props()
             .onAction();
         expect(onDeleteFn).not.toBeCalled();
@@ -439,7 +432,7 @@ describe('Component ContributorRow', () => {
 
         const blurFn = jest.fn();
         wrapper
-            .find('WithStyles(ForwardRef(ListItem))')
+            .find('ForwardRef(ListItem)')
             .props()
             .onClick({
                 currentTarget: {
@@ -468,11 +461,11 @@ describe('Component ContributorRow', () => {
         });
 
         wrapper
-            .find('WithStyles(ForwardRef(ListItem))')
+            .find('ForwardRef(ListItem)')
             .props()
             .onClick();
         wrapper
-            .find('WithStyles(ForwardRef(ListItem))')
+            .find('ForwardRef(ListItem)')
             .props()
             .onKeyDown({ key: 'Enter' });
         expect(toJson(wrapper)).toMatchSnapshot();

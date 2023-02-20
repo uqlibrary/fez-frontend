@@ -5,12 +5,12 @@ import { useSelector } from 'react-redux';
 import { getFormSyncErrors, getFormAsyncErrors, reduxForm, getFormValues } from 'redux-form/immutable';
 import debounce from 'debounce-promise';
 
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
 
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 import { ScrollToSection } from 'modules/SharedComponents/Toolbox/ScrollToSection';
 import NameData from './NameData';

@@ -5,14 +5,13 @@ import { Field } from 'redux-form/immutable';
 import ReactHtmlParser from 'react-html-parser';
 import queryString from 'query-string';
 
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Button from '@material-ui/core/Button';
-import Badge from '@material-ui/core/Badge';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import Badge from '@mui/material/Badge';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -356,11 +355,9 @@ export const AdminInterface = ({
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
                     </Grid>
-                    <Hidden xsDown>
-                        <Grid item xs="auto">
-                            <FormViewToggler />
-                        </Grid>
-                    </Hidden>
+                    <Grid item xs="auto" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <FormViewToggler />
+                    </Grid>
                     {record.rek_status === RETRACTED && (
                         <Grid
                             container
@@ -383,44 +380,42 @@ export const AdminInterface = ({
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Hidden xsDown>
-                        <Grid container spacing={0} direction="row">
-                            {tabbed && (
-                                <Grid item xs={12}>
-                                    <Tabs
-                                        value={currentTabValue}
-                                        classes={{
-                                            indicator: classes.tabIndicator,
-                                        }}
-                                        onChange={handleTabChange}
-                                        indicatorColor="primary"
-                                        textColor="primary"
-                                    >
-                                        {activeTabNames.current.map(tab => (
-                                            <AdminTab
-                                                key={tab}
-                                                value={tab}
-                                                data-testid={`${tab}-tab`}
-                                                label={
-                                                    !!tabs[tab].numberOfErrors ? (
-                                                        <Badge
-                                                            className={classes.padding}
-                                                            color="error"
-                                                            badgeContent={tabs[tab].numberOfErrors}
-                                                        >
-                                                            {txt.current.sections[tab].title}
-                                                        </Badge>
-                                                    ) : (
-                                                        txt.current.sections[tab].title
-                                                    )
-                                                }
-                                            />
-                                        ))}
-                                    </Tabs>
-                                </Grid>
-                            )}
-                        </Grid>
-                    </Hidden>
+                    <Grid container spacing={0} direction="row" sx={{ display: { xs: 'none', sm: 'flex' } }}>
+                        {tabbed && (
+                            <Grid item xs={12}>
+                                <Tabs
+                                    value={currentTabValue}
+                                    classes={{
+                                        indicator: classes.tabIndicator,
+                                    }}
+                                    onChange={handleTabChange}
+                                    indicatorColor="primary"
+                                    textColor="primary"
+                                >
+                                    {activeTabNames.current.map(tab => (
+                                        <AdminTab
+                                            key={tab}
+                                            value={tab}
+                                            data-testid={`${tab}-tab`}
+                                            label={
+                                                !!tabs[tab].numberOfErrors ? (
+                                                    <Badge
+                                                        className={classes.padding}
+                                                        color="error"
+                                                        badgeContent={tabs[tab].numberOfErrors}
+                                                    >
+                                                        {txt.current.sections[tab].title}
+                                                    </Badge>
+                                                ) : (
+                                                    txt.current.sections[tab].title
+                                                )
+                                            }
+                                        />
+                                    ))}
+                                </Tabs>
+                            </Grid>
+                        )}
+                    </Grid>
                 </Grid>
                 <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
                     <Grid container spacing={0}>

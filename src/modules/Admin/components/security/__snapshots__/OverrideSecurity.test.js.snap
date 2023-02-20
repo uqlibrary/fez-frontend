@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OverrideSecurity component should render properly 1`] = `
-<WithStyles(ForwardRef(FormControlLabel))
+<ForwardRef(FormControlLabel)
   control={
-    <WithStyles(ForwardRef(Checkbox))
+    <ForwardRef(Checkbox)
       checked={false}
       inputProps={
         Object {

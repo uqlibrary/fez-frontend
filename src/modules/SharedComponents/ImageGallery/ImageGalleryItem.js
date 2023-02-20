@@ -2,24 +2,24 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 import txt from 'locale/components';
 import { useHistory } from 'react-router';
 
 import { handleKeyboardPressActivate } from 'helpers/general';
 
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItemImage from './ImageGalleryItemImage';
 
 const useStyles = makeStyles(theme => ({
-    imageListItemRoot: {},
-    imageListItemItem: {
+    imageListItemRoot: {
         backgroundColor: '#fff',
         border: '1px solid #d7d1cc',
     },
+    imageListItemItem: {},
     imageListItemWithLink: {
         cursor: 'pointer',
     },

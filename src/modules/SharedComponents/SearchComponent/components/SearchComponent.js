@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import param from 'can-param';
 
-import Snackbar from '@material-ui/core/Snackbar';
+import Snackbar from '@mui/material/Snackbar';
 import { pathConfig } from 'config';
 import {
     DEFAULT_QUERY_PARAMS,

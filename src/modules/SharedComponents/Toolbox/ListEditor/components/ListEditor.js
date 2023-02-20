@@ -4,7 +4,7 @@ import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
 import { GenericTemplate } from './GenericTemplate';
 
-import FormHelperText from '@material-ui/core/FormHelperText';
+import FormHelperText from '@mui/material/FormHelperText';
 
 export default class ListEditor extends Component {
     static propTypes = {

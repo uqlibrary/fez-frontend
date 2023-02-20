@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import List from '@material-ui/core/List';
+import List from '@mui/material/List';
 import FacetFilterListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterListItem';
 import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterNestedListItem';
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { useActiveFacetFilters, useJournalSearch } from '../hooks';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 import { sanitiseId } from 'helpers/general';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({

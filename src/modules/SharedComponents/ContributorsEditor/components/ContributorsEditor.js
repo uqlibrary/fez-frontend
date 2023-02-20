@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { connect } from 'react-redux';
 
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
+import Grid from '@mui/material/Grid';
 
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
@@ -399,7 +399,7 @@ export const styles = theme => ({
         overflowX: 'hidden',
         overflowY: 'hidden',
         marginBottom: 16,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             overflowY: 'scroll',
         },
     },

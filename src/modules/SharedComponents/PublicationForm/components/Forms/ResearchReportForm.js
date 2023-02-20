@@ -21,8 +21,8 @@ import {
     NTRO_SUBTYPE_RREB_OTHER,
 } from 'config/general';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 export default class ResearchReportForm extends Component {
     static propTypes = {
