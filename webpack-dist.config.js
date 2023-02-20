@@ -154,9 +154,12 @@ const webpackConfig = {
         new RobotstxtPlugin(options),
     ],
     optimization: {
+        moduleIds: 'deterministic',
+        removeAvailableModules: true,
         splitChunks: {
             automaticNameDelimiter: '-',
             minChunks: 5,
+            chunks: 'all',
             cacheGroups: {
                 commons: {
                     chunks: 'all',
@@ -165,8 +168,11 @@ const webpackConfig = {
         },
         minimizer: [
             new TerserPlugin({
-                sourceMap: true,
+                terserOptions: {
+                    sourceMap: false,
+                },
                 parallel: true,
+                extractComments: true,
             }),
         ],
     },
