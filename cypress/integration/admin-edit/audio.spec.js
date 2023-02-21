@@ -121,8 +121,7 @@ context('Audio admin edit', () => {
             cy.get('.MuiPickersCalendarHeader-label').should('have.text', 'January 2099');
         });
 
-        // close datepicker
-        cy.get('[role="presentation"] > div:nth-child(3) > div').type('{esc}');
+        cy.get('@embargoDateButton').click(); // date picker disappears
 
         cy.get('@filesTab')
             .find('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')
