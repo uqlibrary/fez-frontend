@@ -8,7 +8,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const WebpackStrip = require('strip-loader');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 
@@ -170,6 +169,9 @@ const webpackConfig = {
             new TerserPlugin({
                 terserOptions: {
                     sourceMap: false,
+                    compress: {
+                        drop_console: true,
+                    },
                 },
                 parallel: true,
                 extractComments: true,
@@ -217,14 +219,6 @@ const webpackConfig = {
                     },
                 ],
             },
-            {
-                test: /\.js$/,
-                use: [
-                    {
-                        loader: WebpackStrip.loader('console.log', 'dd'),
-                    },
-                ],
-            },
         ],
     },
     resolve: {
@@ -232,8 +226,30 @@ const webpackConfig = {
         enforceExtension: false,
         extensions: ['.jsx', '.js', '.json'],
         modules: ['src', 'node_modules', 'custom_modules'],
-        alias: {
-            '@material-ui/styles': resolve(__dirname, 'node_modules', '@material-ui/styles'),
+        fallback: {
+            assert: require.resolve('assert'),
+            buffer: require.resolve('buffer'),
+            console: require.resolve('console-browserify'),
+            constants: require.resolve('constants-browserify'),
+            crypto: require.resolve('crypto-browserify'),
+            domain: require.resolve('domain-browser'),
+            events: require.resolve('events'),
+            http: require.resolve('stream-http'),
+            https: require.resolve('https-browserify'),
+            os: require.resolve('os-browserify/browser'),
+            path: require.resolve('path-browserify'),
+            punycode: require.resolve('punycode'),
+            process: require.resolve('process/browser'),
+            querystring: require.resolve('querystring-es3'),
+            stream: require.resolve('stream-browserify'),
+            string_decoder: require.resolve('string_decoder'),
+            sys: require.resolve('util'),
+            timers: require.resolve('timers-browserify'),
+            tty: require.resolve('tty-browserify'),
+            url: require.resolve('url'),
+            util: require.resolve('util'),
+            vm: require.resolve('vm-browserify'),
+            zlib: require.resolve('browserify-zlib'),
         },
     },
     performance: {
