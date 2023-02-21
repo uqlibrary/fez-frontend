@@ -4,7 +4,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
 <StandardPage
   title="Add a missing work to eSpace"
 >
-  <WithStyles(WithWidth(CustomStepper))
+  <WithStyles(Component)
     activeStep={0}
     steps={
       Array [
@@ -44,7 +44,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
 <StandardPage
   title="Add a missing work to eSpace"
 >
-  <WithStyles(WithWidth(CustomStepper))
+  <WithStyles(Component)
     activeStep={1}
     steps={
       Array [
@@ -84,7 +84,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
 <StandardPage
   title="Add a missing work to eSpace"
 >
-  <WithStyles(WithWidth(CustomStepper))
+  <WithStyles(Component)
     activeStep={2}
     steps={
       Array [

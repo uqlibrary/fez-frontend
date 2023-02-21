@@ -7,11 +7,10 @@ import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from '@mui/styles/withStyles';
 
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
 
 import locale from 'locale/viewRecord';
 import { openAccessConfig } from 'config';
@@ -20,9 +19,9 @@ import moment from 'moment';
 
 const styles = theme => ({
     header: {
-        padding: `${theme.spacing(1)}px 0`,
+        padding: `${theme.spacing(1)} 0`,
         [theme.breakpoints.up('sm')]: {
-            padding: `${theme.spacing(2)}px ${theme.spacing(1)}px ${theme.spacing(1)}px ${theme.spacing(1)}px`,
+            padding: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
         },
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
@@ -222,6 +221,7 @@ export class LinksClass extends PureComponent {
                         direction="row"
                         alignItems="center"
                         spacing={2}
+                        padding={0}
                         className={this.props.classes.header}
                     >
                         <Grid item sm={6} data-testid="link-label">
@@ -229,13 +229,11 @@ export class LinksClass extends PureComponent {
                                 {txt.headerTitles.link}
                             </Typography>
                         </Grid>
-                        <Hidden xsDown>
-                            <Grid item sm={4} data-testid="description-label">
-                                <Typography variant="caption" gutterBottom>
-                                    {txt.headerTitles.description}
-                                </Typography>
-                            </Grid>
-                        </Hidden>
+                        <Grid item sm={4} data-testid="description-label" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <Typography variant="caption" gutterBottom>
+                                {txt.headerTitles.description}
+                            </Typography>
+                        </Grid>
                         <Grid item sm={2} data-testid="oa-status-label">
                             <Typography variant="caption" gutterBottom>
                                 {txt.headerTitles.oaStatus}

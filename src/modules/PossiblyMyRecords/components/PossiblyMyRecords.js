@@ -17,9 +17,8 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { pathConfig } from 'config/pathConfig';
 import { locale } from 'locale';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 export default class PossiblyMyRecords extends PureComponent {
     static propTypes = {
@@ -57,6 +56,7 @@ export default class PossiblyMyRecords extends PureComponent {
             },
         };
         this.state = {
+            initState: { ...this.initState },
             // check if user has publications, once true always true
             // facets filtering might return no results, but facets should still be visible
             hasPublications: !props.loadingPossiblePublicationsList && props.possiblePublicationsList.length > 0,
@@ -65,33 +65,35 @@ export default class PossiblyMyRecords extends PureComponent {
         };
     }
 
-    componentDidMount() {
-        if (!this.props.accountLoading) {
-            this.props.actions.searchPossiblyYourPublications({ ...this.state });
-        }
-    }
-
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(newProps) {
+    static getDerivedStateFromProps(props, state) {
         // handle browser back button - set state from location/dispatch action for this state
         if (
-            this.props.location !== newProps.location &&
-            newProps.history.action === 'POP' &&
-            newProps.location.pathname === pathConfig.records.possible
+            state.prevProps?.location !== props.location &&
+            props.history.action === 'POP' &&
+            props.location.pathname === pathConfig.records.possible
         ) {
-            this.setState({ ...(!!newProps.location.state ? newProps.location.state : this.initState) }, () => {
-                // only will be called when user clicks back on my records page
-                this.props.actions.searchPossiblyYourPublications({ ...this.state });
-            });
+            props.actions.searchPossiblyYourPublications({ ...state });
+            return {
+                ...(!!props.location.state ? props.location.state : state.initState),
+                prevProps: { ...props },
+            };
         }
         // set forever-true flag if user has publications
         if (
-            !this.state.hasPublications &&
-            !newProps.loadingPossiblePublicationsList &&
-            !!newProps.possiblePublicationsList &&
-            newProps.possiblePublicationsList.length > 0
+            !state.hasPublications &&
+            !props.loadingPossiblePublicationsList &&
+            !!props.possiblePublicationsList &&
+            props.possiblePublicationsList.length > 0
         ) {
-            this.setState({ hasPublications: true });
+            return { hasPublications: true, prevProps: { ...props } };
+        }
+
+        return null;
+    }
+
+    componentDidMount() {
+        if (!this.props.accountLoading) {
+            this.props.actions.searchPossiblyYourPublications({ ...this.state });
         }
     }
 
@@ -103,7 +105,7 @@ export default class PossiblyMyRecords extends PureComponent {
         this.props.history.push({
             pathname: `${pathConfig.records.possible}`,
             search: `?ts=${Date.now()}`,
-            state: { ...this.state },
+            state: { ...this.state, prevProps: {} },
         });
         this.props.actions.searchPossiblyYourPublications({ ...this.state });
     };
@@ -274,7 +276,6 @@ export default class PossiblyMyRecords extends PureComponent {
                                                         <React.Fragment>
                                                             <Grid item xs>
                                                                 <PublicationsListSorting
-                                                                    initPageLength={this.initState.pageSize}
                                                                     sortBy={this.state.sortBy}
                                                                     sortDirection={this.state.sortDirection}
                                                                     pageSize={this.state.pageSize}
@@ -340,21 +341,19 @@ export default class PossiblyMyRecords extends PureComponent {
                         (this.state.activeFacets &&
                             this.state.activeFacets.ranges &&
                             Object.keys(this.state.activeFacets.ranges).length > 0)) && (
-                        <Hidden smDown>
-                            <Grid item sm={3}>
-                                <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                    <FacetsFilter
-                                        facetsData={this.props.possiblePublicationsFacets}
-                                        onFacetsChanged={this._facetsChanged}
-                                        activeFacets={this.state.activeFacets}
-                                        disabled={this.props.loadingPossiblePublicationsList}
-                                        excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                        renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                        lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                    />
-                                </StandardRighthandCard>
-                            </Grid>
-                        </Hidden>
+                        <Grid item sm={3} sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                <FacetsFilter
+                                    facetsData={this.props.possiblePublicationsFacets}
+                                    onFacetsChanged={this._facetsChanged}
+                                    activeFacets={this.state.activeFacets}
+                                    disabled={this.props.loadingPossiblePublicationsList}
+                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                />
+                            </StandardRighthandCard>
+                        </Grid>
                     )}
                 </Grid>
             </StandardPage>

@@ -6,10 +6,10 @@ import DashboardOrcidSync from '../containers/DashboardOrcidSync';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import locale from 'locale/pages';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Tooltip from '@material-ui/core/Tooltip';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
+import withStyles from '@mui/styles/withStyles';
 
 export const styles = theme => ({
     researcherIDlink: {
@@ -86,7 +86,7 @@ export const renderButton = args => {
             {isInternal && (
                 <a
                     id={item}
-                    tabIndex="0"
+                    tabIndex={0}
                     onClick={navHandler}
                     className={classes.researcherIDlink}
                     onKeyPress={navHandler}
@@ -102,14 +102,12 @@ export const renderButton = args => {
 export class DashboardResearcherIdsClass extends React.Component {
     static propTypes = {
         values: PropTypes.shape({
-            publons: PropTypes.string,
             researcher: PropTypes.string,
             scopus: PropTypes.string,
             google_scholar: PropTypes.string,
             orcid: PropTypes.string,
         }),
         authenticated: PropTypes.shape({
-            publons: PropTypes.bool,
             researcher: PropTypes.bool,
             scopus: PropTypes.bool,
             google_scholar: PropTypes.bool,
@@ -145,7 +143,7 @@ export class DashboardResearcherIdsClass extends React.Component {
                             target="_blank"
                             aria-label={txt.orcidlinkLabel}
                             title={txt.orcidlinkLabel}
-                            tabIndex="0"
+                            tabIndex={0}
                         >
                             <Typography variant={'caption'} className={classes.orcidLink}>
                                 {`${txt.orcidLinkPrefix}${values.orcid}`}

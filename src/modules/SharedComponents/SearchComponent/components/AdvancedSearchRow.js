@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
 import { locale } from 'locale';
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
-import Close from '@material-ui/icons/Close';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import FormControl from '@material-ui/core/FormControl';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import Close from '@mui/icons-material/Close';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import makeStyles from '@mui/styles/makeStyles';
+import FormControl from '@mui/material/FormControl';
+import FormHelperText from '@mui/material/FormHelperText';
 
 const useStyles = makeStyles(
     theme => ({
@@ -35,7 +34,7 @@ const useStyles = makeStyles(
             margin: '12px -18px',
         },
         mobileInputRow: {
-            [theme.breakpoints.down('sm')]: {
+            [theme.breakpoints.down('md')]: {
                 marginTop: -18,
             },
         },
@@ -105,8 +104,14 @@ export const AdvancedSearchRow = props => {
                     {/* Select and combiner */}
                     <Grid container spacing={2}>
                         <Grid item className={classes.autoWidth} style={{ minWidth: 200 }}>
-                            <FormControl fullWidth error={!!selectFieldValidation()} id="field-type-select-label">
+                            <FormControl
+                                variant="standard"
+                                fullWidth
+                                error={!!selectFieldValidation()}
+                                id="field-type-select-label"
+                            >
                                 <Select
+                                    variant="standard"
                                     disabled={isJournalCannedSearch}
                                     value={searchField}
                                     name="field-type-select"
@@ -188,16 +193,15 @@ export const AdvancedSearchRow = props => {
                                     className="deleteFieldButton"
                                     onClick={_deleteRow}
                                     id={`delete-advanced-search-row-${rowIndex}`}
+                                    size="large"
                                 >
                                     <Close />
                                 </IconButton>
                             </Grid>
                         )}
-                        <Hidden mdUp>
-                            <Grid item xs={12}>
-                                <Divider className={classes.mobileRowSpacer} />
-                            </Grid>
-                        </Hidden>
+                        <Grid item xs={12} sx={{ display: { xs: 'block', md: 'none' } }}>
+                            <Divider className={classes.mobileRowSpacer} />
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>

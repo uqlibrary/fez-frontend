@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
-import Grid from '@material-ui/core/Grid';
-import MenuItem from '@material-ui/core/MenuItem';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
@@ -169,19 +169,18 @@ export default class NtroFields extends React.PureComponent {
         this.row5Width = this.getWidth([props.hideAudienceSize, props.hidePeerReviewActivity, props.hideLanguage]);
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate() {
         this.row3Width = this.getWidth([
-            nextProps.hideVolume,
-            nextProps.hideIssue,
-            nextProps.hideStartPage,
-            nextProps.hideEndPage,
+            this.props.hideVolume,
+            this.props.hideIssue,
+            this.props.hideStartPage,
+            this.props.hideEndPage,
         ]);
-        this.row4Width = this.getWidth([nextProps.hideExtent, nextProps.hideOriginalFormat]);
+        this.row4Width = this.getWidth([this.props.hideExtent, this.props.hideOriginalFormat]);
         this.row5Width = this.getWidth([
-            nextProps.hideAudienceSize,
-            nextProps.hidePeerReviewActivity,
-            nextProps.hideLanguage,
+            this.props.hideAudienceSize,
+            this.props.hidePeerReviewActivity,
+            this.props.hideLanguage,
         ]);
     }
 

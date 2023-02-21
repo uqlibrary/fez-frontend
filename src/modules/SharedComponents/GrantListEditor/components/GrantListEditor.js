@@ -5,10 +5,10 @@ import GrantListEditorHeader from './GrantListEditorHeader';
 import GrantListEditorRow from './GrantListEditorRow';
 import GrantListEditorForm from './GrantListEditorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
+import Grid from '@mui/material/Grid';
 
 export class GrantListEditor extends PureComponent {
     static propTypes = {
@@ -40,13 +40,12 @@ export class GrantListEditor extends PureComponent {
         };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillUpdate(nextProps, nextState) {
+    componentDidUpdate() {
         // notify parent component when local state has been updated, eg grants added/removed/reordered
-        if (nextState.grantFormPopulated && this.props.onChange) {
-            this.props.onChange(nextState.grantFormPopulated);
+        if (this.state.grantFormPopulated && this.props.onChange) {
+            this.props.onChange(this.state.grantFormPopulated);
         } else {
-            this.props.onChange(nextState.grants);
+            this.props.onChange(this.state.grants);
         }
     }
 

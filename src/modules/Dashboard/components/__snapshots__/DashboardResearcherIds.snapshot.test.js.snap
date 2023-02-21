@@ -1,167 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 1`] = `
-<Fragment>
-  <ExternalLink
-    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-    id="publons"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="You are not linked to Publons - Click for more information"
-    >
-      <div
-        className="fez-icon publons error"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 2`] = `
-<Fragment>
-  <ExternalLink
-    href="http://www.researcherid.com/rid/A-1137-2007"
-    id="researcher"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-    >
-      <div
-        className="fez-icon researcher ok"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 3`] = `
-<Fragment>
-  <ExternalLink
-    href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
-    id="scopus"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="Your Scopus ID is 35478294000 - Click to review"
-    >
-      <div
-        className="fez-icon scopus error"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 4`] = `
-<Fragment>
-  <ExternalLink
-    href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
-    id="google_scholar"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-    >
-      <div
-        className="fez-icon google_scholar error"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 5`] = `
-<Fragment>
-  <ExternalLink
-    href="https://orcid.org/0000-0001-1111-1111"
-    id="orcid"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
-    >
-      <div
-        className="fez-icon orcid ok"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
 exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
-<Fragment>
-  <ExternalLink
-    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-    id="publons"
-    openInNewIcon={false}
+Array [
+  <a
+    className="makeStyles-externalLink-1 makeStyles-externalLink-13"
+    data-testid="researcher-link"
+    href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
+    id="researcher-link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
   >
-    <WithStyles(ForwardRef(Tooltip))
-      title="You are not linked to Publons - Click for more information"
-    >
-      <div
-        className="fez-icon publons error"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Testing auth internal links 2`] = `
-<Fragment>
-  <ExternalLink
-    href="http://www.researcherid.com/rid/A-1137-2007"
-    id="researcher"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
+        aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+        aria-labelledby={null}
         className="fez-icon researcher ok"
+        data-mui-internal-clone-element={true}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
         style={
           Object {
             "borderRadius": 32,
@@ -170,23 +33,741 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 2`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
+      <MuiTooltipPopper
+        anchorEl={
+          <div
+            aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+            class="fez-icon researcher ok"
+            data-mui-internal-clone-element="true"
+            style="width: 32px; height: 32px; border-radius: 32px;"
+          />
+        }
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "propTypes": Object {
+              "anchorEl": [Function],
+              "children": [Function],
+              "component": [Function],
+              "components": [Function],
+              "componentsProps": [Function],
+              "container": [Function],
+              "disablePortal": [Function],
+              "keepMounted": [Function],
+              "modifiers": [Function],
+              "open": [Function],
+              "ownerState": [Function],
+              "placement": [Function],
+              "popperOptions": [Function],
+              "popperRef": [Function],
+              "slotProps": [Function],
+              "slots": [Function],
+              "sx": [Function],
+              "transition": [Function],
+            },
+            "render": [Function],
+          }
+        }
+        className="MuiTooltip-popper MuiTooltip-popperInteractive"
+        id="mui-11"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        open={false}
+        ownerState={
+          Object {
+            "PopperComponentProp": undefined,
+            "arrow": false,
+            "children": <div
+              className="fez-icon researcher ok"
+              style={
+                Object {
+                  "borderRadius": 32,
+                  "height": 32,
+                  "width": 32,
+                }
+              }
+            />,
+            "disableInteractive": false,
+            "isRtl": false,
+            "placement": "bottom",
+            "title": "Your Researcher (ISI) ID is A-1137-2007 - Click to review",
+            "touch": false,
+          }
+        }
+        placement="bottom"
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": null,
+                  "padding": 4,
+                },
+              },
+            ],
+          }
+        }
+        popperRef={
+          Object {
+            "current": undefined,
+          }
+        }
+        transition={true}
+      >
+        <Insertion
+          cache={
+            Object {
+              "insert": [Function],
+              "inserted": Object {
+                "13i4rnv-MuiGrid-root": true,
+                "1433tg5-MuiTooltip-popper": true,
+                "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                "1sn4lm3-MuiTypography-root": true,
+                "7ldjcq-MuiGrid-root": true,
+              },
+              "key": "css",
+              "nonce": undefined,
+              "registered": Object {
+                "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+              },
+              "sheet": StyleSheet {
+                "_alreadyInsertedOrderInsensitiveRule": true,
+                "_insertTag": [Function],
+                "before": null,
+                "container": <head>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
 
-exports[`Dashboard Researcher IDs test Testing auth internal links 3`] = `
-<Fragment>
-  <ExternalLink
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                </head>,
+                "ctr": 7,
+                "insertionPoint": undefined,
+                "isSpeedy": false,
+                "key": "css",
+                "nonce": undefined,
+                "prepend": true,
+                "tags": Array [
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>,
+                ],
+              },
+            }
+          }
+          isStringTag={false}
+          serialized={
+            Object {
+              "map": undefined,
+              "name": "1433tg5-MuiTooltip-popper",
+              "next": undefined,
+              "styles": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+              "toString": [Function],
+            }
+          }
+        />
+        <ForwardRef(Popper)
+          anchorEl={
+            <div
+              aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+              class="fez-icon researcher ok"
+              data-mui-internal-clone-element="true"
+              style="width: 32px; height: 32px; border-radius: 32px;"
+            />
+          }
+          className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+          id="mui-11"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          open={false}
+          placement="bottom"
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": null,
+                    "padding": 4,
+                  },
+                },
+              ],
+            }
+          }
+          popperRef={
+            Object {
+              "current": undefined,
+            }
+          }
+          transition={true}
+        >
+          <MuiPopperRoot
+            anchorEl={
+              <div
+                aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                class="fez-icon researcher ok"
+                data-mui-internal-clone-element="true"
+                style="width: 32px; height: 32px; border-radius: 32px;"
+              />
+            }
+            className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+            direction="ltr"
+            id="mui-11"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            open={false}
+            placement="bottom"
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": null,
+                      "padding": 4,
+                    },
+                  },
+                ],
+              }
+            }
+            popperRef={
+              Object {
+                "current": undefined,
+              }
+            }
+            slots={
+              Object {
+                "root": undefined,
+              }
+            }
+            transition={true}
+          >
+            <Insertion
+              cache={
+                Object {
+                  "insert": [Function],
+                  "inserted": Object {
+                    "13i4rnv-MuiGrid-root": true,
+                    "1433tg5-MuiTooltip-popper": true,
+                    "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                    "1sn4lm3-MuiTypography-root": true,
+                    "7ldjcq-MuiGrid-root": true,
+                  },
+                  "key": "css",
+                  "nonce": undefined,
+                  "registered": Object {
+                    "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                    "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  },
+                  "sheet": StyleSheet {
+                    "_alreadyInsertedOrderInsensitiveRule": true,
+                    "_insertTag": [Function],
+                    "before": null,
+                    "container": <head>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                    </head>,
+                    "ctr": 7,
+                    "insertionPoint": undefined,
+                    "isSpeedy": false,
+                    "key": "css",
+                    "nonce": undefined,
+                    "prepend": true,
+                    "tags": Array [
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>,
+                    ],
+                  },
+                }
+              }
+              isStringTag={false}
+              serialized={
+                Object {
+                  "map": undefined,
+                  "name": "179vq5o-MuiPopper-root-MuiTooltip-popper",
+                  "next": undefined,
+                  "styles": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  "toString": [Function],
+                }
+              }
+            />
+            <ForwardRef(PopperUnstyled)
+              anchorEl={
+                <div
+                  aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                  class="fez-icon researcher ok"
+                  data-mui-internal-clone-element="true"
+                  style="width: 32px; height: 32px; border-radius: 32px;"
+                />
+              }
+              className="MuiTooltip-popper MuiTooltip-popperInteractive css-179vq5o-MuiPopper-root-MuiTooltip-popper"
+              direction="ltr"
+              id="mui-11"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              open={false}
+              placement="bottom"
+              popperOptions={
+                Object {
+                  "modifiers": Array [
+                    Object {
+                      "enabled": false,
+                      "name": "arrow",
+                      "options": Object {
+                        "element": null,
+                        "padding": 4,
+                      },
+                    },
+                  ],
+                }
+              }
+              popperRef={
+                Object {
+                  "current": undefined,
+                }
+              }
+              slots={
+                Object {
+                  "root": undefined,
+                }
+              }
+              transition={true}
+            />
+          </MuiPopperRoot>
+        </ForwardRef(Popper)>
+      </MuiTooltipPopper>
+    </ForwardRef(Tooltip)>
+  </a>,
+  <a
+    className="makeStyles-externalLink-1 makeStyles-externalLink-14"
+    data-testid="scopus-link"
     href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
-    id="scopus"
-    openInNewIcon={false}
+    id="scopus-link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
+        aria-label="Your Scopus ID is 35478294000 - Click to review"
+        aria-labelledby={null}
         className="fez-icon scopus ok"
+        data-mui-internal-clone-element={true}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
         style={
           Object {
             "borderRadius": 32,
@@ -195,23 +776,741 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 3`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
+      <MuiTooltipPopper
+        anchorEl={
+          <div
+            aria-label="Your Scopus ID is 35478294000 - Click to review"
+            class="fez-icon scopus ok"
+            data-mui-internal-clone-element="true"
+            style="width: 32px; height: 32px; border-radius: 32px;"
+          />
+        }
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "propTypes": Object {
+              "anchorEl": [Function],
+              "children": [Function],
+              "component": [Function],
+              "components": [Function],
+              "componentsProps": [Function],
+              "container": [Function],
+              "disablePortal": [Function],
+              "keepMounted": [Function],
+              "modifiers": [Function],
+              "open": [Function],
+              "ownerState": [Function],
+              "placement": [Function],
+              "popperOptions": [Function],
+              "popperRef": [Function],
+              "slotProps": [Function],
+              "slots": [Function],
+              "sx": [Function],
+              "transition": [Function],
+            },
+            "render": [Function],
+          }
+        }
+        className="MuiTooltip-popper MuiTooltip-popperInteractive"
+        id="mui-12"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        open={false}
+        ownerState={
+          Object {
+            "PopperComponentProp": undefined,
+            "arrow": false,
+            "children": <div
+              className="fez-icon scopus ok"
+              style={
+                Object {
+                  "borderRadius": 32,
+                  "height": 32,
+                  "width": 32,
+                }
+              }
+            />,
+            "disableInteractive": false,
+            "isRtl": false,
+            "placement": "bottom",
+            "title": "Your Scopus ID is 35478294000 - Click to review",
+            "touch": false,
+          }
+        }
+        placement="bottom"
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": null,
+                  "padding": 4,
+                },
+              },
+            ],
+          }
+        }
+        popperRef={
+          Object {
+            "current": undefined,
+          }
+        }
+        transition={true}
+      >
+        <Insertion
+          cache={
+            Object {
+              "insert": [Function],
+              "inserted": Object {
+                "13i4rnv-MuiGrid-root": true,
+                "1433tg5-MuiTooltip-popper": true,
+                "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                "1sn4lm3-MuiTypography-root": true,
+                "7ldjcq-MuiGrid-root": true,
+              },
+              "key": "css",
+              "nonce": undefined,
+              "registered": Object {
+                "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+              },
+              "sheet": StyleSheet {
+                "_alreadyInsertedOrderInsensitiveRule": true,
+                "_insertTag": [Function],
+                "before": null,
+                "container": <head>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
 
-exports[`Dashboard Researcher IDs test Testing auth internal links 4`] = `
-<Fragment>
-  <ExternalLink
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                </head>,
+                "ctr": 7,
+                "insertionPoint": undefined,
+                "isSpeedy": false,
+                "key": "css",
+                "nonce": undefined,
+                "prepend": true,
+                "tags": Array [
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>,
+                ],
+              },
+            }
+          }
+          isStringTag={false}
+          serialized={
+            Object {
+              "map": undefined,
+              "name": "1433tg5-MuiTooltip-popper",
+              "next": undefined,
+              "styles": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+              "toString": [Function],
+            }
+          }
+        />
+        <ForwardRef(Popper)
+          anchorEl={
+            <div
+              aria-label="Your Scopus ID is 35478294000 - Click to review"
+              class="fez-icon scopus ok"
+              data-mui-internal-clone-element="true"
+              style="width: 32px; height: 32px; border-radius: 32px;"
+            />
+          }
+          className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+          id="mui-12"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          open={false}
+          placement="bottom"
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": null,
+                    "padding": 4,
+                  },
+                },
+              ],
+            }
+          }
+          popperRef={
+            Object {
+              "current": undefined,
+            }
+          }
+          transition={true}
+        >
+          <MuiPopperRoot
+            anchorEl={
+              <div
+                aria-label="Your Scopus ID is 35478294000 - Click to review"
+                class="fez-icon scopus ok"
+                data-mui-internal-clone-element="true"
+                style="width: 32px; height: 32px; border-radius: 32px;"
+              />
+            }
+            className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+            direction="ltr"
+            id="mui-12"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            open={false}
+            placement="bottom"
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": null,
+                      "padding": 4,
+                    },
+                  },
+                ],
+              }
+            }
+            popperRef={
+              Object {
+                "current": undefined,
+              }
+            }
+            slots={
+              Object {
+                "root": undefined,
+              }
+            }
+            transition={true}
+          >
+            <Insertion
+              cache={
+                Object {
+                  "insert": [Function],
+                  "inserted": Object {
+                    "13i4rnv-MuiGrid-root": true,
+                    "1433tg5-MuiTooltip-popper": true,
+                    "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                    "1sn4lm3-MuiTypography-root": true,
+                    "7ldjcq-MuiGrid-root": true,
+                  },
+                  "key": "css",
+                  "nonce": undefined,
+                  "registered": Object {
+                    "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                    "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  },
+                  "sheet": StyleSheet {
+                    "_alreadyInsertedOrderInsensitiveRule": true,
+                    "_insertTag": [Function],
+                    "before": null,
+                    "container": <head>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                    </head>,
+                    "ctr": 7,
+                    "insertionPoint": undefined,
+                    "isSpeedy": false,
+                    "key": "css",
+                    "nonce": undefined,
+                    "prepend": true,
+                    "tags": Array [
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>,
+                    ],
+                  },
+                }
+              }
+              isStringTag={false}
+              serialized={
+                Object {
+                  "map": undefined,
+                  "name": "179vq5o-MuiPopper-root-MuiTooltip-popper",
+                  "next": undefined,
+                  "styles": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  "toString": [Function],
+                }
+              }
+            />
+            <ForwardRef(PopperUnstyled)
+              anchorEl={
+                <div
+                  aria-label="Your Scopus ID is 35478294000 - Click to review"
+                  class="fez-icon scopus ok"
+                  data-mui-internal-clone-element="true"
+                  style="width: 32px; height: 32px; border-radius: 32px;"
+                />
+              }
+              className="MuiTooltip-popper MuiTooltip-popperInteractive css-179vq5o-MuiPopper-root-MuiTooltip-popper"
+              direction="ltr"
+              id="mui-12"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              open={false}
+              placement="bottom"
+              popperOptions={
+                Object {
+                  "modifiers": Array [
+                    Object {
+                      "enabled": false,
+                      "name": "arrow",
+                      "options": Object {
+                        "element": null,
+                        "padding": 4,
+                      },
+                    },
+                  ],
+                }
+              }
+              popperRef={
+                Object {
+                  "current": undefined,
+                }
+              }
+              slots={
+                Object {
+                  "root": undefined,
+                }
+              }
+              transition={true}
+            />
+          </MuiPopperRoot>
+        </ForwardRef(Popper)>
+      </MuiTooltipPopper>
+    </ForwardRef(Tooltip)>
+  </a>,
+  <a
+    className="makeStyles-externalLink-1 makeStyles-externalLink-15"
+    data-testid="google_scholar-link"
     href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
-    id="google_scholar"
-    openInNewIcon={false}
+    id="google_scholar-link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
+        aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+        aria-labelledby={null}
         className="fez-icon google_scholar ok"
+        data-mui-internal-clone-element={true}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
         style={
           Object {
             "borderRadius": 32,
@@ -220,190 +1519,758 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 4`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Testing auth internal links 5`] = `""`;
-
-exports[`Dashboard Researcher IDs test Testing auth internal links 6`] = `
-<a
-  id="orcid"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  tabIndex="0"
-  title="You are not linked to ORCID - Click for more information"
->
-  <div
-    className="fez-icon orcid dashboard ok"
-    title="You are not linked to ORCID - Click for more information"
-  />
-</a>
-`;
-
-exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
-<Fragment>
-  <ExternalLink
-    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-    id="publons"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="You are not linked to Publons - Click for more information"
-    >
-      <div
-        className="fez-icon publons error"
-        style={
+      <MuiTooltipPopper
+        anchorEl={
+          <div
+            aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+            class="fez-icon google_scholar ok"
+            data-mui-internal-clone-element="true"
+            style="width: 32px; height: 32px; border-radius: 32px;"
+          />
+        }
+        as={
           Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
+            "$$typeof": Symbol(react.forward_ref),
+            "propTypes": Object {
+              "anchorEl": [Function],
+              "children": [Function],
+              "component": [Function],
+              "components": [Function],
+              "componentsProps": [Function],
+              "container": [Function],
+              "disablePortal": [Function],
+              "keepMounted": [Function],
+              "modifiers": [Function],
+              "open": [Function],
+              "ownerState": [Function],
+              "placement": [Function],
+              "popperOptions": [Function],
+              "popperRef": [Function],
+              "slotProps": [Function],
+              "slots": [Function],
+              "sx": [Function],
+              "transition": [Function],
+            },
+            "render": [Function],
           }
         }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Testing orcid caption 2`] = `
-<Fragment>
-  <ExternalLink
-    href="http://www.researcherid.com/rid/A-1137-2007"
-    id="researcher"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-    >
-      <div
-        className="fez-icon researcher ok"
-        style={
+        className="MuiTooltip-popper MuiTooltip-popperInteractive"
+        id="mui-13"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        open={false}
+        ownerState={
           Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
+            "PopperComponentProp": undefined,
+            "arrow": false,
+            "children": <div
+              className="fez-icon google_scholar ok"
+              style={
+                Object {
+                  "borderRadius": 32,
+                  "height": 32,
+                  "width": 32,
+                }
+              }
+            />,
+            "disableInteractive": false,
+            "isRtl": false,
+            "placement": "bottom",
+            "title": "Your Google Scholar ID is kUemDfMAAAAJ - Click to review",
+            "touch": false,
           }
         }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Testing orcid caption 3`] = `
-<Fragment>
-  <ExternalLink
-    href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
-    id="scopus"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="Your Scopus ID is 35478294000 - Click to review"
-    >
-      <div
-        className="fez-icon scopus ok"
-        style={
+        placement="bottom"
+        popperOptions={
           Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": null,
+                  "padding": 4,
+                },
+              },
+            ],
           }
         }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Testing orcid caption 4`] = `
-<Fragment>
-  <ExternalLink
-    href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
-    id="google_scholar"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-    >
-      <div
-        className="fez-icon google_scholar ok"
-        style={
+        popperRef={
           Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
+            "current": undefined,
           }
         }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
+        transition={true}
+      >
+        <Insertion
+          cache={
+            Object {
+              "insert": [Function],
+              "inserted": Object {
+                "13i4rnv-MuiGrid-root": true,
+                "1433tg5-MuiTooltip-popper": true,
+                "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                "1sn4lm3-MuiTypography-root": true,
+                "7ldjcq-MuiGrid-root": true,
+              },
+              "key": "css",
+              "nonce": undefined,
+              "registered": Object {
+                "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+              },
+              "sheet": StyleSheet {
+                "_alreadyInsertedOrderInsensitiveRule": true,
+                "_insertTag": [Function],
+                "before": null,
+                "container": <head>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
 
-exports[`Dashboard Researcher IDs test Testing orcid caption 5`] = `
-<Fragment>
-  <ExternalLink
-    href="https://orcid.org/0000-0001-1111-1111"
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                </head>,
+                "ctr": 7,
+                "insertionPoint": undefined,
+                "isSpeedy": false,
+                "key": "css",
+                "nonce": undefined,
+                "prepend": true,
+                "tags": Array [
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>,
+                ],
+              },
+            }
+          }
+          isStringTag={false}
+          serialized={
+            Object {
+              "map": undefined,
+              "name": "1433tg5-MuiTooltip-popper",
+              "next": undefined,
+              "styles": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+              "toString": [Function],
+            }
+          }
+        />
+        <ForwardRef(Popper)
+          anchorEl={
+            <div
+              aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+              class="fez-icon google_scholar ok"
+              data-mui-internal-clone-element="true"
+              style="width: 32px; height: 32px; border-radius: 32px;"
+            />
+          }
+          className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+          id="mui-13"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          open={false}
+          placement="bottom"
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": null,
+                    "padding": 4,
+                  },
+                },
+              ],
+            }
+          }
+          popperRef={
+            Object {
+              "current": undefined,
+            }
+          }
+          transition={true}
+        >
+          <MuiPopperRoot
+            anchorEl={
+              <div
+                aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                class="fez-icon google_scholar ok"
+                data-mui-internal-clone-element="true"
+                style="width: 32px; height: 32px; border-radius: 32px;"
+              />
+            }
+            className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+            direction="ltr"
+            id="mui-13"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            open={false}
+            placement="bottom"
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": null,
+                      "padding": 4,
+                    },
+                  },
+                ],
+              }
+            }
+            popperRef={
+              Object {
+                "current": undefined,
+              }
+            }
+            slots={
+              Object {
+                "root": undefined,
+              }
+            }
+            transition={true}
+          >
+            <Insertion
+              cache={
+                Object {
+                  "insert": [Function],
+                  "inserted": Object {
+                    "13i4rnv-MuiGrid-root": true,
+                    "1433tg5-MuiTooltip-popper": true,
+                    "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                    "1sn4lm3-MuiTypography-root": true,
+                    "7ldjcq-MuiGrid-root": true,
+                  },
+                  "key": "css",
+                  "nonce": undefined,
+                  "registered": Object {
+                    "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                    "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  },
+                  "sheet": StyleSheet {
+                    "_alreadyInsertedOrderInsensitiveRule": true,
+                    "_insertTag": [Function],
+                    "before": null,
+                    "container": <head>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                    </head>,
+                    "ctr": 7,
+                    "insertionPoint": undefined,
+                    "isSpeedy": false,
+                    "key": "css",
+                    "nonce": undefined,
+                    "prepend": true,
+                    "tags": Array [
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>,
+                    ],
+                  },
+                }
+              }
+              isStringTag={false}
+              serialized={
+                Object {
+                  "map": undefined,
+                  "name": "179vq5o-MuiPopper-root-MuiTooltip-popper",
+                  "next": undefined,
+                  "styles": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  "toString": [Function],
+                }
+              }
+            />
+            <ForwardRef(PopperUnstyled)
+              anchorEl={
+                <div
+                  aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                  class="fez-icon google_scholar ok"
+                  data-mui-internal-clone-element="true"
+                  style="width: 32px; height: 32px; border-radius: 32px;"
+                />
+              }
+              className="MuiTooltip-popper MuiTooltip-popperInteractive css-179vq5o-MuiPopper-root-MuiTooltip-popper"
+              direction="ltr"
+              id="mui-13"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              open={false}
+              placement="bottom"
+              popperOptions={
+                Object {
+                  "modifiers": Array [
+                    Object {
+                      "enabled": false,
+                      "name": "arrow",
+                      "options": Object {
+                        "element": null,
+                        "padding": 4,
+                      },
+                    },
+                  ],
+                }
+              }
+              popperRef={
+                Object {
+                  "current": undefined,
+                }
+              }
+              slots={
+                Object {
+                  "root": undefined,
+                }
+              }
+              transition={true}
+            />
+          </MuiPopperRoot>
+        </ForwardRef(Popper)>
+      </MuiTooltipPopper>
+    </ForwardRef(Tooltip)>
+  </a>,
+  <a
     id="orcid"
-    openInNewIcon={false}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex={0}
+    title="You are not linked to ORCID - Click for more information"
   >
-    <WithStyles(ForwardRef(Tooltip))
-      title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
-    >
-      <div
-        className="fez-icon orcid ok"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
+    <div
+      className="fez-icon orcid dashboard ok"
+      title="You are not linked to ORCID - Click for more information"
+    />
+  </a>,
+]
 `;
 
 exports[`Dashboard Researcher IDs test Testing unauth internal links 1`] = `
-<Fragment>
-  <ExternalLink
-    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-    id="publons"
-    openInNewIcon={false}
+Array [
+  <a
+    className="makeStyles-externalLink-1 makeStyles-externalLink-10"
+    data-testid="researcher-link"
+    href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
+    id="researcher-link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
   >
-    <WithStyles(ForwardRef(Tooltip))
-      title="You are not linked to Publons - Click for more information"
-    >
-      <div
-        className="fez-icon publons error"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Testing unauth internal links 2`] = `
-<Fragment>
-  <ExternalLink
-    href="http://www.researcherid.com/rid/A-1137-2007"
-    id="researcher"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
+        aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+        aria-labelledby={null}
         className="fez-icon researcher error"
+        data-mui-internal-clone-element={true}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
         style={
           Object {
             "borderRadius": 32,
@@ -412,23 +2279,699 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 2`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
+      <MuiTooltipPopper
+        anchorEl={
+          <div
+            aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+            class="fez-icon researcher error"
+            data-mui-internal-clone-element="true"
+            style="width: 32px; height: 32px; border-radius: 32px;"
+          />
+        }
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "propTypes": Object {
+              "anchorEl": [Function],
+              "children": [Function],
+              "component": [Function],
+              "components": [Function],
+              "componentsProps": [Function],
+              "container": [Function],
+              "disablePortal": [Function],
+              "keepMounted": [Function],
+              "modifiers": [Function],
+              "open": [Function],
+              "ownerState": [Function],
+              "placement": [Function],
+              "popperOptions": [Function],
+              "popperRef": [Function],
+              "slotProps": [Function],
+              "slots": [Function],
+              "sx": [Function],
+              "transition": [Function],
+            },
+            "render": [Function],
+          }
+        }
+        className="MuiTooltip-popper MuiTooltip-popperInteractive"
+        id="mui-8"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        open={false}
+        ownerState={
+          Object {
+            "PopperComponentProp": undefined,
+            "arrow": false,
+            "children": <div
+              className="fez-icon researcher error"
+              style={
+                Object {
+                  "borderRadius": 32,
+                  "height": 32,
+                  "width": 32,
+                }
+              }
+            />,
+            "disableInteractive": false,
+            "isRtl": false,
+            "placement": "bottom",
+            "title": "Your Researcher (ISI) ID is A-1137-2007 - Click to review",
+            "touch": false,
+          }
+        }
+        placement="bottom"
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": null,
+                  "padding": 4,
+                },
+              },
+            ],
+          }
+        }
+        popperRef={
+          Object {
+            "current": undefined,
+          }
+        }
+        transition={true}
+      >
+        <Insertion
+          cache={
+            Object {
+              "insert": [Function],
+              "inserted": Object {
+                "13i4rnv-MuiGrid-root": true,
+                "1433tg5-MuiTooltip-popper": true,
+                "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                "1sn4lm3-MuiTypography-root": true,
+                "7ldjcq-MuiGrid-root": true,
+              },
+              "key": "css",
+              "nonce": undefined,
+              "registered": Object {
+                "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+              },
+              "sheet": StyleSheet {
+                "_alreadyInsertedOrderInsensitiveRule": true,
+                "_insertTag": [Function],
+                "before": null,
+                "container": <head>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
 
-exports[`Dashboard Researcher IDs test Testing unauth internal links 3`] = `
-<Fragment>
-  <ExternalLink
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                </head>,
+                "ctr": 7,
+                "insertionPoint": undefined,
+                "isSpeedy": false,
+                "key": "css",
+                "nonce": undefined,
+                "prepend": true,
+                "tags": Array [
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>,
+                ],
+              },
+            }
+          }
+          isStringTag={false}
+          serialized={
+            Object {
+              "map": undefined,
+              "name": "1433tg5-MuiTooltip-popper",
+              "next": undefined,
+              "styles": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+              "toString": [Function],
+            }
+          }
+        />
+        <ForwardRef(Popper)
+          anchorEl={
+            <div
+              aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+              class="fez-icon researcher error"
+              data-mui-internal-clone-element="true"
+              style="width: 32px; height: 32px; border-radius: 32px;"
+            />
+          }
+          className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+          id="mui-8"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          open={false}
+          placement="bottom"
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": null,
+                    "padding": 4,
+                  },
+                },
+              ],
+            }
+          }
+          popperRef={
+            Object {
+              "current": undefined,
+            }
+          }
+          transition={true}
+        >
+          <MuiPopperRoot
+            anchorEl={
+              <div
+                aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                class="fez-icon researcher error"
+                data-mui-internal-clone-element="true"
+                style="width: 32px; height: 32px; border-radius: 32px;"
+              />
+            }
+            className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+            direction="ltr"
+            id="mui-8"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            open={false}
+            placement="bottom"
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": null,
+                      "padding": 4,
+                    },
+                  },
+                ],
+              }
+            }
+            popperRef={
+              Object {
+                "current": undefined,
+              }
+            }
+            slots={
+              Object {
+                "root": undefined,
+              }
+            }
+            transition={true}
+          >
+            <Insertion
+              cache={
+                Object {
+                  "insert": [Function],
+                  "inserted": Object {
+                    "13i4rnv-MuiGrid-root": true,
+                    "1433tg5-MuiTooltip-popper": true,
+                    "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                    "1sn4lm3-MuiTypography-root": true,
+                    "7ldjcq-MuiGrid-root": true,
+                  },
+                  "key": "css",
+                  "nonce": undefined,
+                  "registered": Object {
+                    "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                    "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  },
+                  "sheet": StyleSheet {
+                    "_alreadyInsertedOrderInsensitiveRule": true,
+                    "_insertTag": [Function],
+                    "before": null,
+                    "container": <head>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                    </head>,
+                    "ctr": 7,
+                    "insertionPoint": undefined,
+                    "isSpeedy": false,
+                    "key": "css",
+                    "nonce": undefined,
+                    "prepend": true,
+                    "tags": Array [
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>,
+                    ],
+                  },
+                }
+              }
+              isStringTag={false}
+              serialized={
+                Object {
+                  "map": undefined,
+                  "name": "179vq5o-MuiPopper-root-MuiTooltip-popper",
+                  "next": undefined,
+                  "styles": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  "toString": [Function],
+                }
+              }
+            />
+            <ForwardRef(PopperUnstyled)
+              anchorEl={
+                <div
+                  aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                  class="fez-icon researcher error"
+                  data-mui-internal-clone-element="true"
+                  style="width: 32px; height: 32px; border-radius: 32px;"
+                />
+              }
+              className="MuiTooltip-popper MuiTooltip-popperInteractive css-179vq5o-MuiPopper-root-MuiTooltip-popper"
+              direction="ltr"
+              id="mui-8"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              open={false}
+              placement="bottom"
+              popperOptions={
+                Object {
+                  "modifiers": Array [
+                    Object {
+                      "enabled": false,
+                      "name": "arrow",
+                      "options": Object {
+                        "element": null,
+                        "padding": 4,
+                      },
+                    },
+                  ],
+                }
+              }
+              popperRef={
+                Object {
+                  "current": undefined,
+                }
+              }
+              slots={
+                Object {
+                  "root": undefined,
+                }
+              }
+              transition={true}
+            />
+          </MuiPopperRoot>
+        </ForwardRef(Popper)>
+      </MuiTooltipPopper>
+    </ForwardRef(Tooltip)>
+  </a>,
+  <a
+    className="makeStyles-externalLink-1 makeStyles-externalLink-11"
+    data-testid="scopus-link"
     href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
-    id="scopus"
-    openInNewIcon={false}
+    id="scopus-link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
+        aria-label="Your Scopus ID is 35478294000 - Click to review"
+        aria-labelledby={null}
         className="fez-icon scopus error"
+        data-mui-internal-clone-element={true}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
         style={
           Object {
             "borderRadius": 32,
@@ -437,23 +2980,699 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 3`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
+      <MuiTooltipPopper
+        anchorEl={
+          <div
+            aria-label="Your Scopus ID is 35478294000 - Click to review"
+            class="fez-icon scopus error"
+            data-mui-internal-clone-element="true"
+            style="width: 32px; height: 32px; border-radius: 32px;"
+          />
+        }
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "propTypes": Object {
+              "anchorEl": [Function],
+              "children": [Function],
+              "component": [Function],
+              "components": [Function],
+              "componentsProps": [Function],
+              "container": [Function],
+              "disablePortal": [Function],
+              "keepMounted": [Function],
+              "modifiers": [Function],
+              "open": [Function],
+              "ownerState": [Function],
+              "placement": [Function],
+              "popperOptions": [Function],
+              "popperRef": [Function],
+              "slotProps": [Function],
+              "slots": [Function],
+              "sx": [Function],
+              "transition": [Function],
+            },
+            "render": [Function],
+          }
+        }
+        className="MuiTooltip-popper MuiTooltip-popperInteractive"
+        id="mui-9"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        open={false}
+        ownerState={
+          Object {
+            "PopperComponentProp": undefined,
+            "arrow": false,
+            "children": <div
+              className="fez-icon scopus error"
+              style={
+                Object {
+                  "borderRadius": 32,
+                  "height": 32,
+                  "width": 32,
+                }
+              }
+            />,
+            "disableInteractive": false,
+            "isRtl": false,
+            "placement": "bottom",
+            "title": "Your Scopus ID is 35478294000 - Click to review",
+            "touch": false,
+          }
+        }
+        placement="bottom"
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": null,
+                  "padding": 4,
+                },
+              },
+            ],
+          }
+        }
+        popperRef={
+          Object {
+            "current": undefined,
+          }
+        }
+        transition={true}
+      >
+        <Insertion
+          cache={
+            Object {
+              "insert": [Function],
+              "inserted": Object {
+                "13i4rnv-MuiGrid-root": true,
+                "1433tg5-MuiTooltip-popper": true,
+                "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                "1sn4lm3-MuiTypography-root": true,
+                "7ldjcq-MuiGrid-root": true,
+              },
+              "key": "css",
+              "nonce": undefined,
+              "registered": Object {
+                "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+              },
+              "sheet": StyleSheet {
+                "_alreadyInsertedOrderInsensitiveRule": true,
+                "_insertTag": [Function],
+                "before": null,
+                "container": <head>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
 
-exports[`Dashboard Researcher IDs test Testing unauth internal links 4`] = `
-<Fragment>
-  <ExternalLink
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                </head>,
+                "ctr": 7,
+                "insertionPoint": undefined,
+                "isSpeedy": false,
+                "key": "css",
+                "nonce": undefined,
+                "prepend": true,
+                "tags": Array [
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>,
+                ],
+              },
+            }
+          }
+          isStringTag={false}
+          serialized={
+            Object {
+              "map": undefined,
+              "name": "1433tg5-MuiTooltip-popper",
+              "next": undefined,
+              "styles": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+              "toString": [Function],
+            }
+          }
+        />
+        <ForwardRef(Popper)
+          anchorEl={
+            <div
+              aria-label="Your Scopus ID is 35478294000 - Click to review"
+              class="fez-icon scopus error"
+              data-mui-internal-clone-element="true"
+              style="width: 32px; height: 32px; border-radius: 32px;"
+            />
+          }
+          className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+          id="mui-9"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          open={false}
+          placement="bottom"
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": null,
+                    "padding": 4,
+                  },
+                },
+              ],
+            }
+          }
+          popperRef={
+            Object {
+              "current": undefined,
+            }
+          }
+          transition={true}
+        >
+          <MuiPopperRoot
+            anchorEl={
+              <div
+                aria-label="Your Scopus ID is 35478294000 - Click to review"
+                class="fez-icon scopus error"
+                data-mui-internal-clone-element="true"
+                style="width: 32px; height: 32px; border-radius: 32px;"
+              />
+            }
+            className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+            direction="ltr"
+            id="mui-9"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            open={false}
+            placement="bottom"
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": null,
+                      "padding": 4,
+                    },
+                  },
+                ],
+              }
+            }
+            popperRef={
+              Object {
+                "current": undefined,
+              }
+            }
+            slots={
+              Object {
+                "root": undefined,
+              }
+            }
+            transition={true}
+          >
+            <Insertion
+              cache={
+                Object {
+                  "insert": [Function],
+                  "inserted": Object {
+                    "13i4rnv-MuiGrid-root": true,
+                    "1433tg5-MuiTooltip-popper": true,
+                    "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                    "1sn4lm3-MuiTypography-root": true,
+                    "7ldjcq-MuiGrid-root": true,
+                  },
+                  "key": "css",
+                  "nonce": undefined,
+                  "registered": Object {
+                    "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                    "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  },
+                  "sheet": StyleSheet {
+                    "_alreadyInsertedOrderInsensitiveRule": true,
+                    "_insertTag": [Function],
+                    "before": null,
+                    "container": <head>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                    </head>,
+                    "ctr": 7,
+                    "insertionPoint": undefined,
+                    "isSpeedy": false,
+                    "key": "css",
+                    "nonce": undefined,
+                    "prepend": true,
+                    "tags": Array [
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>,
+                    ],
+                  },
+                }
+              }
+              isStringTag={false}
+              serialized={
+                Object {
+                  "map": undefined,
+                  "name": "179vq5o-MuiPopper-root-MuiTooltip-popper",
+                  "next": undefined,
+                  "styles": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  "toString": [Function],
+                }
+              }
+            />
+            <ForwardRef(PopperUnstyled)
+              anchorEl={
+                <div
+                  aria-label="Your Scopus ID is 35478294000 - Click to review"
+                  class="fez-icon scopus error"
+                  data-mui-internal-clone-element="true"
+                  style="width: 32px; height: 32px; border-radius: 32px;"
+                />
+              }
+              className="MuiTooltip-popper MuiTooltip-popperInteractive css-179vq5o-MuiPopper-root-MuiTooltip-popper"
+              direction="ltr"
+              id="mui-9"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              open={false}
+              placement="bottom"
+              popperOptions={
+                Object {
+                  "modifiers": Array [
+                    Object {
+                      "enabled": false,
+                      "name": "arrow",
+                      "options": Object {
+                        "element": null,
+                        "padding": 4,
+                      },
+                    },
+                  ],
+                }
+              }
+              popperRef={
+                Object {
+                  "current": undefined,
+                }
+              }
+              slots={
+                Object {
+                  "root": undefined,
+                }
+              }
+              transition={true}
+            />
+          </MuiPopperRoot>
+        </ForwardRef(Popper)>
+      </MuiTooltipPopper>
+    </ForwardRef(Tooltip)>
+  </a>,
+  <a
+    className="makeStyles-externalLink-1 makeStyles-externalLink-12"
+    data-testid="google_scholar-link"
     href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
-    id="google_scholar"
-    openInNewIcon={false}
+    id="google_scholar-link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
+        aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+        aria-labelledby={null}
         className="fez-icon google_scholar error"
+        data-mui-internal-clone-element={true}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
         style={
           Object {
             "borderRadius": 32,
@@ -462,26 +3681,689 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 4`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
+      <MuiTooltipPopper
+        anchorEl={
+          <div
+            aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+            class="fez-icon google_scholar error"
+            data-mui-internal-clone-element="true"
+            style="width: 32px; height: 32px; border-radius: 32px;"
+          />
+        }
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "propTypes": Object {
+              "anchorEl": [Function],
+              "children": [Function],
+              "component": [Function],
+              "components": [Function],
+              "componentsProps": [Function],
+              "container": [Function],
+              "disablePortal": [Function],
+              "keepMounted": [Function],
+              "modifiers": [Function],
+              "open": [Function],
+              "ownerState": [Function],
+              "placement": [Function],
+              "popperOptions": [Function],
+              "popperRef": [Function],
+              "slotProps": [Function],
+              "slots": [Function],
+              "sx": [Function],
+              "transition": [Function],
+            },
+            "render": [Function],
+          }
+        }
+        className="MuiTooltip-popper MuiTooltip-popperInteractive"
+        id="mui-10"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        open={false}
+        ownerState={
+          Object {
+            "PopperComponentProp": undefined,
+            "arrow": false,
+            "children": <div
+              className="fez-icon google_scholar error"
+              style={
+                Object {
+                  "borderRadius": 32,
+                  "height": 32,
+                  "width": 32,
+                }
+              }
+            />,
+            "disableInteractive": false,
+            "isRtl": false,
+            "placement": "bottom",
+            "title": "Your Google Scholar ID is kUemDfMAAAAJ - Click to review",
+            "touch": false,
+          }
+        }
+        placement="bottom"
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": null,
+                  "padding": 4,
+                },
+              },
+            ],
+          }
+        }
+        popperRef={
+          Object {
+            "current": undefined,
+          }
+        }
+        transition={true}
+      >
+        <Insertion
+          cache={
+            Object {
+              "insert": [Function],
+              "inserted": Object {
+                "13i4rnv-MuiGrid-root": true,
+                "1433tg5-MuiTooltip-popper": true,
+                "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                "1sn4lm3-MuiTypography-root": true,
+                "7ldjcq-MuiGrid-root": true,
+              },
+              "key": "css",
+              "nonce": undefined,
+              "registered": Object {
+                "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+              },
+              "sheet": StyleSheet {
+                "_alreadyInsertedOrderInsensitiveRule": true,
+                "_insertTag": [Function],
+                "before": null,
+                "container": <head>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
 
-exports[`Dashboard Researcher IDs test Testing unauth internal links 5`] = `""`;
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
 
-exports[`Dashboard Researcher IDs test Testing unauth internal links 6`] = `
-<a
-  id="orcid"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  tabIndex="0"
-  title="You are not linked to ORCID - Click for more information"
->
-  <div
-    className="fez-icon orcid dashboard error"
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                  <style
+                    data-jss=""
+                    data-meta="makeStyles"
+                  >
+                    
+
+                  </style>
+                </head>,
+                "ctr": 7,
+                "insertionPoint": undefined,
+                "isSpeedy": false,
+                "key": "css",
+                "nonce": undefined,
+                "prepend": true,
+                "tags": Array [
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                  </style>,
+                ],
+              },
+            }
+          }
+          isStringTag={false}
+          serialized={
+            Object {
+              "map": undefined,
+              "name": "1433tg5-MuiTooltip-popper",
+              "next": undefined,
+              "styles": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+              "toString": [Function],
+            }
+          }
+        />
+        <ForwardRef(Popper)
+          anchorEl={
+            <div
+              aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+              class="fez-icon google_scholar error"
+              data-mui-internal-clone-element="true"
+              style="width: 32px; height: 32px; border-radius: 32px;"
+            />
+          }
+          className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+          id="mui-10"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          open={false}
+          placement="bottom"
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": null,
+                    "padding": 4,
+                  },
+                },
+              ],
+            }
+          }
+          popperRef={
+            Object {
+              "current": undefined,
+            }
+          }
+          transition={true}
+        >
+          <MuiPopperRoot
+            anchorEl={
+              <div
+                aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                class="fez-icon google_scholar error"
+                data-mui-internal-clone-element="true"
+                style="width: 32px; height: 32px; border-radius: 32px;"
+              />
+            }
+            className="MuiTooltip-popper MuiTooltip-popperInteractive css-1433tg5-MuiTooltip-popper"
+            direction="ltr"
+            id="mui-10"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            open={false}
+            placement="bottom"
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": null,
+                      "padding": 4,
+                    },
+                  },
+                ],
+              }
+            }
+            popperRef={
+              Object {
+                "current": undefined,
+              }
+            }
+            slots={
+              Object {
+                "root": undefined,
+              }
+            }
+            transition={true}
+          >
+            <Insertion
+              cache={
+                Object {
+                  "insert": [Function],
+                  "inserted": Object {
+                    "13i4rnv-MuiGrid-root": true,
+                    "1433tg5-MuiTooltip-popper": true,
+                    "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                    "1sn4lm3-MuiTypography-root": true,
+                    "7ldjcq-MuiGrid-root": true,
+                  },
+                  "key": "css",
+                  "nonce": undefined,
+                  "registered": Object {
+                    "css-1433tg5-MuiTooltip-popper": "label:MuiTooltip-popper;z-index:1500;pointer-events:none;",
+                    "css-179vq5o-MuiPopper-root-MuiTooltip-popper": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  },
+                  "sheet": StyleSheet {
+                    "_alreadyInsertedOrderInsensitiveRule": true,
+                    "_insertTag": [Function],
+                    "before": null,
+                    "container": <head>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+.makeStyles-externalLinkIcon-2 {
+  color: inherit;
+  float: right;
+  display: inline-block;
+  font-size: 0.66rem;
+  margin-left: 0.25rem;
+}
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                      <style
+                        data-jss=""
+                        data-meta="makeStyles"
+                      >
+                        
+
+                      </style>
+                    </head>,
+                    "ctr": 7,
+                    "insertionPoint": undefined,
+                    "isSpeedy": false,
+                    "key": "css",
+                    "nonce": undefined,
+                    "prepend": true,
+                    "tags": Array [
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-8px;width:calc(100% + 8px);margin-left:-8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-top:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-7ldjcq-MuiGrid-root&gt;.MuiGrid-item{padding-left:8px;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}
+                      </style>,
+                      <style
+                        data-emotion="css"
+                        data-s=""
+                      >
+                        
+                        .css-1sn4lm3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;letter-spacing:0.03333em;}
+                      </style>,
+                    ],
+                  },
+                }
+              }
+              isStringTag={false}
+              serialized={
+                Object {
+                  "map": undefined,
+                  "name": "179vq5o-MuiPopper-root-MuiTooltip-popper",
+                  "next": undefined,
+                  "styles": "label:MuiPopper-root;label:MuiTooltip-popper;z-index:1500;pointer-events:none;;",
+                  "toString": [Function],
+                }
+              }
+            />
+            <ForwardRef(PopperUnstyled)
+              anchorEl={
+                <div
+                  aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                  class="fez-icon google_scholar error"
+                  data-mui-internal-clone-element="true"
+                  style="width: 32px; height: 32px; border-radius: 32px;"
+                />
+              }
+              className="MuiTooltip-popper MuiTooltip-popperInteractive css-179vq5o-MuiPopper-root-MuiTooltip-popper"
+              direction="ltr"
+              id="mui-10"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              open={false}
+              placement="bottom"
+              popperOptions={
+                Object {
+                  "modifiers": Array [
+                    Object {
+                      "enabled": false,
+                      "name": "arrow",
+                      "options": Object {
+                        "element": null,
+                        "padding": 4,
+                      },
+                    },
+                  ],
+                }
+              }
+              popperRef={
+                Object {
+                  "current": undefined,
+                }
+              }
+              slots={
+                Object {
+                  "root": undefined,
+                }
+              }
+              transition={true}
+            />
+          </MuiPopperRoot>
+        </ForwardRef(Popper)>
+      </MuiTooltipPopper>
+    </ForwardRef(Tooltip)>
+  </a>,
+  <a
+    id="orcid"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex={0}
     title="You are not linked to ORCID - Click for more information"
-  />
-</a>
+  >
+    <div
+      className="fez-icon orcid dashboard error"
+      title="You are not linked to ORCID - Click for more information"
+    />
+  </a>,
+]
 `;
 
 exports[`Dashboard Researcher IDs test should have a style generator 1`] = `
@@ -514,52 +4396,34 @@ Object {
 exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
     style="margin-top: 12px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-item"
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="makeStyles-externalLink-1 makeStyles-externalLink-3"
-        data-testid="publons-link"
-        href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-        id="publons-link"
-        rel="noopener noreferrer"
-        tabindex="0"
-        target="_blank"
-      >
-        <div
-          class="fez-icon publons error"
-          style="width: 32px; height: 32px; border-radius: 32px;"
-          title="You are not linked to Publons - Click for more information"
-        />
-      </a>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item"
-    >
-      <a
-        class="makeStyles-externalLink-1 makeStyles-externalLink-4"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-20"
         data-testid="researcher-link"
-        href="http://www.researcherid.com/rid/A-1137-2007"
+        href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
         id="researcher-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
       >
         <div
+          aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
           class="fez-icon researcher ok"
+          data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
-          title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
         />
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item"
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="makeStyles-externalLink-1 makeStyles-externalLink-5"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-21"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
         id="scopus-link"
@@ -568,17 +4432,18 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         target="_blank"
       >
         <div
+          aria-label="Your Scopus ID is 35478294000 - Click to review"
           class="fez-icon scopus error"
+          data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
-          title="Your Scopus ID is 35478294000 - Click to review"
         />
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item"
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="makeStyles-externalLink-1 makeStyles-externalLink-6"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-22"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
         id="google_scholar-link"
@@ -587,17 +4452,18 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         target="_blank"
       >
         <div
+          aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
           class="fez-icon google_scholar error"
+          data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
-          title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
         />
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item"
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="makeStyles-externalLink-1 makeStyles-externalLink-7"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-23"
         data-testid="orcid-link"
         href="https://orcid.org/0000-0001-1111-1111"
         id="orcid-link"
@@ -606,46 +4472,44 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         target="_blank"
       >
         <div
+          aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
           class="fez-icon orcid ok"
+          data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
-          title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
         />
       </a>
       <span>
         <button
           aria-label="Information about uploading your eSpace works to ORCID"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+          data-mui-internal-clone-element="true"
           data-testid="help-icon-orcid"
           id="help-icon-orcid"
           tabindex="0"
-          title="Information about uploading your eSpace works to ORCID"
           type="button"
         >
-          <span
-            class="MuiIconButton-label"
+          <svg
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall makeStyles-helpIcon-24 css-ptiqhd-MuiSvgIcon-root"
+            data-testid="HelpOutlineIcon"
+            focusable="false"
+            role="img"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="MuiSvgIcon-root makeStyles-helpIcon-8 MuiSvgIcon-fontSizeSmall"
-              focusable="false"
-              role="img"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-              />
-              <title>
-                Information about uploading your eSpace works to ORCID
-              </title>
-            </svg>
-          </span>
+            <path
+              d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+            />
+            <title>
+              Information about uploading your eSpace works to ORCID
+            </title>
+          </svg>
           <span
-            class="MuiTouchRipple-root"
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
           />
         </button>
       </span>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item"
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
         aria-label="Click to visit your ORCID profile"
@@ -656,7 +4520,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption"
+          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
         >
            orcid.org/0000-0001-1111-1111
         </span>

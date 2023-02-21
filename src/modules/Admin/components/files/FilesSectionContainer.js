@@ -6,13 +6,21 @@ import { getFormValues } from 'redux-form/immutable';
 
 import { FORM_NAME } from '../../constants';
 import { FormValuesContext } from 'context';
-import { deleteAttachedFile } from 'actions/records';
+import { deleteAttachedFile, renameAttachedFile } from 'actions/records';
 
 import FilesSection from './FilesSection';
 
-export const FilesSectionContainer = ({ disabled, formValues, onDeleteAttachedFile, openAccessStatusId }) => {
+export const FilesSectionContainer = ({
+    disabled,
+    formValues,
+    onDeleteAttachedFile,
+    onRenameAttachedFile,
+    openAccessStatusId,
+}) => {
     return (
-        <FormValuesContext.Provider value={{ formValues: formValues.toJS(), onDeleteAttachedFile, openAccessStatusId }}>
+        <FormValuesContext.Provider
+            value={{ formValues: formValues.toJS(), onDeleteAttachedFile, onRenameAttachedFile, openAccessStatusId }}
+        >
             <FilesSection disabled={disabled} />
         </FormValuesContext.Provider>
     );
@@ -22,6 +30,7 @@ FilesSectionContainer.propTypes = {
     disabled: PropTypes.bool,
     formValues: PropTypes.object,
     onDeleteAttachedFile: PropTypes.func,
+    onRenameAttachedFile: PropTypes.func,
     openAccessStatusId: PropTypes.number,
 };
 
@@ -42,6 +51,7 @@ export const mapStateToProps = (state, ownProps) => {
 /* istanbul ignore next */
 export const mapDispatchToProps = dispatch => ({
     onDeleteAttachedFile: file => dispatch(deleteAttachedFile(file)),
+    onRenameAttachedFile: (prev, next) => dispatch(renameAttachedFile(prev, next)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(React.memo(FilesSectionContainer));

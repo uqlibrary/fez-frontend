@@ -14,15 +14,15 @@ exports[`Component Masquerade Should render form as expected 1`] = `
     }
     title="Masquerade"
   >
-    <WithStyles(ForwardRef(Typography))>
+    <ForwardRef(Typography)>
       <p>
         <strong>
           WARNING!!
         </strong>
          When masquerading as a user, you will effectively become that user, and changes you make will apply to the account!
       </p>
-    </WithStyles(ForwardRef(Typography))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Typography)>
+    <ForwardRef(Grid)
       alignItems="flex-end"
       container={true}
       spacing={3}
@@ -32,25 +32,26 @@ exports[`Component Masquerade Should render form as expected 1`] = `
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           fullWidth={true}
           id="userName"
           label="Enter a UQ staff or student username (eg. uqjsmith1 or s123456)"
           onChange={[Function]}
           onKeyPress={[Function]}
           value=""
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           color="primary"
           disabled={false}
           fullWidth={true}
@@ -59,9 +60,9 @@ exports[`Component Masquerade Should render form as expected 1`] = `
           variant="contained"
         >
           Masquerade
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardCard>
 </StandardPage>
 `;
@@ -80,15 +81,15 @@ exports[`Component Masquerade Should render readonly description 1`] = `
     }
     title="Masquerade"
   >
-    <WithStyles(ForwardRef(Typography))>
+    <ForwardRef(Typography)>
       <p>
         <strong>
           NOTE:
         </strong>
          As a read-only masquerader, you can view all parts of the profile, but you are not able to make any changes to the account.
       </p>
-    </WithStyles(ForwardRef(Typography))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Typography)>
+    <ForwardRef(Grid)
       alignItems="flex-end"
       container={true}
       spacing={3}
@@ -98,25 +99,26 @@ exports[`Component Masquerade Should render readonly description 1`] = `
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           fullWidth={true}
           id="userName"
           label="Enter a UQ staff or student username (eg. uqjsmith1 or s123456)"
           onChange={[Function]}
           onKeyPress={[Function]}
           value=""
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           color="primary"
           disabled={false}
           fullWidth={true}
@@ -125,9 +127,9 @@ exports[`Component Masquerade Should render readonly description 1`] = `
           variant="contained"
         >
           Masquerade
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardCard>
 </StandardPage>
 `;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { uniqWith, isEqual } from 'lodash';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import FormHelperText from '@mui/material/FormHelperText';
 
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';

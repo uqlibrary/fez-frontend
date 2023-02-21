@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Author Profile test Render the authors profile as expected for a UQ researcher) 1`] = `
-<WithStyles(ForwardRef(Card))>
-  <WithStyles(ForwardRef(Grid))
+<ForwardRef(Card)>
+  <ForwardRef(Grid)
     alignContent="center"
     alignItems="center"
     container={true}
     justifyContent="center"
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
@@ -23,15 +23,15 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
           }
         }
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -56,8 +56,8 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
             }
             title="Professor"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -66,7 +66,6 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
               Object {
                 "google_scholar": true,
                 "orcid": true,
-                "publons": false,
                 "researcher": true,
                 "scopus": true,
               }
@@ -76,435 +75,42 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
               Object {
                 "google_scholar": "kUemDfMAAAAJ",
                 "orcid": "0000-0001-1111-1111",
-                "publons": null,
                 "researcher": "A-1137-2007",
                 "scopus": "35478294000",
               }
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs="auto"
-      >
-        <Connect(WithStyles(DashboardArticleCount)) />
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Card))>
-`;
-
-exports[`Dashboard Author Profile test Render the authors profile with publon id url constructed using ORCID id if publons id is 1 1`] = `
-<WithStyles(ForwardRef(Card))>
-  <WithStyles(ForwardRef(Grid))
-    alignContent="center"
-    alignItems="center"
-    container={true}
-    justifyContent="center"
-    spacing={3}
-  >
-    <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
+      sx={
+        Object {
+          "display": Object {
+            "md": "block",
+            "xs": "none",
+          },
+        }
+      }
       xs="auto"
     >
-      <DashboardAuthorAvatar
-        values={
-          Object {
-            "familyName": "Researcher",
-            "givenName": "J",
-            "title": "Professor",
-            "uqr_id": 14,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      xs={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorDetails)
-            familyName="Researcher"
-            givenName="J"
-            orgUnits={
-              Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ]
-            }
-            positions={
-              Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ]
-            }
-            title="Professor"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardResearcherIdsClass)
-            authenticated={
-              Object {
-                "google_scholar": true,
-                "orcid": true,
-                "publons": true,
-                "researcher": true,
-                "scopus": true,
-              }
-            }
-            history={Object {}}
-            values={
-              Object {
-                "google_scholar": "kUemDfMAAAAJ",
-                "orcid": "0000-0001-1111-1111",
-                "publons": "0000-0001-1111-1111",
-                "researcher": "A-1137-2007",
-                "scopus": "35478294000",
-              }
-            }
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs="auto"
-      >
-        <Connect(WithStyles(DashboardArticleCount)) />
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Card))>
-`;
-
-exports[`Dashboard Author Profile test Render the authors profile with publon id url constructed using ORCID id if publons id is integer 1 1`] = `
-<WithStyles(ForwardRef(Card))>
-  <WithStyles(ForwardRef(Grid))
-    alignContent="center"
-    alignItems="center"
-    container={true}
-    justifyContent="center"
-    spacing={3}
-  >
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      xs="auto"
-    >
-      <DashboardAuthorAvatar
-        values={
-          Object {
-            "familyName": "Researcher",
-            "givenName": "J",
-            "title": "Professor",
-            "uqr_id": 14,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      xs={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorDetails)
-            familyName="Researcher"
-            givenName="J"
-            orgUnits={
-              Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ]
-            }
-            positions={
-              Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ]
-            }
-            title="Professor"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardResearcherIdsClass)
-            authenticated={
-              Object {
-                "google_scholar": true,
-                "orcid": true,
-                "publons": true,
-                "researcher": true,
-                "scopus": true,
-              }
-            }
-            history={Object {}}
-            values={
-              Object {
-                "google_scholar": "kUemDfMAAAAJ",
-                "orcid": "0000-0001-1111-1111",
-                "publons": "0000-0001-1111-1111",
-                "researcher": "A-1137-2007",
-                "scopus": "35478294000",
-              }
-            }
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs="auto"
-      >
-        <Connect(WithStyles(DashboardArticleCount)) />
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Card))>
-`;
-
-exports[`Dashboard Author Profile test Render the authors profile with publon id url constructed using ORCID id if publons id is string 0 1`] = `
-<WithStyles(ForwardRef(Card))>
-  <WithStyles(ForwardRef(Grid))
-    alignContent="center"
-    alignItems="center"
-    container={true}
-    justifyContent="center"
-    spacing={3}
-  >
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      xs="auto"
-    >
-      <DashboardAuthorAvatar
-        values={
-          Object {
-            "familyName": "Researcher",
-            "givenName": "J",
-            "title": "Professor",
-            "uqr_id": 14,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      xs={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorDetails)
-            familyName="Researcher"
-            givenName="J"
-            orgUnits={
-              Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ]
-            }
-            positions={
-              Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ]
-            }
-            title="Professor"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardResearcherIdsClass)
-            authenticated={
-              Object {
-                "google_scholar": true,
-                "orcid": true,
-                "publons": true,
-                "researcher": true,
-                "scopus": true,
-              }
-            }
-            history={Object {}}
-            values={
-              Object {
-                "google_scholar": "kUemDfMAAAAJ",
-                "orcid": "0000-0001-1111-1111",
-                "publons": "0",
-                "researcher": "A-1137-2007",
-                "scopus": "35478294000",
-              }
-            }
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs="auto"
-      >
-        <Connect(WithStyles(DashboardArticleCount)) />
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Card))>
-`;
-
-exports[`Dashboard Author Profile test Render the authors profile with publon id url constructed using publons id if publons id is not 1 1`] = `
-<WithStyles(ForwardRef(Card))>
-  <WithStyles(ForwardRef(Grid))
-    alignContent="center"
-    alignItems="center"
-    container={true}
-    justifyContent="center"
-    spacing={3}
-  >
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      xs="auto"
-    >
-      <DashboardAuthorAvatar
-        values={
-          Object {
-            "familyName": "Researcher",
-            "givenName": "J",
-            "title": "Professor",
-            "uqr_id": 14,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      xs={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardAuthorDetails)
-            familyName="Researcher"
-            givenName="J"
-            orgUnits={
-              Array [
-                "Institute for Molecular Bioscience",
-                "Institute for Molecular Bioscience",
-                "School of Chemistry and Molecular Biosciences",
-                "The University of Queensland Diamantina Institute",
-              ]
-            }
-            positions={
-              Array [
-                "Affiliate Professor",
-                "Casual Affiliate Professor",
-                "Affiliate Professorial Res Fellow",
-                "ARC Australian Laureate Fellow",
-              ]
-            }
-            title="Professor"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(DashboardResearcherIdsClass)
-            authenticated={
-              Object {
-                "google_scholar": true,
-                "orcid": true,
-                "publons": true,
-                "researcher": true,
-                "scopus": true,
-              }
-            }
-            history={Object {}}
-            values={
-              Object {
-                "google_scholar": "kUemDfMAAAAJ",
-                "orcid": "0000-0001-1111-1111",
-                "publons": "1111-2222-3333-4444",
-                "researcher": "A-1137-2007",
-                "scopus": "35478294000",
-              }
-            }
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs="auto"
-      >
-        <Connect(WithStyles(DashboardArticleCount)) />
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Card))>
+      <Connect(WithStyles(DashboardArticleCount)) />
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Card)>
 `;
 
 exports[`Dashboard Author Profile test Renders empty div if there is no profile but profile image exists 1`] = `
-<WithStyles(ForwardRef(Card))>
-  <WithStyles(ForwardRef(Grid))
+<ForwardRef(Card)>
+  <ForwardRef(Grid)
     alignContent="center"
     alignItems="center"
     container={true}
     justifyContent="center"
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
@@ -518,15 +124,15 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
           }
         }
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -535,8 +141,8 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
             givenName=""
             title=""
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -545,7 +151,6 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
               Object {
                 "google_scholar": false,
                 "orcid": false,
-                "publons": false,
                 "researcher": false,
                 "scopus": false,
               }
@@ -555,27 +160,30 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
               Object {
                 "google_scholar": undefined,
                 "orcid": undefined,
-                "publons": undefined,
                 "researcher": undefined,
                 "scopus": "",
               }
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      sx={
+        Object {
+          "display": Object {
+            "md": "block",
+            "xs": "none",
+          },
+        }
+      }
+      xs="auto"
     >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs="auto"
-      >
-        <Connect(WithStyles(DashboardArticleCount)) />
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Card))>
+      <Connect(WithStyles(DashboardArticleCount)) />
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Card)>
 `;
 
 exports[`Dashboard Author Profile test Renders empty div if there is no profile loaded 1`] = `

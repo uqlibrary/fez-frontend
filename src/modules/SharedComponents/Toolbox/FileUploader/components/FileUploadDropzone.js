@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
-import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import withStyles from '@mui/styles/withStyles';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
+import { FormValuesContext } from 'context';
 
 const styles = () => ({
     hideLabel: {
@@ -16,6 +17,22 @@ const styles = () => ({
         overflow: 'hidden',
     },
 });
+
+/**
+ * Remove invalid file names
+ *
+ * @param incomingFiles - array of files
+ * @param fileNameRestrictions - RegExp
+ * @returns Object
+ */
+export const removeInvalidFileNames = (incomingFiles, fileNameRestrictions) => {
+    const validFiles = incomingFiles.filter(file => file && new RegExp(fileNameRestrictions, 'gi').test(file.name));
+    const invalidFileNames = incomingFiles
+        .filter(file => file && !new RegExp(fileNameRestrictions, 'gi').test(file.name))
+        .map(file => file.name);
+
+    return { validFiles: validFiles, invalidFileNames: invalidFileNames };
+};
 
 export class FileUploadDropzone extends PureComponent {
     static propTypes = {
@@ -70,15 +87,19 @@ export class FileUploadDropzone extends PureComponent {
      * Remove duplicate files from given accepted files
      *
      * @param incomingFiles
-     * @param filesInQueue - list of names of files in queue
+     * @param filesInQueue - list of names of files in queue to be uploaded
+     * @param existingFiles - Files that are already attached from a previous upload.
      * @returns Object
      */
-    removeDuplicate = (incomingFiles, filesInQueue) => {
+    removeDuplicate = (incomingFiles, filesInQueue, existingFiles) => {
         // Ignore files from incomingFiles which have same name with different extension
         const incomingFilesWithoutDuplicateFileName = incomingFiles.reduce(
             (unique, file) => {
                 const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
-                unique.fileNames.indexOf(fileNameWithoutExt) === -1
+                const index = unique.fileNames.findIndex(element => {
+                    return element.toLowerCase() === fileNameWithoutExt.toLowerCase();
+                });
+                index < 0
                     ? unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file)
                     : unique.filesWithSameNameDifferentExt.push(file.name);
                 return unique;
@@ -86,14 +107,35 @@ export class FileUploadDropzone extends PureComponent {
             { fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: [] },
         );
 
-        const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateFileName.incomingFiles.reduce(
+        // Ignore files from incomingFiles which have same name with different extension
+        // of a formerly uploaded file (For example, when editing and adding new files)
+        const incomingFilesWithoutDuplicateExisting = incomingFilesWithoutDuplicateFileName.incomingFiles.reduce(
+            (unique, file) => {
+                const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
+                !existingFiles.some(
+                    item =>
+                        item.dsi_dsid.slice(0, item.dsi_dsid.lastIndexOf('.')).toLowerCase() ===
+                            fileNameWithoutExt.toLowerCase() ||
+                        // eslint-disable-next-line camelcase
+                        (!!item?.dsi_dsid_new &&
+                            item.dsi_dsid_new.slice(0, item.dsi_dsid_new.lastIndexOf('.')).toLowerCase() ===
+                                fileNameWithoutExt.toLowerCase()),
+                )
+                    ? unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file)
+                    : unique.filesWithSameNameDifferentExt.push(file.name);
+                return unique;
+            },
+            { fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: [] },
+        );
+
+        const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateExisting.incomingFiles.reduce(
             (unique, file) => {
                 if (unique.fileNames.indexOf(file.name) === -1) {
                     const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
 
                     unique.fileNames
-                        .map(fileName => fileName.slice(0, fileName.lastIndexOf('.')))
-                        .indexOf(fileNameWithoutExt) === -1
+                        .map(fileName => fileName.slice(0, fileName.lastIndexOf('.')).toLowerCase())
+                        .indexOf(fileNameWithoutExt.toLowerCase()) === -1
                         ? unique.incomingFiles.push(file)
                         : unique.filesWithSameNameDifferentExt.push(file.name);
                 } else {
@@ -123,6 +165,7 @@ export class FileUploadDropzone extends PureComponent {
             duplicateFiles: duplicateFiles,
             sameFileNameWithDifferentExt: [
                 ...incomingFilesWithoutDuplicateFileName.filesWithSameNameDifferentExt,
+                ...incomingFilesWithoutDuplicateExisting.filesWithSameNameDifferentExt,
                 ...incomingFilesWithoutDuplicate.filesWithSameNameDifferentExt,
             ],
         };
@@ -143,22 +186,6 @@ export class FileUploadDropzone extends PureComponent {
                 });
             }),
         );
-    };
-
-    /**
-     * Remove invalid file names
-     *
-     * @param incomingFiles - array of files
-     * @param fileNameRestrictions - RegExp
-     * @returns Object
-     */
-    removeInvalidFileNames = (incomingFiles, fileNameRestrictions) => {
-        const validFiles = incomingFiles.filter(file => file && new RegExp(fileNameRestrictions, 'gi').test(file.name));
-        const invalidFileNames = incomingFiles
-            .filter(file => file && !new RegExp(fileNameRestrictions, 'gi').test(file.name))
-            .map(file => file.name);
-
-        return { validFiles: validFiles, invalidFileNames: invalidFileNames };
     };
 
     /**
@@ -224,17 +251,19 @@ export class FileUploadDropzone extends PureComponent {
      */
     _onDrop = (incomingFiles, rejectedFiles) => {
         const { fileNameRestrictions, mimeTypeWhitelist, filesInQueue, fileUploadLimit } = this.props;
+        // eslint-disable-next-line camelcase
+        const existingFiles = this?.context?.formValues?.fez_datastream_info ?? [];
         const notFiles = [];
-
         // Remove folders from accepted files (async)
         this.removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
             // Remove invalid file names
-            const { validFiles, invalidFileNames } = this.removeInvalidFileNames(onlyFiles, fileNameRestrictions);
+            const { validFiles, invalidFileNames } = removeInvalidFileNames(onlyFiles, fileNameRestrictions);
 
             // Remove duplicate files from accepted files
             const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = this.removeDuplicate(
                 validFiles,
                 filesInQueue,
+                existingFiles,
             );
 
             // Remove invalid mime type files - based on it's extension
@@ -273,10 +302,11 @@ export class FileUploadDropzone extends PureComponent {
 
     render() {
         const { maxSize, disabled, locale } = this.props;
+
         return (
             <Grid container>
                 <Grid item xs={12}>
-                    <div tabIndex="0" onKeyPress={this._onKeyPress} id="FileUploadDropZone">
+                    <div tabIndex={0} onKeyPress={this._onKeyPress} id="FileUploadDropZone">
                         <Dropzone
                             inputProps={{
                                 id: 'Uploader',
@@ -301,5 +331,7 @@ export class FileUploadDropzone extends PureComponent {
         );
     }
 }
+
+FileUploadDropzone.contextType = FormValuesContext;
 
 export default withStyles(styles)(FileUploadDropzone);

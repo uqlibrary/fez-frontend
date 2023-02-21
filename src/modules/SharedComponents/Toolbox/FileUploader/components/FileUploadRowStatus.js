@@ -1,13 +1,13 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Tooltip from '@material-ui/core/Tooltip';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
+import Tooltip from '@mui/material/Tooltip';
+import CircularProgress from '@mui/material/CircularProgress';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
 
-import Delete from '@material-ui/icons/Delete';
-import Done from '@material-ui/icons/Done';
+import Delete from '@mui/icons-material/Delete';
+import Done from '@mui/icons-material/Done';
 
 export class FileUploadRowStatus extends PureComponent {
     static propTypes = {
@@ -41,6 +41,7 @@ export class FileUploadRowStatus extends PureComponent {
                                 onClick={this.props.onDelete}
                                 disabled={disabled}
                                 data-testid={`${this.props.fileUploadRowStatusId}-delete`}
+                                size="large"
                             >
                                 <Delete />
                             </IconButton>
@@ -56,7 +57,7 @@ export class FileUploadRowStatus extends PureComponent {
                     </Fragment>
                 )}
                 {isUploadInProgress && progress === 100 && (
-                    <IconButton>
+                    <IconButton size="large">
                         <Done />
                     </IconButton>
                 )}

@@ -28,7 +28,7 @@ context('version view', () => {
 });
 
 context('not found view', () => {
-    it.only('should load', () => {
+    it('should load', () => {
         cy.visit('/view/not-found?user=anon');
         cy.get('body').should('contain.text', 'Work not found');
         cy.get('body').should('not.contain.text', 'You are not logged in');

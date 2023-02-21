@@ -5,10 +5,10 @@ import Immutable from 'immutable';
 
 import { Field, change, formValueSelector, reduxForm, SubmissionError, getFormSyncErrors } from 'redux-form/immutable';
 
-import Grid from '@material-ui/core/Grid';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import Button from '@mui/material/Button';
 
 import { CSV_INGEST_DOCUMENT_TYPES } from 'config/general';
 import { createBatchImport } from 'actions';
@@ -109,7 +109,6 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                                         <Switch
                                                             {...props}
                                                             name="checkedB"
-                                                            color="primary"
                                                             // eslint-disable-next-line react/prop-types
                                                             checked={isBulkFileIngest}
                                                             // eslint-disable-next-line react/prop-types
@@ -200,6 +199,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                 id="cancelBatchImport"
                                 onClick={_abandonImport}
                                 variant="contained"
+                                color={'default'}
                             />
                         </Grid>
                         <Grid item xs={12} sm="auto">

@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
-import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
+import InputLabel from '@mui/material/InputLabel';
+import makeStyles from '@mui/styles/makeStyles';
 
-import { KeyboardDatePicker } from '@material-ui/pickers';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 
 const useStyles = makeStyles(
@@ -76,37 +78,55 @@ export const DateRangeField = ({
             </Grid>
             <Grid container>
                 <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                    <KeyboardDatePicker
-                        value={from}
-                        onChange={handleFromDateChange}
-                        error={!!error || !!fromError}
-                        helperText={error || fromError}
-                        autoOk
-                        variant="inline"
-                        disableToolbar
-                        format={format}
-                        id={`${id}-from-date`}
-                        disableFuture={disableFuture}
-                        disabled={disabled}
-                    />
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <DatePicker
+                            value={from}
+                            onChange={handleFromDateChange}
+                            disableToolbar
+                            inputFormat={format}
+                            disableFuture={disableFuture}
+                            disabled={disabled}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    id={`${id}-from-date`}
+                                    error={!!error || !!fromError}
+                                    helperText={error || fromError}
+                                    variant="standard"
+                                />
+                            )}
+                        />
+                    </LocalizationProvider>
                 </Grid>
                 <Grid item xs="auto">
-                    <TextField style={{ width: 24 }} value=" to " disabled InputProps={{ disableUnderline: true }} />
+                    <TextField
+                        variant="standard"
+                        style={{ width: 24 }}
+                        value=" to "
+                        disabled
+                        InputProps={{ disableUnderline: true }}
+                    />
                 </Grid>
                 <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                    <KeyboardDatePicker
-                        value={to}
-                        onChange={handleToDateChange}
-                        error={!!error || !!toError}
-                        helperText={toError}
-                        autoOk
-                        variant="inline"
-                        disableToolbar
-                        format={format}
-                        id={`${id}-to-date`}
-                        disableFuture={disableFuture}
-                        disabled={disabled}
-                    />
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <DatePicker
+                            value={to}
+                            onChange={handleToDateChange}
+                            disableToolbar
+                            inputFormat={format}
+                            disableFuture={disableFuture}
+                            disabled={disabled}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    id={`${id}-to-date`}
+                                    error={!!error || !!toError}
+                                    helperText={toError}
+                                    variant="standard"
+                                />
+                            )}
+                        />
+                    </LocalizationProvider>
                 </Grid>
             </Grid>
         </React.Fragment>

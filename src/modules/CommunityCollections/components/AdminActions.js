@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { debounce } from 'throttle-debounce';
 import { PATH_PREFIX, APP_URL } from 'config';
 
@@ -83,6 +83,7 @@ export const AdminActions = ({
                 aria-label="More"
                 aria-haspopup="true"
                 onClick={handleClick}
+                size="large"
             >
                 <MoreVertIcon fontSize="small" />
             </IconButton>

@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
 
 import DataStreamSecurityItem from './DataStreamSecurityItem';
 import { isDerivative } from 'helpers/datastreams';
@@ -78,7 +78,7 @@ export const DataStreamSecuritySelector = ({ attachedDataStreams, classes, colle
                                 index={index}
                                 inheritedSecurity={mostSecureParentDatastreamSecurity}
                                 initialDataStream={initialDataStreams[index]}
-                                key={dataStream.dsi_dsid}
+                                key={dataStream.dsi_id}
                                 onSecurityChange={handleDataStreamSecurityChange}
                                 policyDropdownLabel={text.overridePolicyPrompt}
                             />

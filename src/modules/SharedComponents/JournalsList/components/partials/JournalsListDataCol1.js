@@ -1,8 +1,8 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Tooltip from '@material-ui/core/Tooltip';
-import Checkbox from '@material-ui/core/Checkbox';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Unstable_Grid2';
+import Tooltip from '@mui/material/Tooltip';
+import Checkbox from '@mui/material/Checkbox';
+import Typography from '@mui/material/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import PropTypes from 'prop-types';
 import { sanitiseId } from 'helpers/general';
@@ -12,6 +12,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
         <Grid
             container
             spacing={1}
+            padding={0}
             direction="row"
             id={`journal-list-data-col-1-${index}`}
             data-testid={`journal-list-data-col-1-${index}`}

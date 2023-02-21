@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react';
 
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
-import Check from '@material-ui/icons/Check';
-import ChevronLeft from '@material-ui/icons/ChevronLeft';
-import ChevronRight from '@material-ui/icons/ChevronRight';
-import Clear from '@material-ui/icons/Clear';
-import FirstPage from '@material-ui/icons/FirstPage';
-import LastPage from '@material-ui/icons/LastPage';
-import Search from '@material-ui/icons/Search';
+import ArrowDownward from '@mui/icons-material/ArrowDownward';
+import Check from '@mui/icons-material/Check';
+import ChevronLeft from '@mui/icons-material/ChevronLeft';
+import ChevronRight from '@mui/icons-material/ChevronRight';
+import Clear from '@mui/icons-material/Clear';
+import FirstPage from '@mui/icons-material/FirstPage';
+import LastPage from '@mui/icons-material/LastPage';
+import Search from '@mui/icons-material/Search';
 
 export const tableIcons = {
     Check: forwardRef((props, ref) => <Check {...props} ref={ref} />),

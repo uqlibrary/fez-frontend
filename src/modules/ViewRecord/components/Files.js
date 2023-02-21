@@ -2,19 +2,18 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Image from '@material-ui/icons/Image';
-import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
-import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
-import Typography from '@material-ui/core/Typography';
-import Videocam from '@material-ui/icons/Videocam';
-import VolumeUp from '@material-ui/icons/VolumeUp';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Unstable_Grid2';
+import Image from '@mui/icons-material/Image';
+import InsertDriveFile from '@mui/icons-material/InsertDriveFile';
+import PictureAsPdf from '@mui/icons-material/PictureAsPdf';
+import Typography from '@mui/material/Typography';
+import Videocam from '@mui/icons-material/Videocam';
+import VolumeUp from '@mui/icons-material/VolumeUp';
+import withStyles from '@mui/styles/withStyles';
 
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
-import { openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
+import { openAccessConfig, pathConfig } from 'config';
 import { CURRENT_LICENCES } from 'config/general';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -315,72 +314,93 @@ export class FilesClass extends Component {
 
     getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
+        const attachments = publication.fez_record_search_key_file_attachment_name;
         const componentProps = this.props;
-        return !!dataStreams && this.isViewableByUser(publication, dataStreams)
-            ? dataStreams.filter(this.isFileValid).map(dataStream => {
-                  const pid = publication.rek_pid;
-                  const fileName = dataStream.dsi_dsid;
-                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-                  const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
-                  const previewFileName = checkForPreview(fileName, dataStreams);
-                  const webFileName = checkForWeb(fileName, dataStreams);
-                  const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
-                  const securityAccess = getSecurityAccess(dataStream, componentProps);
-                  const checksums = this.getChecksums(
-                      dataStream,
-                      thumbnailFileName,
-                      previewFileName,
-                      webFileName,
-                      dataStreams,
-                  );
 
-                  return {
-                      pid: pid,
-                      fileName: fileName,
-                      description: dataStream.dsi_label,
-                      mimeType: mimeType,
-                      calculatedSize: formatBytes(dataStream.dsi_size),
-                      allowDownload: openAccessStatus.allowDownload,
-                      icon: this.renderFileIcon(
-                          pid,
-                          mimeType,
-                          fileName,
-                          !getDownloadLicence(publication) &&
-                              !(!componentProps.account && dataStream.dsi_security_policy === 4)
-                              ? thumbnailFileName
-                              : null,
+        return !!!dataStreams
+            ? []
+            : dataStreams
+                  .filter(this.isFileValid)
+                  .map(item => {
+                      if (
+                          (item.dsi_order === null || item.dsi_order === undefined) &&
+                          !!attachments &&
+                          attachments.length > 0
+                      ) {
+                          const attachIndex = attachments.findIndex(
+                              attachitem => item.dsi_dsid === attachitem.rek_file_attachment_name,
+                          );
+                          item.dsi_order =
+                              attachIndex >= 0 ? attachments[attachIndex].rek_file_attachment_name_order : null;
+                      }
+                      return item;
+                  })
+                  .sort((a, b) => {
+                      if (a.dsi_order === null) {
+                          return 1;
+                      }
+
+                      if (b.dsi_order === null) {
+                          return -1;
+                      }
+
+                      if (a.dsi_order === b.dsi_order) {
+                          return 0;
+                      }
+
+                      return a.dsi_order < b.dsi_order ? -1 : 1;
+                  })
+
+                  .map(dataStream => {
+                      const pid = publication.rek_pid;
+                      const fileName = dataStream.dsi_dsid;
+                      const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+                      const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
+                      const previewFileName = checkForPreview(fileName, dataStreams);
+                      const webFileName = checkForWeb(fileName, dataStreams);
+                      const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
+                      const securityAccess = getSecurityAccess(dataStream, componentProps);
+                      const checksums = this.getChecksums(
+                          dataStream,
+                          thumbnailFileName,
                           previewFileName,
                           webFileName,
-                          securityAccess,
-                          checksums,
-                      ),
-                      openAccessStatus: openAccessStatus,
-                      previewMediaUrl: this.getUrl(
-                          pid,
-                          previewFileName ? previewFileName : fileName,
-                          checksums && checksums.preview,
-                      ),
-                      webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
-                      mediaUrl: this.getUrl(pid, fileName, checksums.media),
-                      securityStatus: securityAccess,
-                      checksums: checksums,
-                      requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
-                  };
-              })
-            : [];
-    };
+                          dataStreams,
+                      );
 
-    isViewableByUser = (publication, dataStreams) => {
-        const { files } = viewRecordsConfig;
-        // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
-        const containBlacklistCollections = publication.fez_record_search_key_ismemberof?.some(collection =>
-            files.blacklist.collections.includes(collection.rek_ismemberof),
-        );
-        return (
-            (!!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin)) ||
-            // eslint-disable-next-line camelcase
-            this.props.author?.pol_id === 1
-        );
+                      return {
+                          pid: pid,
+                          fileName: fileName,
+                          description: dataStream.dsi_label,
+                          mimeType: mimeType,
+                          calculatedSize: formatBytes(dataStream.dsi_size),
+                          allowDownload: openAccessStatus.allowDownload,
+                          icon: this.renderFileIcon(
+                              pid,
+                              mimeType,
+                              fileName,
+                              !getDownloadLicence(publication) &&
+                                  !(!componentProps.account && dataStream.dsi_security_policy === 4)
+                                  ? thumbnailFileName
+                                  : null,
+                              previewFileName,
+                              webFileName,
+                              securityAccess,
+                              checksums,
+                          ),
+                          openAccessStatus: openAccessStatus,
+                          previewMediaUrl: this.getUrl(
+                              pid,
+                              previewFileName ? previewFileName : fileName,
+                              checksums && checksums.preview,
+                          ),
+                          webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
+                          mediaUrl: this.getUrl(pid, fileName, checksums.media),
+                          securityStatus: securityAccess,
+                          checksums: checksums,
+                          requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
+                      };
+                  });
     };
 
     handleImageFailed = () => {
@@ -418,6 +438,7 @@ export class FilesClass extends Component {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
         if (fileData.length === 0) return null;
+
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
@@ -444,6 +465,7 @@ export class FilesClass extends Component {
                             direction="row"
                             alignItems="center"
                             spacing={2}
+                            padding={0}
                             className={this.props.classes.header}
                         >
                             <Grid item xs={2} sm={1}>
@@ -454,25 +476,31 @@ export class FilesClass extends Component {
                                     {locale.viewRecord.sections.files.fileName}
                                 </Typography>
                             </Grid>
-                            <Hidden xsDown>
-                                <Grid item sm={6} md={4} data-testid="dsi-label-label">
-                                    <Typography variant="caption" gutterBottom>
-                                        {locale.viewRecord.sections.files.description}
-                                    </Typography>
-                                </Grid>
-                            </Hidden>
-                            <Hidden smDown>
-                                <Grid item md={2} data-testid="dsi-size-label">
-                                    <Typography variant="caption" gutterBottom>
-                                        {locale.viewRecord.sections.files.size}
-                                    </Typography>
-                                </Grid>
-                            </Hidden>
-                            <Hidden xsDown>
-                                <Grid item sm />
-                            </Hidden>
+                            <Grid
+                                item
+                                sm={6}
+                                md={4}
+                                data-testid="dsi-label-label"
+                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                            >
+                                <Typography variant="caption" gutterBottom>
+                                    {locale.viewRecord.sections.files.description}
+                                </Typography>
+                            </Grid>
+                            <Grid
+                                item
+                                md={2}
+                                data-testid="dsi-size-label"
+                                sx={{ display: { xs: 'none', md: 'block' } }}
+                            >
+                                <Typography variant="caption" gutterBottom>
+                                    {locale.viewRecord.sections.files.size}
+                                </Typography>
+                            </Grid>
+                            <Grid item sm sx={{ display: { xs: 'none', sm: 'block' } }} />
                         </Grid>
                     </div>
+
                     {fileData.map((item, index) => (
                         <div className={this.props.classes.containerPadding} key={index}>
                             <Grid
@@ -481,6 +509,7 @@ export class FilesClass extends Component {
                                 alignItems="center"
                                 key={`file-${index}`}
                                 spacing={2}
+                                padding={0}
                                 wrap={'nowrap'}
                                 className={this.props.classes.header}
                             >
@@ -506,39 +535,38 @@ export class FilesClass extends Component {
                                         onFileSelect={this.showPreview}
                                     />
                                 </Grid>
-                                <Hidden xsDown>
-                                    <Grid
-                                        item
-                                        sm={6}
-                                        md={4}
-                                        className={this.props.classes.dataWrapper}
-                                        data-testid={`dsi-label-${index}`}
-                                    >
-                                        <Typography variant="body2" noWrap>
-                                            {item.description}
-                                        </Typography>
-                                    </Grid>
-                                </Hidden>
-                                <Hidden smDown>
-                                    <Grid
-                                        item
-                                        md={2}
-                                        className={this.props.classes.dataWrapper}
-                                        data-testid={`dsi-size-${index}`}
-                                    >
-                                        <Typography variant="body2" noWrap>
-                                            {item.calculatedSize}
-                                        </Typography>
-                                    </Grid>
-                                </Hidden>
-                                <Hidden xsDown>
-                                    <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
-                                        <OpenAccessIcon
-                                            {...item.openAccessStatus}
-                                            securityStatus={item.securityStatus}
-                                        />
-                                    </Grid>
-                                </Hidden>
+                                <Grid
+                                    item
+                                    sm={6}
+                                    md={4}
+                                    className={this.props.classes.dataWrapper}
+                                    data-testid={`dsi-label-${index}`}
+                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                >
+                                    <Typography variant="body2" noWrap>
+                                        {item.description}
+                                    </Typography>
+                                </Grid>
+                                <Grid
+                                    item
+                                    md={2}
+                                    className={this.props.classes.dataWrapper}
+                                    data-testid={`dsi-size-${index}`}
+                                    sx={{ display: { xs: 'none', md: 'block' } }}
+                                >
+                                    <Typography variant="body2" noWrap>
+                                        {item.calculatedSize}
+                                    </Typography>
+                                </Grid>
+                                <Grid
+                                    item
+                                    sm
+                                    style={{ textAlign: 'right' }}
+                                    data-testid={`rek-oa-status-${index}`}
+                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                >
+                                    <OpenAccessIcon {...item.openAccessStatus} securityStatus={item.securityStatus} />
+                                </Grid>
                             </Grid>
                         </div>
                     ))}

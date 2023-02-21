@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTabbedContext } from 'context';
 
-import Grid from '@material-ui/core/Grid';
-import Tooltip from '@material-ui/core/Tooltip';
-import Switch from '@material-ui/core/Switch';
+import Grid from '@mui/material/Grid';
+import Tooltip from '@mui/material/Tooltip';
+import Switch from '@mui/material/Switch';
 
-import KeyboardIcon from '@material-ui/icons/Keyboard';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import txt from 'locale/pages';
 
@@ -15,7 +15,7 @@ export const FormViewToggler = React.memo(() => {
         <Grid container direction="row" spacing={0} alignItems="center">
             <Grid item>
                 <Tooltip title={`Switch to ${tabbed ? 'full form' : 'tabbed'} mode`}>
-                    <Switch color="primary" checked={tabbed} onChange={toggleTabbed} value="tabbed" />
+                    <Switch checked={tabbed} onChange={toggleTabbed} value="tabbed" />
                 </Tooltip>
             </Grid>
             <Grid item>

@@ -12,8 +12,8 @@ import { OrgUnitNameField, SeriesField, ReportNumberField, OrgNameField } from '
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 export default class WorkingPaperForm extends Component {
     static propTypes = {

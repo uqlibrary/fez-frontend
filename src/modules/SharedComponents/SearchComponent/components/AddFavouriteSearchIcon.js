@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router';
 import PropTypes from 'prop-types';
 
-import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
-import StarIcon from '@material-ui/icons/Star';
-import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import StarIcon from '@mui/icons-material/Star';
+import Tooltip from '@mui/material/Tooltip';
 
 import { locale } from 'locale';
 import { useConfirmationState } from 'hooks';
@@ -79,6 +79,7 @@ export const AddFavouriteSearchIcon = () => {
                             onClick={showConfirmation}
                             id="favourite-search-save"
                             data-testid="favourite-search-save"
+                            size="large"
                         >
                             <StarBorderIcon color="primary" />
                         </IconButton>
@@ -88,7 +89,12 @@ export const AddFavouriteSearchIcon = () => {
             {((!!publicationsListLoaded && favouriteSearchAddSuccess) || redirectedFromNotFound) && (
                 <Tooltip title={txt.favouriteSearchSaved}>
                     <span>
-                        <IconButton id="favourite-search-saved" data-testid="favourite-search-saved" disabled>
+                        <IconButton
+                            id="favourite-search-saved"
+                            data-testid="favourite-search-saved"
+                            disabled
+                            size="large"
+                        >
                             <StarIcon color="primary" />
                         </IconButton>
                     </span>

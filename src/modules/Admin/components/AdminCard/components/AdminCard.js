@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import withStyles from '@mui/styles/withStyles';
 
 export const styles = theme => ({
     card: {

@@ -45,7 +45,7 @@ describe('Component ThirdPartyLookupFormResult', () => {
         };
         const wrapper = setup({ ...testProps });
 
-        const button = wrapper.find('WithStyles(ForwardRef(Button))');
+        const button = wrapper.find('ForwardRef(Button)');
         expect(button.length).toEqual(1);
         button.simulate('click');
 
@@ -61,7 +61,7 @@ describe('Component ThirdPartyLookupFormResult', () => {
         };
         const wrapper = setup({ ...testProps });
 
-        const button = wrapper.find('WithStyles(ForwardRef(Button))');
+        const button = wrapper.find('ForwardRef(Button)');
         expect(button.length).toEqual(1);
         button.simulate('click');
 

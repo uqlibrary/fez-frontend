@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={1}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       variant="h6"
     >
        
        
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Typography)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       component="span"
       key="0"
       variant="caption"
@@ -29,8 +29,8 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
         Affiliate Professor
       </b>
       , Institute for Molecular Bioscience
-    </WithStyles(ForwardRef(Typography))>
-    <WithStyles(ForwardRef(Typography))
+    </ForwardRef(Typography)>
+    <ForwardRef(Typography)
       component="span"
       key="2"
       variant="caption"
@@ -39,8 +39,8 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
         Affiliate Professorial Res Fellow
       </b>
       , School of Chemistry and Molecular Biosciences
-    </WithStyles(ForwardRef(Typography))>
-    <WithStyles(ForwardRef(Typography))
+    </ForwardRef(Typography)>
+    <ForwardRef(Typography)
       component="span"
       key="3"
       variant="caption"
@@ -49,7 +49,7 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
         ARC Australian Laureate Fellow
       </b>
       , The University of Queensland Diamantina Institute
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Typography)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

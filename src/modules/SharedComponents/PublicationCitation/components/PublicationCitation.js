@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
 
-import Button from '@material-ui/core/Button';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
+import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
 
 import { locale } from 'locale';
 import { publicationTypes, pathConfig } from 'config';
@@ -72,7 +71,7 @@ export const styles = theme => ({
         whiteSpace: 'nowrap',
     },
     buttonMargin: {
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             marginTop: 12,
         },
     },
@@ -88,7 +87,7 @@ export const styles = theme => ({
         minWidth: 0,
         minHeight: 0,
 
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             width: '50vw',
             height: '50vw',
             float: 'none',
@@ -123,7 +122,7 @@ export const styles = theme => ({
     citationContainer: {
         display: 'inline-block',
         float: 'left',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             width: '100%',
             marginBottom: 10,
         },
@@ -139,12 +138,12 @@ export const styles = theme => ({
         },
     },
     imageListItemRoot: {
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('lg')]: {
             width: '100% !important',
         },
     },
     imageListItemImage: {
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             width: '50vw !important',
             height: '50vw !important',
             minWidth: '50vw',
@@ -597,9 +596,8 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                     {(showDefaultActions || customActions) && (
                         <Grid container spacing={1} className={classes.buttonMargin}>
-                            <Hidden xsDown>
-                                <Grid item xs />
-                            </Hidden>
+                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+
                             {this.renderActions(showDefaultActions ? this.defaultActions : customActions)}
                         </Grid>
                     )}

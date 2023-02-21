@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SecuritySelector component should render properly for collection 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={1}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       component="p"
       variant="body2"
     >
       test description for collection
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Typography)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -27,31 +27,31 @@ exports[`SecuritySelector component should render properly for collection 1`] = 
       policyDropdownId="rek-security"
       prompt="test2"
     />
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
   <Memo(SelectedSecurityPolicyDescription)
     selectedPolicyKey={2}
     title="test3"
   />
-</WithStyles(ForwardRef(Grid))>
+</ForwardRef(Grid)>
 `;
 
 exports[`SecuritySelector component should render properly for community 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={1}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       component="p"
       variant="body2"
     >
       test description for community
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Typography)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -62,31 +62,31 @@ exports[`SecuritySelector component should render properly for community 1`] = `
       policyDropdownId="rek-security"
       prompt="test2"
     />
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
   <Memo(SelectedSecurityPolicyDescription)
     selectedPolicyKey={2}
     title="test3"
   />
-</WithStyles(ForwardRef(Grid))>
+</ForwardRef(Grid)>
 `;
 
 exports[`SecuritySelector component should render properly for record 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={1}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       component="p"
       variant="body2"
     >
       test description for record
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Typography)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -97,10 +97,10 @@ exports[`SecuritySelector component should render properly for record 1`] = `
       policyDropdownId="rek-security"
       prompt="test2"
     />
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
   <Memo(SelectedSecurityPolicyDescription)
     selectedPolicyKey={2}
     title="test3"
   />
-</WithStyles(ForwardRef(Grid))>
+</ForwardRef(Grid)>
 `;

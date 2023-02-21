@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import IconButton from '@material-ui/core/IconButton';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
-import GetAppIcon from '@material-ui/icons/GetApp';
-import { makeStyles } from '@material-ui/styles';
+import IconButton from '@mui/material/IconButton';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import GetAppIcon from '@mui/icons-material/GetApp';
+import { makeStyles } from '@mui/styles';
 
 import AudioPlayer from './AudioPlayer';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
@@ -14,17 +13,18 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 
 import { pathConfig } from 'config/pathConfig';
 import componentsLocale from 'locale/components';
-// import { useConfirmationState } from 'hooks';
 
 export const useStyles = makeStyles(
     theme => ({
+        filenameParent: {
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+        },
         filename: {
             ...theme.typography.body2,
             cursor: 'pointer',
             placeSelf: 'center',
-            overflow: 'hidden',
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
         },
         fileDownloadIcon: {
             textAlign: 'right',
@@ -92,7 +92,7 @@ const FileName = ({
 
     return (
         <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id}>
-            <Grid item xs sm={10}>
+            <Grid item xs sm={allowDownload && !downloadLicence && isAudio(mimeType) ? 10 : 12}>
                 <ConfirmationBox
                     confirmationBoxId="file-download-accept-licence"
                     isOpen={isOpen}
@@ -104,7 +104,7 @@ const FileName = ({
                     <ExternalLink
                         href={downloadUrl}
                         title={fileName}
-                        className={classes.filename}
+                        className={`${classes.filename} ${classes.filenameParent}`}
                         openInNewIcon
                         id={`${id}-download`}
                     >
@@ -112,7 +112,7 @@ const FileName = ({
                     </ExternalLink>
                 )}
                 {allowDownload && !downloadLicence && canShowPreview(mimeType) && (
-                    <Typography variant="body2">
+                    <Typography variant="body2" className={classes.filenameParent}>
                         <a
                             onClick={showPreview}
                             onKeyPress={showPreview}
@@ -126,7 +126,9 @@ const FileName = ({
                 {(!allowDownload || !!downloadLicence) && (
                     <Grid container>
                         <Grid item xs className={classes.filename}>
-                            <Typography variant="body2">{fileName}</Typography>
+                            <Typography variant="body2" className={`${classes.filename} ${classes.filenameParent}`}>
+                                {fileName}
+                            </Typography>
                         </Grid>
                         {!!downloadLicence && (
                             <Grid item xs="auto" className={classes.fileDownloadIcon}>
@@ -135,6 +137,7 @@ const FileName = ({
                                     onClick={showConfirmation}
                                     id={`${id}-download-button`}
                                     data-testid={`${id}-download-button`}
+                                    size="large"
                                 >
                                     <GetAppIcon />
                                 </IconButton>
@@ -143,24 +146,20 @@ const FileName = ({
                     </Grid>
                 )}
             </Grid>
-            <Hidden xsDown>
-                {allowDownload && !downloadLicence && isAudio(mimeType) && (
-                    <Grid item sm={2}>
-                        <AudioPlayer
-                            pid={pid}
-                            fileName={
-                                previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)
-                            }
-                            mimeType={mimeType}
-                        />
-                    </Grid>
-                )}
-            </Hidden>
+            {allowDownload && !downloadLicence && isAudio(mimeType) && (
+                <Grid item sm={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <AudioPlayer
+                        pid={pid}
+                        fileName={previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)}
+                        mimeType={mimeType}
+                    />
+                </Grid>
+            )}
         </Grid>
     );
 };
 
-FileName.propTypes = {
+export const FileNameProps = {
     downloadLicence: PropTypes.object,
     id: PropTypes.string,
     pid: PropTypes.string.isRequired,
@@ -174,5 +173,7 @@ FileName.propTypes = {
     securityStatus: PropTypes.bool,
     checksums: PropTypes.object,
 };
+
+FileName.propTypes = { ...FileNameProps };
 
 export default FileName;

@@ -1,13 +1,13 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import Popper from '@material-ui/core/Popper';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import Popper from '@mui/material/Popper';
 
 /* istanbul ignore next */
 const styles = theme => ({
     popper: {
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: 'fit-content',
         },
     },
@@ -84,13 +84,14 @@ export const AutoCompleteSelectField = ({
             onInputChange={handleInputChange}
             onChange={handleChange}
             getOptionLabel={getOptionLabel}
-            getOptionSelected={(option, value) => option.value === value.value}
+            isOptionEqualToValue={(option, value) => option.value === value.value}
             options={options}
             popupIcon={false}
             disabled={disabled}
             PopperComponent={PopperMy}
             renderInput={params => (
                 <TextField
+                    variant="standard"
                     {...params}
                     error={error}
                     helperText={(error && errorText) || ''}

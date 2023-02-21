@@ -27,7 +27,7 @@ This means that it's exactly like production, except for the git branch that use
 
 - Code: `React (~16.8), Javascript (ES2015 - Babel), Immutable, SASS`
 - State: `Redux, ReduxForm`
-- Design: `Google Material Design` - [Material UI](https://v4.material-ui.com/components/app-bar)
+- Design: `Google Material Design` - [MUI 5](https://mui.com/material-ui) ([see notes below](#mui-v5-upgrade) on the upgrade to MUI 5)
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
 - E2E tests: `Cypress`
@@ -222,7 +222,7 @@ To keep initial load to a minimum, the following optimisations have been added t
 
 ### <a name="gotchas" id="gotchas"></a>Gotchas
 
-- Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns. E.g. behaviours have been
+- Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns. e.g. behaviours have been
   added for `main-*` and `commons-*` files.
 - if you can't get eg <https://fez-staging.library.uq.edu.au/view/UQ:e6c5854> to load the new FE (it always loads legacy) you can use the alternate url of <https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854>
 - The eSpace API always returns a 200 for a GET request to /fez-author. For this reason, checking for the presence of the ```author``` (e.g. ```this.props.author```) is not enough to determine if the logged-in user is an author or not. This can be done the following check: ```this.props.autho?.aut_id``` or by checking for the response of author details API endpoint e.g. ```this.props.authorDetails```
@@ -520,3 +520,50 @@ setup as an environmental variable at CI level if required.
 
 GTM is very flexible and easy to configure to track required events. See more details on
 [Google Analytics](https://www.google.com.au/analytics/tag-manager/)
+
+
+## MUI v5 Upgrade
+<mark>February 2023</mark>
+
+The upgrade from Material-UI version 4 (MUI4) to MUI version 5 (MUI5) was completed in Feb 23, and with it game a few watchaouts for anyone repeating the process in the future as well as current devs working with the new library:
+
+1. MUI5 has redefined the default responsive breakpoint values (https://mui.com/material-ui/customization/breakpoints/), and devs writing tests or making use of, for example `useMediaQuery`, should be aware of the new breakpoints and adjust code appropriately.
+- MUI4 values (px): `xs: 0, sm: 600, md: 960, lg: 1280, xl: 1920`
+- MUI5 values (px): `xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536`
+2. MUI5 deprecated the widely used `<Hidden>` component. For this migration, the new `sx` element property was used to replace `<Hidden>` in _most circumstances_. Using `sx` does, however, raise a few awareness points:
+-  Code using `sx` for breakpoints will rely on the browser's CSS engine to determine when something is **visible or not**. This is in contrast to how `<Hidden>` was used in our codebase, which used JS to control **inserting or deleting** DOM elements.
+- When writing tests you must bear in mind the above, because `JSDOM` <mark>does not</mark> support a fully fledged CSS engine (https://github.com/jsdom/jsdom/blob/8e3a568d504353270691b5955af505155ae368bf/lib/jsdom/level2/style.js#L17). This is particularly important when writing tests that wish to check if an element is visible or not based on, for example browser window width (i.e. responsive design). These tests, in conjunction with `sx`, **will fail** because all elements are always visible due to the lack of a CSS engine. The recommendation here is to move these sorts of tests in to a Cypress spec, where you can assuredly test for element visibility using, for example `to.be.visible`. Note that this does imply that you will need to run convergence coverage checks that merge both Jest and Cypress in order to see your true code coverage.
+- An alternative to the above, but **only** to be used where it makes the most sense for performance and/or testing burden, is using the hook [useMediaQuery](https://mui.com/material-ui/react-use-media-query/) in your code to include or exclude parts of a component in the render block. This is JS based and therefore will work as expected in Jest tests.
+3. Enzyme snapshots have been regenerated to account for the new MUI5 components, and as such many tests also needed to be updated to match changes in the snapshot structure. A common difference encountered was references to a component such as `WithStyles(ForwardRef(Button))` had become `ForwardRef(Button)`, and will easy to fix is worth remembering. Check your snapshot structure if you find MUI4 Enzyme tests are failing.
+4. In a great many cases it was no longer possible to run shallow Enzyme tests against components. This appears to be caused by MUI5 components using `Theme` _requiring_ a theme provider, and as such these tests were failing when a component in the tree tried to access a theme via useStyles. The [MUI5 testing page](https://mui.com/material-ui/guides/testing/) has been updated and no longer recommend testing snapshots _at all_ (see v4 version [here](https://v4.mui.com/guides/testing/)). We will continue to do so, however, so the solution moving forward is to use `Mount` to create a deep snapshot. In most cases existing Enzyme tests can be easily updated to produce a deep snapshot by updating the `setup` method to include a 3rd parameter of the `getElement` function:
+`return getElement(PublicationCitation, props, {isShallow: false});` 
+NB: this is just for illustration - a better approach is to include an `args` property in the `setup` function signature i.e. `function setup(testProps = {}, args = { isShallow: false })`. 
+Note that your snapshot will need regenerating and tests modified to handle the new snapshot structure.
+1. If an Enzyme test needs to refer to `wrapper.instance()`, and the component requires a `Theme` as mentioned above, and the instance is spying on a function, ensure the `wrapper` finds the component's name before calling instance. e.g. `wrapper.find(‘class name’).instance()`.
+1. Enzyme tests that `simulate` a click or other user action, and have been updated to generate deep `Merge` snapshots, will likely need updating to find the actual button in the tree before firing the event (see https://github.com/wojtekmaj/enzyme-adapter-react-17/issues/45). For example, the click event for the element:
+`
+const playElement = wrapper.find('ForwardRef(IconButton)#playButton');
+`
+would need changing from:
+`
+playElement.simulate('click');
+`
+to:
+`
+playElement.find('button').simulate('click'); 
+`
+1. For Jest testing a component that uses `useTheme`, ensure you use the `rtlRender` renderer in your `setup` function. This will insert a `ThemeRenderer` in the tree and will allow your tests to pass. See `src/utils/test-utils.js` for the code behind this.
+1. When testing dropdown boxes/lists (for example, with the `AutoCompleteAsynchronousField` component), your tests must ensure focus is in the target component before you attempt to change the contents of the input (`fireEvent.change()`), otherwise the expected popup window of options _will not appear_.
+1. By default, the MUI5 `ToolTips` component no longer uses a title attribute to hold the wrapped component's tooltip text. Instead the `aria-label` attribute is used, and tests need to be updated to reflect this.
+This behaviour can be changed by including the `describeChild`, however be aware of potential [accessibility issues](https://mui.com/material-ui/react-tooltip/#accessibility).
+Note also that there are some elements that can not have `aria-label` as an attribute (see https://github.com/dequelabs/axe-core/issues/3205), and as such you may encounter Cypress Axe failures if you _do not_ use the `describeChild` attribute.
+1. Cypress tests that look to enter text in to a multiline text field (i.e HMTL `TextArea`) may fail due to MUI5 inserting _two_ `TextArea` elements for each use of `<TextField multiline>`. Your tests should pick the first instance of the TextArea element for testing. No official information on this behaviour could be found at time of writing.
+1. `MyEditorialAppointments` component adds a custom `DatePicker` bar with a 'Current year' button. In MUI4 clicking this button would automatically clause the calendar popup, however in MUI5 this is no longer the case.
+
+### Tests that could not be fixed
+Two tests have been Istanbul ignored in order to get the build passing. These are:
+
+1. AdminContainer
+1. MyIncompleteRecord
+
+Despite many hours attempting to find a resolution to the Jest errors both produced no solution could be found, and so their tests have been ignored for now. A [ticket](https://www.pivotaltracker.com/story/show/184445375) has been created to revisit this situation at a later date.

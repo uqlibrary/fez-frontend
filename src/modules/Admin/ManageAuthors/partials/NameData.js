@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Field, formValueSelector } from 'redux-form/immutable';
 
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(() => ({
     icon: {
@@ -20,12 +20,20 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled }) => {
+export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled, isAdmin }) => {
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-    const { filenameColumn, fileAccessColumn, embargoDateColumn, deleteAllFiles, deleteAllFilesConfirmation } = locale;
+    const {
+        filenameColumn,
+        fileDescriptionColumn,
+        fileAccessColumn,
+        fileSecurityPolicyColumn,
+        embargoDateColumn,
+        deleteAllFiles,
+        deleteAllFilesConfirmation,
+    } = locale;
     return (
-        <Hidden only={['xs']}>
+        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             <ConfirmationBox
                 onAction={onDeleteAll}
                 onClose={hideConfirmation}
@@ -35,17 +43,24 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
             />
             <div style={{ flexGrow: 1, padding: 4 }}>
                 <Grid container direction="row" alignItems="center" spacing={1} className={classes.header} gutter={8}>
-                    <Grid item md={6} sm={5}>
+                    <Grid item md={3} sm={2}>
                         <Typography variant="caption" gutterBottom>
                             {filenameColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={3} sm={4}>
+                    <Grid item md={3} sm={3}>
                         <Typography variant="caption" gutterBottom>
-                            {requireOpenAccessStatus && fileAccessColumn}
+                            {fileDescriptionColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={2} sm={2}>
+                    <Grid item md={3} sm={3}>
+                        <Typography variant="caption" gutterBottom>
+                            {isAdmin
+                                ? requireOpenAccessStatus && fileSecurityPolicyColumn
+                                : requireOpenAccessStatus && fileAccessColumn}
+                        </Typography>
+                    </Grid>
+                    <Grid item sm={2}>
                         <Typography variant="caption" gutterBottom>
                             {requireOpenAccessStatus && embargoDateColumn}
                         </Typography>
@@ -53,7 +68,12 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                     <Grid item xs={1} className={classes.icon}>
                         <Tooltip title={deleteAllFiles}>
                             <span>
-                                <IconButton onClick={showConfirmation} disabled={disabled} id="delete-all-files">
+                                <IconButton
+                                    onClick={showConfirmation}
+                                    disabled={disabled}
+                                    id="delete-all-files"
+                                    size="large"
+                                >
                                     <DeleteForeverIcon />
                                 </IconButton>
                             </span>
@@ -61,7 +81,7 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                     </Grid>
                 </Grid>
             </div>
-        </Hidden>
+        </Box>
     );
 };
 
@@ -70,12 +90,15 @@ FileUploadRowHeader.propTypes = {
     locale: PropTypes.object,
     requireOpenAccessStatus: PropTypes.bool,
     disabled: PropTypes.bool,
+    isAdmin: PropTypes.bool,
 };
 
 FileUploadRowHeader.defaultProps = {
     locale: {
         filenameColumn: 'File name',
         fileAccessColumn: 'Access conditions',
+        fileDescriptionColumn: 'Description',
+        fileSecurityPolicyColumn: 'Security policy',
         embargoDateColumn: 'Embargo release date',
         deleteAllFiles: 'Remove all files from the upload queue',
         deleteAllFilesConfirmation: {

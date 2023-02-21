@@ -1,103 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Add record stepper tests should render steps with specific active step 1`] = `
-<WithStyles(ForwardRef(Stepper))
+<ForwardRef(Stepper)
   activeStep={0}
 >
-  <WithStyles(ForwardRef(Step))
+  <ForwardRef(Step)
     key="stepper_0"
   >
-    <WithStyles(ForwardRef(StepLabel))>
+    <ForwardRef(StepLabel)>
       <span>
         Step 1
       </span>
-    </WithStyles(ForwardRef(StepLabel))>
-  </WithStyles(ForwardRef(Step))>
-  <WithStyles(ForwardRef(Step))
+    </ForwardRef(StepLabel)>
+  </ForwardRef(Step)>
+  <ForwardRef(Step)
     key="stepper_1"
   >
-    <WithStyles(ForwardRef(StepLabel))>
+    <ForwardRef(StepLabel)>
       <span>
         Step 2
       </span>
-    </WithStyles(ForwardRef(StepLabel))>
-  </WithStyles(ForwardRef(Step))>
-  <WithStyles(ForwardRef(Step))
+    </ForwardRef(StepLabel)>
+  </ForwardRef(Step)>
+  <ForwardRef(Step)
     key="stepper_2"
   >
-    <WithStyles(ForwardRef(StepLabel))>
+    <ForwardRef(StepLabel)>
       <span>
         Step 3
       </span>
-    </WithStyles(ForwardRef(StepLabel))>
-  </WithStyles(ForwardRef(Step))>
-</WithStyles(ForwardRef(Stepper))>
+    </ForwardRef(StepLabel)>
+  </ForwardRef(Step)>
+</ForwardRef(Stepper)>
 `;
 
 exports[`Add record stepper tests should render steps with specific active step 2`] = `
-<WithStyles(ForwardRef(Stepper))
+<ForwardRef(Stepper)
   activeStep={1}
 >
-  <WithStyles(ForwardRef(Step))
+  <ForwardRef(Step)
     key="stepper_0"
   >
-    <WithStyles(ForwardRef(StepLabel))>
+    <ForwardRef(StepLabel)>
       <span>
         Step 1
       </span>
-    </WithStyles(ForwardRef(StepLabel))>
-  </WithStyles(ForwardRef(Step))>
-  <WithStyles(ForwardRef(Step))
+    </ForwardRef(StepLabel)>
+  </ForwardRef(Step)>
+  <ForwardRef(Step)
     key="stepper_1"
   >
-    <WithStyles(ForwardRef(StepLabel))>
+    <ForwardRef(StepLabel)>
       <span>
         Step 2
       </span>
-    </WithStyles(ForwardRef(StepLabel))>
-  </WithStyles(ForwardRef(Step))>
-  <WithStyles(ForwardRef(Step))
+    </ForwardRef(StepLabel)>
+  </ForwardRef(Step)>
+  <ForwardRef(Step)
     key="stepper_2"
   >
-    <WithStyles(ForwardRef(StepLabel))>
+    <ForwardRef(StepLabel)>
       <span>
         Step 3
       </span>
-    </WithStyles(ForwardRef(StepLabel))>
-  </WithStyles(ForwardRef(Step))>
-</WithStyles(ForwardRef(Stepper))>
+    </ForwardRef(StepLabel)>
+  </ForwardRef(Step)>
+</ForwardRef(Stepper)>
 `;
 
 exports[`Add record stepper tests should render steps with specific active step 3`] = `
-<WithStyles(ForwardRef(Stepper))
+<ForwardRef(Stepper)
   activeStep={2}
 >
-  <WithStyles(ForwardRef(Step))
+  <ForwardRef(Step)
     key="stepper_0"
   >
-    <WithStyles(ForwardRef(StepLabel))>
+    <ForwardRef(StepLabel)>
       <span>
         Step 1
       </span>
-    </WithStyles(ForwardRef(StepLabel))>
-  </WithStyles(ForwardRef(Step))>
-  <WithStyles(ForwardRef(Step))
+    </ForwardRef(StepLabel)>
+  </ForwardRef(Step)>
+  <ForwardRef(Step)
     key="stepper_1"
   >
-    <WithStyles(ForwardRef(StepLabel))>
+    <ForwardRef(StepLabel)>
       <span>
         Step 2
       </span>
-    </WithStyles(ForwardRef(StepLabel))>
-  </WithStyles(ForwardRef(Step))>
-  <WithStyles(ForwardRef(Step))
+    </ForwardRef(StepLabel)>
+  </ForwardRef(Step)>
+  <ForwardRef(Step)
     key="stepper_2"
   >
-    <WithStyles(ForwardRef(StepLabel))>
+    <ForwardRef(StepLabel)>
       <span>
         Step 3
       </span>
-    </WithStyles(ForwardRef(StepLabel))>
-  </WithStyles(ForwardRef(Step))>
-</WithStyles(ForwardRef(Stepper))>
+    </ForwardRef(StepLabel)>
+  </ForwardRef(Step)>
+</ForwardRef(Stepper)>
 `;

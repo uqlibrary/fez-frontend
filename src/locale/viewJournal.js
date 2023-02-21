@@ -24,7 +24,7 @@ export default {
                 heading: 'Limited amount available',
                 ariaLabel: 'Click to view CAUL information on number of remaining pre-paid APCs',
                 linkText: 'Check current status',
-                externalUrl: 'https://caul.libguides.com/read-and-publish/reports',
+                externalUrl: 'https://caul.libguides.com/read-and-publish/home',
             },
         },
     },

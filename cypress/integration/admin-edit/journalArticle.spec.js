@@ -10,7 +10,7 @@ context('Journal Article admin edit', () => {
             .should('have.length', 1)
             .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
 
-        cy.get('button[title="Learn about keyboard shortcuts"]').should('exist');
+        cy.get('button[aria-label="Learn about keyboard shortcuts"]').should('exist');
 
         cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
@@ -313,12 +313,12 @@ context('Journal Article admin edit', () => {
                 .eq(0)
                 .as('collectionsCard')
                 .within(() => {
-                    cy.get('h4').should('contain', 'Member of collections');
-                    cy.get('#rek-ismemberof-label').should('contain', 'Member of collections');
-                    cy.get('[class*="MuiAutocomplete-tag-"]')
+                    cy.get('h4').should('contain', 'Member of collection');
+                    cy.get('#rek-ismemberof-label').should('contain', 'Member of collection');
+                    cy.get('[class*="MuiAutocomplete-tag"]')
                         .eq(0)
                         .should('have.text', 'School of Nursing, Midwifery and Social Work Publications');
-                    cy.get('[class*="MuiAutocomplete-tag-"]')
+                    cy.get('[class*="MuiAutocomplete-tag"]')
                         .eq(1)
                         .should('have.text', 'Official 2013 Collection');
                 });
@@ -384,7 +384,7 @@ context('Journal Article admin edit', () => {
 
         cy.get('@collectionsCard').within(() => {
             collections.forEach(() => {
-                cy.get('[class*="MuiChip-deleteIcon-"]')
+                cy.get('[class*="MuiChip-deleteIcon"]')
                     .eq(0)
                     .click();
             });
@@ -456,12 +456,18 @@ context('Journal Article admin edit', () => {
                 .should('have.text', 'Attached files');
             cy.get('p')
                 .eq(0)
+                .should(
+                    'have.text',
+                    'There may be a delay before newly uploaded or renamed files appear on the record.',
+                );
+            cy.get('p')
+                .eq(2)
                 .should('have.text', record.fez_datastream_info[1].dsi_dsid);
             cy.get('input')
                 .eq(0)
                 .should('have.value', record.fez_datastream_info[1].dsi_label);
             cy.get('p')
-                .eq(1)
+                .eq(3)
                 .should('have.text', `${fileSizeInMB} MB`);
             cy.get('input')
                 .eq(1)

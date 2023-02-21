@@ -2,12 +2,12 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Field, formValueSelector, change } from 'redux-form/immutable';
 
-import Grid from '@material-ui/core/Grid';
-import OverriddenIcon from '@material-ui/icons/Lock';
-import NotOverriddenIcon from '@material-ui/icons/LockOpenOutlined';
-import Tooltip from '@material-ui/core/Tooltip';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import IconButton from '@material-ui/core/IconButton';
+import Grid from '@mui/material/Grid';
+import OverriddenIcon from '@mui/icons-material/Lock';
+import NotOverriddenIcon from '@mui/icons-material/LockOpenOutlined';
+import Tooltip from '@mui/material/Tooltip';
+import InputAdornment from '@mui/material/InputAdornment';
+import IconButton from '@mui/material/IconButton';
 
 import AuthorFieldData from './AuthorFieldData';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -60,6 +60,7 @@ export const UsernameIdColumnData = () => {
                                                 onClick={handleNameOverridden}
                                                 id="aut-name-overridden"
                                                 data-testid="aut-name-overridden"
+                                                size="large"
                                             >
                                                 {autNameOverridden ? (
                                                     <OverriddenIcon

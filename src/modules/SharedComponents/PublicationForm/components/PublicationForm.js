@@ -15,11 +15,11 @@ import { NtroHeader } from 'modules/SharedComponents/Toolbox/NtroFields';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
-import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
-import MenuItem from '@material-ui/core/MenuItem';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Unstable_Grid2';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
 
 import * as recordForms from './Forms';
 import { publicationTypes, validation } from 'config';
@@ -80,26 +80,35 @@ export default class PublicationForm extends Component {
                 </MenuItem>
             )),
         ];
+        this.state = {
+            prevProps: { ...this.props },
+        };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
+    static getDerivedStateFromProps(props, state) {
+        let publicationSubtypeItems;
+
+        if (!!props.subtypes && props.subtypes !== state.prevProps.subtypes) {
+            publicationSubtypeItems = props.subtypes.map((item, index) => (
+                <MenuItem value={item} key={index}>
+                    {item}
+                </MenuItem>
+            ));
+        }
+
+        return { publicationSubtypeItems, prevProps: { ...props } };
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
-        } else {
-            if (!!nextProps.subtypes && nextProps.subtypes !== this.props.subtypes) {
-                this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
-                    <MenuItem value={item} key={index}>
-                        {item}
-                    </MenuItem>
-                ));
-            }
-            if (nextProps.hasDefaultDocTypeSubType) {
-                this.props.changeDisplayType(nextProps.docTypeSubTypeCombo);
-            }
-            if (nextProps.isNtro !== this.props.isNtro) {
-                this.props.changeFormType(nextProps.isNtro);
-            }
+        }
+
+        if (this.props.hasDefaultDocTypeSubType) {
+            this.props.changeDisplayType(this.props.docTypeSubTypeCombo);
+        }
+        if (prevProps.isNtro !== this.props.isNtro) {
+            this.props.changeFormType(this.props.isNtro);
         }
     }
 
@@ -119,7 +128,7 @@ export default class PublicationForm extends Component {
                         />
                         <Grid item xs={12}>
                             <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
-                                <Grid container spacing={1}>
+                                <Grid container spacing={1} padding={0}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={SelectField}
@@ -148,7 +157,7 @@ export default class PublicationForm extends Component {
                                                 placeholder={txt.publicationSubtype.hintText}
                                                 selectFieldId="rek-subtype"
                                             >
-                                                {this.publicationSubtypeItems}
+                                                {this.state?.publicationSubtypeItems}
                                             </Field>
                                         </Grid>
                                     )}
@@ -174,7 +183,7 @@ export default class PublicationForm extends Component {
                                             title={txt.contentIndicators.title}
                                             help={txt.contentIndicators.help}
                                         >
-                                            <Grid container spacing={3}>
+                                            <Grid container spacing={3} padding={0}>
                                                 <Grid item xs={12}>
                                                     <Typography>{txt.contentIndicators.description}</Typography>
                                                     <Field
@@ -235,6 +244,7 @@ export default class PublicationForm extends Component {
                                 <Button
                                     style={{ whiteSpace: 'nowrap' }}
                                     id="submit-work"
+                                    data-testid="submit-work"
                                     variant="contained"
                                     color="primary"
                                     fullWidth

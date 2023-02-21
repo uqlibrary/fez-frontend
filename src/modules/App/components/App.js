@@ -29,16 +29,15 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import * as pages from './pages';
 import { AccountContext } from 'context';
 // MUI1
-import Tooltip from '@material-ui/core/Tooltip';
-import Fade from '@material-ui/core/Fade';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Menu from '@material-ui/icons/Menu';
-import Hidden from '@material-ui/core/Hidden';
-import { withStyles } from '@material-ui/core/styles';
+import Tooltip from '@mui/material/Tooltip';
+import Fade from '@mui/material/Fade';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/icons-material/Menu';
+import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
     appBG: {
@@ -49,7 +48,7 @@ const styles = theme => ({
         margin: '24px auto',
         width: '90%',
         padding: 0,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             margin: '0 auto 24px auto',
         },
     },
@@ -76,6 +75,9 @@ const styles = theme => ({
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
+    },
+    toolbar: {
+        height: '70px',
     },
 });
 
@@ -140,23 +142,22 @@ export class AppClass extends PureComponent {
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
     }
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.isSessionExpired) {
+
+    componentDidUpdate(prevProps) {
+        if (this.props.isSessionExpired) {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
         // don't call the api for non author users since the api call requires an author
         if (
-            !nextProps.accountAuthorLoading &&
+            !this.props.accountAuthorLoading &&
             // eslint-disable-next-line camelcase
-            nextProps.author?.aut_id &&
+            this.props.author?.aut_id &&
             // eslint-disable-next-line camelcase
-            this.props.author?.aut_id !== nextProps.author?.aut_id
+            this.props.author?.aut_id !== prevProps.author?.aut_id
         ) {
             this.props.actions.searchAuthorPublications({}, 'incomplete');
         }
     }
-
     componentWillUnmount() {
         this.state.mediaQuery.removeListener(this.handleResize);
     }
@@ -317,7 +318,7 @@ export class AppClass extends PureComponent {
             <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig} />
                 <AppBar className="AppBar" color="primary" position="fixed">
-                    <Toolbar style={{ height: '70px' }}>
+                    <Toolbar classes={{ root: classes.toolbar }}>
                         <Grid
                             container
                             spacing={1}
@@ -338,6 +339,7 @@ export class AppClass extends PureComponent {
                                             style={{ marginLeft: '-12px', marginRight: '12px' }}
                                             onClick={this.toggleDrawer}
                                             id={'main-menu-button'}
+                                            size="large"
                                         >
                                             <Menu style={{ color: 'white' }} />
                                         </IconButton>
@@ -353,13 +355,11 @@ export class AppClass extends PureComponent {
                                     wrap={'nowrap'}
                                 >
                                     {!this.state.docked && !this.state.menuDrawerOpen && (
-                                        <Hidden xsDown>
-                                            <Grid item>
-                                                <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
-                                                    {locale.global.logo.label}
-                                                </div>
-                                            </Grid>
-                                        </Hidden>
+                                        <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                            <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
+                                                {locale.global.logo.label}
+                                            </div>
+                                        </Grid>
                                     )}
                                     <Grid item xs={'auto'} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                         <Typography variant="h5" component={'h1'} noWrap className={classes.titleLink}>
@@ -422,9 +422,8 @@ export class AppClass extends PureComponent {
                     />
                 )}
                 <div className="content-container" id="content-container" style={containerStyle}>
-                    <Hidden smDown>
-                        <ScrollTop show containerId="content-container" />
-                    </Hidden>
+                    <ScrollTop show containerId="content-container" />
+
                     <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
                         {!isAdminPage() && <alert-list system="espace" />}
                     </div>

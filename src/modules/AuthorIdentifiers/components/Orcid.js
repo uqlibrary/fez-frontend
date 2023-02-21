@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { createHash } from 'crypto';
 import { parse } from 'querystring';
 
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -28,6 +27,11 @@ export default class Orcid extends Component {
 
     constructor(props) {
         super(props);
+
+        // eslint-disable-next-line camelcase
+        if (!this.props.accountAuthorLoading && (!this.props.author?.aut_id || this.props.author.aut_orcid_id)) {
+            this._navigateToDashboard();
+        }
 
         // when ORCID registration went through, and ORCID has redirected back to eSpace
         // check status of ORCID redirect, if it's still in the same session (state)
@@ -72,17 +76,33 @@ export default class Orcid extends Component {
                 code: queryParams.code || null,
                 state: queryParams.state || null,
             },
+            createOrcidStateId: this.createOrcidStateId,
+            prevProps: { ...props },
         };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillMount() {
-        // user should have a fez-author record to proceed
-        // user should not be able to re-link to orcid if they already have an orcid id
-        // eslint-disable-next-line camelcase
-        if (!this.props.accountAuthorLoading && (!this.props.author?.aut_id || this.props.author.aut_orcid_id)) {
-            this._navigateToDashboard();
+    static getDerivedStateFromProps(props, state) {
+        // wait for user account to get loaded and set state if props were not available in constructor
+        if (
+            props.account !== state.prevProps?.account &&
+            (!state.prevProps?.account || props.account.id !== state.prevProps?.account.id)
+        ) {
+            const orcidStateId = state.createOrcidStateId(props.account);
+            //
+            return {
+                orcidRequest: {
+                    ...state.orcidRequest,
+                    state: orcidStateId,
+                },
+                existingOrcidRequest: {
+                    ...state.existingOrcidRequest,
+                    family_names: !!props.account && !!props.account.lastName ? props.account.lastName : '',
+                    given_names: !!props.account && !!props.account.firstName ? props.account.firstName : '',
+                },
+                prevProps: { ...props },
+            };
         }
+        return null;
     }
 
     componentDidMount() {
@@ -104,40 +124,24 @@ export default class Orcid extends Component {
         }
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        // wait for user account to get loaded and set state if props were not available in constructor
-        if (
-            nextProps.account !== this.props.account &&
-            (!this.props.account || nextProps.account.id !== this.props.account.id)
-        ) {
-            const orcidStateId = this.createOrcidStateId(nextProps.account);
-
-            this.setState(prevState => ({
-                orcidRequest: {
-                    ...prevState.orcidRequest,
-                    state: orcidStateId,
-                },
-                existingOrcidRequest: {
-                    ...prevState.existingOrcidRequest,
-                    family_names: !!nextProps.account && !!nextProps.account.lastName ? nextProps.account.lastName : '',
-                    given_names:
-                        !!nextProps.account && !!nextProps.account.firstName ? nextProps.account.firstName : '',
-                },
-            }));
-        }
-
+    componentDidUpdate(prevProps) {
         // user should have a fez-author record to proceed
         // user should not be able to re-link to orcid if they already have an orcid id
         if (
-            nextProps.author !== this.props.author &&
-            ((!nextProps.accountAuthorLoading && !nextProps.author) || nextProps.author.aut_orcid_id)
+            this.props.author !== prevProps.author &&
+            // eslint-disable-next-line camelcase
+            ((!this.props.accountAuthorLoading && !this.props.author) || this.props.author?.aut_orcid_id)
         ) {
             this._navigateToDashboard();
         }
 
         // author's orcid id has been updated successfully
-        if (nextProps.author && this.props.author && nextProps.author.aut_orcid_id !== this.props.author.aut_orcid_id) {
+        if (
+            this.props.author &&
+            prevProps.author &&
+            // eslint-disable-next-line camelcase
+            this.props.author?.aut_orcid_id !== prevProps.author?.aut_orcid_id
+        ) {
             this.props.actions.showAppAlert({
                 ...locale.pages.orcidLink.successAlert,
                 dismissAction: this.props.actions.dismissAppAlert,
@@ -149,17 +153,19 @@ export default class Orcid extends Component {
         // (if props.author were not available in componentDidMount)
         if (
             this.props.account &&
-            !nextProps.accountAuthorLoading &&
-            (nextProps.author !== this.props.author ||
-                (nextProps.author && this.props.author.aut_id !== nextProps.author.aut_id)) &&
-            !nextProps.author.aut_orcid_id &&
+            !this.props.accountAuthorLoading &&
+            (this.props.author !== prevProps.author ||
+                // eslint-disable-next-line camelcase
+                (this.props.author && prevProps.author?.aut_id !== this.props.author?.aut_id)) &&
+            // eslint-disable-next-line camelcase
+            !this.props.author?.aut_orcid_id &&
             this.state.orcidResponse.code &&
             this.state.orcidResponse.state &&
             this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)
         ) {
             this.props.actions.linkAuthorOrcidId(
-                nextProps.account.id,
-                nextProps.author.aut_id,
+                this.props.account.id,
+                this.props.author.aut_id,
                 this.state.orcidResponse.code,
             );
         }
@@ -253,9 +259,8 @@ export default class Orcid extends Component {
                                 {txt.linkOrcid.description}
                             </Typography>
                             <Grid container spacing={2}>
-                                <Hidden xsDown>
-                                    <Grid item xs />
-                                </Hidden>
+                                <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+
                                 <Grid item xs={12} sm={'auto'}>
                                     <Button
                                         variant={'contained'}
@@ -275,9 +280,8 @@ export default class Orcid extends Component {
                                 {txt.createOrcid.description}
                             </Typography>
                             <Grid container spacing={2}>
-                                <Hidden xsDown>
-                                    <Grid item xs />
-                                </Hidden>
+                                <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+
                                 <Grid item xs={12} sm={'auto'}>
                                     <Button
                                         variant={'contained'}

@@ -361,8 +361,10 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: '123456' } });
         });
+
         await waitFor(() => getByTestId('rek-author-id-options'));
         fireEvent.click(getByText('Testing'));
 
@@ -446,6 +448,7 @@ describe('AuthorsList', () => {
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -497,6 +500,7 @@ describe('AuthorsList', () => {
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));

@@ -202,7 +202,7 @@ describe('Component PossiblyMyRecords', () => {
         const wrapper = setup({ loadingPossiblePublicationsList: true });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             loadingPossiblePublicationsList: false,
             possiblePublicationsList: [1, 2, 3],
             history: {},
@@ -220,7 +220,7 @@ describe('Component PossiblyMyRecords', () => {
             },
         });
 
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             history: {
                 action: 'POP',
             },
@@ -252,7 +252,7 @@ describe('Component PossiblyMyRecords', () => {
             },
         });
 
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             history: { action: 'POP' },
             location: { pathname: pathConfig.records.possible, state: null },
         });
@@ -319,10 +319,24 @@ describe('Component PossiblyMyRecords', () => {
         wrapper.setState({
             hasPublications: true,
         });
-        expect(wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) PublicationsListSorting').length).toBe(1);
-        expect(
-            wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) WithStyles(PublicationsListPaging)').length,
-        ).toBe(2);
+        expect(wrapper.find('StandardCard ForwardRef(Grid) PublicationsListSorting').length).toBe(1);
+        expect(wrapper.find('StandardCard ForwardRef(Grid) WithStyles(PublicationsListPaging)').length).toBe(2);
+    });
+
+    // coverage
+    it('should show loader when user is filtering/paging', () => {
+        const wrapper = setup({
+            accountLoading: false,
+            possibleCounts: 21,
+            loadingPossibleCounts: false,
+            possiblePublicationsList: [],
+            loadingPossiblePublicationsList: true,
+        });
+        wrapper.setState({
+            hasPublications: true,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('StandardPage ForwardRef(Grid) ForwardRef(Grid) WithStyles(InlineLoader)').length).toBe(1);
     });
 
     it('should not enable export functionality', () => {

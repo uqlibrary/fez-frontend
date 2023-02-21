@@ -4,10 +4,9 @@ import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from '../containers/DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import Hidden from '@material-ui/core/Hidden';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import withStyles from '@mui/styles/withStyles';
 
 const background = require('../../../../public/images/dashboard_cover.jpg');
 
@@ -66,10 +65,6 @@ export class DashboardAuthorProfile extends PureComponent {
                             <Grid item xs={12}>
                                 <DashboardResearcherIds
                                     values={{
-                                        publons:
-                                            parseInt(author.aut_publons_id, 10) === 1
-                                                ? author.aut_orcid_id
-                                                : author.aut_publons_id,
                                         researcher: author.aut_researcher_id,
                                         scopus:
                                             parseInt(author.aut_is_scopus_id_authenticated, 10) === 1
@@ -79,7 +74,6 @@ export class DashboardAuthorProfile extends PureComponent {
                                         orcid: author.aut_orcid_id,
                                     }}
                                     authenticated={{
-                                        publons: Boolean(author.aut_publons_id),
                                         researcher: Boolean(author.aut_researcher_id),
                                         scopus: Boolean(author.aut_is_scopus_id_authenticated),
                                         google_scholar: Boolean(author.aut_google_scholar_id),
@@ -91,11 +85,9 @@ export class DashboardAuthorProfile extends PureComponent {
                         </Grid>
                     </Grid>
                     {/* Publication count */}
-                    <Hidden smDown>
-                        <Grid item xs={'auto'}>
-                            <DashboardArticleCount />
-                        </Grid>
-                    </Hidden>
+                    <Grid item xs={'auto'} sx={{ display: { xs: 'none', md: 'block' } }}>
+                        <DashboardArticleCount />
+                    </Grid>
                 </Grid>
             </Card>
         );

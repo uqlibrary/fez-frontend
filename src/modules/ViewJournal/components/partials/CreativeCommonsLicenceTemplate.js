@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import DefaultTemplate from './DefaultTemplate';
 import { CCL_4_0_SLUG_TEXT_MAP, getCreativeCommonsUrl } from 'config/general';

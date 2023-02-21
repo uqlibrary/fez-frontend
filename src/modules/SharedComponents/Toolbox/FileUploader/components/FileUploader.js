@@ -2,18 +2,40 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { clearFileUpload } from '../actions';
-
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
 import FileUploadTermsAndConditions from './FileUploadTermsAndConditions';
 import { Alert } from '../../Alert';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import * as config from '../config';
 import locale from '../locale';
 
 const moment = require('moment');
+
+/**
+ * Process errors into a message
+ *
+ */
+export const getErrorMessage = (errors, locale, fileRestrictionsConfig) => {
+    const { validation } = locale;
+    const errorMessages = [];
+
+    Object.keys(errors).map(errorCode => {
+        const fileNames = errors[errorCode];
+        if (fileNames && fileNames.length > 0 && validation[errorCode]) {
+            errorMessages.push(
+                validation[errorCode]
+                    .replace('[numberOfFiles]', fileNames.length)
+                    .replace('[fileNames]', fileNames.join(', '))
+                    .replace('[maxNumberOfFiles]', `${fileRestrictionsConfig.fileUploadLimit}`),
+            );
+        }
+    });
+
+    return errorMessages.length > 0 ? errorMessages.join('; ') : '';
+};
 
 export class FileUploader extends PureComponent {
     static propTypes = {
@@ -26,6 +48,7 @@ export class FileUploader extends PureComponent {
         defaultQuickTemplateId: PropTypes.number,
         isNtro: PropTypes.bool,
         isAdmin: PropTypes.bool,
+        fullyUploadedFiles: PropTypes.array,
     };
 
     static defaultProps = {
@@ -40,6 +63,7 @@ export class FileUploader extends PureComponent {
         requireOpenAccessStatus: false,
         isNtro: false,
         isAdmin: false,
+        fullyUploadedFiles: [],
     };
 
     constructor(props) {
@@ -51,18 +75,18 @@ export class FileUploader extends PureComponent {
         };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillUpdate(nextProps, nextState) {
+    componentDidUpdate() {
         !!this.props.onChange &&
             this.props.onChange({
-                queue: nextState.filesInQueue,
-                isValid: this.isFileUploadValid(nextState),
+                queue: this.state.filesInQueue,
+                isValid: this.isFileUploadValid(this.state),
             });
     }
-
     componentWillUnmount() {
         this.props.clearFileUpload();
     }
+
+    // static contextType = FormValuesContext;
 
     /**
      * Delete file on a given index
@@ -107,7 +131,21 @@ export class FileUploader extends PureComponent {
 
         file[config.FILE_META_KEY_ACCESS_CONDITION] = newValue;
 
-        if (newValue === config.FILE_ACCESS_CONDITION_OPEN) {
+        if (newValue === config.FILE_SECURITY_POLICY_PUBLIC) {
+            file[config.FILE_META_KEY_EMBARGO_DATE] = moment().format();
+        } else {
+            file[config.FILE_META_KEY_EMBARGO_DATE] = null;
+        }
+
+        this.replaceFile(file, index);
+    };
+
+    _updateFileSecurityPolicy = (fileToUpdate, index, newValue) => {
+        const file = { ...fileToUpdate };
+
+        file[config.FILE_META_KEY_SECURITY_POLICY] = newValue;
+
+        if (newValue === config.FILE_SECURITY_POLICY_PUBLIC) {
             file[config.FILE_META_KEY_EMBARGO_DATE] = moment().format();
         } else {
             file[config.FILE_META_KEY_EMBARGO_DATE] = null;
@@ -128,6 +166,66 @@ export class FileUploader extends PureComponent {
         const file = { ...fileToUpdate };
 
         file[config.FILE_META_KEY_EMBARGO_DATE] = moment(newValue).format();
+
+        this.replaceFile(file, index);
+    };
+
+    shuffleFileOrder = (arr, from, to) => {
+        return arr.reduce((prev, current, idx, self) => {
+            /* istanbul ignore if */
+            if (from === to) {
+                prev.push(current);
+            }
+            if (idx === from) {
+                return prev;
+            }
+            if (from < to) {
+                prev.push(current);
+            }
+            /* istanbul ignore else */
+            if (idx === to) {
+                prev.push(self[from]);
+            }
+            if (from > to) {
+                prev.push(current);
+            }
+            return prev;
+        }, []);
+    };
+
+    _updateOrderUp = index => {
+        // Below needs to be moved into a seperate function
+        const filesToOrder = [...this.state.filesInQueue];
+        /* istanbul ignore else */
+        if (index > 0) {
+            const newOrder = this.shuffleFileOrder(filesToOrder, index, index - 1);
+            this.setState({
+                filesInQueue: [...newOrder],
+            });
+        }
+    };
+    _updateOrderDown = index => {
+        const filesToOrder = [...this.state.filesInQueue];
+        /* istanbul ignore else */
+        if (index < filesToOrder.length - 1) {
+            const newOrder = this.shuffleFileOrder(filesToOrder, index, index + 1);
+            this.setState({
+                filesInQueue: [...newOrder],
+            });
+        }
+    };
+
+    /**
+     * Update file's description
+     *
+     * @param fileToUpdate
+     * @param index
+     * @param newValue
+     * @private
+     */
+    _updateFileDescription = (fileToUpdate, index, newValue) => {
+        const file = { ...fileToUpdate };
+        file[config.FILE_META_KEY_DESCRIPTION] = newValue;
 
         this.replaceFile(file, index);
     };
@@ -162,7 +260,7 @@ export class FileUploader extends PureComponent {
                 ? totalFiles.map(file => ({ ...file, [config.FILE_META_KEY_ACCESS_CONDITION]: defaultQuickTemplateId }))
                 : totalFiles,
             focusOnIndex: filesInQueue.length,
-            errorMessage: this.getErrorMessage(errorsFromDropzone),
+            errorMessage: getErrorMessage(errorsFromDropzone, this.props.locale, this.props.fileRestrictionsConfig),
         });
     };
 
@@ -219,6 +317,22 @@ export class FileUploader extends PureComponent {
     };
 
     /**
+     * Check if any file has public security policy (admin only)
+     *
+     * @param files
+     * @returns {boolean}
+     */
+    isAnySecurityPolicyPublic = files => {
+        return (
+            files.filter(
+                file =>
+                    file.hasOwnProperty(config.FILE_META_KEY_SECURITY_POLICY) &&
+                    file[config.FILE_META_KEY_SECURITY_POLICY] === config.FILE_SECURITY_POLICY_PUBLIC,
+            ).length > 0
+        );
+    };
+
+    /**
      * Check if entire file uploader is valid including access conditions and t&c
      *
      * @param filesInQueue
@@ -231,32 +345,12 @@ export class FileUploader extends PureComponent {
             (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION)).length ===
                 filesInQueue.length &&
                 ((this.isAnyOpenAccess(filesInQueue) && isTermsAndConditionsAccepted) ||
-                    !this.isAnyOpenAccess(filesInQueue)))
+                    !this.isAnyOpenAccess(filesInQueue))) ||
+            (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_SECURITY_POLICY)).length ===
+                filesInQueue.length &&
+                ((this.isAnySecurityPolicyPublic(filesInQueue) && isTermsAndConditionsAccepted) ||
+                    !this.isAnySecurityPolicyPublic(filesInQueue)))
         );
-    };
-
-    /**
-     * Process errors into a message
-     *
-     * @private
-     */
-    getErrorMessage = errors => {
-        const { validation } = this.props.locale;
-        const errorMessages = [];
-
-        Object.keys(errors).map(errorCode => {
-            const fileNames = errors[errorCode];
-            if (fileNames && fileNames.length > 0 && validation[errorCode]) {
-                errorMessages.push(
-                    validation[errorCode]
-                        .replace('[numberOfFiles]', fileNames.length)
-                        .replace('[fileNames]', fileNames.join(', '))
-                        .replace('[maxNumberOfFiles]', `${this.props.fileRestrictionsConfig.fileUploadLimit}`),
-                );
-            }
-        });
-
-        return errorMessages.length > 0 ? errorMessages.join('; ') : '';
     };
 
     render() {
@@ -282,12 +376,17 @@ export class FileUploader extends PureComponent {
                 <FileUploadRow
                     key={file.name}
                     fileUploadRowId={`fez-datastream-info-list-row-${index}`}
+                    rowCount={this.state.filesInQueue.length}
                     index={index}
                     uploadedFile={file}
                     fileSizeUnit={fileSizeUnit}
                     onDelete={this._deleteFile}
                     onAccessConditionChange={this._updateFileAccessCondition}
                     onEmbargoDateChange={this._updateFileEmbargoDate}
+                    onOrderUpClick={this._updateOrderUp}
+                    onOrderDownClick={this._updateOrderDown}
+                    onFileDescriptionChange={this._updateFileDescription}
+                    onSecurityPolicyChange={this._updateFileSecurityPolicy}
                     defaultAccessCondition={defaultQuickTemplateId}
                     requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
                     disabled={disabled}
@@ -346,21 +445,23 @@ export class FileUploader extends PureComponent {
                                 onDeleteAll={this._deleteAllFiles}
                                 requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
                                 disabled={disabled}
+                                isAdmin={this.props.isAdmin}
                             />
                         </Grid>
                         <Grid item xs={12} data-testid="fez-datastream-info-list">
                             {filesInQueueRow}
                         </Grid>
-                        {requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) && (
-                            <Grid item xs={12}>
-                                <FileUploadTermsAndConditions
-                                    onAcceptTermsAndConditions={this._acceptTermsAndConditions}
-                                    accessTermsAndConditions={accessTermsAndConditions}
-                                    isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
-                                    disabled={disabled}
-                                />
-                            </Grid>
-                        )}
+                        {requireOpenAccessStatus &&
+                            (this.isAnyOpenAccess(filesInQueue) || this.isAnySecurityPolicyPublic(filesInQueue)) && (
+                                <Grid item xs={12}>
+                                    <FileUploadTermsAndConditions
+                                        onAcceptTermsAndConditions={this._acceptTermsAndConditions}
+                                        accessTermsAndConditions={accessTermsAndConditions}
+                                        isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
+                                        disabled={disabled}
+                                    />
+                                </Grid>
+                            )}
                     </Fragment>
                 )}
             </Grid>

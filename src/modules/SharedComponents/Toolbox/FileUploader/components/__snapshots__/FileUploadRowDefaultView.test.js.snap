@@ -9,18 +9,38 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
-      md={11}
-      sm={11}
+      md={8}
+      sm={8}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -30,9 +50,28 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      md={3}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -43,8 +82,28 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;
 
@@ -57,18 +116,38 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
-      md={6}
-      sm={5}
+      md={3}
+      sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -78,12 +157,31 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
-      sm={4}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      md={3}
+      sm={3}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -115,7 +213,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         selectProps={
           Object {
             "className": undefined,
-            "input": <WithStyles(ForwardRef(Input))
+            "input": <ForwardRef(Input)
               autoFocus={false}
               classes={
                 Object {
@@ -128,21 +226,20 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         }
         value={1}
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
-      md={2}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-embargo-date-0"
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -153,8 +250,28 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;
 
@@ -167,18 +284,38 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
-      md={6}
-      sm={5}
+      md={3}
+      sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -188,12 +325,31 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
-      sm={4}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      md={3}
+      sm={3}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -225,7 +381,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         selectProps={
           Object {
             "className": undefined,
-            "input": <WithStyles(ForwardRef(Input))
+            "input": <ForwardRef(Input)
               autoFocus={false}
               classes={
                 Object {
@@ -238,21 +394,20 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         }
         value=""
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
-      md={2}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-embargo-date-0"
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -263,8 +418,28 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;
 
@@ -277,18 +452,38 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
-      md={6}
-      sm={5}
+      md={3}
+      sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -298,75 +493,114 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      md={3}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
       sm={4}
     >
-      <Memo(NewGenericSelectField)
+      <PolicyDropdown
         autoFocus={false}
         disabled={false}
         displayEmpty={true}
-        error="This field is required"
+        displayPrompt={true}
+        errorText="This field is required"
+        fieldLabel="Work level policy to apply to this PID"
+        fieldName="test.pdf"
         formHelperTextProps={
           Object {
             "className": undefined,
           }
         }
-        genericSelectFieldId="dsi-open-access-0"
         hideLabel={true}
-        itemsList={
+        inheritedSecurity={5}
+        input={
+          Object {
+            "autoFocus": false,
+            "className": undefined,
+            "disableUnderline": true,
+            "onBlur": [Function],
+            "onChange": undefined,
+          }
+        }
+        policyDropdownId="dsi-security-policy-0"
+        policyList={
           Array [
             Object {
-              "text": "Open Access",
-              "value": 5,
-            },
-            Object {
-              "text": "Closed Access",
+              "id": 1,
+              "label": "Administrators",
+              "name": "Administrators",
+              "order": 0,
               "value": 1,
             },
             Object {
-              "text": "Inherit from parent collection",
-              "value": 99,
+              "id": 2,
+              "label": "Theses Assessors",
+              "name": "Theses Assessors",
+              "order": 10,
+              "value": 2,
+            },
+            Object {
+              "id": 3,
+              "label": "Evidence Assessors",
+              "name": "Evidence Assessors",
+              "order": 20,
+              "value": 3,
+            },
+            Object {
+              "id": 4,
+              "label": "Staff and Students",
+              "name": "Staff and Students",
+              "order": 30,
+              "value": 4,
+            },
+            Object {
+              "id": 5,
+              "label": "Public",
+              "name": "Public",
+              "order": 100,
+              "value": 5,
             },
           ]
         }
-        onChange={[MockFunction]}
+        prompt="Select security policy"
         required={true}
-        selectPrompt="Select access conditions"
-        selectProps={
-          Object {
-            "className": undefined,
-            "input": <WithStyles(ForwardRef(Input))
-              autoFocus={false}
-              classes={
-                Object {
-                  "root": undefined,
-                }
-              }
-              disableUnderline={true}
-            />,
-          }
-        }
         value=""
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
-      md={2}
       sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-embargo-date-0"
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -377,8 +611,28 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;
 
@@ -387,12 +641,16 @@ exports[`Component FileUploadRowDefaultView should render default view with styl
   accessConditionId={null}
   classes={
     Object {
-      "error": "FileUploadRowDefaultView-error-6",
+      "error": "FileUploadRowDefaultView-error-7",
       "icon": "FileUploadRowDefaultView-icon-1",
-      "placeholder": "FileUploadRowDefaultView-placeholder-4",
+      "placeholder": "FileUploadRowDefaultView-placeholder-5",
       "row": "FileUploadRowDefaultView-row-2",
-      "selected": "FileUploadRowDefaultView-selected-5",
+      "securitySelector": "FileUploadRowDefaultView-securitySelector-4",
+      "selected": "FileUploadRowDefaultView-selected-6",
       "selector": "FileUploadRowDefaultView-selector-3",
+      "upDownArrow": "FileUploadRowDefaultView-upDownArrow-9",
+      "upDownArrowContainer": "FileUploadRowDefaultView-upDownArrowContainer-8",
+      "upDownArrowContainerBottom": "FileUploadRowDefaultView-upDownArrowContainerBottom-10",
     }
   }
   disabled={false}
@@ -421,18 +679,38 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     }
   }
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
-      md={6}
-      sm={5}
+      md={3}
+      sm={2}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         data-testid="dsi-dsid-0"
         gutterBottom={true}
         noWrap={true}
@@ -442,12 +720,31 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
          (
         100 MB
         )
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       md={3}
-      sm={4}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      md={3}
+      sm={3}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -479,7 +776,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         selectProps={
           Object {
             "className": undefined,
-            "input": <WithStyles(ForwardRef(Input))
+            "input": <ForwardRef(Input)
               autoFocus={false}
               classes={
                 Object {
@@ -492,10 +789,9 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         }
         value={5}
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
-      md={2}
       sm={2}
     >
       <WithStyles(FileUploadEmbargoDate)
@@ -505,8 +801,8 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         onChange={[MockFunction]}
         value="01/01/2017"
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       className=""
       item={true}
       xs={1}
@@ -517,7 +813,27 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      xs={1}
+    >
+      <ForwardRef(IconButton)
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </div>
 `;

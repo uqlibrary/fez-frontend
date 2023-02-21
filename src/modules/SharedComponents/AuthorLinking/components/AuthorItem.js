@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { numberToWords } from 'config';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import RadioButtonUnchecked from '@material-ui/icons/RadioButtonUnchecked';
-import RadioButtonChecked from '@material-ui/icons/RadioButtonChecked';
-import Link from '@material-ui/icons/Link';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
+import RadioButtonUnchecked from '@mui/icons-material/RadioButtonUnchecked';
+import RadioButtonChecked from '@mui/icons-material/RadioButtonChecked';
+import Link from '@mui/icons-material/Link';
 
 export const styles = theme => ({
     authorLinkIcon: {

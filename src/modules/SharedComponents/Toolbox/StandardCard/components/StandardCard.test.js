@@ -3,7 +3,7 @@ import { render, WithReduxStore } from 'test-utils';
 
 import StandardCard from './StandardCard';
 
-jest.mock('@material-ui/styles', () => ({
+jest.mock('@mui/styles', () => ({
     makeStyles: () => () => ({}),
 }));
 

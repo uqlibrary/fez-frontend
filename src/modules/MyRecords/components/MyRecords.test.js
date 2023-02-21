@@ -167,7 +167,7 @@ describe('MyRecords test', () => {
         const wrapper = setup({ loadingPublicationsList: true });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             loadingPublicationsList: false,
             publicationsList: [1, 2, 3],
             history: {},
@@ -184,7 +184,7 @@ describe('MyRecords test', () => {
             thisUrl: pathConfig.records.mine,
         });
 
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             history: { action: 'POP' },
             location: { pathname: pathConfig.records.mine, state: { page: 2, hasPublications: true } },
         });
@@ -200,7 +200,7 @@ describe('MyRecords test', () => {
             actions: { loadAuthorPublications: testAction },
             thisUrl: pathConfig.records.mine,
         });
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             history: { action: 'POP' },
             location: { pathname: pathConfig.records.mine, state: null },
             loadingPublicationsList: false,
@@ -214,7 +214,7 @@ describe('MyRecords test', () => {
         const testAction = jest.fn();
         const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction } });
 
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             history: { action: 'PUSH' },
             location: { pathname: pathConfig.records.mine },
             mine: {
@@ -309,19 +309,21 @@ describe('MyRecords test', () => {
         );
 
         wrapper.instance().handleExportPublications({ exportPublicationsFormat: 'excel' });
-        expect(testFn).toHaveBeenCalledWith({
-            activeFacets: {
-                filters: {},
-                ranges: {},
-            },
-            bulkExportSelected: true,
-            exportPublicationsFormat: 'excel',
-            hasPublications: true,
-            page: 1,
-            pageSize: 1000,
-            sortBy: 'published_date',
-            sortDirection: 'Desc',
-        });
+        expect(testFn).toHaveBeenCalledWith(
+            expect.objectContaining({
+                activeFacets: {
+                    filters: {},
+                    ranges: {},
+                },
+                bulkExportSelected: true,
+                exportPublicationsFormat: 'excel',
+                hasPublications: true,
+                page: 1,
+                pageSize: 1000,
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+            }),
+        );
     });
 
     it('shows confirmation message on success confirmation for bulk export', done => {

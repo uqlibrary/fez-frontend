@@ -101,6 +101,7 @@ const recordWithDatastreams = {
     ],
     "fez_datastream_info": [
         {
+            "dsi_id": 1,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",
             "dsi_embargo_date": null,
@@ -111,9 +112,11 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 1
         },
         {
+            "dsi_id": 2,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2014.pdf.xml",
             "dsi_embargo_date": null,
@@ -124,9 +127,11 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 2
         },
         {
+            "dsi_id": 3,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "FezACML_My_UQ_eSpace_UPO_guidelines.pdf.xml",
             "dsi_embargo_date": null,
@@ -137,9 +142,11 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3092,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 3
         },
         {
+            "dsi_id": 4,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "FezACML_My_UQ_eSpace_UPO_guidelines_2013.pdf.xml",
             "dsi_embargo_date": null,
@@ -150,9 +157,11 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 4
         },
         {
+            "dsi_id": 5,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "FezACML_My_UQ_eSpace_UPO_guidelines_2016.pdf.xml",
             "dsi_embargo_date": null,
@@ -163,9 +172,11 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 4
         },
         {
+            "dsi_id": 6,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "FezACML_UQ_252236.xml",
             "dsi_embargo_date": null,
@@ -176,9 +187,11 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3705,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 3
         },
         {
+            "dsi_id": 7,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "FezACML_UQ_eSpace_My_Research_091119.pdf.xml",
             "dsi_embargo_date": null,
@@ -189,9 +202,11 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": null
         },
         {
+            "dsi_id": 8,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "FezACML_UQ_eSpace_My_Research_091119_old.pdf.xml",
             "dsi_embargo_date": null,
@@ -205,6 +220,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 9,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "MyUQeSpaceResearcherGuidelines.pdf",
             "dsi_embargo_date": null,
@@ -218,6 +234,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 10,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "MyUQeSpace_Researcher_Guidelines.pdf",
             "dsi_embargo_date": null,
@@ -231,6 +248,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 11,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "MyUQeSpace_Researcher_Guidelines_current.pdf",
             "dsi_embargo_date": '2099-01-01',
@@ -244,6 +262,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 12,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "My_UQ_eSpace_researcher_guidelines.pdf",
             "dsi_embargo_date": null,
@@ -257,6 +276,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 13,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "My_UQ_eSpace_researcher_guidelines_2012.pdf",
             "dsi_embargo_date": null,
@@ -270,6 +290,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 14,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "My_UQ_eSpace_researcher_guidelines_2014.pdf",
             "dsi_embargo_date": null,
@@ -283,6 +304,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 15,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "My_UQ_eSpace_UPO_guidelines.pdf",
             "dsi_embargo_date": null,
@@ -296,6 +318,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 16,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "My_UQ_eSpace_UPO_guidelines_2013.pdf",
             "dsi_embargo_date": null,
@@ -309,6 +332,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 17,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "My_UQ_eSpace_UPO_guidelines_2016.pdf",
             "dsi_embargo_date": null,
@@ -322,6 +346,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 18,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_MyUQeSpaceResearcherGuidelines.xml",
             "dsi_embargo_date": null,
@@ -335,6 +360,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 19,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_MyUQeSpace_Researcher_Guidelines.xml",
             "dsi_embargo_date": null,
@@ -348,6 +374,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 20,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_MyUQeSpace_Researcher_Guidelines_current.xml",
             "dsi_embargo_date": null,
@@ -361,6 +388,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 21,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_My_UQ_eSpace_researcher_guidelines.xml",
             "dsi_embargo_date": null,
@@ -374,6 +402,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 22,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_My_UQ_eSpace_researcher_guidelines_2012.xml",
             "dsi_embargo_date": null,
@@ -387,6 +416,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 23,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_My_UQ_eSpace_researcher_guidelines_2014.xml",
             "dsi_embargo_date": null,
@@ -400,6 +430,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 24,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_My_UQ_eSpace_UPO_guidelines.xml",
             "dsi_embargo_date": null,
@@ -413,6 +444,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 25,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_My_UQ_eSpace_UPO_guidelines_2013.xml",
             "dsi_embargo_date": null,
@@ -426,6 +458,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 26,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_My_UQ_eSpace_UPO_guidelines_2016.xml",
             "dsi_embargo_date": null,
@@ -439,6 +472,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 27,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_UQ_eSpace_My_Research_091119.xml",
             "dsi_embargo_date": null,
@@ -452,6 +486,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 28,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "presmd_UQ_eSpace_My_Research_091119_old.xml",
             "dsi_embargo_date": null,
@@ -465,6 +500,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 29,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "UPO_Contacts.xlsx",
             "dsi_embargo_date": null,
@@ -478,6 +514,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 30,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "UPO_Contacts.xlsx1376542008",
             "dsi_embargo_date": null,
@@ -491,6 +528,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 31,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "UQ_eSpace_My_Research_091119.pdf",
             "dsi_embargo_date": null,
@@ -504,6 +542,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 32,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "UQ_eSpace_My_Research_091119_old.pdf",
             "dsi_embargo_date": '2000-01-01',
@@ -517,6 +556,7 @@ const recordWithDatastreams = {
             "dsi_security_policy": 1
         },
         {
+            "dsi_id": 33,
             "dsi_pid": "UQ:252236",
             "dsi_dsid": "URLLink.acsm",
             "dsi_embargo_date": null,

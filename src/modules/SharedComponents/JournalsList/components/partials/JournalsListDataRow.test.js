@@ -1,22 +1,12 @@
 import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
 import JournalsListDataRow from './JournalsListDataRow';
 import { JournalFieldsMap } from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
 import { WithReduxStore, fireEvent, render, act } from 'test-utils';
 import Immutable from 'immutable';
 import { sanitiseId } from 'helpers/general';
-import mediaQuery from 'css-mediaquery';
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
-
 const defaultTestData = {
     row: mockData[0],
     index: 0,
@@ -37,7 +27,6 @@ const setup = ({ testData = { ...defaultTestData }, ...state }) => {
 
 describe('JournalsListDataRow', () => {
     it('should render a row', () => {
-        window.matchMedia = createMatchMedia(1024);
         const { getByTestId } = setup({ isSelectable: true, checked: false });
         expect(getByTestId('journal-list-data-col-1-checkbox-0')).toBeInTheDocument();
         expect(getByTestId('journal-list-data-col-1-checkbox-0')).not.toHaveAttribute('disabled');
@@ -52,7 +41,6 @@ describe('JournalsListDataRow', () => {
     });
 
     it('should render correct content in fields on desktop', () => {
-        window.matchMedia = createMatchMedia(1024);
         // set default blank data for test coverage for one of the journal items.
         mockData[1].fez_journal_cite_score = {
             fez_journal_cite_score_asjc_code: [],
@@ -85,7 +73,6 @@ describe('JournalsListDataRow', () => {
     });
 
     it('should render correct content in fields on mobile', () => {
-        window.matchMedia = createMatchMedia(599);
         // set default blank data for test coverage for one of the journal items.
         mockData[1].fez_journal_cite_score = {
             fez_journal_cite_score_asjc_code: [],
@@ -121,7 +108,6 @@ describe('JournalsListDataRow', () => {
     });
 
     it('should render nothing if no data provided', () => {
-        window.matchMedia = createMatchMedia(1024);
         const testData = {
             row: undefined,
             index: 0,
@@ -133,24 +119,11 @@ describe('JournalsListDataRow', () => {
     });
 
     it('should render tooltip', () => {
-        window.matchMedia = createMatchMedia(1024);
         setup({ isSelectable: true, checked: false });
         expect(document.querySelector('p[title="Use filters to find alternate pathways"]')).toBeInTheDocument();
     });
 
     it('should expand to show item details when button clicked on desktop', () => {
-        window.matchMedia = createMatchMedia(1024);
-        const { getByTestId } = setup({ isSelectable: true, checked: false });
-
-        expect(getByTestId('journal-list-expander-btn-0')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(getByTestId('journal-list-expander-btn-0'));
-        });
-        expect(getByTestId('journal-list-collapse-panel-0')).toBeInTheDocument();
-    });
-
-    it('should expand to show item details when button clicked on mobile', () => {
-        window.matchMedia = createMatchMedia(599);
         const { getByTestId } = setup({ isSelectable: true, checked: false });
 
         expect(getByTestId('journal-list-expander-btn-0')).toBeInTheDocument();

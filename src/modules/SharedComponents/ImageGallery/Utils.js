@@ -7,7 +7,6 @@ import {
 } from 'modules/ViewRecord/components/Files';
 import { isAdded, isDerivative } from 'helpers/datastreams';
 import { default as config } from 'config/imageGalleryConfig';
-import { viewRecordsConfig } from 'config';
 
 export const isFileValid = dataStream => {
     return !isDerivative(dataStream) && isAdded(dataStream);
@@ -41,23 +40,12 @@ export const getWhiteListed = (publication, config) => {
     return isAllowed;
 };
 
-export const isViewableByUser = (publication, dataStreams, props) => {
-    const { files } = viewRecordsConfig;
-    // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
-    const containBlacklistCollections = publication.fez_record_search_key_ismemberof?.some(collection =>
-        files.blacklist.collections.includes(collection.rek_ismemberof),
-    );
-    return (
-        (!!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!props.isAdmin)) ||
-        // eslint-disable-next-line camelcase
-        props.author?.pol_id === 1
-    );
-};
-
 export const getFileData = (publication, props) => {
     const dataStreams = publication.fez_datastream_info;
-    return !!dataStreams && isViewableByUser(publication, dataStreams, props)
-        ? dataStreams.filter(isFileValid).map(dataStream => {
+
+    return !!!dataStreams
+        ? []
+        : dataStreams.filter(isFileValid).map(dataStream => {
               // isAdmin not passed to isFileValid because in this case all we care about is the thumbnail record
               const fileName = dataStream.dsi_dsid;
               const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
@@ -77,8 +65,7 @@ export const getFileData = (publication, props) => {
                   securityStatus,
                   isWhiteListed,
               };
-          })
-        : [];
+          });
 };
 
 export const sortThumbnailsBySecurityStatus = data => {

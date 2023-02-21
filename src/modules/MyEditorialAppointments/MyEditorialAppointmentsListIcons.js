@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
 
-// import AddCircle from '@material-ui/icons/AddCircle';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
-import Check from '@material-ui/icons/Check';
-import Clear from '@material-ui/icons/Clear';
-import Delete from '@material-ui/icons/Delete';
-import Edit from '@material-ui/icons/Edit';
+// import AddCircle from '@mui/icons-material/AddCircle';
+import ArrowDownward from '@mui/icons-material/ArrowDownward';
+import Check from '@mui/icons-material/Check';
+import Clear from '@mui/icons-material/Clear';
+import Delete from '@mui/icons-material/Delete';
+import Edit from '@mui/icons-material/Edit';
 
 export const tableIcons = {
     // Add: forwardRef((props, ref) => <AddCircle {...props} color="primary" fontSize="large" ref={ref} />),

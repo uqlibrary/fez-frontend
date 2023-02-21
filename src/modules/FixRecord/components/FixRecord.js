@@ -2,10 +2,10 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Field, propTypes } from 'redux-form/immutable';
 
-import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
 
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -65,9 +65,8 @@ export default class FixRecord extends PureComponent {
         }
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
+    componentDidUpdate(prevProps) {
+        if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox &&
                 this.successConfirmationBox.showConfirmation &&
                 this.successConfirmationBox.showConfirmation();
@@ -206,7 +205,7 @@ export default class FixRecord extends PureComponent {
                                     />
                                     <Grid item xs={12}>
                                         <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
-                                            <Grid container spacing={2}>
+                                            <Grid container spacing={2} padding={0}>
                                                 <Grid item xs={12}>
                                                     <Field
                                                         component={TextField}
@@ -239,7 +238,7 @@ export default class FixRecord extends PureComponent {
                                                 title={txtFixForm.contentIndicators.title}
                                                 help={txtFixForm.contentIndicators.help}
                                             >
-                                                <Grid container spacing={3}>
+                                                <Grid container spacing={3} padding={0}>
                                                     <Grid item xs={12}>
                                                         <Typography>
                                                             {txtFixForm.contentIndicators.description}
@@ -308,6 +307,7 @@ export default class FixRecord extends PureComponent {
                                     children={txt.cancel}
                                     disabled={this.props.submitting}
                                     onClick={this._cancelFix}
+                                    color={'default'}
                                 />
                             </Grid>
                             {this.state.selectedRecordAction && (

@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ResearchReportForm renders  component 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Research report information"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -26,10 +26,44 @@ exports[`ResearchReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -49,8 +83,8 @@ exports[`ResearchReportForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -60,10 +94,44 @@ exports[`ResearchReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -76,8 +144,8 @@ exports[`ResearchReportForm renders  component 1`] = `
             required={false}
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -87,10 +155,44 @@ exports[`ResearchReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -103,8 +205,8 @@ exports[`ResearchReportForm renders  component 1`] = `
             required={false}
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -114,10 +216,44 @@ exports[`ResearchReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -129,8 +265,8 @@ exports[`ResearchReportForm renders  component 1`] = `
             placeholder="Type the report number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -140,10 +276,44 @@ exports[`ResearchReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -162,8 +332,8 @@ exports[`ResearchReportForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -173,10 +343,44 @@ exports[`ResearchReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -193,8 +397,8 @@ exports[`ResearchReportForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -215,8 +419,8 @@ exports[`ResearchReportForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -238,11 +442,11 @@ exports[`ResearchReportForm renders  component 1`] = `
             hintText="Enter title of series"
             name="fez_record_search_key_series.rek_series"
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -265,9 +469,9 @@ exports[`ResearchReportForm renders  component 1`] = `
       }
       title="Authors"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         Please provide a list of authors and then select your name from the list.
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         contributorEditorId="authors"
@@ -364,17 +568,17 @@ exports[`ResearchReportForm renders  component 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="ISBN"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         You can add up to five ISBN values
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         disabled={false}
@@ -445,17 +649,17 @@ exports[`ResearchReportForm renders  component 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="ISSN"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         You can add up to five ISSN values
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         disabled={false}
@@ -545,19 +749,19 @@ exports[`ResearchReportForm renders  component 1`] = `
         transformFunction={[Function]}
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Other work details"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -566,10 +770,44 @@ exports[`ResearchReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -583,8 +821,8 @@ exports[`ResearchReportForm renders  component 1`] = `
             rows={3}
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -593,10 +831,44 @@ exports[`ResearchReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -609,8 +881,8 @@ exports[`ResearchReportForm renders  component 1`] = `
             placeholder="Add any additional information here"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -619,10 +891,44 @@ exports[`ResearchReportForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -639,30 +945,30 @@ exports[`ResearchReportForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`ResearchReportForm renders  should render validation required 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={3}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Research report information"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -672,10 +978,44 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -695,8 +1035,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -706,10 +1046,44 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -727,8 +1101,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -738,10 +1112,44 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -759,8 +1167,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -770,10 +1178,44 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -785,8 +1227,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
             placeholder="Type the report number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -796,10 +1238,44 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -818,8 +1294,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -829,10 +1305,44 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -849,8 +1359,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -871,8 +1381,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -894,11 +1404,11 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
             hintText="Enter title of series"
             name="fez_record_search_key_series.rek_series"
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -921,9 +1431,9 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
       }
       title="Authors"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         Please provide a list of authors and then select your name from the list.
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         contributorEditorId="authors"
@@ -1020,17 +1530,17 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="ISBN"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         You can add up to five ISBN values
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         disabled={false}
@@ -1101,17 +1611,17 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="ISSN"
     >
-      <WithStyles(ForwardRef(Typography))>
+      <ForwardRef(Typography)>
         You can add up to five ISSN values
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
       <Field
         component={[Function]}
         disabled={false}
@@ -1201,19 +1711,19 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
         transformFunction={[Function]}
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Other work details"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1222,10 +1732,44 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -1239,8 +1783,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
             rows={3}
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1249,10 +1793,44 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -1265,8 +1843,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
             placeholder="Add any additional information here"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1275,10 +1853,44 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -1295,9 +1907,9 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

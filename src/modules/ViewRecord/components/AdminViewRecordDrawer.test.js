@@ -1,20 +1,12 @@
 import React from 'react';
 import AdminViewRecordDrawer from './AdminViewRecordDrawer';
-import mediaQuery from 'css-mediaquery';
-import { render, WithRouter, WithReduxStore, waitFor, act, fireEvent } from 'test-utils';
+import { render, WithRouter, WithReduxStore, waitFor, act, fireEvent, createMatchMedia } from 'test-utils';
 import locale from 'locale/pages';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
 import { default as recordWithoutAuthorAffiliates } from 'mock/data/records/recordWithoutAuthorAffiliates';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
 
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 const txt = locale.pages.viewRecord;
 const setup = (props = {}, renderer = render) => {
     const content =

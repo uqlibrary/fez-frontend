@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import TextField from '@material-ui/core/TextField';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-// MUI 1
-import Grid from '@material-ui/core/Grid';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import { withStyles } from '@material-ui/core/styles';
+import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Grid from '@mui/material/Unstable_Grid2';
+import FormHelperText from '@mui/material/FormHelperText';
+import withStyles from '@mui/styles/withStyles';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 
 import moment from 'moment';
@@ -34,7 +33,7 @@ export const STATUS_FUTURE_DATE = 3; // the date entered is valid but in the fut
 
 export const MONTH_UNSELECTED = -1;
 
-export class PartialDateForm extends Component {
+export class PartialDateForm extends PureComponent {
     static propTypes = {
         locale: PropTypes.object,
         onChange: PropTypes.func,
@@ -106,22 +105,22 @@ export class PartialDateForm extends Component {
                 day: dateValue.date(),
                 month: dateValue.month(),
                 year: dateValue.year(),
+                setDate: this._setDate,
             };
         } else {
             this.state = {
                 day: '',
                 month: -1,
                 year: '',
+                setDate: this._setDate,
             };
         }
         this.errors = { day: '', month: '', year: '' };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange) {
-            this.props.onChange(this._setDate(nextState));
-        }
+    static getDerivedStateFromProps(props, state) {
+        props.onChange?.(state.setDate(state));
+        return { ...state };
     }
 
     /**
@@ -248,7 +247,7 @@ export class PartialDateForm extends Component {
 
         this._displayErrors(date, validationStatus, this.props.allowPartial, this.props.required);
 
-        // moment validation doesn't recognise -1 as a valid date
+        // moment validation doesn't recognise -1 as a valid date.
         const month = date.month === MONTH_UNSELECTED ? null : date.month;
         const day = isNaN(date.day) || !date.day ? null : date.day;
         const momentDate = { ...date, month, day };
@@ -287,16 +286,17 @@ export class PartialDateForm extends Component {
         ));
         const isError = this.errors.date || this.props.hasError || '';
         return (
-            <Grid container spacing={0} id={this.props.partialDateFormId}>
+            <Grid container spacing={0} padding={0} id={this.props.partialDateFormId}>
                 <Grid item xs={12}>
                     <InputLabel error={!!isError} shrink required={this.props.required}>
                         {this.props.floatingTitle}
                     </InputLabel>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container spacing={2} style={{ marginTop: -12 }}>
+                    <Grid container spacing={2} padding={0} style={{ marginTop: -12 }}>
                         <Grid item xs={4}>
                             <TextField
+                                variant="standard"
                                 name="day"
                                 id={`${this.props.partialDateFormId}-day`}
                                 type="text"
@@ -319,6 +319,7 @@ export class PartialDateForm extends Component {
                         </Grid>
                         <Grid item xs={4}>
                             <Select
+                                variant="standard"
                                 style={{ width: '100%' }}
                                 id={`${this.props.partialDateFormId}-month`}
                                 name="month"
@@ -350,6 +351,7 @@ export class PartialDateForm extends Component {
                         </Grid>
                         <Grid item xs={4}>
                             <TextField
+                                variant="standard"
                                 name="year"
                                 id={`${this.props.partialDateFormId}-year`}
                                 type="text"

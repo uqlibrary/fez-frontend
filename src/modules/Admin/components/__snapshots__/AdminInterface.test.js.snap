@@ -3,7 +3,7 @@
 exports[`AdminInterface component should disabled button and render alert for form submitting 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -27,7 +27,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -36,7 +36,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -47,27 +47,31 @@ exports[`AdminInterface component should disabled button and render alert for fo
           variant="h2"
         >
           Edit Journal Article - This is test record: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -77,12 +81,12 @@ exports[`AdminInterface component should disabled button and render alert for fo
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -95,14 +99,14 @@ exports[`AdminInterface component should disabled button and render alert for fo
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin-top"
                 disabled={true}
@@ -111,14 +115,14 @@ exports[`AdminInterface component should disabled button and render alert for fo
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 disabled={true}
@@ -154,50 +158,54 @@ exports[`AdminInterface component should disabled button and render alert for fo
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -221,12 +229,12 @@ exports[`AdminInterface component should disabled button and render alert for fo
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -250,12 +258,12 @@ exports[`AdminInterface component should disabled button and render alert for fo
             type="info_outline"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -264,12 +272,12 @@ exports[`AdminInterface component should disabled button and render alert for fo
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -282,14 +290,14 @@ exports[`AdminInterface component should disabled button and render alert for fo
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin"
                 disabled={true}
@@ -298,14 +306,14 @@ exports[`AdminInterface component should disabled button and render alert for fo
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 disabled={true}
@@ -341,11 +349,11 @@ exports[`AdminInterface component should disabled button and render alert for fo
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -353,10 +361,10 @@ exports[`AdminInterface component should disabled button and render alert for fo
 
 exports[`AdminInterface component should display an alert if editing of a pubtype is not supported 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
@@ -371,8 +379,8 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
         type="info"
         wiggle={null}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -381,7 +389,7 @@ exports[`AdminInterface component should display badges on tabs for erroring fie
 exports[`AdminInterface component should display job created alert 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -405,7 +413,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -414,7 +422,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -425,27 +433,31 @@ exports[`AdminInterface component should display job created alert 1`] = `
           variant="h2"
         >
           Edit Journal Article - This is test record: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -455,12 +467,12 @@ exports[`AdminInterface component should display job created alert 1`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -473,14 +485,14 @@ exports[`AdminInterface component should display job created alert 1`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin-top"
                 fullWidth={true}
@@ -488,14 +500,14 @@ exports[`AdminInterface component should display job created alert 1`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 fullWidth={true}
@@ -530,50 +542,54 @@ exports[`AdminInterface component should display job created alert 1`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -596,12 +612,12 @@ exports[`AdminInterface component should display job created alert 1`] = `
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -625,12 +641,12 @@ exports[`AdminInterface component should display job created alert 1`] = `
             type="done"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -639,12 +655,12 @@ exports[`AdminInterface component should display job created alert 1`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -657,14 +673,14 @@ exports[`AdminInterface component should display job created alert 1`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin"
                 fullWidth={true}
@@ -672,14 +688,14 @@ exports[`AdminInterface component should display job created alert 1`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 fullWidth={true}
@@ -714,11 +730,11 @@ exports[`AdminInterface component should display job created alert 1`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -727,7 +743,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
 exports[`AdminInterface component should display job created alert 2`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -751,7 +767,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -760,7 +776,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -771,27 +787,31 @@ exports[`AdminInterface component should display job created alert 2`] = `
           variant="h2"
         >
           Edit Journal Article - This is test record: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -801,12 +821,12 @@ exports[`AdminInterface component should display job created alert 2`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -819,14 +839,14 @@ exports[`AdminInterface component should display job created alert 2`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin-top"
                 fullWidth={true}
@@ -834,14 +854,14 @@ exports[`AdminInterface component should display job created alert 2`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 fullWidth={true}
@@ -876,50 +896,54 @@ exports[`AdminInterface component should display job created alert 2`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -942,12 +966,12 @@ exports[`AdminInterface component should display job created alert 2`] = `
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -971,12 +995,12 @@ exports[`AdminInterface component should display job created alert 2`] = `
             type="done"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -985,12 +1009,12 @@ exports[`AdminInterface component should display job created alert 2`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -1003,14 +1027,14 @@ exports[`AdminInterface component should display job created alert 2`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin"
                 fullWidth={true}
@@ -1018,14 +1042,14 @@ exports[`AdminInterface component should display job created alert 2`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 fullWidth={true}
@@ -1060,11 +1084,11 @@ exports[`AdminInterface component should display job created alert 2`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -1073,7 +1097,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
 exports[`AdminInterface component should display successful alert 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -1097,7 +1121,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -1106,7 +1130,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -1117,27 +1141,31 @@ exports[`AdminInterface component should display successful alert 1`] = `
           variant="h2"
         >
           Edit Journal Article - This is test record: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -1147,12 +1175,12 @@ exports[`AdminInterface component should display successful alert 1`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -1165,14 +1193,14 @@ exports[`AdminInterface component should display successful alert 1`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin-top"
                 fullWidth={true}
@@ -1180,14 +1208,14 @@ exports[`AdminInterface component should display successful alert 1`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 fullWidth={true}
@@ -1222,50 +1250,54 @@ exports[`AdminInterface component should display successful alert 1`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -1288,12 +1320,12 @@ exports[`AdminInterface component should display successful alert 1`] = `
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1317,12 +1349,12 @@ exports[`AdminInterface component should display successful alert 1`] = `
             type="done"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -1331,12 +1363,12 @@ exports[`AdminInterface component should display successful alert 1`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -1349,14 +1381,14 @@ exports[`AdminInterface component should display successful alert 1`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin"
                 fullWidth={true}
@@ -1364,14 +1396,14 @@ exports[`AdminInterface component should display successful alert 1`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 fullWidth={true}
@@ -1406,11 +1438,11 @@ exports[`AdminInterface component should display successful alert 1`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -1419,7 +1451,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
 exports[`AdminInterface component should display successful alert 2`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -1443,7 +1475,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -1452,7 +1484,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -1463,27 +1495,31 @@ exports[`AdminInterface component should display successful alert 2`] = `
           variant="h2"
         >
           Edit Journal Article - This is test record: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -1493,12 +1529,12 @@ exports[`AdminInterface component should display successful alert 2`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -1511,14 +1547,14 @@ exports[`AdminInterface component should display successful alert 2`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin-top"
                 fullWidth={true}
@@ -1526,14 +1562,14 @@ exports[`AdminInterface component should display successful alert 2`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 fullWidth={true}
@@ -1568,50 +1604,54 @@ exports[`AdminInterface component should display successful alert 2`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -1634,12 +1674,12 @@ exports[`AdminInterface component should display successful alert 2`] = `
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1663,12 +1703,12 @@ exports[`AdminInterface component should display successful alert 2`] = `
             type="done"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -1677,12 +1717,12 @@ exports[`AdminInterface component should display successful alert 2`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -1695,14 +1735,14 @@ exports[`AdminInterface component should display successful alert 2`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin"
                 fullWidth={true}
@@ -1710,14 +1750,14 @@ exports[`AdminInterface component should display successful alert 2`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 fullWidth={true}
@@ -1752,11 +1792,11 @@ exports[`AdminInterface component should display successful alert 2`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -1765,7 +1805,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
 exports[`AdminInterface component should render a title with html correctly 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -1789,7 +1829,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -1798,7 +1838,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -1821,27 +1861,31 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             a
           </sup>
           sses ™ ♦: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -1851,12 +1895,12 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -1869,14 +1913,14 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin-top"
                 fullWidth={true}
@@ -1884,14 +1928,14 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 fullWidth={true}
@@ -1926,26 +1970,30 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
-      >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
-        />
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
+      />
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -1968,16 +2016,16 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -1986,12 +2034,12 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -2004,14 +2052,14 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin"
                 fullWidth={true}
@@ -2019,14 +2067,14 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 fullWidth={true}
@@ -2061,11 +2109,11 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -2076,7 +2124,7 @@ exports[`AdminInterface component should render alert message for retracted reco
 exports[`AdminInterface component should render default view as a full form view 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -2100,7 +2148,7 @@ exports[`AdminInterface component should render default view as a full form view
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -2109,7 +2157,7 @@ exports[`AdminInterface component should render default view as a full form view
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -2120,27 +2168,31 @@ exports[`AdminInterface component should render default view as a full form view
           variant="h2"
         >
           Edit Journal Article - This is test record: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -2150,12 +2202,12 @@ exports[`AdminInterface component should render default view as a full form view
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -2168,14 +2220,14 @@ exports[`AdminInterface component should render default view as a full form view
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin-top"
                 fullWidth={true}
@@ -2183,14 +2235,14 @@ exports[`AdminInterface component should render default view as a full form view
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 fullWidth={true}
@@ -2225,26 +2277,30 @@ exports[`AdminInterface component should render default view as a full form view
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
-      >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
-        />
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
+      />
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -2305,16 +2361,16 @@ exports[`AdminInterface component should render default view as a full form view
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -2323,12 +2379,12 @@ exports[`AdminInterface component should render default view as a full form view
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -2341,14 +2397,14 @@ exports[`AdminInterface component should render default view as a full form view
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin"
                 fullWidth={true}
@@ -2356,14 +2412,14 @@ exports[`AdminInterface component should render default view as a full form view
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 fullWidth={true}
@@ -2398,11 +2454,11 @@ exports[`AdminInterface component should render default view as a full form view
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -2411,7 +2467,7 @@ exports[`AdminInterface component should render default view as a full form view
 exports[`AdminInterface component should render default view as a tabbed form view 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -2435,7 +2491,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -2444,7 +2500,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -2455,27 +2511,31 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           variant="h2"
         >
           Edit Journal Article - This is test record: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -2485,12 +2545,12 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -2503,14 +2563,14 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin-top"
                 fullWidth={true}
@@ -2518,14 +2578,14 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 fullWidth={true}
@@ -2560,56 +2620,60 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="security-tab"
-                key="security"
-                label="Security"
-                value="security"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+            <WithStyles(ForwardRef(Tab))
+              data-testid="security-tab"
+              key="security"
+              label="Security"
+              value="security"
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -2632,16 +2696,16 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -2650,12 +2714,12 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -2668,14 +2732,14 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin"
                 fullWidth={true}
@@ -2683,14 +2747,14 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 fullWidth={true}
@@ -2725,11 +2789,11 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -2738,7 +2802,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
 exports[`AdminInterface component should render in create mode 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -2762,7 +2826,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -2771,7 +2835,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -2782,27 +2846,31 @@ exports[`AdminInterface component should render in create mode 1`] = `
           variant="h2"
         >
           Add a new Thesis
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -2812,12 +2880,12 @@ exports[`AdminInterface component should render in create mode 1`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -2830,14 +2898,14 @@ exports[`AdminInterface component should render in create mode 1`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 fullWidth={true}
@@ -2851,62 +2919,66 @@ exports[`AdminInterface component should render in create mode 1`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="files-tab"
-                key="files"
-                label="Files"
-                value="files"
-              />
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="security-tab"
-                key="security"
-                label="Security"
-                value="security"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+            <WithStyles(ForwardRef(Tab))
+              data-testid="files-tab"
+              key="files"
+              label="Files"
+              value="files"
+            />
+            <WithStyles(ForwardRef(Tab))
+              data-testid="security-tab"
+              key="security"
+              label="Security"
+              value="security"
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -2929,16 +3001,16 @@ exports[`AdminInterface component should render in create mode 1`] = `
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -2947,12 +3019,12 @@ exports[`AdminInterface component should render in create mode 1`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -2965,14 +3037,14 @@ exports[`AdminInterface component should render in create mode 1`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 fullWidth={true}
@@ -2986,11 +3058,11 @@ exports[`AdminInterface component should render in create mode 1`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -2999,7 +3071,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
 exports[`AdminInterface component should render locked alert in edit mode 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -3023,7 +3095,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -3032,7 +3104,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -3043,28 +3115,32 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
           variant="h2"
         >
           Edit undefined - undefined: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
+        <Memo() />
+      </ForwardRef(Grid)>
       <LockedAlert />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -3074,12 +3150,12 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -3092,14 +3168,14 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="unpublish-admin-top"
                 disabled={true}
@@ -3108,14 +3184,14 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 variant="contained"
               >
                 Unpublish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 disabled={true}
@@ -3151,62 +3227,66 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="files-tab"
-                key="files"
-                label="Files"
-                value="files"
-              />
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="security-tab"
-                key="security"
-                label="Security"
-                value="security"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+            <WithStyles(ForwardRef(Tab))
+              data-testid="files-tab"
+              key="files"
+              label="Files"
+              value="files"
+            />
+            <WithStyles(ForwardRef(Tab))
+              data-testid="security-tab"
+              key="security"
+              label="Security"
+              value="security"
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -3230,16 +3310,16 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -3248,12 +3328,12 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -3266,14 +3346,14 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="unpublish-admin"
                 disabled={true}
@@ -3282,14 +3362,14 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 variant="contained"
               >
                 Unpublish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 disabled={true}
@@ -3325,11 +3405,11 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -3338,7 +3418,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
 exports[`AdminInterface component should render locked info alert 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -3362,7 +3442,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -3371,7 +3451,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -3382,28 +3462,32 @@ exports[`AdminInterface component should render locked info alert 1`] = `
           variant="h2"
         >
           Edit undefined - undefined: UQ:123456
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
+        <Memo() />
+      </ForwardRef(Grid)>
       <LockedAlert />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -3413,12 +3497,12 @@ exports[`AdminInterface component should render locked info alert 1`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -3431,14 +3515,14 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin-top"
                 disabled={false}
@@ -3447,14 +3531,14 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 disabled={false}
@@ -3490,62 +3574,66 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="files-tab"
-                key="files"
-                label="Files"
-                value="files"
-              />
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="security-tab"
-                key="security"
-                label="Security"
-                value="security"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+            <WithStyles(ForwardRef(Tab))
+              data-testid="files-tab"
+              key="files"
+              label="Files"
+              value="files"
+            />
+            <WithStyles(ForwardRef(Tab))
+              data-testid="security-tab"
+              key="security"
+              label="Security"
+              value="security"
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -3569,16 +3657,16 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -3587,12 +3675,12 @@ exports[`AdminInterface component should render locked info alert 1`] = `
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -3605,14 +3693,14 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={3}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 data-testid="publish-admin"
                 disabled={false}
@@ -3621,14 +3709,14 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 variant="contained"
               >
                 Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 disabled={false}
@@ -3664,11 +3752,11 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 variant="contained"
               >
                 Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>
@@ -3677,7 +3765,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
 exports[`AdminInterface component should render undelete title and button 1`] = `
 <StandardPage>
   <form>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       direction="row"
@@ -3701,7 +3789,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -3710,7 +3798,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
         }
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           style={
             Object {
@@ -3721,27 +3809,31 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
           variant="h2"
         >
           Undelete undefined - undefined: undefined
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs="auto"
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs="auto"
-        >
-          <Memo() />
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+        <Memo() />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -3751,12 +3843,12 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel-top"
@@ -3769,14 +3861,14 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin-top"
                 fullWidth={true}
@@ -3790,50 +3882,54 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 variant="contained"
               >
                 Undelete
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <Hidden
-        xsDown={true}
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "flex",
+              "xs": "none",
+            },
+          }
+        }
       >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          spacing={0}
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Tabs))
-              classes={
-                Object {
-                  "indicator": "tabindicator",
-                }
+          <ForwardRef(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
               }
-              indicatorColor="primary"
-              onChange={[Function]}
-              textColor="primary"
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            textColor="primary"
+            value="bibliographic"
+          >
+            <WithStyles(ForwardRef(Tab))
+              data-testid="bibliographic-tab"
+              key="bibliographic"
+              label="Bibliographic"
               value="bibliographic"
-            >
-              <WithStyles(WithStyles(ForwardRef(Tab)))
-                data-testid="bibliographic-tab"
-                key="bibliographic"
-                label="Bibliographic"
-                value="bibliographic"
-              />
-            </WithStyles(ForwardRef(Tabs))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </Hidden>
-    </WithStyles(ForwardRef(Grid))>
+            />
+          </ForwardRef(Tabs)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
     <ConfirmDiscardFormChanges
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={0}
       >
@@ -3856,16 +3952,16 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             />
           </StandardCard>
         </TabContainer>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
             style={
@@ -3874,12 +3970,12 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
               }
             }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               sm={2}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="secondary"
                 fullWidth={true}
                 id="admin-work-cancel"
@@ -3892,14 +3988,14 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 variant="contained"
               >
                 Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               sm={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Button))
+              <ForwardRef(Button)
                 color="primary"
                 data-testid="submit-admin"
                 fullWidth={true}
@@ -3913,11 +4009,11 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 variant="contained"
               >
                 Undelete
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Button)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </ConfirmDiscardFormChanges>
   </form>
 </StandardPage>

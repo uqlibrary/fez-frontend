@@ -4,21 +4,22 @@ import PropTypes from 'prop-types';
 import FileUploadEmbargoDate from './FileUploadEmbargoDate';
 import FileUploadRowStatus from './FileUploadRowStatus';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { PolicyDropdown } from 'modules/Admin/components/security/PolicyDropdown';
 
-import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, INHERIT_OPTION } from '../config';
+import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, FILE_SECURITY_POLICY_PUBLIC } from '../config';
 import { selectFields } from 'locale/selectFields';
 
-import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import Attachment from '@material-ui/icons/Attachment';
-import CalendarTodayOutlined from '@material-ui/icons/CalendarTodayOutlined';
-import LockOutlined from '@material-ui/icons/LockOutlined';
-import Input from '@material-ui/core/Input';
-import { withStyles } from '@material-ui/core/styles';
+import Typography from '@mui/material/Typography';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
+import Attachment from '@mui/icons-material/Attachment';
+import CalendarTodayOutlined from '@mui/icons-material/CalendarTodayOutlined';
+import LockOutlined from '@mui/icons-material/LockOutlined';
+import Input from '@mui/material/Input';
+import withStyles from '@mui/styles/withStyles';
 
 export class FileUploadRowMobileView extends PureComponent {
     static propTypes = {
@@ -27,6 +28,7 @@ export class FileUploadRowMobileView extends PureComponent {
         size: PropTypes.string,
         accessConditionId: PropTypes.number,
         embargoDate: PropTypes.string,
+        securityPolicy: PropTypes.number,
         requireOpenAccessStatus: PropTypes.bool.isRequired,
         disabled: PropTypes.bool,
         locale: PropTypes.object,
@@ -34,6 +36,7 @@ export class FileUploadRowMobileView extends PureComponent {
         onDelete: PropTypes.func.isRequired,
         onEmbargoDateChange: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func.isRequired,
+        onSecurityPolicyChange: PropTypes.func.isRequired,
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
         fileUploadRowViewId: PropTypes.string,
@@ -57,6 +60,7 @@ export class FileUploadRowMobileView extends PureComponent {
             disabled,
             accessConditionId,
             embargoDate,
+            securityPolicy,
             name,
             size,
             focusOnIndex,
@@ -87,39 +91,66 @@ export class FileUploadRowMobileView extends PureComponent {
                                 secondary={fileAccessColumn}
                                 secondaryTypographyProps={{ variant: 'caption' }}
                             >
-                                <NewGenericSelectField
-                                    value={accessConditionId || ''}
-                                    onChange={this.props.onAccessConditionChange}
-                                    disabled={disabled}
-                                    autoFocus={index === focusOnIndex}
-                                    locale={this.props.accessConditionLocale}
-                                    genericSelectFieldId={`dsi-open-access-${index}`}
-                                    itemsList={
-                                        this.props.isAdmin
-                                            ? [...FILE_ACCESS_OPTIONS, INHERIT_OPTION]
-                                            : FILE_ACCESS_OPTIONS
-                                    }
-                                    displayEmpty
-                                    hideLabel
-                                    required
-                                    selectProps={{
-                                        className: classes.selector,
-                                        input: (
-                                            <Input
-                                                disableUnderline
-                                                autoFocus={index === focusOnIndex}
-                                                classes={{
-                                                    root: !!accessConditionId ? classes.selected : classes.placeholder,
-                                                }}
-                                            />
-                                        ),
-                                    }}
-                                    formHelperTextProps={{
-                                        className: classes.error,
-                                    }}
-                                    error={!accessConditionId && selectFields.accessCondition.errorMessage}
-                                    selectPrompt={selectFields.accessCondition.selectPrompt}
-                                />
+                                {!!this.props.isAdmin && requireOpenAccessStatus && (
+                                    <PolicyDropdown
+                                        fieldName={name}
+                                        hideLabel
+                                        required
+                                        displayEmpty
+                                        disabled={disabled}
+                                        displayPrompt
+                                        autoFocus={index === focusOnIndex}
+                                        {...{
+                                            input: {
+                                                className: classes.selector,
+                                                disableUnderline: true,
+                                                autoFocus: index === focusOnIndex,
+                                                onChange: this.props.onSecurityPolicyChange,
+                                                onBlur: /* istanbul ignore next */ () => {},
+                                            },
+                                            value: securityPolicy ?? '',
+                                        }}
+                                        errorText={!securityPolicy && selectFields.securityPolicy.errorMessage}
+                                        prompt={selectFields.securityPolicy.selectPrompt}
+                                        policyDropdownId={`dsi-security-policy-${index}`}
+                                        formHelperTextProps={{
+                                            className: classes.error,
+                                        }}
+                                    />
+                                )}
+                                {!!!this.props.isAdmin && (
+                                    <NewGenericSelectField
+                                        value={accessConditionId || ''}
+                                        onChange={this.props.onAccessConditionChange}
+                                        disabled={disabled}
+                                        autoFocus={index === focusOnIndex}
+                                        locale={this.props.accessConditionLocale}
+                                        genericSelectFieldId={`dsi-open-access-${index}`}
+                                        itemsList={FILE_ACCESS_OPTIONS}
+                                        displayEmpty
+                                        hideLabel
+                                        required
+                                        selectProps={{
+                                            className: classes.selector,
+                                            input: (
+                                                <Input
+                                                    disableUnderline
+                                                    autoFocus={index === focusOnIndex}
+                                                    classes={{
+                                                        root: !!accessConditionId
+                                                            ? classes.selected
+                                                            : classes.placeholder,
+                                                    }}
+                                                />
+                                            ),
+                                        }}
+                                        formHelperTextProps={{
+                                            className: classes.error,
+                                        }}
+                                        error={!accessConditionId && selectFields.accessCondition.errorMessage}
+                                        selectPrompt={selectFields.accessCondition.selectPrompt}
+                                    />
+                                )}
                             </ListItemText>
                         </ListItem>
                         <ListItem classes={{ root: classes.listItem }}>
@@ -131,12 +162,14 @@ export class FileUploadRowMobileView extends PureComponent {
                                 primaryTypographyProps={{ variant: 'body1' }}
                                 secondaryTypographyProps={{ variant: 'caption' }}
                             >
-                                {requireOpenAccessStatus && accessConditionId !== FILE_ACCESS_CONDITION_OPEN && (
+                                {((this.props.isAdmin && securityPolicy !== FILE_SECURITY_POLICY_PUBLIC) ||
+                                    (!this.props.isAdmin && accessConditionId !== FILE_ACCESS_CONDITION_OPEN)) && (
                                     <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
                                         {embargoDateClosedAccess}
                                     </Typography>
                                 )}
-                                {requireOpenAccessStatus && accessConditionId === FILE_ACCESS_CONDITION_OPEN && (
+                                {((this.props.isAdmin && securityPolicy === FILE_SECURITY_POLICY_PUBLIC) ||
+                                    (!this.props.isAdmin && accessConditionId === FILE_ACCESS_CONDITION_OPEN)) && (
                                     <FileUploadEmbargoDate
                                         value={embargoDate}
                                         onChange={this.props.onEmbargoDateChange}

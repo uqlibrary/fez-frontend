@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import 'ckeditor';
 
 export default class RichEditor extends PureComponent {
@@ -57,10 +57,9 @@ export default class RichEditor extends PureComponent {
         this.props.instanceRef.current = this.editorInstance;
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.disabled !== this.props.disabled && this.editorInstance !== null) {
-            this.editorInstance.setReadOnly(!!nextProps.disabled);
+    componentDidUpdate(prevProps) {
+        if (prevProps.disabled !== this.props.disabled && this.editorInstance !== null) {
+            this.editorInstance.setReadOnly(!!this.props.disabled);
         }
     }
 

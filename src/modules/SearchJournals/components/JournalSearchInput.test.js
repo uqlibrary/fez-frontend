@@ -27,7 +27,7 @@ describe('JournalSearchInput', () => {
             fireEvent.change(queryByTestId('journal-search-keywords-input'), { target: { value: input } });
         });
         expect(queryByTestId('journal-search-keywords-input').value).toBe(input);
-        expect(queryByTestId('clear-journal-search-keywords')).toHaveAttribute('aria-disabled', 'false');
+        expect(queryByTestId('clear-journal-search-keywords')).not.toHaveAttribute('aria-disabled', 'true');
     });
 
     it('should allow to enter text', () => {

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
@@ -12,7 +12,7 @@ import SearchKeywordsList from './partials/SearchKeywordsList';
 import ForCodeSearchKeywordsList from './partials/ForCodeSearchKeywordsList';
 
 import locale from 'locale/components';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(theme => ({
     border: {

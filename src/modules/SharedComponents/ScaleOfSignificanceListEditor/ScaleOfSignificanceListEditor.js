@@ -4,11 +4,11 @@ import ListRowHeader from '../Toolbox/ListEditor/components/ListRowHeader';
 import ListRow from '../Toolbox/ListEditor/components/ListRow';
 import ScaleOfSignificanceForm from './ScaleOfSignificanceForm';
 import { ScaleOfSignificanceTemplate } from './ScaleOfSignificanceTemplate';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import IconButton from '@material-ui/core/IconButton';
-import Box from '@material-ui/core/Box';
-import AddCircle from '@material-ui/icons/Add';
-import Typography from '@material-ui/core/Typography';
+import FormHelperText from '@mui/material/FormHelperText';
+import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
+import AddCircle from '@mui/icons-material/Add';
+import Typography from '@mui/material/Typography';
 
 export default class ScaleOfSignificanceListEditor extends Component {
     static propTypes = {
@@ -93,12 +93,11 @@ export default class ScaleOfSignificanceListEditor extends Component {
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillUpdate(nextProps, nextState) {
+    componentDidUpdate() {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
         /* istanbul ignore else */
         if (this.props.onChange) {
-            this.props.onChange(this.transformOutput(nextState.itemList));
+            this.props.onChange(this.transformOutput(this.state.itemList));
         }
     }
 

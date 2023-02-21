@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
-import BrokenImage from '@material-ui/icons/BrokenImage';
-import Lock from '@material-ui/icons/Lock';
-import { withStyles } from '@material-ui/core/styles';
+import BrokenImage from '@mui/icons-material/BrokenImage';
+import Lock from '@mui/icons-material/Lock';
+import withStyles from '@mui/styles/withStyles';
 import locale from 'locale/pages';
 import Img from 'react-image';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export const styles = () => ({
     image: {
@@ -101,6 +101,8 @@ export class Thumbnail extends Component {
                     checksums,
                 )}
                 title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl)}
+                id={`preview-link-${fileName}`}
+                data-testid={`preview-link-${fileName}`}
             >
                 {this.props.securityStatus ? (
                     <Img
