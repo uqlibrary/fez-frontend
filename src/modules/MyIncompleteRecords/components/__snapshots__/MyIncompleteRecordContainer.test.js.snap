@@ -195,7 +195,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
       <form>
         <div />
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-71wc8y-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
@@ -271,13 +271,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                 id="standard-card-type-&-collection-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridType-1 css-o171l1-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridType-1 css-13cjagy-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1vh3ggi-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-13y5oxm-MuiGrid2-root"
                   >
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -286,7 +286,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </p>
                     </div>
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-7o4s7z-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -297,13 +297,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridSubType-2 css-o171l1-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridSubType-2 css-13cjagy-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1vh3ggi-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-13y5oxm-MuiGrid2-root"
                   >
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -312,7 +312,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </p>
                     </div>
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-7o4s7z-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -1014,7 +1014,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           class="MuiListItem-container css-oyakqy-MuiListItem-container"
                         >
                           <div
-                            class="MuiListItem-root ContributorRowHeader-header-63 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+                            class="MuiListItem-root ContributorRowHeader-header-64 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
                           >
                             <div
                               class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -1058,7 +1058,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                 class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
                               >
                                 <span
-                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-62 ContributorRowHeader-paddingRightEdit-64 css-1vklb8l-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-63 ContributorRowHeader-paddingRightEdit-65 css-1vklb8l-MuiTypography-root"
                                 >
                                   Reorder items
                                 </span>
@@ -1103,12 +1103,12 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       >
                         <li
                           aria-label="Select this author (Topology) to update their affiliation data."
-                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-highlighted-71 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          class="MuiListItem-root makeStyles-listItem-70 makeStyles-highlighted-72 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-0"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-69 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
@@ -1134,7 +1134,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                 class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                                  class="MuiTypography-root makeStyles-primary-76  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   Topology
                                 </p>
@@ -1154,7 +1154,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-79"
+                              class="makeStyles-actionsContainer-80"
                               data-testid="rek-author-list-row-0-actions"
                               id="rek-author-list-row-0-actions"
                             >
@@ -1231,12 +1231,12 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </li>
                         <li
                           aria-label="Select this author (Davidson, Robert) to update their affiliation data."
-                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-disabledListItem-70 makeStyles-contributorLinked-78 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          class="MuiListItem-root makeStyles-listItem-70 makeStyles-disabledListItem-71 makeStyles-contributorLinked-79 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-1"
                           tabindex="-1"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-69 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
@@ -1263,7 +1263,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                 class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                                  class="MuiTypography-root makeStyles-primary-76  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   Davidson, Robert
                                 </p>
@@ -1283,7 +1283,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-79"
+                              class="makeStyles-actionsContainer-80"
                               data-testid="rek-author-list-row-1-actions"
                               id="rek-author-list-row-1-actions"
                             >
@@ -1380,12 +1380,12 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </li>
                         <li
                           aria-label="Select this author (Babbage, John) to update their affiliation data."
-                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-highlighted-71 makeStyles-contributorLinked-78 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          class="MuiListItem-root makeStyles-listItem-70 makeStyles-highlighted-72 makeStyles-contributorLinked-79 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-2"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-69 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
@@ -1412,7 +1412,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                 class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                                  class="MuiTypography-root makeStyles-primary-76  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   Babbage, John
                                 </p>
@@ -1432,7 +1432,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-79"
+                              class="makeStyles-actionsContainer-80"
                               data-testid="rek-author-list-row-2-actions"
                               id="rek-author-list-row-2-actions"
                             >
@@ -1531,12 +1531,12 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </li>
                         <li
                           aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
-                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-highlighted-71 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          class="MuiListItem-root makeStyles-listItem-70 makeStyles-highlighted-72 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-3"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-69 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
@@ -1562,7 +1562,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                 class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                                  class="MuiTypography-root makeStyles-primary-76  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   The Brodsky Quartet
                                 </p>
@@ -1582,7 +1582,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-79"
+                              class="makeStyles-actionsContainer-80"
                               data-testid="rek-author-list-row-3-actions"
                               id="rek-author-list-row-3-actions"
                             >
@@ -1740,7 +1740,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-71wc8y-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1jgh8sh-MuiGrid2-root"

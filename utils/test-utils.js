@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { render } from '@testing-library/react';
+import { act, render } from '@testing-library/react';
 import { Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import { mui1theme } from 'config/theme';
@@ -20,6 +20,10 @@ import mediaQuery from 'css-mediaquery';
 const domTestingLib = require('@testing-library/dom');
 const reactTestingLib = require('@testing-library/react');
 const mime = require('mime-types');
+
+import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { waitFor } from '@testing-library/dom';
 
 const { configure } = domTestingLib;
 
@@ -86,6 +90,14 @@ export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => 
         <AllTheProviders>{children}</AllTheProviders>
     </Provider>
 );
+
+export const assertTooltipText = async (trigger, tooltipText) => {
+    expect(trigger).toBeInTheDocument();
+    await act(async () => await userEvent.hover(trigger));
+    await waitFor(() => {
+        expect(screen.getByRole('tooltip', { name: tooltipText, hidden: true })).toBeVisible();
+    });
+};
 
 const extensionToMimeMap = {
     tiff: 'image/tiff',
@@ -191,6 +203,7 @@ module.exports = {
     withRouter,
     AllTheProviders,
     WithReduxStore,
+    assertTooltipText,
     WithRouter,
     createFezDatastreamInfoArray,
     getDatastreamByFilename,

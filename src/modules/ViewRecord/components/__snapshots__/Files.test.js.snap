@@ -1,5 +1,486 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Files Component  AV Check should not render preview button for infected file 1`] = `
+Array [
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "cats.tiff",
+    "dsi_embargo_date": null,
+    "dsi_id": 1,
+    "dsi_label": "",
+    "dsi_mimetype": "image/tiff",
+    "dsi_open_access": 1,
+    "dsi_order": 1,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "preview_cats_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 2,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 2,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "thumbnail_cats_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 3,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 3,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "web_cats_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 4,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 4,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_av_check_date": "2000-01-01 00:00:00",
+    "dsi_av_check_state": "infected",
+    "dsi_copyright": null,
+    "dsi_dsid": "dogs.tiff",
+    "dsi_embargo_date": null,
+    "dsi_id": 5,
+    "dsi_label": "",
+    "dsi_mimetype": "image/tiff",
+    "dsi_open_access": 1,
+    "dsi_order": 5,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "preview_dogs_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 6,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 6,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "thumbnail_dogs_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 7,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 7,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "web_dogs_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 8,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 8,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_av_check_date": "2000-01-01 00:00:00",
+    "dsi_av_check_state": "clean",
+    "dsi_copyright": null,
+    "dsi_dsid": "birds.tiff",
+    "dsi_embargo_date": null,
+    "dsi_id": 9,
+    "dsi_label": "",
+    "dsi_mimetype": "image/tiff",
+    "dsi_open_access": 1,
+    "dsi_order": 9,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "preview_birds_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 10,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 10,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "thumbnail_birds_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 11,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 11,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "web_birds_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 12,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 12,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_av_check_date": "2000-01-01 00:00:00",
+    "dsi_av_check_state": "unscannable",
+    "dsi_copyright": null,
+    "dsi_dsid": "fish.tiff",
+    "dsi_embargo_date": null,
+    "dsi_id": 13,
+    "dsi_label": "",
+    "dsi_mimetype": "image/tiff",
+    "dsi_open_access": 1,
+    "dsi_order": 13,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "preview_fish_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 14,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 14,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "thumbnail_fish_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 15,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 15,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "web_fish_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 16,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 16,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+]
+`;
+
+exports[`Files Component  AV Check should render the proper av status icon 1`] = `
+Array [
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "cats.tiff",
+    "dsi_embargo_date": null,
+    "dsi_id": 1,
+    "dsi_label": "",
+    "dsi_mimetype": "image/tiff",
+    "dsi_open_access": 1,
+    "dsi_order": 1,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "preview_cats_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 2,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 2,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "thumbnail_cats_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 3,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 3,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "web_cats_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 4,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 4,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_av_check_date": "2000-01-01 00:00:00",
+    "dsi_av_check_state": "infected",
+    "dsi_copyright": null,
+    "dsi_dsid": "dogs.tiff",
+    "dsi_embargo_date": null,
+    "dsi_id": 5,
+    "dsi_label": "",
+    "dsi_mimetype": "image/tiff",
+    "dsi_open_access": 1,
+    "dsi_order": 5,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "preview_dogs_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 6,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 6,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "thumbnail_dogs_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 7,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 7,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "web_dogs_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 8,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 8,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_av_check_date": "2000-01-01 00:00:00",
+    "dsi_av_check_state": "clean",
+    "dsi_copyright": null,
+    "dsi_dsid": "birds.tiff",
+    "dsi_embargo_date": null,
+    "dsi_id": 9,
+    "dsi_label": "",
+    "dsi_mimetype": "image/tiff",
+    "dsi_open_access": 1,
+    "dsi_order": 9,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "preview_birds_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 10,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 10,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "thumbnail_birds_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 11,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 11,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "web_birds_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 12,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 12,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_av_check_date": "2000-01-01 00:00:00",
+    "dsi_av_check_state": "unscannable",
+    "dsi_copyright": null,
+    "dsi_dsid": "fish.tiff",
+    "dsi_embargo_date": null,
+    "dsi_id": 13,
+    "dsi_label": "",
+    "dsi_mimetype": "image/tiff",
+    "dsi_open_access": 1,
+    "dsi_order": 13,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "preview_fish_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 14,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 14,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "thumbnail_fish_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 15,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 15,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "web_fish_t.jpg",
+    "dsi_embargo_date": null,
+    "dsi_id": 16,
+    "dsi_label": "",
+    "dsi_mimetype": "image/jpg",
+    "dsi_open_access": 1,
+    "dsi_order": 16,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_av_check_date": "2000-01-01 00:00:00",
+    "dsi_av_check_state": "clean",
+    "dsi_copyright": null,
+    "dsi_dsid": "interview.wav",
+    "dsi_embargo_date": null,
+    "dsi_id": 17,
+    "dsi_label": "",
+    "dsi_mimetype": "audio/wave",
+    "dsi_open_access": 1,
+    "dsi_order": 17,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_copyright": null,
+    "dsi_dsid": "interview_t.mp3",
+    "dsi_embargo_date": null,
+    "dsi_id": 18,
+    "dsi_label": "",
+    "dsi_mimetype": "audio/mp3",
+    "dsi_open_access": 1,
+    "dsi_order": 18,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+  Object {
+    "dsi_av_check_date": "2000-01-01 00:00:00",
+    "dsi_av_check_state": "unscannable",
+    "dsi_copyright": null,
+    "dsi_dsid": "big-file.zip",
+    "dsi_embargo_date": null,
+    "dsi_id": 19,
+    "dsi_label": "",
+    "dsi_mimetype": "application/zip",
+    "dsi_open_access": 1,
+    "dsi_order": 19,
+    "dsi_pid": "UQ:676287",
+    "dsi_size": 27932352,
+    "dsi_state": "A",
+  },
+]
+`;
+
 exports[`Files Component  Should render the correct icon for a valid transcoded file 1`] = `
 <ForwardRef(Grid)
   item={true}
@@ -126,9 +607,17 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -139,6 +628,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -169,6 +659,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -231,13 +722,36 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -363,9 +877,17 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -376,6 +898,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <Memo
@@ -398,6 +921,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
             previewMediaUrl="http://localhost/view/UQ:676287/image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -460,13 +984,36 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -474,13 +1021,13 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
 </ForwardRef(Grid)>
 `;
 
-exports[`Files Component  getFileData{} branch 1 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_1.jpg\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_1.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb\\",\\"securityStatus\\":true,\\"checksums\\":{\\"media\\":\\"a6a6d6qs6dq6wsdqwd\\"},\\"requiresLoginToDownload\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_2.jpg\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_2.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_3.jpg\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_3.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_4.jpg\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_4.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_5.jpg\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_5.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":false,\\"icon\\":{\\"type\\":{\\"type\\":{},\\"compare\\":null},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":false},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":true}]"`;
+exports[`Files Component  getFileData{} branch 1 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_1.jpg\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_1.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb\\",\\"securityStatus\\":true,\\"checksums\\":{\\"media\\":\\"a6a6d6qs6dq6wsdqwd\\"},\\"requiresLoginToDownload\\":false,\\"avCheck\\":{\\"isInfected\\":false}},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_2.jpg\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_2.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false,\\"avCheck\\":{\\"isInfected\\":false}},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_3.jpg\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_3.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false,\\"avCheck\\":{\\"isInfected\\":false}},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_4.jpg\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_4.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false,\\"avCheck\\":{\\"isInfected\\":false}},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"type\\":{\\"propTypes\\":{},\\"options\\":{}},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_5.jpg\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_5.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":true},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false,\\"avCheck\\":{\\"isInfected\\":false}},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":false,\\"icon\\":{\\"type\\":{\\"type\\":{},\\"compare\\":null},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":false},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":true,\\"avCheck\\":{\\"isInfected\\":false}}]"`;
 
-exports[`Files Component  getFileData{} branch 2 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":false,\\"icon\\":{\\"type\\":{\\"type\\":{},\\"compare\\":null},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":false},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":true}]"`;
+exports[`Files Component  getFileData{} branch 2 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":false,\\"icon\\":{\\"type\\":{\\"type\\":{},\\"compare\\":null},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":false},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":true,\\"avCheck\\":{\\"isInfected\\":false}}]"`;
 
-exports[`Files Component  getFileData{} branch 3 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"test.pdf\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"573.25 KB\\",\\"allowDownload\\":false,\\"icon\\":{\\"type\\":{\\"type\\":{},\\"compare\\":null},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":false},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/test.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/test.pdf\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false}]"`;
+exports[`Files Component  getFileData{} branch 3 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"test.pdf\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"573.25 KB\\",\\"allowDownload\\":false,\\"icon\\":{\\"type\\":{\\"type\\":{},\\"compare\\":null},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":false},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/test.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/test.pdf\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":false,\\"avCheck\\":{\\"isInfected\\":false}}]"`;
 
-exports[`Files Component  getFileData{} branch pol_id 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":false,\\"icon\\":{\\"type\\":{\\"type\\":{},\\"compare\\":null},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":false},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":true}]"`;
+exports[`Files Component  getFileData{} branch pol_id 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":false,\\"icon\\":{\\"type\\":{\\"type\\":{},\\"compare\\":null},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":false},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":true,\\"avCheck\\":{\\"isInfected\\":false}}]"`;
 
 exports[`Files Component  should not render advisory statement 1`] = `
 <ForwardRef(Grid)
@@ -608,9 +1155,17 @@ exports[`Files Component  should not render advisory statement 1`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -621,6 +1176,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -651,6 +1207,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -713,13 +1270,36 @@ exports[`Files Component  should not render advisory statement 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -750,9 +1330,17 @@ exports[`Files Component  should not render advisory statement 1`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -763,6 +1351,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -785,6 +1374,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -847,13 +1437,36 @@ exports[`Files Component  should not render advisory statement 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -998,9 +1611,17 @@ exports[`Files Component  should not render advisory statement 2`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -1011,6 +1632,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -1041,6 +1663,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -1103,13 +1726,36 @@ exports[`Files Component  should not render advisory statement 2`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -1140,9 +1786,17 @@ exports[`Files Component  should not render advisory statement 2`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -1153,6 +1807,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -1175,6 +1830,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -1237,13 +1893,36 @@ exports[`Files Component  should not render advisory statement 2`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -1390,9 +2069,17 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -1403,6 +2090,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -1433,6 +2121,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -1495,13 +2184,36 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -1532,9 +2244,17 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -1545,6 +2265,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -1567,6 +2288,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -1629,13 +2351,36 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -1780,9 +2525,17 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -1793,6 +2546,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -1823,6 +2577,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -1885,13 +2640,36 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -1922,9 +2700,17 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -1935,6 +2721,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -1957,6 +2744,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -2019,13 +2807,36 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -2170,9 +2981,17 @@ exports[`Files Component  should render advisory statement 1`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -2183,6 +3002,7 @@ exports[`Files Component  should render advisory statement 1`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -2213,6 +3033,7 @@ exports[`Files Component  should render advisory statement 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -2275,13 +3096,36 @@ exports[`Files Component  should render advisory statement 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -2312,9 +3156,17 @@ exports[`Files Component  should render advisory statement 1`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -2325,6 +3177,7 @@ exports[`Files Component  should render advisory statement 1`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -2347,6 +3200,7 @@ exports[`Files Component  should render advisory statement 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -2409,13 +3263,36 @@ exports[`Files Component  should render advisory statement 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -2563,9 +3440,17 @@ exports[`Files Component  should render an image as the original filename with n
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -2576,6 +3461,7 @@ exports[`Files Component  should render an image as the original filename with n
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <Memo
@@ -2598,6 +3484,7 @@ exports[`Files Component  should render an image as the original filename with n
             previewMediaUrl="http://localhost/view/UQ:676287/image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -2660,13 +3547,36 @@ exports[`Files Component  should render an image as the original filename with n
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -2792,9 +3702,17 @@ exports[`Files Component  should render audio files with _xt in their filename f
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -2805,6 +3723,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="audio.wav"
             icon={
               <Memo
@@ -2827,6 +3746,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
             previewMediaUrl="http://localhost/view/UQ:676287/audio.wav"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -2889,13 +3809,36 @@ exports[`Files Component  should render audio files with _xt in their filename f
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-audio.wav"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -2926,9 +3869,17 @@ exports[`Files Component  should render audio files with _xt in their filename f
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -2939,6 +3890,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="audiotest_xt.mp3"
             icon={
               <Memo
@@ -2961,6 +3913,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
             previewMediaUrl="http://localhost/view/UQ:676287/audiotest_xt.mp3"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -3023,13 +3976,36 @@ exports[`Files Component  should render audio files with _xt in their filename f
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-audiotest_xt.mp3"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -3163,9 +4139,17 @@ exports[`Files Component  should render component 1`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -3176,6 +4160,7 @@ exports[`Files Component  should render component 1`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -3206,6 +4191,7 @@ exports[`Files Component  should render component 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -3268,13 +4254,36 @@ exports[`Files Component  should render component 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -3305,9 +4314,17 @@ exports[`Files Component  should render component 1`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -3318,6 +4335,7 @@ exports[`Files Component  should render component 1`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -3340,6 +4358,7 @@ exports[`Files Component  should render component 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -3402,13 +4421,36 @@ exports[`Files Component  should render component 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -3542,9 +4584,17 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -3555,6 +4605,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -3585,6 +4636,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -3647,13 +4699,36 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -3684,9 +4759,17 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -3697,6 +4780,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -3719,6 +4803,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -3781,13 +4866,36 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -3921,9 +5029,17 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -3934,6 +5050,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -3964,6 +5081,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -4026,13 +5144,36 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -4063,9 +5204,17 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -4076,6 +5225,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -4098,6 +5248,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -4160,13 +5311,36 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -4300,9 +5474,17 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -4313,6 +5495,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -4343,6 +5526,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -4405,13 +5589,36 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -4442,9 +5649,17 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -4455,6 +5670,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -4477,6 +5693,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -4539,13 +5756,36 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -4679,9 +5919,17 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -4692,6 +5940,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -4722,6 +5971,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -4784,13 +6034,36 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -4821,9 +6094,17 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -4834,6 +6115,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -4856,6 +6138,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -4918,13 +6201,36 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -5058,9 +6364,17 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -5071,6 +6385,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -5101,6 +6416,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -5163,13 +6479,36 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -5200,9 +6539,17 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -5213,6 +6560,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -5235,6 +6583,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -5297,13 +6646,36 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -5437,9 +6809,17 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -5450,6 +6830,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -5480,6 +6861,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -5542,13 +6924,36 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -5579,9 +6984,17 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -5592,6 +7005,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -5614,6 +7028,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -5676,13 +7091,36 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -5827,9 +7265,17 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -5840,6 +7286,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -5870,6 +7317,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -5932,13 +7380,36 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -5969,9 +7440,17 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -5982,6 +7461,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -6004,6 +7484,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -6066,13 +7547,36 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -6217,9 +7721,17 @@ exports[`Files Component  should render sensitive handling note 1`] = `
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -6230,6 +7742,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -6260,6 +7773,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -6322,13 +7836,36 @@ exports[`Files Component  should render sensitive handling note 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -6359,9 +7896,17 @@ exports[`Files Component  should render sensitive handling note 1`] = `
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -6372,6 +7917,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -6394,6 +7940,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -6456,13 +8003,36 @@ exports[`Files Component  should render sensitive handling note 1`] = `
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -6660,9 +8230,17 @@ exports[`Files Component  should show a blacklisted collection member when the u
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -6673,6 +8251,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <Memo
@@ -6695,6 +8274,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
             previewMediaUrl="http://localhost/view/UQ:676287/image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -6757,13 +8337,36 @@ exports[`Files Component  should show a blacklisted collection member when the u
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -6897,9 +8500,17 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           data-testid="dsi-dsid-0"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -6910,6 +8521,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
               }
             }
             description="testing image description"
+            disabled={false}
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
@@ -6940,6 +8552,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </ForwardRef(Grid)>
@@ -7002,13 +8615,36 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-image.jpg"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>
@@ -7039,9 +8675,17 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           data-testid="dsi-dsid-1"
           item={true}
           sm={4}
+          xs={8}
         >
           <FileName
             allowDownload={true}
+            avCheck={
+              Object {
+                "date": undefined,
+                "isInfected": false,
+                "state": undefined,
+              }
+            }
             calculatedSize="95.06 KB"
             checksums={
               Object {
@@ -7052,6 +8696,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
               }
             }
             description="staffdata.pdf"
+            disabled={false}
             fileName="staffdata.pdf"
             icon={
               <Memo
@@ -7074,6 +8719,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
             requiresLoginToDownload={false}
             securityStatus={true}
+            tooltip=""
             webMediaUrl={null}
           />
         </ForwardRef(Grid)>
@@ -7136,13 +8782,36 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             }
           }
         >
-          <WithStyles(OpenAccessIcon)
-            allowDownload={true}
-            embargoDate={null}
-            isOpenAccess={false}
-            openAccessStatusId={453693}
-            securityStatus={true}
-          />
+          <ForwardRef(Box)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                id="UQ:676287-staffdata.pdf"
+              />
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
         </ForwardRef(Grid)>
       </ForwardRef(Grid)>
     </div>

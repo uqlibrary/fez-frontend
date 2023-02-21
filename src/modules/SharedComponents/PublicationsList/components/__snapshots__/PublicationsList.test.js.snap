@@ -28,7 +28,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-118 css-1uywuy6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-137 css-1uywuy6-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:111111"
@@ -36,7 +36,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-119 css-1idn90j-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-138 css-1idn90j-MuiGrid-root"
               >
                 <div>
                   Citation display not available for 
@@ -49,7 +49,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                   class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-120 css-1wrgmsj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-139 css-1wrgmsj-MuiGrid-root"
                     style="flex-grow: 1;"
                   >
                     <div
@@ -60,7 +60,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-128 makeStyles-externalLink-130 makeStyles-externalLink-132"
+                          class="googleCitationCount CitationCountView-citationCount-147 makeStyles-externalLink-149 makeStyles-externalLink-151"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:undefined"
                           id="citation-count-link"
@@ -91,7 +91,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-121 css-a5rdam-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-140 css-a5rdam-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -99,7 +99,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-117 css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-136 css-9mgopn-MuiDivider-root"
       />
     </div>
   </div>
@@ -883,7 +883,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-32"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-33"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.18632/oncotarget.9781"
                       id="citation-doi-link"
@@ -927,7 +927,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-33"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-34"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000385395700055&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -947,7 +947,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-34"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-35"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84978646090&origin=inward"
                           id="citation-count-link"
@@ -967,7 +967,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-35"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-36"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/8476957"
                           id="citation-count-link"
@@ -987,7 +987,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-36"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-37"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Extracellular%20vesicles%20secreted%20by%20highly%20metastatic%20clonal%20variants%20of%20osteosarcoma%20preferentially%20localize%20to%20the%20lungs%20and%20induce%20metastatic%20behaviour%20in%20poorly%20metastatic%20clones"
                           id="citation-count-link"
@@ -1192,7 +1192,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-37"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-39"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1038/srep19654"
                       id="citation-doi-link"
@@ -1236,7 +1236,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-38"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-40"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000368812400003&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -1256,7 +1256,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-39"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-41"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84955446517&origin=inward"
                           id="citation-count-link"
@@ -1276,7 +1276,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-40"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-42"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/5042920"
                           id="citation-count-link"
@@ -1296,7 +1296,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-41"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-43"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Botulinum%20neurotoxin%20type-A%20enters%20a%20non-recycling%20pool%20of%20synaptic%20vesicles"
                           id="citation-count-link"
@@ -1506,7 +1506,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-42"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-45"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1128/JVI.03440-14"
                       id="citation-doi-link"
@@ -1550,7 +1550,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-43"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-46"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000352219600012&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -1570,7 +1570,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-44"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-47"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84928551972&origin=inward"
                           id="citation-count-link"
@@ -1590,7 +1590,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-45"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-48"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/3588125"
                           id="citation-count-link"
@@ -1610,7 +1610,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-46"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-49"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:A%20mutant%20tat%20protein%20inhibits%20HIV-1%20reverse%20transcription%20by%20targeting%20the%20reverse%20transcription%20complex"
                           id="citation-count-link"
@@ -1827,7 +1827,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-47"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-51"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1523/JNEUROSCI.3757-14.2015"
                       id="citation-doi-link"
@@ -1871,7 +1871,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-48"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-52"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000353055600028&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -1891,7 +1891,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-49"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-53"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84929251718&origin=inward"
                           id="citation-count-link"
@@ -1911,7 +1911,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-50"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-54"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/3913388"
                           id="citation-count-link"
@@ -1931,7 +1931,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-51"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-55"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Control%20of%20autophagosome%20axonal%20retrograde%20flux%20by%20presynaptic%20activity%20unveiled%20using%20botulinum%20neurotoxin%20type%20A"
                           id="citation-count-link"
@@ -2122,7 +2122,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-52"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-57"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1038/ncomms7297"
                       id="citation-doi-link"
@@ -2166,7 +2166,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-53"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-58"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000350289800005&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -2186,7 +2186,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-54"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-59"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84923870078&origin=inward"
                           id="citation-count-link"
@@ -2206,7 +2206,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-55"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-60"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/3821356"
                           id="citation-count-link"
@@ -2226,7 +2226,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-56"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-61"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Activity-driven%20relaxation%20of%20the%20cortical%20actomyosin%20II%20network%20synchronizes%20Munc18-1-dependent%20neurosecretory%20vesicle%20docking"
                           id="citation-count-link"
@@ -2394,7 +2394,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-57"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-63"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1523/JNEUROSCI.3228-14.2015"
                       id="citation-doi-link"
@@ -2438,7 +2438,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-58"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-64"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000349669600006&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -2458,7 +2458,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-59"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-65"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84921902987&origin=inward"
                           id="citation-count-link"
@@ -2478,7 +2478,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-60"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-66"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/3135958"
                           id="citation-count-link"
@@ -2498,7 +2498,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-61"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-67"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:An%20acto-myosin%20II%20constricting%20ring%20initiates%20the%20fission%20of%20activity-dependent%20bulk%20endosomes%20in%20neurosecretory%20cells"
                           id="citation-count-link"
@@ -2715,7 +2715,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-62"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-69"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1016/j.celrep.2014.08.059"
                       id="citation-doi-link"
@@ -2759,7 +2759,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-63"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-70"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000344468100019&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -2779,7 +2779,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-64"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-71"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84907966407&origin=inward"
                           id="citation-count-link"
@@ -2799,7 +2799,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-65"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-72"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/2740279"
                           id="citation-count-link"
@@ -2819,7 +2819,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-66"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-73"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Increased%20polyubiquitination%20and%20proteasomal%20degradation%20of%20a%20Munc18-1%20disease-linked%20mutant%20causes%20temperature-sensitive%20defect%20in%20exocytosis"
                           id="citation-count-link"
@@ -3155,7 +3155,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-67"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-75"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1016/j.celrep.2013.06.017"
                       id="citation-doi-link"
@@ -3199,7 +3199,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-68"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-76"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000322704400002&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -3219,7 +3219,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-69"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-77"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84880848107&origin=inward"
                           id="citation-count-link"
@@ -3239,7 +3239,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-70"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-78"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/1621395"
                           id="citation-count-link"
@@ -3259,7 +3259,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-71"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-79"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Caveolin-1%20is%20necessary%20for%20hepatic%20oxidative%20lipid%20metabolism:%20evidence%20for%20crosstalk%20between%20caveolin-1%20and%20bile%20acid%20signaling"
                           id="citation-count-link"
@@ -3462,7 +3462,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-72"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-81"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1242/jcs.126813"
                       id="citation-doi-link"
@@ -3506,7 +3506,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-73"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-82"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000320236100004&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -3526,7 +3526,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-74"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-83"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84880018993&origin=inward"
                           id="citation-count-link"
@@ -3546,7 +3546,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-75"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-84"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:The%20Munc18-1%20domain%203a%20loop%20is%20essential%20for%20neuroexocytosis%20but%20not%20for%20syntaxin-1A%20transport%20to%20the%20plasma%20membrane"
                           id="citation-count-link"
@@ -3723,7 +3723,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-76"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-86"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1371/journal.pone.0060152"
                       id="citation-doi-link"
@@ -3767,7 +3767,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-77"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-87"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000317480700088&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -3787,7 +3787,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-78"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-88"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84875435923&origin=inward"
                           id="citation-count-link"
@@ -3807,7 +3807,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-79"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-89"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Inhibition%20of%20PIKfyve%20by%20YM-201636%20Dysregulates%20Autophagy%20and%20Leads%20to%20Apoptosis-Independent%20Neuronal%20Cell%20Death"
                           id="citation-count-link"
@@ -4003,7 +4003,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-80"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-91"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1083/jcb.201204092"
                       id="citation-doi-link"
@@ -4047,7 +4047,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-81"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-92"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000314562500008&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -4067,7 +4067,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-82"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-93"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84874366244&origin=inward"
                           id="citation-count-link"
@@ -4087,7 +4087,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-83"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-94"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/1218318"
                           id="citation-count-link"
@@ -4107,7 +4107,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-84"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-95"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Myosin%20VI%20small%20insert%20isoform%20maintains%20exocytosis%20by%20tethering%20secretory%20granules%20to%20the%20cortical%20actin"
                           id="citation-count-link"
@@ -4275,7 +4275,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-85"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-97"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1523/JNEUROSCI.2634-13.2013"
                       id="citation-doi-link"
@@ -4319,7 +4319,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-86"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-98"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000328110100011&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -4339,7 +4339,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-87"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-99"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84889030400&origin=inward"
                           id="citation-count-link"
@@ -4359,7 +4359,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-88"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-100"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Secretagogue%20stimulation%20of%20neurosecretory%20cells%20elicits%20filopodial%20extensions%20uncovering%20new%20functional%20release%20sites"
                           id="citation-count-link"
@@ -4547,7 +4547,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-89"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-102"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1371/journal.pone.0046242"
                       id="citation-doi-link"
@@ -4591,7 +4591,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-90"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-103"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000309517300099&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -4611,7 +4611,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-91"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-104"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84866864613&origin=inward"
                           id="citation-count-link"
@@ -4631,7 +4631,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-92"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-105"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Caveolin-1%20deficiency%20leads%20to%20increased%20susceptibility%20to%20cell%20death%20and%20fibrosis%20in%20white%20adipose%20tissue:%20characterization%20of%20a%20lipodystrophic%20model"
                           id="citation-count-link"
@@ -4864,7 +4864,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-93"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-107"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1371/journal.pone.0043041"
                       id="citation-doi-link"
@@ -4908,7 +4908,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-94"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-108"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000307500100056&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -4928,7 +4928,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-95"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-109"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84865055662&origin=inward"
                           id="citation-count-link"
@@ -4948,7 +4948,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-96"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-110"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/885842"
                           id="citation-count-link"
@@ -4968,7 +4968,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-97"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-111"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Co-regulation%20of%20cell%20polarization%20and%20migration%20by%20caveolar%20proteins%20PTRF/cavin-1%20and%20caveolin-1"
                           id="citation-count-link"
@@ -5206,7 +5206,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-98"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-113"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1002/hep.24810"
                       id="citation-doi-link"
@@ -5250,7 +5250,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-99"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-114"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000303049400027&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -5270,7 +5270,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-100"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-115"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84859980069&origin=inward"
                           id="citation-count-link"
@@ -5290,7 +5290,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-101"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-116"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/849563"
                           id="citation-count-link"
@@ -5310,7 +5310,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-102"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-117"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Caveolin-1%20orchestrates%20the%20balance%20between%20glucose%20and%20lipid-dependent%20energy%20metabolism:%20Implications%20for%20liver%20regeneration"
                           id="citation-count-link"
@@ -5506,7 +5506,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-103"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-119"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1091/mbc.E11-10-0847"
                       id="citation-doi-link"
@@ -5550,7 +5550,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-104"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-120"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000306245500003&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -5570,7 +5570,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-105"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-121"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84861152007&origin=inward"
                           id="citation-count-link"
@@ -5590,7 +5590,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-106"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-122"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Postlipolytic%20insulin-dependent%20remodeling%20of%20micro%20lipid%20droplets%20in%20adipocytes"
                           id="citation-count-link"
@@ -5733,7 +5733,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-107"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-124"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1016/j.toxicon.2012.04.130"
                       id="citation-doi-link"
@@ -5777,7 +5777,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-108"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-125"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000305721800131&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -5797,7 +5797,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-109"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-126"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Retrograde%20trafficking%20at%20the%20presynaptic%20nerve%20terminal%20using%20bacterial%20toxins"
                           id="citation-count-link"
@@ -6014,7 +6014,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-110"
+                      class="citationDoiLink makeStyles-externalLink-16 makeStyles-externalLink-128"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1074/jbc.M111.283879"
                       id="citation-doi-link"
@@ -6058,7 +6058,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-111"
+                          class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-129"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000295927100070&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -6078,7 +6078,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-112"
+                          class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-130"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-80053897195&origin=inward"
                           id="citation-count-link"
@@ -6098,7 +6098,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-113"
+                          class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-131"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/390008"
                           id="citation-count-link"
@@ -6118,7 +6118,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-114"
+                          class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-16 makeStyles-externalLink-132"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Dynamin%20inhibition%20blocks%20botulinum%20neurotoxin%20type%20A%20endocytosis%20in%20neurons%20and%20delays%20botulism"
                           id="citation-count-link"

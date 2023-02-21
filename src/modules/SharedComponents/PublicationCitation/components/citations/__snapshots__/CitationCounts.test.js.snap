@@ -1512,7 +1512,17 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               source="google"
                               title="Full citation in Google scholar will open in a new window"
                             />
-                            <WithStyles(OpenAccessIcon) />
+                            <OpenAccessIcon
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                              style={
+                                Object {
+                                  "marginBottom": -5,
+                                }
+                              }
+                            />
                           </ForwardRef(Grid)>,
                           <ForwardRef(Grid)
                             item={true}
@@ -1775,22 +1785,38 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               </style>
                               <style
                                 data-jss=""
-                                data-meta="OpenAccessIcon"
+                                data-meta="makeStyles"
                               >
                                 
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
 
                               </style>
                               <style
@@ -1998,7 +2024,17 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   source="google"
                                   title="Full citation in Google scholar will open in a new window"
                                 />,
-                                <WithStyles(OpenAccessIcon) />,
+                                <OpenAccessIcon
+                                  embargoDate={null}
+                                  isOpenAccess={false}
+                                  securityStatus={true}
+                                  showEmbargoText={false}
+                                  style={
+                                    Object {
+                                      "marginBottom": -5,
+                                    }
+                                  }
+                                />,
                               ],
                               "columnSpacing": 0,
                               "columns": 12,
@@ -2247,22 +2283,38 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -3116,7 +3168,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
-                                    className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-17"
+                                    className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-19"
                                     data-testid="citation-count-link"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     id="citation-count-link"
@@ -3825,7 +3877,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-18"
+                                    className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-20"
                                     data-testid="citation-count-link"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     id="citation-count-link"
@@ -4534,7 +4586,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-19"
+                                    className="altmetricCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-21"
                                     data-testid="citation-count-link"
                                     href="https://queensland.altmetric.com/details/12345"
                                     id="citation-count-link"
@@ -5243,7 +5295,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-20"
+                                    className="googleCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-22"
                                     data-testid="citation-count-link"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     id="citation-count-link"
@@ -5264,24 +5316,21 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 </ExternalLink>
                               </CitationCountView>
                             </WithStyles(CitationCountView)>
-                            <WithStyles(OpenAccessIcon)>
-                              <OpenAccessIcon
-                                classes={
-                                  Object {
-                                    "badgeStyle": "OpenAccessIcon-badgeStyle-2",
-                                    "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
-                                  }
+                            <OpenAccessIcon
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                              style={
+                                Object {
+                                  "marginBottom": -5,
                                 }
-                                embargoDate={null}
-                                isOpenAccess={false}
-                                securityStatus={true}
-                                showEmbargoText={false}
-                              >
-                                <span
-                                  className="noOaIcon"
-                                />
-                              </OpenAccessIcon>
-                            </WithStyles(OpenAccessIcon)>
+                              }
+                            >
+                              <span
+                                className="noOaIcon"
+                              />
+                            </OpenAccessIcon>
                           </div>
                         </MuiGridRoot>
                       </ForwardRef(Grid)>
@@ -5546,22 +5595,38 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -6011,22 +6076,38 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -9517,7 +9598,17 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               source="google"
                               title="Full citation in Google scholar will open in a new window"
                             />
-                            <WithStyles(OpenAccessIcon) />
+                            <OpenAccessIcon
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                              style={
+                                Object {
+                                  "marginBottom": -5,
+                                }
+                              }
+                            />
                           </ForwardRef(Grid)>,
                           <ForwardRef(Grid)
                             item={true}
@@ -9726,22 +9817,24 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               </style>
                               <style
                                 data-jss=""
-                                data-meta="OpenAccessIcon"
+                                data-meta="makeStyles"
                               >
                                 
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
 
                               </style>
                               <style
@@ -9944,7 +10037,17 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   source="google"
                                   title="Full citation in Google scholar will open in a new window"
                                 />,
-                                <WithStyles(OpenAccessIcon) />,
+                                <OpenAccessIcon
+                                  embargoDate={null}
+                                  isOpenAccess={false}
+                                  securityStatus={true}
+                                  showEmbargoText={false}
+                                  style={
+                                    Object {
+                                      "marginBottom": -5,
+                                    }
+                                  }
+                                />,
                               ],
                               "columnSpacing": 0,
                               "columns": 12,
@@ -10130,22 +10233,24 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -12433,24 +12538,21 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 </ExternalLink>
                               </CitationCountView>
                             </WithStyles(CitationCountView)>
-                            <WithStyles(OpenAccessIcon)>
-                              <OpenAccessIcon
-                                classes={
-                                  Object {
-                                    "badgeStyle": "OpenAccessIcon-badgeStyle-2",
-                                    "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
-                                  }
+                            <OpenAccessIcon
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                              style={
+                                Object {
+                                  "marginBottom": -5,
                                 }
-                                embargoDate={null}
-                                isOpenAccess={false}
-                                securityStatus={true}
-                                showEmbargoText={false}
-                              >
-                                <span
-                                  className="noOaIcon"
-                                />
-                              </OpenAccessIcon>
-                            </WithStyles(OpenAccessIcon)>
+                              }
+                            >
+                              <span
+                                className="noOaIcon"
+                              />
+                            </OpenAccessIcon>
                           </div>
                         </MuiGridRoot>
                       </ForwardRef(Grid)>
@@ -12659,22 +12761,24 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -12847,7 +12951,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                             >
                               <a
-                                className="CitationCounts-statsLink-1 makeStyles-externalLink-6 makeStyles-externalLink-11"
+                                className="CitationCounts-statsLink-1 makeStyles-externalLink-6 makeStyles-externalLink-12"
                                 data-testid="full-statistics-link"
                                 href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
                                 id="full-statistics-link"
@@ -13058,22 +13162,24 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                                 </style>
                                                 <style
                                                   data-jss=""
-                                                  data-meta="OpenAccessIcon"
+                                                  data-meta="makeStyles"
                                                 >
                                                   
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                                </style>
+                                                <style
+                                                  data-jss=""
+                                                  data-meta="makeStyles"
+                                                >
+                                                  
+
+                                                </style>
+                                                <style
+                                                  data-jss=""
+                                                  data-meta="makeStyles"
+                                                >
+                                                  
 
                                                 </style>
                                                 <style
@@ -13476,22 +13582,24 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -15182,7 +15290,17 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               source="google"
                               title="Full citation in Google scholar will open in a new window"
                             />
-                            <WithStyles(OpenAccessIcon) />
+                            <OpenAccessIcon
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                              style={
+                                Object {
+                                  "marginBottom": -5,
+                                }
+                              }
+                            />
                           </ForwardRef(Grid)>,
                           <ForwardRef(Grid)
                             item={true}
@@ -15426,22 +15544,31 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               </style>
                               <style
                                 data-jss=""
-                                data-meta="OpenAccessIcon"
+                                data-meta="makeStyles"
                               >
                                 
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
 
                               </style>
                               <style
@@ -15649,7 +15776,17 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   source="google"
                                   title="Full citation in Google scholar will open in a new window"
                                 />,
-                                <WithStyles(OpenAccessIcon) />,
+                                <OpenAccessIcon
+                                  embargoDate={null}
+                                  isOpenAccess={false}
+                                  securityStatus={true}
+                                  showEmbargoText={false}
+                                  style={
+                                    Object {
+                                      "marginBottom": -5,
+                                    }
+                                  }
+                                />,
                               ],
                               "columnSpacing": 0,
                               "columns": 12,
@@ -15870,22 +16007,31 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -16739,7 +16885,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
-                                    className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-12"
+                                    className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-13"
                                     data-testid="citation-count-link"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     id="citation-count-link"
@@ -17448,7 +17594,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-13"
+                                    className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-14"
                                     data-testid="citation-count-link"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     id="citation-count-link"
@@ -18157,7 +18303,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-14"
+                                    className="altmetricCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-15"
                                     data-testid="citation-count-link"
                                     href="https://queensland.altmetric.com/details/12345"
                                     id="citation-count-link"
@@ -18866,7 +19012,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-15"
+                                    className="googleCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-16"
                                     data-testid="citation-count-link"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     id="citation-count-link"
@@ -18887,24 +19033,21 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 </ExternalLink>
                               </CitationCountView>
                             </WithStyles(CitationCountView)>
-                            <WithStyles(OpenAccessIcon)>
-                              <OpenAccessIcon
-                                classes={
-                                  Object {
-                                    "badgeStyle": "OpenAccessIcon-badgeStyle-2",
-                                    "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
-                                  }
+                            <OpenAccessIcon
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                              style={
+                                Object {
+                                  "marginBottom": -5,
                                 }
-                                embargoDate={null}
-                                isOpenAccess={false}
-                                securityStatus={true}
-                                showEmbargoText={false}
-                              >
-                                <span
-                                  className="noOaIcon"
-                                />
-                              </OpenAccessIcon>
-                            </WithStyles(OpenAccessIcon)>
+                              }
+                            >
+                              <span
+                                className="noOaIcon"
+                              />
+                            </OpenAccessIcon>
                           </div>
                         </MuiGridRoot>
                       </ForwardRef(Grid)>
@@ -19148,22 +19291,31 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -19336,7 +19488,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               title="This is test title"
                             >
                               <a
-                                className="CitationCounts-statsLink-1 makeStyles-externalLink-6 makeStyles-externalLink-16"
+                                className="CitationCounts-statsLink-1 makeStyles-externalLink-6 makeStyles-externalLink-18"
                                 data-testid="full-statistics-link"
                                 href="https://app.library.uq.edu.au/#/authors/view/pid:111"
                                 id="full-statistics-link"
@@ -19582,22 +19734,31 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                                 </style>
                                                 <style
                                                   data-jss=""
-                                                  data-meta="OpenAccessIcon"
+                                                  data-meta="makeStyles"
                                                 >
                                                   
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                                </style>
+                                                <style
+                                                  data-jss=""
+                                                  data-meta="makeStyles"
+                                                >
+                                                  
+
+                                                </style>
+                                                <style
+                                                  data-jss=""
+                                                  data-meta="makeStyles"
+                                                >
+                                                  
+
+                                                </style>
+                                                <style
+                                                  data-jss=""
+                                                  data-meta="makeStyles"
+                                                >
+                                                  
 
                                                 </style>
                                                 <style
@@ -20035,22 +20196,31 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -21671,7 +21841,17 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                             sm="auto"
                             xs={12}
                           >
-                            <WithStyles(OpenAccessIcon) />
+                            <OpenAccessIcon
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                              style={
+                                Object {
+                                  "marginBottom": -5,
+                                }
+                              }
+                            />
                           </ForwardRef(Grid)>,
                           <ForwardRef(Grid)
                             item={true}
@@ -21821,22 +22001,17 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                               </style>
                               <style
                                 data-jss=""
-                                data-meta="OpenAccessIcon"
+                                data-meta="makeStyles"
                               >
                                 
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                              </style>
+                              <style
+                                data-jss=""
+                                data-meta="makeStyles"
+                              >
+                                
 
                               </style>
                               <style
@@ -21999,7 +22174,17 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                                 false,
                                 false,
                                 false,
-                                <WithStyles(OpenAccessIcon) />,
+                                <OpenAccessIcon
+                                  embargoDate={null}
+                                  isOpenAccess={false}
+                                  securityStatus={true}
+                                  showEmbargoText={false}
+                                  style={
+                                    Object {
+                                      "marginBottom": -5,
+                                    }
+                                  }
+                                />,
                               ],
                               "columnSpacing": 0,
                               "columns": 12,
@@ -22135,22 +22320,17 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -22291,24 +22471,21 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                           <div
                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
                           >
-                            <WithStyles(OpenAccessIcon)>
-                              <OpenAccessIcon
-                                classes={
-                                  Object {
-                                    "badgeStyle": "OpenAccessIcon-badgeStyle-2",
-                                    "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
-                                  }
+                            <OpenAccessIcon
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                              style={
+                                Object {
+                                  "marginBottom": -5,
                                 }
-                                embargoDate={null}
-                                isOpenAccess={false}
-                                securityStatus={true}
-                                showEmbargoText={false}
-                              >
-                                <span
-                                  className="noOaIcon"
-                                />
-                              </OpenAccessIcon>
-                            </WithStyles(OpenAccessIcon)>
+                              }
+                            >
+                              <span
+                                className="noOaIcon"
+                              />
+                            </OpenAccessIcon>
                           </div>
                         </MuiGridRoot>
                       </ForwardRef(Grid)>
@@ -22460,22 +22637,17 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -22787,22 +22959,17 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                                     </style>
                                     <style
                                       data-jss=""
-                                      data-meta="OpenAccessIcon"
+                                      data-meta="makeStyles"
                                     >
                                       
-.OpenAccessIcon-badgeStyle-2 {
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
-.OpenAccessIcon-embargoedBadgeStyle-3 {
-  color: #595959;
-  width: 12px;
-  height: 12px;
-  margin-top: 4px;
-  margin-left: -4px;
-}
+
+
+                                    </style>
+                                    <style
+                                      data-jss=""
+                                      data-meta="makeStyles"
+                                    >
+                                      
 
                                     </style>
                                     <style
@@ -22960,16 +23127,15 @@ exports[`CitationCounts should render component with no metrics 1`] = `
 
 exports[`CitationCounts should render open access icon when required 1`] = `
 <OpenAccessIcon
-  classes={
-    Object {
-      "badgeStyle": "OpenAccessIcon-badgeStyle-2",
-      "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
-    }
-  }
   embargoDate={null}
   isOpenAccess={false}
   securityStatus={true}
   showEmbargoText={false}
+  style={
+    Object {
+      "marginBottom": -5,
+    }
+  }
 >
   <span
     className="noOaIcon"
