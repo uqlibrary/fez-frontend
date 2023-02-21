@@ -2453,7 +2453,6 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                               "type": "checkbox",
                                             }
                                           }
-                                          required={false}
                                           type="checkbox"
                                         />,
                                         <Memo
@@ -2965,7 +2964,6 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                           "type": "checkbox",
                                         }
                                       }
-                                      required={false}
                                       type="checkbox"
                                     >
                                       <Insertion
@@ -3412,7 +3410,6 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                         disabled={false}
                                         id="terms-and-conditions-input"
                                         onChange={[Function]}
-                                        required={false}
                                         type="checkbox"
                                       />
                                     </Styled(input)>
