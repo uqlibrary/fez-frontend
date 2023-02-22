@@ -3,12 +3,10 @@
 const { resolve, join } = require('path');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const WebpackStrip = require('strip-loader');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 
@@ -63,7 +61,7 @@ const webpackConfig = {
     // Where you want the output to go
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
-        filename: 'frontend-js/[name]-[hash].min.js',
+        filename: 'frontend-js/[name]-[contenthash].min.js',
         publicPath: config.publicPath,
     },
     devServer: {
@@ -83,24 +81,6 @@ const webpackConfig = {
             inject: true,
             template: resolve(__dirname, './public', 'index.html'),
         }),
-        new WebpackPwaManifest({
-            name: config.title,
-            short_name: 'eSpace',
-            description: 'The University of Queensland`s institutional repository.',
-            background_color: '#49075E',
-            theme_color: '#49075E',
-            inject: true,
-            ios: true,
-            icons: [
-                {
-                    src: resolve(__dirname, './public/images', 'logo.png'),
-                    sizes: [96, 128, 192, 256, 384, 512],
-                    destination: 'icons',
-                    ios: true,
-                },
-            ],
-            fingerprints: false,
-        }),
         new ProgressBarPlugin({
             format: `  building webpack... [:bar] ${chalk.green.bold(
                 ':percent',
@@ -109,7 +89,7 @@ const webpackConfig = {
         }),
         // new ExtractTextPlugin('[name]-[hash].min.css'),
         new MiniCssExtractPlugin({
-            filename: '[name]-[hash].min.css',
+            filename: '[name]-[contenthash].min.css',
         }),
 
         // plugin for passing in data to the js, like what NODE_ENV we are in.
@@ -134,7 +114,7 @@ const webpackConfig = {
             'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
         }),
-        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+        new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
         // Put it in the end to capture all the HtmlWebpackPlugin's
         // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
         // new OfflinePlugin({
@@ -154,9 +134,12 @@ const webpackConfig = {
         new RobotstxtPlugin(options),
     ],
     optimization: {
+        moduleIds: 'deterministic',
+        removeAvailableModules: true,
         splitChunks: {
             automaticNameDelimiter: '-',
             minChunks: 5,
+            chunks: 'all',
             cacheGroups: {
                 commons: {
                     chunks: 'all',
@@ -165,8 +148,14 @@ const webpackConfig = {
         },
         minimizer: [
             new TerserPlugin({
-                sourceMap: true,
+                terserOptions: {
+                    sourceMap: false,
+                    compress: {
+                        drop_console: true,
+                    },
+                },
                 parallel: true,
+                extractComments: true,
             }),
         ],
     },
@@ -205,15 +194,12 @@ const webpackConfig = {
                     {
                         loader: 'file-loader',
                         options: {
+                            esModule: false,
                             outputPath: 'assets/',
                             publicPath: 'assets/',
                         },
                     },
                 ],
-            },
-            {
-                test: /\.js$/,
-                loader: WebpackStrip.loader('console.log', 'dd'),
             },
         ],
     },
@@ -222,8 +208,30 @@ const webpackConfig = {
         enforceExtension: false,
         extensions: ['.jsx', '.js', '.json'],
         modules: ['src', 'node_modules', 'custom_modules'],
-        alias: {
-            '@material-ui/styles': resolve(__dirname, 'node_modules', '@material-ui/styles'),
+        fallback: {
+            assert: require.resolve('assert'),
+            buffer: require.resolve('buffer'),
+            console: require.resolve('console-browserify'),
+            constants: require.resolve('constants-browserify'),
+            crypto: require.resolve('crypto-browserify'),
+            domain: require.resolve('domain-browser'),
+            events: require.resolve('events'),
+            http: require.resolve('stream-http'),
+            https: require.resolve('https-browserify'),
+            os: require.resolve('os-browserify/browser'),
+            path: require.resolve('path-browserify'),
+            punycode: require.resolve('punycode'),
+            process: require.resolve('process/browser'),
+            querystring: require.resolve('querystring-es3'),
+            stream: require.resolve('stream-browserify'),
+            string_decoder: require.resolve('string_decoder'),
+            sys: require.resolve('util'),
+            timers: require.resolve('timers-browserify'),
+            tty: require.resolve('tty-browserify'),
+            url: require.resolve('url'),
+            util: require.resolve('util'),
+            vm: require.resolve('vm-browserify'),
+            zlib: require.resolve('browserify-zlib'),
         },
     },
     performance: {
