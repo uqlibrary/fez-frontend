@@ -61,7 +61,7 @@ const webpackConfig = {
     // Where you want the output to go
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
-        filename: 'frontend-js/[name]-[contenthash].min.js',
+        filename: 'frontend-js/[name].min.js',
         publicPath: config.publicPath,
     },
     devServer: {
@@ -78,6 +78,7 @@ const webpackConfig = {
             filename: 'index.html',
             title: config.title,
             gtm: config.gtm,
+            hash: true,
             inject: true,
             template: resolve(__dirname, './public', 'index.html'),
         }),
