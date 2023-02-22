@@ -74,6 +74,7 @@ export const ScrollTop = ({ show, showAfter, classes }) => {
 ScrollTop.propTypes = {
     show: PropTypes.bool,
     showAfter: PropTypes.number,
+    classes: PropTypes.object,
 };
 
 ScrollTop.defaultProps = {
