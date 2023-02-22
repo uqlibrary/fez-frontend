@@ -61,7 +61,7 @@ const webpackConfig = {
     // Where you want the output to go
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
-        filename: 'frontend-js/[name].min.js',
+        filename: 'frontend-js/[name].min.js?[contenthash]',
         publicPath: config.publicPath,
     },
     devServer: {
@@ -90,7 +90,7 @@ const webpackConfig = {
         }),
         // new ExtractTextPlugin('[name]-[hash].min.css'),
         new MiniCssExtractPlugin({
-            filename: '[name]-[contenthash].min.css',
+            filename: '[name].min.css?[contenthash]',
         }),
 
         // plugin for passing in data to the js, like what NODE_ENV we are in.
