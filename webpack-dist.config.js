@@ -3,7 +3,6 @@
 const { resolve, join } = require('path');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const chalk = require('chalk');
@@ -81,24 +80,6 @@ const webpackConfig = {
             gtm: config.gtm,
             inject: true,
             template: resolve(__dirname, './public', 'index.html'),
-        }),
-        new WebpackPwaManifest({
-            name: config.title,
-            short_name: 'eSpace',
-            description: 'The University of Queensland`s institutional repository.',
-            background_color: '#49075E',
-            theme_color: '#49075E',
-            inject: true,
-            ios: true,
-            icons: [
-                {
-                    src: resolve(__dirname, './public/images', 'logo.png'),
-                    sizes: [96, 128, 192, 256, 384, 512],
-                    destination: 'icons',
-                    ios: true,
-                },
-            ],
-            fingerprints: false,
         }),
         new ProgressBarPlugin({
             format: `  building webpack... [:bar] ${chalk.green.bold(
@@ -213,6 +194,7 @@ const webpackConfig = {
                     {
                         loader: 'file-loader',
                         options: {
+                            esModule: false,
                             outputPath: 'assets/',
                             publicPath: 'assets/',
                         },
