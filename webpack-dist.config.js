@@ -51,7 +51,6 @@ if (config.environment === 'development') {
 
 const webpackConfig = {
     mode: 'production',
-    devtool: 'source-map',
     // The entry file. All your app roots from here.
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
@@ -61,7 +60,7 @@ const webpackConfig = {
     // Where you want the output to go
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
-        filename: 'frontend-js/[name].min.js?[contenthash]',
+        filename: 'frontend-js/[name].min.js?v=[contenthash]',
         publicPath: config.publicPath,
     },
     devServer: {
@@ -78,7 +77,6 @@ const webpackConfig = {
             filename: 'index.html',
             title: config.title,
             gtm: config.gtm,
-            hash: true,
             inject: true,
             template: resolve(__dirname, './public', 'index.html'),
         }),
@@ -90,7 +88,7 @@ const webpackConfig = {
         }),
         // new ExtractTextPlugin('[name]-[hash].min.css'),
         new MiniCssExtractPlugin({
-            filename: '[name].min.css?[contenthash]',
+            filename: '[name].min.css?v=[contenthash]',
         }),
 
         // plugin for passing in data to the js, like what NODE_ENV we are in.
