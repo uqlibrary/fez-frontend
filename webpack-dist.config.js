@@ -9,7 +9,6 @@ const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
-
 const options = {
     policy: [
         {
@@ -49,6 +48,43 @@ if (config.environment === 'development') {
     config.basePath += branch + '/';
 }
 
+/**
+ * Get some Git Commit Hash information.
+ *
+ * [currentCommitHash] (the most recent commit) is used in the path naming
+ * for JS and CSS files, both for cache busting and to simplify housekeeping.
+ *
+ * [outputLastCommitHashes] when called will generate a file [hashFilenameFull] containing X amount of
+ * previous commit hashes. This is used to perform housekeeping tasks
+ * on files stored in the production S3 bucket.
+ * Note: any errors occurred making this call will populate the [hashErrorFilenameFull] file
+ * with details as to the cause.
+ */
+
+const { spawnSync, execSync } = require('child_process');
+const fs = require('fs');
+
+const outputLastCommitHashes = ({
+    outputPath = resolve(__dirname, './dist/'),
+    amount = 20,
+    hashFilename = 'hash.txt',
+    errorFilename = 'hashErrors.txt',
+} = {}) => {
+    const hashFilenameFull = `${outputPath}/${hashFilename}`;
+    const hashErrorFilenameFull = `${outputPath}/${errorFilename}`;
+
+    // get last [amount] commit hashes
+    const stdio = [0, fs.openSync(hashFilenameFull, 'w'), fs.openSync(hashErrorFilenameFull, 'w')];
+    spawnSync('git', ['log', '--format="%h"', `-n ${amount}`], { stdio });
+};
+
+// get last commit hash, and use in output filenames.
+const currentCommitHash = execSync('git rev-parse --short HEAD')
+    .toString()
+    .trim();
+
+/** */
+
 const webpackConfig = {
     mode: 'production',
     // The entry file. All your app roots from here.
@@ -60,7 +96,7 @@ const webpackConfig = {
     // Where you want the output to go
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
-        filename: 'frontend-js/[name].min.js?v=[contenthash]',
+        filename: `frontend-js/${currentCommitHash}/[name]-[contenthash].min.js`,
         publicPath: config.publicPath,
     },
     devServer: {
@@ -86,9 +122,8 @@ const webpackConfig = {
             )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
-        // new ExtractTextPlugin('[name]-[hash].min.css'),
         new MiniCssExtractPlugin({
-            filename: '[name].min.css?v=[contenthash]',
+            filename: `frontend-css/${currentCommitHash}/[name]-[contenthash].min.css`,
         }),
 
         // plugin for passing in data to the js, like what NODE_ENV we are in.
@@ -114,23 +149,26 @@ const webpackConfig = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
         }),
         new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
-        // Put it in the end to capture all the HtmlWebpackPlugin's
-        // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
-        // new OfflinePlugin({
-        //     relativePaths: false,
-        //     publicPath: config.basePath,
-        //     caches: {
-        //       main: [':rest:'],
-        //     },
-        //     AppCache : {
-        //       directory: './'
-        //     }
-        // }),
+
         new BundleAnalyzerPlugin({
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH,
         }),
         new RobotstxtPlugin(options),
+        {
+            // custom plugin that fires at the end of the build process, and outputs
+            // a list of the last 20 git hashes to a file. Note that the function is
+            // called like this to ensure [outputPath] exists. Were it to be called
+            // sooner the command would fail and the build process would bomb.
+            // The call to [outputLastCommitHashes] can be moved to the top of the
+            // file if the output path does not need to contain [config.basePath].
+            apply: compiler => {
+                compiler.hooks.afterEmit.tap('AfterEmitPlugin', () => {
+                    const outputPath = resolve(__dirname, './dist/', config.basePath);
+                    outputLastCommitHashes({ outputPath });
+                });
+            },
+        },
     ],
     optimization: {
         moduleIds: 'deterministic',
