@@ -9,14 +9,6 @@ const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
-
-// get current GIT commit hash, and use later in path to JS and CSS.
-// https://stackoverflow.com/a/38401256
-const currentCommitHash = require('child_process')
-    .execSync('git rev-parse --short HEAD')
-    .toString()
-    .trim();
-
 const options = {
     policy: [
         {
@@ -55,6 +47,43 @@ const useMock = (process && process.env && !!process.env.USE_MOCK) || false;
 if (config.environment === 'development') {
     config.basePath += branch + '/';
 }
+
+/**
+ * Get some Git Commit Hash information.
+ *
+ * [currentCommitHash] (the most recent commit) is used in the path naming
+ * for JS and CSS files, both for cache busting and to simplify housekeeping.
+ *
+ * [outputLastCommitHashes] when called will generate a file [hashFilenameFull] containing X amount of
+ * previous commit hashes. This is used to perform housekeeping tasks
+ * on files stored in the production S3 bucket.
+ * Note: any errors occurred making this call will populate the [hashErrorFilenameFull] file
+ * with details as to the cause.
+ */
+
+const { spawnSync, execSync } = require('child_process');
+const fs = require('fs');
+
+const outputLastCommitHashes = ({
+    outputPath = resolve(__dirname, './dist/'),
+    amount = 20,
+    hashFilename = 'hash.txt',
+    errorFilename = 'hashErrors.txt',
+} = {}) => {
+    const hashFilenameFull = `${outputPath}/${hashFilename}`;
+    const hashErrorFilenameFull = `${outputPath}/${errorFilename}`;
+
+    // get last [amount] commit hashes
+    const stdio = [0, fs.openSync(hashFilenameFull, 'w'), fs.openSync(hashErrorFilenameFull, 'w')];
+    spawnSync('git', ['log', '--format="%h"', `-n ${amount}`], { stdio });
+};
+
+// get last commit hash, and use in output filenames.
+const currentCommitHash = execSync('git rev-parse --short HEAD')
+    .toString()
+    .trim();
+
+/** */
 
 const webpackConfig = {
     mode: 'production',
@@ -126,6 +155,20 @@ const webpackConfig = {
             openAnalyzer: !process.env.CI_BRANCH,
         }),
         new RobotstxtPlugin(options),
+        {
+            // custom plugin that fires at the end of the build process, and outputs
+            // a list of the last 20 git hashes to a file. Note that the function is
+            // called like this to ensure [outputPath] exists. Were it to be called
+            // sooner the command would fail and the build process would bomb.
+            // The call to [outputLastCommitHashes] can be moved to the top of the
+            // file if the output path does not need to contain [config.basePath].
+            apply: compiler => {
+                compiler.hooks.afterEmit.tap('AfterEmitPlugin', () => {
+                    const outputPath = resolve(__dirname, './dist/', config.basePath);
+                    outputLastCommitHashes({ outputPath });
+                });
+            },
+        },
     ],
     optimization: {
         moduleIds: 'deterministic',
