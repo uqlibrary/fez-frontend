@@ -10,6 +10,13 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 
+// get current GIT commit hash, and use later in path to JS and CSS.
+// https://stackoverflow.com/a/38401256
+const currentCommitHash = require('child_process')
+    .execSync('git rev-parse --short HEAD')
+    .toString()
+    .trim();
+
 const options = {
     policy: [
         {
@@ -60,7 +67,7 @@ const webpackConfig = {
     // Where you want the output to go
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
-        filename: 'frontend-js/[name].min.js?v=[contenthash]',
+        filename: `frontend-js/${currentCommitHash}/[name]-[contenthash].min.js`,
         publicPath: config.publicPath,
     },
     devServer: {
@@ -86,9 +93,8 @@ const webpackConfig = {
             )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
-        // new ExtractTextPlugin('[name]-[hash].min.css'),
         new MiniCssExtractPlugin({
-            filename: '[name].min.css?v=[contenthash]',
+            filename: `frontend-css/${currentCommitHash}/[name]-[contenthash].min.css`,
         }),
 
         // plugin for passing in data to the js, like what NODE_ENV we are in.
@@ -114,18 +120,7 @@ const webpackConfig = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
         }),
         new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
-        // Put it in the end to capture all the HtmlWebpackPlugin's
-        // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
-        // new OfflinePlugin({
-        //     relativePaths: false,
-        //     publicPath: config.basePath,
-        //     caches: {
-        //       main: [':rest:'],
-        //     },
-        //     AppCache : {
-        //       directory: './'
-        //     }
-        // }),
+
         new BundleAnalyzerPlugin({
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH,
