@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { throttle } from 'throttle-debounce';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import InputAdornment from '@mui/material/InputAdornment';
+import CircularProgress from '@mui/material/CircularProgress';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { clearJournalSearchKeywords, loadJournalSearchKeywords } from 'actions';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import locale from 'locale/components';
 import { VoiceToText } from './partials/voiceToText';
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 
 export const JournalSearchInput = ({ initialValue = '', onReset }) => {
     const txt = locale.components.searchJournals;
@@ -112,6 +112,7 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
                                             disabled={!journalSearchInput.length}
                                             id="clear-journal-search-keywords"
                                             data-testid="clear-journal-search-keywords"
+                                            size="large"
                                         >
                                             <CloseIcon />
                                         </IconButton>

@@ -1,28 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PartialDateForm component should display errors correctly 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={true}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -30,11 +32,11 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-day"
@@ -52,18 +54,19 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
           placeholder="Day"
           type="text"
           value=""
+          variant="standard"
         />
-        <WithStyles(ForwardRef(FormHelperText))
+        <ForwardRef(FormHelperText)
           error={true}
         >
           Invalid date
-        </WithStyles(ForwardRef(FormHelperText))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(FormHelperText)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -95,92 +98,93 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
             }
           }
           value=""
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-year"
@@ -199,36 +203,39 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
           placeholder="Year"
           type="text"
           value=""
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component should handle partial values 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={true}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -236,11 +243,11 @@ exports[`PartialDateForm component should handle partial values 1`] = `
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-day"
@@ -258,18 +265,19 @@ exports[`PartialDateForm component should handle partial values 1`] = `
           placeholder="Day"
           type="text"
           value={1}
+          variant="standard"
         />
-        <WithStyles(ForwardRef(FormHelperText))
+        <ForwardRef(FormHelperText)
           error={true}
         >
           Invalid date
-        </WithStyles(ForwardRef(FormHelperText))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(FormHelperText)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -301,92 +309,93 @@ exports[`PartialDateForm component should handle partial values 1`] = `
             }
           }
           value={-1}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-year"
@@ -405,36 +414,39 @@ exports[`PartialDateForm component should handle partial values 1`] = `
           placeholder="Year"
           type="text"
           value={null}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component should handle partial values 2`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={true}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -442,11 +454,11 @@ exports[`PartialDateForm component should handle partial values 2`] = `
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-day"
@@ -464,18 +476,19 @@ exports[`PartialDateForm component should handle partial values 2`] = `
           placeholder="Day"
           type="text"
           value={1}
+          variant="standard"
         />
-        <WithStyles(ForwardRef(FormHelperText))
+        <ForwardRef(FormHelperText)
           error={true}
         >
           Invalid date
-        </WithStyles(ForwardRef(FormHelperText))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(FormHelperText)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -507,92 +520,93 @@ exports[`PartialDateForm component should handle partial values 2`] = `
             }
           }
           value={2}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-year"
@@ -611,36 +625,39 @@ exports[`PartialDateForm component should handle partial values 2`] = `
           placeholder="Year"
           type="text"
           value={null}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component should load existing values 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={false}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -648,11 +665,11 @@ exports[`PartialDateForm component should load existing values 1`] = `
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-day"
@@ -670,13 +687,14 @@ exports[`PartialDateForm component should load existing values 1`] = `
           placeholder="Day"
           type="text"
           value={2}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -708,92 +726,93 @@ exports[`PartialDateForm component should load existing values 1`] = `
             }
           }
           value={1}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-year"
@@ -812,36 +831,39 @@ exports[`PartialDateForm component should load existing values 1`] = `
           placeholder="Year"
           type="text"
           value={2020}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component should load existing values from input value 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={false}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -849,11 +871,11 @@ exports[`PartialDateForm component should load existing values from input value 
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-day"
@@ -871,13 +893,14 @@ exports[`PartialDateForm component should load existing values from input value 
           placeholder="Day"
           type="text"
           value={2}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -909,92 +932,93 @@ exports[`PartialDateForm component should load existing values from input value 
             }
           }
           value={1}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-year"
@@ -1013,36 +1037,39 @@ exports[`PartialDateForm component should load existing values from input value 
           placeholder="Year"
           type="text"
           value={2020}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component with clearable flag should display an error on clearing one partial date field 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={true}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -1050,11 +1077,11 @@ exports[`PartialDateForm component with clearable flag should display an error o
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-day"
@@ -1073,18 +1100,19 @@ exports[`PartialDateForm component with clearable flag should display an error o
           placeholder="Day"
           type="text"
           value=""
+          variant="standard"
         />
-        <WithStyles(ForwardRef(FormHelperText))
+        <ForwardRef(FormHelperText)
           error={true}
         >
           Invalid date
-        </WithStyles(ForwardRef(FormHelperText))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(FormHelperText)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -1116,92 +1144,93 @@ exports[`PartialDateForm component with clearable flag should display an error o
             }
           }
           value={1}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-year"
@@ -1220,36 +1249,39 @@ exports[`PartialDateForm component with clearable flag should display an error o
           placeholder="Year"
           type="text"
           value={2020}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component with clearable flag should display an error on entering future date 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={false}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -1257,11 +1289,11 @@ exports[`PartialDateForm component with clearable flag should display an error o
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-day"
@@ -1280,13 +1312,14 @@ exports[`PartialDateForm component with clearable flag should display an error o
           placeholder="Day"
           type="text"
           value={2}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -1318,92 +1351,93 @@ exports[`PartialDateForm component with clearable flag should display an error o
             }
           }
           value={1}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-year"
@@ -1422,36 +1456,39 @@ exports[`PartialDateForm component with clearable flag should display an error o
           placeholder="Year"
           type="text"
           value={2010}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component with clearable flag should display an error on entering future date 2`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={true}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -1459,11 +1496,11 @@ exports[`PartialDateForm component with clearable flag should display an error o
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-day"
@@ -1482,18 +1519,19 @@ exports[`PartialDateForm component with clearable flag should display an error o
           placeholder="Day"
           type="text"
           value={29}
+          variant="standard"
         />
-        <WithStyles(ForwardRef(FormHelperText))
+        <ForwardRef(FormHelperText)
           error={true}
         >
           Invalid date
-        </WithStyles(ForwardRef(FormHelperText))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(FormHelperText)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -1525,92 +1563,93 @@ exports[`PartialDateForm component with clearable flag should display an error o
             }
           }
           value={1}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-year"
@@ -1629,36 +1668,39 @@ exports[`PartialDateForm component with clearable flag should display an error o
           placeholder="Year"
           type="text"
           value={2010}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component with clearable flag should display an error on entering invalid date 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={true}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -1666,11 +1708,11 @@ exports[`PartialDateForm component with clearable flag should display an error o
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-day"
@@ -1689,18 +1731,19 @@ exports[`PartialDateForm component with clearable flag should display an error o
           placeholder="Day"
           type="text"
           value={29}
+          variant="standard"
         />
-        <WithStyles(ForwardRef(FormHelperText))
+        <ForwardRef(FormHelperText)
           error={true}
         >
           Invalid date
-        </WithStyles(ForwardRef(FormHelperText))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(FormHelperText)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -1732,92 +1775,93 @@ exports[`PartialDateForm component with clearable flag should display an error o
             }
           }
           value={1}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={true}
           fullWidth={true}
           id="test-year"
@@ -1836,36 +1880,39 @@ exports[`PartialDateForm component with clearable flag should display an error o
           placeholder="Year"
           type="text"
           value={2020}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component with clearable flag should not display an error on clearing whole partial date field 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={false}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -1873,11 +1920,11 @@ exports[`PartialDateForm component with clearable flag should not display an err
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-day"
@@ -1896,13 +1943,14 @@ exports[`PartialDateForm component with clearable flag should not display an err
           placeholder="Day"
           type="text"
           value=""
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -1934,92 +1982,93 @@ exports[`PartialDateForm component with clearable flag should not display an err
             }
           }
           value={-1}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-year"
@@ -2038,36 +2087,39 @@ exports[`PartialDateForm component with clearable flag should not display an err
           placeholder="Year"
           type="text"
           value=""
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`PartialDateForm component with clearable flag should not display an error on entering valid date 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   id="test"
+  padding={0}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(InputLabel))
+    <ForwardRef(InputLabel)
       error={false}
       shrink={true}
     >
       Enter a date
-    </WithStyles(ForwardRef(InputLabel))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(InputLabel)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
+      padding={0}
       spacing={2}
       style={
         Object {
@@ -2075,11 +2127,11 @@ exports[`PartialDateForm component with clearable flag should not display an err
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-day"
@@ -2098,13 +2150,14 @@ exports[`PartialDateForm component with clearable flag should not display an err
           placeholder="Day"
           type="text"
           value={12}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(Select))
+        <ForwardRef(Select)
           MenuProps={
             Object {
               "data-testid": "test-month-options",
@@ -2136,92 +2189,93 @@ exports[`PartialDateForm component with clearable flag should not display an err
             }
           }
           value={3}
+          variant="standard"
         >
-          <WithStyles(ForwardRef(MenuItem))
+          <ForwardRef(MenuItem)
             key="-1"
             value={-1}
           >
             Month
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="0"
             value={0}
           >
             January
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="1"
             value={1}
           >
             February
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="2"
             value={2}
           >
             March
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="3"
             value={3}
           >
             April
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="4"
             value={4}
           >
             May
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="5"
             value={5}
           >
             June
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="6"
             value={6}
           >
             July
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="7"
             value={7}
           >
             August
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="8"
             value={8}
           >
             September
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="9"
             value={9}
           >
             October
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="10"
             value={10}
           >
             November
-          </WithStyles(ForwardRef(MenuItem))>
-          <WithStyles(ForwardRef(MenuItem))
+          </ForwardRef(MenuItem)>
+          <ForwardRef(MenuItem)
             key="11"
             value={11}
           >
             December
-          </WithStyles(ForwardRef(MenuItem))>
-        </WithStyles(ForwardRef(Select))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+          </ForwardRef(MenuItem)>
+        </ForwardRef(Select)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={4}
       >
-        <WithStyles(ForwardRef(TextField))
+        <ForwardRef(TextField)
           error={false}
           fullWidth={true}
           id="test-year"
@@ -2240,9 +2294,10 @@ exports[`PartialDateForm component with clearable flag should not display an err
           placeholder="Year"
           type="text"
           value={1990}
+          variant="standard"
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

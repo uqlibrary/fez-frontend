@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { locale } from 'locale';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 
 const CulturalAdvice = () => {
     const txt = locale.components.culturalAdvice;

@@ -5,22 +5,22 @@ exports[`AddSection component should render default view 1`] = `
   <StandardPage
     title="Add a new work"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={3}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard
           title="Identify your new work"
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={3}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -50,8 +50,8 @@ exports[`AddSection component should render default view 1`] = `
                   ]
                 }
               />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -69,172 +69,176 @@ exports[`AddSection component should render default view 1`] = `
                   ]
                 }
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             />
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 container={true}
                 spacing={1}
               >
-                <Hidden
-                  xsDown={true}
-                >
-                  <WithStyles(ForwardRef(Grid))
-                    item={true}
-                    xs={true}
-                  />
-                </Hidden>
-                <WithStyles(ForwardRef(Grid))
+                <ForwardRef(Grid)
+                  item={true}
+                  sx={
+                    Object {
+                      "display": Object {
+                        "sm": "block",
+                        "xs": "none",
+                      },
+                    }
+                  }
+                  xs={true}
+                />
+                <ForwardRef(Grid)
                   item={true}
                   sm="auto"
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Button))
+                  <ForwardRef(Button)
                     color="secondary"
                     data-testid="cancel-work"
                     fullWidth={true}
@@ -243,14 +247,14 @@ exports[`AddSection component should render default view 1`] = `
                     variant="contained"
                   >
                     Cancel
-                  </WithStyles(ForwardRef(Button))>
-                </WithStyles(ForwardRef(Grid))>
-                <WithStyles(ForwardRef(Grid))
+                  </ForwardRef(Button)>
+                </ForwardRef(Grid)>
+                <ForwardRef(Grid)
                   item={true}
                   sm="auto"
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Button))
+                  <ForwardRef(Button)
                     color="primary"
                     data-testid="submit-work"
                     fullWidth={true}
@@ -258,14 +262,14 @@ exports[`AddSection component should render default view 1`] = `
                     variant="contained"
                   >
                     Create work
-                  </WithStyles(ForwardRef(Button))>
-                </WithStyles(ForwardRef(Grid))>
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+                  </ForwardRef(Button)>
+                </ForwardRef(Grid)>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -275,22 +279,22 @@ exports[`AddSection component should render with subtypes 1`] = `
   <StandardPage
     title="Add a new work"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={3}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard
           title="Identify your new work"
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={3}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -320,8 +324,8 @@ exports[`AddSection component should render with subtypes 1`] = `
                   ]
                 }
               />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -339,151 +343,151 @@ exports[`AddSection component should render with subtypes 1`] = `
                   ]
                 }
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -502,30 +506,34 @@ exports[`AddSection component should render with subtypes 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 container={true}
                 spacing={1}
               >
-                <Hidden
-                  xsDown={true}
-                >
-                  <WithStyles(ForwardRef(Grid))
-                    item={true}
-                    xs={true}
-                  />
-                </Hidden>
-                <WithStyles(ForwardRef(Grid))
+                <ForwardRef(Grid)
+                  item={true}
+                  sx={
+                    Object {
+                      "display": Object {
+                        "sm": "block",
+                        "xs": "none",
+                      },
+                    }
+                  }
+                  xs={true}
+                />
+                <ForwardRef(Grid)
                   item={true}
                   sm="auto"
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Button))
+                  <ForwardRef(Button)
                     color="secondary"
                     data-testid="cancel-work"
                     fullWidth={true}
@@ -534,14 +542,14 @@ exports[`AddSection component should render with subtypes 1`] = `
                     variant="contained"
                   >
                     Cancel
-                  </WithStyles(ForwardRef(Button))>
-                </WithStyles(ForwardRef(Grid))>
-                <WithStyles(ForwardRef(Grid))
+                  </ForwardRef(Button)>
+                </ForwardRef(Grid)>
+                <ForwardRef(Grid)
                   item={true}
                   sm="auto"
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Button))
+                  <ForwardRef(Button)
                     color="primary"
                     data-testid="submit-work"
                     fullWidth={true}
@@ -549,14 +557,14 @@ exports[`AddSection component should render with subtypes 1`] = `
                     variant="contained"
                   >
                     Create work
-                  </WithStyles(ForwardRef(Button))>
-                </WithStyles(ForwardRef(Grid))>
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+                  </ForwardRef(Button)>
+                </ForwardRef(Grid)>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;

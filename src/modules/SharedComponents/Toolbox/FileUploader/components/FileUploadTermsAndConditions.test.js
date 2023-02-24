@@ -25,7 +25,7 @@ describe('Component FileUploadTermsAndConditions', () => {
     });
 
     it('should render default view with styles', () => {
-        const wrapper = getElement(FileUploadTermsAndConditionsWithStyles, getProps());
+        const wrapper = getElement(FileUploadTermsAndConditionsWithStyles, getProps(), { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

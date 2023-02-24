@@ -2,7 +2,7 @@
 
 exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(TextField))
+  <ForwardRef(TextField)
     InputLabelProps={
       Object {
         "data-testid": "test-label",
@@ -26,13 +26,14 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
     }
     name="testField"
     type="text"
+    variant="standard"
   />
 </Fragment>
 `;
 
 exports[`TextFieldWrapper snapshots tests renders TextField component appending a class 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(TextField))
+  <ForwardRef(TextField)
     InputLabelProps={
       Object {
         "data-testid": "test-label",
@@ -57,13 +58,14 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
     }
     name="testField"
     type="text"
+    variant="standard"
   />
 </Fragment>
 `;
 
 exports[`TextFieldWrapper snapshots tests renders TextField component with shrink:true 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(TextField))
+  <ForwardRef(TextField)
     InputLabelProps={
       Object {
         "data-testid": "test-label",
@@ -89,6 +91,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
     label="test"
     name="testField"
     type="text"
+    variant="standard"
   />
 </Fragment>
 `;

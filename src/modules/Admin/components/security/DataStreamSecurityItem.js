@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
 import { PolicyDropdown } from './PolicyDropdown';
 
@@ -33,7 +33,9 @@ const DataStreamSecurityItem = ({
     return (
         <React.Fragment key={dataStream.dsi_dsid}>
             <Grid item xs={12} sm={6} className={classes.dataStreamFileName}>
-                <Link title={dataStream.dsi_dsid}>{dataStream.dsi_dsid}</Link>
+                <Link title={dataStream.dsi_dsid} underline="hover">
+                    {dataStream.dsi_dsid}
+                </Link>
                 <br />
                 <Typography variant="caption">
                     {dataStream.dsi_security_inherited ? 'Inherited' : 'Overridden'}

@@ -2,7 +2,7 @@ import React from 'react';
 import { render, WithRouter } from 'test-utils';
 
 import { createMemoryHistory } from 'history';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 
 import ScrollToPos from './ScrollToPos';
 

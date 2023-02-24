@@ -1,10 +1,10 @@
 import React from 'react';
-import { fireEvent, render } from 'test-utils';
+import { fireEvent, rtlRender } from 'test-utils';
 
 import { FAQ } from './FAQ';
 import locale from '../../../../locale/components';
 
-function setup() {
+function setup(render = rtlRender) {
     return render(<FAQ />);
 }
 

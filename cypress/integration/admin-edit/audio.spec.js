@@ -113,14 +113,15 @@ context('Audio admin edit', () => {
             .find('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')
             .within(() => {
                 cy.get('div > div > input').should('have.value', '01/01/2099');
-                cy.get('div > div > div > button').click(); // date picker popup appears
+                cy.get('div > div > div > button').as('embargoDateButton');
+                cy.get('@embargoDateButton').click(); // date picker popup appears
             });
 
-        cy.get('[role="presentation"] > div:nth-child(3) > div').within(() => {
-            cy.get('div > button:nth-child(1) > span > h6').should('have.text', '2099');
+        cy.get('[role="dialog"] [role="presentation"]').within(() => {
+            cy.get('.MuiPickersCalendarHeader-label').should('have.text', 'January 2099');
         });
 
-        cy.get('[role="presentation"] > div:nth-child(1)').click();
+        cy.get('@embargoDateButton').click(); // date picker disappears
 
         cy.get('@filesTab')
             .find('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')

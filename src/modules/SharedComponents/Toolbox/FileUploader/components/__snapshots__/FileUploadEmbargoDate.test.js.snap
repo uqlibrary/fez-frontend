@@ -1,100 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
-<PickerWithState
-  InputProps={
-    Object {
-      "classes": Object {
-        "root": "",
-      },
-      "disableUnderline": true,
+<LocalizationProvider
+  dateAdapter={[Function]}
+>
+  <ForwardRef(DatePicker)
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "",
+        },
+        "data-testid": "undefined-input",
+        "disableUnderline": true,
+      }
     }
-  }
-  allowKeyboardControl={true}
-  autoOk={true}
-  data-testid="undefined-input"
-  format="DD/MM/YYYY"
-  invalidDateMessage="Invalid Date Format"
-  maxDate={2100-01-01T00:00:00.000Z}
-  maxDateMessage="Date should not be after maximal date"
-  minDate={2016-01-01T00:00:00.000Z}
-  minDateMessage="Date should not be before minimal date"
-  onChange={[Function]}
-  openTo="date"
-  value={2016-01-01T00:00:00.000Z}
-  variant="inline"
-  views={
-    Array [
-      "year",
-      "date",
-    ]
-  }
-/>
+    inputFormat="DD/MM/YYYY"
+    minDate={2016-01-01T00:00:00.000Z}
+    onChange={[Function]}
+    renderInput={[Function]}
+    value={2016-01-01T00:00:00.000Z}
+  />
+</LocalizationProvider>
 `;
 
 exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
-<PickerWithState
-  InputProps={
-    Object {
-      "classes": Object {
-        "root": "",
-      },
-      "disableUnderline": true,
+<LocalizationProvider
+  dateAdapter={[Function]}
+>
+  <ForwardRef(DatePicker)
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "",
+        },
+        "data-testid": "undefined-input",
+        "disableUnderline": true,
+      }
     }
-  }
-  allowKeyboardControl={true}
-  autoOk={true}
-  data-testid="undefined-input"
-  disabled={true}
-  format="DD/MM/YYYY"
-  invalidDateMessage="Invalid Date Format"
-  maxDate={2100-01-01T00:00:00.000Z}
-  maxDateMessage="Date should not be after maximal date"
-  minDate={2016-01-01T00:00:00.000Z}
-  minDateMessage="Date should not be before minimal date"
-  onChange={[Function]}
-  openTo="date"
-  value={2016-01-01T00:00:00.000Z}
-  variant="inline"
-  views={
-    Array [
-      "year",
-      "date",
-    ]
-  }
-/>
+    disabled={true}
+    inputFormat="DD/MM/YYYY"
+    minDate={2016-01-01T00:00:00.000Z}
+    onChange={[Function]}
+    renderInput={[Function]}
+    value={2016-01-01T00:00:00.000Z}
+  />
+</LocalizationProvider>
 `;
 
 exports[`Component FileUploadEmbargoDate should render with default setup 1`] = `
-<PickerWithState
-  InputProps={
-    Object {
-      "classes": Object {
-        "root": "",
-      },
-      "disableUnderline": true,
+<LocalizationProvider
+  dateAdapter={[Function]}
+>
+  <ForwardRef(DatePicker)
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "",
+        },
+        "data-testid": "undefined-input",
+        "disableUnderline": true,
+      }
     }
-  }
-  allowKeyboardControl={true}
-  autoOk={true}
-  data-testid="undefined-input"
-  format="DD/MM/YYYY"
-  invalidDateMessage="Invalid Date Format"
-  maxDate={2100-01-01T00:00:00.000Z}
-  maxDateMessage="Date should not be after maximal date"
-  minDate={2016-01-01T00:00:00.000Z}
-  minDateMessage="Date should not be before minimal date"
-  onChange={[Function]}
-  openTo="date"
-  value={2016-01-01T00:00:00.000Z}
-  variant="inline"
-  views={
-    Array [
-      "year",
-      "date",
-    ]
-  }
-/>
+    inputFormat="DD/MM/YYYY"
+    minDate={2016-01-01T00:00:00.000Z}
+    onChange={[Function]}
+    renderInput={[Function]}
+    value={2016-01-01T00:00:00.000Z}
+  />
+</LocalizationProvider>
 `;
 
 exports[`Component FileUploadEmbargoDate should render with default setup with styles 1`] = `
@@ -110,97 +83,70 @@ exports[`Component FileUploadEmbargoDate should render with default setup with s
 `;
 
 exports[`Component FileUploadEmbargoDate should render with no supplied date 1`] = `
-<PickerWithState
-  InputProps={
-    Object {
-      "classes": Object {
-        "root": "",
-      },
-      "disableUnderline": true,
+<LocalizationProvider
+  dateAdapter={[Function]}
+>
+  <ForwardRef(DatePicker)
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "",
+        },
+        "data-testid": "undefined-input",
+        "disableUnderline": true,
+      }
     }
-  }
-  allowKeyboardControl={true}
-  autoOk={true}
-  data-testid="undefined-input"
-  format="DD/MM/YYYY"
-  invalidDateMessage="Invalid Date Format"
-  maxDate={2100-01-01T00:00:00.000Z}
-  maxDateMessage="Date should not be after maximal date"
-  minDate={2016-01-01T00:00:00.000Z}
-  minDateMessage="Date should not be before minimal date"
-  onChange={[Function]}
-  openTo="date"
-  value={null}
-  variant="inline"
-  views={
-    Array [
-      "year",
-      "date",
-    ]
-  }
-/>
+    inputFormat="DD/MM/YYYY"
+    minDate={2016-01-01T00:00:00.000Z}
+    onChange={[Function]}
+    renderInput={[Function]}
+    value={null}
+  />
+</LocalizationProvider>
 `;
 
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 1`] = `
-<PickerWithState
-  InputProps={
-    Object {
-      "classes": Object {
-        "root": "",
-      },
-      "disableUnderline": true,
+<LocalizationProvider
+  dateAdapter={[Function]}
+>
+  <ForwardRef(DatePicker)
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "",
+        },
+        "data-testid": "undefined-input",
+        "disableUnderline": true,
+      }
     }
-  }
-  allowKeyboardControl={true}
-  autoOk={true}
-  data-testid="undefined-input"
-  format="DD/MM/YYYY"
-  invalidDateMessage="Invalid Date Format"
-  maxDate={2100-01-01T00:00:00.000Z}
-  maxDateMessage="Date should not be after maximal date"
-  minDate={2016-01-01T00:00:00.000Z}
-  minDateMessage="Date should not be before minimal date"
-  onChange={[Function]}
-  openTo="date"
-  value={2016-01-01T00:00:00.000Z}
-  variant="inline"
-  views={
-    Array [
-      "year",
-      "date",
-    ]
-  }
-/>
+    inputFormat="DD/MM/YYYY"
+    minDate={2016-01-01T00:00:00.000Z}
+    onChange={[Function]}
+    renderInput={[Function]}
+    value={2016-01-01T00:00:00.000Z}
+  />
+</LocalizationProvider>
 `;
 
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 2`] = `
-<PickerWithState
-  InputProps={
-    Object {
-      "classes": Object {
-        "root": "",
-      },
-      "disableUnderline": true,
+<LocalizationProvider
+  dateAdapter={[Function]}
+>
+  <ForwardRef(DatePicker)
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "",
+        },
+        "data-testid": "undefined-input",
+        "disableUnderline": true,
+      }
     }
-  }
-  allowKeyboardControl={true}
-  autoOk={true}
-  data-testid="undefined-input"
-  format="DD/MM/YYYY"
-  invalidDateMessage="Invalid Date Format"
-  maxDate={2100-01-01T00:00:00.000Z}
-  maxDateMessage="Date should not be after maximal date"
-  minDate={2016-01-01T00:00:00.000Z}
-  minDateMessage="Date should not be before minimal date"
-  onChange={[Function]}
-  openTo="date"
-  value={2016-01-01T00:00:00.000Z}
-  variant="inline"
-  views={
-    Array [
-      "year",
-      "date",
-    ]
-  }
-/>
+    inputFormat="DD/MM/YYYY"
+    minDate={2016-01-01T00:00:00.000Z}
+    onChange={[Function]}
+    renderInput={[Function]}
+    value={2016-01-01T00:00:00.000Z}
+  />
+</LocalizationProvider>
 `;

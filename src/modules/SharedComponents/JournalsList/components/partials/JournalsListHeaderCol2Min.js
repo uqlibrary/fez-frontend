@@ -1,9 +1,9 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
+import Grid from '@mui/material/Grid';
+import InputLabel from '@mui/material/InputLabel';
 import PropTypes from 'prop-types';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 import { sanitiseId } from 'helpers/general';
 
 const JournalsListHeaderCol2Min = ({ journal }) => {

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import VolumeUp from '@material-ui/icons/VolumeUp';
-import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
-import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
-import Image from '@material-ui/icons/Image';
-import Videocam from '@material-ui/icons/Videocam';
+import VolumeUp from '@mui/icons-material/VolumeUp';
+import PictureAsPdf from '@mui/icons-material/PictureAsPdf';
+import InsertDriveFile from '@mui/icons-material/InsertDriveFile';
+import Image from '@mui/icons-material/Image';
+import Videocam from '@mui/icons-material/Videocam';
 import Thumbnail from 'modules/ViewRecord/components/partials/Thumbnail';
 
 import { getUrl, useStyles } from './AttachedFiles';

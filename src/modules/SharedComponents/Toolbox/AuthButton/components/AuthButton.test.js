@@ -5,7 +5,6 @@ import AuthButton from '../components/AuthButton';
 function setup(testProps = {}) {
     return rtlRender(
         <AuthButton
-            ariaLabel="Log in/Log out button"
             signInTooltipText="Please log in"
             signOutTooltipText="Log out"
             onClick={jest.fn()}
@@ -16,15 +15,15 @@ function setup(testProps = {}) {
 
 describe('AuthButton snapshots test', () => {
     it('renders logged out status', () => {
-        const { getByTestId, getByTitle } = setup({ isAuthorizedUser: false });
+        const { getByTestId, getByRole } = setup({ isAuthorizedUser: false });
         expect(getByTestId('logged-out-icon')).toBeInTheDocument();
-        expect(getByTitle('Please log in')).toBeInTheDocument();
+        expect(getByRole('button')).toHaveAttribute('aria-label', 'Please log in');
     });
 
     it('renders logged in user status', () => {
-        const { getByTestId, getByTitle } = setup({ isAuthorizedUser: true });
+        const { getByTestId, getByRole } = setup({ isAuthorizedUser: true });
         expect(getByTestId('logged-in-icon')).toBeInTheDocument();
-        expect(getByTitle('Log out')).toBeInTheDocument();
+        expect(getByRole('button')).toHaveAttribute('aria-label', 'Log out');
     });
 
     it('should fire a given action on clicking the button', () => {

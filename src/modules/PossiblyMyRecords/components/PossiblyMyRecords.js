@@ -17,9 +17,8 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { pathConfig } from 'config/pathConfig';
 import { locale } from 'locale';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 export default class PossiblyMyRecords extends PureComponent {
     static propTypes = {
@@ -342,21 +341,19 @@ export default class PossiblyMyRecords extends PureComponent {
                         (this.state.activeFacets &&
                             this.state.activeFacets.ranges &&
                             Object.keys(this.state.activeFacets.ranges).length > 0)) && (
-                        <Hidden smDown>
-                            <Grid item sm={3}>
-                                <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                    <FacetsFilter
-                                        facetsData={this.props.possiblePublicationsFacets}
-                                        onFacetsChanged={this._facetsChanged}
-                                        activeFacets={this.state.activeFacets}
-                                        disabled={this.props.loadingPossiblePublicationsList}
-                                        excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                        renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                        lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                    />
-                                </StandardRighthandCard>
-                            </Grid>
-                        </Hidden>
+                        <Grid item sm={3} sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                <FacetsFilter
+                                    facetsData={this.props.possiblePublicationsFacets}
+                                    onFacetsChanged={this._facetsChanged}
+                                    activeFacets={this.state.activeFacets}
+                                    disabled={this.props.loadingPossiblePublicationsList}
+                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                />
+                            </StandardRighthandCard>
+                        </Grid>
                     )}
                 </Grid>
             </StandardPage>

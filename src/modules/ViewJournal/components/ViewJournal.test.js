@@ -2,21 +2,12 @@ import React from 'react';
 import * as repositories from 'repositories';
 import { journalDetails } from 'mock/data/journal';
 
-import { render, waitForElementToBeRemoved, WithReduxStore, act, fireEvent } from 'test-utils';
+import { render, waitForElementToBeRemoved, WithReduxStore, act, fireEvent, createMatchMedia } from 'test-utils';
 import ViewJournal from './ViewJournal';
-import mediaQuery from 'css-mediaquery';
 
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ id: 1 })),
 }));
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 const setup = () => {
     return render(
@@ -538,7 +529,7 @@ describe('ViewJournal', () => {
     });
 
     it('should display journal details Tab width in tablet size when >1 tab shown', async () => {
-        window.matchMedia = createMatchMedia(950);
+        window.matchMedia = createMatchMedia(890);
 
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {

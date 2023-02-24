@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import { makeStyles } from '@material-ui/styles';
-import Delete from '@material-ui/icons/Delete';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
-import WarningIcon from '@material-ui/icons/Warning';
+import { makeStyles } from '@mui/styles';
+import Delete from '@mui/icons-material/Delete';
+import Grid from '@mui/material/Unstable_Grid2';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import WarningIcon from '@mui/icons-material/Warning';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
 
@@ -34,7 +36,6 @@ import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'mo
 
 import { FileIcon } from './FileIcon';
 import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
-import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import * as fileUploadLocale from '../FileUploader/locale';
 
 export const useStyles = makeStyles(
@@ -367,23 +368,18 @@ export const AttachedFiles = ({
                                 {locale.fileName}
                             </Typography>
                         </Grid>
-                        <Hidden xsDown>
-                            <Grid item sm={3}>
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.description}
-                                </Typography>
-                            </Grid>
-                        </Hidden>
-                        <Hidden smDown>
-                            <Grid item md={2}>
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.size}
-                                </Typography>
-                            </Grid>
-                        </Hidden>
-                        <Hidden xsDown>
-                            <Grid item sm />
-                        </Hidden>
+                        <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <Typography variant="caption" gutterBottom>
+                                {locale.description}
+                            </Typography>
+                        </Grid>
+                        <Grid item md={2} sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <Typography variant="caption" gutterBottom>
+                                {locale.size}
+                            </Typography>
+                        </Grid>
+                        <Grid item sm sx={{ display: { xs: 'none', sm: 'block' } }} />
+
                         {isAdmin && canEdit && (
                             <React.Fragment>
                                 <Grid item xs={2}>
@@ -415,7 +411,7 @@ export const AttachedFiles = ({
                                                     data-testid={`order-up-file-${index}`}
                                                     onClick={() => onFileOrderChangeUp(item.id, index + 1)}
                                                 >
-                                                    <ExpandLess />
+                                                    <ExpandLessIcon />
                                                 </IconButton>
                                             </Grid>
                                         </Grid>
@@ -454,42 +450,51 @@ export const AttachedFiles = ({
                                                     />
                                                 )}
                                             </Grid>
-                                            <Hidden xsDown>
-                                                <Grid item sm={3} className={classes.dataWrapper}>
-                                                    {isAdmin && canEdit ? (
-                                                        <TextField
-                                                            fullWidth
-                                                            onChange={onFileDescriptionChange(item.id)}
-                                                            name="fileDescription"
-                                                            defaultValue={item.description}
-                                                            id={`file-description-input-${index}`}
-                                                            textFieldId={`dsi-label-${index}`}
-                                                            inputProps={{
-                                                                maxLength: 255,
-                                                            }}
-                                                        />
-                                                    ) : (
-                                                        <Typography variant="body2" noWrap>
-                                                            {item.description}
-                                                        </Typography>
-                                                    )}
-                                                </Grid>
-                                            </Hidden>
-                                            <Hidden smDown>
-                                                <Grid item sm={2} className={classes.dataWrapper}>
-                                                    <Typography variant="body2" noWrap>
-                                                        {item.calculatedSize}
-                                                    </Typography>
-                                                </Grid>
-                                            </Hidden>
-                                            <Hidden xsDown>
-                                                <Grid item sm style={{ textAlign: 'right' }}>
-                                                    <OpenAccessIcon
-                                                        {...item.openAccessStatus}
-                                                        securityStatus={item.securityStatus}
+                                            <Grid
+                                                item
+                                                sm={3}
+                                                className={classes.dataWrapper}
+                                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                            >
+                                                {isAdmin && canEdit ? (
+                                                    <TextField
+                                                        fullWidth
+                                                        onChange={onFileDescriptionChange(item.id)}
+                                                        name="fileDescription"
+                                                        defaultValue={item.description}
+                                                        id={`file-description-input-${index}`}
+                                                        textFieldId={`dsi-label-${index}`}
+                                                        inputProps={{
+                                                            maxLength: 255,
+                                                        }}
                                                     />
-                                                </Grid>
-                                            </Hidden>
+                                                ) : (
+                                                    <Typography variant="body2" noWrap>
+                                                        {item.description}
+                                                    </Typography>
+                                                )}
+                                            </Grid>
+                                            <Grid
+                                                item
+                                                sm={2}
+                                                className={classes.dataWrapper}
+                                                sx={{ display: { xs: 'none', md: 'block' } }}
+                                            >
+                                                <Typography variant="body2" noWrap>
+                                                    {item.calculatedSize}
+                                                </Typography>
+                                            </Grid>
+                                            <Grid
+                                                item
+                                                sm
+                                                style={{ textAlign: 'right' }}
+                                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                            >
+                                                <OpenAccessIcon
+                                                    {...item.openAccessStatus}
+                                                    securityStatus={item.securityStatus}
+                                                />
+                                            </Grid>
                                             {isAdmin && canEdit && (
                                                 <React.Fragment>
                                                     {/* cypress test does not like full stop in the id */}
@@ -521,6 +526,7 @@ export const AttachedFiles = ({
                                                                     data-testid={`delete-file-${index}`}
                                                                     onClick={onFileDelete(item.fileName)}
                                                                     disabled={disabled}
+                                                                    size="large"
                                                                 >
                                                                     <Delete />
                                                                 </IconButton>
@@ -569,7 +575,7 @@ export const AttachedFiles = ({
                                                     data-testid={`order-down-file-${index}`}
                                                     onClick={() => onFileOrderChangeDown(item.id, index + 1)}
                                                 >
-                                                    <ExpandMore />
+                                                    <ExpandMoreIcon />
                                                 </IconButton>
                                             </Grid>
                                         </Grid>

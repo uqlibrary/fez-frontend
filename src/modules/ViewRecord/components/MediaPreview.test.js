@@ -1,17 +1,8 @@
 import React from 'react';
 import MediaPreview from './MediaPreview';
-import { rtlRender, fireEvent, act } from 'test-utils';
-import mediaQuery from 'css-mediaquery';
+import { rtlRender, fireEvent, act, createMatchMedia } from 'test-utils';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
 jest.mock('./MediaPreviewUtils');
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 function setup(testProps = {}) {
     const props = {

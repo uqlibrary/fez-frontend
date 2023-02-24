@@ -1,8 +1,8 @@
 import React from 'react';
 import BulkUpdatesList from './BulkUpdatesList';
-import { render } from 'test-utils';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, renderer = render) {
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         list: [],
         ...testProps,

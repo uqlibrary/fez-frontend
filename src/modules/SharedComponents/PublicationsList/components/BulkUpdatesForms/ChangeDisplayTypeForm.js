@@ -6,8 +6,8 @@ import { formValueSelector, getFormSyncErrors, change, Field, reduxForm, Submiss
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { DocumentTypeSingleField, PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 
 import { locale } from 'locale';
 import { validation } from 'config';

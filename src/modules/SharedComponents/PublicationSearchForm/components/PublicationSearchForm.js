@@ -5,11 +5,11 @@ import { propTypes } from 'redux-form/immutable';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { validation } from 'config';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 export default class PublicationSearchForm extends Component {
     static propTypes = {

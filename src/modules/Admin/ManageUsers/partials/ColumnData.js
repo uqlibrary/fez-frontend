@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Typography from '@material-ui/core/Typography';
-import Copy from '@material-ui/icons/FileCopyOutlined';
-import Snackbar from '@material-ui/core/Snackbar';
-import Tooltip from '@material-ui/core/Tooltip';
-import IconButton from '@material-ui/core/IconButton';
-import InputBase from '@material-ui/core/InputBase';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import { makeStyles } from '@material-ui/styles';
+// import Typography from '@mui/material/Typography';
+import Copy from '@mui/icons-material/FileCopyOutlined';
+import Snackbar from '@mui/material/Snackbar';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import InputBase from '@mui/material/InputBase';
+import InputAdornment from '@mui/material/InputAdornment';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
     columnData: {

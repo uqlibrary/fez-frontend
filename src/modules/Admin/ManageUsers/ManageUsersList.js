@@ -2,12 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import makeStyles from '@material-ui/styles/makeStyles';
+import makeStyles from '@mui/styles/makeStyles';
 import MaterialTable, { MTableAction, MTableBodyRow } from '@material-table/core';
 import { tableIcons } from './ManageUsersListIcons';
 
-import Backdrop from '@material-ui/core/Backdrop';
-import Button from '@material-ui/core/Button';
+import Backdrop from '@mui/material/Backdrop';
+import Button from '@mui/material/Button';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';

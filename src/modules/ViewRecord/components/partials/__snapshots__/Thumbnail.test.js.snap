@@ -84,7 +84,7 @@ exports[`Thumbnail component should render PDF files as a thumbnail only plus li
     crossOrigin="anonymous"
     decode={true}
     loader={
-      <WithStyles(ForwardRef(CircularProgress))
+      <ForwardRef(CircularProgress)
         size={15}
         thickness={1}
       />

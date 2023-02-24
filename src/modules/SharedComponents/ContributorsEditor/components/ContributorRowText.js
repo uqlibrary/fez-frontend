@@ -4,9 +4,9 @@ import { userIsAdmin } from 'hooks';
 import locale from 'locale/global';
 import { numberToWords } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPES_LOOKUP } from 'config/general';
-import Grid from '@material-ui/core/Grid';
-import ListItemText from '@material-ui/core/ListItemText';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
 
 export const ContributorRowText = ({
     canEdit,

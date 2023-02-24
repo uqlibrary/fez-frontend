@@ -8,185 +8,185 @@ exports[`AdminCard component should render StyledCard with same props 1`] = `
 `;
 
 exports[`Cards component renders with custom colours and full height 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   className="undefined AdminCard"
   container={true}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         >
           <hr />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs="auto"
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             color="primary"
             component="h4"
           >
              
             card title
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   />
-</WithStyles(ForwardRef(Grid))>
+</ForwardRef(Grid)>
 `;
 
 exports[`Cards component renders with square top and accent header 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   className="undefined AdminCard"
   container={true}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         >
           <hr />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs="auto"
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             color="primary"
             component="h4"
           >
              
             card title
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   />
-</WithStyles(ForwardRef(Grid))>
+</ForwardRef(Grid)>
 `;
 
 exports[`Cards component renders with title and help button 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   className="testClass AdminCard"
   container={true}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         >
           <hr />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs="auto"
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             color="primary"
             component="h4"
           >
              
             card title
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   />
-</WithStyles(ForwardRef(Grid))>
+</ForwardRef(Grid)>
 `;
 
 exports[`Cards component renders with title and no help icon 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   className="testClass AdminCard"
   container={true}
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={true}
         >
           <hr />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs="auto"
         >
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             color="primary"
             component="h4"
           >
              
             card title
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   />
-</WithStyles(ForwardRef(Grid))>
+</ForwardRef(Grid)>
 `;

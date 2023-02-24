@@ -29,33 +29,33 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <WithStyles(ForwardRef(ListItem))
+  <ForwardRef(ListItem)
     classes={
       Object {
         "root": undefined,
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         md={9}
         sm={11}
         xs={10}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={5}
             xs={12}
           >
-            <WithStyles(ForwardRef(ListItemText))
+            <ForwardRef(ListItemText)
               secondaryTypographyProps={
                 Object {
                   "variant": "caption",
@@ -67,15 +67,71 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <Hidden
-            xsDown={true}
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
+            item={true}
+            sm={3}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
+                }
+              }
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            />
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        md={3}
+        sm={1}
+        xs={2}
+      >
+        <ForwardRef(ListItemSecondaryAction)
+          style={
+            Object {
+              "margin": "0 0 -32px 0",
+              "position": "relative",
+              "width": "100%",
+            }
+          }
+        >
+          <ForwardRef(Grid)
+            container={true}
+            spacing={0}
+          >
+            <ForwardRef(Grid)
               item={true}
-              sm={3}
+              sx={
+                Object {
+                  "display": Object {
+                    "md": "block",
+                    "xs": "none",
+                  },
+                }
+              }
+              xs={8}
             >
-              <WithStyles(ForwardRef(ListItemText))
+              <ForwardRef(ListItemText)
+                classes={
+                  Object {
+                    "root": undefined,
+                  }
+                }
                 secondaryTypographyProps={
                   Object {
                     "variant": "caption",
@@ -87,56 +143,8 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
                   }
                 }
               />
-            </WithStyles(ForwardRef(Grid))>
-          </Hidden>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        md={3}
-        sm={1}
-        xs={2}
-      >
-        <WithStyles(ForwardRef(ListItemSecondaryAction))
-          style={
-            Object {
-              "margin": "0 0 -32px 0",
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={0}
-          >
-            <Hidden
-              smDown={true}
-            >
-              <WithStyles(ForwardRef(Grid))
-                item={true}
-                xs={8}
-              >
-                <WithStyles(ForwardRef(ListItemText))
-                  classes={
-                    Object {
-                      "root": undefined,
-                    }
-                  }
-                  secondaryTypographyProps={
-                    Object {
-                      "variant": "caption",
-                    }
-                  }
-                  style={
-                    Object {
-                      "padding": 0,
-                    }
-                  }
-                />
-              </WithStyles(ForwardRef(Grid))>
-            </Hidden>
-            <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               style={
                 Object {
@@ -145,7 +153,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
               }
               xs={4}
             >
-              <WithStyles(ForwardRef(Tooltip))
+              <ForwardRef(Tooltip)
                 disableFocusListener={false}
                 disableHoverListener={false}
                 disableTouchListener={false}
@@ -157,20 +165,21 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
                     }
                   }
                 >
-                  <WithStyles(ForwardRef(IconButton))
+                  <ForwardRef(IconButton)
                     disabled={false}
                     onClick={[Function]}
+                    size="large"
                   >
                     <Memo(ForwardRef(DeleteForeverIcon)) />
-                  </WithStyles(ForwardRef(IconButton))>
+                  </ForwardRef(IconButton)>
                 </div>
-              </WithStyles(ForwardRef(Tooltip))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(ListItemSecondaryAction))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(ListItem))>
+              </ForwardRef(Tooltip)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(ListItemSecondaryAction)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(ListItem)>
 </Fragment>
 `;
 
@@ -180,33 +189,33 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <WithStyles(ForwardRef(ListItem))
+  <ForwardRef(ListItem)
     classes={
       Object {
         "root": undefined,
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         md={9}
         sm={11}
         xs={10}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={5}
             xs={12}
           >
-            <WithStyles(ForwardRef(ListItemText))
+            <ForwardRef(ListItemText)
               secondaryTypographyProps={
                 Object {
                   "variant": "caption",
@@ -218,54 +227,66 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <Hidden
-            xsDown={true}
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
+            item={true}
+            sm={3}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
           >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-            >
-              <WithStyles(ForwardRef(ListItemText))
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
+            <ForwardRef(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
                 }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
+              }
+              style={
+                Object {
+                  "padding": 0,
                 }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={4}
-            >
-              <WithStyles(ForwardRef(ListItemText))
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
+              }
+            />
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
+            item={true}
+            sm={4}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
+          >
+            <ForwardRef(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
                 }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
+              }
+              style={
+                Object {
+                  "padding": 0,
                 }
-              />
-            </WithStyles(ForwardRef(Grid))>
-          </Hidden>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              }
+            />
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         md={3}
         sm={1}
         xs={2}
       >
-        <WithStyles(ForwardRef(ListItemSecondaryAction))
+        <ForwardRef(ListItemSecondaryAction)
           style={
             Object {
               "margin": "0 0 -32px 0",
@@ -274,37 +295,41 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
             }
           }
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={0}
           >
-            <Hidden
-              smDown={true}
+            <ForwardRef(Grid)
+              item={true}
+              sx={
+                Object {
+                  "display": Object {
+                    "md": "block",
+                    "xs": "none",
+                  },
+                }
+              }
+              xs={8}
             >
-              <WithStyles(ForwardRef(Grid))
-                item={true}
-                xs={8}
-              >
-                <WithStyles(ForwardRef(ListItemText))
-                  classes={
-                    Object {
-                      "root": undefined,
-                    }
+              <ForwardRef(ListItemText)
+                classes={
+                  Object {
+                    "root": undefined,
                   }
-                  secondaryTypographyProps={
-                    Object {
-                      "variant": "caption",
-                    }
+                }
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
                   }
-                  style={
-                    Object {
-                      "padding": 0,
-                    }
+                }
+                style={
+                  Object {
+                    "padding": 0,
                   }
-                />
-              </WithStyles(ForwardRef(Grid))>
-            </Hidden>
-            <WithStyles(ForwardRef(Grid))
+                }
+              />
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               style={
                 Object {
@@ -313,7 +338,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
               }
               xs={12}
             >
-              <WithStyles(ForwardRef(Tooltip))
+              <ForwardRef(Tooltip)
                 disableFocusListener={false}
                 disableHoverListener={false}
                 disableTouchListener={false}
@@ -325,20 +350,21 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
                     }
                   }
                 >
-                  <WithStyles(ForwardRef(IconButton))
+                  <ForwardRef(IconButton)
                     disabled={false}
                     onClick={[Function]}
+                    size="large"
                   >
                     <Memo(ForwardRef(DeleteForeverIcon)) />
-                  </WithStyles(ForwardRef(IconButton))>
+                  </ForwardRef(IconButton)>
                 </div>
-              </WithStyles(ForwardRef(Tooltip))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(ListItemSecondaryAction))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(ListItem))>
+              </ForwardRef(Tooltip)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(ListItemSecondaryAction)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(ListItem)>
 </Fragment>
 `;
 
@@ -348,33 +374,33 @@ exports[`GrantListEditorHeader should render default view 1`] = `
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <WithStyles(ForwardRef(ListItem))
+  <ForwardRef(ListItem)
     classes={
       Object {
         "root": undefined,
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         md={9}
         sm={11}
         xs={10}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={5}
             xs={12}
           >
-            <WithStyles(ForwardRef(ListItemText))
+            <ForwardRef(ListItemText)
               secondaryTypographyProps={
                 Object {
                   "variant": "caption",
@@ -386,54 +412,66 @@ exports[`GrantListEditorHeader should render default view 1`] = `
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <Hidden
-            xsDown={true}
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
+            item={true}
+            sm={3}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
           >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-            >
-              <WithStyles(ForwardRef(ListItemText))
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
+            <ForwardRef(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
                 }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
+              }
+              style={
+                Object {
+                  "padding": 0,
                 }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={4}
-            >
-              <WithStyles(ForwardRef(ListItemText))
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
+              }
+            />
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
+            item={true}
+            sm={4}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
+          >
+            <ForwardRef(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
                 }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
+              }
+              style={
+                Object {
+                  "padding": 0,
                 }
-              />
-            </WithStyles(ForwardRef(Grid))>
-          </Hidden>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              }
+            />
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         md={3}
         sm={1}
         xs={2}
       >
-        <WithStyles(ForwardRef(ListItemSecondaryAction))
+        <ForwardRef(ListItemSecondaryAction)
           style={
             Object {
               "margin": "0 0 -32px 0",
@@ -442,37 +480,41 @@ exports[`GrantListEditorHeader should render default view 1`] = `
             }
           }
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={0}
           >
-            <Hidden
-              smDown={true}
+            <ForwardRef(Grid)
+              item={true}
+              sx={
+                Object {
+                  "display": Object {
+                    "md": "block",
+                    "xs": "none",
+                  },
+                }
+              }
+              xs={8}
             >
-              <WithStyles(ForwardRef(Grid))
-                item={true}
-                xs={8}
-              >
-                <WithStyles(ForwardRef(ListItemText))
-                  classes={
-                    Object {
-                      "root": undefined,
-                    }
+              <ForwardRef(ListItemText)
+                classes={
+                  Object {
+                    "root": undefined,
                   }
-                  secondaryTypographyProps={
-                    Object {
-                      "variant": "caption",
-                    }
+                }
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
                   }
-                  style={
-                    Object {
-                      "padding": 0,
-                    }
+                }
+                style={
+                  Object {
+                    "padding": 0,
                   }
-                />
-              </WithStyles(ForwardRef(Grid))>
-            </Hidden>
-            <WithStyles(ForwardRef(Grid))
+                }
+              />
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               style={
                 Object {
@@ -481,7 +523,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
               }
               xs={4}
             >
-              <WithStyles(ForwardRef(Tooltip))
+              <ForwardRef(Tooltip)
                 disableFocusListener={false}
                 disableHoverListener={false}
                 disableTouchListener={false}
@@ -493,20 +535,21 @@ exports[`GrantListEditorHeader should render default view 1`] = `
                     }
                   }
                 >
-                  <WithStyles(ForwardRef(IconButton))
+                  <ForwardRef(IconButton)
                     disabled={false}
                     onClick={[Function]}
+                    size="large"
                   >
                     <Memo(ForwardRef(DeleteForeverIcon)) />
-                  </WithStyles(ForwardRef(IconButton))>
+                  </ForwardRef(IconButton)>
                 </div>
-              </WithStyles(ForwardRef(Tooltip))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(ListItemSecondaryAction))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(ListItem))>
+              </ForwardRef(Tooltip)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(ListItemSecondaryAction)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(ListItem)>
 </Fragment>
 `;
 
@@ -516,33 +559,33 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <WithStyles(ForwardRef(ListItem))
+  <ForwardRef(ListItem)
     classes={
       Object {
         "root": undefined,
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         md={9}
         sm={11}
         xs={10}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={5}
             xs={12}
           >
-            <WithStyles(ForwardRef(ListItemText))
+            <ForwardRef(ListItemText)
               secondaryTypographyProps={
                 Object {
                   "variant": "caption",
@@ -554,54 +597,66 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <Hidden
-            xsDown={true}
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
+            item={true}
+            sm={3}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
           >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-            >
-              <WithStyles(ForwardRef(ListItemText))
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
+            <ForwardRef(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
                 }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
+              }
+              style={
+                Object {
+                  "padding": 0,
                 }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={4}
-            >
-              <WithStyles(ForwardRef(ListItemText))
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
+              }
+            />
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
+            item={true}
+            sm={4}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
+          >
+            <ForwardRef(ListItemText)
+              secondaryTypographyProps={
+                Object {
+                  "variant": "caption",
                 }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
+              }
+              style={
+                Object {
+                  "padding": 0,
                 }
-              />
-            </WithStyles(ForwardRef(Grid))>
-          </Hidden>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              }
+            />
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         md={3}
         sm={1}
         xs={2}
       >
-        <WithStyles(ForwardRef(ListItemSecondaryAction))
+        <ForwardRef(ListItemSecondaryAction)
           style={
             Object {
               "margin": "0 0 -32px 0",
@@ -610,37 +665,41 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
             }
           }
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={0}
           >
-            <Hidden
-              smDown={true}
+            <ForwardRef(Grid)
+              item={true}
+              sx={
+                Object {
+                  "display": Object {
+                    "md": "block",
+                    "xs": "none",
+                  },
+                }
+              }
+              xs={8}
             >
-              <WithStyles(ForwardRef(Grid))
-                item={true}
-                xs={8}
-              >
-                <WithStyles(ForwardRef(ListItemText))
-                  classes={
-                    Object {
-                      "root": undefined,
-                    }
+              <ForwardRef(ListItemText)
+                classes={
+                  Object {
+                    "root": undefined,
                   }
-                  secondaryTypographyProps={
-                    Object {
-                      "variant": "caption",
-                    }
+                }
+                secondaryTypographyProps={
+                  Object {
+                    "variant": "caption",
                   }
-                  style={
-                    Object {
-                      "padding": 0,
-                    }
+                }
+                style={
+                  Object {
+                    "padding": 0,
                   }
-                />
-              </WithStyles(ForwardRef(Grid))>
-            </Hidden>
-            <WithStyles(ForwardRef(Grid))
+                }
+              />
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
               item={true}
               style={
                 Object {
@@ -649,7 +708,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
               }
               xs={4}
             >
-              <WithStyles(ForwardRef(Tooltip))
+              <ForwardRef(Tooltip)
                 disableFocusListener={false}
                 disableHoverListener={false}
                 disableTouchListener={false}
@@ -661,19 +720,20 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
                     }
                   }
                 >
-                  <WithStyles(ForwardRef(IconButton))
+                  <ForwardRef(IconButton)
                     disabled={false}
                     onClick={[Function]}
+                    size="large"
                   >
                     <Memo(ForwardRef(DeleteForeverIcon)) />
-                  </WithStyles(ForwardRef(IconButton))>
+                  </ForwardRef(IconButton)>
                 </div>
-              </WithStyles(ForwardRef(Tooltip))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(ListItemSecondaryAction))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(ListItem))>
+              </ForwardRef(Tooltip)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(ListItemSecondaryAction)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(ListItem)>
 </Fragment>
 `;

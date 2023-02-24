@@ -21,54 +21,54 @@ exports[`ThesisSubmission should display successfull submission screen 1`] = `
   standardPageId="rhd-submission-succeeded"
   title="Professional doctorate deposit"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="Your thesis has been deposited"
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={3}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               You will receive an email confirming your thesis deposit shortly.
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
     >
-      <WithStyles(ForwardRef(Button))
+      <ForwardRef(Button)
         color="primary"
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
       >
         Return to the Graduate School website
-      </WithStyles(ForwardRef(Button))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Button)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -85,54 +85,54 @@ exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`
   standardPageId="rhd-submission-succeeded"
   title="Higher degree by research thesis deposit"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="Your thesis has been deposited"
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={3}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               You will receive an email confirming your thesis deposit shortly.
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
     >
-      <WithStyles(ForwardRef(Button))
+      <ForwardRef(Button)
         color="primary"
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
       >
         Return to the Graduate School website
-      </WithStyles(ForwardRef(Button))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Button)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -170,22 +170,22 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
         onAction={[MockFunction]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Thesis information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -203,8 +203,8 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -214,10 +214,44 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -237,8 +271,8 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -274,8 +308,8 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -303,8 +337,8 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -321,11 +355,11 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -392,17 +426,17 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Field of research"
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               Select up to 3 Field of Research (FoR) codes at the 4 digit level
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
@@ -452,17 +486,17 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Keywords"
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
@@ -524,8 +558,8 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -589,37 +623,37 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={true}
           xs={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             data-testid="deposit-thesis"
             fullWidth={true}
@@ -628,9 +662,9 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             variant="contained"
           >
             Deposit your thesis
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -641,54 +675,54 @@ exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`
   standardPageId="rhd-submission-succeeded"
   title="Professional doctorate deposit"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="Your thesis has been deposited"
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={3}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               You will receive an email confirming your thesis deposit shortly.
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
     >
-      <WithStyles(ForwardRef(Button))
+      <ForwardRef(Button)
         color="primary"
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
       >
         Return to the Graduate School website
-      </WithStyles(ForwardRef(Button))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Button)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -726,22 +760,22 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
         onAction={[MockFunction]}
         onRef={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Thesis information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -759,8 +793,8 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -770,10 +804,44 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -793,8 +861,8 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -830,8 +898,8 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -859,8 +927,8 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -877,11 +945,11 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -948,17 +1016,17 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Field of research"
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               Select up to 3 Field of Research (FoR) codes at the 4 digit level
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
@@ -1008,17 +1076,17 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Keywords"
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
@@ -1080,8 +1148,8 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1145,37 +1213,37 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={true}
           xs={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             data-testid="deposit-thesis"
             fullWidth={true}
@@ -1184,9 +1252,9 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             variant="contained"
           >
             Deposit your thesis
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -1209,38 +1277,38 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
   standardPageId="rhd-submission-succeeded"
   title="Professional doctorate deposit"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="Your thesis has been deposited"
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={3}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               You will receive an email confirming your thesis deposit shortly.
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
@@ -1268,28 +1336,28 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
         type="error"
         wiggle={null}
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     />
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
     >
-      <WithStyles(ForwardRef(Button))
-        color="default"
+      <ForwardRef(Button)
+        color="inherit"
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
       >
         Return to the Graduate School website
-      </WithStyles(ForwardRef(Button))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Button)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;

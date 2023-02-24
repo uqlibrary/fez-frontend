@@ -5,15 +5,15 @@ exports[`ChangeDisplayType form should display confirmation box after successful
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -24,7 +24,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
           variant="h2"
         >
           Change display type from Research Report - Research Report for an External Body - Public Sector
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -752,7 +752,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -768,16 +768,16 @@ exports[`ChangeDisplayType form should display confirmation box after successful
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -792,168 +792,168 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -961,14 +961,14 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -976,11 +976,11 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -990,15 +990,15 @@ exports[`ChangeDisplayType form should display confirmation box after successful
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -1009,7 +1009,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
           variant="h2"
         >
           Change display type from Research Report - Research Report for an External Body - Public Sector
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -1737,7 +1737,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -1753,16 +1753,16 @@ exports[`ChangeDisplayType form should display confirmation box after successful
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -1777,168 +1777,168 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -1946,14 +1946,14 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -1961,11 +1961,11 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -1975,15 +1975,15 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -1994,7 +1994,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
           variant="h2"
         >
           Change display type from Journal Article - Article (original research)
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -2815,7 +2815,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -2831,16 +2831,16 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -2855,168 +2855,168 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -3024,14 +3024,14 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -3039,11 +3039,11 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -3053,15 +3053,15 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -3072,7 +3072,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
           variant="h2"
         >
           Change display type from Journal Article - Article (original research)
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -3893,7 +3893,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -3909,16 +3909,16 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -3933,168 +3933,168 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -4102,14 +4102,14 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -4117,11 +4117,11 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -4131,15 +4131,15 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -4150,7 +4150,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           variant="h2"
         >
           Change display type from Audio Document
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -4693,7 +4693,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -4709,16 +4709,16 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -4733,168 +4733,168 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -4902,14 +4902,14 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -4917,11 +4917,11 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -4931,15 +4931,15 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -4950,7 +4950,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           variant="h2"
         >
           Change display type from Audio Document
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -5493,7 +5493,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -5509,16 +5509,16 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -5533,168 +5533,168 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -5702,14 +5702,14 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -5717,11 +5717,11 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -5731,15 +5731,15 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -5750,7 +5750,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           variant="h2"
         >
           Change display type from Journal Article - Article (original research)
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -6571,7 +6571,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -6587,16 +6587,16 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -6611,168 +6611,168 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -6780,14 +6780,14 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -6795,11 +6795,11 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -6809,15 +6809,15 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -6828,7 +6828,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           variant="h2"
         >
           Change display type from Journal Article - Article (original research)
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -7649,7 +7649,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -7665,16 +7665,16 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -7689,168 +7689,168 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -7858,14 +7858,14 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -7873,11 +7873,11 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -7887,15 +7887,15 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -7906,7 +7906,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           variant="h2"
         >
           Change display type from Journal Article - Article (original research)
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -8727,7 +8727,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -8743,16 +8743,16 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -8767,168 +8767,168 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -8936,14 +8936,14 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -8951,11 +8951,11 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -8971,15 +8971,15 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -8990,7 +8990,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
           variant="h2"
         >
           Change display type from Research Report - Research Report for an External Body - Public Sector
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -9718,7 +9718,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -9734,16 +9734,16 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -9758,168 +9758,168 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -9927,14 +9927,14 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -9942,11 +9942,11 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;
@@ -9956,15 +9956,15 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
   onSubmit={[Function]}
 >
   <StandardPage>
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           data-testid="change-display-type-page-title"
           style={
@@ -9975,7 +9975,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
           variant="h2"
         >
           Change display type from Research Report - Research Report for an External Body - Public Sector
-        </WithStyles(ForwardRef(Typography))>
+        </ForwardRef(Typography)>
         <withRouter(Connect(WithStyles(PublicationCitation)))
           hideCitationCounts={true}
           hideContentIndicators={true}
@@ -10703,7 +10703,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
             }
           }
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
       <Memo(ConfirmationBox)
         confirmationBoxId="changeDisplayTypeDone"
         isOpen={false}
@@ -10719,16 +10719,16 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
         onCancelAction={[Function]}
         onClose={[Function]}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
         <StandardCard>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             container={true}
             spacing={1}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               item={true}
               xs={12}
             >
@@ -10743,168 +10743,168 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                 required={true}
                 selectFieldId="rek-display-type"
               >
-                <WithStyles(ForwardRef(MenuItem))
+                <ForwardRef(MenuItem)
                   key="0"
                   value={130}
                 >
                   Conference Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="1"
                   value={174}
                 >
                   Book
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="2"
                   value={177}
                 >
                   Book Chapter
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="3"
                   value={179}
                 >
                   Journal Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="4"
                   value={181}
                 >
                   Department Technical Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="5"
                   value={183}
                 >
                   Working Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="6"
                   value={185}
                 >
                   Patent
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="7"
                   value={187}
                 >
                   Thesis
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="8"
                   value={189}
                 >
                   Seminar Paper
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="9"
                   value={191}
                 >
                   Newspaper Article
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="10"
                   value={197}
                 >
                   Conference Proceedings
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="11"
                   value={202}
                 >
                   Generic Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="12"
                   value={204}
                 >
                   Preprint
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="13"
                   value={228}
                 >
                   Digilib Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="14"
                   value={238}
                 >
                   Image
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="15"
                   value={263}
                 >
                   Audio Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="16"
                   value={275}
                 >
                   Research Report
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="17"
                   value={294}
                 >
                   Journal
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="18"
                   value={310}
                 >
                   Video Document
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="19"
                   value={313}
                 >
                   Creative Work
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="20"
                   value={316}
                 >
                   Design
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="21"
                   value={371}
                 >
                   Data Collection
-                </WithStyles(ForwardRef(MenuItem))>
-                <WithStyles(ForwardRef(MenuItem))
+                </ForwardRef(MenuItem)>
+                <ForwardRef(MenuItem)
                   key="22"
                   value={374}
                 >
                   Manuscript
-                </WithStyles(ForwardRef(MenuItem))>
+                </ForwardRef(MenuItem)>
               </Field>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
         </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm={true}
             xs={false}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -10912,14 +10912,14 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
               variant="contained"
             >
               Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               data-testid="change-display-type-submit"
               fullWidth={true}
@@ -10927,11 +10927,11 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
               variant="contained"
             >
               Change display type
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardPage>
 </form>
 `;

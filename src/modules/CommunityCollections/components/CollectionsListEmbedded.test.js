@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor } from 'test-utils';
+import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor, createMatchMedia } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -9,7 +9,6 @@ import Immutable from 'immutable';
 import CollectionsListEmbedded from './CollectionsListEmbedded';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
-import mediaQuery from 'css-mediaquery';
 
 const txt = locale.components.communitiesCollections;
 
@@ -24,13 +23,6 @@ const testProps = {
     isSuperAdmin: false,
     open: true,
 };
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 const setup = (testProps = {}, state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] })) => {
     return render(

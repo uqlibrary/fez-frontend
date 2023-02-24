@@ -14,11 +14,11 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
           Object {
             "cancelButtonLabel": "Add another missing dataset",
             "confirmButtonLabel": "Go to my research data",
-            "confirmationMessage": <WithStyles(ForwardRef(Grid))
+            "confirmationMessage": <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -35,8 +35,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   type="warning"
                   wiggle={null}
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>,
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>,
             "confirmationTitle": "Your dataset has been submitted",
             "datasetSuccessConfirmationMessage": <p>
               Your dataset has been saved.
@@ -67,23 +67,24 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         }
         when={true}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         className="DataCollection"
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Deposit agreement"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -121,22 +122,23 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Dataset information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -146,10 +148,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -169,8 +205,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -180,10 +216,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -203,8 +273,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -214,10 +284,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -235,8 +339,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -268,8 +372,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -279,10 +383,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -301,8 +439,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -312,10 +450,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -333,8 +505,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -344,10 +516,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -360,8 +566,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   textFieldId="rek-publisher"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -381,20 +587,20 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="ANZSRC field of research (FoR) codes"
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               Select Field of Research (FoR) codes
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
@@ -443,8 +649,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           className="Creators"
           item={true}
           xs={12}
@@ -549,8 +755,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -642,11 +848,12 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             }
             title="Access and licence"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -684,8 +891,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -752,8 +959,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -764,10 +971,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -780,22 +1021,23 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   textFieldId="rek-rights"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Project information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -804,10 +1046,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -828,8 +1104,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -838,10 +1114,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -862,8 +1172,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -924,8 +1234,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -986,22 +1296,23 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Dataset details"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1064,8 +1375,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -1076,8 +1387,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1140,8 +1451,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -1152,8 +1463,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1223,8 +1534,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -1235,15 +1546,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
-                style={
-                  Object {
-                    "padding": "0px 20px",
-                  }
-                }
                 xs={12}
               >
                 <Field
@@ -1262,15 +1568,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
-                style={
-                  Object {
-                    "padding": "0px 20px",
-                  }
-                }
                 xs={12}
               >
                 <Field
@@ -1289,31 +1590,31 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Geographic coordinates"
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               gutterBottom={true}
               variant="caption"
             >
               Use this tool to specify the geographic co-ordinates the data relates to
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               name="geographicArea"
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1373,19 +1674,20 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Additional information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1394,10 +1696,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1411,8 +1747,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   textFieldId="rek-additional-notes"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1421,10 +1757,44 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1442,11 +1812,11 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1577,38 +1947,39 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={true}
           xs={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             aria-label="Cancel"
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             aria-label="Submit for approval"
             color="primary"
             fullWidth={true}
@@ -1617,9 +1988,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             variant="contained"
           >
             Submit for approval
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -1643,15 +2014,15 @@ exports[`AddDataCollection test should render component with a valid collection 
           Object {
             "cancelButtonLabel": "Add another missing dataset",
             "confirmButtonLabel": "Go to my research data",
-            "confirmationMessage": <WithStyles(ForwardRef(Grid))
+            "confirmationMessage": <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               />
-            </WithStyles(ForwardRef(Grid))>,
+            </ForwardRef(Grid)>,
             "confirmationTitle": "Your dataset has been submitted",
             "datasetSuccessConfirmationMessage": <p>
               Your dataset has been saved.
@@ -1682,23 +2053,24 @@ exports[`AddDataCollection test should render component with a valid collection 
         }
         when={true}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         className="DataCollection"
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Deposit agreement"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1736,22 +2108,23 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Dataset information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -1761,10 +2134,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1784,8 +2191,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -1795,10 +2202,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1818,8 +2259,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -1829,10 +2270,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1850,8 +2325,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -1883,8 +2358,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -1894,10 +2369,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1916,8 +2425,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -1927,10 +2436,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1948,8 +2491,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -1959,10 +2502,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1975,8 +2552,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                   textFieldId="rek-publisher"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -1996,20 +2573,20 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="ANZSRC field of research (FoR) codes"
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               Select Field of Research (FoR) codes
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
@@ -2058,8 +2635,8 @@ exports[`AddDataCollection test should render component with a valid collection 
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           className="Creators"
           item={true}
           xs={12}
@@ -2164,8 +2741,8 @@ exports[`AddDataCollection test should render component with a valid collection 
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2257,11 +2834,12 @@ exports[`AddDataCollection test should render component with a valid collection 
             }
             title="Access and licence"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -2299,8 +2877,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -2367,8 +2945,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -2379,10 +2957,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -2395,22 +3007,23 @@ exports[`AddDataCollection test should render component with a valid collection 
                   textFieldId="rek-rights"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Project information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2419,10 +3032,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -2443,8 +3090,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2453,10 +3100,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -2477,8 +3158,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2539,8 +3220,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2601,22 +3282,23 @@ exports[`AddDataCollection test should render component with a valid collection 
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Dataset details"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2679,8 +3361,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -2691,8 +3373,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2755,8 +3437,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -2767,8 +3449,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2838,8 +3520,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -2850,15 +3532,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
-                style={
-                  Object {
-                    "padding": "0px 20px",
-                  }
-                }
                 xs={12}
               >
                 <Field
@@ -2877,15 +3554,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
-                style={
-                  Object {
-                    "padding": "0px 20px",
-                  }
-                }
                 xs={12}
               >
                 <Field
@@ -2904,31 +3576,31 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Geographic coordinates"
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               gutterBottom={true}
               variant="caption"
             >
               Use this tool to specify the geographic co-ordinates the data relates to
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               name="geographicArea"
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2988,19 +3660,20 @@ exports[`AddDataCollection test should render component with a valid collection 
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Additional information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -3009,10 +3682,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3026,8 +3733,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                   textFieldId="rek-additional-notes"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -3036,10 +3743,44 @@ exports[`AddDataCollection test should render component with a valid collection 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3057,11 +3798,11 @@ exports[`AddDataCollection test should render component with a valid collection 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3192,38 +3933,39 @@ exports[`AddDataCollection test should render component with a valid collection 
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={true}
           xs={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             aria-label="Cancel"
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             aria-label="Submit for approval"
             color="primary"
             fullWidth={true}
@@ -3232,9 +3974,9 @@ exports[`AddDataCollection test should render component with a valid collection 
             variant="contained"
           >
             Submit for approval
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -3254,15 +3996,15 @@ exports[`AddDataCollection test should render component with an invalid collecti
           Object {
             "cancelButtonLabel": "Add another missing dataset",
             "confirmButtonLabel": "Go to my research data",
-            "confirmationMessage": <WithStyles(ForwardRef(Grid))
+            "confirmationMessage": <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               />
-            </WithStyles(ForwardRef(Grid))>,
+            </ForwardRef(Grid)>,
             "confirmationTitle": "Your dataset has been submitted",
             "datasetSuccessConfirmationMessage": <p>
               Your dataset has been saved.
@@ -3293,23 +4035,24 @@ exports[`AddDataCollection test should render component with an invalid collecti
         }
         when={true}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         className="DataCollection"
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Deposit agreement"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -3347,22 +4090,23 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Dataset information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -3372,10 +4116,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3395,8 +4173,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -3406,10 +4184,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3429,8 +4241,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -3440,10 +4252,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3461,8 +4307,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -3494,8 +4340,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -3505,10 +4351,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3527,8 +4407,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -3538,10 +4418,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3559,8 +4473,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -3570,10 +4484,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3586,8 +4534,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   textFieldId="rek-publisher"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -3607,20 +4555,20 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="ANZSRC field of research (FoR) codes"
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               Select Field of Research (FoR) codes
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
@@ -3669,8 +4617,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           className="Creators"
           item={true}
           xs={12}
@@ -3775,8 +4723,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3868,11 +4816,12 @@ exports[`AddDataCollection test should render component with an invalid collecti
             }
             title="Access and licence"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -3910,8 +4859,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -3978,8 +4927,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -3990,10 +4939,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -4006,22 +4989,23 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   textFieldId="rek-rights"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Project information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4030,10 +5014,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -4054,8 +5072,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4064,10 +5082,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -4088,8 +5140,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4150,8 +5202,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4212,22 +5264,23 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Dataset details"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4290,8 +5343,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -4302,8 +5355,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4366,8 +5419,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -4378,8 +5431,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4449,8 +5502,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -4461,15 +5514,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
-                style={
-                  Object {
-                    "padding": "0px 20px",
-                  }
-                }
                 xs={12}
               >
                 <Field
@@ -4488,15 +5536,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
-                style={
-                  Object {
-                    "padding": "0px 20px",
-                  }
-                }
                 xs={12}
               >
                 <Field
@@ -4515,31 +5558,31 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Geographic coordinates"
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               gutterBottom={true}
               variant="caption"
             >
               Use this tool to specify the geographic co-ordinates the data relates to
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               name="geographicArea"
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4599,19 +5642,20 @@ exports[`AddDataCollection test should render component with an invalid collecti
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Additional information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4620,10 +5664,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -4637,8 +5715,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   textFieldId="rek-additional-notes"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4647,10 +5725,44 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -4668,11 +5780,11 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4803,38 +5915,39 @@ exports[`AddDataCollection test should render component with an invalid collecti
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={true}
           xs={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             aria-label="Cancel"
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             aria-label="Submit for approval"
             color="primary"
             fullWidth={true}
@@ -4843,9 +5956,9 @@ exports[`AddDataCollection test should render component with an invalid collecti
             variant="contained"
           >
             Submit for approval
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -4865,15 +5978,15 @@ exports[`AddDataCollection test should render data set form 1`] = `
           Object {
             "cancelButtonLabel": "Add another missing dataset",
             "confirmButtonLabel": "Go to my research data",
-            "confirmationMessage": <WithStyles(ForwardRef(Grid))
+            "confirmationMessage": <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               />
-            </WithStyles(ForwardRef(Grid))>,
+            </ForwardRef(Grid)>,
             "confirmationTitle": "Your dataset has been submitted",
             "datasetSuccessConfirmationMessage": <p>
               Your dataset has been saved.
@@ -4904,23 +6017,24 @@ exports[`AddDataCollection test should render data set form 1`] = `
         }
         when={true}
       />
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         className="DataCollection"
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Deposit agreement"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4958,22 +6072,23 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Dataset information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -4983,10 +6098,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5006,8 +6155,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -5017,10 +6166,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5040,8 +6223,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -5051,10 +6234,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5072,8 +6289,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -5105,8 +6322,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -5116,10 +6333,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5138,8 +6389,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={12}
                 xs={12}
@@ -5149,10 +6400,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5170,8 +6455,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -5181,10 +6466,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5197,8 +6516,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   textFieldId="rek-publisher"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
                 xs={12}
@@ -5218,20 +6537,20 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="ANZSRC field of research (FoR) codes"
           >
-            <WithStyles(ForwardRef(Typography))>
+            <ForwardRef(Typography)>
               Select Field of Research (FoR) codes
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
@@ -5280,8 +6599,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           className="Creators"
           item={true}
           xs={12}
@@ -5386,8 +6705,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -5479,11 +6798,12 @@ exports[`AddDataCollection test should render data set form 1`] = `
             }
             title="Access and licence"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -5521,8 +6841,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -5589,8 +6909,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 md={4}
                 sm={12}
@@ -5601,10 +6921,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5617,22 +6971,23 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   textFieldId="rek-rights"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Project information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -5641,10 +6996,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5665,8 +7054,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -5675,10 +7064,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5699,8 +7122,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -5761,8 +7184,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -5823,22 +7246,23 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Dataset details"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -5901,8 +7325,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -5913,8 +7337,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -5977,8 +7401,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -5989,8 +7413,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -6060,8 +7484,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -6072,15 +7496,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Divider />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
-                style={
-                  Object {
-                    "padding": "0px 20px",
-                  }
-                }
                 xs={12}
               >
                 <Field
@@ -6099,15 +7518,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 sm={6}
-                style={
-                  Object {
-                    "padding": "0px 20px",
-                  }
-                }
                 xs={12}
               >
                 <Field
@@ -6126,31 +7540,31 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Geographic coordinates"
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               gutterBottom={true}
               variant="caption"
             >
               Use this tool to specify the geographic co-ordinates the data relates to
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               name="geographicArea"
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -6210,19 +7624,20 @@ exports[`AddDataCollection test should render data set form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Additional information"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
+              padding={0}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -6231,10 +7646,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -6248,8 +7697,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   textFieldId="rek-additional-notes"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -6258,10 +7707,44 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -6279,11 +7762,11 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -6414,38 +7897,39 @@ exports[`AddDataCollection test should render data set form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm={true}
           xs={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             aria-label="Cancel"
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             aria-label="Submit for approval"
             color="primary"
             fullWidth={true}
@@ -6454,9 +7938,9 @@ exports[`AddDataCollection test should render data set form 1`] = `
             variant="contained"
           >
             Submit for approval
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>

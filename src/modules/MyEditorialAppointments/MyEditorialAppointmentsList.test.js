@@ -137,7 +137,7 @@ describe('MyEditorialAppointmentsList', () => {
     });
 
     it('should validate inputs and render updated info after editing', async () => {
-        const { getByTestId, getAllByLabelText, getByText } = setup({
+        const { getByTestId, getByLabelText, getByText } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -162,7 +162,7 @@ describe('MyEditorialAppointmentsList', () => {
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.click(getAllByLabelText('Clear')[1]);
+        fireEvent.click(getByLabelText('Clear'));
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '' } });
@@ -335,15 +335,20 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
 
-        // expect(getByTestId('my-editorial-appointments-save').closest('button')).toHaveAttribute('disabled');
-        // act(() => {
+        expect(getByTestId('my-editorial-appointments-add-save').closest('button')).toHaveAttribute('disabled');
+
+        fireEvent.click(getByTestId('eap-journal-name-input'));
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
         fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
         fireEvent.click(getByText('Guest Editor'));
+        fireEvent.click(getByTestId('eap-start-year-input'));
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
 
+        fireEvent.click(getByTestId('eap-end-year-input'));
         fireEvent.click(getByTestId('eap-end-year-button-input'));
-        // });
+
+        await waitFor(() => getByTestId('eap-end-year-current'));
+        fireEvent.click(getByTestId('eap-end-year-current'));
 
         await waitFor(() => getByTestId('eap-end-year-current'));
         act(() => {

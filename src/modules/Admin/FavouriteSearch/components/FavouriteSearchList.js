@@ -2,9 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import makeStyles from '@mui/styles/makeStyles';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';

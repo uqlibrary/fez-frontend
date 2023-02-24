@@ -3,12 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { useDispatch } from 'react-redux';
-import makeStyles from '@material-ui/styles/makeStyles';
+import makeStyles from '@mui/styles/makeStyles';
 import MaterialTable, { MTableAction, MTableBodyRow } from '@material-table/core';
 import { tableIcons } from './ManageAuthorsListIcons';
 
-import Button from '@material-ui/core/Button';
-import Backdrop from '@material-ui/core/Backdrop';
+import Button from '@mui/material/Button';
+import Backdrop from '@mui/material/Backdrop';
 
 import ColumnTitle from './partials/ColumnTitle';
 import ColumnData from './partials/ColumnData';

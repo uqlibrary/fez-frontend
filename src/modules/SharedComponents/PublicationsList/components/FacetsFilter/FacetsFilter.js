@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import List from '@material-ui/core/List';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
+import List from '@mui/material/List';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 
 import { publicationTypes } from 'config';
 import { locale } from 'locale';

@@ -21,61 +21,61 @@ Object {
   "hasSubtypes": true,
   "publicationSubtype": "Creative Work - Textual",
   "publicationSubtypeItems": Array [
-    <WithStyles(ForwardRef(MenuItem))
+    <ForwardRef(MenuItem)
       value="Research book chapter (original research)"
     >
       Research book chapter (original research)
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Critical review of research, literature review, critical commentary"
     >
       Critical review of research, literature review, critical commentary
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Chapter in textbook"
     >
       Chapter in textbook
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Chapter in reference work, encyclopaedia, manual or handbook"
     >
       Chapter in reference work, encyclopaedia, manual or handbook
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Introduction, foreword, editorial or appendix"
     >
       Introduction, foreword, editorial or appendix
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Creative Work - Design/Architectural"
     >
       Creative Work - Design/Architectural
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Creative Work - Textual"
     >
       Creative Work - Textual
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Creative Work - Visual Art"
     >
       Creative Work - Visual Art
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Creative Work - Musical Composition"
     >
       Creative Work - Musical Composition
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Creative Work - Other"
     >
       Creative Work - Other
-    </WithStyles(ForwardRef(MenuItem))>,
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>,
+    <ForwardRef(MenuItem)
       value="Other"
     >
       Other
-    </WithStyles(ForwardRef(MenuItem))>,
+    </ForwardRef(MenuItem)>,
   ],
   "subtypes": Array [
     "Creative Work - Design/Architectural",

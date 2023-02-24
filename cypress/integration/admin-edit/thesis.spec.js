@@ -159,10 +159,10 @@ context('Thesis admin edit', () => {
                     cy.get('h4').should('contain', 'Member of collection');
                     cy.get('#rek-ismemberof-label').should('contain', 'Member of collection');
 
-                    cy.get('[class*="MuiAutocomplete-tag-"]')
+                    cy.get('[class*="MuiAutocomplete-tag"]')
                         .eq(0)
                         .should('have.text', 'UQ Theses (HDR) - Open Access');
-                    cy.get('[class*="MuiAutocomplete-tag-"]')
+                    cy.get('[class*="MuiAutocomplete-tag"]')
                         .eq(1)
                         .should('have.text', 'UQ Theses (HDR) - Official');
                 });

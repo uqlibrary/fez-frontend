@@ -1,26 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormViewToggler component should render default view 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   alignItems="center"
   container={true}
   direction="row"
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Switch to tabbed mode"
     >
-      <WithStyles(ForwardRef(Switch))
+      <ForwardRef(Switch)
         checked={false}
-        color="primary"
         value="tabbed"
       />
-    </WithStyles(ForwardRef(Tooltip))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Tooltip)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
   >
     <Connect(HelpIcon)
@@ -37,33 +36,33 @@ exports[`FormViewToggler component should render default view 1`] = `
       buttonLabel="Got it"
       text={
         <div>
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             component="h4"
             variant="h6"
           >
             Tab navigation
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <p>
             To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.
           </p>
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             component="h4"
             variant="h6"
           >
             Form style
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <p>
             To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.
           </p>
           <p>
             Your preference is saved as a cookie on this browser and it will remember your preference.
           </p>
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             component="h4"
             variant="h6"
           >
             Page zoom
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <p>
             Using 
             <b>
@@ -80,31 +79,30 @@ exports[`FormViewToggler component should render default view 1`] = `
       title="Keyboard shortcuts"
       tooltip="Learn about keyboard shortcuts"
     />
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`FormViewToggler component should render tooltip for full form 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   alignItems="center"
   container={true}
   direction="row"
   spacing={0}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Switch to full form mode"
     >
-      <WithStyles(ForwardRef(Switch))
+      <ForwardRef(Switch)
         checked={true}
-        color="primary"
         value="tabbed"
       />
-    </WithStyles(ForwardRef(Tooltip))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Tooltip)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
   >
     <Connect(HelpIcon)
@@ -121,33 +119,33 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
       buttonLabel="Got it"
       text={
         <div>
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             component="h4"
             variant="h6"
           >
             Tab navigation
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <p>
             To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.
           </p>
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             component="h4"
             variant="h6"
           >
             Form style
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <p>
             To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.
           </p>
           <p>
             Your preference is saved as a cookie on this browser and it will remember your preference.
           </p>
-          <WithStyles(ForwardRef(Typography))
+          <ForwardRef(Typography)
             component="h4"
             variant="h6"
           >
             Page zoom
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <p>
             Using 
             <b>
@@ -164,6 +162,6 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
       title="Keyboard shortcuts"
       tooltip="Learn about keyboard shortcuts"
     />
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

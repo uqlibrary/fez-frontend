@@ -4,7 +4,7 @@ import CitationView from './CitationView';
 import { locale } from 'locale';
 import { pathConfig } from 'config/pathConfig';
 import { Link } from 'react-router-dom';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from '@mui/styles/withStyles';
 
 export const styles = theme => ({
     authorIdLink: {

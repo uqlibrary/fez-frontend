@@ -86,7 +86,7 @@ describe('ThesisSubmission', () => {
         const wrapper = setup({ isHdrThesis: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(9);
-        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
+        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
     });
 
     it('should render hdr thesis submission form', () => {

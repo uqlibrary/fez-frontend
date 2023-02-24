@@ -1,15 +1,6 @@
 import React from 'react';
 import FileUploadRowHeader from './FileUploadRowHeader';
-import { rtlRender, fireEvent, waitFor } from 'test-utils';
-import mediaQuery from 'css-mediaquery';
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
+import { rtlRender, fireEvent, waitFor, createMatchMedia } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -26,29 +17,41 @@ describe('Component FileUploadRowHeader', () => {
     });
 
     it('should render with default setup', () => {
-        const { getByText, getByTitle, queryByText } = setup();
+        const { getByText, getByTestId, queryByText } = setup();
         expect(getByText('File name')).toBeInTheDocument();
         expect(queryByText('Access conditions')).toBeNull();
         expect(queryByText('Embargo release date')).toBeNull();
-        expect(getByTitle('Remove all files from the upload queue')).toBeInTheDocument();
+        expect(getByTestId('delete-all-files').parentElement).toHaveAttribute(
+            'aria-label',
+            'Remove all files from the upload queue',
+        );
     });
 
     it('should render with access condition and embargo date column', () => {
-        const { getByText, getByTitle } = setup({ requireOpenAccessStatus: true });
+        const { getByText, getByTestId } = setup({ requireOpenAccessStatus: true });
         expect(getByText('File name')).toBeInTheDocument();
         expect(getByText('Access conditions')).toBeInTheDocument();
         expect(getByText('Embargo release date')).toBeInTheDocument();
-        expect(getByTitle('Remove all files from the upload queue')).toBeInTheDocument();
+        expect(getByTestId('delete-all-files').parentElement).toHaveAttribute(
+            'aria-label',
+            'Remove all files from the upload queue',
+        );
     });
 
     it('should render for admins with security policy and embargo date column', () => {
-        const { getByText, getByTitle, queryByText } = setup({ requireOpenAccessStatus: true, isAdmin: true });
+        const { getByText, queryByText, getByTestId } = setup({
+            requireOpenAccessStatus: true,
+            isAdmin: true,
+        });
         expect(getByText('File name')).toBeInTheDocument();
 
         expect(queryByText('Access conditions')).toBeNull();
         expect(getByText('Security policy')).toBeInTheDocument();
         expect(getByText('Embargo release date')).toBeInTheDocument();
-        expect(getByTitle('Remove all files from the upload queue')).toBeInTheDocument();
+        expect(getByTestId('delete-all-files').parentElement).toHaveAttribute(
+            'aria-label',
+            'Remove all files from the upload queue',
+        );
     });
 
     it('should render in disabled state', () => {

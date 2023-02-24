@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 import { ORG_AFFILIATION_TYPES } from 'config/general';
 
 export default function NonUqOrgAffiliationFormSection({
@@ -33,6 +33,7 @@ export default function NonUqOrgAffiliationFormSection({
         <Grid container spacing={1}>
             <Grid item xs={fullWidthFields ? 12 : 6} sm={6}>
                 <TextField
+                    variant="standard"
                     required
                     fullWidth
                     value={orgAffiliation}
@@ -45,9 +46,10 @@ export default function NonUqOrgAffiliationFormSection({
                 />
             </Grid>
             <Grid item xs={fullWidthFields ? 12 : 6} sm={6}>
-                <FormControl required fullWidth error={orgAffiliationTypeError}>
+                <FormControl variant="standard" required fullWidth error={orgAffiliationTypeError}>
                     <InputLabel id="org-affiliation-type-label">{locale.fields.organisationType.inputLabel}</InputLabel>
                     <Select
+                        variant="standard"
                         value={orgType}
                         name="org-affiliation-type"
                         onChange={onOrgTypeChange}
