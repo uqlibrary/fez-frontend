@@ -232,8 +232,8 @@ const webpackConfig = {
                         loader: 'file-loader',
                         options: {
                             esModule: false,
-                            outputPath: 'assets/',
-                            publicPath: 'assets/',
+                            outputPath: join(config.publicPath, 'assets'),
+                            publicPath: join(config.publicPath, 'assets'),
                         },
                     },
                 ],
