@@ -361,13 +361,13 @@ export const AuthorDetail = rowData => {
                 <Typography variant="subtitle2">{'Organisation affiliation'}</Typography>
             </Grid>
             <Grid item xs={10}>
-                <Typography variant="body2">{rowData.orgaff}</Typography>
+                <Typography variant="body2">{rowData.rowData.orgaff}</Typography>
             </Grid>
             <Grid item xs={2}>
                 <Typography variant="subtitle2">{'Organisation type'}</Typography>
             </Grid>
             <Grid item xs={10}>
-                <Typography variant="body2">{rowData.orgtype}</Typography>
+                <Typography variant="body2">{rowData.rowData.orgtype}</Typography>
             </Grid>
         </Grid>
     );
@@ -400,8 +400,9 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
         const result = [];
-        list.forEach(item => {
+        list.forEach((item, index) => {
             delete item.tableData;
+            item.id = index;
             result.push({ ...item });
         });
         setData(result);
@@ -443,6 +444,8 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
             showAddRow: false,
         });
     };
+
+    console.log('DATA IS ', data);
 
     return (
         <MaterialTable
@@ -518,8 +521,12 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                             nextContributor,
                             ...data.slice(index + 1),
                         ];
+                        const newIndexedList = [];
+                        newList.map((item, index) => {
+                            newIndexedList.push({ ...item, id: index });
+                        });
 
-                        setData(newList);
+                        setData(newIndexedList);
                         // onChange(newList);
                     },
                 }),
@@ -542,7 +549,13 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                             newRowData,
                             ...data.slice(index + 2),
                         ];
-                        setData(newList);
+                        const newIndexedList = [];
+                        newList.map((item, index) => {
+                            newIndexedList.push({ ...item, id: index });
+                        });
+
+                        setData(newIndexedList);
+                        // setData(newList);
                         // onChange(newList);
                     },
                 }),

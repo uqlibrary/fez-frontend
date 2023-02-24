@@ -539,6 +539,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     />
                 ),
                 Action: props => {
+                    console.log('PROPS ARE', props);
                     if (typeof props.action === 'function') {
                         const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
                         return (
@@ -561,6 +562,27 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                     ),
                                 }}
                                 size="small"
+                            />
+                        );
+                    } else if (!!props.action.icon) {
+                        //  Save or Cancel actions for Add/Edit/Delete actions
+                        const { icon: Icon, tooltip, ...restAction } = props.action;
+                        return (
+                            <MTableAction
+                                {...props}
+                                action={{
+                                    ...restAction,
+                                    icon: () => (
+                                        <Icon
+                                            id={`my-editorial-appointments-${(!!props.data.tableData &&
+                                                props.data.tableData.editing) ||
+                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                            data-testid={`my-editorial-appointments-${(!!props.data.tableData &&
+                                                props.data.tableData.editing) ||
+                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                        />
+                                    ),
+                                }}
                             />
                         );
                     } else if (!!props.action.tooltip) {
