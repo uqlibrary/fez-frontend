@@ -248,14 +248,14 @@
         "test:e2e:open": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'npm run cypress:open'",
         "test:e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'npm run cypress:watch'",
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
-        "test:unit:serial": "npm run test:unit -- --ci --runInBand",
-        "test:unit:serial:skipcoverage": "npm run test:unit -- --ci --runInBand --no-coverage",
-        "pretest:unit:ci": "rm -rf coverage/jest",
-        "test:unit:ci": "npm run test:unit -- --ci --runInBand",
-        "test:unit:ci1": "npm run test:unit -- --ci --testPathIgnorePatterns=SharedComponents --coveragePathIgnorePatterns=SharedComponents",
-        "test:unit:ci2": "npm run test:unit -- --ci SharedComponents --collectCoverageFrom=\\'[\\\"**/SharedComponents/**\\\",\\\"!**/containers/**\\\",\\\"!**/index.js\\\"]\\'",
-        "test:unit:ci1:skipcoverage": "npm run test:unit -- --ci --no-coverage --testPathIgnorePatterns=SharedComponents",
-        "test:unit:ci2:skipcoverage": "npm run test:unit -- --ci --no-coverage SharedComponents",
+        "test:unit:serial": "npm run test:unit -- --runInBand",
+        "pretest:unit:ci": "rm -rf coverage",
+        "test:unit:ci": "npm run test:unit -- --ci --silent --testPathIgnorePatterns=src/modules/Admin/components/authors/AuthorsList.test.js",
+        "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
+        "test:unit:ci1:nocoverage": "npm run test:unit:ci:nocoverage -- --testPathIgnorePatterns=SharedComponents",
+        "test:unit:ci2:nocoverage": "npm run test:unit:ci:nocoverage -- SharedComponents",
+        "test:unit:ci:serial": "npm run test:unit:serial -- --ci --silent src/modules/Admin/components/authors/AuthorsList.test.js",
+        "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
         "test:unit:update": "npm run test:unit -- --updateSnapshot",
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged"
     },
@@ -390,8 +390,7 @@
         ],
         "coverageDirectory": "coverage/jest",
         "coverageReporters": [
-            "html",
-            "text",
+            "cobertura",
             "json"
         ],
         "modulePaths": [
@@ -406,6 +405,20 @@
         "transformIgnorePatterns": [
             "<rootDir>/node_modules/"
         ],
+        "reporters": [
+            "default",
+            [
+                "./node_modules/jest-html-reporter",
+                {
+                    "pageTitle": "Test Report",
+                    "outputPath": "coverage/jest-html-report.html",
+                    "includeFailureMsg": true,
+                    "includeConsoleLog": true,
+                    "executionTimeWarningThreshold": 30,
+                    "statusIgnoreFilter": "passed"
+                }
+            ]
+        ],
         "setupFiles": [
             "./src/test.setup.js",
             "jest-localstorage-mock"
@@ -413,7 +426,8 @@
         "setupFilesAfterEnv": [
             "<rootDir>/src/jest.setup.js"
         ],
-        "testURL": "http://fez-staging.library.uq.edu.au"
+        "testURL": "http://fez-staging.library.uq.edu.au",
+        "testTimeout": 30000
     },
     "nyc": {
         "reporter": [
@@ -435,6 +449,7 @@
         "exclude": [
             "src/**/{index,locale,config,pages}.js",
             "src/**/containers/*.{js,jsx}",
+            "!src/modules/Admin/components/authors/**",
             "!src/modules/Admin/Doi/components/**",
             "!src/modules/Admin/FavouriteSearch/components/**",
             "!src/modules/Admin/ManageAuthors/**",
