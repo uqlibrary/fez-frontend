@@ -1,6 +1,4 @@
-import { getRequiredImagePath } from 'config/general';
-
-import PlaceholderImage from ('../../public/images/thumbs/image_unavailable.svg');
+import PlaceholderImage from '../../public/images/thumbs/image_unavailable.svg';
 
 export default {
     thumbnailImage: {
