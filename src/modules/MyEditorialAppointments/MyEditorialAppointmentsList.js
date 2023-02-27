@@ -539,7 +539,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     />
                 ),
                 Action: props => {
-                    console.log('PROPS ARE', props);
                     if (typeof props.action === 'function') {
                         const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
                         return (

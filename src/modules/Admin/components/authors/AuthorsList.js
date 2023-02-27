@@ -445,8 +445,6 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
         });
     };
 
-    console.log('DATA IS ', data);
-
     return (
         <MaterialTable
             tableRef={materialTableRef}

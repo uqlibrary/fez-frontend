@@ -282,7 +282,10 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                         showAddRow: false,
                     });
                 }}
-                onRowsPerPageChange={pageSize => setPageSize(pageSize)}
+                onRowsPerPageChange={pageSize => {
+                    console.log('page size change');
+                    return setPageSize(pageSize);
+                }}
                 icons={tableIcons}
                 title=""
                 localization={{
