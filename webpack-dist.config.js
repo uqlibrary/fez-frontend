@@ -226,17 +226,8 @@ const webpackConfig = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            esModule: false,
-                            outputPath: join(config.assetPath, 'assets'),
-                            publicPath: join(config.assetPath, 'assets'),
-                        },
-                    },
-                ],
+                test: /\.(png|jp(e*)g|svg|gif)$/,
+                type: "asset/resource",
             },
         ],
     },

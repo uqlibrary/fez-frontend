@@ -13,7 +13,7 @@ const deployment = {
         environment: 'development',
         basePath: 'espace/', // updated in webpack
         publicPath: '',
-        assetPath: '/',
+        assetPath: '../../',
         orcidUrl: 'https://sandbox.orcid.org',
         orcidClientId: 'APP-OXX6M6MBQ77GUVWX',
     },
