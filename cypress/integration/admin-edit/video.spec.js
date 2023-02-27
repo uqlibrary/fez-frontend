@@ -41,7 +41,7 @@ context('Video admin edit', () => {
     it('should submit successfully', () => {
         const baseUrl = Cypress.config('baseUrl');
         cy.typeCKEditor('rek-description', 'some description'); // description
-        cy.get('#admin-work-submit').click();
+        cy.get('#admin-work-submit').click({ force: true });
 
         // Confirmation message
         cy.get('[role=dialog]')
