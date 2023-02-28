@@ -253,11 +253,11 @@
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:unit:serial": "npm run test:unit -- --runInBand",
         "pretest:unit:ci": "rm -rf coverage",
-        "test:unit:ci": "npm run test:unit -- --ci --silent --testPathIgnorePatterns=src/modules/Admin/components/authors/AuthorsList.test.js",
+        "test:unit:ci": "npm run test:unit -- --ci --silent --no-warnings --testPathIgnorePatterns=$(paste -sd'|' jest-serial.txt | sed 's/[.[\\]*^$/\\\\&/g')",
         "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
         "test:unit:ci1:nocoverage": "npm run test:unit:ci:nocoverage -- --testPathIgnorePatterns=SharedComponents",
         "test:unit:ci2:nocoverage": "npm run test:unit:ci:nocoverage -- SharedComponents",
-        "test:unit:ci:serial": "npm run test:unit:serial -- --ci --silent src/modules/Admin/components/authors/AuthorsList.test.js",
+        "test:unit:ci:serial": "npm run test:unit:serial -- --ci --silent --no-warnings $(paste -sd' ', jest-serial.txt)",
         "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
         "test:unit:update": "npm run test:unit -- --updateSnapshot",
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged"
@@ -381,6 +381,7 @@
         "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
+            "!src/**/*.test.{js,jsx}",
             "!src/modules/App/components/pages.js",
             "!src/**/{index,locale,config}.js",
             "!src/**/containers/*.{js,jsx}",
@@ -431,45 +432,5 @@
         ],
         "testURL": "http://fez-staging.library.uq.edu.au",
         "testTimeout": 30000
-    },
-    "nyc": {
-        "reporter": [
-            "html",
-            "text-summary",
-            "json"
-        ],
-        "report-dir": "coverage/cypress",
-        "temp-dir": "coverage/temp",
-        "include": [
-            "src/modules/**/*.{js,jsx}",
-            "src/modules/Index/*.{js,jsx}",
-            "src/actions/*.{js,jsx}",
-            "src/helpers/*.{js,jsx}",
-            "src/middleware/*.{js,jsx}",
-            "src/reducers/*.{js,jsx}",
-            "src/repositories/routes.js"
-        ],
-        "exclude": [
-            "src/**/{index,locale,config,pages}.js",
-            "src/**/containers/*.{js,jsx}",
-            "!src/modules/Admin/components/authors/**",
-            "!src/modules/Admin/Doi/components/**",
-            "!src/modules/Admin/FavouriteSearch/components/**",
-            "!src/modules/Admin/ManageAuthors/**",
-            "!src/modules/Admin/ManageAuthors/partials/**",
-            "!src/modules/Admin/ManageUsers/**",
-            "!src/modules/Admin/ManageUsers/partials/**",
-            "!src/modules/Admin/MasterJournalListIngest/components/**",
-            "!src/modules/AuthorIdentifiers/components/**",
-            "!src/modules/BulkUpdates/**",
-            "!src/modules/MyEditorialAppointments/**",
-            "!src/modules/SbsSubmission/components/**",
-            "!src/modules/SharedComponents/Toolbox/ScrollToSection/components/**",
-            "!src/modules/SharedComponents/Toolbox/TabbedCard/components/**",
-            "!src/modules/ThirdPartyLookupTool/components/**",
-            "!src/modules/ViewJournal/components/**",
-            "!src/modules/ViewJournal/components/partials/"
-        ],
-        "all": true
     }
 }
