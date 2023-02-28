@@ -64,14 +64,42 @@ npm run pretest:unit:ci
 
 case "$PIPE_NUM" in
 "1")
+    set -e
+
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        printf "\n--- \e[1mRUNNING E2E TESTS GROUP 1\e[0m ---\n"
+        # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the first group
+        source bin/codebuild-coverage.sh
+        npm run test:e2e:ci1
+        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
+    else
+        printf "\n--- \e[1mRUNNING UNIT TESTS 1\e[0m ---\n"
+        npm run test:unit:ci1:nocoverage
+    fi
+;;
+"2")
+    set -e
+
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the second group
+        source bin/codebuild-coverage.sh
+        printf "\n--- \e[1mRUNNING E2E TESTS GROUP 2\e[0m ---\n"
+        npm run test:e2e:ci2
+        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
+    else
+        printf "\n--- \e[1mRUNNING UNIT TESTS 2\e[0m ---\n"
+        npm run test:unit:ci2:nocoverage
+    fi
+;;
+"3")
     printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
     checkCodeStyle
 
     set -e
 
-    printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
     export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
         # Unit tests which require --runInBand
         npm run test:unit:ci:serial
         # Replace codebuild source path as we'll compile multiple of these together to get the final code coverage
@@ -85,20 +113,8 @@ case "$PIPE_NUM" in
 
         mkdir -p coverage/jest-serial && mv coverage-final.json coverage/jest-serial/coverage-final.json
     else
+        printf "\n--- \e[1mRUNNING SERIAL UNIT TESTS\e[0m ---\n"
         npm run test:unit:ci:serial:nocoverage
-        npm run test:unit:ci1:nocoverage
-    fi
-;;
-"2")
-    set -e
-
-    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
-        npm run test:e2e:cc
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
-    else
-        printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
-        npm run test:unit:ci2:nocoverage
     fi
 ;;
 *)
