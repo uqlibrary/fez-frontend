@@ -228,6 +228,9 @@ const webpackConfig = {
             {
                 test: /\.(png|jp(e*)g|svg|gif)$/,
                 type: 'asset/resource',
+                generator: {
+                    publicPath: '~/src/assets/',
+                },
             },
         ],
     },
