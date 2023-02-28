@@ -69,7 +69,7 @@ case "$PIPE_NUM" in
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         printf "\n--- \e[1mRUNNING E2E TESTS GROUP 1\e[0m ---\n"
         # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the first group
-        source bin/codebuild-coverage.sh
+        source bin/codebuild-parallel.sh
         npm run test:e2e:ci1
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
     else
@@ -82,7 +82,7 @@ case "$PIPE_NUM" in
 
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the second group
-        source bin/codebuild-coverage.sh
+        source bin/codebuild-parallel.sh
         printf "\n--- \e[1mRUNNING E2E TESTS GROUP 2\e[0m ---\n"
         npm run test:e2e:ci2
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
