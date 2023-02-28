@@ -98,7 +98,7 @@ const webpackConfig = {
         path: resolve(__dirname, './dist/', config.basePath),
         filename: `frontend-js/${currentCommitHash}/[name]-[contenthash].min.js`,
         publicPath: config.publicPath,
-        assetModuleFilename: 'assets/[hash][ext]',
+        assetModuleFilename: '/assets/[hash][ext]',
     },
     devServer: {
         compress: true,
