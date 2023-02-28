@@ -432,5 +432,44 @@
         ],
         "testURL": "http://fez-staging.library.uq.edu.au",
         "testTimeout": 30000
+    },
+    "nyc": {
+        "reporter": [
+            "html",
+            "text-summary",
+            "json"
+        ],
+        "report-dir": "coverage/cypress",
+        "temp-dir": "coverage/temp",
+        "include": [
+            "src/modules/**/*.{js,jsx}",
+            "src/modules/Index/*.{js,jsx}",
+            "src/actions/*.{js,jsx}",
+            "src/helpers/*.{js,jsx}",
+            "src/middleware/*.{js,jsx}",
+            "src/reducers/*.{js,jsx}",
+            "src/repositories/routes.js"
+        ],
+        "exclude": [
+            "src/**/{index,locale,config,pages}.js",
+            "src/**/containers/*.{js,jsx}",
+            "!src/modules/Admin/Doi/components/**",
+            "!src/modules/Admin/FavouriteSearch/components/**",
+            "!src/modules/Admin/ManageAuthors/**",
+            "!src/modules/Admin/ManageAuthors/partials/**",
+            "!src/modules/Admin/ManageUsers/**",
+            "!src/modules/Admin/ManageUsers/partials/**",
+            "!src/modules/Admin/MasterJournalListIngest/components/**",
+            "!src/modules/AuthorIdentifiers/components/**",
+            "!src/modules/BulkUpdates/**",
+            "!src/modules/MyEditorialAppointments/**",
+            "!src/modules/SbsSubmission/components/**",
+            "!src/modules/SharedComponents/Toolbox/ScrollToSection/components/**",
+            "!src/modules/SharedComponents/Toolbox/TabbedCard/components/**",
+            "!src/modules/ThirdPartyLookupTool/components/**",
+            "!src/modules/ViewJournal/components/**",
+            "!src/modules/ViewJournal/components/partials/"
+        ],
+        "all": true
     }
 }
