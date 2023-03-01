@@ -7,7 +7,7 @@ import LockOpen from '@mui/icons-material/LockOpen';
 import LockClockOutlined from '@mui/icons-material/LockClock';
 import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
-import { makeStyles } from '@mui/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles({
     svg: props => props.style,

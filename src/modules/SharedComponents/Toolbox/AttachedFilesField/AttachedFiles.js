@@ -37,9 +37,9 @@ import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'mo
 import { FileIcon } from './FileIcon';
 import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
 import * as fileUploadLocale from '../FileUploader/locale';
+import Box from '@mui/material/Box';
 import { FileAvStateIcon } from '../FileAvStateIcon';
 import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
-import Box from '@mui/material/Box';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -55,10 +55,6 @@ export const useStyles = makeStyles(
             opacity: 0.5,
         },
         thumbIconCentered: {
-            textAlign: 'center',
-        },
-        upDownArrowContainer: {
-            padding: '0 !important',
             textAlign: 'center',
         },
         upDownArrow: {
@@ -371,7 +367,7 @@ export const AttachedFiles = ({
                 )}
                 {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
                 {isAdminEditing && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
-                <div style={{ padding: 8 }}>
+                <Box sx={{ padding: 1 }}>
                     <Grid container direction="row" alignItems="center" spacing={2} className={classes.header}>
                         <Grid item xs={1}>
                             &nbsp;
@@ -397,29 +393,23 @@ export const AttachedFiles = ({
                             </Typography>
                         </Grid>
                         {isAdminEditing && (
-                            <React.Fragment>
-                                <Grid item md={3} sm={4} style={{ textAlign: 'center' }}>
-                                    <Typography variant="caption" gutterBottom>
-                                        {locale.embargoDateLabel || 'Embargo date'}
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs />
-                            </React.Fragment>
+                            <Grid item md={3} sm={4} sx={{ textAlign: 'center' }}>
+                                <Typography variant="caption" gutterBottom>
+                                    {locale.embargoDateLabel || 'Embargo date'}
+                                </Typography>
+                            </Grid>
                         )}
                     </Grid>
-                </div>
+                </Box>
                 {fileData
                     .sort((a, b) => a.fileOrder - b.fileOrder)
                     .map((item, index) => (
                         <React.Fragment key={item.id}>
-                            <div
-                                style={{ padding: 8 }}
-                                data-testid={`fez-datastream-info-attached-list-row-${item.id}`}
-                            >
+                            <Box sx={{ padding: 1 }} data-testid={`fez-datastream-info-attached-list-row-${item.id}`}>
                                 <Grid container className={classes.header} spacing={3}>
                                     <Grid item xs={12}>
-                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
-                                            <Grid item xs={1} className={classes.upDownArrowContainer}>
+                                        <Grid container direction="row" alignItems="center" spacing={2} padding={0}>
+                                            <Grid xs={1} padding={0} wrap="nowrap" textAlign={'center'}>
                                                 <IconButton
                                                     disabled={index === 0}
                                                     className={classes.upDownArrow}
@@ -431,7 +421,14 @@ export const AttachedFiles = ({
                                                 </IconButton>
                                             </Grid>
                                         </Grid>
-                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
+                                        <Grid
+                                            container
+                                            direction="row"
+                                            alignItems="center"
+                                            spacing={2}
+                                            padding={0}
+                                            wrap="nowrap"
+                                        >
                                             <Grid item xs={1} className={classes.thumbIconCentered}>
                                                 <FileIcon
                                                     {...item.iconProps}
@@ -502,13 +499,8 @@ export const AttachedFiles = ({
                                                 </Typography>
                                             </Grid>
                                             {!isAdminEditing && (
-                                                <Grid
-                                                    item
-                                                    xs
-                                                    style={{ textAlign: 'right' }}
-                                                    sx={{ display: { xs: 'none', sm: 'block' } }}
-                                                >
-                                                    <Box style={{ whiteSpace: 'nowrap' }}>
+                                                <Grid item xs sx={{ textAlign: 'right' }}>
+                                                    <Box sx={{ whiteSpace: 'nowrap' }}>
                                                         <Box component={'span'} paddingRight={1}>
                                                             <FileAvStateIcon
                                                                 state={item.avCheck?.state}
@@ -529,12 +521,13 @@ export const AttachedFiles = ({
                                                 <Grid item md={3} sm={4}>
                                                     <Grid container wrap="nowrap">
                                                         <Grid item xs={3}>
-                                                            <Box style={{ whiteSpace: 'nowrap' }}>
-                                                                <Box
-                                                                    component={'span'}
-                                                                    paddingRight={1}
-                                                                    sx={{ display: { xs: 'none', sm: 'block' } }}
-                                                                >
+                                                            <Box
+                                                                sx={{
+                                                                    display: { xs: 'none', md: 'block' },
+                                                                    whiteSpace: 'nowrap',
+                                                                }}
+                                                            >
+                                                                <Box component={'span'} paddingRight={1}>
                                                                     <FileAvStateIcon
                                                                         state={item.avCheck?.state}
                                                                         checkedAt={item.avCheck?.date}
@@ -557,7 +550,7 @@ export const AttachedFiles = ({
                                                                 /\./g,
                                                                 '-',
                                                             )}`}
-                                                            style={{ marginLeft: 8 }}
+                                                            sx={{ marginLeft: 1 }}
                                                         >
                                                             {(openAccessConfig.openAccessFiles.includes(
                                                                 openAccessStatusId,
@@ -577,7 +570,7 @@ export const AttachedFiles = ({
                                                         <Grid
                                                             item
                                                             xs={2}
-                                                            style={{ marginTop: -10, textAlign: 'right' }}
+                                                            sx={{ marginTop: '-10px', textAlign: 'right' }}
                                                         >
                                                             <Tooltip title={deleteHint}>
                                                                 <span>
@@ -586,7 +579,7 @@ export const AttachedFiles = ({
                                                                         data-testid={`delete-file-${index}`}
                                                                         onClick={onFileDelete(item.fileName)}
                                                                         disabled={disabled}
-                                                                        size="large"
+                                                                        sx={{ padding: '12px' }}
                                                                     >
                                                                         <Delete />
                                                                     </IconButton>
@@ -607,17 +600,17 @@ export const AttachedFiles = ({
                                                     alignContent={'flex-end'}
                                                     alignItems={'flex-end'}
                                                     justifyContent={'flex-end'}
-                                                    style={{ marginTop: 4 }}
+                                                    sx={{ marginTop: '4px' }}
                                                 >
                                                     <Grid item xs={6} />
                                                     <Grid item xs={6}>
-                                                        <Typography style={{ color: mui1theme.palette.warning.main }}>
+                                                        <Typography sx={{ color: mui1theme.palette.warning.main }}>
                                                             <WarningIcon
                                                                 fontSize={'small'}
-                                                                style={{
+                                                                sx={{
                                                                     color: mui1theme.palette.warning.main,
-                                                                    marginRight: 10,
-                                                                    marginBottom: -4,
+                                                                    marginRight: '10px',
+                                                                    marginBottom: '-4px',
                                                                 }}
                                                             />
                                                             {onEmbargoClearPromptText}
@@ -627,8 +620,8 @@ export const AttachedFiles = ({
                                             </React.Fragment>
                                         )}
 
-                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
-                                            <Grid item xs={1} className={classes.upDownArrowContainer}>
+                                        <Grid container direction="row" alignItems="center" spacing={2} padding={0}>
+                                            <Grid xs={1} padding={0} wrap="nowrap" textAlign={'center'}>
                                                 <IconButton
                                                     className={classes.upDownArrow}
                                                     disabled={index === fileData.length - 1}
@@ -642,7 +635,7 @@ export const AttachedFiles = ({
                                         </Grid>
                                     </Grid>
                                 </Grid>
-                            </div>
+                            </Box>
                         </React.Fragment>
                     ))}
                 {preview.mediaUrl && preview.mimeType && (

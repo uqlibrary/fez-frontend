@@ -13,7 +13,6 @@ const localTzDateFormatted = moment(localTzDate).format('lll');
 moment.tz.setDefault('Australia/Brisbane');
 
 const id = 'UQ:107683-AL-IN-01.tif';
-
 function setup(props = {}) {
     return render(<FileAvStateIcon id={id} {...props} />);
 }
