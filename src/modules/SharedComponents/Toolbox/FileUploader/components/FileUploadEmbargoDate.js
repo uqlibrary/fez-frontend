@@ -30,7 +30,7 @@ export class FileUploadEmbargoDate extends PureComponent {
             },
             'data-testid': `${this.props.fileUploadEmbargoDateId}-input`,
         };
-        console.log(this.props.minDate);
+
         return (
             <LocalizationProvider dateAdapter={AdapterMoment}>
                 <DatePicker
