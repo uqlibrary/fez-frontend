@@ -98,7 +98,6 @@ const webpackConfig = {
         path: resolve(__dirname, './dist/', config.basePath),
         filename: `frontend-js/${currentCommitHash}/[name]-[contenthash].min.js`,
         publicPath: config.publicPath,
-        assetModuleFilename: 'assets/[hash][ext]',
     },
     devServer: {
         compress: true,
@@ -229,6 +228,11 @@ const webpackConfig = {
             {
                 test: /\.(png|jp(e*)g|svg|gif)$/,
                 type: 'asset/resource',
+                generator: {
+                    publicPath: '/assets/',
+                    outputPath: 'assets/',
+                    filename: '[hash][ext]',
+                },
             },
         ],
     },
