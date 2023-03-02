@@ -19,7 +19,7 @@ if [[ $TEST_COVERAGE == 1 ]]; then
 fi
 
 CYPRESS_TESTS_REQUIRED=false
-if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"cypress"* ]]; then
+if [[ $CI_BRANCH == "master" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"cypress"* ]]; then
     CYPRESS_TESTS_REQUIRED=true
 fi
 
