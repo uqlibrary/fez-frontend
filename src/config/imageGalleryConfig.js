@@ -1,10 +1,8 @@
-import { getRequiredImagePath } from 'config/general';
-
-const placeholderImage = require('../../public/images/thumbs/image_unavailable.svg');
+import PlaceholderImage from '../../public/images/thumbs/image_unavailable.svg';
 
 export default {
     thumbnailImage: {
-        defaultImageName: getRequiredImagePath(placeholderImage),
+        defaultImageName: PlaceholderImage,
         defaultImageMimeType: 'image/svg+xml',
         defaultWidth: 150,
         defaultHeight: 150,
