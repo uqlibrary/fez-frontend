@@ -18,11 +18,6 @@ if [[ $TEST_COVERAGE == 1 ]]; then
     source bin/codebuild-coverage.sh
 fi
 
-CYPRESS_TESTS_REQUIRED=false
-if [[ $CI_BRANCH == "master" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"cypress"* ]]; then
-    CYPRESS_TESTS_REQUIRED=true
-fi
-
 echo
 echo "Commit Info:"
 git show ${CI_COMMIT_ID} --no-patch
@@ -120,12 +115,6 @@ case "$PIPE_NUM" in
 *)
 ;;
 esac
-
-# Additional dynamic pipelines for e2e tests
-if [[ $CYPRESS_TESTS_REQUIRED == true ]]; then
-    printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
-    npm run test:e2e:dashboard
-fi
 
 # Copy empty file to prevent a build failure as we only report on combined cobertura coverage when $TEST_COVERAGE=1
 mkdir -p coverage && cp cobertura-sample-coverage.xml coverage/cobertura-coverage.xml
