@@ -119,6 +119,7 @@ exports[`NavigationDialogBox component should render 1`] = `
                       "__emotion_base": Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "propTypes": Object {
+                          "TransitionComponent": [Function],
                           "children": [Function],
                           "className": [Function],
                           "classes": [Function],
@@ -337,6 +338,7 @@ exports[`NavigationDialogBox component should render 1`] = `
                         "__emotion_base": Object {
                           "$$typeof": Symbol(react.forward_ref),
                           "propTypes": Object {
+                            "TransitionComponent": [Function],
                             "children": [Function],
                             "className": [Function],
                             "classes": [Function],
@@ -415,6 +417,7 @@ exports[`NavigationDialogBox component should render 1`] = `
                           "__emotion_base": Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "propTypes": Object {
+                              "TransitionComponent": [Function],
                               "children": [Function],
                               "className": [Function],
                               "classes": [Function],
