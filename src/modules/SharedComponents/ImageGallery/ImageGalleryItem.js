@@ -101,7 +101,10 @@ const ImageGalleryItem = ({
     const [restricted, setRestricted] = React.useState(false);
     const [advisory, setAdvisory] = React.useState(false);
     const [unavailable, setUnavailable] = React.useState(false);
-    const historyObject = history ?? useHistory();
+    let historyObject = useHistory();
+    if (!!history) {
+        historyObject = history;
+    }
 
     const alertMessage = React.useMemo(() => {
         return getAlertMessageText({ unavailable, restricted, advisory });

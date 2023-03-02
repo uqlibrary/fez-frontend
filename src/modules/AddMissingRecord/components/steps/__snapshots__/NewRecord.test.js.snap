@@ -253,6 +253,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
               "__emotion_base": Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "TransitionComponent": [Function],
                   "children": [Function],
                   "className": [Function],
                   "classes": [Function],
@@ -402,6 +403,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                 "1433tg5-MuiTooltip-popper": true,
                 "16fnxy3-MuiGrid2-root": true,
                 "179vq5o-MuiPopper-root-MuiTooltip-popper": true,
+                "17w906u-MuiGrid2-root": true,
                 "185gdzj-MuiCardHeader-root": true,
                 "19xtc65-MuiSelect-icon": true,
                 "1gdfwye-MuiCard-root": true,
@@ -415,21 +417,21 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                 "1x51dt5-MuiInputBase-input-MuiInput-input": true,
                 "46bh2p-MuiCardContent-root": true,
                 "4o8qhd-MuiButtonBase-root-MuiButton-root": true,
-                "71wc8y-MuiGrid2-root": true,
                 "78trlr-MuiButtonBase-root-MuiIconButton-root": true,
                 "8je8zh-MuiTouchRipple-root": true,
                 "aqpgxn-MuiFormLabel-root-MuiInputLabel-root": true,
                 "bclbye-MuiPopover-root-MuiMenu-root": true,
                 "bhp9pd-MuiPaper-root-MuiCard-root": true,
                 "da3c9u-MuiIconButton-root": true,
+                "dkd71f-MuiGrid2-root": true,
                 "gf1esw-MuiButton-root": true,
                 "i4bv87-MuiSvgIcon-root": true,
                 "ji27u5-MuiTypography-root": true,
                 "m5hdmq-MuiInputBase-root-MuiInput-root-MuiSelect-root": true,
                 "oouctw-MuiMenu-root": true,
                 "pqjvzy-MuiSvgIcon-root-MuiSelect-icon": true,
+                "qnznoc-MuiGrid2-root": true,
                 "r44oa-MuiSelect-root": true,
-                "rzqrn4-MuiGrid2-root": true,
                 "sgoict-MuiCardHeader-action": true,
                 "wgai2y-MuiFormLabel-asterisk": true,
                 "yf8vq0-MuiSelect-nativeInput": true,
@@ -502,7 +504,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                     data-s=""
                   >
                     
-                    .css-71wc8y-MuiGrid2-root{--Grid-columns:12;--Grid-columnSpacing:24px;--Grid-rowSpacing:24px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;min-width:0;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:calc(var(--Grid-rowSpacing) / -2) calc(var(--Grid-columnSpacing) / -2);--Grid-nested-rowSpacing:var(--Grid-rowSpacing);--Grid-nested-columnSpacing:var(--Grid-columnSpacing);}
+                    .css-dkd71f-MuiGrid2-root{--Grid-columns:12;--Grid-columnSpacing:24px;--Grid-rowSpacing:24px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;min-width:0;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:calc(var(--Grid-rowSpacing) / -2) calc(var(--Grid-columnSpacing) / -2);}
                   </style>
                   <style
                     data-emotion="css"
@@ -670,7 +672,14 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                     data-s=""
                   >
                     
-                    .css-rzqrn4-MuiGrid2-root{--Grid-columns:12;--Grid-columnSpacing:8px;--Grid-rowSpacing:8px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;min-width:0;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:calc(var(--Grid-rowSpacing) / -2) calc(var(--Grid-columnSpacing) / -2);padding:calc(var(--Grid-nested-rowSpacing) / 2) calc(var(--Grid-nested-columnSpacing) / 2);padding:0px;}
+                    .css-17w906u-MuiGrid2-root{--Grid-columns:12;--Grid-columnSpacing1:8px;--Grid-rowSpacing1:8px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;min-width:0;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:calc(var(--Grid-rowSpacing1) / -2) calc(var(--Grid-columnSpacing1) / -2);padding:calc(var(--Grid-rowSpacing) / 2) calc(var(--Grid-columnSpacing) / 2);padding:0px;}
+                  </style>
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-qnznoc-MuiGrid2-root{-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;width:calc(100% * 12 / var(--Grid-columns));min-width:0;box-sizing:border-box;padding:calc(var(--Grid-rowSpacing1) / 2) calc(var(--Grid-columnSpacing1) / 2);}
                   </style>
                   <style
                     data-emotion="css"
@@ -1377,7 +1386,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
 
                   </style>
                 </head>,
-                "ctr": 118,
+                "ctr": 119,
                 "insertionPoint": undefined,
                 "isSpeedy": false,
                 "key": "css",
@@ -1403,7 +1412,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                     data-s=""
                   >
                     
-                    .css-71wc8y-MuiGrid2-root{--Grid-columns:12;--Grid-columnSpacing:24px;--Grid-rowSpacing:24px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;min-width:0;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:calc(var(--Grid-rowSpacing) / -2) calc(var(--Grid-columnSpacing) / -2);--Grid-nested-rowSpacing:var(--Grid-rowSpacing);--Grid-nested-columnSpacing:var(--Grid-columnSpacing);}
+                    .css-dkd71f-MuiGrid2-root{--Grid-columns:12;--Grid-columnSpacing:24px;--Grid-rowSpacing:24px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;min-width:0;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:calc(var(--Grid-rowSpacing) / -2) calc(var(--Grid-columnSpacing) / -2);}
                   </style>,
                   <style
                     data-emotion="css"
@@ -1571,7 +1580,14 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                     data-s=""
                   >
                     
-                    .css-rzqrn4-MuiGrid2-root{--Grid-columns:12;--Grid-columnSpacing:8px;--Grid-rowSpacing:8px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;min-width:0;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:calc(var(--Grid-rowSpacing) / -2) calc(var(--Grid-columnSpacing) / -2);padding:calc(var(--Grid-nested-rowSpacing) / 2) calc(var(--Grid-nested-columnSpacing) / 2);padding:0px;}
+                    .css-17w906u-MuiGrid2-root{--Grid-columns:12;--Grid-columnSpacing1:8px;--Grid-rowSpacing1:8px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;min-width:0;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:calc(var(--Grid-rowSpacing1) / -2) calc(var(--Grid-columnSpacing1) / -2);padding:calc(var(--Grid-rowSpacing) / 2) calc(var(--Grid-columnSpacing) / 2);padding:0px;}
+                  </style>,
+                  <style
+                    data-emotion="css"
+                    data-s=""
+                  >
+                    
+                    .css-qnznoc-MuiGrid2-root{-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;width:calc(100% * 12 / var(--Grid-columns));min-width:0;box-sizing:border-box;padding:calc(var(--Grid-rowSpacing1) / 2) calc(var(--Grid-columnSpacing1) / 2);}
                   </style>,
                   <style
                     data-emotion="css"
@@ -2235,6 +2251,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                 "__emotion_base": Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "propTypes": Object {
+                    "TransitionComponent": [Function],
                     "children": [Function],
                     "className": [Function],
                     "classes": [Function],
@@ -2313,6 +2330,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                   "__emotion_base": Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "propTypes": Object {
+                      "TransitionComponent": [Function],
                       "children": [Function],
                       "className": [Function],
                       "classes": [Function],

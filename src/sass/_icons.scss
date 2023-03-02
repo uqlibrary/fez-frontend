@@ -3,55 +3,55 @@
   vertical-align: text-top;
 
   &.scopus::before {
-    content: url(../../src/images/scopus_icon.svg);
+    content: url(~/src/images/scopus_icon.svg);
   }
   &.pubmed::before {
-    content: url(../../src/images/pubmed_icon.svg);
+    content: url(~/src/images/pubmed_icon.svg);
   }
   &.wos::before, &.researcher::before {
-    content: url(../../src/images/thomson_icon.svg);
+    content: url(~/src/images/thomson_icon.svg);
   }
   &.thomson::before, &.researcher::before {
-       content: url(../../src/images/thomson_icon.svg);
+       content: url(~/src/images/thomson_icon.svg);
   }
   &.orcid::before {
-    content: url(../../src/images/orcid_icon.svg);
+    content: url(~/src/images/orcid_icon.svg);
   }
   &.altmetric::before {
-    content: url(../../src/images/altmetric_icon.svg);
+    content: url(~/src/images/altmetric_icon.svg);
   }
   &.openAccess::before {
-    content: url(../../src/images/oa_icon.svg);
+    content: url(~/src/images/oa_icon.svg);
   }
   &.openAccessEmbargoed::before {
-    content: url(../../src/images/oa_icon_embargoed.svg);
+    content: url(~/src/images/oa_icon_embargoed.svg);
   }
   &.google::before, &.google_scholar::before {
-    content: url(../../src/images/google_scholar_icon.svg);
+    content: url(~/src/images/google_scholar_icon.svg);
   }
 
   &.cc-by::before {
-    content: url(../../src/images/creativecommons/by.png);
+    content: url(~/src/images/creativecommons/by.png);
   }
 
   &.cc-by-nd::before {
-    content: url(../../src/images/creativecommons/by_nd.png);
+    content: url(~/src/images/creativecommons/by_nd.png);
   }
 
   &.cc-by-nc::before {
-    content: url(../../src/images/creativecommons/by_nc.png);
+    content: url(~/src/images/creativecommons/by_nc.png);
   }
 
   &.cc-by-nc-nd::before {
-    content: url(../../src/images/creativecommons/by_nc_nd.png);
+    content: url(~/src/images/creativecommons/by_nc_nd.png);
   }
 
   &.cc-by-nc-sa::before {
-    content: url(../../src/images/creativecommons/by_nc_sa.png);
+    content: url(~/src/images/creativecommons/by_nc_sa.png);
   }
 
   &.cc-by-sa::before {
-    content: url(../../src/images/creativecommons/by_sa.png);
+    content: url(~/src/images/creativecommons/by_sa.png);
   }
 
   &.xsmall {
@@ -103,7 +103,7 @@ input[type="search"] {
   -webkit-appearance: textfield !important;
   &::-webkit-search-cancel-button {
     -webkit-appearance: none;
-    background-image: url(../../src/images/baseline-close-24px.svg);
+    background-image: url(~/src/images/baseline-close-24px.svg);
     background-size: cover;
   }
 }

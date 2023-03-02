@@ -195,7 +195,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
       <form>
         <div />
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-71wc8y-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
@@ -271,13 +271,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                 id="standard-card-type-&-collection-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridType-1 css-o171l1-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridType-1 css-13cjagy-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1vh3ggi-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-13y5oxm-MuiGrid2-root"
                   >
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -286,7 +286,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </p>
                     </div>
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-7o4s7z-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -297,13 +297,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridSubType-2 css-o171l1-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridSubType-2 css-13cjagy-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1vh3ggi-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-13y5oxm-MuiGrid2-root"
                   >
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -312,7 +312,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </p>
                     </div>
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-7o4s7z-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -1740,7 +1740,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-71wc8y-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1jgh8sh-MuiGrid2-root"
