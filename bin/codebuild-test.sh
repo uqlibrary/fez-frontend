@@ -9,7 +9,7 @@ export TZ='Australia/Brisbane'
 
 # Run CC only on these branches
 CODE_COVERAGE_REQUIRED=false
-if [[ ($CI_BRANCH == "feature-uqamartl-1" || $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"coverage"*) ]]; then
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"coverage"*) ]]; then
     CODE_COVERAGE_REQUIRED=true
 fi
 
