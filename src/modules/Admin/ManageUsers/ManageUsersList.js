@@ -68,7 +68,9 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 .onRowAdd(newData)
                 .then(data => {
                     materialTable.setState(prevState => {
-                        materialTable.dataManager.setData([data, ...prevState.data]);
+                        const prev = [...prevState.data];
+                        prev.forEach(item => delete item.tableData);
+                        materialTable.dataManager.setData([data, ...prev]);
                         return {
                             ...materialTable.dataManager.getRenderState(),
                             showAddRow: false,
@@ -283,7 +285,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     });
                 }}
                 onRowsPerPageChange={pageSize => {
-                    console.log('page size change');
                     return setPageSize(pageSize);
                 }}
                 icons={tableIcons}

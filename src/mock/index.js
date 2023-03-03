@@ -667,6 +667,62 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
             '9999999999': 'User not found',
         },
     })
+    .onPost('fez-users')
+    .reply(200, {
+        data: {
+            usr_id: 2000000999,
+            usr_created_date: '2023-03-03T02:13:17Z',
+            usr_updated_date: '2023-03-03T02:13:17Z',
+            usr_status: 'active',
+            usr_given_names: null,
+            usr_family_name: null,
+            usr_full_name: 'MOCK USER',
+            usr_email: 'mock@user.com',
+            usr_preferences: null,
+            usr_sms_email: null,
+            usr_username: 'mock_user',
+            usr_shib_username: null,
+            usr_administrator: 0,
+            usr_ldap_authentication: 0,
+            usr_login_count: 0,
+            usr_shib_login_count: 0,
+            usr_last_login_date: '2023-03-03T02:13:17Z',
+            usr_external_usr_id: null,
+            usr_super_administrator: 0,
+            usr_auth_rule_groups: '11',
+            usr_real_last_login_date: '2023-03-03T02:13:17Z',
+        },
+    })
+    .onPut('fez-users/1000000293')
+    .reply(200, {
+        data: {
+            usr_id: 1000000293,
+            usr_created_date: '2023-03-03T02:13:17Z',
+            usr_updated_date: '2023-03-03T02:13:17Z',
+            usr_status: 'active',
+            usr_given_names: null,
+            usr_family_name: null,
+            usr_full_name: 'Test User UPDATE',
+            usr_email: 't.user@library.uq.edu.au',
+            usr_preferences: null,
+            usr_sms_email: null,
+            usr_username: 'mock_user',
+            usr_shib_username: null,
+            usr_administrator: 1,
+            usr_ldap_authentication: 0,
+            usr_login_count: 0,
+            usr_shib_login_count: 0,
+            usr_last_login_date: '2023-03-03T02:13:17Z',
+            usr_external_usr_id: null,
+            usr_super_administrator: 1,
+            usr_auth_rule_groups: '11',
+            usr_real_last_login_date: '2023-03-03T02:13:17Z',
+        },
+    })
+    .onDelete('fez-users/1000000293')
+    .reply(200, {
+        data: 'User deleted',
+    })
     // .reply(500)
     .onPost('fez-authors/delete-list')
     .reply(200, {
