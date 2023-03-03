@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
+import PropTypes from 'prop-types';
 
 export default function ScrollToPos({ selector = window, x = 0, y = 0 }) {
     const { pathname } = useLocation();
@@ -10,3 +11,9 @@ export default function ScrollToPos({ selector = window, x = 0, y = 0 }) {
 
     return null;
 }
+
+ScrollToPos.propTypes = {
+    selector: PropTypes.object,
+    x: PropTypes.number,
+    y: PropTypes.number,
+};
