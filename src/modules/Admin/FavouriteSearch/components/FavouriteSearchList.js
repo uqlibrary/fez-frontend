@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
+import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction, MTableToolbar } from '@material-table/core';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
@@ -142,6 +142,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
             columns={columns.current}
             components={{
                 Container: props => <Paper {...props} style={{ padding: 16 }} />,
+                Toolbar: props => <MTableToolbar {...props} style={{ minHeight: 64 }} />,
                 Row: props => (
                     <MTableBodyRow
                         {...props}
@@ -223,6 +224,9 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 draggable: false,
                 paging: false,
                 search: false,
+                headerStyle: {
+                    padding: 16,
+                },
             }}
         />
     );
