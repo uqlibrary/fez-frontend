@@ -12,6 +12,5 @@
     "runMode": 2
   },
   "videoUploadOnPasses": false,
-  "waitForAnimations": true,
-  "scrollBehavior": "center"
+  "waitForAnimations": true
 }

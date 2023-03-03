@@ -53,7 +53,7 @@ Cypress.Commands.add('adminEditTabbedView', (showTabs = true) => {
         .as('tabViewButton')
         .should(showTabs ? 'not.be.checked' : 'be.checked');
     cy.wait(200);
-    cy.get('@tabViewButton').click();
+    cy.get('@tabViewButton').click({ scrollBehavior: 'center' });
     cy.waitUntil(() => {
         const tabCount = Cypress.$(tabHeadingSelector).length;
         return (showTabs && tabCount === 1) || (!showTabs && tabCount > 1);
