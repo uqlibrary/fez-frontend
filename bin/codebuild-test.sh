@@ -8,6 +8,7 @@ export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/cod
 export TZ='Australia/Brisbane'
 
 # Run CC only on these branches
+# NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
 CODE_COVERAGE_REQUIRED=false
 if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"coverage"*) ]]; then
     CODE_COVERAGE_REQUIRED=true
@@ -59,15 +60,17 @@ npm run pretest:unit:ci
 
 case "$PIPE_NUM" in
 "1")
-    set -e
-
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        set -e
         printf "\n--- \e[1mRUNNING E2E TESTS GROUP 1\e[0m ---\n"
         # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the first group
         source bin/codebuild-parallel.sh
         npm run test:e2e:ci1
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
     else
+        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
+        checkCodeStyle
+        set -e
         printf "\n--- \e[1mRUNNING UNIT TESTS 1\e[0m ---\n"
         npm run test:unit:ci1:nocoverage
     fi
@@ -82,18 +85,18 @@ case "$PIPE_NUM" in
         npm run test:e2e:ci2
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
     else
+        printf "\n--- \e[1mRUNNING SERIAL UNIT TESTS\e[0m ---\n"
+        npm run test:unit:ci:serial:nocoverage
         printf "\n--- \e[1mRUNNING UNIT TESTS 2\e[0m ---\n"
         npm run test:unit:ci2:nocoverage
     fi
 ;;
 "3")
-    printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-    checkCodeStyle
-
-    set -e
-
     export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
+        checkCodeStyle
+        set -e
         printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
         # Unit tests which require --runInBand
         npm run test:unit:ci:serial
@@ -107,9 +110,6 @@ case "$PIPE_NUM" in
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/jest/coverage-final.json
 
         mkdir -p coverage/jest-serial && mv coverage-final.json coverage/jest-serial/coverage-final.json
-    else
-        printf "\n--- \e[1mRUNNING SERIAL UNIT TESTS\e[0m ---\n"
-        npm run test:unit:ci:serial:nocoverage
     fi
 ;;
 *)
