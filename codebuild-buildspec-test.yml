@@ -49,21 +49,16 @@ phases:
     #commands:
       # - command
       # - command
-#reports:
-  #report-name-or-arn:
-    #files:
-      # - location
-      # - location
-    #base-directory: location
-    #discard-paths: yes
-    #file-format: JunitXml | CucumberJson
-#artifacts:
-  #files:
-    # - location
-    # - location
-  #name: $(date +%Y-%m-%d)
-  #discard-paths: yes
-  #base-directory: location
+reports:
+  coverage-report:
+    files:
+      - 'coverage/cobertura-coverage.xml'
+    file-format: 'COBERTURAXML'
+artifacts:
+  files:
+    - '**/*'
+  name: builds/$CODEBUILD_BUILD_NUMBER/coverage
+  base-directory: coverage
 #cache:
   #paths:
     # - paths

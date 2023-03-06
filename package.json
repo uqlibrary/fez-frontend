@@ -103,6 +103,7 @@
         "html-webpack-plugin": "^5.5.0",
         "jest": "^26.6.3",
         "jest-cli": "^26.6.3",
+        "jest-html-reporter": "^3.7.0",
         "jest-localstorage-mock": "^2.4.14",
         "jsdom": "^17.0.0",
         "jsdom-global": "^3.0.2",
@@ -243,19 +244,24 @@
         "test:e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false'",
         "pretest:e2e:cc": "rm -rf .nyc_output coverage/cypress",
         "test:e2e:cc": "cross-env NODE_ENV=cc npm run test:e2e",
+        "test:e2e:ci": "cross-env NODE_ENV=cc start-server-and-test 'npm run start:mock' http-get://localhost:3000",
+        "test:e2e:ci1": "npm run test:e2e:ci 'cypress run --record false --spec $(paste -sd, bin/group1.txt)'",
+        "test:e2e:ci2": "npm run test:e2e:ci 'cypress run --record false --spec $(paste -sd, bin/group2.txt)'",
+        "test:e2e:ci1:dashboard": "npm run test:e2e:ci 'cypress run --spec $(paste -sd, bin/group1.txt) --record --parallel --config video=true --group group-1 --ci-build-id $CI_BUILD_NUMBER'",
+        "test:e2e:ci2:dashboard": "npm run test:e2e:ci 'cypress run --spec $(paste -sd, bin/group2.txt) --record --parallel --config video=true --group group-2 --ci-build-id $CI_BUILD_NUMBER'",
         "posttest:e2e:cc": "rm -rf .nyc_output",
         "test:e2e:dashboard": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'npm run cypress:dashboard'",
         "test:e2e:open": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'npm run cypress:open'",
         "test:e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'npm run cypress:watch'",
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
-        "test:unit:serial": "npm run test:unit -- --ci --runInBand",
-        "test:unit:serial:skipcoverage": "npm run test:unit -- --ci --runInBand --no-coverage",
-        "pretest:unit:ci": "rm -rf coverage/jest",
-        "test:unit:ci": "npm run test:unit -- --ci --runInBand",
-        "test:unit:ci1": "npm run test:unit -- --ci --testPathIgnorePatterns=SharedComponents --coveragePathIgnorePatterns=SharedComponents",
-        "test:unit:ci2": "npm run test:unit -- --ci SharedComponents --collectCoverageFrom=\\'[\\\"**/SharedComponents/**\\\",\\\"!**/containers/**\\\",\\\"!**/index.js\\\"]\\'",
-        "test:unit:ci1:skipcoverage": "npm run test:unit -- --ci --no-coverage --testPathIgnorePatterns=SharedComponents",
-        "test:unit:ci2:skipcoverage": "npm run test:unit -- --ci --no-coverage SharedComponents",
+        "test:unit:serial": "npm run test:unit -- --runInBand",
+        "pretest:unit:ci": "rm -rf coverage",
+        "test:unit:ci": "npm run test:unit -- --ci --silent --no-warnings --testPathIgnorePatterns=$(paste -sd'|' jest-serial.txt | sed 's/[.[\\]*^$/\\\\&/g')",
+        "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
+        "test:unit:ci1:nocoverage": "npm run test:unit:ci:nocoverage -- --testPathIgnorePatterns=SharedComponents",
+        "test:unit:ci2:nocoverage": "npm run test:unit:ci:nocoverage -- SharedComponents",
+        "test:unit:ci:serial": "npm run test:unit:serial -- --ci --silent --no-warnings $(paste -sd' ', jest-serial.txt)",
+        "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
         "test:unit:update": "npm run test:unit -- --updateSnapshot",
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged"
     },
@@ -378,6 +384,7 @@
         "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
+            "!src/**/*.test.{js,jsx}",
             "!src/modules/App/components/pages.js",
             "!src/**/{index,locale,config}.js",
             "!src/**/containers/*.{js,jsx}",
@@ -390,8 +397,7 @@
         ],
         "coverageDirectory": "coverage/jest",
         "coverageReporters": [
-            "html",
-            "text",
+            "cobertura",
             "json"
         ],
         "modulePaths": [
@@ -406,6 +412,20 @@
         "transformIgnorePatterns": [
             "<rootDir>/node_modules/"
         ],
+        "reporters": [
+            "default",
+            [
+                "./node_modules/jest-html-reporter",
+                {
+                    "pageTitle": "Test Report",
+                    "outputPath": "coverage/jest-html-report.html",
+                    "includeFailureMsg": true,
+                    "includeConsoleLog": true,
+                    "executionTimeWarningThreshold": 30,
+                    "statusIgnoreFilter": "passed"
+                }
+            ]
+        ],
         "setupFiles": [
             "./src/test.setup.js",
             "jest-localstorage-mock"
@@ -413,7 +433,8 @@
         "setupFilesAfterEnv": [
             "<rootDir>/src/jest.setup.js"
         ],
-        "testURL": "http://fez-staging.library.uq.edu.au"
+        "testURL": "http://fez-staging.library.uq.edu.au",
+        "testTimeout": 30000
     },
     "nyc": {
         "reporter": [

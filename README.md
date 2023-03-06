@@ -419,9 +419,12 @@ Then:
 
 Before pushing to a branch make sure to run `npm run test:all`. This runs the unit and cypress tests.
 
-Codebuild runs `npm run test:e2e:dashboard` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for now until we have API integration with docker, but only in `master` branch.
+Codebuild runs `npm run test:e2e:ci1` `npm run test:e2e:ci2` and uses webpack-dev-server to serve the frontend with mock data.
 
-You can watch video recordings of any failed test runs and view some debug messages via the [Cypress dashboard](https://dashboard.cypress.io/projects/mvfnrv/runs). We have open-source license which allows unlimited runs.
+If there build issues in the CI server, you can enable the dashboard by updating bin/codebuild-test.sh to run
+`npm run test:e2e:ci1:dashboard` `npm run test:e2e:ci2:dashboard`. You can the watch video recordings of any failed test runs 
+and view some debug messages via the [Cypress dashboard](https://dashboard.cypress.io/projects/mvfnrv/runs). 
+We have open-source license which allows unlimited runs.
 
 To manage the account, the admin username/pass is in PasswordState under "GitHub Cypress.io Admin User" (login to Github as this user, then use the github account to log into Cypress).
 
