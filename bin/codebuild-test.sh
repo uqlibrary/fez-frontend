@@ -8,6 +8,7 @@ export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/cod
 export TZ='Australia/Brisbane'
 
 # Run CC only on these branches
+# NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
 CODE_COVERAGE_REQUIRED=false
 if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"coverage"*) ]]; then
     CODE_COVERAGE_REQUIRED=true
