@@ -173,6 +173,44 @@ To keep initial load to a minimum, the following optimisations have been added t
 
 ### Webpack
 
+#### version: 5
+
+As of March 2023, Fez uses Webpack version 5. 
+
+- Use of Asset Loader instead of File Loader when emitting assets. 
+***Important*** Note that on dev branches (development.library.edu.au) any icons referenced from CSS (e.g. as background images) or images loaded in to components via an ```import``` statement ***will not appear in the web page***. This is due to the lengthy path structure of the URL on dev branches, and the inclusion of a hash (#). These assets are all generated in the the root ```/assets``` folder and will work as expected on staging and prod branches.
+
+```{
+    test: /\.(png|jp(e*)g|svg|gif)$/,
+    type: 'asset/resource',
+    generator: {
+        publicPath: '/assets/',
+        outputPath: 'assets/',
+        filename: '[hash][ext]',
+    },
+},
+```
+
+- CSS and JS assets now reside in a subfolder with the Hash of the most current Git Commit. Filenames continue to include contentHash in the name (Note that CSS was moved from the root to a `frontend-css` folder.). 
+
+```
+output: {
+      filename: `frontend-js/${currentCommitHash}/[name]-[contenthash].min.js`,
+}
+```
+
+```
+new MiniCssExtractPlugin({
+            filename: `frontend-css/${currentCommitHash}/[name]-[contenthash].min.css`,
+})
+```
+
+- See ```webpack-dist.config.js``` for details of the ```currentCommitHash``` variable and the ```outputLastCommitHashes``` function, which builds a ```hash.txt``` file that includes the last 20 commit hashes.
+
+- The outputting of source-maps has been removed.
+
+- The PWA package has been disabled as it no longer served a purpose.
+
 #### version: 4
 
 ##### Webpack plugins
