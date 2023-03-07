@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from 'material-table';
+import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction, MTableToolbar } from '@material-table/core';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
@@ -142,6 +142,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
             columns={columns.current}
             components={{
                 Container: props => <Paper {...props} style={{ padding: 16 }} />,
+                Toolbar: props => <MTableToolbar {...props} style={{ minHeight: 64 }} />,
                 Row: props => (
                     <MTableBodyRow
                         {...props}
@@ -185,20 +186,34 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 onRowUpdate: (newData, oldData) => {
                     return handleRowUpdate(newData, oldData)
                         .then(() => {
-                            setData(prevState => {
-                                const data = [...prevState];
-                                data[data.indexOf(oldData)] = newData;
-                                return data;
+                            return new Promise(resolve => {
+                                setTimeout(() => {
+                                    const dataUpdate = [...data];
+                                    const target = dataUpdate.find(el => el.fvs_id === oldData.fvs_id);
+                                    const index = dataUpdate.indexOf(target);
+                                    const newValue = { ...newData };
+                                    delete newValue.tableData;
+                                    dataUpdate[index] = newValue;
+                                    setData([...dataUpdate]);
+                                    resolve();
+                                }, 1000);
                             });
                         })
-                        .catch(() => setData(prevState => prevState));
+                        .catch(() => {
+                            setData(prevState => prevState);
+                        });
                 },
                 onRowDelete: oldData => {
                     return handleRowDelete(oldData).then(() => {
-                        setData(prevState => {
-                            const data = [...prevState];
-                            data.splice(data.indexOf(oldData), 1);
-                            return data;
+                        return new Promise(resolve => {
+                            setTimeout(() => {
+                                const dataDelete = [...data];
+                                const target = dataDelete.find(el => el.fvs_id === oldData.fvs_id);
+                                const index = dataDelete.indexOf(target);
+                                dataDelete.splice(index, 1);
+                                setData([...dataDelete]);
+                                resolve();
+                            }, 1000);
                         });
                     });
                 },
@@ -209,6 +224,9 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 draggable: false,
                 paging: false,
                 search: false,
+                headerStyle: {
+                    padding: 16,
+                },
             }}
         />
     );
