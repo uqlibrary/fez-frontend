@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from 'material-table';
+import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
 import { useTheme } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
 import { numberToWords } from 'config';
@@ -361,13 +361,13 @@ export const AuthorDetail = rowData => {
                 <Typography variant="subtitle2">{'Organisation affiliation'}</Typography>
             </Grid>
             <Grid item xs={10}>
-                <Typography variant="body2">{rowData.orgaff}</Typography>
+                <Typography variant="body2">{rowData.rowData.orgaff}</Typography>
             </Grid>
             <Grid item xs={2}>
                 <Typography variant="subtitle2">{'Organisation type'}</Typography>
             </Grid>
             <Grid item xs={10}>
-                <Typography variant="body2">{rowData.orgtype}</Typography>
+                <Typography variant="body2">{rowData.rowData.orgtype}</Typography>
             </Grid>
         </Grid>
     );
@@ -397,8 +397,16 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     const columns = React.createRef();
     columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale, isNtro, contributorEditorId });
 
-    const [data, setData] = React.useState(list);
-
+    const [data, setData] = React.useState([]);
+    React.useEffect(() => {
+        const result = [];
+        list.forEach((item, index) => {
+            delete item.tableData;
+            item.id = index;
+            result.push({ ...item });
+        });
+        setData(result);
+    }, [list]);
     const handleAuthorUpdate = (action, newData, oldData) => {
         const materialTable = materialTableRef.current;
         let newList = [...data];
@@ -494,18 +502,30 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
                     },
                     tooltip: moveUpHint,
-                    disabled: disabled || rowData.tableData.id === 0,
+                    disabled:
+                        disabled ||
+                        (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
+                        rowData.tableData.id === 0,
                     onClick: () => {
                         const index = rowData.tableData.id;
-                        const nextContributor = data[index - 1];
+                        const nextContributor = {
+                            ...data[index - 1],
+                        };
+                        const newRowData = { ...rowData };
+                        delete newRowData.tableData;
                         const newList = [
                             ...data.slice(0, index - 1),
-                            rowData,
+                            { ...newRowData },
                             nextContributor,
                             ...data.slice(index + 1),
                         ];
-                        setData(newList);
-                        onChange(newList);
+                        const newIndexedList = [];
+                        newList.map((item, index) => {
+                            newIndexedList.push({ ...item, id: index });
+                        });
+
+                        setData(newIndexedList);
+                        // onChange(newList);
                     },
                 }),
                 rowData => ({
@@ -514,14 +534,27 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
                     },
-                    tooltip: moveDownHint,
+                    tooltip: `${moveDownHint}-${rowData.tableData.id}`,
                     disabled: disabled || rowData.tableData.id === data.length - 1,
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = data[index + 1];
-                        const newList = [...data.slice(0, index), nextContributor, rowData, ...data.slice(index + 2)];
-                        setData(newList);
-                        onChange(newList);
+                        const newRowData = { ...rowData };
+                        delete newRowData.tableData;
+                        const newList = [
+                            ...data.slice(0, index),
+                            nextContributor,
+                            newRowData,
+                            ...data.slice(index + 2),
+                        ];
+                        const newIndexedList = [];
+                        newList.map((item, index) => {
+                            newIndexedList.push({ ...item, id: index });
+                        });
+
+                        setData(newIndexedList);
+                        // setData(newList);
+                        // onChange(newList);
                     },
                 }),
                 rowData => ({
@@ -532,7 +565,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                     },
                     disabled: disabled,
                     tooltip: editHint,
-                    onClick: (event, rowData) => {
+                    onClick: () => {
                         const materialTable = materialTableRef.current;
                         materialTable.dataManager.changeRowEditing(rowData, 'update');
                         materialTable.setState({
@@ -548,7 +581,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                     },
                     disabled: disabled,
                     tooltip: deleteHint,
-                    onClick: (event, rowData) => {
+                    onClick: () => {
                         const materialTable = materialTableRef.current;
                         materialTable.dataManager.changeRowEditing(rowData, 'delete');
                         materialTable.setState({
