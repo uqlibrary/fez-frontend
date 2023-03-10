@@ -3262,6 +3262,7 @@ export default {
                         {
                             type: 'header',
                             value: undefined, // notes
+                            error: null,
                         },
                         {
                             type: 'content',
@@ -3281,6 +3282,9 @@ export default {
                         {
                             type: 'content',
                             value: undefined,
+                            error: null,
+                            AAError: [],
+                            AAOrphans: [],
                         },
                     ],
                     {

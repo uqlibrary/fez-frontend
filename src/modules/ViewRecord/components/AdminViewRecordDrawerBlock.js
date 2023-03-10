@@ -19,16 +19,21 @@ const useStyles = makeStyles({
     cursor: {
         cursor: 'pointer',
     },
+    contentTitleError: {
+        textTransform: 'uppercase',
+        fontWeight: 500,
+        color: 'red',
+    },
 });
 
 export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard, variant }) => {
     const classes = useStyles();
-
+    console.log('block error?', block.error && block.error);
     if (block.type === 'header') {
         return (
             <Typography
                 variant={'subtitle2'}
-                className={classes.contentTitle}
+                className={block.error ? classes.contentTitleError : classes.contentTitle}
                 key={`header-${parentIndex}-${index}`}
                 id={`drawer-${variant}-header-${parentIndex}-${index}`}
                 data-testid={`drawer-${variant}-header-${parentIndex}-${index}`}
@@ -81,16 +86,32 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
             );
         } else {
             return (
-                <Typography
-                    variant={'body2'}
-                    key={`content-value-${parentIndex}-${index}`}
-                    id={`drawer-${variant}-content-value-${parentIndex}-${index}`}
-                    data-testid={`drawer-${variant}-content-value-${parentIndex}-${index}`}
-                    tabIndex="0"
-                    aria-label={block.value !== '-' ? block.value : 'No content available'}
-                >
-                    {block.value}
-                </Typography>
+                <>
+                    <Typography
+                        variant={'body2'}
+                        sx={{ color: block.error ? 'red' : 'black' }}
+                        key={`content-value-${parentIndex}-${index}`}
+                        id={`drawer-${variant}-content-value-${parentIndex}-${index}`}
+                        data-testid={`drawer-${variant}-content-value-${parentIndex}-${index}`}
+                        tabIndex="0"
+                        aria-label={block.value !== '-' ? block.value : 'No content available'}
+                    >
+                        {block.value}
+                    </Typography>
+                    {block.error && (
+                        <Typography
+                            variant={'body2'}
+                            sx={{ color: block.error ? 'red' : 'black' }}
+                            key={`content-value-${parentIndex}-${index}`}
+                            id={`drawer-${variant}-content-value-${parentIndex}-${index}`}
+                            data-testid={`drawer-${variant}-content-value-${parentIndex}-${index}`}
+                            tabIndex="0"
+                            aria-label={block.value !== '-' ? block.value : 'No content available'}
+                        >
+                            {'There is an error'}
+                        </Typography>
+                    )}
+                </>
             );
         }
     }

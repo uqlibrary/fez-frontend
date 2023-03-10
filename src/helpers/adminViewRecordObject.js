@@ -37,7 +37,13 @@ export const getDefaultDrawerDescriptorIndex = () => {
 };
 
 /* istanbul ignore next */
-export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], fields = {}) => {
+export const createDefaultDrawerDescriptorObject = (
+    locale = {},
+    content = [],
+    fields = {},
+    AAErrors = [],
+    AAOrphans = [],
+) => {
     const adminViewRecordDefaultContentObject = getDefaultDrawerDescriptorObject();
     const adminViewRecordDefaultContentIndex = getDefaultDrawerDescriptorIndex();
     if (!adminViewRecordDefaultContentObject || !adminViewRecordDefaultContentIndex) return {};
@@ -50,12 +56,19 @@ export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], f
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][0].value = locale.notes;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][1].value = parsedNotes;
 
-    // Authors
+    // Authors (Change this for new AA)
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][0].value =
         locale.authorAffiliations;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][0].error =
+        AAErrors.length > 0 || AAOrphans.length > 0;
     adminViewRecordDefaultContentObject.sections[
         adminViewRecordDefaultContentIndex.authors
     ][1].value = authorAffiliates(fields.authorAffiliates, content);
+    console.log('CHECKING HERE', AAErrors, AAOrphans);
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][1].error =
+        AAErrors.length > 0 || AAOrphans.length > 0;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][1].AAError = AAErrors;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][1].AAOrphans = AAOrphans;
 
     // WoS
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][0].value = locale.wosId;

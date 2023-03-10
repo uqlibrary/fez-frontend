@@ -35,6 +35,7 @@ import { notFound } from '../../../config/routes';
 import clsx from 'clsx';
 import Badge from '@mui/material/Badge';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import makeStyles from '@mui/styles/makeStyles';
 import AdminViewRecordDrawer from './AdminViewRecordDrawer';
 import Button from '@mui/material/Button';
@@ -107,6 +108,9 @@ export const NewViewRecord = ({
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
 
+    const [AAError, setAAError] = React.useState([]);
+    const [AAOrphan, setAAOrphan] = React.useState([]);
+
     const handleMobileDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -121,8 +125,79 @@ export const NewViewRecord = ({
         }
     };
 
+    const findAAOrphanedErrors = record => {
+        const orphaned = [];
+        if (record && record.fez_author_affiliation && record.fez_author_affiliation.length > 0) {
+            record.fez_author_affiliation.map(affil => {
+                const matched = record.fez_record_search_key_author_id.some(
+                    author => author && author.rek_author_id && author.rek_author_id === affil.af_author_id,
+                );
+                if (!matched) {
+                    orphaned.push(affil);
+                }
+            });
+            setAAOrphan(orphaned);
+        }
+    };
+
+    const findAATotalErrors = record => {
+        const Error = [];
+        if (record && record.fez_author_affiliation && record.fez_author_affiliation.length > 0) {
+            const Unique = [];
+            record.fez_author_affiliation.map(item => {
+                !Unique.some(e => e.author_id === item.af_author_id) &&
+                    Unique.push({ author_id: item.af_author_id, author_name: item.fez_author.aut_display_name });
+            });
+
+            Unique.forEach(author => {
+                let total = 0;
+                const tmp = record.fez_author_affiliation.filter(rec => rec.af_author_id === author.author_id);
+
+                tmp.forEach(tmp => {
+                    total += tmp.af_percent_affiliation;
+                });
+
+                if (total !== 100000) {
+                    Error.push({ total: total, author_id: author.author_id, author_name: author.author_name });
+                }
+                setAAError([...Error]);
+            });
+        }
+        return Error;
+    };
+
+    React.useEffect(() => {
+        findAATotalErrors(recordToView);
+        findAAOrphanedErrors(recordToView);
+    }, [recordToView]);
+
     const getAdminRecordButtonIcon = () => {
-        return recordToView?.fez_internal_notes?.ain_detail ? (
+        // In here should be a check if there is an error against the record.
+        // check against AA 100000 and missing authentications.
+        // const Error = [...findAATotalErrors(record)];
+
+        // end playground
+        let Component = null;
+        if (recordToView?.fez_internal_notes?.ain_detail) {
+            Component =
+                AAError.length > 0 || AAOrphan.length > 0 ? (
+                    <ErrorOutlineOutlinedIcon style={{ color: 'red' }} fontSize="inherit" />
+                ) : (
+                    <DescriptionOutlinedIcon fontSize="inherit" />
+                );
+        } else {
+            Component =
+                AAError.length > 0 || AAOrphan.length > 0 ? (
+                    <ErrorOutlineOutlinedIcon
+                        style={{ color: 'red' }}
+                        fontSize="inherit"
+                        onClick={handleDrawerToggle}
+                    />
+                ) : (
+                    <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} />
+                );
+        }
+        return (
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events
             <Badge
                 color="error"
@@ -133,11 +208,10 @@ export const NewViewRecord = ({
                     vertical: 'top',
                     horizontal: 'right',
                 }}
+                invisible
             >
-                <DescriptionOutlinedIcon fontSize="inherit" />
+                {Component}
             </Badge>
-        ) : (
-            <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} />
         );
     };
 
@@ -157,9 +231,11 @@ export const NewViewRecord = ({
                 txt.adminRecordData.drawer.sectionTitles,
                 recordToView,
                 fields.viewRecord.adminViewRecordDrawerFields,
+                AAError,
+                AAOrphan,
             ),
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        [JSON.stringify(recordToView)],
+        [JSON.stringify(recordToView), AAError, AAOrphan],
     );
 
     if (!isNotFoundRoute && loadingRecordToView) {
@@ -194,6 +270,9 @@ export const NewViewRecord = ({
         return <div className="empty" />;
     }
 
+    console.log('AA Values ERRORS:', AAError.length > 0 ? AAError : 'None');
+    console.log('AA Orphans ERRORS:', AAOrphan.length > 0 ? AAOrphan : 'None');
+
     return (
         <div
             className={clsx(classes.content, {
@@ -211,6 +290,8 @@ export const NewViewRecord = ({
                         handleDrawerToggle={handleDrawerToggle}
                         open={open}
                         mobileOpen={mobileOpen}
+                        AAErrors={AAError}
+                        AAOrphans={AAOrphan}
                     />
                 )}
                 <Grid container className={classes.marginVariableTop}>
@@ -233,7 +314,7 @@ export const NewViewRecord = ({
                                     <Grid item>
                                         <Button
                                             variant="outlined"
-                                            startIcon={getAdminRecordButtonIcon()}
+                                            startIcon={getAdminRecordButtonIcon(recordToView)}
                                             onClick={handleDrawerToggle}
                                             id="adminDrawerButton"
                                             data-testid="btnAdminToggleDrawerVisibility"
