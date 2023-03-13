@@ -29,11 +29,10 @@ export const authorAffiliates = (key, content, AACalcErrors, AAOrphans, history,
                 <Typography
                     variant={'body2'}
                     component={'div'}
-                    key={'ABCTEST'}
-                    id={'ABCTEST'}
-                    data-testid={'ABCTEST'}
-                    tabIndex={0}
-                    aria-label={'No content available'}
+                    key={`affil_orph_error_${item.af_author_id}`}
+                    id={`affil_orph_error_${item.af_author_id}`}
+                    data-testid={`affil_orph_error_${item.af_author_id}`}
+                    aria-label={`Afffiliation error for ${item.fez_author.aut_display_name}`}
                 >
                     <span>
                         <b>{item.fez_author.aut_display_name}</b> has orphaned author affiliation information.
@@ -46,11 +45,10 @@ export const authorAffiliates = (key, content, AACalcErrors, AAOrphans, history,
                 <Typography
                     variant={'body2'}
                     component={'div'}
-                    key={'ABCTEST'}
-                    id={'ABCTEST'}
-                    data-testid={'ABCTEST'}
-                    tabIndex={0}
-                    aria-label={'No content available'}
+                    key={`affil_cal_error_${item.author_id}`}
+                    id={`affil_cal_error_${item.author_id}`}
+                    data-testid={`affil_cal_error_${item.author_id}`}
+                    aria-label={`Affilliation error for ${item.author_name} `}
                 >
                     <span>
                         <b>{item.author_name}</b> has incomplete author affiliation information.
@@ -69,7 +67,9 @@ export const authorAffiliates = (key, content, AACalcErrors, AAOrphans, history,
         );
         return [...CalcErrors, ...Orphans, ...EditButton];
     } else {
-        return !!authorAffiliate.length > 0 ? 'Yes' : 'No';
+        return !!authorAffiliate.length > 0
+            ? 'Valid author affiliation information has been added.'
+            : 'No linked Authors.';
     }
 };
 

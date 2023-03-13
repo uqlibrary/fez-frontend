@@ -155,7 +155,10 @@ export const NewViewRecord = ({
             const Unique = [];
             record.fez_author_affiliation.map(item => {
                 !Unique.some(e => e.author_id === item.af_author_id) &&
-                    Unique.push({ author_id: item.af_author_id, author_name: item.fez_author.aut_display_name });
+                    Unique.push({
+                        author_id: item.af_author_id,
+                        author_name: item.fez_author?.aut_display_name || 'NA',
+                    });
             });
 
             Unique.forEach(author => {
