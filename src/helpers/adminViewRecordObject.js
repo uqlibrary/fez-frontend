@@ -1,6 +1,12 @@
+import React from 'react';
+import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import config from 'locale/viewRecord';
+import Button from '@mui/material/Button';
+export const navigateToEdit = (history, pid) => {
+    history.push(`/admin/edit/${pid}`);
+};
 
 export const formattedString = (type, lookup) => {
     if (!!!type && !!!lookup) return '-';
@@ -11,10 +17,60 @@ export const parseKey = (key, content) => {
     return key.split('.').reduce((prev, curr) => prev && prev[curr], content);
 };
 
-export const authorAffiliates = (key, content) => {
+export const authorAffiliates = (key, content, AACalcErrors, AAOrphans, history, pid) => {
+    console.log('VALUES', AACalcErrors, AAOrphans);
+    const hasError = AACalcErrors.length > 0 || AAOrphans.length > 0;
     const authorAffiliate = parseKey(key, content) ?? null;
     if (!!!authorAffiliate || !Array.isArray(authorAffiliate)) return 'No';
-    return !!authorAffiliate.length > 0 ? 'Yes' : 'No';
+    if (hasError) {
+        const Orphans =
+            AAOrphans.length > 0 &&
+            AAOrphans.map(item => (
+                <Typography
+                    variant={'body2'}
+                    component={'div'}
+                    key={'ABCTEST'}
+                    id={'ABCTEST'}
+                    data-testid={'ABCTEST'}
+                    tabIndex={0}
+                    aria-label={'No content available'}
+                >
+                    <span>
+                        <b>{item.fez_author.aut_display_name}</b> has orphaned author affiliation information.
+                    </span>
+                </Typography>
+            ));
+        const CalcErrors =
+            AACalcErrors.length > 0 &&
+            AACalcErrors.map(item => (
+                <Typography
+                    variant={'body2'}
+                    component={'div'}
+                    key={'ABCTEST'}
+                    id={'ABCTEST'}
+                    data-testid={'ABCTEST'}
+                    tabIndex={0}
+                    aria-label={'No content available'}
+                >
+                    <span>
+                        <b>{item.author_name}</b> has incomplete author affiliation information.
+                    </span>
+                </Typography>
+            ));
+        const EditButton = (
+            <Button
+                onClick={() => navigateToEdit(history, pid)}
+                variant="outlined"
+                id="admin-fix-affiliations-button"
+                data-testid="btnFixAffiliations"
+            >
+                {'Edit  Affiliations'}
+            </Button>
+        );
+        return [...CalcErrors, ...Orphans, ...EditButton];
+    } else {
+        return !!authorAffiliate.length > 0 ? 'Yes' : 'No';
+    }
 };
 
 export const getDefaultDrawerDescriptorObject = () => {
@@ -43,6 +99,8 @@ export const createDefaultDrawerDescriptorObject = (
     fields = {},
     AAErrors = [],
     AAOrphans = [],
+    history,
+    pid,
 ) => {
     const adminViewRecordDefaultContentObject = getDefaultDrawerDescriptorObject();
     const adminViewRecordDefaultContentIndex = getDefaultDrawerDescriptorIndex();
@@ -63,7 +121,7 @@ export const createDefaultDrawerDescriptorObject = (
         AAErrors.length > 0 || AAOrphans.length > 0;
     adminViewRecordDefaultContentObject.sections[
         adminViewRecordDefaultContentIndex.authors
-    ][1].value = authorAffiliates(fields.authorAffiliates, content);
+    ][1].value = authorAffiliates(fields.authorAffiliates, content, AAErrors, AAOrphans, history, pid);
     console.log('CHECKING HERE', AAErrors, AAOrphans);
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][1].error =
         AAErrors.length > 0 || AAOrphans.length > 0;

@@ -45,6 +45,8 @@ import { doesListContainItem } from 'helpers/general';
 
 import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
 
+import { useHistory } from 'react-router';
+
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
 }
@@ -92,6 +94,7 @@ export const NewViewRecord = ({
     recordToViewError,
     recordToView,
 }) => {
+    const history = useHistory();
     const txt = locale.pages.viewRecord;
     const dispatch = useDispatch();
     const { pid, version } = useParams();
@@ -127,7 +130,13 @@ export const NewViewRecord = ({
 
     const findAAOrphanedErrors = record => {
         const orphaned = [];
-        if (record && record.fez_author_affiliation && record.fez_author_affiliation.length > 0) {
+        if (
+            record &&
+            record.fez_author_affiliation &&
+            record.fez_author_affiliation.length > 0 &&
+            record.fez_record_search_key_author_id &&
+            record.fez_record_search_key_author_id.length > 0
+        ) {
             record.fez_author_affiliation.map(affil => {
                 const matched = record.fez_record_search_key_author_id.some(
                     author => author && author.rek_author_id && author.rek_author_id === affil.af_author_id,
@@ -233,6 +242,8 @@ export const NewViewRecord = ({
                 fields.viewRecord.adminViewRecordDrawerFields,
                 AAError,
                 AAOrphan,
+                history,
+                pid,
             ),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [JSON.stringify(recordToView), AAError, AAOrphan],
@@ -269,10 +280,6 @@ export const NewViewRecord = ({
     } else if (!isNotFoundRoute && (!recordToView || !recordToView.rek_pid)) {
         return <div className="empty" />;
     }
-
-    console.log('AA Values ERRORS:', AAError.length > 0 ? AAError : 'None');
-    console.log('AA Orphans ERRORS:', AAOrphan.length > 0 ? AAOrphan : 'None');
-
     return (
         <div
             className={clsx(classes.content, {

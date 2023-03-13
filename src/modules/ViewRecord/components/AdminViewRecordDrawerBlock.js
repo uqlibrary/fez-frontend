@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import FileCopyOutlinedIcon from '@mui/icons-material/FileCopyOutlined';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 
 const useStyles = makeStyles({
     contentTitle: {
@@ -24,6 +25,11 @@ const useStyles = makeStyles({
         fontWeight: 500,
         color: 'red',
     },
+    errorIcon: {
+        verticalAlign: 'middle',
+        display: 'inline-flex',
+        paddingRight: 5,
+    },
 });
 
 export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard, variant }) => {
@@ -39,6 +45,13 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                 data-testid={`drawer-${variant}-header-${parentIndex}-${index}`}
                 tabIndex="0"
             >
+                {block.error && (
+                    <ErrorOutlineOutlinedIcon
+                        className={classes.errorIcon}
+                        style={{ color: 'red' }}
+                        fontSize="inherit"
+                    />
+                )}
                 {block.value}
             </Typography>
         );
@@ -89,7 +102,6 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                 <>
                     <Typography
                         variant={'body2'}
-                        sx={{ color: block.error ? 'red' : 'black' }}
                         key={`content-value-${parentIndex}-${index}`}
                         id={`drawer-${variant}-content-value-${parentIndex}-${index}`}
                         data-testid={`drawer-${variant}-content-value-${parentIndex}-${index}`}
@@ -98,19 +110,6 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     >
                         {block.value}
                     </Typography>
-                    {block.error && (
-                        <Typography
-                            variant={'body2'}
-                            sx={{ color: block.error ? 'red' : 'black' }}
-                            key={`content-value-${parentIndex}-${index}`}
-                            id={`drawer-${variant}-content-value-${parentIndex}-${index}`}
-                            data-testid={`drawer-${variant}-content-value-${parentIndex}-${index}`}
-                            tabIndex="0"
-                            aria-label={block.value !== '-' ? block.value : 'No content available'}
-                        >
-                            {'There is an error'}
-                        </Typography>
-                    )}
                 </>
             );
         }
