@@ -35,8 +35,8 @@ export const authorAffiliates = (key, content, history, pid, AAProblems) => {
                     data-testid={`affil_error_${item.rek_author_id}`}
                     aria-label={`Afffiliation error for ${item.rek_author_id_lookup}`}
                 >
-                    <b>{item.rek_author_id_lookup}</b> has {item.isOrphaned ? 'orphaned' : 'incomplete'} author
-                    affiliation information.
+                    <b>{item.rek_author_id_lookup}</b>{' '}
+                    {config.viewRecord.adminViewRecordDrawerFields.errorDetail(item.isOrphaned)}
                 </Typography>
             ));
 
@@ -85,8 +85,8 @@ export const authorAffiliates = (key, content, history, pid, AAProblems) => {
         return [...Problems, ...EditButton];
     } else {
         return !!authorAffiliate.length > 0
-            ? 'Valid author affiliation information has been added.'
-            : 'No linked Authors.';
+            ? config.viewRecord.adminViewRecordDrawerFields.hasAffiliates
+            : config.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates;
     }
 };
 

@@ -112,8 +112,8 @@ export const NewViewRecord = ({
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
 
-    const [AAError, setAAError] = React.useState([]);
-    const [AAOrphan, setAAOrphan] = React.useState([]);
+    // const [AAError, setAAError] = React.useState([]);
+    // const [AAOrphan, setAAOrphan] = React.useState([]);
     const [AAProblems, setAAProblems] = React.useState([]);
 
     const handleMobileDrawerToggle = () => {
@@ -130,74 +130,73 @@ export const NewViewRecord = ({
         }
     };
 
-    const findAAOrphanedErrors = record => {
-        const orphaned = [];
-        if (
-            record &&
-            record.fez_author_affiliation &&
-            record.fez_author_affiliation.length > 0 &&
-            record.fez_record_search_key_author_id &&
-            record.fez_record_search_key_author_id.length > 0
-        ) {
-            record.fez_author_affiliation.map(affil => {
-                const matched = record.fez_record_search_key_author_id.some(
-                    author => author && author.rek_author_id && author.rek_author_id === affil.af_author_id,
-                );
-                if (!matched) {
-                    orphaned.push(affil);
-                }
-            });
-            setAAOrphan(orphaned);
-        }
-    };
+    // const findAAOrphanedErrors = record => {
+    //     const orphaned = [];
+    //     if (
+    //         record &&
+    //         record.fez_author_affiliation &&
+    //         record.fez_author_affiliation.length > 0 &&
+    //         record.fez_record_search_key_author_id &&
+    //         record.fez_record_search_key_author_id.length > 0
+    //     ) {
+    //         record.fez_author_affiliation.map(affil => {
+    //             const matched = record.fez_record_search_key_author_id.some(
+    //                 author => author && author.rek_author_id && author.rek_author_id === affil.af_author_id,
+    //             );
+    //             if (!matched) {
+    //                 orphaned.push(affil);
+    //             }
+    //         });
+    //         setAAOrphan(orphaned);
+    //     }
+    // };
 
-    const findAATotalErrors = record => {
-        const Error = [];
-        if (record && record.fez_author_affiliation && record.fez_author_affiliation.length > 0) {
-            const Unique = [];
-            record.fez_author_affiliation.map(item => {
-                !Unique.some(e => e.author_id === item.af_author_id) &&
-                    Unique.push({
-                        author_id: item.af_author_id,
-                        author_name: item.fez_author?.aut_display_name || 'NA',
-                    });
-            });
+    // const findAATotalErrors = record => {
+    //     const Error = [];
+    //     if (record && record.fez_author_affiliation && record.fez_author_affiliation.length > 0) {
+    //         const Unique = [];
+    //         record.fez_author_affiliation.map(item => {
+    //             !Unique.some(e => e.author_id === item.af_author_id) &&
+    //                 Unique.push({
+    //                     author_id: item.af_author_id,
+    //                     author_name: item.fez_author?.aut_display_name || 'NA',
+    //                 });
+    //         });
 
-            Unique.forEach(author => {
-                let total = 0;
-                const tmp = record.fez_author_affiliation.filter(rec => rec.af_author_id === author.author_id);
+    //         Unique.forEach(author => {
+    //             let total = 0;
+    //             const tmp = record.fez_author_affiliation.filter(rec => rec.af_author_id === author.author_id);
 
-                tmp.forEach(tmp => {
-                    total += tmp.af_percent_affiliation;
-                });
+    //             tmp.forEach(tmp => {
+    //                 total += tmp.af_percent_affiliation;
+    //             });
 
-                if (total !== 100000) {
-                    Error.push({ total: total, author_id: author.author_id, author_name: author.author_name });
-                }
-                setAAError([...Error]);
-            });
-        }
-    };
+    //             if (total !== 100000) {
+    //                 Error.push({ total: total, author_id: author.author_id, author_name: author.author_name });
+    //             }
+    //             setAAError([...Error]);
+    //         });
+    //     }
+    // };
 
     React.useEffect(() => {
-        findAATotalErrors(recordToView);
-        findAAOrphanedErrors(recordToView);
+        // findAATotalErrors(recordToView);
+        // findAAOrphanedErrors(recordToView);
         recordToView && setAAProblems(composeAuthorAffiliationProblems(recordToView));
-        // console.log("LEE'S FUNCTION", recordToView && composeAuthorAffiliationProblems(recordToView));
     }, [recordToView]);
 
     const getAdminRecordButtonIcon = () => {
         let Component = null;
         if (recordToView?.fez_internal_notes?.ain_detail) {
             Component =
-                composeAuthorAffiliationProblems(recordToView).length > 0 ? (
+                AAProblems.length > 0 ? (
                     <ErrorOutlineOutlinedIcon style={{ color: 'red' }} fontSize="inherit" />
                 ) : (
                     <DescriptionOutlinedIcon fontSize="inherit" />
                 );
         } else {
             Component =
-                composeAuthorAffiliationProblems(recordToView).length > 0 ? (
+                AAProblems.length > 0 ? (
                     <ErrorOutlineOutlinedIcon
                         style={{ color: 'red' }}
                         fontSize="inherit"
@@ -246,7 +245,7 @@ export const NewViewRecord = ({
                 AAProblems,
             ),
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        [JSON.stringify(recordToView), AAError, AAOrphan],
+        [JSON.stringify(recordToView), AAProblems],
     );
 
     if (!isNotFoundRoute && loadingRecordToView) {
@@ -297,8 +296,6 @@ export const NewViewRecord = ({
                         handleDrawerToggle={handleDrawerToggle}
                         open={open}
                         mobileOpen={mobileOpen}
-                        AAErrors={AAError}
-                        AAOrphans={AAOrphan}
                     />
                 )}
                 <Grid container className={classes.marginVariableTop}>

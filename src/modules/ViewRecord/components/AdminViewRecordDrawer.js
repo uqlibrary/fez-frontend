@@ -67,14 +67,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const AdminViewRecordDrawer = ({
-    content,
-    handleDrawerToggle,
-    open = false,
-    mobileOpen = false,
-    AAErrors = [],
-    AAOrphans = [],
-}) => {
+export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = false, mobileOpen = false }) => {
     console.log('Content', content);
     const classes = useStyles();
     const theme = useTheme();
@@ -141,8 +134,6 @@ export const AdminViewRecordDrawer = ({
                         copyToClipboard={writeText}
                         key={`Drawer-Section-${sectionIndex}`}
                         variant={variant}
-                        AAErrors={AAErrors}
-                        AAOrphans={AAOrphans}
                     />
                 ))}
             </div>
@@ -226,8 +217,6 @@ AdminViewRecordDrawer.propTypes = {
     handleDrawerToggle: PropTypes.func.isRequired,
     open: PropTypes.bool,
     mobileOpen: PropTypes.bool,
-    AAErrors: PropTypes.array,
-    AAOrphans: PropTypes.array,
 };
 
 export default React.memo(AdminViewRecordDrawer);
