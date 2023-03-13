@@ -29,6 +29,7 @@ const useStyles = makeStyles({
         verticalAlign: 'middle',
         display: 'inline-flex',
         paddingRight: 5,
+        paddingBottom: 3,
     },
 });
 

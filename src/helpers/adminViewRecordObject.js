@@ -28,15 +28,14 @@ export const authorAffiliates = (key, content, AACalcErrors, AAOrphans, history,
             AAOrphans.map(item => (
                 <Typography
                     variant={'body2'}
-                    component={'div'}
+                    style={{ marginTop: 10, display: 'block' }}
+                    component={'span'}
                     key={`affil_orph_error_${item.af_author_id}`}
                     id={`affil_orph_error_${item.af_author_id}`}
                     data-testid={`affil_orph_error_${item.af_author_id}`}
                     aria-label={`Afffiliation error for ${item.fez_author.aut_display_name}`}
                 >
-                    <span>
-                        <b>{item.fez_author.aut_display_name}</b> has orphaned author affiliation information.
-                    </span>
+                    <b>{item.fez_author.aut_display_name}</b> has orphaned author affiliation information.
                 </Typography>
             ));
         const CalcErrors =
@@ -44,20 +43,21 @@ export const authorAffiliates = (key, content, AACalcErrors, AAOrphans, history,
             AACalcErrors.map(item => (
                 <Typography
                     variant={'body2'}
-                    component={'div'}
+                    style={{ marginTop: 10, display: 'block' }}
+                    component={'span'}
                     key={`affil_cal_error_${item.author_id}`}
                     id={`affil_cal_error_${item.author_id}`}
                     data-testid={`affil_cal_error_${item.author_id}`}
                     aria-label={`Affilliation error for ${item.author_name} `}
                 >
-                    <span>
-                        <b>{item.author_name}</b> has incomplete author affiliation information.
-                    </span>
+                    <b>{item.author_name}</b> has incomplete author affiliation information.
                 </Typography>
             ));
         const EditButton = (
             <Button
+                key={'affil_cal_error_btn'}
                 onClick={() => navigateToEdit(history, pid)}
+                style={{ marginTop: 10, width: '100%' }}
                 variant="outlined"
                 id="admin-fix-affiliations-button"
                 data-testid="btnFixAffiliations"

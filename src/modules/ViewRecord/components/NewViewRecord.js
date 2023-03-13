@@ -175,7 +175,6 @@ export const NewViewRecord = ({
                 setAAError([...Error]);
             });
         }
-        return Error;
     };
 
     React.useEffect(() => {
@@ -184,11 +183,6 @@ export const NewViewRecord = ({
     }, [recordToView]);
 
     const getAdminRecordButtonIcon = () => {
-        // In here should be a check if there is an error against the record.
-        // check against AA 100000 and missing authentications.
-        // const Error = [...findAATotalErrors(record)];
-
-        // end playground
         let Component = null;
         if (recordToView?.fez_internal_notes?.ain_detail) {
             Component =
