@@ -17,42 +17,59 @@ export const parseKey = (key, content) => {
     return key.split('.').reduce((prev, curr) => prev && prev[curr], content);
 };
 
-export const authorAffiliates = (key, content, AACalcErrors, AAOrphans, history, pid) => {
-    console.log('VALUES', AACalcErrors, AAOrphans);
-    const hasError = AACalcErrors.length > 0 || AAOrphans.length > 0;
+export const authorAffiliates = (key, content, history, pid, AAProblems) => {
+    // const hasError = AACalcErrors.length > 0 || AAOrphans.length > 0;
+    const hasError = AAProblems.length > 0;
     const authorAffiliate = parseKey(key, content) ?? null;
     if (!!!authorAffiliate || !Array.isArray(authorAffiliate)) return 'No';
     if (hasError) {
-        const Orphans =
-            AAOrphans.length > 0 &&
-            AAOrphans.map(item => (
+        const Problems =
+            AAProblems.length > 0 &&
+            AAProblems.map(item => (
                 <Typography
                     variant={'body2'}
                     style={{ marginTop: 10, display: 'block' }}
                     component={'span'}
-                    key={`affil_orph_error_${item.af_author_id}`}
-                    id={`affil_orph_error_${item.af_author_id}`}
-                    data-testid={`affil_orph_error_${item.af_author_id}`}
-                    aria-label={`Afffiliation error for ${item.fez_author.aut_display_name}`}
+                    key={`affil_error_${item.rek_author_id}`}
+                    id={`affil_error_${item.rek_author_id}`}
+                    data-testid={`affil_error_${item.rek_author_id}`}
+                    aria-label={`Afffiliation error for ${item.rek_author_id_lookup}`}
                 >
-                    <b>{item.fez_author.aut_display_name}</b> has orphaned author affiliation information.
+                    <b>{item.rek_author_id_lookup}</b> has {item.isOrphaned ? 'orphaned' : 'incomplete'} author
+                    affiliation information.
                 </Typography>
             ));
-        const CalcErrors =
-            AACalcErrors.length > 0 &&
-            AACalcErrors.map(item => (
-                <Typography
-                    variant={'body2'}
-                    style={{ marginTop: 10, display: 'block' }}
-                    component={'span'}
-                    key={`affil_cal_error_${item.author_id}`}
-                    id={`affil_cal_error_${item.author_id}`}
-                    data-testid={`affil_cal_error_${item.author_id}`}
-                    aria-label={`Affilliation error for ${item.author_name} `}
-                >
-                    <b>{item.author_name}</b> has incomplete author affiliation information.
-                </Typography>
-            ));
+
+        // const Orphans =
+        //     AAOrphans.length > 0 &&
+        //     AAOrphans.map(item => (
+        //         <Typography
+        //             variant={'body2'}
+        //             style={{ marginTop: 10, display: 'block' }}
+        //             component={'span'}
+        //             key={`affil_orph_error_${item.rek_author_id}`}
+        //             id={`affil_orph_error_${item.rek_author_id}`}
+        //             data-testid={`affil_orph_error_${item.rek_author_id}`}
+        //             aria-label={`Afffiliation error for ${item.rek_author_id_lookup}`}
+        //         >
+        //             <b>{item.rek_author_id_lookup}</b> has orphaned author affiliation information.
+        //         </Typography>
+        //     ));
+        // const CalcErrors =
+        //     AACalcErrors.length > 0 &&
+        //     AACalcErrors.map(item => (
+        //         <Typography
+        //             variant={'body2'}
+        //             style={{ marginTop: 10, display: 'block' }}
+        //             component={'span'}
+        //             key={`affil_cal_error_${item.rek_author_id}`}
+        //             id={`affil_cal_error_${item.rek_author_id}`}
+        //             data-testid={`affil_cal_error_${item.rek_author_id}`}
+        //             aria-label={`Affilliation error for ${item.rek_author_id_lookup} `}
+        //         >
+        //             <b>{item.rek_author_id_lookup}</b> has incomplete author affiliation information.
+        //         </Typography>
+        //     ));
         const EditButton = (
             <Button
                 key={'affil_cal_error_btn'}
@@ -65,7 +82,7 @@ export const authorAffiliates = (key, content, AACalcErrors, AAOrphans, history,
                 {'Edit  Affiliations'}
             </Button>
         );
-        return [...CalcErrors, ...Orphans, ...EditButton];
+        return [...Problems, ...EditButton];
     } else {
         return !!authorAffiliate.length > 0
             ? 'Valid author affiliation information has been added.'
@@ -97,11 +114,11 @@ export const createDefaultDrawerDescriptorObject = (
     locale = {},
     content = [],
     fields = {},
-    AAErrors = [],
-    AAOrphans = [],
     history,
     pid,
+    AAProblems = [],
 ) => {
+    console.log('PROBLEMS', AAProblems);
     const adminViewRecordDefaultContentObject = getDefaultDrawerDescriptorObject();
     const adminViewRecordDefaultContentIndex = getDefaultDrawerDescriptorIndex();
     if (!adminViewRecordDefaultContentObject || !adminViewRecordDefaultContentIndex) return {};
@@ -118,16 +135,10 @@ export const createDefaultDrawerDescriptorObject = (
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][0].value =
         locale.authorAffiliations;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][0].error =
-        AAErrors.length > 0 || AAOrphans.length > 0;
+        AAProblems.length > 0;
     adminViewRecordDefaultContentObject.sections[
         adminViewRecordDefaultContentIndex.authors
-    ][1].value = authorAffiliates(fields.authorAffiliates, content, AAErrors, AAOrphans, history, pid);
-    console.log('CHECKING HERE', AAErrors, AAOrphans);
-    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][1].error =
-        AAErrors.length > 0 || AAOrphans.length > 0;
-    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][1].AAError = AAErrors;
-    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][1].AAOrphans = AAOrphans;
-
+    ][1].value = authorAffiliates(fields.authorAffiliates, content, history, pid, AAProblems);
     // WoS
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][0].value = locale.wosId;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][1].value = formattedString(

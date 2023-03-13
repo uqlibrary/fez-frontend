@@ -36,5 +36,6 @@ export const composeAuthorAffiliationProblems = record => {
                           .reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) < MAX_TOTAL
                     : false,
             };
-        });
+        })
+        .filter(author => author.isOrphaned || author.isIncomplete);
 };

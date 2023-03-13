@@ -46,6 +46,7 @@ import { doesListContainItem } from 'helpers/general';
 import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
 
 import { useHistory } from 'react-router';
+import { composeAuthorAffiliationProblems } from 'modules/Admin/ManageAuthors/helpers';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
@@ -113,6 +114,7 @@ export const NewViewRecord = ({
 
     const [AAError, setAAError] = React.useState([]);
     const [AAOrphan, setAAOrphan] = React.useState([]);
+    const [AAProblems, setAAProblems] = React.useState([]);
 
     const handleMobileDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -180,20 +182,22 @@ export const NewViewRecord = ({
     React.useEffect(() => {
         findAATotalErrors(recordToView);
         findAAOrphanedErrors(recordToView);
+        recordToView && setAAProblems(composeAuthorAffiliationProblems(recordToView));
+        // console.log("LEE'S FUNCTION", recordToView && composeAuthorAffiliationProblems(recordToView));
     }, [recordToView]);
 
     const getAdminRecordButtonIcon = () => {
         let Component = null;
         if (recordToView?.fez_internal_notes?.ain_detail) {
             Component =
-                AAError.length > 0 || AAOrphan.length > 0 ? (
+                composeAuthorAffiliationProblems(recordToView).length > 0 ? (
                     <ErrorOutlineOutlinedIcon style={{ color: 'red' }} fontSize="inherit" />
                 ) : (
                     <DescriptionOutlinedIcon fontSize="inherit" />
                 );
         } else {
             Component =
-                AAError.length > 0 || AAOrphan.length > 0 ? (
+                composeAuthorAffiliationProblems(recordToView).length > 0 ? (
                     <ErrorOutlineOutlinedIcon
                         style={{ color: 'red' }}
                         fontSize="inherit"
@@ -237,10 +241,9 @@ export const NewViewRecord = ({
                 txt.adminRecordData.drawer.sectionTitles,
                 recordToView,
                 fields.viewRecord.adminViewRecordDrawerFields,
-                AAError,
-                AAOrphan,
                 history,
                 pid,
+                AAProblems,
             ),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [JSON.stringify(recordToView), AAError, AAOrphan],
