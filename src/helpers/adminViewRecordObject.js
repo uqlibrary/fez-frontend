@@ -21,7 +21,9 @@ export const authorAffiliates = (key, content, history, pid, AAProblems) => {
     // const hasError = AACalcErrors.length > 0 || AAOrphans.length > 0;
     const hasError = AAProblems.length > 0;
     const authorAffiliate = parseKey(key, content) ?? null;
-    if (!!!authorAffiliate || !Array.isArray(authorAffiliate)) return 'No';
+    if (!!!authorAffiliate || !Array.isArray(authorAffiliate)) {
+        return config.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates;
+    }
     if (hasError) {
         const Problems =
             AAProblems.length > 0 &&

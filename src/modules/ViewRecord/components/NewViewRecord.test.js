@@ -1,6 +1,6 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { act, fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, screen } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
@@ -15,6 +15,7 @@ import globalLocale from '../../../locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
 import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from '../../../config/general';
+import viewRecord from 'locale/viewRecord';
 
 jest.mock('../../../hooks', () => ({
     userIsAdmin: jest.fn(() => ({})),
@@ -306,7 +307,7 @@ describe('NewViewRecord', () => {
 
             // Author affiliations
             expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
-                'Valid author affiliation information has been added.',
+                viewRecord.viewRecord.adminViewRecordDrawerFields.hasAffiliates,
             );
 
             // WoS ID
@@ -338,7 +339,7 @@ describe('NewViewRecord', () => {
 
             // Author affiliations
             expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
-                'Valid author affiliation information has been added.',
+                viewRecord.viewRecord.adminViewRecordDrawerFields.hasAffiliates,
             );
 
             // WoS ID

@@ -46,8 +46,12 @@ describe('AdminViewRecordDrawer', () => {
         const { getByTestId } = setup({ open: undefined, mobileOpen: undefined });
         expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
         expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-        expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('Yes');
-        expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('Yes');
+        expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
+            fields.viewRecord.adminViewRecordDrawerFields.hasAffiliates,
+        );
+        expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
+            fields.viewRecord.adminViewRecordDrawerFields.hasAffiliates,
+        );
     });
     it('should show affiliates section with the text "No" when no affiliates are available', () => {
         const content = createDefaultDrawerDescriptorObject(
@@ -64,8 +68,12 @@ describe('AdminViewRecordDrawer', () => {
 
         expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
         expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-        expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('No');
-        expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('No');
+        expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
+            fields.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates,
+        );
+        expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
+            fields.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates,
+        );
     });
     it('should render visible desktop admin drawer at >mobile breakpoint', () => {
         const { getByTestId } = setup({ open: true });
