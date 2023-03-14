@@ -64,6 +64,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should render default empty view', () => {
+        // Checked OK
         const { asFragment } = setup({});
         expect(asFragment()).toMatchInlineSnapshot(`
             <DocumentFragment>
@@ -75,6 +76,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should not render components for empty record', () => {
+        // Checked OK
         const { asFragment } = setup({ recordToView: {} });
         expect(asFragment()).toMatchInlineSnapshot(`
             <DocumentFragment>

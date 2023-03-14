@@ -68,7 +68,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = false, mobileOpen = false }) => {
-    console.log('Content', content);
     const classes = useStyles();
     const theme = useTheme();
     const [copied, setCopied] = React.useState(false);

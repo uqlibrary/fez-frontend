@@ -10,13 +10,15 @@ export const composeAuthorAffiliationProblems = record => {
     // get list of authors that have an ID that isn't zero
     const authors = record.fez_record_search_key_author_id?.filter(author => author.rek_author_id !== 0);
 
+    if (!!!authors) return [];
+
     return uniqueAffiliations
         .map(authorId => {
             const isOrphaned = authors.every(item => item.rek_author_id !== authorId);
             const matchingAuthor = record.fez_author_affiliation.find(item => item.af_author_id === authorId);
             return {
                 rek_author_id: matchingAuthor.af_author_id,
-                aut_display_name: matchingAuthor.fez_author.aut_display_name,
+                aut_display_name: matchingAuthor?.fez_author?.aut_display_name || '',
                 isOrphaned: isOrphaned,
                 isIncomplete: !isOrphaned
                     ? record.fez_author_affiliation

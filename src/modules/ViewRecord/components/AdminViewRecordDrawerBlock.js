@@ -23,19 +23,19 @@ const useStyles = makeStyles({
     contentTitleError: {
         textTransform: 'uppercase',
         fontWeight: 500,
-        color: 'red',
+        color: '#d32f2f',
     },
     errorIcon: {
         verticalAlign: 'middle',
         display: 'inline-flex',
         paddingRight: 5,
         paddingBottom: 3,
+        color: '#d32f2f',
     },
 });
 
 export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard, variant }) => {
     const classes = useStyles();
-    console.log('block error?', block.error && block.error);
     if (block.type === 'header') {
         return (
             <Typography
@@ -46,13 +46,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                 data-testid={`drawer-${variant}-header-${parentIndex}-${index}`}
                 tabIndex="0"
             >
-                {block.error && (
-                    <ErrorOutlineOutlinedIcon
-                        className={classes.errorIcon}
-                        style={{ color: 'red' }}
-                        fontSize="inherit"
-                    />
-                )}
+                {block.error && <ErrorOutlineOutlinedIcon className={classes.errorIcon} fontSize="inherit" />}
                 {block.value}
             </Typography>
         );
