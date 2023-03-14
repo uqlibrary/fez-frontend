@@ -1,6 +1,6 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { act, fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, screen } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
@@ -88,12 +88,14 @@ describe('NewViewRecord', () => {
     });
 
     it('should render default view with admin menu', () => {
+        // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);
         const { getByTestId } = setup({ recordToView: record });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 
     it('should render version', () => {
+        // Checked OK
         const txt = locale.pages.viewRecord.version;
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
@@ -105,6 +107,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should render deleted version', () => {
+        // Checked OK
         const txt = locale.pages.viewRecord.version;
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
@@ -302,7 +305,9 @@ describe('NewViewRecord', () => {
             );
 
             // Author affiliations
-            expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('Yes');
+            expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
+                'Valid author affiliation information has been added.',
+            );
 
             // WoS ID
             expect(getByTestId('drawer-Desktop-content-clipboard-4-1')).toHaveTextContent('000381303000009');
@@ -332,7 +337,9 @@ describe('NewViewRecord', () => {
             );
 
             // Author affiliations
-            expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('Yes');
+            expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
+                'Valid author affiliation information has been added.',
+            );
 
             // WoS ID
             expect(getByTestId('drawer-Mobile-content-clipboard-4-1')).toHaveTextContent('000381303000009');

@@ -7,6 +7,8 @@ export const composeAuthorAffiliationProblems = record => {
         [],
     );
 
+    if (!!!uniqueAffiliations) return [];
+
     // get list of authors that have an ID that isn't zero
     const authors = record.fez_record_search_key_author_id?.filter(author => author.rek_author_id !== 0);
 

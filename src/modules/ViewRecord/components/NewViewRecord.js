@@ -114,7 +114,7 @@ export const NewViewRecord = ({
 
     // const [AAError, setAAError] = React.useState([]);
     // const [AAOrphan, setAAOrphan] = React.useState([]);
-    const [AAProblems, setAAProblems] = React.useState([]);
+    // const [AAProblems, setAAProblems] = React.useState([]);
 
     const handleMobileDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -182,21 +182,22 @@ export const NewViewRecord = ({
     React.useEffect(() => {
         // findAATotalErrors(recordToView);
         // findAAOrphanedErrors(recordToView);
-        recordToView && setAAProblems(composeAuthorAffiliationProblems(recordToView));
+        // recordToView && setAAProblems(composeAuthorAffiliationProblems(recordToView));
     }, [recordToView]);
 
     const getAdminRecordButtonIcon = () => {
         let Component = null;
+        const Problems = composeAuthorAffiliationProblems(recordToView);
         if (recordToView?.fez_internal_notes?.ain_detail) {
             Component =
-                AAProblems.length > 0 ? (
+                Problems.length > 0 ? (
                     <ErrorOutlineOutlinedIcon style={{ color: '#d32f2f' }} fontSize="inherit" />
                 ) : (
                     <DescriptionOutlinedIcon fontSize="inherit" />
                 );
         } else {
             Component =
-                AAProblems.length > 0 ? (
+                Problems.length > 0 ? (
                     <ErrorOutlineOutlinedIcon
                         style={{ color: '#d32f2f' }}
                         fontSize="inherit"
@@ -242,10 +243,10 @@ export const NewViewRecord = ({
                 fields.viewRecord.adminViewRecordDrawerFields,
                 history,
                 pid,
-                AAProblems,
+                composeAuthorAffiliationProblems(recordToView),
             ),
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        [JSON.stringify(recordToView), AAProblems],
+        [JSON.stringify(recordToView)],
     );
 
     if (!isNotFoundRoute && loadingRecordToView) {
