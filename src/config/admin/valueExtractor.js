@@ -64,7 +64,7 @@ const authorsGetValue = record => {
         aut_display_name: (authorIds[order] || {}).rek_author_id_lookup || 0,
     }));
 
-    delete record.fez_record_search_key_author_id;
+    // delete record.fez_record_search_key_author_id;
     delete record.fez_record_search_key_author_affiliation_name;
     delete record.fez_record_search_key_author_affiliation_type;
     delete record.fez_record_search_key_author_role;

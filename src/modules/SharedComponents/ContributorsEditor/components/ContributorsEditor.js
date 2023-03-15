@@ -13,6 +13,7 @@ import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
+import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -34,6 +35,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
+        record: PropTypes.object,
     };
 
     static defaultProps = {
@@ -311,6 +313,7 @@ export class ContributorsEditor extends PureComponent {
         }
 
         if (isAdmin) {
+            const authorAffiliationProblems = composeAuthorAffiliationProblems(this.props.record);
             return (
                 <AuthorsList
                     contributorEditorId={contributorEditorId}
@@ -320,6 +323,7 @@ export class ContributorsEditor extends PureComponent {
                     showRoleInput={showRoleInput}
                     locale={this.props.locale}
                     isNtro={isNtro}
+                    problematicAffiliations={authorAffiliationProblems}
                 />
             );
         }
@@ -389,6 +393,7 @@ export class ContributorsEditor extends PureComponent {
 
 export const mapStateToProps = state => ({
     author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
+    record: state && state.get('viewRecordReducer') ? state.get('viewRecordReducer').recordToView : null,
 });
 
 export const styles = theme => ({

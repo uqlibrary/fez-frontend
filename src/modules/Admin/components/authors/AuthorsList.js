@@ -361,19 +361,28 @@ export const AuthorDetail = rowData => {
                 <Typography variant="subtitle2">{'Organisation affiliation'}</Typography>
             </Grid>
             <Grid item xs={10}>
-                <Typography variant="body2">{rowData.rowData.orgaff}</Typography>
+                <Typography variant="body2">{rowData.orgaff}</Typography>
             </Grid>
             <Grid item xs={2}>
                 <Typography variant="subtitle2">{'Organisation type'}</Typography>
             </Grid>
             <Grid item xs={10}>
-                <Typography variant="body2">{rowData.rowData.orgtype}</Typography>
+                <Typography variant="body2">{rowData.orgtype}</Typography>
             </Grid>
         </Grid>
     );
 };
 
-export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, locale, onChange, showRoleInput }) => {
+export const AuthorsList = ({
+    contributorEditorId,
+    disabled,
+    isNtro,
+    list,
+    locale,
+    onChange,
+    showRoleInput,
+    problematicAffiliations,
+}) => {
     const {
         row: {
             locale: {
@@ -396,6 +405,8 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale, isNtro, contributorEditorId });
+    const affiliationProblems = React.createRef();
+    affiliationProblems.current = problematicAffiliations;
 
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
@@ -610,7 +621,25 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
             data={data}
             icons={tableIcons}
             title=""
-            {...(!isNtro ? { detailPanel: AuthorDetail } : {})}
+            detailPanel={[
+                rowData => {
+                    const conditionalIcon =
+                        rowData.uqUsername === '' || isNtro
+                            ? {
+                                  icon: () => {
+                                      return null;
+                                  },
+                              }
+                            : {};
+
+                    return {
+                        ...conditionalIcon,
+                        render: () => {
+                            return rowData.uqUsername === '' || isNtro ? null : AuthorDetail(rowData);
+                        },
+                    };
+                },
+            ]}
             editable={{
                 onRowUpdateCancelled: () => {},
             }}
@@ -648,6 +677,7 @@ AuthorsList.propTypes = {
     isNtro: PropTypes.bool,
     list: PropTypes.array,
     locale: PropTypes.object,
+    problematicAffiliations: PropTypes.array,
     onChange: PropTypes.func,
     showRoleInput: PropTypes.bool,
 };
