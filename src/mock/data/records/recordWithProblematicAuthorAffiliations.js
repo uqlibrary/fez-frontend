@@ -683,7 +683,7 @@ const recordWithProblematicAuthorAffiliations = {
             "af_id": 478895,
             "af_pid": "UQ:871c1f8",
             "af_author_id": 88844,
-            "af_percent_affiliation": 50000,
+            "af_percent_affiliation": 40000,
             "af_org_id": 968,
             "af_status": 1,
             "fez_author": {

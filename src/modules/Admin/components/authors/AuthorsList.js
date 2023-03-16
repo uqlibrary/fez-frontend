@@ -15,6 +15,7 @@ import Lock from '@mui/icons-material/Lock';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import Delete from '@mui/icons-material/Delete';
+import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 
 import { tableIcons } from './AuthorsListIcons';
 import OrgAffiliationTypeSelector from 'modules/SharedComponents/ContributorsEditor/components/OrgAffiliationTypeSelector';
@@ -26,14 +27,20 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles(theme => ({
     linked: {
+        fontWeight: 500,
+    },
+    problem: {
+        color: theme.palette.error.main,
         fontWeight: 500,
     },
 }));
 
-const getIcon = rowData => {
-    if (parseInt(rowData.uqIdentifier, 10)) {
+const getIcon = ({ rowData, inProblemState }) => {
+    if (!!inProblemState) {
+        return <ErrorOutlineOutlinedIcon color="error" id={`contributor-error-${rowData.tableData.id}`} />;
+    } else if (parseInt(rowData.uqIdentifier, 10)) {
         return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.tableData.id}`} />;
     } else if (rowData.disabled) {
         return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
@@ -61,8 +68,23 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
-export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
-    const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
+export const getColumns = ({
+    contributorEditorId,
+    disabled,
+    suffix,
+    classes,
+    showRoleInput,
+    locale,
+    isNtro,
+    affiliationProblems,
+}) => {
+    const hasAffiliateProblem = rowData =>
+        affiliationProblems.some(affiliate => affiliate.rek_author_id === rowData.aut_id);
+
+    const linkedClass = rowData =>
+        // eslint-disable-next-line no-nested-ternary
+        hasAffiliateProblem(rowData) ? classes.problem : !!rowData.aut_id ? classes.linked : '';
+
     const {
         header: {
             locale: { nameColumn, roleColumn, identifierColumn, organisationColumn },
@@ -71,6 +93,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             locale: { creatorRoleLabel, creatorRoleHint, nameAsPublishedLabel, nameAsPublishedHint, identifierLabel },
         },
     } = locale;
+
     return [
         {
             title: (
@@ -84,27 +107,30 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                 />
             ),
             field: 'nameAsPublished',
-            render: rowData => (
-                <NameAsPublished
-                    icon={getIcon({ ...rowData, disabled })}
-                    text={
-                        <React.Fragment>
-                            <Typography
-                                variant="body2"
-                                className={linkedClass(rowData)}
-                                id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
-                                data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
-                            >
-                                {rowData.nameAsPublished}
-                            </Typography>
-                            <Typography variant="caption" className={linkedClass(rowData)}>{`${numberToWords(
-                                rowData.tableData.id + 1,
-                            )} ${suffix}`}</Typography>
-                        </React.Fragment>
-                    }
-                    linked={!!rowData.aut_id}
-                />
-            ),
+            render: rowData => {
+                const inProblemState = hasAffiliateProblem(rowData);
+                return (
+                    <NameAsPublished
+                        icon={getIcon({ rowData, disabled, inProblemState })}
+                        text={
+                            <React.Fragment>
+                                <Typography
+                                    variant="body2"
+                                    className={linkedClass(rowData)}
+                                    id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
+                                    data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
+                                >
+                                    {rowData.nameAsPublished}
+                                </Typography>
+                                <Typography variant="caption" className={linkedClass(rowData)}>{`${numberToWords(
+                                    rowData.tableData.id + 1,
+                                )} ${suffix}`}</Typography>
+                            </React.Fragment>
+                        }
+                        linked={!!rowData.aut_id}
+                    />
+                );
+            },
             editComponent: props => {
                 const { rowData: contributor } = props;
                 return (
@@ -404,9 +430,19 @@ export const AuthorsList = ({
     const theme = useTheme();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale, isNtro, contributorEditorId });
+
     const affiliationProblems = React.createRef();
     affiliationProblems.current = problematicAffiliations;
+    columns.current = getColumns({
+        disabled,
+        suffix,
+        classes,
+        showRoleInput,
+        locale,
+        isNtro,
+        contributorEditorId,
+        affiliationProblems: affiliationProblems.current,
+    });
 
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
