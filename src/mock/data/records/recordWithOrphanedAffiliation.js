@@ -1099,11 +1099,7 @@ export default {
     "rek_editing_user": null,
     "rek_editing_user_lookup": null,
     "rek_editing_start_date": null,
-    "fez_internal_notes": {
-        "ain_id": 154357,
-        "ain_pid": "UQ:40186z",
-        "ain_detail": "<p>Some internal notes for testing</p>"
-    },
+    "fez_internal_notes": null,
     "fez_record_search_key_audience_size": null,
     "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_country": [

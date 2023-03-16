@@ -6,7 +6,7 @@ describe('Author Affiliations', () => {
         push: jest.fn(),
     };
     it('Should correctly handle navigation', () => {
-        const expected = '/admin/edit/UQ:1';
+        const expected = '/admin/edit/UQ:1?tab=authors';
         navigateToEdit(mockHistory, 'UQ:1');
         expect(mockHistory.push).toBeCalledWith(expected);
     });

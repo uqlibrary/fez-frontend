@@ -5,7 +5,7 @@ import ReactHtmlParser from 'react-html-parser';
 import config from 'locale/viewRecord';
 import Button from '@mui/material/Button';
 export const navigateToEdit = (history, pid) => {
-    history.push(`/admin/edit/${pid}`);
+    history.push(`/admin/edit/${pid}?tab=authors`);
 };
 
 export const formattedString = (type, lookup) => {
