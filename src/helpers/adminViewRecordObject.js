@@ -18,9 +18,9 @@ export const parseKey = (key, content) => {
 };
 
 export const authorAffiliates = (key, content, history, pid, AAProblems) => {
-    // const hasError = AACalcErrors.length > 0 || AAOrphans.length > 0;
     const hasError = AAProblems.length > 0;
     const authorAffiliate = parseKey(key, content) ?? null;
+
     if (!!!authorAffiliate || !Array.isArray(authorAffiliate)) {
         return config.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates;
     }
@@ -42,36 +42,6 @@ export const authorAffiliates = (key, content, history, pid, AAProblems) => {
                 </Typography>
             ));
 
-        // const Orphans =
-        //     AAOrphans.length > 0 &&
-        //     AAOrphans.map(item => (
-        //         <Typography
-        //             variant={'body2'}
-        //             style={{ marginTop: 10, display: 'block' }}
-        //             component={'span'}
-        //             key={`affil_orph_error_${item.rek_author_id}`}
-        //             id={`affil_orph_error_${item.rek_author_id}`}
-        //             data-testid={`affil_orph_error_${item.rek_author_id}`}
-        //             aria-label={`Afffiliation error for ${item.rek_author_id_lookup}`}
-        //         >
-        //             <b>{item.rek_author_id_lookup}</b> has orphaned author affiliation information.
-        //         </Typography>
-        //     ));
-        // const CalcErrors =
-        //     AACalcErrors.length > 0 &&
-        //     AACalcErrors.map(item => (
-        //         <Typography
-        //             variant={'body2'}
-        //             style={{ marginTop: 10, display: 'block' }}
-        //             component={'span'}
-        //             key={`affil_cal_error_${item.rek_author_id}`}
-        //             id={`affil_cal_error_${item.rek_author_id}`}
-        //             data-testid={`affil_cal_error_${item.rek_author_id}`}
-        //             aria-label={`Affilliation error for ${item.rek_author_id_lookup} `}
-        //         >
-        //             <b>{item.rek_author_id_lookup}</b> has incomplete author affiliation information.
-        //         </Typography>
-        //     ));
         const EditButton = (
             <Button
                 key={'affil_cal_error_btn'}
@@ -84,7 +54,7 @@ export const authorAffiliates = (key, content, history, pid, AAProblems) => {
                 {'Edit  Affiliations'}
             </Button>
         );
-        return [...Problems, ...EditButton];
+        return [...Problems, EditButton];
     } else {
         return !!authorAffiliate.length > 0
             ? config.viewRecord.adminViewRecordDrawerFields.hasAffiliates

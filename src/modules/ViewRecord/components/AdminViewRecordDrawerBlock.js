@@ -46,7 +46,14 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                 data-testid={`drawer-${variant}-header-${parentIndex}-${index}`}
                 tabIndex="0"
             >
-                {block.error && <ErrorOutlineOutlinedIcon className={classes.errorIcon} fontSize="inherit" />}
+                {block.error && (
+                    <ErrorOutlineOutlinedIcon
+                        data-testid="affiliation_error_drawer_indicator"
+                        id="affiliation_error_drawer_indicator"
+                        className={classes.errorIcon}
+                        fontSize="inherit"
+                    />
+                )}
                 {block.value}
             </Typography>
         );

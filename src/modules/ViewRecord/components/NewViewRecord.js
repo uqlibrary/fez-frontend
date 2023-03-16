@@ -191,7 +191,11 @@ export const NewViewRecord = ({
         if (recordToView?.fez_internal_notes?.ain_detail) {
             Component =
                 Problems.length > 0 ? (
-                    <ErrorOutlineOutlinedIcon style={{ color: '#d32f2f' }} fontSize="inherit" />
+                    <ErrorOutlineOutlinedIcon
+                        data-testid="error-affiliation-toggle-icon"
+                        style={{ color: '#d32f2f' }}
+                        fontSize="inherit"
+                    />
                 ) : (
                     <DescriptionOutlinedIcon fontSize="inherit" />
                 );
@@ -200,6 +204,7 @@ export const NewViewRecord = ({
                 Problems.length > 0 ? (
                     <ErrorOutlineOutlinedIcon
                         style={{ color: '#d32f2f' }}
+                        data-testid="error-affiliation-toggle-icon"
                         fontSize="inherit"
                         onClick={handleDrawerToggle}
                     />
