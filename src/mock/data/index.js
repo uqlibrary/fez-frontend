@@ -59,7 +59,8 @@ export {
     UQ716942uqagrinb,
     UQ353708,
     UQ339703,
-    recordWithIncorrectAffiliation
+    recordWithIncorrectAffiliation,
+    recordWithOrphanedAffiliation,
 } from './records';
 
 export { vocabulariesList } from './vocabularies';
