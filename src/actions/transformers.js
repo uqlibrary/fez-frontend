@@ -12,6 +12,7 @@ import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, PLACEHOLDER_ISO8601_DATE } f
 import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { STATE_DELETED } from '../config/viewRecord';
 import { isDerivative } from 'helpers/datastreams';
+import { sanitizeDoi } from '../config/validation';
 
 const moment = require('moment');
 
@@ -88,6 +89,20 @@ export const getRecordLinkSearchKey = data => {
                 rek_link_description_order: 1,
             },
         ],
+    };
+};
+
+/* getRecordDoiSearchKey - returns doi object formatted for record request
+ * @param {Object} form data may contain doi attribute  {fez_record_search_key_doi: {rek_doi: {string}}}
+ * @returns {Object} formatted {fez_record_search_key_doi*} for record request
+ */
+export const getRecordDoiSearchKey = data => {
+    if (!data.fez_record_search_key_doi?.rek_doi) return null;
+
+    return {
+        fez_record_search_key_doi: {
+            rek_doi: sanitizeDoi(data.fez_record_search_key_doi.rek_doi),
+        },
     };
 };
 
