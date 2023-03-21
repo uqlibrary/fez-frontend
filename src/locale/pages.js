@@ -565,11 +565,12 @@ export default {
                 type: 'info_outline',
                 title: '',
                 message: record =>
-                    record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION ? (
+                    record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION &&
+                    record.fez_record_search_key_new_doi?.rek_new_doi ? (
                         <>
                             This Data Collection has been deleted and substituted by{' '}
                             <a
-                                href="https://doi.org/${record.fez_record_search_key_new_doi?.rek_new_doi}"
+                                href={`https://doi.org/${record.fez_record_search_key_new_doi?.rek_new_doi}`}
                                 target="_blank"
                             >
                                 another version

@@ -210,7 +210,7 @@ export default class DeleteRecord extends PureComponent {
                                                             <Field
                                                                 component={TextField}
                                                                 disabled={this.props.submitting}
-                                                                name="fez_record_search_key_new_doi.rek_new_doi"
+                                                                name="publication.fez_record_search_key_new_doi.rek_new_doi"
                                                                 textFieldId="rek-new-doi"
                                                                 type="text"
                                                                 fullWidth
@@ -228,13 +228,14 @@ export default class DeleteRecord extends PureComponent {
                                                         <Grid item xs={12}>
                                                             <Field
                                                                 component={RichEditorField}
-                                                                name="fez_record_search_key_deletion_notes.rek_deletion_notes"
+                                                                name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
                                                                 textFieldId="rek-deletion-notes-text"
                                                                 richEditorId="rek-deletion-notes"
                                                                 disabled={this.props.submitting}
                                                                 fullWidth
                                                                 multiline
                                                                 rows={5}
+                                                                maxValue={2000}
                                                             />
                                                         </Grid>
                                                     </Grid>

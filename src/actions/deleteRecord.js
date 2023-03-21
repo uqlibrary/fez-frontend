@@ -72,16 +72,17 @@ export function clearDeleteRecord() {
 export function deleteRecord(data) {
     const payload = {
         ...(!!data.reason ? { reason: data.reason } : {}),
-        ...(!!data.fez_record_search_key_new_doi
-            ? { fez_record_search_key_new_doi: data.fez_record_search_key_new_doi }
-            : {}),
-        ...(!!data.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText
+        ...(!!data.publication?.fez_record_search_key_new_doi?.rek_new_doi
+            ? { fez_record_search_key_new_doi: data.publication?.fez_record_search_key_new_doi }
+            : { fez_record_search_key_new_doi: null }),
+        ...(!!data.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText
             ? {
                   fez_record_search_key_deletion_notes: {
-                      rek_deletion_notes: data.fez_record_search_key_deletion_notes.rek_deletion_notes.htmlText,
+                      rek_deletion_notes:
+                          data.publication?.fez_record_search_key_deletion_notes.rek_deletion_notes.htmlText,
                   },
               }
-            : {}),
+            : { fez_record_search_key_deletion_notes: null }),
     };
     return dispatch => {
         dispatch({ type: DELETE_RECORD_PROCESSING });
