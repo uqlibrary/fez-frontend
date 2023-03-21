@@ -3,7 +3,7 @@ const MAX_TOTAL = 100000;
 export const composeAuthorAffiliationProblems = record => {
     const uniqueAffiliations = record.fez_author_affiliation?.reduce(
         (accumulated, current) =>
-            accumulated.includes(current.af_author_id)
+            accumulated.some(a => a.id === current.af_author_id)
                 ? accumulated
                 : [
                       ...accumulated,

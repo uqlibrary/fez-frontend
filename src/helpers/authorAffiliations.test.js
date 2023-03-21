@@ -169,12 +169,6 @@ const oprhanError = {
                 aut_id: 7624830,
                 aut_display_name: 'Author, New',
             },
-            fez_org_structure: [
-                {
-                    org_id: 1248,
-                    org_title: 'Information Systems and Resource Services (University of Queensland Library)',
-                },
-            ],
         },
         {
             af_id: 478907,
@@ -252,7 +246,7 @@ describe('Compose Author Affiliation Problems', () => {
         ];
         expect(Response).toEqual(Expected);
     });
-    it('Will throw error on AA orphaned author error', () => {
+    it('Will throw error on AA orphaned organisation author error', () => {
         const Response = composeAuthorAffiliationProblems(oprhanError);
         const Expected = [
             {

@@ -1024,10 +1024,38 @@ export default {
         {
             "af_id": 222720,
             "af_pid": "UQ:40186z",
-            "af_author_id": 7645,
-            "af_percent_affiliation": 100000,
+            "af_author_id": 7648,
+            "af_percent_affiliation": 90000,
             "af_org_id": 1048,
-            "af_status": 1
+            "af_status": 1,
+            "fez_author": {
+                "aut_id": 99999,
+                "aut_display_name": "Two, Test"
+            },
+            "fez_org_structure": [
+                {
+                    "org_id": 1062,
+                    "org_title": "!NON-HERDC"
+                }
+            ]
+        },
+        {
+            "af_id": 222720,
+            "af_pid": "UQ:40186z",
+            "af_author_id": 7648,
+            "af_percent_affiliation": 10000,
+            "af_org_id": 1049,
+            "af_status": 1,
+            "fez_author": {
+                "aut_id": 99999,
+                "aut_display_name": "Two, Test"
+            },
+            "fez_org_structure": [
+                {
+                    "org_id": 1062,
+                    "org_title": "!NON-HERDC"
+                }
+            ],
         },
         {
             "af_id": 222722,
