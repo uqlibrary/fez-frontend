@@ -82,7 +82,6 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
 
     const writeText = (event, data) => {
         event && event.stopPropagation && event.stopPropagation();
-
         if (!navigator.clipboard) {
             setError(txt.clipboard.unavailable);
             return;

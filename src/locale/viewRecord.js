@@ -3249,7 +3249,9 @@ export default {
             pubMedDocTypeLookup: 'rek_pubmed_doc_type_lookup',
             hasAffiliates: 'Valid author affiliation information has been added.',
             hasNoAffiliates: 'No linked authors.',
-            errorDetail: isOrphaned => ` has ${isOrphaned ? 'orphaned' : 'incomplete'} author affiliation information`,
+            buttonLabel: 'Edit Affiliations',
+            errorDetail: isOrgOrphaned =>
+                ` has ${isOrgOrphaned ? 'orphaned organisation' : 'incomplete author affiliation'} information`,
         },
         adminViewRecordDefaultContent: {
             index: {

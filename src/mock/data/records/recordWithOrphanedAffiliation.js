@@ -1019,7 +1019,7 @@ export default {
             "fez_author": {
                 "aut_id": 99999,
                 "aut_display_name": "One, Test"
-            }
+            },
         },
         {
             "af_id": 222720,

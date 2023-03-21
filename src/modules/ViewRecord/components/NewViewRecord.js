@@ -130,61 +130,6 @@ export const NewViewRecord = ({
         }
     };
 
-    // const findAAOrphanedErrors = record => {
-    //     const orphaned = [];
-    //     if (
-    //         record &&
-    //         record.fez_author_affiliation &&
-    //         record.fez_author_affiliation.length > 0 &&
-    //         record.fez_record_search_key_author_id &&
-    //         record.fez_record_search_key_author_id.length > 0
-    //     ) {
-    //         record.fez_author_affiliation.map(affil => {
-    //             const matched = record.fez_record_search_key_author_id.some(
-    //                 author => author && author.rek_author_id && author.rek_author_id === affil.af_author_id,
-    //             );
-    //             if (!matched) {
-    //                 orphaned.push(affil);
-    //             }
-    //         });
-    //         setAAOrphan(orphaned);
-    //     }
-    // };
-
-    // const findAATotalErrors = record => {
-    //     const Error = [];
-    //     if (record && record.fez_author_affiliation && record.fez_author_affiliation.length > 0) {
-    //         const Unique = [];
-    //         record.fez_author_affiliation.map(item => {
-    //             !Unique.some(e => e.author_id === item.af_author_id) &&
-    //                 Unique.push({
-    //                     author_id: item.af_author_id,
-    //                     author_name: item.fez_author?.aut_display_name || 'NA',
-    //                 });
-    //         });
-
-    //         Unique.forEach(author => {
-    //             let total = 0;
-    //             const tmp = record.fez_author_affiliation.filter(rec => rec.af_author_id === author.author_id);
-
-    //             tmp.forEach(tmp => {
-    //                 total += tmp.af_percent_affiliation;
-    //             });
-
-    //             if (total !== 100000) {
-    //                 Error.push({ total: total, author_id: author.author_id, author_name: author.author_name });
-    //             }
-    //             setAAError([...Error]);
-    //         });
-    //     }
-    // };
-
-    React.useEffect(() => {
-        // findAATotalErrors(recordToView);
-        // findAAOrphanedErrors(recordToView);
-        // recordToView && setAAProblems(composeAuthorAffiliationProblems(recordToView));
-    }, [recordToView]);
-
     const getAdminRecordButtonIcon = () => {
         let Component = null;
         const Problems = composeAuthorAffiliationProblems(recordToView);

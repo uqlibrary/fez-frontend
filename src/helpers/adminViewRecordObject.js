@@ -51,7 +51,7 @@ export const authorAffiliates = (key, content, history, pid, AAProblems) => {
                 id="admin-fix-affiliations-button"
                 data-testid="btnFixAffiliations"
             >
-                {'Edit  Affiliations'}
+                {config.viewRecord.adminViewRecordDrawerFields.buttonLabel}
             </Button>
         );
         return [...Problems, EditButton];

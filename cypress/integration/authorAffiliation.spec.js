@@ -8,7 +8,7 @@ context('Record with invalid affiliation', () => {
         cy.get('#adminViewRecordDrawerDesktop [data-testid="affil_error_99999"]').should('contain', 'One, Test');
         cy.get('#adminViewRecordDrawerDesktop [data-testid="affil_error_99999"]').should(
             'contain',
-            'orphaned author affiliation information',
+            'orphaned organisation information',
         );
     });
 
