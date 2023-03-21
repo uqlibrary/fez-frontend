@@ -1,6 +1,7 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
 import { EXISTING_RECORD_API, EXISTING_RECORD_HISTORY_API, EXISTING_RECORD_VERSION_API } from 'repositories/routes';
+import { DELETED, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
 
 /**
  * Load publication
@@ -13,6 +14,18 @@ export function loadRecordToView(pid, isEdit = false) {
 
         return get(EXISTING_RECORD_API({ pid: pid.replace('uq:', 'UQ:'), isEdit }))
             .then(response => {
+                // if it has been deleted and it's a data collection, handle it as a deleted record
+                // this is for cached api responses sitting on public S3 bucket
+                if (
+                    response.data.rek_status === DELETED &&
+                    response.data.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION
+                ) {
+                    const error = new Error();
+                    error.data = response.data;
+                    error.status = 410;
+                    throw error;
+                }
+
                 dispatch({
                     type: actions.VIEW_RECORD_LOADED,
                     payload: response.data,

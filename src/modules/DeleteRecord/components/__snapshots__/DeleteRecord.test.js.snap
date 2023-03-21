@@ -474,7 +474,20 @@ exports[`Component DeleteRecord componentDidUpdate() 1`] = `
           xs={12}
         >
           <StandardCard
-            title="Describe the reason to delete this work"
+            title={
+              <React.Fragment>
+                Describe the reason to delete this work
+                <div
+                  style={
+                    Object {
+                      "fontSize": "60%",
+                    }
+                  }
+                >
+                  (visible to admins only, displayed under record's history)
+                </div>
+              </React.Fragment>
+            }
           >
             <ForwardRef(Grid)
               container={true}
@@ -566,6 +579,11 @@ exports[`Component DeleteRecord componentDidUpdate() 1`] = `
       <ForwardRef(Grid)
         container={true}
         spacing={3}
+        style={
+          Object {
+            "marginTop": 8,
+          }
+        }
       >
         <ForwardRef(Grid)
           item={true}
@@ -1064,6 +1082,11 @@ exports[`Component DeleteRecord should display alert and disable delete button o
       <ForwardRef(Grid)
         container={true}
         spacing={3}
+        style={
+          Object {
+            "marginTop": 8,
+          }
+        }
       >
         <ForwardRef(Grid)
           item={true}
@@ -1563,6 +1586,11 @@ exports[`Component DeleteRecord should display alert and disable delete button o
       <ForwardRef(Grid)
         container={true}
         spacing={3}
+        style={
+          Object {
+            "marginTop": 8,
+          }
+        }
       >
         <ForwardRef(Grid)
           item={true}
@@ -1767,7 +1795,20 @@ exports[`Component DeleteRecord should display general alert if trying to delete
           xs={12}
         >
           <StandardCard
-            title="Describe the reason to delete this work"
+            title={
+              <React.Fragment>
+                Describe the reason to delete this work
+                <div
+                  style={
+                    Object {
+                      "fontSize": "60%",
+                    }
+                  }
+                >
+                  (visible to admins only, displayed under record's history)
+                </div>
+              </React.Fragment>
+            }
           >
             <ForwardRef(Grid)
               container={true}
@@ -1859,6 +1900,11 @@ exports[`Component DeleteRecord should display general alert if trying to delete
       <ForwardRef(Grid)
         container={true}
         spacing={3}
+        style={
+          Object {
+            "marginTop": 8,
+          }
+        }
       >
         <ForwardRef(Grid)
           item={true}
@@ -2371,7 +2417,20 @@ exports[`Component DeleteRecord should display general alert if trying to delete
           xs={12}
         >
           <StandardCard
-            title="Describe the reason to delete this work"
+            title={
+              <React.Fragment>
+                Describe the reason to delete this work
+                <div
+                  style={
+                    Object {
+                      "fontSize": "60%",
+                    }
+                  }
+                >
+                  (visible to admins only, displayed under record's history)
+                </div>
+              </React.Fragment>
+            }
           >
             <ForwardRef(Grid)
               container={true}
@@ -2463,6 +2522,11 @@ exports[`Component DeleteRecord should display general alert if trying to delete
       <ForwardRef(Grid)
         container={true}
         spacing={3}
+        style={
+          Object {
+            "marginTop": 8,
+          }
+        }
       >
         <ForwardRef(Grid)
           item={true}
@@ -2681,7 +2745,20 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
           xs={12}
         >
           <StandardCard
-            title="Describe the reason to delete this work"
+            title={
+              <React.Fragment>
+                Describe the reason to delete this work
+                <div
+                  style={
+                    Object {
+                      "fontSize": "60%",
+                    }
+                  }
+                >
+                  (visible to admins only, displayed under record's history)
+                </div>
+              </React.Fragment>
+            }
           >
             <ForwardRef(Grid)
               container={true}
@@ -2773,6 +2850,11 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
       <ForwardRef(Grid)
         container={true}
         spacing={3}
+        style={
+          Object {
+            "marginTop": 8,
+          }
+        }
       >
         <ForwardRef(Grid)
           item={true}
@@ -2976,7 +3058,20 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
           xs={12}
         >
           <StandardCard
-            title="Describe the reason to delete this work"
+            title={
+              <React.Fragment>
+                Describe the reason to delete this work
+                <div
+                  style={
+                    Object {
+                      "fontSize": "60%",
+                    }
+                  }
+                >
+                  (visible to admins only, displayed under record's history)
+                </div>
+              </React.Fragment>
+            }
           >
             <ForwardRef(Grid)
               container={true}
@@ -3068,6 +3163,11 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
       <ForwardRef(Grid)
         container={true}
         spacing={3}
+        style={
+          Object {
+            "marginTop": 8,
+          }
+        }
       >
         <ForwardRef(Grid)
           item={true}
@@ -3580,7 +3680,20 @@ exports[`Component DeleteRecord should render delete record form with record cit
           xs={12}
         >
           <StandardCard
-            title="Describe the reason to delete this work"
+            title={
+              <React.Fragment>
+                Describe the reason to delete this work
+                <div
+                  style={
+                    Object {
+                      "fontSize": "60%",
+                    }
+                  }
+                >
+                  (visible to admins only, displayed under record's history)
+                </div>
+              </React.Fragment>
+            }
           >
             <ForwardRef(Grid)
               container={true}
@@ -3654,6 +3767,11 @@ exports[`Component DeleteRecord should render delete record form with record cit
       <ForwardRef(Grid)
         container={true}
         spacing={3}
+        style={
+          Object {
+            "marginTop": 8,
+          }
+        }
       >
         <ForwardRef(Grid)
           item={true}

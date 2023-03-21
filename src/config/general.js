@@ -696,6 +696,7 @@ export const RETRACTED = 7;
 export const SUBMITTED_FOR_APPROVAL = 3;
 export const UNPUBLISHED = 1;
 export const PUBLISHED = 2;
+export const DELETED = 8;
 
 export const UNPUBLISHED_STATUS = [
     {
@@ -736,6 +737,7 @@ export const UNPUBLISHED_STATUS_MAP = {
     Retracted: RETRACTED,
     'Submitted for Approval': SUBMITTED_FOR_APPROVAL,
     Unpublished: UNPUBLISHED,
+    Deleted: DELETED,
 };
 
 export const UNPUBLISHED_STATUS_TEXT_MAP = {
@@ -746,6 +748,7 @@ export const UNPUBLISHED_STATUS_TEXT_MAP = {
     [RETRACTED]: 'Retracted',
     [SUBMITTED_FOR_APPROVAL]: 'Submitted for Approval',
     [UNPUBLISHED]: 'Unpublished',
+    [DELETED]: 'Deleted',
 };
 export const DATA_COLLECTION_CREATOR_ROLES = [
     {

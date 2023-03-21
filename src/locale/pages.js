@@ -564,7 +564,21 @@ export default {
             deletedAlert: {
                 type: 'info_outline',
                 title: '',
-                message: 'This work has been deleted.',
+                message: record =>
+                    record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION ? (
+                        <>
+                            This Data Collection has been deleted and substituted by{' '}
+                            <a
+                                href="https://doi.org/${record.fez_record_search_key_new_doi?.rek_new_doi}"
+                                target="_blank"
+                            >
+                                another version
+                            </a>
+                            .
+                        </>
+                    ) : (
+                        'This work has been deleted.'
+                    ),
                 alertId: 'alert-info',
             },
             notFound: {

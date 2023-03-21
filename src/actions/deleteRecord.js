@@ -70,11 +70,23 @@ export function clearDeleteRecord() {
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function deleteRecord(data) {
-    const reason = !!data.reason ? { reason: data.reason } : {};
+    const payload = {
+        ...(!!data.reason ? { reason: data.reason } : {}),
+        ...(!!data.fez_record_search_key_new_doi
+            ? { fez_record_search_key_new_doi: data.fez_record_search_key_new_doi }
+            : {}),
+        ...(!!data.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText
+            ? {
+                  fez_record_search_key_deletion_notes: {
+                      rek_deletion_notes: data.fez_record_search_key_deletion_notes.rek_deletion_notes.htmlText,
+                  },
+              }
+            : {}),
+    };
     return dispatch => {
         dispatch({ type: DELETE_RECORD_PROCESSING });
         return Promise.resolve([])
-            .then(() => destroy(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), reason))
+            .then(() => destroy(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), payload))
             .then(responses => {
                 dispatch({
                     type: DELETE_RECORD_SUCCESS,

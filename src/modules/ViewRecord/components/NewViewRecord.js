@@ -276,7 +276,7 @@ export const NewViewRecord = ({
                 )}
                 {isDeleted && (
                     <Grid item xs={12} style={{ marginBottom: 24 }}>
-                        <Alert {...txt.deletedAlert} />
+                        <Alert {...txt.deletedAlert} message={txt.deletedAlert.message(recordToView)} />
                     </Grid>
                 )}
                 {/* eslint-disable-next-line camelcase */}

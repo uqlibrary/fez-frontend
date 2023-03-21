@@ -3873,7 +3873,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
-                onClick={[MockFunction]}
                 style={
                   Object {
                     "whiteSpace": "nowrap",
@@ -4000,7 +3999,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
-                onClick={[MockFunction]}
                 style={
                   Object {
                     "whiteSpace": "nowrap",

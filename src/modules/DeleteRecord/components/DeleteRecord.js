@@ -18,11 +18,12 @@ import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/Navigation
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { pathConfig, validation } from 'config';
-import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { doesListContainItem } from 'helpers/general';
 
 import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
+import { RichEditorField } from '../../SharedComponents/RichEditor';
 
 export default class DeleteRecord extends PureComponent {
     static propTypes = {
@@ -63,11 +64,9 @@ export default class DeleteRecord extends PureComponent {
 
     _hasUQDOI = () => {
         return (
-            this.props.recordToDelete &&
-            this.props.recordToDelete.fez_record_search_key_doi &&
-            this.props.recordToDelete.fez_record_search_key_doi.rek_doi &&
-            (this.props.recordToDelete.fez_record_search_key_doi.rek_doi.startsWith(DOI_CROSSREF_PREFIX) ||
-                this.props.recordToDelete.fez_record_search_key_doi.rek_doi.startsWith(DOI_DATACITE_PREFIX))
+            this.props.recordToDelete?.rek_display_type !== PUBLICATION_TYPE_DATA_COLLECTION &&
+            (this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_CROSSREF_PREFIX) ||
+                this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_DATACITE_PREFIX))
         );
     };
 
@@ -130,7 +129,7 @@ export default class DeleteRecord extends PureComponent {
 
     render() {
         const txt = pagesLocale.pages.deleteRecord;
-        const txtDeleteForm = formsLocale.forms.deleteRecordForm;
+        const formTxt = formsLocale.forms.deleteRecordForm;
 
         if (this.props.accountAuthorLoading || this.props.loadingRecordToDelete) {
             return (
@@ -141,7 +140,7 @@ export default class DeleteRecord extends PureComponent {
         }
 
         const hasUQDOI = this._hasUQDOI();
-        const saveConfirmationLocale = { ...txtDeleteForm.successWorkflowConfirmation };
+        const saveConfirmationLocale = { ...formTxt.successWorkflowConfirmation };
 
         const errorResponse = this.props.error && JSON.parse(this.props.error);
         const errorAlertProps = this._getErrorAlertProps(
@@ -174,7 +173,7 @@ export default class DeleteRecord extends PureComponent {
                                 <React.Fragment>
                                     <NavigationDialogBox
                                         when={this.props.dirty && !this.props.submitSucceeded}
-                                        txt={txtDeleteForm.cancelWorkflowConfirmation}
+                                        txt={formTxt.cancelWorkflowConfirmation}
                                     />
                                     <ConfirmDialogBox
                                         onRef={this._setSuccessConfirmation}
@@ -183,7 +182,7 @@ export default class DeleteRecord extends PureComponent {
                                         locale={saveConfirmationLocale}
                                     />
                                     <Grid item xs={12}>
-                                        <StandardCard title={txtDeleteForm.reason.title}>
+                                        <StandardCard title={formTxt.reason.title}>
                                             <Grid container spacing={2}>
                                                 <Grid item xs={12}>
                                                     <Field
@@ -195,12 +194,54 @@ export default class DeleteRecord extends PureComponent {
                                                         fullWidth
                                                         multiline
                                                         rows={3}
-                                                        label={txtDeleteForm.reason.fieldLabels.reason}
+                                                        label={formTxt.reason.label}
                                                     />
                                                 </Grid>
                                             </Grid>
                                         </StandardCard>
                                     </Grid>
+                                    {this.props.recordToDelete?.rek_display_type ===
+                                        PUBLICATION_TYPE_DATA_COLLECTION && (
+                                        <>
+                                            <Grid item xs={12}>
+                                                <StandardCard title={formTxt.newDoi.title}>
+                                                    <Grid container spacing={2}>
+                                                        <Grid item xs={12}>
+                                                            <Field
+                                                                component={TextField}
+                                                                disabled={this.props.submitting}
+                                                                name="fez_record_search_key_new_doi.rek_new_doi"
+                                                                textFieldId="rek-new-doi"
+                                                                type="text"
+                                                                fullWidth
+                                                                validate={[validation.doi]}
+                                                                label={formTxt.newDoi.label}
+                                                                placeholder={formTxt.newDoi.placeholder}
+                                                            />
+                                                        </Grid>
+                                                    </Grid>
+                                                </StandardCard>
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <StandardCard title={formTxt.notes.title}>
+                                                    <Grid container spacing={2}>
+                                                        <Grid item xs={12}>
+                                                            <Field
+                                                                component={RichEditorField}
+                                                                name="fez_record_search_key_deletion_notes.rek_deletion_notes"
+                                                                textFieldId="rek-deletion-notes-text"
+                                                                richEditorId="rek-deletion-notes"
+                                                                disabled={this.props.submitting}
+                                                                fullWidth
+                                                                multiline
+                                                                rows={5}
+                                                            />
+                                                        </Grid>
+                                                    </Grid>
+                                                </StandardCard>
+                                            </Grid>
+                                        </>
+                                    )}
                                 </React.Fragment>
                             )}
                             {alertProps && (
@@ -210,13 +251,11 @@ export default class DeleteRecord extends PureComponent {
                             )}
                             {hasUQDOI && (
                                 <Grid item xs={12}>
-                                    <Alert
-                                        message={txtDeleteForm.uqDoiAlert.message(this.props.recordToDelete.rek_pid)}
-                                    />
+                                    <Alert message={formTxt.uqDoiAlert.message(this.props.recordToDelete.rek_pid)} />
                                 </Grid>
                             )}
                         </Grid>
-                        <Grid container spacing={3}>
+                        <Grid container spacing={3} style={{ marginTop: 8 }}>
                             <Grid item xs />
                             <Grid item>
                                 <Button

@@ -269,10 +269,34 @@ export default {
         },
         deleteRecordForm: {
             reason: {
-                title: 'Describe the reason to delete this work',
-                fieldLabels: {
-                    reason: 'Please enter a reason why you are deleting this work',
-                },
+                title: (
+                    <>
+                        Describe the reason to delete this work
+                        <div style={{ fontSize: '60%' }}>
+                            (visible to admins only, displayed under record's history)
+                        </div>
+                    </>
+                ),
+                label: 'Please enter a reason why you are deleting this work',
+            },
+            newDoi: {
+                title: (
+                    <>
+                        New DOI
+                        <div style={{ fontSize: '60%' }}>(displayed on the records deleted page)</div>
+                    </>
+                ),
+                label: 'Please enter the DOI which the record moved to',
+                placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
+            },
+            notes: {
+                title: (
+                    <>
+                        Deletion Notes
+                        <div style={{ fontSize: '60%' }}>(displayed on the records deleted page)</div>
+                    </>
+                ),
+                label: 'Please enter a reason why you are deleting this work',
             },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Cancel delete',
@@ -289,6 +313,11 @@ export default {
             uqDoiAlert: {
                 message: pid =>
                     `This pid ${pid} cannot be deleted because it has a UQ DOI attached. Remove the DOI from this work first before deleting. If this work is the original source of the DOI, it must also be be de-activated on Crossref.`,
+            },
+            validationAlert: {
+                type: 'warning',
+                title: 'Validation',
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
             },
             errorAlert: {
                 type: 'error_outline',
