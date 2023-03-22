@@ -398,8 +398,8 @@
         "coverageDirectory": "coverage/jest",
         "coverageReporters": [
             "cobertura",
-            "json",
-            "text"
+            "html",
+            "json"
         ],
         "modulePaths": [
             "<rootDir>/src",

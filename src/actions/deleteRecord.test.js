@@ -141,6 +141,59 @@ describe('Delete record actions', () => {
             }
         });
 
+        it('dispatches expected actions for successful delete a record with reason and new doi', async () => {
+            const testInput = {
+                publication: {
+                    ...mockData.mockRecordToDelete,
+                    fez_record_search_key_new_doi: {
+                        rek_new_doi: '10.1234/abcd',
+                    },
+                },
+                reason: 'reason',
+            };
+
+            const expectedActions = [actions.DELETE_RECORD_PROCESSING, actions.DELETE_RECORD_SUCCESS];
+
+            mockApi
+                .onDelete(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
+                .reply(200, { data: 'Record deleted' });
+
+            try {
+                await mockActionsStore.dispatch(deleteRecordActions.deleteRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions for successful delete a record with reason, new doi and deletion notes', async () => {
+            const testInput = {
+                publication: {
+                    ...mockData.mockRecordToDelete,
+                    fez_record_search_key_new_doi: {
+                        rek_new_doi: '10.1234/abcd',
+                    },
+                    fez_record_search_key_deletion_notes: {
+                        rek_deletion_notes: 'notes',
+                    },
+                },
+                reason: 'reason',
+            };
+
+            const expectedActions = [actions.DELETE_RECORD_PROCESSING, actions.DELETE_RECORD_SUCCESS];
+
+            mockApi
+                .onDelete(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
+                .reply(200, { data: 'Record deleted' });
+
+            try {
+                await mockActionsStore.dispatch(deleteRecordActions.deleteRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
         it('dispatches expected actions for record delete with API returning error', async () => {
             const testInput = {
                 publication: {
