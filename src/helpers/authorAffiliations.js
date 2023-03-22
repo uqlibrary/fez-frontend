@@ -8,8 +8,7 @@ export const composeAuthorAffiliationProblems = record => {
     );
 
     return record.fez_record_search_key_author_id
-        .filter(author => author.rek_author_id !== 0)
-        .map(author => {
+        .map((author, index) => {
             const hasAffiliations = uniqueAffiliations.includes(author.rek_author_id);
             const hasOrgAffiliations =
                 hasAffiliations &&
@@ -18,7 +17,10 @@ export const composeAuthorAffiliationProblems = record => {
                     ?.every(item => !!item.fez_org_structure);
             return {
                 rek_author_id: author.rek_author_id,
-                rek_author_id_lookup: author.rek_author_id_lookup ?? '',
+                rek_author:
+                    record.fez_record_search_key_author[index]?.rek_author ??
+                    author.rek_author_id_lookup ??
+                    'Unknown Author',
                 hasOrgAffiliations,
                 has100pcAffiliations:
                     hasAffiliations &&
@@ -27,5 +29,5 @@ export const composeAuthorAffiliationProblems = record => {
                         .reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= MAX_TOTAL,
             };
         })
-        .filter(item => !item.hasOrgAffiliations || !item.has100pcAffiliations);
+        .filter(item => item.rek_author_id !== 0 && (!item.hasOrgAffiliations || !item.has100pcAffiliations));
 };
