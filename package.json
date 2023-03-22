@@ -384,7 +384,6 @@
         "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
-            "!src/**/*.test.{js,jsx}",
             "!src/modules/App/components/pages.js",
             "!src/**/{index,locale,config}.js",
             "!src/**/containers/*.{js,jsx}",

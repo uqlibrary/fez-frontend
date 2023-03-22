@@ -174,7 +174,9 @@ describe('Delete record actions', () => {
                         rek_new_doi: '10.1234/abcd',
                     },
                     fez_record_search_key_deletion_notes: {
-                        rek_deletion_notes: 'notes',
+                        rek_deletion_notes: {
+                            htmlText: 'notes',
+                        },
                     },
                 },
                 reason: 'reason',

@@ -3604,7 +3604,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                   "rek_depositor_xsdmf_id": null,
                   "rek_description": null,
                   "rek_description_xsdmf_id": null,
-                  "rek_display_type": 179,
+                  "rek_display_type": 371,
                   "rek_display_type_lookup": "Journal Article",
                   "rek_display_type_xsdmf_id": null,
                   "rek_file_downloads": 0,
@@ -3758,6 +3758,141 @@ exports[`Component DeleteRecord should render delete record form with record cit
                   rows={3}
                   textFieldId="reason"
                   type="text"
+                />
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </StandardCard>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title={
+              <React.Fragment>
+                New DOI
+                <div
+                  style={
+                    Object {
+                      "fontSize": "60%",
+                    }
+                  }
+                >
+                  (displayed on the records deleted page)
+                </div>
+              </React.Fragment>
+            }
+          >
+            <ForwardRef(Grid)
+              container={true}
+              spacing={2}
+            >
+              <ForwardRef(Grid)
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
+                        "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
+                        "help": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
+                        "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
+                  disabled={false}
+                  fullWidth={true}
+                  label="Please enter the DOI which the record moved to"
+                  name="publication.fez_record_search_key_new_doi.rek_new_doi"
+                  placeholder="Enter a valid DOI (e.g. 10.123/456)"
+                  textFieldId="rek-new-doi"
+                  type="text"
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </StandardCard>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title={
+              <React.Fragment>
+                Deletion Notes
+                <div
+                  style={
+                    Object {
+                      "fontSize": "60%",
+                    }
+                  }
+                >
+                  (displayed on the records deleted page)
+                </div>
+              </React.Fragment>
+            }
+          >
+            <ForwardRef(Grid)
+              container={true}
+              spacing={2}
+            >
+              <ForwardRef(Grid)
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  fullWidth={true}
+                  maxValue={2000}
+                  multiline={true}
+                  name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
+                  richEditorId="rek-deletion-notes"
+                  rows={5}
+                  textFieldId="rek-deletion-notes-text"
                 />
               </ForwardRef(Grid)>
             </ForwardRef(Grid)>

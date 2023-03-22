@@ -2,7 +2,7 @@ import DeleteRecord from './DeleteRecord';
 import { mockRecordToDelete } from 'mock/data/testing/records';
 import { communityRecord, collectionRecord } from 'mock/data/testing/communityCollection';
 import Immutable from 'immutable';
-import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 
 function setup(testProps) {
     const props = {
@@ -60,9 +60,11 @@ describe('Component DeleteRecord', () => {
     });
 
     it('should render delete record form with record citation', () => {
-        const wrapper = setup({ recordToDelete: mockRecordToDelete });
+        const wrapper = setup({
+            recordToDelete: { ...mockRecordToDelete, rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(1);
+        expect(wrapper.find('Field').length).toEqual(3);
     });
 
     it('should display alert and disable delete button on records with Crossref UQ DOIs', () => {
