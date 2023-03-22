@@ -26,5 +26,6 @@ export const composeAuthorAffiliationProblems = record => {
                         .filter(item => item.af_author_id === author.rek_author_id)
                         .reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= MAX_TOTAL,
             };
-        });
+        })
+        .filter(item => !item.hasOrgAffiliations || !item.has100pcAffiliations);
 };

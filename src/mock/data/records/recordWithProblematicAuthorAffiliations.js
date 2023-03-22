@@ -105,7 +105,7 @@ const recordWithProblematicAuthorAffiliations = {
         {
             "rek_author_id": 35420313,
             "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Robertson, Avril A. B.",
+            "rek_author": "Robertson, Avril A. B. not 100%",
             "rek_author_order": 7
         },
         {
@@ -115,10 +115,22 @@ const recordWithProblematicAuthorAffiliations = {
             "rek_author_order": 8
         },
         {
+            "rek_author_id": 35420316,
+            "rek_author_pid": "UQ:871c1f8",
+            "rek_author": "Lancaster, Steve No Org",
+            ",rek_author_order": 10
+        },
+        {
             "rek_author_id": 35420315,
             "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Sibbald, Lee",
+            "rek_author": "Sibbald, Lee No Affil",
             "rek_author_order": 9
+        },
+        {
+            "rek_author_id": 35420317,
+            "rek_author_pid": "UQ:871c1f8",
+            "rek_author": "Good, All No Issues",
+            "rek_author_order": 11
         }
     ],
     "fez_record_search_key_author_id": [
