@@ -7,23 +7,24 @@ export const composeAuthorAffiliationProblems = record => {
         [],
     );
 
-    // get list of authors that have an ID that isn't zero
-    const authors = record.fez_record_search_key_author_id?.filter(author => author.rek_author_id !== 0);
-
-    return uniqueAffiliations
-        .map(authorId => {
-            const isOrphaned = authors.every(item => item.rek_author_id !== authorId);
-            const matchingAuthor = record.fez_author_affiliation.find(item => item.af_author_id === authorId);
+    return record.fez_record_search_key_author_id
+        .filter(author => author.rek_author_id !== 0)
+        .map(author => {
+            const hasAffiliations = uniqueAffiliations.includes(author.rek_author_id);
+            const hasOrgAffiliations =
+                hasAffiliations &&
+                record.fez_author_affiliation
+                    ?.filter(item => item.af_author_id === author.rek_author_id)
+                    ?.every(item => !!item.fez_org_structure);
             return {
-                rek_author_id: matchingAuthor.af_author_id,
-                aut_display_name: matchingAuthor.fez_author.aut_display_name,
-                isOrphaned: isOrphaned,
-                isIncomplete: !isOrphaned
-                    ? record.fez_author_affiliation
-                          .filter(item => item.af_author_id === authorId)
-                          .reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) < MAX_TOTAL
-                    : false,
+                rek_author_id: author.rek_author_id,
+                rek_author_id_lookup: author.rek_author_id_lookup ?? '',
+                hasOrgAffiliations,
+                has100pcAffiliations:
+                    hasAffiliations &&
+                    record.fez_author_affiliation
+                        .filter(item => item.af_author_id === author.rek_author_id)
+                        .reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= MAX_TOTAL,
             };
-        })
-        .filter(author => author.isOrphaned || author.isIncomplete);
+        });
 };

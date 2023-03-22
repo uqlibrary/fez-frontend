@@ -176,7 +176,7 @@ const recordWithProblematicAuthorAffiliations = {
                 "aut_org_username": "uqarob15",
                 "aut_student_username": null
             },
-            "rek_author_id_lookup": "Robertson, Avril A. B."
+            "rek_author_id_lookup": "Robertson, Avril A. B. Not 100%"
         },
         {
             "rek_author_id_id": 35608152,
@@ -197,8 +197,37 @@ const recordWithProblematicAuthorAffiliations = {
                 "aut_org_username": "uqslanca",
                 "aut_student_username": null
             },
-            "rek_author_id_lookup": "Lancaster, Steve"
-        }
+            "rek_author_id_lookup": "Lancaster, Steve No Org",
+        },
+        {
+            "rek_author_id_id": 35608153,
+            "rek_author_id_pid": "UQ:871c1f8",
+            "rek_author_id": 7624829,
+            "rek_author_id_order": 9,
+            "author": {
+                "aut_id": 7624829,
+                "aut_orcid_id": null,
+                "aut_title": "Mr",
+                "aut_org_username": "uqlsibba",
+                "aut_student_username": null
+            },
+            "rek_author_id_lookup": "Sibbald, Lee No Affil",
+        },
+        {
+            "rek_author_id_id": 35608153,
+            "rek_author_id_pid": "UQ:871c1f8",
+            "rek_author_id": 7624000,
+            "rek_author_id_order": 9,
+            "author": {
+                "aut_id": 7624000,
+                "aut_orcid_id": null,
+                "aut_title": "Mr",
+                "aut_org_username": "uqallgood",
+                "aut_student_username": null
+            },
+            "rek_author_id_lookup": "Good, All No Issues",
+        },
+
     ],
     "fez_record_search_key_author_crossref_authenticated": [],
     "fez_record_search_key_author_crossref_orcid": [],
@@ -677,7 +706,7 @@ const recordWithProblematicAuthorAffiliations = {
                     "org_id": 881,
                     "org_title": "School of Chemistry and Molecular Biosciences"
                 }
-            ]
+            ],
         },
         {
             "af_id": 478895,
@@ -700,13 +729,13 @@ const recordWithProblematicAuthorAffiliations = {
         {
             "af_id": 478896,
             "af_pid": "UQ:871c1f8",
-            "af_author_id": 7624847,
+            "af_author_id": 7624000,
             "af_percent_affiliation": 100000,
             "af_org_id": 1248,
             "af_status": 1,
             "fez_author": {
-                "aut_id": 7624847,
-                "aut_display_name": "Sibbald, Lee"
+                "aut_id": 7624000,
+                "aut_display_name": "Good, All"
             },
             "fez_org_structure": [
                 {
@@ -714,6 +743,15 @@ const recordWithProblematicAuthorAffiliations = {
                     "org_title": "Information Systems and Resource Services (University of Queensland Library)"
                 }
             ]
+        },
+        {
+            "af_author_id": 7624839,
+            "af_id": 16851,
+            "af_org_id": 828,
+            "af_percent_affiliation": 100000,
+            "af_pid": "UQ:130003",
+            "af_status": 1,
+            "fez_author": {"aut_id": 7624839, "aut_display_name": "Lancaster, Steve."}
         }
     ],
     "fez_record_search_key_audience_size": null,
