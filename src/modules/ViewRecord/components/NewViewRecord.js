@@ -132,7 +132,7 @@ export const NewViewRecord = ({
 
     const getAdminRecordButtonIcon = () => {
         let Component = null;
-        const Problems = composeAuthorAffiliationProblems(recordToView);
+        const Problems = (recordToView && composeAuthorAffiliationProblems(recordToView)) || [];
         if (recordToView?.fez_internal_notes?.ain_detail) {
             Component =
                 Problems.length > 0 ? (

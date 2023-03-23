@@ -3250,8 +3250,8 @@ export default {
             hasAffiliates: 'Valid author affiliation information has been added.',
             hasNoAffiliates: 'No linked authors.',
             buttonLabel: 'Edit Affiliations',
-            errorDetail: isOrgOrphaned =>
-                ` has ${isOrgOrphaned ? 'orphaned organisation' : 'incomplete author affiliation'} information`,
+            errorDetail: is100Affil =>
+                ` has ${!is100Affil ? 'incomplete author affiliation' : 'orphaned organisation'} information`,
         },
         adminViewRecordDefaultContent: {
             index: {

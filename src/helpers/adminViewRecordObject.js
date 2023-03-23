@@ -35,10 +35,10 @@ export const authorAffiliates = (key, content, history, pid, AAProblems) => {
                     key={`affil_error_${item.rek_author_id}`}
                     id={`affil_error_${item.rek_author_id}`}
                     data-testid={`affil_error_${item.rek_author_id}`}
-                    aria-label={`Afffiliation error for ${item.aut_display_name}`}
+                    aria-label={`Afffiliation error for ${item.rek_author}`}
                 >
-                    <b>{item.aut_display_name}</b>{' '}
-                    {config.viewRecord.adminViewRecordDrawerFields.errorDetail(item.isOrphaned)}
+                    <b>{item.rek_author}</b>{' '}
+                    {config.viewRecord.adminViewRecordDrawerFields.errorDetail(item.has100pcAffiliations)}
                 </Typography>
             ));
 

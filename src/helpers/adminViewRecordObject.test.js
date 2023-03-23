@@ -73,8 +73,8 @@ describe('Author Affiliations', () => {
             {
                 rek_author_id: 7624839,
                 aut_display_name: 'Lancaster, Steve',
-                isOrphaned: false,
-                isIncomplete: true,
+                hasOrgAffiliations: true,
+                has100pcAffiliations: false,
             },
         ];
         const CONTENT = {
@@ -83,7 +83,7 @@ describe('Author Affiliations', () => {
                     af_id: 478908,
                     af_pid: 'UQ:764e150',
                     af_author_id: 7624839,
-                    af_percent_affiliation: 100000,
+                    af_percent_affiliation: 90000,
                     af_org_id: 1248,
                     af_status: 1,
                     fez_author: {
@@ -122,14 +122,14 @@ describe('Author Affiliations', () => {
         expect(result).toMatchSnapshot();
     });
 
-    it('should calculate affiliations correctly for orphaned affiliation', () => {
+    it('should calculate affiliations correctly for orphaned org affiliation', () => {
         const KEY = 'fez_author_affiliation';
         const PROBLEMS = [
             {
                 rek_author_id: 7624839,
                 aut_display_name: 'Lancaster, Steve',
-                isOrphaned: true,
-                isIncomplete: false,
+                hasOrgAffiliations: false,
+                has100pcAffiliations: true,
             },
         ];
         const CONTENT = {
@@ -145,12 +145,6 @@ describe('Author Affiliations', () => {
                         aut_id: 7624839,
                         aut_display_name: 'Lancaster, Steve',
                     },
-                    fez_org_structure: [
-                        {
-                            org_id: 1248,
-                            org_title: 'Information Systems and Resource Services (University of Queensland Library)',
-                        },
-                    ],
                 },
                 {
                     af_id: 478907,
