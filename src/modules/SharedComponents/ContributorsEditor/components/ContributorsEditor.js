@@ -324,6 +324,7 @@ export class ContributorsEditor extends PureComponent {
                     locale={this.props.locale}
                     isNtro={isNtro}
                     problematicAffiliations={authorAffiliationProblems}
+                    authorAffiliations={this.props.record?.fez_author_affiliation ?? []}
                 />
             );
         }

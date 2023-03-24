@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
 import { useTheme } from '@mui/material/styles';
@@ -26,6 +26,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
+import { Button } from '@mui/material';
 
 export const useStyles = makeStyles(theme => ({
     linked: {
@@ -76,10 +77,14 @@ export const getColumns = ({
     showRoleInput,
     locale,
     isNtro,
-    affiliationProblems,
+    problematicAffiliations,
 }) => {
     const hasAffiliateProblem = rowData =>
-        affiliationProblems.some(affiliate => affiliate.rek_author_id === rowData.aut_id);
+        problematicAffiliations.filter(
+            affiliate =>
+                affiliate.rek_author_id === rowData.aut_id &&
+                (affiliate.hasOrgAffiliations === false || affiliate.has100pcAffiliations === false),
+        ).length > 0;
 
     const linkedClass = rowData =>
         // eslint-disable-next-line no-nested-ternary
@@ -94,6 +99,32 @@ export const getColumns = ({
         },
     } = locale;
 
+    /*
+
+    rowData = {
+        affiliation: "UQ"
+        aut_display_name: "Lancaster, Steve"
+        aut_id: 7624839
+        aut_org_username: "uqslanca"
+        aut_student_username: ""
+        creatorRole: ""
+        id: 8
+        nameAsPublished: "Sibbald, Lee"
+        orgaff: "The University of Queensland"
+        orgtype: "453989"
+        tableData: {index: 8, id: 8, uuid: "8aac7ff7-2d8b-48ad-94a7-f3b9f8a9288e"}
+        uqIdentifier: "7624839"
+        uqUsername: "uqslanca"
+    }
+
+    affiliationProblems = {
+        aut_display_name: "Sibbald, Lee"
+        isIncomplete: false
+        isOrphaned: true
+        rek_author_id: 7624847
+    }
+
+    */
     return [
         {
             title: (
@@ -379,23 +410,62 @@ export const getColumns = ({
     ];
 };
 
-/* istanbul ignore next */
-export const AuthorDetail = rowData => {
+const AuthorDetailRow = ({ rowData, problematicAffiliations, authorAffiliations, isEditing, setEditing }) => {
+    console.log('authordetail', rowData, problematicAffiliations, authorAffiliations);
+    const affiliations = authorAffiliations.filter(item => item.af_author_id === rowData.aut_id);
+    console.log(affiliations);
+    // affiliations.map((item, index) => (
+    //    <div key={index}>{item.fez_org_structure?.[0].org_title ?? 'none'}</div>
+    //    ))
+    // HERE flesh this bit out
+
     return (
-        <Grid container item xs={12} style={{ padding: 16 }}>
-            <Grid item xs={2}>
-                <Typography variant="subtitle2">{'Organisation affiliation'}</Typography>
-            </Grid>
-            <Grid item xs={10}>
-                <Typography variant="body2">{rowData.orgaff}</Typography>
-            </Grid>
-            <Grid item xs={2}>
-                <Typography variant="subtitle2">{'Organisation type'}</Typography>
-            </Grid>
-            <Grid item xs={10}>
-                <Typography variant="body2">{rowData.orgtype}</Typography>
-            </Grid>
-        </Grid>
+        <>
+            {!isEditing && (
+                <Grid container item xs={12} style={{ padding: 16 }}>
+                    <Grid item xs={2}>
+                        <Typography variant="subtitle2">{'Organisation affiliation'}</Typography>
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Typography variant="body2">{rowData.orgaff}</Typography>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Typography variant="subtitle2">{'Organisation type'}</Typography>
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Typography variant="body2">{rowData.orgtype}</Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Button onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}>
+                            Edit
+                        </Button>
+                    </Grid>
+                </Grid>
+            )}
+            {isEditing && (
+                <Grid container item xs={12} style={{ padding: 16 }}>
+                    Editing innit
+                    <Grid item xs={12}>
+                        <Button onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}>
+                            Edit
+                        </Button>
+                    </Grid>
+                </Grid>
+            )}
+        </>
+    );
+};
+
+/* istanbul ignore next */
+export const AuthorDetail = (rowData, problematicAffiliations, authorAffiliations, isEditing, setEditing) => {
+    return (
+        <AuthorDetailRow
+            rowData={rowData}
+            problematicAffiliations={problematicAffiliations}
+            authorAffiliations={authorAffiliations}
+            isEditing={isEditing}
+            setEditing={setEditing}
+        />
     );
 };
 
@@ -408,7 +478,25 @@ export const AuthorsList = ({
     onChange,
     showRoleInput,
     problematicAffiliations,
+    authorAffiliations,
 }) => {
+    console.log('list', list);
+    console.log('authorAffiliations', authorAffiliations);
+    const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
+
+    // eslint-disable-next-line camelcase
+    const setEditing = ({ editing, aut_id }) => {
+        console.log('setEditing', editing, aut_id);
+        setIsEditing({ editing, aut_id });
+    };
+
+    // eslint-disable-next-line camelcase
+    const isEditing = aut_id => {
+        console.log('isEditing', aut_id, editState);
+        // eslint-disable-next-line camelcase
+        return editState.editing && editState.aut_id === aut_id;
+    };
+
     const {
         row: {
             locale: {
@@ -429,10 +517,9 @@ export const AuthorsList = ({
     const classes = useStyles();
     const theme = useTheme();
     const materialTableRef = React.createRef();
+    // const columns = React.useMemo(
+    //    () =>
     const columns = React.createRef();
-
-    const affiliationProblems = React.createRef();
-    affiliationProblems.current = problematicAffiliations;
     columns.current = getColumns({
         disabled,
         suffix,
@@ -441,8 +528,12 @@ export const AuthorsList = ({
         locale,
         isNtro,
         contributorEditorId,
-        affiliationProblems: affiliationProblems.current,
+        problematicAffiliations,
+        authorAffiliations,
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    //    [editState.editing],
+    // );
 
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
@@ -551,6 +642,7 @@ export const AuthorsList = ({
                     tooltip: moveUpHint,
                     disabled:
                         disabled ||
+                        editState.editing ||
                         (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
                         rowData.tableData.id === 0,
                     onClick: () => {
@@ -572,7 +664,8 @@ export const AuthorsList = ({
                         });
 
                         setData(newIndexedList);
-                        // onChange(newList);
+                        console.log('newIndexedList', newIndexedList);
+                        onChange(newIndexedList);
                     },
                 }),
                 rowData => ({
@@ -582,7 +675,7 @@ export const AuthorsList = ({
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
                     },
                     tooltip: `${moveDownHint}-${rowData.tableData.id}`,
-                    disabled: disabled || rowData.tableData.id === data.length - 1,
+                    disabled: disabled || editState.editing || rowData.tableData.id === data.length - 1,
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = data[index + 1];
@@ -600,8 +693,6 @@ export const AuthorsList = ({
                         });
 
                         setData(newIndexedList);
-                        // setData(newList);
-                        // onChange(newList);
                     },
                 }),
                 rowData => ({
@@ -610,7 +701,7 @@ export const AuthorsList = ({
                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
                     },
-                    disabled: disabled,
+                    disabled: editState.editing || disabled,
                     tooltip: editHint,
                     onClick: () => {
                         const materialTable = materialTableRef.current;
@@ -626,7 +717,7 @@ export const AuthorsList = ({
                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
                     },
-                    disabled: disabled,
+                    disabled: editState.editing || disabled,
                     tooltip: deleteHint,
                     onClick: () => {
                         const materialTable = materialTableRef.current;
@@ -644,6 +735,7 @@ export const AuthorsList = ({
                     },
                     isFreeAction: true,
                     tooltip: addButton,
+                    disabled: editState.editing || disabled,
                     onClick: () => {
                         const materialTable = materialTableRef.current;
                         materialTable.dataManager.changeRowEditing();
@@ -660,7 +752,7 @@ export const AuthorsList = ({
             detailPanel={[
                 rowData => {
                     const conditionalIcon =
-                        rowData.uqUsername === '' || isNtro
+                        rowData.uqUsername === '' || isNtro || editState.editing
                             ? {
                                   icon: () => {
                                       return null;
@@ -671,7 +763,15 @@ export const AuthorsList = ({
                     return {
                         ...conditionalIcon,
                         render: () => {
-                            return rowData.uqUsername === '' || isNtro ? null : AuthorDetail(rowData);
+                            return rowData.uqUsername === '' || isNtro
+                                ? null
+                                : AuthorDetail(
+                                      rowData,
+                                      problematicAffiliations,
+                                      authorAffiliations,
+                                      isEditing(rowData.aut_id),
+                                      setEditing,
+                                  );
                         },
                     };
                 },
@@ -714,6 +814,7 @@ AuthorsList.propTypes = {
     list: PropTypes.array,
     locale: PropTypes.object,
     problematicAffiliations: PropTypes.array,
+    authorAffiliations: PropTypes.array,
     onChange: PropTypes.func,
     showRoleInput: PropTypes.bool,
 };
