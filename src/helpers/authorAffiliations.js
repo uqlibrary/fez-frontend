@@ -2,14 +2,15 @@ export const TOTAL = 100;
 export const PRECISION = 1000;
 export const MAX_TOTAL = TOTAL * PRECISION;
 
-export const hasValidOrgAffiliations = (author, affiliations) =>
-    affiliations?.filter(item => item.af_author_id === author.rek_author_id)?.every(item => !!item.fez_org_structure) ??
-    false;
+export const hasValidOrgAffiliations = (author, affiliations) => {
+    const filteredAffiliations = affiliations?.filter(item => item.af_author_id === author.rek_author_id);
+    return filteredAffiliations.length > 0 && filteredAffiliations.every(item => !!item.fez_org_structure);
+};
 
 export const has100pcAffiliations = (author, affiliations, total = MAX_TOTAL) =>
     affiliations
         ?.filter(item => item.af_author_id === author.rek_author_id)
-        .reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= total ?? false;
+        .reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= total;
 
 export const getUniqueAffiliations = affiliations =>
     affiliations?.reduce(
