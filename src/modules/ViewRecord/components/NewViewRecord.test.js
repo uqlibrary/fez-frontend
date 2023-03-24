@@ -5,6 +5,7 @@ import * as ViewRecordActions from 'actions/viewRecord';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
+import { recordWithNoAffiliationIssues } from 'mock/data/records';
 import { accounts, currentAuthor } from 'mock/data/account';
 import { useParams } from 'react-router';
 import { recordVersionLegacy } from '../../../mock/data';
@@ -91,6 +92,21 @@ describe('NewViewRecord', () => {
         // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);
         const { getByTestId } = setup({ recordToView: record });
+        expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+
+    it('should render default view with admin menu when no AA issues exist', () => {
+        // Checked OK
+        userIsAdmin.mockImplementationOnce(() => true);
+        const { getByTestId } = setup({ recordToView: recordWithNoAffiliationIssues });
+        expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+    it('should render internal notes view with admin menu when no AA issues exist', () => {
+        // Checked OK
+        userIsAdmin.mockImplementationOnce(() => true);
+        const { getByTestId } = setup({
+            recordToView: { ...recordWithNoAffiliationIssues, fez_internal_notes: { ain_detail: 'test' } },
+        });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 

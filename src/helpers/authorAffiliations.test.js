@@ -1,4 +1,4 @@
-import { composeAuthorAffiliationProblems } from './authorAffiliations';
+import { composeAuthorAffiliationProblems, hasValidOrgAffiliations, has100pcAffiliations } from './authorAffiliations';
 
 const validRecord = {
     fez_author_affiliation: [
@@ -229,6 +229,28 @@ const oprhanError = {
 };
 
 describe('Compose Author Affiliation Problems', () => {
+    it('will have no valid affiliations for empty', () => {
+        const Response = hasValidOrgAffiliations([{}], [{}]);
+        expect(Response).toEqual(false);
+    });
+    it('will have no valid affiliations for no org affil', () => {
+        const Response = hasValidOrgAffiliations({ rek_author_id: 1 }, [{ af_author_id: 1 }]);
+        expect(Response).toEqual(false);
+    });
+    it('will have no valid calculation for empty', () => {
+        const Response = has100pcAffiliations([{}], [{}]);
+        expect(Response).toEqual(false);
+    });
+    it('will return false based on possible false scenarios', () => {
+        let Response = has100pcAffiliations({ rek_author_id: 1 }, [{ af_author_id: 1, af_percent_affiliation: 99999 }]);
+        expect(Response).toEqual(false);
+        Response = has100pcAffiliations({ rek_author_id: 1 }, [{ af_author_id: 1 }]);
+        expect(Response).toEqual(false);
+        Response = has100pcAffiliations(null, null, null);
+        expect(Response).toEqual(false);
+        Response = has100pcAffiliations({}, [{ af_author_id: 1 }]);
+        expect(Response).toEqual(false);
+    });
     it('Will calculate a valid record', () => {
         const Response = composeAuthorAffiliationProblems(validRecord);
         const Expected = [];
