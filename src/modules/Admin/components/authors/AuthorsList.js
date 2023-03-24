@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
 import { numberToWords } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Edit from '@mui/icons-material/Edit';
 import People from '@mui/icons-material/People';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';
@@ -26,7 +26,12 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
-import { Button } from '@mui/material';
+import { Autocomplete, Button } from '@mui/material';
+import Chip from '@mui/material/Chip';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import { PRECISION } from 'helpers/authorAffiliations';
 
 export const useStyles = makeStyles(theme => ({
     linked: {
@@ -411,48 +416,83 @@ export const getColumns = ({
 };
 
 const AuthorDetailRow = ({ rowData, problematicAffiliations, authorAffiliations, isEditing, setEditing }) => {
-    console.log('authordetail', rowData, problematicAffiliations, authorAffiliations);
     const affiliations = authorAffiliations.filter(item => item.af_author_id === rowData.aut_id);
-    console.log(affiliations);
-    // affiliations.map((item, index) => (
-    //    <div key={index}>{item.fez_org_structure?.[0].org_title ?? 'none'}</div>
-    //    ))
-    // HERE flesh this bit out
+    const problems = problematicAffiliations.filter(item => item.rek_author_id === rowData.aut_id);
 
+    console.log('problematicAffiliations', problematicAffiliations, affiliations);
     return (
-        <>
+        <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }}>
+            <Typography variant="body2">
+                Affiliations{' '}
+                {!isEditing && (
+                    <IconButton
+                        aria-label="delete"
+                        onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
+                        size={'small'}
+                    >
+                        <EditIcon />
+                    </IconButton>
+                )}
+            </Typography>
+
             {!isEditing && (
-                <Grid container item xs={12} style={{ padding: 16 }}>
-                    <Grid item xs={2}>
-                        <Typography variant="subtitle2">{'Organisation affiliation'}</Typography>
+                <Grid container xs={12} spacing={2}>
+                    <Grid xs={12} sx={{ borderBlockEnd: '1px solid grey' }}>
+                        <Typography variant="caption">Organisational Unit</Typography>
                     </Grid>
-                    <Grid item xs={10}>
-                        <Typography variant="body2">{rowData.orgaff}</Typography>
-                    </Grid>
-                    <Grid item xs={2}>
-                        <Typography variant="subtitle2">{'Organisation type'}</Typography>
-                    </Grid>
-                    <Grid item xs={10}>
-                        <Typography variant="body2">{rowData.orgtype}</Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Button onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}>
-                            Edit
-                        </Button>
-                    </Grid>
+                    {affiliations.map((item, index) => (
+                        <React.Fragment key={index}>
+                            <Grid xs={2}>
+                                <Chip
+                                    label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
+                                    variant="outlined"
+                                    size={'small'}
+                                    color={problems.length > 0 ? 'error' : 'primary'}
+                                />
+                            </Grid>
+                            <Grid xs={10}>
+                                <Typography variant="body2">
+                                    {item.fez_org_structure?.[0].org_title ?? 'none'}
+                                </Typography>
+                            </Grid>
+                        </React.Fragment>
+                    ))}
                 </Grid>
             )}
             {isEditing && (
-                <Grid container item xs={12} style={{ padding: 16 }}>
-                    Editing innit
-                    <Grid item xs={12}>
+                <>
+                    <Grid container xs={12} alignItems={'center'}>
+                        <Grid xs={7}>
+                            <Autocomplete
+                                options={[
+                                    { label: 'Item one', id: 1 },
+                                    { label: 'Item two', id: 2 },
+                                    { label: 'Item three', id: 3 },
+                                ]}
+                                renderInput={params => <TextField {...params} label="Organisational Unit" />}
+                            />
+                        </Grid>
+                        <Grid xs={4}>
+                            <Chip label="100%" variant="outlined" size={'small'} color={'primary'} />
+                        </Grid>
+                        <Grid xs={1} justifyContent={'flex-end'}>
+                            <IconButton aria-label="delete">
+                                <DeleteIcon />
+                            </IconButton>
+                        </Grid>
+                    </Grid>
+
+                    <Grid container xs={12} justifyContent={'flex-end'}>
                         <Button onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}>
-                            Edit
+                            Cancel
+                        </Button>
+                        <Button onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}>
+                            Save
                         </Button>
                     </Grid>
-                </Grid>
+                </>
             )}
-        </>
+        </Grid>
     );
 };
 
@@ -480,19 +520,15 @@ export const AuthorsList = ({
     problematicAffiliations,
     authorAffiliations,
 }) => {
-    console.log('list', list);
-    console.log('authorAffiliations', authorAffiliations);
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
 
     // eslint-disable-next-line camelcase
     const setEditing = ({ editing, aut_id }) => {
-        console.log('setEditing', editing, aut_id);
         setIsEditing({ editing, aut_id });
     };
 
     // eslint-disable-next-line camelcase
     const isEditing = aut_id => {
-        console.log('isEditing', aut_id, editState);
         // eslint-disable-next-line camelcase
         return editState.editing && editState.aut_id === aut_id;
     };
@@ -588,9 +624,9 @@ export const AuthorsList = ({
             tableRef={materialTableRef}
             columns={columns.current}
             components={{
-                Container: props => (
-                    <div {...props} id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`} />
-                ),
+                // Container: props => (
+                //     <div {...props} id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`} />
+                // ),
                 Action: props => {
                     if (typeof props.action !== 'function' && !props.action.action && !props.action.isFreeAction) {
                         const { icon: Icon, tooltip, ...restAction } = props.action;
@@ -664,7 +700,6 @@ export const AuthorsList = ({
                         });
 
                         setData(newIndexedList);
-                        console.log('newIndexedList', newIndexedList);
                         onChange(newIndexedList);
                     },
                 }),
