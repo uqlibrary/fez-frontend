@@ -15,7 +15,6 @@ import globalLocale from '../../../locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
 import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from '../../../config/general';
-import viewRecord from 'locale/viewRecord';
 
 jest.mock('../../../hooks', () => ({
     userIsAdmin: jest.fn(() => ({})),
@@ -307,7 +306,7 @@ describe('NewViewRecord', () => {
 
             // Author affiliations
             expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
-                viewRecord.viewRecord.adminViewRecordDrawerFields.hasAffiliates,
+                'orphaned organisation information',
             );
 
             // WoS ID
@@ -339,7 +338,7 @@ describe('NewViewRecord', () => {
 
             // Author affiliations
             expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
-                viewRecord.viewRecord.adminViewRecordDrawerFields.hasAffiliates,
+                'orphaned organisation information',
             );
 
             // WoS ID

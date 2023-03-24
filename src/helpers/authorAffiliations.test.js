@@ -238,22 +238,22 @@ describe('Compose Author Affiliation Problems', () => {
         const Response = composeAuthorAffiliationProblems(calcError);
         const Expected = [
             {
-                aut_display_name: 'Lancaster, Steve',
-                isIncomplete: true,
-                isOrphaned: false,
+                rek_author: 'Lancaster, Steve',
+                has100pcAffiliations: false,
+                hasOrgAffiliations: true,
                 rek_author_id: 7624839,
             },
         ];
         expect(Response).toEqual(Expected);
     });
-    it('Will throw error on AA orphaned organisation author error', () => {
+    it('Will throw error on AA orphaned organisation and calc error', () => {
         const Response = composeAuthorAffiliationProblems(oprhanError);
         const Expected = [
             {
-                aut_display_name: 'Author, New',
-                isIncomplete: false,
-                isOrphaned: true,
-                rek_author_id: 7624830,
+                rek_author: 'Lancaster, Steve',
+                has100pcAffiliations: false,
+                hasOrgAffiliations: false,
+                rek_author_id: 7624839,
             },
         ];
         expect(Response).toEqual(Expected);
