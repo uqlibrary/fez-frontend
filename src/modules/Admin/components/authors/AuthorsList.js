@@ -32,6 +32,8 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { PRECISION } from 'helpers/authorAffiliations';
+import InfoIcon from '@mui/icons-material/Info';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 export const useStyles = makeStyles(theme => ({
     linked: {
@@ -457,7 +459,32 @@ const AuthorDetailRow = ({ rowData, problematicAffiliations, authorAffiliations,
                             </Grid>
                         </React.Fragment>
                     ))}
+                    {affiliations.length === 0 && (
+                        <>
+                            <Grid xs={2}>
+                                <Chip label={'100%'} variant="outlined" size={'small'} color={'error'} />
+                            </Grid>
+                            <Grid xs={10}>
+                                <Typography variant="body2" color={'error'}>
+                                    No affiliations have been added
+                                </Typography>
+                            </Grid>
+                            <Grid xs={12}>
+                                <Alert
+                                    type="custom"
+                                    customType="warning"
+                                    customIcon={<InfoIcon fontSize="small" />}
+                                    title="Author affiliation information is incomplete"
+                                    message="Author requires at least one affiliation to be added."
+                                />
+                            </Grid>
+                        </>
+                    )}
                 </Grid>
+                // HERE, continue to update the layout sections here to make
+                // them in line with the mocks, then get to work on
+                // a) bringing in data, b) saving data, c) making sure that
+                // data still works after exiting/re-entering edit state, d) showing error state banner
             )}
             {isEditing && (
                 <>
