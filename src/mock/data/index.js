@@ -92,3 +92,5 @@ export { default as myEditorialAppointmentsList } from './myEditorialAppointment
 export { default as myEditorialAppointmentItem } from './myEditorialAppointments/myEditorialAppointmentItem';
 
 export { userList } from './testing/usersList';
+export { organisationalUnits } from './organisationalUnits';
+export { suggestedOrganisationalUnits } from './suggestedOrganisationalUnits';

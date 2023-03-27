@@ -12,8 +12,11 @@ import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
+// import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
+import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsListWithAffiliates';
+
+import { loadOrganisationalUnits, loadSuggestedOrganisationalUnitByAuthorId } from 'actions';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -36,6 +39,10 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
         record: PropTypes.object,
+        loadOrganisationalUnitsList: PropTypes.func.isRequired,
+        loadSuggestedOrganisationalUnitsList: PropTypes.func.isRequired,
+        organisationalUnitList: PropTypes.object,
+        suggestedOrganisationalUnitList: PropTypes.object,
     };
 
     static defaultProps = {
@@ -315,7 +322,7 @@ export class ContributorsEditor extends PureComponent {
         if (isAdmin) {
             const authorAffiliationProblems = composeAuthorAffiliationProblems(this.props.record);
             return (
-                <AuthorsList
+                <AuthorsListWithAffiliates
                     contributorEditorId={contributorEditorId}
                     disabled={disabled}
                     list={contributors}
@@ -325,8 +332,23 @@ export class ContributorsEditor extends PureComponent {
                     isNtro={isNtro}
                     problematicAffiliations={authorAffiliationProblems}
                     authorAffiliations={this.props.record?.fez_author_affiliation ?? []}
+                    loadOrganisationalUnitsList={this.props.loadOrganisationalUnitsList}
+                    organisationalUnitList={this.props.organisationalUnitList}
+                    loadSuggestedOrganisationalUnitsList={this.props.loadSuggestedOrganisationalUnitsList}
+                    suggestedOrganisationalUnitList={this.props.suggestedOrganisationalUnitList}
                 />
             );
+            /*
+                <AuthorsList
+                    contributorEditorId={contributorEditorId}
+                    disabled={disabled}
+                    list={contributors}
+                    onChange={this.handleAuthorsListChange}
+                    showRoleInput={showRoleInput}
+                    locale={this.props.locale}
+                    isNtro={isNtro}
+                />
+            */
         }
 
         return (
@@ -395,7 +417,20 @@ export class ContributorsEditor extends PureComponent {
 export const mapStateToProps = state => ({
     author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
     record: state && state.get('viewRecordReducer') ? state.get('viewRecordReducer').recordToView : null,
+    organisationalUnitList:
+        state && state.get('organisationalUnitsReducer') ? state.get('organisationalUnitsReducer') : null,
+    suggestedOrganisationalUnitList:
+        state && state.get('suggestedOrganisationalUnitsReducer')
+            ? state.get('suggestedOrganisationalUnitsReducer')
+            : null,
 });
+
+const mapDispatchToProps = dispatch => {
+    return {
+        loadOrganisationalUnitsList: () => dispatch(loadOrganisationalUnits()),
+        loadSuggestedOrganisationalUnitsList: authorId => dispatch(loadSuggestedOrganisationalUnitByAuthorId(authorId)),
+    };
+};
 
 export const styles = theme => ({
     list: {
@@ -414,4 +449,4 @@ export const styles = theme => ({
     },
 });
 
-export default withStyles(styles)(connect(mapStateToProps)(ContributorsEditor));
+export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(ContributorsEditor));

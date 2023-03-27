@@ -379,6 +379,14 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(config => {
         return [200, { data: { ...mockData.recordWithProblematicAuthorAffiliations } }];
     })
+    .onGet(new RegExp(escapeRegExp(routes.ORGANISATIONAL_UNITS().apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.organisationalUnits } }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.SUGGESTED_ORGANISATIONAL_UNITS({ authorId: '.*' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.suggestedOrganisationalUnits } }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
