@@ -16,7 +16,7 @@ const handlers = {
 
     [actions.ORGANISATIONAL_UNITS_LOADED]: (state, action) => ({
         ...initialState,
-        organisationUnits: action.payload,
+        organisationUnits: action.payload.data,
         organisationUnitsLoading: false,
         organisationUnitsFailed: false,
     }),

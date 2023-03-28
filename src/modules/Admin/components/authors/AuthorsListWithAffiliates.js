@@ -33,6 +33,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { PRECISION } from 'helpers/authorAffiliations';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import Box from '@mui/material/Box';
 
 export const useStyles = makeStyles(theme => ({
     linked: {
@@ -416,10 +418,72 @@ export const getColumns = ({
     ];
 };
 
-const AuthorDetailRow = ({ rowData, problematicAffiliations, authorAffiliations, isEditing, setEditing }) => {
+const AuthorDetailPanelContent = ({
+    rowData,
+    problematicAffiliations,
+    authorAffiliations,
+    isEditing,
+    setEditing,
+    organisationUnits,
+    suggestedOrganisationalUnitList = {},
+    loadSuggestedOrganisationalUnitsList,
+}) => {
+    const theme = useTheme();
+
+    const {
+        suggestedOrganisationUnits,
+        suggestedOrganisationUnitsLoading,
+        suggestedOrganisationUnitsFailed,
+    } = suggestedOrganisationalUnitList;
+
+    console.log(
+        'AuthorDetailPanelContent',
+        organisationUnits,
+        isEditing,
+        suggestedOrganisationUnits,
+        suggestedOrganisationUnitsLoading,
+        suggestedOrganisationUnitsFailed,
+    );
+
+    /*
+    suggested:
+        aut_id: 7624839
+        org_id: 1248
+        org_title: "Information Systems and Resource Services (University of Queensland Library)"
+    */
+    /*
+    org units
+        org_desc: null
+        org_ext_table: null
+        org_extdb_id: null
+        org_extdb_name: "hr"
+        org_id: 1062
+        org_image_filename: null
+        org_is_current: 1
+        org_title: "!NON-HERDC"
+
+    */
+    if (
+        isEditing &&
+        suggestedOrganisationUnits.length === 0 &&
+        suggestedOrganisationUnitsLoading === false &&
+        suggestedOrganisationUnitsFailed === false
+    ) {
+        loadSuggestedOrganisationalUnitsList(rowData.aut_id);
+        return <ContentLoader message={'Loading suggested Organisational Units'} />;
+    }
+    // HERE, compile array for autocomplete that handles duplicates coming from suggestions - any item in suggested is
+    // probably already in the main array of items. Use Set to auto remove dupes. Need to consider what the data
+    // structure look like for autocomplete, since we want to prepend "Suggested: " and change the colour using
+    // probably renderOption={(props, option) => (
+
     const affiliations = authorAffiliations.filter(item => item.af_author_id === rowData.aut_id);
     const problems = problematicAffiliations.filter(item => item.rek_author_id === rowData.aut_id);
     const alertOptions = { title: '', message: '' };
+    const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
+    const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
+    const uniqueOrgs = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
+    console.log('uniqueOrgs', combinedArr, uniqueIds, uniqueOrgs);
 
     if (problems.length > 0) {
         if (problems[0].has100pcAffiliations === false) {
@@ -457,7 +521,7 @@ const AuthorDetailRow = ({ rowData, problematicAffiliations, authorAffiliations,
 
             {!isEditing && (
                 <Grid container xs={12} spacing={2}>
-                    <Grid xs={12} sx={{ borderBlockEnd: '1px solid grey' }}>
+                    <Grid xs={12} sx={{ borderBlockEnd: '1px solid #ccc' }}>
                         <Typography variant="caption">Organisational Unit</Typography>
                     </Grid>
                     {affiliations.map((item, index) => (
@@ -501,26 +565,72 @@ const AuthorDetailRow = ({ rowData, problematicAffiliations, authorAffiliations,
                 // data still works after exiting/re-entering edit state, d) showing error state banner
             )}
             {isEditing && (
-                <>
-                    <Grid container xs={12} alignItems={'center'}>
-                        <Grid xs={7}>
-                            <Autocomplete
-                                options={[
-                                    { label: 'Item one', id: 1 },
-                                    { label: 'Item two', id: 2 },
-                                    { label: 'Item three', id: 3 },
-                                ]}
-                                renderInput={params => <TextField {...params} label="Organisational Unit" />}
-                            />
-                        </Grid>
-                        <Grid xs={4}>
-                            <Chip label="100%" variant="outlined" size={'small'} color={'primary'} />
-                        </Grid>
-                        <Grid xs={1} justifyContent={'flex-end'}>
-                            <IconButton aria-label="delete">
-                                <DeleteIcon />
-                            </IconButton>
-                        </Grid>
+                <Grid container xs={12} alignItems={'center'} spacing={2}>
+                    <Grid xs={7} sx={{ borderBlockEnd: '1px solid #ccc' }}>
+                        <Typography variant="caption">Organisational Unit</Typography>
+                    </Grid>
+                    <Grid xs={4} sx={{ borderBlockEnd: '1px solid #ccc' }}>
+                        <Typography variant="caption">Affiliation %</Typography>
+                    </Grid>
+
+                    {affiliations.map(item => (
+                        <>
+                            <Grid xs={7} padding={1}>
+                                <Autocomplete
+                                    value={uniqueOrgs.find(org => org.org_id === item.af_org_id)}
+                                    options={uniqueOrgs}
+                                    getOptionLabel={option => option.org_title}
+                                    sel
+                                    renderOption={(props, option) => (
+                                        <Box
+                                            component="li"
+                                            sx={{
+                                                ...(!!option.suggested ? { color: theme.palette.primary.main } : {}),
+                                            }}
+                                            {...props}
+                                            key={option.org_id}
+                                        >
+                                            {option.org_title}
+                                        </Box>
+                                    )}
+                                    renderInput={params => (
+                                        <TextField {...params} placeholder="Start typing or select from list" />
+                                    )}
+                                />
+                            </Grid>
+                            <Grid xs={4} padding={1}>
+                                <Chip
+                                    label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
+                                    variant="outlined"
+                                    size={'small'}
+                                    color={'primary'}
+                                />
+                            </Grid>
+                            <Grid xs={1} justifyContent={'flex-end'} padding={1}>
+                                <IconButton aria-label="delete">
+                                    <DeleteIcon />
+                                </IconButton>
+                            </Grid>
+                        </>
+                    ))}
+                    <Grid xs={7} padding={1}>
+                        <Autocomplete
+                            options={uniqueOrgs}
+                            getOptionLabel={option => option.org_title}
+                            renderOption={(props, option) => (
+                                <Box
+                                    component="li"
+                                    sx={{ ...(!!option.suggested ? { color: theme.palette.primary.main } : {}) }}
+                                    {...props}
+                                    key={option.org_id}
+                                >
+                                    {option.org_title}
+                                </Box>
+                            )}
+                            renderInput={params => (
+                                <TextField {...params} placeholder="Start typing or select from list" />
+                            )}
+                        />
                     </Grid>
 
                     <Grid container xs={12} justifyContent={'flex-end'}>
@@ -531,21 +641,33 @@ const AuthorDetailRow = ({ rowData, problematicAffiliations, authorAffiliations,
                             Save
                         </Button>
                     </Grid>
-                </>
+                </Grid>
             )}
         </Grid>
     );
 };
 
 /* istanbul ignore next */
-export const AuthorDetail = (rowData, problematicAffiliations, authorAffiliations, isEditing, setEditing) => {
+export const AuthorDetailPanel = ({
+    rowData,
+    problematicAffiliations,
+    authorAffiliations,
+    isEditing,
+    setEditing,
+    organisationUnits,
+    suggestedOrganisationalUnitList,
+    loadSuggestedOrganisationalUnitsList,
+}) => {
     return (
-        <AuthorDetailRow
+        <AuthorDetailPanelContent
             rowData={rowData}
             problematicAffiliations={problematicAffiliations}
             authorAffiliations={authorAffiliations}
             isEditing={isEditing}
             setEditing={setEditing}
+            organisationUnits={organisationUnits}
+            suggestedOrganisationalUnitList={suggestedOrganisationalUnitList}
+            loadSuggestedOrganisationalUnitsList={loadSuggestedOrganisationalUnitsList}
         />
     );
 };
@@ -561,39 +683,15 @@ export const AuthorsListWithAffiliates = ({
     problematicAffiliations,
     authorAffiliations,
     organisationalUnitList,
-    loadOrganisationalUnitsList,
     suggestedOrganisationalUnitList,
+    loadOrganisationalUnitsList,
     loadSuggestedOrganisationalUnitsList,
 }) => {
     const { organisationUnits, organisationUnitsLoading, organisationUnitsFailed } = organisationalUnitList;
-    const {
-        suggestedOrganisationUnits,
-        suggestedOrganisationUnitsLoading,
-        suggestedOrganisationUnitsFailed,
-    } = suggestedOrganisationalUnitList;
-    console.log(
-        'AuthorListWithAffiliates organisationUnits',
-        organisationUnits,
-        organisationUnitsLoading,
-        organisationUnitsFailed,
-    );
-    console.log(
-        'AuthorListWithAffiliates suggestedOrgUnits',
-        suggestedOrganisationUnits,
-        suggestedOrganisationUnitsLoading,
-        suggestedOrganisationUnitsFailed,
-    );
+
     if (organisationUnits.length === 0 && organisationUnitsLoading === false && organisationUnitsFailed === false) {
         // dispatch
         loadOrganisationalUnitsList();
-    }
-    if (
-        suggestedOrganisationUnits.length === 0 &&
-        suggestedOrganisationUnitsLoading === false &&
-        suggestedOrganisationUnitsFailed === false
-    ) {
-        // dispatch
-        loadSuggestedOrganisationalUnitsList(1);
     }
 
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
@@ -876,13 +974,16 @@ export const AuthorsListWithAffiliates = ({
                         render: () => {
                             return rowData.uqUsername === '' || isNtro
                                 ? null
-                                : AuthorDetail(
+                                : AuthorDetailPanel({
                                       rowData,
                                       problematicAffiliations,
                                       authorAffiliations,
-                                      isEditing(rowData.aut_id),
+                                      isEditing: isEditing(rowData.aut_id),
                                       setEditing,
-                                  );
+                                      organisationUnits,
+                                      suggestedOrganisationalUnitList,
+                                      loadSuggestedOrganisationalUnitsList,
+                                  });
                         },
                     };
                 },
