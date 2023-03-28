@@ -231,8 +231,9 @@ export const AdminInterface = ({
         : (!isJobCreated && txt.current.successWorkflowConfirmation) || txt.current.successJobCreatedConfirmation;
 
     const pageTitlePrefix = !isDeleted ? 'Edit' : 'Undelete';
-
     const submitButtonTxt = !isDeleted ? 'Save' : 'Undelete';
+    const isButtonDisabled =
+        !!submitting || !!disableSubmit || (locked && record.rek_editing_user !== authorDetails.username);
 
     const setPublicationStatusAndSubmit = status =>
         handleSubmit((values, dispatch, props) =>
@@ -275,11 +276,7 @@ export const AdminInterface = ({
                     <Button
                         id={`admin-work-publish${placement}`}
                         data-testid={`publish-admin${placement}`}
-                        disabled={
-                            !!submitting ||
-                            !!disableSubmit ||
-                            (locked && record.rek_editing_user !== authorDetails.username)
-                        }
+                        disabled={isButtonDisabled}
                         variant="contained"
                         color="secondary"
                         fullWidth
@@ -293,11 +290,7 @@ export const AdminInterface = ({
                     <Button
                         id={`admin-work-unpublish${placement}`}
                         data-testid={`unpublish-admin${placement}`}
-                        disabled={
-                            !!submitting ||
-                            !!disableSubmit ||
-                            (locked && record.rek_editing_user !== authorDetails.username)
-                        }
+                        disabled={isButtonDisabled}
                         variant="contained"
                         color="secondary"
                         fullWidth
@@ -311,11 +304,7 @@ export const AdminInterface = ({
                     <Button
                         id={`admin-work-save${placement}`}
                         data-testid={`save-admin${placement}`}
-                        disabled={
-                            !!submitting ||
-                            !!disableSubmit ||
-                            (locked && record.rek_editing_user !== authorDetails.username)
-                        }
+                        disabled={isButtonDisabled}
                         variant="contained"
                         color="secondary"
                         fullWidth
@@ -329,11 +318,7 @@ export const AdminInterface = ({
                     id={`admin-work-submit${placement}`}
                     data-testid={`submit-admin${placement}`}
                     style={{ whiteSpace: 'nowrap' }}
-                    disabled={
-                        !!submitting ||
-                        !!disableSubmit ||
-                        (locked && record.rek_editing_user !== authorDetails.username)
-                    }
+                    disabled={isButtonDisabled}
                     variant="contained"
                     color="primary"
                     fullWidth
