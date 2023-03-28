@@ -2804,6 +2804,9 @@ describe('transformers', () => {
                 fez_record_search_key_end_date: {
                     rek_end_date: '2019-03-14',
                 },
+                fez_record_search_key_deletion_notes: {
+                    htmlText: 'test',
+                },
             };
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
@@ -2865,6 +2868,9 @@ describe('transformers', () => {
                 },
                 fez_record_search_key_end_date: {
                     rek_end_date: '2019-03-14',
+                },
+                fez_record_search_key_deletion_notes: {
+                    rek_deletion_notes: 'test',
                 },
             });
         });
