@@ -67,7 +67,7 @@ const returnEvenSplit = affiliations => {
         return item;
     });
 };
-export const fixAffiliationPercentile = (affiliations = []) => {
+export const calculateAffiliationPercentile = (affiliations = []) => {
     return affiliations.some(item => item.af_org_id === NON_HERDC_ID)
         ? returnNonHerdc(affiliations)
         : returnEvenSplit(affiliations);
