@@ -35,6 +35,7 @@ import { PRECISION } from 'helpers/authorAffiliations';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Box from '@mui/material/Box';
+import { hasAnyProblemAffiliations, has100pcAffiliations, hasValidOrgAffiliations } from 'helpers/authorAffiliations';
 
 export const useStyles = makeStyles(theme => ({
     linked: {
@@ -77,26 +78,17 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
-export const getColumns = ({
-    contributorEditorId,
-    disabled,
-    suffix,
-    classes,
-    showRoleInput,
-    locale,
-    isNtro,
-    problematicAffiliations,
-}) => {
-    const hasAffiliateProblem = rowData =>
-        problematicAffiliations.filter(
-            affiliate =>
-                affiliate.rek_author_id === rowData.aut_id &&
-                (affiliate.hasOrgAffiliations === false || affiliate.has100pcAffiliations === false),
-        ).length > 0;
+export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
+    // const hasAffiliateProblem = rowData =>
+    //     problematicAffiliations.filter(
+    //         affiliate =>
+    //             affiliate.rek_author_id === rowData.aut_id &&
+    //             (affiliate.hasOrgAffiliations === false || affiliate.has100pcAffiliations === false),
+    //     ).length > 0;
 
-    const linkedClass = rowData =>
-        // eslint-disable-next-line no-nested-ternary
-        hasAffiliateProblem(rowData) ? classes.problem : !!rowData.aut_id ? classes.linked : '';
+    const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
+    // eslint-disable-next-line no-nested-ternary
+    // hasAffiliateProblem(rowData) ? classes.problem : !!rowData.aut_id ? classes.linked : '';
 
     const {
         header: {
@@ -147,7 +139,7 @@ export const getColumns = ({
             ),
             field: 'nameAsPublished',
             render: rowData => {
-                const inProblemState = hasAffiliateProblem(rowData);
+                const inProblemState = hasAnyProblemAffiliations(rowData);
                 return (
                     <NameAsPublished
                         icon={getIcon({ rowData, disabled, inProblemState })}
@@ -155,15 +147,16 @@ export const getColumns = ({
                             <React.Fragment>
                                 <Typography
                                     variant="body2"
-                                    className={linkedClass(rowData)}
+                                    className={inProblemState ? classes.problem : linkedClass(rowData)}
                                     id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
                                     data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
                                 >
                                     {rowData.nameAsPublished}
                                 </Typography>
-                                <Typography variant="caption" className={linkedClass(rowData)}>{`${numberToWords(
-                                    rowData.tableData.id + 1,
-                                )} ${suffix}`}</Typography>
+                                <Typography
+                                    variant="caption"
+                                    className={inProblemState ? classes.problem : linkedClass(rowData)}
+                                >{`${numberToWords(rowData.tableData.id + 1)} ${suffix}`}</Typography>
                             </React.Fragment>
                         }
                         linked={!!rowData.aut_id}
@@ -202,18 +195,21 @@ export const getColumns = ({
                 </Typography>
             ),
             field: 'uqIdentifier',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    className={linkedClass(rowData)}
-                    id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
-                    data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
-                >
-                    {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
-                        (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
-                        ''}
-                </Typography>
-            ),
+            render: rowData => {
+                const inProblemState = hasAnyProblemAffiliations(rowData);
+                return (
+                    <Typography
+                        variant="body2"
+                        className={inProblemState ? classes.problem : linkedClass(rowData)}
+                        id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
+                        data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
+                    >
+                        {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
+                            (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
+                            ''}
+                    </Typography>
+                );
+            },
             editComponent: props => {
                 const { rowData: contributor } = props;
                 const prefilledSearch = !contributor.uqIdentifier || contributor.uqIdentifier === '0';
@@ -420,8 +416,6 @@ export const getColumns = ({
 
 const AuthorDetailPanelContent = ({
     rowData,
-    problematicAffiliations,
-    authorAffiliations,
     isEditing,
     setEditing,
     organisationUnits,
@@ -472,38 +466,35 @@ const AuthorDetailPanelContent = ({
         loadSuggestedOrganisationalUnitsList(rowData.aut_id);
         return <ContentLoader message={'Loading suggested Organisational Units'} />;
     }
-    // HERE, compile array for autocomplete that handles duplicates coming from suggestions - any item in suggested is
-    // probably already in the main array of items. Use Set to auto remove dupes. Need to consider what the data
-    // structure look like for autocomplete, since we want to prepend "Suggested: " and change the colour using
-    // probably renderOption={(props, option) => (
 
-    const affiliations = authorAffiliations.filter(item => item.af_author_id === rowData.aut_id);
-    const problems = problematicAffiliations.filter(item => item.rek_author_id === rowData.aut_id);
+    const affiliations = rowData.affiliations ?? [];
     const alertOptions = { title: '', message: '' };
     const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
     const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
     const uniqueOrgs = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
     console.log('uniqueOrgs', combinedArr, uniqueIds, uniqueOrgs);
 
-    if (problems.length > 0) {
-        if (problems[0].has100pcAffiliations === false) {
-            alertOptions.title = 'Author affiliation information is incomplete';
-            if (affiliations.length > 0) {
-                alertOptions.message = 'Percentage sum total of all affiliations must equal 100%';
-                alertOptions.action = props => console.log(props);
-                alertOptions.actionButtonLabel = 'Recalculate Percentages';
-            } else {
-                alertOptions.message = 'Author requires at least one affiliation to be added';
-            }
-        } else if (problems[0].hasOrgAffiliations === false) {
-            alertOptions.title = 'Orphaned organisation affiliation information';
-            alertOptions.message = 'Organisation(s) no longer exists';
+    const hasPercentileError = !has100pcAffiliations(rowData);
+    const hasOrgErrors = !hasValidOrgAffiliations(rowData);
+    const hasProblems = hasPercentileError || hasOrgErrors;
+
+    if (hasPercentileError) {
+        alertOptions.title = 'Author affiliation information is incomplete';
+        if (affiliations.length > 0) {
+            alertOptions.message = 'Percentage sum total of all affiliations must equal 100%';
             alertOptions.action = props => console.log(props);
-            alertOptions.actionButtonLabel = 'Remove Orphaned Affiliations';
+            alertOptions.actionButtonLabel = 'Recalculate Percentages';
+        } else {
+            alertOptions.message = 'Author requires at least one affiliation to be added';
         }
+    } else if (hasOrgErrors) {
+        alertOptions.title = 'Orphaned organisation affiliation information';
+        alertOptions.message = 'Organisation(s) no longer exists';
+        alertOptions.action = props => console.log(props);
+        alertOptions.actionButtonLabel = 'Remove Orphaned Affiliations';
     }
 
-    console.log('problematicAffiliations', problematicAffiliations, affiliations, problems, alertOptions);
+    console.log('problematicAffiliations', rowData, affiliations, alertOptions);
     return (
         <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }}>
             <Typography variant="body2">
@@ -531,11 +522,11 @@ const AuthorDetailPanelContent = ({
                                     label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
                                     variant="outlined"
                                     size={'small'}
-                                    color={problems.length > 0 ? 'error' : 'primary'}
+                                    color={hasProblems ? 'error' : 'primary'}
                                 />
                             </Grid>
                             <Grid xs={10}>
-                                <Typography variant="body2" color={problems.length > 0 ? 'error' : 'primary'}>
+                                <Typography variant="body2" color={hasProblems ? 'error' : 'primary'}>
                                     {item.fez_org_structure?.[0].org_title ?? 'Organisational Unit has been removed'}
                                 </Typography>
                             </Grid>
@@ -553,7 +544,7 @@ const AuthorDetailPanelContent = ({
                             </Grid>
                         </>
                     )}
-                    {problems.length > 0 && (
+                    {hasProblems && (
                         <Grid xs={12}>
                             <Alert type={'warning'} {...alertOptions} />
                         </Grid>
@@ -650,8 +641,6 @@ const AuthorDetailPanelContent = ({
 /* istanbul ignore next */
 export const AuthorDetailPanel = ({
     rowData,
-    problematicAffiliations,
-    authorAffiliations,
     isEditing,
     setEditing,
     organisationUnits,
@@ -661,8 +650,6 @@ export const AuthorDetailPanel = ({
     return (
         <AuthorDetailPanelContent
             rowData={rowData}
-            problematicAffiliations={problematicAffiliations}
-            authorAffiliations={authorAffiliations}
             isEditing={isEditing}
             setEditing={setEditing}
             organisationUnits={organisationUnits}
@@ -680,8 +667,6 @@ export const AuthorsListWithAffiliates = ({
     locale,
     onChange,
     showRoleInput,
-    problematicAffiliations,
-    authorAffiliations,
     organisationalUnitList,
     suggestedOrganisationalUnitList,
     loadOrganisationalUnitsList,
@@ -738,8 +723,6 @@ export const AuthorsListWithAffiliates = ({
         locale,
         isNtro,
         contributorEditorId,
-        problematicAffiliations,
-        authorAffiliations,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
     //    [editState.editing],
@@ -976,8 +959,6 @@ export const AuthorsListWithAffiliates = ({
                                 ? null
                                 : AuthorDetailPanel({
                                       rowData,
-                                      problematicAffiliations,
-                                      authorAffiliations,
                                       isEditing: isEditing(rowData.aut_id),
                                       setEditing,
                                       organisationUnits,
@@ -1025,8 +1006,6 @@ AuthorsListWithAffiliates.propTypes = {
     isNtro: PropTypes.bool,
     list: PropTypes.array,
     locale: PropTypes.object,
-    problematicAffiliations: PropTypes.array,
-    authorAffiliations: PropTypes.array,
     onChange: PropTypes.func,
     showRoleInput: PropTypes.bool,
     organisationalUnitList: PropTypes.object.isRequired,

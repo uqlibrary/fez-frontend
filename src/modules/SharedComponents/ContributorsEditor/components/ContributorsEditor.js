@@ -13,7 +13,7 @@ import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 // import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
-import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
+// import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
 import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsListWithAffiliates';
 
 import { loadOrganisationalUnits, loadSuggestedOrganisationalUnitByAuthorId } from 'actions';
@@ -63,7 +63,7 @@ export class ContributorsEditor extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            contributors: this.getContributorsFromProps(props),
+            contributors: this.getContributorsWithAffiliationsFromProps(props),
             errorMessage: '',
             isCurrentAuthorSelected: false,
             contributorIndexSelectedToEdit: null,
@@ -80,6 +80,21 @@ export class ContributorsEditor extends PureComponent {
     getContributorsFromProps = props => {
         if (props.input && props.input.name && props.input.value) {
             return props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
+        }
+
+        return [];
+    };
+
+    getContributorsWithAffiliationsFromProps = props => {
+        if (props.input && props.input.name && props.input.value) {
+            const authors = props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
+            const affiliations = this.props.record?.fez_author_affiliation ?? [];
+            return authors.map(author => {
+                return {
+                    ...author,
+                    affiliations: affiliations.filter(affiliation => affiliation.af_author_id === author.aut_id),
+                };
+            });
         }
 
         return [];
@@ -320,7 +335,7 @@ export class ContributorsEditor extends PureComponent {
         }
 
         if (isAdmin) {
-            const authorAffiliationProblems = composeAuthorAffiliationProblems(this.props.record);
+            console.log('contributors', contributors);
             return (
                 <AuthorsListWithAffiliates
                     contributorEditorId={contributorEditorId}
@@ -330,8 +345,6 @@ export class ContributorsEditor extends PureComponent {
                     showRoleInput={showRoleInput}
                     locale={this.props.locale}
                     isNtro={isNtro}
-                    problematicAffiliations={authorAffiliationProblems}
-                    authorAffiliations={this.props.record?.fez_author_affiliation ?? []}
                     loadOrganisationalUnitsList={this.props.loadOrganisationalUnitsList}
                     organisationalUnitList={this.props.organisationalUnitList}
                     loadSuggestedOrganisationalUnitsList={this.props.loadSuggestedOrganisationalUnitsList}

@@ -2,15 +2,28 @@ export const TOTAL = 100;
 export const PRECISION = 1000;
 export const MAX_TOTAL = TOTAL * PRECISION;
 
-export const hasValidOrgAffiliations = (author, affiliations) => {
-    const filteredAffiliations = affiliations?.filter(item => item.af_author_id === author.rek_author_id);
+export const getFilteredAffiliations = (author, affiliations) =>
+    affiliations.length > 0
+        ? affiliations?.filter(item => item.af_author_id === author.rek_author_id)
+        : author.affiliations ?? [];
+
+export const hasValidOrgAffiliations = (author, affiliations = []) => {
+    const filteredAffiliations = getFilteredAffiliations(author, affiliations);
     return filteredAffiliations.length > 0 && filteredAffiliations.every(item => !!item.fez_org_structure);
 };
 
-export const has100pcAffiliations = (author, affiliations, total = MAX_TOTAL) =>
-    affiliations
-        ?.filter(item => item.af_author_id === author.rek_author_id)
-        .reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= total;
+export const has100pcAffiliations = (author, affiliations = [], total = MAX_TOTAL) => {
+    const filteredAffiliations = getFilteredAffiliations(author, affiliations);
+    console.log('has100pcAffiliations', author, affiliations, total, filteredAffiliations);
+    return (
+        filteredAffiliations.reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= total
+    );
+};
+
+export const hasAnyProblemAffiliations = (author, affiliations, total) =>
+    author.aut_id !== 0 &&
+    (hasValidOrgAffiliations(author, affiliations) === false ||
+        has100pcAffiliations(author, affiliations, total) === false);
 
 export const getUniqueAffiliations = affiliations =>
     affiliations?.reduce(
