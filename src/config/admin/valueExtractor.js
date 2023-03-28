@@ -420,6 +420,14 @@ export default {
     fez_record_search_key_doi: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_doi'),
     },
+    fez_record_search_key_deletion_notes: {
+        getValue: record =>
+            getValueSearchKeyCKEditor(
+                record,
+                'fez_record_search_key_deletion_notes.rek_deletion_notes',
+                'fez_record_search_key_deletion_notes.rek_deletion_notes',
+            ),
+    },
     fez_record_search_key_isi_loc: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_isi_loc'),
     },
@@ -969,6 +977,9 @@ export default {
     },
     fez_record_search_key_parent_publication: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_parent_publication'),
+    },
+    fez_record_search_key_new_doi: {
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_new_doi'),
     },
     fez_record_search_key_newspaper: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_newspaper'),

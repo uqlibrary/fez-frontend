@@ -273,7 +273,7 @@ export default {
                     <>
                         Describe the reason to delete this work
                         <div style={{ fontSize: '60%' }}>
-                            (visible to admins only, displayed under record's history)
+                            (visible to admins only, displayed under view record page's history)
                         </div>
                     </>
                 ),
@@ -286,7 +286,7 @@ export default {
                         <div style={{ fontSize: '60%' }}>(displayed on the records deleted page)</div>
                     </>
                 ),
-                label: 'Please enter the DOI which the record moved to',
+                label: 'Please enter the DOI to which the record moved to',
                 placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
             },
             notes: {
@@ -296,7 +296,7 @@ export default {
                         <div style={{ fontSize: '60%' }}>(displayed on the records deleted page)</div>
                     </>
                 ),
-                label: 'Please enter a reason why you are deleting this work',
+                label: 'Please enter deletion notes',
             },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Cancel delete',

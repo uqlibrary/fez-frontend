@@ -6,7 +6,6 @@ import * as mockData from 'mock/data';
 import { recordVersion } from 'mock/data';
 import { locale } from 'locale';
 import { DELETED, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
-import { EXISTING_RECORD_API } from '../repositories/routes';
 
 describe('View record actions', () => {
     const testPid = 'UQ:396321';
@@ -120,7 +119,7 @@ describe('View record actions', () => {
                 data: { ...mockData.record },
             });
 
-            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_DELETED];
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_DELETED_LOADED];
 
             try {
                 await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
@@ -141,7 +140,7 @@ describe('View record actions', () => {
                 },
             });
 
-            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_DELETED];
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_DELETED_LOADED];
 
             try {
                 await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));

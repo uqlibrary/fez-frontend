@@ -87,6 +87,10 @@ export default {
                 ['fez_record_search_key_project_id'],
             ],
         },
+        {
+            title: 'Tombstone page information',
+            groups: [['fez_record_search_key_new_doi'], ['fez_record_search_key_deletion_notes']],
+        },
     ],
     ntro: () => [],
 };

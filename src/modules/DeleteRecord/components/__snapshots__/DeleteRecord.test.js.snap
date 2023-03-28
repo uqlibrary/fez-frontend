@@ -3840,7 +3840,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Please enter the DOI which the record moved to"
+                  label="Please enter the DOI to which the record moved to"
                   name="publication.fez_record_search_key_new_doi.rek_new_doi"
                   placeholder="Enter a valid DOI (e.g. 10.123/456)"
                   textFieldId="rek-new-doi"
