@@ -484,7 +484,7 @@ exports[`Component DeleteRecord componentDidUpdate() 1`] = `
                     }
                   }
                 >
-                  (visible to admins only, displayed under view record page's history)
+                  (visible to admins only, displayed under record's history)
                 </div>
               </React.Fragment>
             }
@@ -1805,7 +1805,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                     }
                   }
                 >
-                  (visible to admins only, displayed under view record page's history)
+                  (visible to admins only, displayed under record's history)
                 </div>
               </React.Fragment>
             }
@@ -2427,7 +2427,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                     }
                   }
                 >
-                  (visible to admins only, displayed under view record page's history)
+                  (visible to admins only, displayed under record's history)
                 </div>
               </React.Fragment>
             }
@@ -2755,7 +2755,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                     }
                   }
                 >
-                  (visible to admins only, displayed under view record page's history)
+                  (visible to admins only, displayed under record's history)
                 </div>
               </React.Fragment>
             }
@@ -3068,7 +3068,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                     }
                   }
                 >
-                  (visible to admins only, displayed under view record page's history)
+                  (visible to admins only, displayed under record's history)
                 </div>
               </React.Fragment>
             }
@@ -3690,7 +3690,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                     }
                   }
                 >
-                  (visible to admins only, displayed under view record page's history)
+                  (visible to admins only, displayed under record's history)
                 </div>
               </React.Fragment>
             }
