@@ -8,8 +8,9 @@ import {
     DELETE_RECORD_SUCCESS,
     DELETE_RECORD_FAILED,
 } from './actionTypes';
-import { get, destroy } from 'repositories/generic';
-import { EXISTING_RECORD_API } from 'repositories/routes';
+import { get, destroy, patch } from 'repositories/generic';
+import { EXISTING_DELETED_RECORD, EXISTING_RECORD_API } from 'repositories/routes';
+import * as actions from './actionTypes';
 
 /**
  * Load publication
@@ -29,10 +30,17 @@ export function loadRecordToDelete(pid) {
                 return Promise.resolve(response.data);
             })
             .catch(error => {
-                dispatch({
-                    type: DELETE_RECORD_LOAD_FAILED,
-                    payload: error.message,
-                });
+                if (error.status === 410) {
+                    dispatch({
+                        type: actions.DELETE_RECORD_LOADED,
+                        payload: error.data,
+                    });
+                } else {
+                    dispatch({
+                        type: DELETE_RECORD_LOAD_FAILED,
+                        payload: error.message,
+                    });
+                }
             });
     };
 }
@@ -63,31 +71,53 @@ export function clearDeleteRecord() {
     };
 }
 
+const createPayload = data => ({
+    ...(!!data.reason ? { reason: data.reason } : {}),
+    ...(!!data.publication?.fez_record_search_key_new_doi?.rek_new_doi
+        ? { fez_record_search_key_new_doi: data.publication?.fez_record_search_key_new_doi }
+        : { fez_record_search_key_new_doi: null }),
+    ...(!!data.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText
+        ? {
+              fez_record_search_key_deletion_notes: {
+                  rek_deletion_notes:
+                      data.publication?.fez_record_search_key_deletion_notes.rek_deletion_notes.htmlText,
+              },
+          }
+        : { fez_record_search_key_deletion_notes: null }),
+});
+
 /**
- * Delete record request:
- * If error occurs on any stage failed action is displayed
- * @param {object} data to be posted: {reason: reason}
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function deleteRecord(data) {
-    const payload = {
-        ...(!!data.reason ? { reason: data.reason } : {}),
-        ...(!!data.publication?.fez_record_search_key_new_doi?.rek_new_doi
-            ? { fez_record_search_key_new_doi: data.publication?.fez_record_search_key_new_doi }
-            : { fez_record_search_key_new_doi: null }),
-        ...(!!data.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText
-            ? {
-                  fez_record_search_key_deletion_notes: {
-                      rek_deletion_notes:
-                          data.publication?.fez_record_search_key_deletion_notes.rek_deletion_notes.htmlText,
-                  },
-              }
-            : { fez_record_search_key_deletion_notes: null }),
-    };
     return dispatch => {
         dispatch({ type: DELETE_RECORD_PROCESSING });
         return Promise.resolve([])
-            .then(() => destroy(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), payload))
+            .then(() => destroy(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), createPayload(data)))
+            .then(responses => {
+                dispatch({
+                    type: DELETE_RECORD_SUCCESS,
+                });
+                return Promise.resolve(responses);
+            })
+            .catch(error => {
+                dispatch({
+                    type: DELETE_RECORD_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+}
+
+/**
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function deleteUpdatePartial(data) {
+    return dispatch => {
+        dispatch({ type: DELETE_RECORD_PROCESSING });
+        return Promise.resolve([])
+            .then(() => patch(EXISTING_DELETED_RECORD({ pid: data.publication.rek_pid }), createPayload(data)))
             .then(responses => {
                 dispatch({
                     type: DELETE_RECORD_SUCCESS,

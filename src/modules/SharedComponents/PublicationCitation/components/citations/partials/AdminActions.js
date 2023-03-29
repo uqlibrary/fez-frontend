@@ -6,7 +6,13 @@ import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { debounce } from 'throttle-debounce';
 
-import { PUBLICATION_TYPES_WITH_DOI, RECORD_ACTION_URLS as defaultActions, RECORD_TYPE_RECORD } from 'config/general';
+import {
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPES_WITH_DOI,
+    RECORD_ACTION_URLS as defaultActions,
+    RECORD_TYPE_RECORD,
+    UPDATE_DELETION_NOTES_LABEL,
+} from 'config/general';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 import { rccDatasetCollection } from 'config/doi';
 
@@ -38,7 +44,15 @@ export const AdminActions = ({
     };
 
     // Remove actions which should not be shown for deleted records, if specified
-    let filteredActions = isRecordDeleted ? adminActions.filter(action => action.showInDeleted) : adminActions;
+    let filteredActions = !isRecordDeleted
+        ? adminActions.filter(action => action.label !== UPDATE_DELETION_NOTES_LABEL)
+        : adminActions
+              .filter(action => action.showInDeleted)
+              .filter(
+                  action =>
+                      action.label !== UPDATE_DELETION_NOTES_LABEL ||
+                      publication.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
+              );
 
     // 'change display type' only applies to Record types
     filteredActions = filteredActions.filter(action => {

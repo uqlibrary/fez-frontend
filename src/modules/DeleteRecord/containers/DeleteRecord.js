@@ -5,10 +5,17 @@ import Immutable from 'immutable';
 import DeleteRecord from '../components/DeleteRecord';
 import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
+import { DELETED } from '../../../config/general';
+
 const FORM_NAME = 'DeleteRecord';
 
 const onSubmit = (values, dispatch) => {
-    return dispatch(actions.deleteRecord({ ...values.toJS() })).catch(error => {
+    const formValues = values.toJS();
+    return dispatch(
+        formValues.publication.rek_status === DELETED
+            ? actions.deleteUpdatePartial({ ...formValues })
+            : actions.deleteRecord({ ...formValues }),
+    ).catch(error => {
         throw new SubmissionError({ _error: JSON.stringify(error) });
     });
 };
