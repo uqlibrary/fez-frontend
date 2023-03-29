@@ -2,7 +2,7 @@ import React from 'react';
 import { AdminInterface, navigateToSearchResult } from './AdminInterface';
 import { useRecordContext, useTabbedContext } from 'context';
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
-import { DELETED, RECORD_TYPE_RECORD } from 'config/general';
+import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
 import pageLocale from '../../../locale/pages';
@@ -130,8 +130,6 @@ describe('AdminInterface component', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
         useRecordContext.mockImplementation(() => ({
             record: {
-                rek_pid: 'UQ:1',
-                rek_status: DELETED,
                 rek_display_type: 187,
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
                 rek_subtype: undefined,
