@@ -36,7 +36,6 @@ import {
     RECORD_TYPE_COLLECTION,
     RETRACTED,
     UNPUBLISHED,
-    DELETED,
 } from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
@@ -303,24 +302,6 @@ export const AdminInterface = ({
                         fullWidth
                         children="Unpublish"
                         onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
-                    />
-                </Grid>
-            )}
-            {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status === DELETED && isDeleted && (
-                <Grid item xs={12} sm={3}>
-                    <Button
-                        id={`admin-work-save${placement}`}
-                        data-testid={`save-admin${placement}`}
-                        disabled={
-                            !!submitting ||
-                            !!disableSubmit ||
-                            (locked && record.rek_editing_user !== authorDetails.username)
-                        }
-                        variant="contained"
-                        color="secondary"
-                        fullWidth
-                        children="Save"
-                        onClick={handleSubmit}
                     />
                 </Grid>
             )}

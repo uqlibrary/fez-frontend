@@ -1335,14 +1335,6 @@ export default {
                         label: 'Dataset description',
                         placeholder: "Describe the dataset's topic(s) and theme(s)",
                     },
-                    newDoi: {
-                        label: 'New DOI',
-                        placeholder: 'Please enter the DOI to which the record moved to',
-                    },
-                    deletionNotes: {
-                        label: 'Deletion Notes',
-                        placeholder: 'Please enter deletion notes',
-                    },
                     contactName: {
                         label: 'Contact name',
                         placeholder: 'Type the name of primary contact for this dataset',

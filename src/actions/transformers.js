@@ -1380,13 +1380,6 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         },
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...rest,
-        ...(!!rest.fez_record_search_key_deletion_notes?.htmlText
-            ? {
-                  fez_record_search_key_deletion_notes: {
-                      rek_deletion_notes: rest.fez_record_search_key_deletion_notes.htmlText,
-                  },
-              }
-            : {}),
     };
 };
 

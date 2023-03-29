@@ -36,7 +36,7 @@ export function loadRecordToView(pid, isEdit = false) {
             .catch(error => {
                 if (error.status === 410) {
                     dispatch({
-                        type: actions.VIEW_RECORD_DELETED_LOADED,
+                        type: actions.VIEW_RECORD_DELETED,
                         payload: error.data,
                     });
                 } else {

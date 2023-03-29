@@ -488,23 +488,6 @@ export default {
                 placeholder: 'Translated proceedings title',
             },
         },
-        fez_record_search_key_deletion_notes: {
-            component: RichEditorField,
-            componentProps: {
-                name: 'adminSection.fez_record_search_key_deletion_notes',
-                title: 'Deletion Notes',
-                titleProps: {
-                    variant: 'caption',
-                    color: 'primary',
-                    style: {
-                        fontWeight: 600,
-                    },
-                },
-                height: 100,
-                format: value => Immutable.Map(value),
-                richEditorId: 'rek-deletion-notes',
-            },
-        },
         fez_record_search_key_doi: {
             component: GenericTextField,
             componentProps: {
@@ -1512,16 +1495,6 @@ export default {
                 name: 'bibliographicSection.fez_record_search_key_parent_publication.rek_parent_publication',
                 multiline: true,
                 placeholder: '',
-            },
-        },
-        fez_record_search_key_new_doi: {
-            component: GenericTextField,
-            componentProps: {
-                textFieldId: 'rek-new-doi',
-                name: 'adminSection.fez_record_search_key_new_doi.rek_new_doi',
-                fullWidth: true,
-                validate: [validation.doi],
-                ...formLocale.addDataset.information.dataset.fieldLabels.newDoi,
             },
         },
         fez_record_search_key_newspaper: {

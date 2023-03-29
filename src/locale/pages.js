@@ -576,13 +576,6 @@ export default {
                                 another version
                             </a>
                             .
-                            {record.fez_record_search_key_deletion_notes?.rek_deletion_notes && (
-                                <div
-                                    dangerouslySetInnerHTML={{
-                                        __html: record.fez_record_search_key_deletion_notes?.rek_deletion_notes,
-                                    }}
-                                />
-                            )}
                         </>
                     ) : (
                         'This work has been deleted.'
