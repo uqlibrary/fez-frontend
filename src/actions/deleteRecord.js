@@ -9,7 +9,7 @@ import {
     DELETE_RECORD_FAILED,
 } from './actionTypes';
 import { get, destroy, patch } from 'repositories/generic';
-import { EXISTING_DELETED_RECORD, EXISTING_RECORD_API } from 'repositories/routes';
+import { EXISTING_RECORD_API } from 'repositories/routes';
 import * as actions from './actionTypes';
 
 /**
@@ -117,7 +117,7 @@ export function deleteUpdatePartial(data) {
     return dispatch => {
         dispatch({ type: DELETE_RECORD_PROCESSING });
         return Promise.resolve([])
-            .then(() => patch(EXISTING_DELETED_RECORD({ pid: data.publication.rek_pid }), createPayload(data)))
+            .then(() => patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), createPayload(data)))
             .then(responses => {
                 dispatch({
                     type: DELETE_RECORD_SUCCESS,
