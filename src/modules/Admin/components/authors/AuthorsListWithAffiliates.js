@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useState, useReducer, useRef } from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
 import { useTheme } from '@mui/material/styles';
@@ -35,7 +35,12 @@ import { PRECISION } from 'helpers/authorAffiliations';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Box from '@mui/material/Box';
-import { hasAnyProblemAffiliations, has100pcAffiliations, hasValidOrgAffiliations } from 'helpers/authorAffiliations';
+import {
+    hasAnyProblemAffiliations,
+    has100pcAffiliations,
+    hasValidOrgAffiliations,
+    calculateAffiliationPercentile,
+} from 'helpers/authorAffiliations';
 
 export const useStyles = makeStyles(theme => ({
     linked: {
@@ -414,30 +419,43 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
     ];
 };
 
-const AuthorDetailPanelContent = ({
+const ACTIONS = {
+    ADD: 'add',
+    CHANGE: 'change',
+    DELETE: 'delete',
+};
+
+const editAffiliationReducer = (prevState, action) => {
+    switch (action.type) {
+        case ACTIONS.ADD:
+            return prevState;
+        case ACTIONS.CHANGE:
+            return prevState;
+        case ACTIONS.DELETE:
+            return prevState;
+        default:
+            throw Error(`Unknown action '${action}'`);
+    }
+};
+
+const EditingAuthorAffiliations = ({
     rowData,
-    isEditing,
     setEditing,
+    onChange,
     organisationUnits,
     suggestedOrganisationalUnitList = {},
     loadSuggestedOrganisationalUnitsList,
 }) => {
+    const uniqueOrgs = useRef([]);
     const theme = useTheme();
-
+    const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
+    const [currentAffiliations, dispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
+    console.log(dispatch);
     const {
         suggestedOrganisationUnits,
         suggestedOrganisationUnitsLoading,
         suggestedOrganisationUnitsFailed,
     } = suggestedOrganisationalUnitList;
-
-    console.log(
-        'AuthorDetailPanelContent',
-        organisationUnits,
-        isEditing,
-        suggestedOrganisationUnits,
-        suggestedOrganisationUnitsLoading,
-        suggestedOrganisationUnitsFailed,
-    );
 
     /*
     suggested:
@@ -457,22 +475,110 @@ const AuthorDetailPanelContent = ({
         org_title: "!NON-HERDC"
 
     */
+
+    if (uniqueOrgs.current.length === 0 && suggestedOrganisationUnits.length > 0) {
+        const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
+        const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
+        uniqueOrgs.current = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
+    }
+
     if (
-        isEditing &&
         suggestedOrganisationUnits.length === 0 &&
         suggestedOrganisationUnitsLoading === false &&
         suggestedOrganisationUnitsFailed === false
     ) {
         loadSuggestedOrganisationalUnitsList(rowData.aut_id);
+    }
+    if (suggestedOrganisationUnits.length === 0 && suggestedOrganisationUnitsFailed === false) {
         return <ContentLoader message={'Loading suggested Organisational Units'} />;
     }
 
+    return (
+        <Grid container xs={12} alignItems={'center'} spacing={2}>
+            <Grid xs={7} sx={{ borderBlockEnd: '1px solid #ccc' }}>
+                <Typography variant="caption">Organisational Unit</Typography>
+            </Grid>
+            <Grid xs={4} sx={{ borderBlockEnd: '1px solid #ccc' }}>
+                <Typography variant="caption">Affiliation %</Typography>
+            </Grid>
+
+            {currentAffiliations.map(item => (
+                <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
+                    <Grid xs={7} padding={1}>
+                        <Autocomplete
+                            value={uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ?? ''}
+                            options={uniqueOrgs.current ?? []}
+                            getOptionLabel={option => option.org_title}
+                            renderOption={(props, option) => (
+                                <Box
+                                    component="li"
+                                    sx={{
+                                        ...(!!option.suggested ? { color: theme.palette.primary.main } : {}),
+                                    }}
+                                    {...props}
+                                    key={option.org_id}
+                                >
+                                    {option.org_title}
+                                </Box>
+                            )}
+                            renderInput={params => (
+                                <TextField {...params} placeholder="Start typing or select from list" />
+                            )}
+                        />
+                    </Grid>
+                    <Grid xs={4} padding={1}>
+                        <Chip
+                            label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
+                            variant="outlined"
+                            size={'small'}
+                            color={'primary'}
+                        />
+                    </Grid>
+                    <Grid xs={1} justifyContent={'flex-end'} padding={1}>
+                        <IconButton aria-label="delete">
+                            <DeleteIcon />
+                        </IconButton>
+                    </Grid>
+                </React.Fragment>
+            ))}
+            <Grid xs={7} padding={1}>
+                <Autocomplete
+                    options={uniqueOrgs.current ?? []}
+                    getOptionLabel={option => option.org_title}
+                    renderOption={(props, option) => (
+                        <Box
+                            component="li"
+                            sx={{ ...(!!option.suggested ? { color: theme.palette.primary.main } : {}) }}
+                            {...props}
+                            key={option.org_id}
+                        >
+                            {option.org_title}
+                        </Box>
+                    )}
+                    renderInput={params => <TextField {...params} placeholder="Start typing or select from list" />}
+                />
+            </Grid>
+
+            <Grid container xs={12} justifyContent={'flex-end'}>
+                <Button onClick={() => setEditing({ editing: false, aut_id: rowData.aut_id })}>Cancel</Button>
+                <Button
+                    onClick={() => {
+                        const newRowData = { ...rowData, affiliations: [...currentAffiliations] };
+                        onChange(newRowData);
+                        setEditing({ editing: false, aut_id: rowData.aut_id });
+                    }}
+                    disabled={hasAnyProblemAffiliations(rowData)}
+                >
+                    Save
+                </Button>
+            </Grid>
+        </Grid>
+    );
+};
+
+const ViewingAuthorAffiliations = ({ rowData }) => {
     const affiliations = rowData.affiliations ?? [];
     const alertOptions = { title: '', message: '' };
-    const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
-    const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
-    const uniqueOrgs = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
-    console.log('uniqueOrgs', combinedArr, uniqueIds, uniqueOrgs);
 
     const hasPercentileError = !has100pcAffiliations(rowData);
     const hasOrgErrors = !hasValidOrgAffiliations(rowData);
@@ -496,6 +602,59 @@ const AuthorDetailPanelContent = ({
 
     console.log('problematicAffiliations', rowData, affiliations, alertOptions);
     return (
+        <Grid container xs={12} spacing={2}>
+            <Grid xs={12} sx={{ borderBlockEnd: '1px solid #ccc' }}>
+                <Typography variant="caption">Organisational Unit</Typography>
+            </Grid>
+            {affiliations.map(item => (
+                <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
+                    <Grid xs={2}>
+                        <Chip
+                            label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
+                            variant="outlined"
+                            size={'small'}
+                            color={hasProblems ? 'error' : 'primary'}
+                        />
+                    </Grid>
+                    <Grid xs={10}>
+                        <Typography variant="body2" color={hasProblems ? 'error' : 'primary'}>
+                            {item.fez_org_structure?.[0].org_title ?? 'Organisational Unit has been removed'}
+                        </Typography>
+                    </Grid>
+                </React.Fragment>
+            ))}
+            {affiliations.length === 0 && (
+                <>
+                    <Grid xs={2}>
+                        <Chip label={'0%'} variant="outlined" size={'small'} color={'error'} />
+                    </Grid>
+                    <Grid xs={10}>
+                        <Typography variant="body2" color={'error'}>
+                            No affiliations have been added
+                        </Typography>
+                    </Grid>
+                </>
+            )}
+            {hasProblems && (
+                <Grid xs={12}>
+                    <Alert type={'warning'} {...alertOptions} />
+                </Grid>
+            )}
+        </Grid>
+    );
+};
+
+/* istanbul ignore next */
+export const AuthorDetailPanel = ({
+    rowData,
+    isEditing,
+    setEditing,
+    onChange,
+    organisationUnits,
+    suggestedOrganisationalUnitList,
+    loadSuggestedOrganisationalUnitsList,
+}) => {
+    return (
         <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }}>
             <Typography variant="body2">
                 Affiliations{' '}
@@ -509,153 +668,19 @@ const AuthorDetailPanelContent = ({
                     </IconButton>
                 )}
             </Typography>
-
-            {!isEditing && (
-                <Grid container xs={12} spacing={2}>
-                    <Grid xs={12} sx={{ borderBlockEnd: '1px solid #ccc' }}>
-                        <Typography variant="caption">Organisational Unit</Typography>
-                    </Grid>
-                    {affiliations.map((item, index) => (
-                        <React.Fragment key={index}>
-                            <Grid xs={2}>
-                                <Chip
-                                    label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
-                                    variant="outlined"
-                                    size={'small'}
-                                    color={hasProblems ? 'error' : 'primary'}
-                                />
-                            </Grid>
-                            <Grid xs={10}>
-                                <Typography variant="body2" color={hasProblems ? 'error' : 'primary'}>
-                                    {item.fez_org_structure?.[0].org_title ?? 'Organisational Unit has been removed'}
-                                </Typography>
-                            </Grid>
-                        </React.Fragment>
-                    ))}
-                    {affiliations.length === 0 && (
-                        <>
-                            <Grid xs={2}>
-                                <Chip label={'0%'} variant="outlined" size={'small'} color={'error'} />
-                            </Grid>
-                            <Grid xs={10}>
-                                <Typography variant="body2" color={'error'}>
-                                    No affiliations have been added
-                                </Typography>
-                            </Grid>
-                        </>
-                    )}
-                    {hasProblems && (
-                        <Grid xs={12}>
-                            <Alert type={'warning'} {...alertOptions} />
-                        </Grid>
-                    )}
-                </Grid>
-                // HERE, continue to update the layout sections here to make
-                // them in line with the mocks, then get to work on
-                // a) bringing in data, b) saving data, c) making sure that
-                // data still works after exiting/re-entering edit state, d) showing error state banner
-            )}
+            {!isEditing && <ViewingAuthorAffiliations setEditing={setEditing} rowData={rowData} />}
             {isEditing && (
-                <Grid container xs={12} alignItems={'center'} spacing={2}>
-                    <Grid xs={7} sx={{ borderBlockEnd: '1px solid #ccc' }}>
-                        <Typography variant="caption">Organisational Unit</Typography>
-                    </Grid>
-                    <Grid xs={4} sx={{ borderBlockEnd: '1px solid #ccc' }}>
-                        <Typography variant="caption">Affiliation %</Typography>
-                    </Grid>
-
-                    {affiliations.map(item => (
-                        <>
-                            <Grid xs={7} padding={1}>
-                                <Autocomplete
-                                    value={uniqueOrgs.find(org => org.org_id === item.af_org_id)}
-                                    options={uniqueOrgs}
-                                    getOptionLabel={option => option.org_title}
-                                    sel
-                                    renderOption={(props, option) => (
-                                        <Box
-                                            component="li"
-                                            sx={{
-                                                ...(!!option.suggested ? { color: theme.palette.primary.main } : {}),
-                                            }}
-                                            {...props}
-                                            key={option.org_id}
-                                        >
-                                            {option.org_title}
-                                        </Box>
-                                    )}
-                                    renderInput={params => (
-                                        <TextField {...params} placeholder="Start typing or select from list" />
-                                    )}
-                                />
-                            </Grid>
-                            <Grid xs={4} padding={1}>
-                                <Chip
-                                    label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
-                                    variant="outlined"
-                                    size={'small'}
-                                    color={'primary'}
-                                />
-                            </Grid>
-                            <Grid xs={1} justifyContent={'flex-end'} padding={1}>
-                                <IconButton aria-label="delete">
-                                    <DeleteIcon />
-                                </IconButton>
-                            </Grid>
-                        </>
-                    ))}
-                    <Grid xs={7} padding={1}>
-                        <Autocomplete
-                            options={uniqueOrgs}
-                            getOptionLabel={option => option.org_title}
-                            renderOption={(props, option) => (
-                                <Box
-                                    component="li"
-                                    sx={{ ...(!!option.suggested ? { color: theme.palette.primary.main } : {}) }}
-                                    {...props}
-                                    key={option.org_id}
-                                >
-                                    {option.org_title}
-                                </Box>
-                            )}
-                            renderInput={params => (
-                                <TextField {...params} placeholder="Start typing or select from list" />
-                            )}
-                        />
-                    </Grid>
-
-                    <Grid container xs={12} justifyContent={'flex-end'}>
-                        <Button onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}>
-                            Cancel
-                        </Button>
-                        <Button onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}>
-                            Save
-                        </Button>
-                    </Grid>
-                </Grid>
+                <EditingAuthorAffiliations
+                    rowData={rowData}
+                    isEditing={isEditing}
+                    setEditing={setEditing}
+                    onChange={onChange}
+                    organisationUnits={organisationUnits}
+                    suggestedOrganisationalUnitList={suggestedOrganisationalUnitList}
+                    loadSuggestedOrganisationalUnitsList={loadSuggestedOrganisationalUnitsList}
+                />
             )}
         </Grid>
-    );
-};
-
-/* istanbul ignore next */
-export const AuthorDetailPanel = ({
-    rowData,
-    isEditing,
-    setEditing,
-    organisationUnits,
-    suggestedOrganisationalUnitList,
-    loadSuggestedOrganisationalUnitsList,
-}) => {
-    return (
-        <AuthorDetailPanelContent
-            rowData={rowData}
-            isEditing={isEditing}
-            setEditing={setEditing}
-            organisationUnits={organisationUnits}
-            suggestedOrganisationalUnitList={suggestedOrganisationalUnitList}
-            loadSuggestedOrganisationalUnitsList={loadSuggestedOrganisationalUnitsList}
-        />
     );
 };
 
@@ -672,6 +697,7 @@ export const AuthorsListWithAffiliates = ({
     loadOrganisationalUnitsList,
     loadSuggestedOrganisationalUnitsList,
 }) => {
+    console.log('AuthorsListWithAffiliates', list);
     const { organisationUnits, organisationUnitsLoading, organisationUnitsFailed } = organisationalUnitList;
 
     if (organisationUnits.length === 0 && organisationUnitsLoading === false && organisationUnitsFailed === false) {
@@ -774,6 +800,16 @@ export const AuthorsListWithAffiliates = ({
             ...materialTable.dataManager.getRenderState(),
             showAddRow: false,
         });
+    };
+
+    const handleAffiliationUpdate = list => rowData => {
+        console.log('handleAffiliationUpdate', list, rowData);
+        const index = list.findIndex(item => item.aut_id === rowData.aut_id);
+        const newList = [...list.slice(0, index), rowData, ...list.slice(index + 1)];
+
+        console.log('handleAffiliationUpdate', newList);
+        onChange(newList);
+        setData(newList);
     };
 
     return (
@@ -961,6 +997,7 @@ export const AuthorsListWithAffiliates = ({
                                       rowData,
                                       isEditing: isEditing(rowData.aut_id),
                                       setEditing,
+                                      onChange: handleAffiliationUpdate(list),
                                       organisationUnits,
                                       suggestedOrganisationalUnitList,
                                       loadSuggestedOrganisationalUnitsList,

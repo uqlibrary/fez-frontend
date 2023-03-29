@@ -86,18 +86,15 @@ export class ContributorsEditor extends PureComponent {
     };
 
     getContributorsWithAffiliationsFromProps = props => {
-        if (props.input && props.input.name && props.input.value) {
-            const authors = props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
-            const affiliations = this.props.record?.fez_author_affiliation ?? [];
-            return authors.map(author => {
-                return {
-                    ...author,
-                    affiliations: affiliations.filter(affiliation => affiliation.af_author_id === author.aut_id),
-                };
-            });
-        }
+        const authors = this.getContributorsFromProps(props);
 
-        return [];
+        const affiliations = props.record?.fez_author_affiliation ?? [];
+        return authors.map(author => {
+            return {
+                ...author,
+                affiliations: affiliations.filter(affiliation => affiliation.af_author_id === author.aut_id),
+            };
+        });
     };
 
     addContributor = contributor => {

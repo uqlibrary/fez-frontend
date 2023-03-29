@@ -1,6 +1,7 @@
 export const TOTAL = 100;
 export const PRECISION = 1000;
 export const MAX_TOTAL = TOTAL * PRECISION;
+export const NON_HERDC_ID = 1062;
 
 export const getFilteredAffiliations = (author, affiliations) =>
     affiliations.length > 0
@@ -14,7 +15,6 @@ export const hasValidOrgAffiliations = (author, affiliations = []) => {
 
 export const has100pcAffiliations = (author, affiliations = [], total = MAX_TOTAL) => {
     const filteredAffiliations = getFilteredAffiliations(author, affiliations);
-    console.log('has100pcAffiliations', author, affiliations, total, filteredAffiliations);
     return (
         filteredAffiliations.reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= total
     );
@@ -52,4 +52,36 @@ export const composeAuthorAffiliationProblems = record => {
             })
             .filter(item => item.rek_author_id !== 0 && (!item.hasOrgAffiliations || !item.has100pcAffiliations)) ?? []
     );
+};
+
+const splitValue = (numToSplit, numSplits) => {
+    const splitAmount = Math.floor(numToSplit / numSplits);
+    const remainder = numToSplit % numSplits;
+    const splits = new Array(numSplits).fill(splitAmount);
+
+    for (let i = 0; i < remainder; i++) {
+        splits[i]++;
+    }
+    return splits;
+};
+
+const returnNonHerdc = affiliations => {
+    return affiliations.map(item => {
+        item.af_percent_affiliation = item.af_org_id === NON_HERDC_ID ? MAX_TOTAL : 0;
+        return item;
+    });
+};
+
+const returnEvenSplit = affiliations => {
+    const splitValues = splitValue(MAX_TOTAL, affiliations.length);
+    return affiliations.map((item, index) => {
+        item.af_percent_affiliation = splitValues[index];
+        return item;
+    });
+};
+export const calculateAffiliationPercentile = (affiliations = []) => {
+    const newAffiliations = JSON.parse(JSON.stringify(affiliations)); // deep copy
+    return newAffiliations.some(item => item.af_org_id === NON_HERDC_ID)
+        ? returnNonHerdc(newAffiliations)
+        : returnEvenSplit(newAffiliations);
 };
