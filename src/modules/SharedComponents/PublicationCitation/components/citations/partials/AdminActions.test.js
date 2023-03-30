@@ -7,6 +7,7 @@ import {
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_WORKING_PAPER,
     RECORD_ACTION_URLS as defaultActions,
+    UPDATE_DELETION_NOTES_LABEL,
 } from 'config/general';
 import { rccDatasetCollection } from 'config/doi';
 
@@ -55,16 +56,18 @@ describe('AdminActions component', () => {
             ...action,
         }));
 
-        expectedActions.map(action => {
-            fireEvent.click(getByText(action.isDoi ? action.label(false) : action.label, menu));
-            expect(global.window.open).toHaveBeenCalledTimes(1);
-            expect(global.window.open).toHaveBeenCalledWith(
-                `${action.url('UQ:111111')}${!action.isRecordEdit ? '' : '?navigatedFrom=test'}`,
-                action.inApp ? '_self' : '_blank',
-                action.options,
-            );
-            windowOpenSpy.mockClear();
-        });
+        expectedActions
+            .filter(action => action.label !== UPDATE_DELETION_NOTES_LABEL)
+            .map(action => {
+                fireEvent.click(getByText(action.isDoi ? action.label(false) : action.label, menu));
+                expect(global.window.open).toHaveBeenCalledTimes(1);
+                expect(global.window.open).toHaveBeenCalledWith(
+                    `${action.url('UQ:111111')}${!action.isRecordEdit ? '' : '?navigatedFrom=test'}`,
+                    action.inApp ? '_self' : '_blank',
+                    action.options,
+                );
+                windowOpenSpy.mockClear();
+            });
     });
 
     it('should handle deleted record admin actions menu', () => {

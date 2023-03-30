@@ -18,7 +18,7 @@ import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/Navigation
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { pathConfig, validation } from 'config';
-import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
+import { DELETED, DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { doesListContainItem } from 'helpers/general';
 
@@ -154,14 +154,15 @@ export default class DeleteRecord extends PureComponent {
         // eslint-disable-next-line camelcase
         const rekDisplayTypeLowercase = this.props.recordToDelete?.rek_display_type_lookup?.toLowerCase();
         const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
+        const isDeleted = this.props.recordToDelete?.rek_status === DELETED;
 
         return (
-            <StandardPage title={txt.title}>
+            <StandardPage title={txt.title(isDeleted)}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
                     <form onSubmit={this._handleDefaultSubmit}>
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
-                                <StandardCard title={txt.subTitle} help={txt.help}>
+                                <StandardCard title={txt.subTitle(isDeleted)} help={txt.help}>
                                     <PublicationCitation
                                         publication={this.props.recordToDelete}
                                         citationStyle={'header'}
@@ -273,7 +274,7 @@ export default class DeleteRecord extends PureComponent {
                                     variant={'contained'}
                                     color={'primary'}
                                     fullWidth
-                                    children={txt.submit}
+                                    children={txt.submit(isDeleted)}
                                     onClick={this.props.handleSubmit}
                                     disabled={hasUQDOI || this.props.submitting || this.props.disableSubmit}
                                     id="submit-delete-record"

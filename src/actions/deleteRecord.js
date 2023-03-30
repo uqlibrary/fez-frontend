@@ -11,6 +11,23 @@ import {
 import { get, destroy, patch } from 'repositories/generic';
 import { EXISTING_RECORD_API } from 'repositories/routes';
 import * as actions from './actionTypes';
+import { DELETED } from '../config/general';
+
+const createPayload = data => ({
+    rek_status: DELETED,
+    ...(!!data.reason ? { reason: data.reason } : {}),
+    ...(!!data.publication?.fez_record_search_key_new_doi?.rek_new_doi
+        ? { fez_record_search_key_new_doi: data.publication?.fez_record_search_key_new_doi }
+        : { fez_record_search_key_new_doi: null }),
+    ...(!!data.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText
+        ? {
+              fez_record_search_key_deletion_notes: {
+                  rek_deletion_notes:
+                      data.publication?.fez_record_search_key_deletion_notes.rek_deletion_notes.htmlText,
+              },
+          }
+        : { fez_record_search_key_deletion_notes: null }),
+});
 
 /**
  * Load publication
@@ -70,21 +87,6 @@ export function clearDeleteRecord() {
         });
     };
 }
-
-const createPayload = data => ({
-    ...(!!data.reason ? { reason: data.reason } : {}),
-    ...(!!data.publication?.fez_record_search_key_new_doi?.rek_new_doi
-        ? { fez_record_search_key_new_doi: data.publication?.fez_record_search_key_new_doi }
-        : { fez_record_search_key_new_doi: null }),
-    ...(!!data.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText
-        ? {
-              fez_record_search_key_deletion_notes: {
-                  rek_deletion_notes:
-                      data.publication?.fez_record_search_key_deletion_notes.rek_deletion_notes.htmlText,
-              },
-          }
-        : { fez_record_search_key_deletion_notes: null }),
-});
 
 /**
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return

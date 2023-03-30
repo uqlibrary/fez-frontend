@@ -9,33 +9,18 @@ export default {
             publicationLoading: 'Loading work to claim',
             claimingInformation: {
                 title: 'You are claiming to be an author for the following work:',
-                // help: {
-                //     title: 'Claiming a  work',
-                //     text: 'Enter the text that will help people here',
-                //     buttonLabel: 'CLOSE'
-                // }
             },
             authorLinking: {
                 title: 'Author linking',
                 text:
                     'We were unable to automatically detect who you are from the list of authors ' +
                     'on this work. Please select your name from the list below: ',
-                // help: {
-                //     title: 'Author linking',
-                //     text: '...',
-                //     buttonLabel: 'CLOSE'
-                // }
             },
             contributorLinking: {
                 title: 'Editor linking',
                 text:
                     'We were unable to automatically detect who you are from the list of editors ' +
                     'on this work. Please select your name from the list below: ',
-                // help: {
-                //     title: 'Editor linking',
-                //     text: '...',
-                //     buttonLabel: 'CLOSE'
-                // }
             },
             contentIndicators: {
                 help: {
@@ -64,11 +49,6 @@ export default {
             },
             comments: {
                 title: 'Optional: Suggest changes or add links to this work',
-                // help: {
-                //     title: 'Additional information',
-                //     text: '...',
-                //     buttonLabel: 'CLOSE'
-                // },
                 fieldLabels: {
                     comments: 'Type changes or comments here',
                     url: 'Link (URL)',
@@ -76,11 +56,6 @@ export default {
             },
             fileUpload: {
                 title: 'Optional: Upload additional files',
-                // help: {
-                //     title: 'Files',
-                //     text: '...',
-                //     buttonLabel: 'CLOSE'
-                // }
             },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Cancel claiming a work',
@@ -159,11 +134,6 @@ export default {
         unclaimPublicationForm: {
             title: 'Remove this work from my profile',
             description: '',
-            // help: {
-            //     title: 'Unclaim a work',
-            //     text: 'Enter the text that will help people here',
-            //     buttonLabel: 'CLOSE'
-            // },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Unclaim a work',
                 confirmationMessage: 'You have unclaimed this work successfully',
@@ -204,11 +174,6 @@ export default {
             },
             comments: {
                 title: 'Suggest a correction',
-                // help: {
-                //     title: 'Request a change',
-                //     text: '...',
-                //     buttonLabel: 'CLOSE'
-                // },
                 fieldLabels: {
                     comments: 'Type changes or comments here',
                     url: 'Link (URL)',
@@ -217,11 +182,6 @@ export default {
             fileUpload: {
                 title: 'Upload files',
                 description: <div>Upload an Open Access file, HERDC evidence or an NTRO Research Statement</div>,
-                // help: {
-                //     title: 'Upload files',
-                //     text: '...',
-                //     buttonLabel: 'CLOSE'
-                // }
             },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Cancel request',

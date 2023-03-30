@@ -564,29 +564,32 @@ export default {
             deletedAlert: {
                 type: 'info_outline',
                 title: '',
-                message: record =>
-                    record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION &&
-                    record.fez_record_search_key_new_doi?.rek_new_doi ? (
-                        <>
-                            This Data Collection has been deleted and substituted by{' '}
-                            <a
-                                href={`https://doi.org/${record.fez_record_search_key_new_doi?.rek_new_doi}`}
-                                target="_blank"
-                            >
-                                another version
-                            </a>
-                            .
-                            {record.fez_record_search_key_deletion_notes?.rek_deletion_notes && (
-                                <div
-                                    dangerouslySetInnerHTML={{
-                                        __html: record.fez_record_search_key_deletion_notes?.rek_deletion_notes,
-                                    }}
-                                />
-                            )}
-                        </>
-                    ) : (
-                        'This work has been deleted.'
-                    ),
+                message: record => (
+                    <>
+                        {record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION &&
+                        record.fez_record_search_key_new_doi?.rek_new_doi ? (
+                            <>
+                                This Data Collection has been deleted and substituted by{' '}
+                                <a
+                                    href={`https://doi.org/${record.fez_record_search_key_new_doi?.rek_new_doi}`}
+                                    target="_blank"
+                                >
+                                    another version
+                                </a>
+                                .
+                            </>
+                        ) : (
+                            'This work has been deleted.'
+                        )}
+                        {record.fez_record_search_key_deletion_notes?.rek_deletion_notes && (
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: record.fez_record_search_key_deletion_notes?.rek_deletion_notes,
+                                }}
+                            />
+                        )}
+                    </>
+                ),
                 alertId: 'alert-info',
             },
             notFound: {
@@ -1221,10 +1224,10 @@ export default {
         },
         deleteRecord: {
             loadingMessage: 'Loading work',
-            title: 'Delete work',
-            subTitle: 'Work to be deleted',
+            title: isDeleted => (isDeleted ? 'Update deleted work' : 'Delete work'),
+            subTitle: isDeleted => (isDeleted ? 'Work deleted' : 'Work to be deleted'),
             cancel: 'Cancel',
-            submit: 'Delete',
+            submit: isDeleted => (isDeleted ? 'Update' : 'Delete'),
         },
         adminAdd: {
             title: 'Add a new work',
