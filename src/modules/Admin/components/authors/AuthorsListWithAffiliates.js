@@ -144,7 +144,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             ),
             field: 'nameAsPublished',
             render: rowData => {
-                const inProblemState = hasAnyProblemAffiliations(rowData);
+                const inProblemState = hasAnyProblemAffiliations({ author: rowData });
                 return (
                     <NameAsPublished
                         icon={getIcon({ rowData, disabled, inProblemState })}
@@ -201,7 +201,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             ),
             field: 'uqIdentifier',
             render: rowData => {
-                const inProblemState = hasAnyProblemAffiliations(rowData);
+                const inProblemState = hasAnyProblemAffiliations({ author: rowData });
                 return (
                     <Typography
                         variant="body2"
@@ -419,26 +419,38 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
     ];
 };
 
-const ACTIONS = {
+const ACTION = {
     ADD: 'add',
     CHANGE: 'change',
     DELETE: 'delete',
 };
 
-const editAffiliationReducer = (prevState, action) => {
+const deepClone = obj => {
+    return JSON.parse(JSON.stringify(obj));
+};
+
+const editAffiliationReducer = (affiliations, action) => {
     switch (action.type) {
-        case ACTIONS.ADD:
-            return prevState;
-        case ACTIONS.CHANGE:
-            return prevState;
-        case ACTIONS.DELETE:
-            return prevState;
+        case ACTION.ADD:
+            return affiliations;
+        case ACTION.CHANGE:
+            const changedAffiliation = action.affiliation;
+            const index = affiliations.findIndex(item => item.af_id === changedAffiliation.af_id);
+            const newAffiliations = [
+                ...affiliations.slice(0, index),
+                changedAffiliation,
+                ...affiliations.slice(index + 1),
+            ];
+            console.log('editAffiliationReducer', affiliations, action, changedAffiliation, index, newAffiliations);
+            return calculateAffiliationPercentile(newAffiliations);
+        case ACTION.DELETE:
+            return affiliations;
         default:
             throw Error(`Unknown action '${action}'`);
     }
 };
 
-const EditingAuthorAffiliations = ({
+const _EditingAuthorAffiliations = ({
     rowData,
     setEditing,
     onChange,
@@ -450,7 +462,7 @@ const EditingAuthorAffiliations = ({
     const theme = useTheme();
     const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
     const [currentAffiliations, dispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
-    console.log(dispatch);
+    console.log('<><><>', currentAffiliations, dispatch);
     const {
         suggestedOrganisationUnits,
         suggestedOrganisationUnitsLoading,
@@ -493,6 +505,17 @@ const EditingAuthorAffiliations = ({
         return <ContentLoader message={'Loading suggested Organisational Units'} />;
     }
 
+    const changeAffiliation = (currentAffiliation, newValue) => {
+        const newAffiliation = deepClone(currentAffiliation);
+        newAffiliation.af_org_id = newValue.org_id;
+        newAffiliation.fez_org_structure = { ...newValue };
+        console.log('changeAffiliation', currentAffiliation, newValue, newAffiliation);
+        dispatch({
+            type: ACTION.CHANGE,
+            affiliation: newAffiliation,
+        });
+    };
+
     return (
         <Grid container xs={12} alignItems={'center'} spacing={2}>
             <Grid xs={7} sx={{ borderBlockEnd: '1px solid #ccc' }}>
@@ -506,7 +529,13 @@ const EditingAuthorAffiliations = ({
                 <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
                     <Grid xs={7} padding={1}>
                         <Autocomplete
-                            value={uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ?? ''}
+                            clearOnBlur
+                            disableClearable
+                            value={
+                                uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ?? {
+                                    org_title: 'Organisation not found',
+                                }
+                            }
                             options={uniqueOrgs.current ?? []}
                             getOptionLabel={option => option.org_title}
                             renderOption={(props, option) => (
@@ -524,6 +553,9 @@ const EditingAuthorAffiliations = ({
                             renderInput={params => (
                                 <TextField {...params} placeholder="Start typing or select from list" />
                             )}
+                            onChange={(event, newValue) => {
+                                changeAffiliation(item, newValue);
+                            }}
                         />
                     </Grid>
                     <Grid xs={4} padding={1}>
@@ -543,6 +575,8 @@ const EditingAuthorAffiliations = ({
             ))}
             <Grid xs={7} padding={1}>
                 <Autocomplete
+                    clearOnBlur
+                    disableClearable
                     options={uniqueOrgs.current ?? []}
                     getOptionLabel={option => option.org_title}
                     renderOption={(props, option) => (
@@ -567,7 +601,7 @@ const EditingAuthorAffiliations = ({
                         onChange(newRowData);
                         setEditing({ editing: false, aut_id: rowData.aut_id });
                     }}
-                    disabled={hasAnyProblemAffiliations(rowData)}
+                    disabled={hasAnyProblemAffiliations({ affiliations: currentAffiliations })}
                 >
                     Save
                 </Button>
@@ -576,12 +610,14 @@ const EditingAuthorAffiliations = ({
     );
 };
 
-const ViewingAuthorAffiliations = ({ rowData }) => {
+const EditingAuthorAffiliations = React.memo(_EditingAuthorAffiliations);
+
+const viewingAuthorAffiliations = ({ rowData }) => {
     const affiliations = rowData.affiliations ?? [];
     const alertOptions = { title: '', message: '' };
 
-    const hasPercentileError = !has100pcAffiliations(rowData);
-    const hasOrgErrors = !hasValidOrgAffiliations(rowData);
+    const hasPercentileError = !has100pcAffiliations({ author: rowData });
+    const hasOrgErrors = !hasValidOrgAffiliations({ author: rowData });
     const hasProblems = hasPercentileError || hasOrgErrors;
 
     if (hasPercentileError) {
@@ -618,7 +654,10 @@ const ViewingAuthorAffiliations = ({ rowData }) => {
                     </Grid>
                     <Grid xs={10}>
                         <Typography variant="body2" color={hasProblems ? 'error' : 'primary'}>
-                            {item.fez_org_structure?.[0].org_title ?? 'Organisational Unit has been removed'}
+                            {item.fez_org_structure?.org_title ??
+                                item.fez_org_structure?.[0].org_title ??
+                                'Organisational Unit has been removed' // TODO - remove array check once we no longer have arrays in the API
+                            }
                         </Typography>
                     </Grid>
                 </React.Fragment>
@@ -643,6 +682,7 @@ const ViewingAuthorAffiliations = ({ rowData }) => {
         </Grid>
     );
 };
+const ViewingAuthorAffiliations = React.memo(viewingAuthorAffiliations);
 
 /* istanbul ignore next */
 export const AuthorDetailPanel = ({

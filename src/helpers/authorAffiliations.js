@@ -8,22 +8,38 @@ export const getFilteredAffiliations = (author, affiliations) =>
         ? affiliations?.filter(item => item.af_author_id === author.rek_author_id)
         : author.affiliations ?? [];
 
-export const hasValidOrgAffiliations = (author, affiliations = []) => {
-    const filteredAffiliations = getFilteredAffiliations(author, affiliations);
+export const hasValidOrgAffiliations = ({ author, affiliations = [] } = {}) => {
+    let filteredAffiliations = [...affiliations];
+    if (!!author) {
+        filteredAffiliations = getFilteredAffiliations(author, affiliations);
+    }
     return filteredAffiliations.length > 0 && filteredAffiliations.every(item => !!item.fez_org_structure);
 };
 
-export const has100pcAffiliations = (author, affiliations = [], total = MAX_TOTAL) => {
-    const filteredAffiliations = getFilteredAffiliations(author, affiliations);
+export const has100pcAffiliations = ({ author, affiliations = [], total = MAX_TOTAL } = {}) => {
+    let filteredAffiliations = [...affiliations];
+    if (!!author) {
+        filteredAffiliations = getFilteredAffiliations(author, affiliations);
+    }
+
     return (
         filteredAffiliations.reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= total
     );
 };
 
-export const hasAnyProblemAffiliations = (author, affiliations, total) =>
-    author.aut_id !== 0 &&
-    (hasValidOrgAffiliations(author, affiliations) === false ||
-        has100pcAffiliations(author, affiliations, total) === false);
+export const hasAnyProblemAffiliations = ({ author, affiliations = [], total = MAX_TOTAL } = {}) => {
+    if (!!author) {
+        return (
+            author.aut_id !== 0 &&
+            (hasValidOrgAffiliations({ author }) === false || has100pcAffiliations({ author, total }) === false)
+        );
+    } else {
+        return (
+            hasValidOrgAffiliations({ affiliations }) === false ||
+            has100pcAffiliations({ affiliations, total }) === false
+        );
+    }
+};
 
 export const getUniqueAffiliations = affiliations =>
     affiliations?.reduce(
@@ -40,14 +56,15 @@ export const composeAuthorAffiliationProblems = record => {
             ?.map((author, index) => {
                 const hasAffiliations = uniqueAffiliations.includes(author.rek_author_id);
                 const hasOrgAffiliations =
-                    hasAffiliations && hasValidOrgAffiliations(author, record.fez_author_affiliation);
+                    hasAffiliations && hasValidOrgAffiliations({ author, affiliations: record.fez_author_affiliation });
                 return {
                     rek_author_id: author.rek_author_id,
                     rek_author:
                         record.fez_record_search_key_author?.[index]?.rek_author ?? author.rek_author_id_lookup ?? '',
                     hasOrgAffiliations,
                     has100pcAffiliations:
-                        hasAffiliations && has100pcAffiliations(author, record.fez_author_affiliation),
+                        hasAffiliations &&
+                        has100pcAffiliations({ author, affiliations: record.fez_author_affiliation }),
                 };
             })
             .filter(item => item.rek_author_id !== 0 && (!item.hasOrgAffiliations || !item.has100pcAffiliations)) ?? []
