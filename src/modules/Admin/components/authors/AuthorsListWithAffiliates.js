@@ -430,27 +430,28 @@ const deepClone = obj => {
 };
 
 const editAffiliationReducer = (affiliations, action) => {
+    let index;
+    let newAffiliations;
+
     switch (action.type) {
         case ACTION.ADD:
             return affiliations;
         case ACTION.CHANGE:
             const changedAffiliation = action.affiliation;
-            const index = affiliations.findIndex(item => item.af_id === changedAffiliation.af_id);
-            const newAffiliations = [
-                ...affiliations.slice(0, index),
-                changedAffiliation,
-                ...affiliations.slice(index + 1),
-            ];
+            index = affiliations.findIndex(item => item.af_id === changedAffiliation.af_id);
+            newAffiliations = [...affiliations.slice(0, index), changedAffiliation, ...affiliations.slice(index + 1)];
             console.log('editAffiliationReducer', affiliations, action, changedAffiliation, index, newAffiliations);
             return calculateAffiliationPercentile(newAffiliations);
         case ACTION.DELETE:
-            return affiliations;
+            index = action.index;
+            newAffiliations = [...affiliations.slice(0, index), ...affiliations.slice(index + 1)];
+            return calculateAffiliationPercentile(newAffiliations);
         default:
             throw Error(`Unknown action '${action}'`);
     }
 };
 
-const _EditingAuthorAffiliations = ({
+const EditingAuthorAffiliations = ({
     rowData,
     setEditing,
     onChange,
@@ -516,6 +517,13 @@ const _EditingAuthorAffiliations = ({
         });
     };
 
+    const deleteAffiliation = index => {
+        dispatch({
+            type: ACTION.DELETE,
+            index,
+        });
+    };
+
     return (
         <Grid container xs={12} alignItems={'center'} spacing={2}>
             <Grid xs={7} sx={{ borderBlockEnd: '1px solid #ccc' }}>
@@ -525,7 +533,7 @@ const _EditingAuthorAffiliations = ({
                 <Typography variant="caption">Affiliation %</Typography>
             </Grid>
 
-            {currentAffiliations.map(item => (
+            {currentAffiliations.map((item, index) => (
                 <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
                     <Grid xs={7} padding={1}>
                         <Autocomplete
@@ -568,7 +576,7 @@ const _EditingAuthorAffiliations = ({
                     </Grid>
                     <Grid xs={1} justifyContent={'flex-end'} padding={1}>
                         <IconButton aria-label="delete">
-                            <DeleteIcon />
+                            <DeleteIcon onClick={() => deleteAffiliation(index)} />
                         </IconButton>
                     </Grid>
                 </React.Fragment>
@@ -610,9 +618,7 @@ const _EditingAuthorAffiliations = ({
     );
 };
 
-const EditingAuthorAffiliations = React.memo(_EditingAuthorAffiliations);
-
-const viewingAuthorAffiliations = ({ rowData }) => {
+const ViewingAuthorAffiliations = ({ rowData }) => {
     const affiliations = rowData.affiliations ?? [];
     const alertOptions = { title: '', message: '' };
 
@@ -682,7 +688,6 @@ const viewingAuthorAffiliations = ({ rowData }) => {
         </Grid>
     );
 };
-const ViewingAuthorAffiliations = React.memo(viewingAuthorAffiliations);
 
 /* istanbul ignore next */
 export const AuthorDetailPanel = ({
