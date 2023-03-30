@@ -335,6 +335,7 @@ export class ContributorsEditor extends PureComponent {
             console.log('contributors', contributors);
             return (
                 <AuthorsListWithAffiliates
+                    pid={this.props.record.rek_pid}
                     contributorEditorId={contributorEditorId}
                     disabled={disabled}
                     list={contributors}

@@ -22,8 +22,9 @@ import OrgAffiliationTypeSelector from 'modules/SharedComponents/ContributorsEdi
 import NonUqOrgAffiliationFormSection from 'modules/SharedComponents/ContributorsEditor/components/NonUqOrgAffiliationFormSection';
 import Typography from '@mui/material/Typography';
 import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
-import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { TextField as CustomTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
+import TextField from '@mui/material/TextField';
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
 import { Autocomplete, Button } from '@mui/material';
@@ -176,7 +177,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                             <PersonOutlined color="secondary" />
                         </Grid>
                         <Grid item style={{ flexGrow: '1' }}>
-                            <TextField
+                            <CustomTextField
                                 autoFocus
                                 value={props.value || ''}
                                 onChange={e => props.onChange(e.target.value)}
@@ -432,19 +433,32 @@ const deepClone = obj => {
 const editAffiliationReducer = (affiliations, action) => {
     let index;
     let newAffiliations;
-
+    const clonedAffiliations = deepClone(affiliations);
     switch (action.type) {
         case ACTION.ADD:
-            return affiliations;
+            const addedAffiliation = action.affiliation;
+            newAffiliations = [...clonedAffiliations, addedAffiliation];
+            return calculateAffiliationPercentile(newAffiliations);
         case ACTION.CHANGE:
             const changedAffiliation = action.affiliation;
-            index = affiliations.findIndex(item => item.af_id === changedAffiliation.af_id);
-            newAffiliations = [...affiliations.slice(0, index), changedAffiliation, ...affiliations.slice(index + 1)];
-            console.log('editAffiliationReducer', affiliations, action, changedAffiliation, index, newAffiliations);
+            index = clonedAffiliations.findIndex(item => item.af_id === changedAffiliation.af_id);
+            newAffiliations = [
+                ...clonedAffiliations.slice(0, index),
+                changedAffiliation,
+                ...clonedAffiliations.slice(index + 1),
+            ];
+            console.log(
+                'editAffiliationReducer',
+                clonedAffiliations,
+                action,
+                changedAffiliation,
+                index,
+                newAffiliations,
+            );
             return calculateAffiliationPercentile(newAffiliations);
         case ACTION.DELETE:
             index = action.index;
-            newAffiliations = [...affiliations.slice(0, index), ...affiliations.slice(index + 1)];
+            newAffiliations = [...clonedAffiliations.slice(0, index), ...clonedAffiliations.slice(index + 1)];
             return calculateAffiliationPercentile(newAffiliations);
         default:
             throw Error(`Unknown action '${action}'`);
@@ -452,6 +466,7 @@ const editAffiliationReducer = (affiliations, action) => {
 };
 
 const EditingAuthorAffiliations = ({
+    pid,
     rowData,
     setEditing,
     onChange,
@@ -495,6 +510,9 @@ const EditingAuthorAffiliations = ({
         uniqueOrgs.current = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
     }
 
+    const currentAffiliationOrgIds = currentAffiliations.map(item => item.af_org_id) ?? [];
+    console.log('currentAffiliationOrgIds', currentAffiliationOrgIds);
+
     if (
         suggestedOrganisationUnits.length === 0 &&
         suggestedOrganisationUnitsLoading === false &&
@@ -506,11 +524,10 @@ const EditingAuthorAffiliations = ({
         return <ContentLoader message={'Loading suggested Organisational Units'} />;
     }
 
-    const changeAffiliation = (currentAffiliation, newValue) => {
+    const changeAffiliation = (currentAffiliation, organisation) => {
         const newAffiliation = deepClone(currentAffiliation);
-        newAffiliation.af_org_id = newValue.org_id;
-        newAffiliation.fez_org_structure = { ...newValue };
-        console.log('changeAffiliation', currentAffiliation, newValue, newAffiliation);
+        newAffiliation.af_org_id = organisation.org_id;
+        newAffiliation.fez_org_structure = { ...organisation };
         dispatch({
             type: ACTION.CHANGE,
             affiliation: newAffiliation,
@@ -521,6 +538,23 @@ const EditingAuthorAffiliations = ({
         dispatch({
             type: ACTION.DELETE,
             index,
+        });
+    };
+
+    const addAffiliation = (pid, author, organisation) => {
+        const newAffiliation = {
+            af_pid: pid,
+            af_status: 1,
+            af_author_id: author.aut_id,
+            af_id: Date.now(),
+            af_org_id: organisation.org_id,
+            fez_author: { aut_id: author.aut_id, aut_display_name: author.aut_display_name },
+            fez_org_structure: { ...organisation },
+        };
+        console.log('addAffiliation', author, organisation, newAffiliation);
+        dispatch({
+            type: ACTION.ADD,
+            affiliation: newAffiliation,
         });
     };
 
@@ -559,7 +593,19 @@ const EditingAuthorAffiliations = ({
                                 </Box>
                             )}
                             renderInput={params => (
-                                <TextField {...params} placeholder="Start typing or select from list" />
+                                <TextField
+                                    {...params}
+                                    size={'small'}
+                                    variant={'standard'}
+                                    inputProps={{
+                                        ...params.inputProps,
+                                        placeholder: 'Start typing or select from list',
+                                    }}
+                                    InputProps={{
+                                        ...params.InputProps,
+                                        error: !!!uniqueOrgs.current?.find(org => org.org_id === item.af_org_id),
+                                    }}
+                                />
                             )}
                             onChange={(event, newValue) => {
                                 changeAffiliation(item, newValue);
@@ -571,7 +617,9 @@ const EditingAuthorAffiliations = ({
                             label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
                             variant="outlined"
                             size={'small'}
-                            color={'primary'}
+                            color={
+                                !!uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ? 'primary' : 'error'
+                            }
                         />
                     </Grid>
                     <Grid xs={1} justifyContent={'flex-end'} padding={1}>
@@ -583,9 +631,10 @@ const EditingAuthorAffiliations = ({
             ))}
             <Grid xs={7} padding={1}>
                 <Autocomplete
+                    key={Date.now()}
                     clearOnBlur
                     disableClearable
-                    options={uniqueOrgs.current ?? []}
+                    options={uniqueOrgs.current?.filter(org => !currentAffiliationOrgIds.includes(org.org_id)) ?? []}
                     getOptionLabel={option => option.org_title}
                     renderOption={(props, option) => (
                         <Box
@@ -597,7 +646,17 @@ const EditingAuthorAffiliations = ({
                             {option.org_title}
                         </Box>
                     )}
-                    renderInput={params => <TextField {...params} placeholder="Start typing or select from list" />}
+                    renderInput={params => (
+                        <TextField
+                            {...params}
+                            size={'small'}
+                            variant={'standard'}
+                            placeholder="Start typing or select from list"
+                        />
+                    )}
+                    onChange={(event, newValue) => {
+                        addAffiliation(pid, rowData, newValue);
+                    }}
                 />
             </Grid>
 
@@ -691,6 +750,7 @@ const ViewingAuthorAffiliations = ({ rowData }) => {
 
 /* istanbul ignore next */
 export const AuthorDetailPanel = ({
+    pid,
     rowData,
     isEditing,
     setEditing,
@@ -716,6 +776,7 @@ export const AuthorDetailPanel = ({
             {!isEditing && <ViewingAuthorAffiliations setEditing={setEditing} rowData={rowData} />}
             {isEditing && (
                 <EditingAuthorAffiliations
+                    pid={pid}
                     rowData={rowData}
                     isEditing={isEditing}
                     setEditing={setEditing}
@@ -730,6 +791,7 @@ export const AuthorDetailPanel = ({
 };
 
 export const AuthorsListWithAffiliates = ({
+    pid,
     contributorEditorId,
     disabled,
     isNtro,
@@ -1039,6 +1101,7 @@ export const AuthorsListWithAffiliates = ({
                             return rowData.uqUsername === '' || isNtro
                                 ? null
                                 : AuthorDetailPanel({
+                                      pid,
                                       rowData,
                                       isEditing: isEditing(rowData.aut_id),
                                       setEditing,
