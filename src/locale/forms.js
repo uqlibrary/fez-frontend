@@ -229,15 +229,16 @@ export default {
         },
         deleteRecordForm: {
             reason: {
-                title: (
+                title: isDeleted => (
                     <>
-                        Describe the reason to delete this work
+                        Describe the reason to {isDeleted ? 'update' : 'delete'} this work
                         <div style={{ fontSize: '60%' }}>
                             (visible to admins only, displayed under view record page's history)
                         </div>
                     </>
                 ),
-                label: 'Please enter a reason why you are deleting this work',
+                label: isDeleted =>
+                    `Please enter a reason why you are ${isDeleted ? 'updating' : 'deleting'} this work`,
             },
             newDoi: {
                 title: (

@@ -476,7 +476,9 @@ exports[`Component DeleteRecord componentDidUpdate() 1`] = `
           <StandardCard
             title={
               <React.Fragment>
-                Describe the reason to delete this work
+                Describe the reason to 
+                delete
+                 this work
                 <div
                   style={
                     Object {
@@ -1797,7 +1799,9 @@ exports[`Component DeleteRecord should display general alert if trying to delete
           <StandardCard
             title={
               <React.Fragment>
-                Describe the reason to delete this work
+                Describe the reason to 
+                delete
+                 this work
                 <div
                   style={
                     Object {
@@ -2419,7 +2423,9 @@ exports[`Component DeleteRecord should display general alert if trying to delete
           <StandardCard
             title={
               <React.Fragment>
-                Describe the reason to delete this work
+                Describe the reason to 
+                delete
+                 this work
                 <div
                   style={
                     Object {
@@ -2747,7 +2753,9 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
           <StandardCard
             title={
               <React.Fragment>
-                Describe the reason to delete this work
+                Describe the reason to 
+                delete
+                 this work
                 <div
                   style={
                     Object {
@@ -3060,7 +3068,9 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
           <StandardCard
             title={
               <React.Fragment>
-                Describe the reason to delete this work
+                Describe the reason to 
+                delete
+                 this work
                 <div
                   style={
                     Object {
@@ -3682,7 +3692,9 @@ exports[`Component DeleteRecord should render delete record form with record cit
           <StandardCard
             title={
               <React.Fragment>
-                Describe the reason to delete this work
+                Describe the reason to 
+                delete
+                 this work
                 <div
                   style={
                     Object {

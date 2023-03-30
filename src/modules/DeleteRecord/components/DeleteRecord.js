@@ -183,7 +183,7 @@ export default class DeleteRecord extends PureComponent {
                                         locale={saveConfirmationLocale}
                                     />
                                     <Grid item xs={12}>
-                                        <StandardCard title={formTxt.reason.title}>
+                                        <StandardCard title={formTxt.reason.title(isDeleted)}>
                                             <Grid container spacing={2}>
                                                 <Grid item xs={12}>
                                                     <Field
@@ -195,7 +195,7 @@ export default class DeleteRecord extends PureComponent {
                                                         fullWidth
                                                         multiline
                                                         rows={3}
-                                                        label={formTxt.reason.label}
+                                                        label={formTxt.reason.label(isDeleted)}
                                                     />
                                                 </Grid>
                                             </Grid>
