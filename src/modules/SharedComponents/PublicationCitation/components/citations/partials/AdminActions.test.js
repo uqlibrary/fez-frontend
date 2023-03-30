@@ -7,7 +7,7 @@ import {
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_WORKING_PAPER,
     RECORD_ACTION_URLS as defaultActions,
-    UPDATE_DELETION_NOTES_LABEL,
+    UPDATE_DELETED_RECORD_LABEL,
 } from 'config/general';
 import { rccDatasetCollection } from 'config/doi';
 
@@ -57,7 +57,7 @@ describe('AdminActions component', () => {
         }));
 
         expectedActions
-            .filter(action => action.label !== UPDATE_DELETION_NOTES_LABEL)
+            .filter(action => action.label !== UPDATE_DELETED_RECORD_LABEL)
             .map(action => {
                 fireEvent.click(getByText(action.isDoi ? action.label(false) : action.label, menu));
                 expect(global.window.open).toHaveBeenCalledTimes(1);

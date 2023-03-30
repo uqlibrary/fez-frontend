@@ -11,6 +11,11 @@ const FORM_NAME = 'DeleteRecord';
 
 const onSubmit = (values, dispatch) => {
     const formValues = values.toJS();
+    if (formValues.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText) {
+        formValues.publication.fez_record_search_key_deletion_notes.rek_deletion_notes =
+            formValues.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText;
+    }
+
     return dispatch(
         formValues.publication.rek_status === DELETED
             ? actions.deleteUpdatePartial({ ...formValues })
@@ -19,7 +24,6 @@ const onSubmit = (values, dispatch) => {
         throw new SubmissionError({ _error: JSON.stringify(error) });
     });
 };
-
 let DeleteRecordContainer = reduxForm({
     form: FORM_NAME,
     enableReinitialize: true,

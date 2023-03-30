@@ -16,17 +16,17 @@ import { DELETED } from '../config/general';
 const createPayload = data => ({
     rek_status: DELETED,
     ...(!!data.reason ? { reason: data.reason } : {}),
-    ...(!!data.publication?.fez_record_search_key_new_doi?.rek_new_doi
-        ? { fez_record_search_key_new_doi: data.publication?.fez_record_search_key_new_doi }
-        : { fez_record_search_key_new_doi: null }),
-    ...(!!data.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText
-        ? {
-              fez_record_search_key_deletion_notes: {
-                  rek_deletion_notes:
-                      data.publication?.fez_record_search_key_deletion_notes.rek_deletion_notes.htmlText,
-              },
-          }
-        : { fez_record_search_key_deletion_notes: null }),
+    ...{
+        fez_record_search_key_new_doi: !!data.publication?.fez_record_search_key_new_doi?.rek_new_doi
+            ? data.publication?.fez_record_search_key_new_doi
+            : null,
+    },
+    ...{
+        fez_record_search_key_deletion_notes: !!data.publication?.fez_record_search_key_deletion_notes
+            ?.rek_deletion_notes
+            ? data.publication?.fez_record_search_key_deletion_notes
+            : null,
+    },
 });
 
 /**

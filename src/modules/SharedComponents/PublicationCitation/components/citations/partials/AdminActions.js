@@ -11,7 +11,7 @@ import {
     PUBLICATION_TYPES_WITH_DOI,
     RECORD_ACTION_URLS as defaultActions,
     RECORD_TYPE_RECORD,
-    UPDATE_DELETION_NOTES_LABEL,
+    UPDATE_DELETED_RECORD_LABEL,
 } from 'config/general';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 import { rccDatasetCollection } from 'config/doi';
@@ -45,12 +45,12 @@ export const AdminActions = ({
 
     // Remove actions which should not be shown for deleted records, if specified
     let filteredActions = !isRecordDeleted
-        ? adminActions.filter(action => action.label !== UPDATE_DELETION_NOTES_LABEL)
+        ? adminActions.filter(action => action.label !== UPDATE_DELETED_RECORD_LABEL)
         : adminActions
               .filter(action => action.showInDeleted)
               .filter(
                   action =>
-                      action.label !== UPDATE_DELETION_NOTES_LABEL ||
+                      action.label !== UPDATE_DELETED_RECORD_LABEL ||
                       publication.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
               );
 

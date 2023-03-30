@@ -1276,7 +1276,7 @@ export const LANGUAGE = [
 
 export const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
 export const DELETE_SELECTED_RECORD_LABEL = 'Delete selected record';
-export const UPDATE_DELETION_NOTES_LABEL = 'Update deletion notes';
+export const UPDATE_DELETED_RECORD_LABEL = 'Update deleted record';
 
 export const RECORD_ACTION_URLS = [
     {
@@ -1317,7 +1317,7 @@ export const RECORD_ACTION_URLS = [
         options: null,
     },
     {
-        label: UPDATE_DELETION_NOTES_LABEL,
+        label: UPDATE_DELETED_RECORD_LABEL,
         url: pid => `${APP_URL}${PATH_PREFIX}admin/delete/${pid}`,
         inApp: true,
         showInDeleted: true,
