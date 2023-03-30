@@ -40,6 +40,8 @@ import {
     hasAnyProblemAffiliations,
     has100pcAffiliations,
     hasValidOrgAffiliations,
+    isNonHerdc,
+    hasNonHerdc,
     calculateAffiliationPercentile,
 } from 'helpers/authorAffiliations';
 
@@ -424,6 +426,7 @@ const ACTION = {
     ADD: 'add',
     CHANGE: 'change',
     DELETE: 'delete',
+    NONHERDC: 'nonherdc',
 };
 
 const deepClone = obj => {
@@ -432,7 +435,7 @@ const deepClone = obj => {
 
 const editAffiliationReducer = (affiliations, action) => {
     let index;
-    let newAffiliations;
+    let newAffiliations = [];
     const clonedAffiliations = deepClone(affiliations);
     switch (action.type) {
         case ACTION.ADD:
@@ -459,6 +462,17 @@ const editAffiliationReducer = (affiliations, action) => {
         case ACTION.DELETE:
             index = action.index;
             newAffiliations = [...clonedAffiliations.slice(0, index), ...clonedAffiliations.slice(index + 1)];
+            return calculateAffiliationPercentile(newAffiliations);
+        case ACTION.NONHERDC:
+            const nonHerdcAffiliation = action.nonHerdcAffiliation;
+            const suggestedAffiliation = action.suggestedAffiliation;
+            newAffiliations = Array(nonHerdcAffiliation, suggestedAffiliation);
+            console.log(
+                'editAffiliationReducer ACTION.NONHERDC',
+                nonHerdcAffiliation,
+                suggestedAffiliation,
+                newAffiliations,
+            );
             return calculateAffiliationPercentile(newAffiliations);
         default:
             throw Error(`Unknown action '${action}'`);
@@ -541,20 +555,36 @@ const EditingAuthorAffiliations = ({
         });
     };
 
-    const addAffiliation = (pid, author, organisation) => {
-        const newAffiliation = {
-            af_pid: pid,
-            af_status: 1,
-            af_author_id: author.aut_id,
-            af_id: Date.now(),
-            af_org_id: organisation.org_id,
-            fez_author: { aut_id: author.aut_id, aut_display_name: author.aut_display_name },
-            fez_org_structure: { ...organisation },
-        };
-        console.log('addAffiliation', author, organisation, newAffiliation);
+    const createNewAffiliationObject = (organisation, id = Date.now()) => ({
+        af_pid: pid,
+        af_status: 1,
+        af_author_id: rowData.aut_id,
+        af_id: id,
+        af_org_id: organisation.org_id,
+        fez_author: { aut_id: rowData.aut_id, aut_display_name: rowData.aut_display_name },
+        fez_org_structure: { ...organisation },
+    });
+
+    const addAffiliation = organisation => {
+        const newAffiliation = createNewAffiliationObject(organisation);
+        console.log('addAffiliation', organisation, newAffiliation);
         dispatch({
             type: ACTION.ADD,
             affiliation: newAffiliation,
+        });
+    };
+
+    const nonHerdcAffiliation = organisation => {
+        const nonHerdcAffiliation = createNewAffiliationObject(organisation);
+        const suggestedAffiliation = createNewAffiliationObject(
+            suggestedOrganisationUnits[0],
+            nonHerdcAffiliation.af_id + 100, // ensure the af_id value is different to the previous call
+        );
+        console.log('nonHerdcAffiliation', nonHerdcAffiliation, suggestedAffiliation);
+        dispatch({
+            type: ACTION.NONHERDC,
+            nonHerdcAffiliation,
+            suggestedAffiliation,
         });
     };
 
@@ -563,7 +593,7 @@ const EditingAuthorAffiliations = ({
             <Grid xs={7} sx={{ borderBlockEnd: '1px solid #ccc' }}>
                 <Typography variant="caption">Organisational Unit</Typography>
             </Grid>
-            <Grid xs={4} sx={{ borderBlockEnd: '1px solid #ccc' }}>
+            <Grid xs={5} sx={{ borderBlockEnd: '1px solid #ccc' }}>
                 <Typography variant="caption">Affiliation %</Typography>
             </Grid>
 
@@ -589,7 +619,7 @@ const EditingAuthorAffiliations = ({
                                     {...props}
                                     key={option.org_id}
                                 >
-                                    {option.org_title}
+                                    {!!option.suggested ? `Suggested: ${option.org_title}` : option.org_title}
                                 </Box>
                             )}
                             renderInput={params => (
@@ -607,8 +637,11 @@ const EditingAuthorAffiliations = ({
                                     }}
                                 />
                             )}
-                            onChange={(event, newValue) => {
-                                changeAffiliation(item, newValue);
+                            onChange={(_, newValue) => {
+                                if (isNonHerdc(newValue)) nonHerdcAffiliation(newValue);
+                                else {
+                                    changeAffiliation(item, newValue);
+                                }
                             }}
                         />
                     </Grid>
@@ -622,44 +655,52 @@ const EditingAuthorAffiliations = ({
                             }
                         />
                     </Grid>
+
                     <Grid xs={1} justifyContent={'flex-end'} padding={1}>
-                        <IconButton aria-label="delete">
-                            <DeleteIcon onClick={() => deleteAffiliation(index)} />
-                        </IconButton>
+                        {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
+                            <IconButton aria-label="delete" onClick={() => deleteAffiliation(index)}>
+                                <DeleteIcon />
+                            </IconButton>
+                        )}
                     </Grid>
                 </React.Fragment>
             ))}
-            <Grid xs={7} padding={1}>
-                <Autocomplete
-                    key={Date.now()}
-                    clearOnBlur
-                    disableClearable
-                    options={uniqueOrgs.current?.filter(org => !currentAffiliationOrgIds.includes(org.org_id)) ?? []}
-                    getOptionLabel={option => option.org_title}
-                    renderOption={(props, option) => (
-                        <Box
-                            component="li"
-                            sx={{ ...(!!option.suggested ? { color: theme.palette.primary.main } : {}) }}
-                            {...props}
-                            key={option.org_id}
-                        >
-                            {option.org_title}
-                        </Box>
-                    )}
-                    renderInput={params => (
-                        <TextField
-                            {...params}
-                            size={'small'}
-                            variant={'standard'}
-                            placeholder="Start typing or select from list"
-                        />
-                    )}
-                    onChange={(event, newValue) => {
-                        addAffiliation(pid, rowData, newValue);
-                    }}
-                />
-            </Grid>
-
+            {!hasNonHerdc(currentAffiliations) && (
+                <Grid xs={7} padding={1}>
+                    <Autocomplete
+                        key={Date.now()}
+                        clearOnBlur
+                        disableClearable
+                        options={
+                            uniqueOrgs.current?.filter(org => !currentAffiliationOrgIds.includes(org.org_id)) ?? []
+                        }
+                        getOptionLabel={option => option.org_title}
+                        renderOption={(props, option) => (
+                            <Box
+                                component="li"
+                                sx={{ ...(!!option.suggested ? { color: theme.palette.primary.main } : {}) }}
+                                {...props}
+                                key={option.org_id}
+                            >
+                                {!!option.suggested ? `Suggested: ${option.org_title}` : option.org_title}
+                            </Box>
+                        )}
+                        renderInput={params => (
+                            <TextField
+                                {...params}
+                                size={'small'}
+                                variant={'standard'}
+                                placeholder="Start typing or select from list"
+                            />
+                        )}
+                        onChange={(event, newValue) => {
+                            console.log(newValue, isNonHerdc(newValue));
+                            if (isNonHerdc(newValue)) nonHerdcAffiliation(newValue);
+                            else addAffiliation(newValue);
+                        }}
+                    />
+                </Grid>
+            )}
             <Grid container xs={12} justifyContent={'flex-end'}>
                 <Button onClick={() => setEditing({ editing: false, aut_id: rowData.aut_id })}>Cancel</Button>
                 <Button
@@ -701,7 +742,6 @@ const ViewingAuthorAffiliations = ({ rowData }) => {
         alertOptions.actionButtonLabel = 'Remove Orphaned Affiliations';
     }
 
-    console.log('problematicAffiliations', rowData, affiliations, alertOptions);
     return (
         <Grid container xs={12} spacing={2}>
             <Grid xs={12} sx={{ borderBlockEnd: '1px solid #ccc' }}>
@@ -719,10 +759,7 @@ const ViewingAuthorAffiliations = ({ rowData }) => {
                     </Grid>
                     <Grid xs={10}>
                         <Typography variant="body2" color={hasProblems ? 'error' : 'primary'}>
-                            {item.fez_org_structure?.org_title ??
-                                item.fez_org_structure?.[0].org_title ??
-                                'Organisational Unit has been removed' // TODO - remove array check once we no longer have arrays in the API
-                            }
+                            {item.fez_org_structure?.org_title ?? 'Organisational Unit has been removed'}
                         </Typography>
                     </Grid>
                 </React.Fragment>

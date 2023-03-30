@@ -71,6 +71,13 @@ export const composeAuthorAffiliationProblems = record => {
     );
 };
 
+export const isNonHerdc = affiliation => {
+    const orgId = affiliation.org_id ?? affiliation.af_org_id ?? null;
+    return orgId === NON_HERDC_ID;
+};
+
+export const hasNonHerdc = affiliations => affiliations.some(item => isNonHerdc(item));
+
 const splitValue = (numToSplit, numSplits) => {
     const splitAmount = Math.floor(numToSplit / numSplits);
     const remainder = numToSplit % numSplits;
@@ -98,7 +105,5 @@ const returnEvenSplit = affiliations => {
 };
 export const calculateAffiliationPercentile = (affiliations = []) => {
     const newAffiliations = JSON.parse(JSON.stringify(affiliations)); // deep copy
-    return newAffiliations.some(item => item.af_org_id === NON_HERDC_ID)
-        ? returnNonHerdc(newAffiliations)
-        : returnEvenSplit(newAffiliations);
+    return hasNonHerdc(newAffiliations) ? returnNonHerdc(newAffiliations) : returnEvenSplit(newAffiliations);
 };

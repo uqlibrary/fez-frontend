@@ -713,12 +713,12 @@ const recordWithProblematicAuthorAffiliations = {
                 "aut_id": 88844,
                 "aut_display_name": "Robertson, Avril A. B."
             },
-            "fez_org_structure": [
+            "fez_org_structure": 
                 {
                     "org_id": 881,
                     "org_title": "School of Chemistry and Molecular Biosciences"
                 }
-            ],
+            ,
         },
         {
             "af_id": 478895,
@@ -731,12 +731,12 @@ const recordWithProblematicAuthorAffiliations = {
                 "aut_id": 88844,
                 "aut_display_name": "Robertson, Avril A. B."
             },
-            "fez_org_structure": [
+            "fez_org_structure": 
                 {
                     "org_id": 968,
                     "org_title": "Institute for Molecular Bioscience"
                 }
-            ]
+            
         },
         {
             "af_id": 478896,
@@ -749,12 +749,12 @@ const recordWithProblematicAuthorAffiliations = {
                 "aut_id": 7624000,
                 "aut_display_name": "Good, All"
             },
-            "fez_org_structure": [
+            "fez_org_structure": 
                 {
                     "org_id": 1248,
                     "org_title": "Information Systems and Resource Services (University of Queensland Library)"
                 }
-            ]
+            
         },
         {
             "af_author_id": 7624839,

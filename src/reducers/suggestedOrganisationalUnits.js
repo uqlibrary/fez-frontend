@@ -18,7 +18,6 @@ const handlers = {
         ...initialState,
         suggestedOrganisationUnits: action.payload.data.map(item => ({
             ...item,
-            org_title: `Suggested: ${item.org_title}`,
             suggested: true,
         })),
         suggestedOrganisationUnitsLoading: false,
