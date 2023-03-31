@@ -2,7 +2,6 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as deleteRecordActions from './deleteRecord';
 import * as mockData from 'mock/data/testing/records';
-import { deleteUpdatePartial } from './deleteRecord';
 
 describe('Delete record actions', () => {
     const testPid = 'UQ:41878';

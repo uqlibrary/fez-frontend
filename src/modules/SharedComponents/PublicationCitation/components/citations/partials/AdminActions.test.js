@@ -85,6 +85,11 @@ describe('AdminActions component', () => {
                     showInDeleted: false,
                     url: jest.fn(),
                 },
+                {
+                    label: UPDATE_DELETED_RECORD_LABEL,
+                    showInDeleted: true,
+                    url: jest.fn(),
+                },
             ],
         });
 
@@ -92,6 +97,42 @@ describe('AdminActions component', () => {
         const menu = getByTestId('admin-actions-menu');
         expect(queryByText('Show in deleted records', menu)).not.toBeNull();
         expect(queryByText('Dont show in deleted records', menu)).toBeNull();
+        expect(queryByText(UPDATE_DELETED_RECORD_LABEL, menu)).toBeNull();
+    });
+
+    it('should handle deleted data collection admin actions menu', () => {
+        const { getByTestId, queryByText } = setup({
+            navigatedFrom: 'test',
+            isRecordDeleted: true,
+            publication: {
+                rek_pid: 'UQ:111111',
+                rek_object_type_lookup: 'Record',
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+            },
+            adminActions: [
+                {
+                    label: 'Show in deleted records',
+                    showInDeleted: true,
+                    url: jest.fn(),
+                },
+                {
+                    label: 'Dont show in deleted records',
+                    showInDeleted: false,
+                    url: jest.fn(),
+                },
+                {
+                    label: UPDATE_DELETED_RECORD_LABEL,
+                    showInDeleted: true,
+                    url: jest.fn(),
+                },
+            ],
+        });
+
+        fireEvent.click(getByTestId('admin-actions-button'));
+        const menu = getByTestId('admin-actions-menu');
+        expect(queryByText('Show in deleted records', menu)).not.toBeNull();
+        expect(queryByText('Dont show in deleted records', menu)).toBeNull();
+        expect(queryByText(UPDATE_DELETED_RECORD_LABEL, menu)).not.toBeNull();
     });
 
     it('should include DOI item if supported type has existing UQ DOI', () => {

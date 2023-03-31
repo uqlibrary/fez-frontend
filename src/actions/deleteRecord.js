@@ -16,7 +16,7 @@ import { EXISTING_RECORD_API } from 'repositories/routes';
 import * as actions from './actionTypes';
 import { DELETED } from '../config/general';
 
-const createPayload = data => ({
+export const createPayload = data => ({
     rek_status: DELETED,
     ...(!!data.reason ? { reason: data.reason } : {}),
     ...{
