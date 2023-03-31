@@ -419,6 +419,7 @@ const ACTION = {
     CHANGE: 'change',
     DELETE: 'delete',
     NONHERDC: 'nonherdc',
+    FIX: 'fix',
 };
 
 const deepClone = obj => {
@@ -529,24 +530,7 @@ const EditingAuthorAffiliations = ({
         return <ContentLoader message={'Loading suggested Organisational Units'} />;
     }
 
-    const changeAffiliation = (currentAffiliation, organisation) => {
-        const newAffiliation = deepClone(currentAffiliation);
-        newAffiliation.af_org_id = organisation.org_id;
-        newAffiliation.fez_org_structure = { ...organisation };
-        dispatch({
-            type: ACTION.CHANGE,
-            affiliation: newAffiliation,
-        });
-    };
-
-    const deleteAffiliation = index => {
-        dispatch({
-            type: ACTION.DELETE,
-            index,
-        });
-    };
-
-    const createNewAffiliationObject = (organisation, id = Date.now()) => ({
+    const createNewAffiliationObject = (rowData, organisation, id = Date.now()) => ({
         af_status: 1,
         af_author_id: rowData.aut_id,
         af_id: id,
@@ -555,27 +539,44 @@ const EditingAuthorAffiliations = ({
         fez_org_structure: { ...organisation },
     });
 
-    const addAffiliation = organisation => {
-        const newAffiliation = createNewAffiliationObject(organisation);
-        console.log('addAffiliation', organisation, newAffiliation);
-        dispatch({
-            type: ACTION.ADD,
-            affiliation: newAffiliation,
-        });
-    };
-
-    const nonHerdcAffiliation = organisation => {
-        const nonHerdcAffiliation = createNewAffiliationObject(organisation);
-        const suggestedAffiliation = createNewAffiliationObject(
-            suggestedOrganisationUnits[0],
-            nonHerdcAffiliation.af_id + 100, // ensure the af_id value is different to the previous call
-        );
-        console.log('nonHerdcAffiliation', nonHerdcAffiliation, suggestedAffiliation);
-        dispatch({
-            type: ACTION.NONHERDC,
-            nonHerdcAffiliation,
-            suggestedAffiliation,
-        });
+    const actionHandler = {
+        [ACTION.CHANGE]: (currentAffiliation, organisation) => {
+            const newAffiliation = deepClone(currentAffiliation);
+            newAffiliation.af_org_id = organisation.org_id;
+            newAffiliation.fez_org_structure = { ...organisation };
+            dispatch({
+                type: ACTION.CHANGE,
+                affiliation: newAffiliation,
+            });
+        },
+        [ACTION.DELETE]: index => {
+            dispatch({
+                type: ACTION.DELETE,
+                index,
+            });
+        },
+        [ACTION.ADD]: (rowData, organisation) => {
+            const newAffiliation = createNewAffiliationObject(rowData, organisation);
+            console.log('addAffiliation', organisation, newAffiliation);
+            dispatch({
+                type: ACTION.ADD,
+                affiliation: newAffiliation,
+            });
+        },
+        [ACTION.NONHERDC]: (rowData, organisation) => {
+            const nonHerdcAffiliation = createNewAffiliationObject(rowData, organisation);
+            const suggestedAffiliation = createNewAffiliationObject(
+                rowData,
+                suggestedOrganisationUnits[0],
+                nonHerdcAffiliation.af_id + 100, // ensure the af_id value is different to the previous call
+            );
+            console.log('nonHerdcAffiliation', nonHerdcAffiliation, suggestedAffiliation);
+            dispatch({
+                type: ACTION.NONHERDC,
+                nonHerdcAffiliation,
+                suggestedAffiliation,
+            });
+        },
     };
 
     return (
@@ -628,9 +629,9 @@ const EditingAuthorAffiliations = ({
                                 />
                             )}
                             onChange={(_, newValue) => {
-                                if (isNonHerdc(newValue)) nonHerdcAffiliation(newValue);
+                                if (isNonHerdc(newValue)) actionHandler[ACTION.NONHERDC](newValue);
                                 else {
-                                    changeAffiliation(item, newValue);
+                                    actionHandler[ACTION.CHANGE](item, newValue);
                                 }
                             }}
                         />
@@ -648,7 +649,7 @@ const EditingAuthorAffiliations = ({
 
                     <Grid xs={1} justifyContent={'flex-end'} padding={1}>
                         {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
-                            <IconButton aria-label="delete" onClick={() => deleteAffiliation(index)}>
+                            <IconButton aria-label="delete" onClick={() => actionHandler[ACTION.DELETE](index)}>
                                 <DeleteIcon />
                             </IconButton>
                         )}
@@ -685,8 +686,8 @@ const EditingAuthorAffiliations = ({
                         )}
                         onChange={(event, newValue) => {
                             console.log(newValue, isNonHerdc(newValue));
-                            if (isNonHerdc(newValue)) nonHerdcAffiliation(newValue);
-                            else addAffiliation(newValue);
+                            if (isNonHerdc(newValue)) actionHandler[ACTION.NONHERDC](newValue);
+                            else actionHandler[ACTION.ADD](newValue);
                         }}
                     />
                 </Grid>
@@ -707,7 +708,7 @@ const EditingAuthorAffiliations = ({
         </Grid>
     );
 };
-const ViewingAuthorAffiliations = ({ rowData }) => {
+const ViewingAuthorAffiliations = ({ rowData, onChange }) => {
     const affiliations = rowData.affiliations ?? [];
     const alertOptions = { title: '', message: '' };
 
@@ -719,7 +720,11 @@ const ViewingAuthorAffiliations = ({ rowData }) => {
         alertOptions.title = 'Author affiliation information is incomplete';
         if (affiliations.length > 0) {
             alertOptions.message = 'Percentage sum total of all affiliations must equal 100%';
-            alertOptions.action = props => console.log(props);
+            alertOptions.action = () => {
+                const affiliations = calculateAffiliationPercentile(rowData.affiliations);
+                const newRowData = { ...rowData, affiliations };
+                onChange(newRowData);
+            };
             alertOptions.actionButtonLabel = 'Recalculate Percentages';
         } else {
             alertOptions.message = 'Author requires at least one affiliation to be added';
@@ -727,8 +732,6 @@ const ViewingAuthorAffiliations = ({ rowData }) => {
     } else if (hasOrgErrors) {
         alertOptions.title = 'Orphaned organisation affiliation information';
         alertOptions.message = 'Organisation(s) no longer exists';
-        alertOptions.action = props => console.log(props);
-        alertOptions.actionButtonLabel = 'Remove Orphaned Affiliations';
     }
 
     return (
@@ -798,7 +801,7 @@ export const AuthorDetailPanel = ({
                     </IconButton>
                 )}
             </Typography>
-            {!isEditing && <ViewingAuthorAffiliations setEditing={setEditing} rowData={rowData} />}
+            {!isEditing && <ViewingAuthorAffiliations rowData={rowData} onChange={onChange} />}
             {isEditing && (
                 <EditingAuthorAffiliations
                     rowData={rowData}
@@ -868,8 +871,7 @@ export const AuthorsListWithAffiliates = ({
     const classes = useStyles();
     const theme = useTheme();
     const materialTableRef = React.createRef();
-    // const columns = React.useMemo(
-    //    () =>
+
     const columns = React.createRef();
     columns.current = getColumns({
         disabled,
