@@ -3,6 +3,14 @@ export const PRECISION = 1000;
 export const MAX_TOTAL = TOTAL * PRECISION;
 export const NON_HERDC_ID = 1062;
 
+export const ACTIONS = {
+    ADD: 'add',
+    CHANGE: 'change',
+    DELETE: 'delete',
+    NONHERDC: 'nonherdc',
+    FIX: 'fix',
+};
+
 export const getFilteredAffiliations = (author, affiliations) =>
     affiliations.length > 0
         ? affiliations?.filter(item => item.af_author_id === author.rek_author_id)
@@ -106,3 +114,47 @@ export const calculateAffiliationPercentile = (affiliations = []) => {
     const newAffiliations = JSON.parse(JSON.stringify(affiliations)); // deep copy
     return hasNonHerdc(newAffiliations) ? returnNonHerdc(newAffiliations) : returnEvenSplit(newAffiliations);
 };
+export const deepClone = obj => {
+    return JSON.parse(JSON.stringify(obj));
+};
+
+export const editAffiliationReducer = (affiliations, action) => {
+    let index;
+    let newAffiliations = [];
+    const clonedAffiliations = deepClone(affiliations);
+    switch (action.type) {
+        case ACTIONS.ADD:
+            const addedAffiliation = action.affiliation;
+            newAffiliations = [...clonedAffiliations, addedAffiliation];
+            return calculateAffiliationPercentile(newAffiliations);
+        case ACTIONS.CHANGE:
+            const changedAffiliation = action.affiliation;
+            index = clonedAffiliations.findIndex(item => item.af_id === changedAffiliation.af_id);
+            newAffiliations = [
+                ...clonedAffiliations.slice(0, index),
+                changedAffiliation,
+                ...clonedAffiliations.slice(index + 1),
+            ];
+            return calculateAffiliationPercentile(newAffiliations);
+        case ACTIONS.DELETE:
+            index = action.index;
+            newAffiliations = [...clonedAffiliations.slice(0, index), ...clonedAffiliations.slice(index + 1)];
+            return calculateAffiliationPercentile(newAffiliations);
+        case ACTIONS.NONHERDC:
+            const nonHerdcAffiliation = action.nonHerdcAffiliation;
+            const suggestedAffiliation = action.suggestedAffiliation;
+            newAffiliations = Array(nonHerdcAffiliation, suggestedAffiliation);
+            return calculateAffiliationPercentile(newAffiliations);
+        default:
+            throw Error(`Unknown action '${action}'`);
+    }
+};
+
+export const createNewAffiliationObject = (rowData, organisation, id = Date.now()) => ({
+    af_status: 1,
+    af_author_id: rowData.aut_id,
+    af_id: id,
+    af_org_id: organisation.org_id,
+    fez_author: { aut_id: rowData.aut_id, aut_display_name: rowData.aut_display_name },
+    fez_org_structure: { ...organisation },
+});

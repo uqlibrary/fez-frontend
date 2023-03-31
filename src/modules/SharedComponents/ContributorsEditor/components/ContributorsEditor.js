@@ -332,7 +332,6 @@ export class ContributorsEditor extends PureComponent {
         }
 
         if (isAdmin) {
-            console.log('contributors', contributors);
             return (
                 <AuthorsListWithAffiliates
                     contributorEditorId={contributorEditorId}

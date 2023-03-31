@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useReducer, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
 import { useTheme } from '@mui/material/styles';
@@ -24,27 +24,15 @@ import Typography from '@mui/material/Typography';
 import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import { TextField as CustomTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
-import TextField from '@mui/material/TextField';
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
-import { Autocomplete, Button } from '@mui/material';
-import Chip from '@mui/material/Chip';
 import IconButton from '@mui/material/IconButton';
-import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import { PRECISION } from 'helpers/authorAffiliations';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import Box from '@mui/material/Box';
-import {
-    hasAffiliationProblems,
-    hasAffiliationProblemsByAuthor,
-    has100pcAffiliations,
-    hasValidOrgAffiliations,
-    isNonHerdc,
-    hasNonHerdc,
-    calculateAffiliationPercentile,
-} from 'helpers/authorAffiliations';
+
+import ViewAuthorAffiliations from './ViewAuthorAffiliations';
+import EditAuthorAffiliations from './EditAuthorAffiliations';
+
+import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 
 export const useStyles = makeStyles(theme => ({
     linked: {
@@ -414,371 +402,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
     ];
 };
 
-const ACTION = {
-    ADD: 'add',
-    CHANGE: 'change',
-    DELETE: 'delete',
-    NONHERDC: 'nonherdc',
-    FIX: 'fix',
-};
-
-const deepClone = obj => {
-    return JSON.parse(JSON.stringify(obj));
-};
-
-const editAffiliationReducer = (affiliations, action) => {
-    let index;
-    let newAffiliations = [];
-    const clonedAffiliations = deepClone(affiliations);
-    switch (action.type) {
-        case ACTION.ADD:
-            const addedAffiliation = action.affiliation;
-            newAffiliations = [...clonedAffiliations, addedAffiliation];
-            return calculateAffiliationPercentile(newAffiliations);
-        case ACTION.CHANGE:
-            const changedAffiliation = action.affiliation;
-            index = clonedAffiliations.findIndex(item => item.af_id === changedAffiliation.af_id);
-            newAffiliations = [
-                ...clonedAffiliations.slice(0, index),
-                changedAffiliation,
-                ...clonedAffiliations.slice(index + 1),
-            ];
-            console.log(
-                'editAffiliationReducer',
-                clonedAffiliations,
-                action,
-                changedAffiliation,
-                index,
-                newAffiliations,
-            );
-            return calculateAffiliationPercentile(newAffiliations);
-        case ACTION.DELETE:
-            index = action.index;
-            newAffiliations = [...clonedAffiliations.slice(0, index), ...clonedAffiliations.slice(index + 1)];
-            return calculateAffiliationPercentile(newAffiliations);
-        case ACTION.NONHERDC:
-            const nonHerdcAffiliation = action.nonHerdcAffiliation;
-            const suggestedAffiliation = action.suggestedAffiliation;
-            newAffiliations = Array(nonHerdcAffiliation, suggestedAffiliation);
-            console.log(
-                'editAffiliationReducer ACTION.NONHERDC',
-                nonHerdcAffiliation,
-                suggestedAffiliation,
-                newAffiliations,
-            );
-            return calculateAffiliationPercentile(newAffiliations);
-        default:
-            throw Error(`Unknown action '${action}'`);
-    }
-};
-
-const EditingAuthorAffiliations = ({
-    rowData,
-    setEditing,
-    onChange,
-    organisationUnits,
-    suggestedOrganisationalUnitList = {},
-    loadSuggestedOrganisationalUnitsList,
-}) => {
-    const uniqueOrgs = useRef([]);
-    const theme = useTheme();
-    const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
-    const [currentAffiliations, dispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
-    console.log('<><><>', currentAffiliations, dispatch);
-    const {
-        suggestedOrganisationUnits,
-        suggestedOrganisationUnitsLoading,
-        suggestedOrganisationUnitsFailed,
-    } = suggestedOrganisationalUnitList;
-
-    /*
-    suggested:
-        aut_id: 7624839
-        org_id: 1248
-        org_title: "Information Systems and Resource Services (University of Queensland Library)"
-    */
-    /*
-    org units
-        org_desc: null
-        org_ext_table: null
-        org_extdb_id: null
-        org_extdb_name: "hr"
-        org_id: 1062
-        org_image_filename: null
-        org_is_current: 1
-        org_title: "!NON-HERDC"
-
-    */
-
-    if (uniqueOrgs.current.length === 0 && suggestedOrganisationUnits.length > 0) {
-        const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
-        const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
-        uniqueOrgs.current = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
-    }
-
-    const currentAffiliationOrgIds = currentAffiliations.map(item => item.af_org_id) ?? [];
-    console.log('currentAffiliationOrgIds', currentAffiliationOrgIds);
-
-    if (
-        suggestedOrganisationUnits.length === 0 &&
-        suggestedOrganisationUnitsLoading === false &&
-        suggestedOrganisationUnitsFailed === false
-    ) {
-        loadSuggestedOrganisationalUnitsList(rowData.aut_id);
-    }
-    if (suggestedOrganisationUnits.length === 0 && suggestedOrganisationUnitsFailed === false) {
-        return <ContentLoader message={'Loading suggested Organisational Units'} />;
-    }
-
-    const createNewAffiliationObject = (rowData, organisation, id = Date.now()) => ({
-        af_status: 1,
-        af_author_id: rowData.aut_id,
-        af_id: id,
-        af_org_id: organisation.org_id,
-        fez_author: { aut_id: rowData.aut_id, aut_display_name: rowData.aut_display_name },
-        fez_org_structure: { ...organisation },
-    });
-
-    const actionHandler = {
-        [ACTION.CHANGE]: (currentAffiliation, organisation) => {
-            const newAffiliation = deepClone(currentAffiliation);
-            newAffiliation.af_org_id = organisation.org_id;
-            newAffiliation.fez_org_structure = { ...organisation };
-            dispatch({
-                type: ACTION.CHANGE,
-                affiliation: newAffiliation,
-            });
-        },
-        [ACTION.DELETE]: index => {
-            dispatch({
-                type: ACTION.DELETE,
-                index,
-            });
-        },
-        [ACTION.ADD]: (rowData, organisation) => {
-            const newAffiliation = createNewAffiliationObject(rowData, organisation);
-            console.log('addAffiliation', organisation, newAffiliation);
-            dispatch({
-                type: ACTION.ADD,
-                affiliation: newAffiliation,
-            });
-        },
-        [ACTION.NONHERDC]: (rowData, organisation) => {
-            const nonHerdcAffiliation = createNewAffiliationObject(rowData, organisation);
-            const suggestedAffiliation = createNewAffiliationObject(
-                rowData,
-                suggestedOrganisationUnits[0],
-                nonHerdcAffiliation.af_id + 100, // ensure the af_id value is different to the previous call
-            );
-            console.log('nonHerdcAffiliation', nonHerdcAffiliation, suggestedAffiliation);
-            dispatch({
-                type: ACTION.NONHERDC,
-                nonHerdcAffiliation,
-                suggestedAffiliation,
-            });
-        },
-    };
-
-    return (
-        <Grid container xs={12} alignItems={'center'} spacing={2}>
-            <Grid xs={7} sx={{ borderBlockEnd: '1px solid #ccc' }}>
-                <Typography variant="caption">Organisational Unit</Typography>
-            </Grid>
-            <Grid xs={5} sx={{ borderBlockEnd: '1px solid #ccc' }}>
-                <Typography variant="caption">Affiliation %</Typography>
-            </Grid>
-
-            {currentAffiliations.map((item, index) => (
-                <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
-                    <Grid xs={7} padding={1}>
-                        <Autocomplete
-                            clearOnBlur
-                            disableClearable
-                            value={
-                                uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ?? {
-                                    org_title: 'Organisation not found',
-                                }
-                            }
-                            options={uniqueOrgs.current ?? []}
-                            getOptionLabel={option => option.org_title}
-                            renderOption={(props, option) => (
-                                <Box
-                                    component="li"
-                                    sx={{
-                                        ...(!!option.suggested ? { color: theme.palette.primary.main } : {}),
-                                    }}
-                                    {...props}
-                                    key={option.org_id}
-                                >
-                                    {!!option.suggested ? `Suggested: ${option.org_title}` : option.org_title}
-                                </Box>
-                            )}
-                            renderInput={params => (
-                                <TextField
-                                    {...params}
-                                    size={'small'}
-                                    variant={'standard'}
-                                    inputProps={{
-                                        ...params.inputProps,
-                                        placeholder: 'Start typing or select from list',
-                                    }}
-                                    InputProps={{
-                                        ...params.InputProps,
-                                        error: !!!uniqueOrgs.current?.find(org => org.org_id === item.af_org_id),
-                                    }}
-                                />
-                            )}
-                            onChange={(_, newValue) => {
-                                if (isNonHerdc(newValue)) actionHandler[ACTION.NONHERDC](newValue);
-                                else {
-                                    actionHandler[ACTION.CHANGE](item, newValue);
-                                }
-                            }}
-                        />
-                    </Grid>
-                    <Grid xs={4} padding={1}>
-                        <Chip
-                            label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
-                            variant="outlined"
-                            size={'small'}
-                            color={
-                                !!uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ? 'primary' : 'error'
-                            }
-                        />
-                    </Grid>
-
-                    <Grid xs={1} justifyContent={'flex-end'} padding={1}>
-                        {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
-                            <IconButton aria-label="delete" onClick={() => actionHandler[ACTION.DELETE](index)}>
-                                <DeleteIcon />
-                            </IconButton>
-                        )}
-                    </Grid>
-                </React.Fragment>
-            ))}
-            {!hasNonHerdc(currentAffiliations) && (
-                <Grid xs={7} padding={1}>
-                    <Autocomplete
-                        key={Date.now()}
-                        clearOnBlur
-                        disableClearable
-                        options={
-                            uniqueOrgs.current?.filter(org => !currentAffiliationOrgIds.includes(org.org_id)) ?? []
-                        }
-                        getOptionLabel={option => option.org_title}
-                        renderOption={(props, option) => (
-                            <Box
-                                component="li"
-                                sx={{ ...(!!option.suggested ? { color: theme.palette.primary.main } : {}) }}
-                                {...props}
-                                key={option.org_id}
-                            >
-                                {!!option.suggested ? `Suggested: ${option.org_title}` : option.org_title}
-                            </Box>
-                        )}
-                        renderInput={params => (
-                            <TextField
-                                {...params}
-                                size={'small'}
-                                variant={'standard'}
-                                placeholder="Start typing or select from list"
-                            />
-                        )}
-                        onChange={(event, newValue) => {
-                            console.log(newValue, isNonHerdc(newValue));
-                            if (isNonHerdc(newValue)) actionHandler[ACTION.NONHERDC](newValue);
-                            else actionHandler[ACTION.ADD](newValue);
-                        }}
-                    />
-                </Grid>
-            )}
-            <Grid container xs={12} justifyContent={'flex-end'}>
-                <Button onClick={() => setEditing({ editing: false, aut_id: rowData.aut_id })}>Cancel</Button>
-                <Button
-                    onClick={() => {
-                        const newRowData = { ...rowData, affiliations: [...currentAffiliations] };
-                        onChange(newRowData);
-                        setEditing({ editing: false, aut_id: rowData.aut_id });
-                    }}
-                    disabled={hasAffiliationProblems(currentAffiliations)}
-                >
-                    Save
-                </Button>
-            </Grid>
-        </Grid>
-    );
-};
-const ViewingAuthorAffiliations = ({ rowData, onChange }) => {
-    const affiliations = rowData.affiliations ?? [];
-    const alertOptions = { title: '', message: '' };
-
-    const hasPercentileError = !has100pcAffiliations({ author: rowData });
-    const hasOrgErrors = !hasValidOrgAffiliations({ author: rowData });
-    const hasProblems = hasPercentileError || hasOrgErrors;
-
-    if (hasPercentileError) {
-        alertOptions.title = 'Author affiliation information is incomplete';
-        if (affiliations.length > 0) {
-            alertOptions.message = 'Percentage sum total of all affiliations must equal 100%';
-            alertOptions.action = () => {
-                const affiliations = calculateAffiliationPercentile(rowData.affiliations);
-                const newRowData = { ...rowData, affiliations };
-                onChange(newRowData);
-            };
-            alertOptions.actionButtonLabel = 'Recalculate Percentages';
-        } else {
-            alertOptions.message = 'Author requires at least one affiliation to be added';
-        }
-    } else if (hasOrgErrors) {
-        alertOptions.title = 'Orphaned organisation affiliation information';
-        alertOptions.message = 'Organisation(s) no longer exists';
-    }
-
-    return (
-        <Grid container xs={12} spacing={2}>
-            <Grid xs={12} sx={{ borderBlockEnd: '1px solid #ccc' }}>
-                <Typography variant="caption">Organisational Unit</Typography>
-            </Grid>
-            {affiliations.map(item => (
-                <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
-                    <Grid xs={2}>
-                        <Chip
-                            label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
-                            variant="outlined"
-                            size={'small'}
-                            color={hasProblems ? 'error' : 'primary'}
-                        />
-                    </Grid>
-                    <Grid xs={10}>
-                        <Typography variant="body2" color={hasProblems ? 'error' : 'primary'}>
-                            {item.fez_org_structure?.org_title ?? 'Organisational Unit has been removed'}
-                        </Typography>
-                    </Grid>
-                </React.Fragment>
-            ))}
-            {affiliations.length === 0 && (
-                <>
-                    <Grid xs={2}>
-                        <Chip label={'0%'} variant="outlined" size={'small'} color={'error'} />
-                    </Grid>
-                    <Grid xs={10}>
-                        <Typography variant="body2" color={'error'}>
-                            No affiliations have been added
-                        </Typography>
-                    </Grid>
-                </>
-            )}
-            {hasProblems && (
-                <Grid xs={12}>
-                    <Alert type={'warning'} {...alertOptions} />
-                </Grid>
-            )}
-        </Grid>
-    );
-};
-
-/* istanbul ignore next */
-export const AuthorDetailPanel = ({
+export const authorDetailPanel = ({
     rowData,
     isEditing,
     setEditing,
@@ -801,9 +425,9 @@ export const AuthorDetailPanel = ({
                     </IconButton>
                 )}
             </Typography>
-            {!isEditing && <ViewingAuthorAffiliations rowData={rowData} onChange={onChange} />}
+            {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} />}
             {isEditing && (
-                <EditingAuthorAffiliations
+                <EditAuthorAffiliations
                     rowData={rowData}
                     isEditing={isEditing}
                     setEditing={setEditing}
@@ -830,7 +454,6 @@ export const AuthorsListWithAffiliates = ({
     loadOrganisationalUnitsList,
     loadSuggestedOrganisationalUnitsList,
 }) => {
-    console.log('AuthorsListWithAffiliates', list);
     const { organisationUnits, organisationUnitsLoading, organisationUnitsFailed } = organisationalUnitList;
 
     if (organisationUnits.length === 0 && organisationUnitsLoading === false && organisationUnitsFailed === false) {
@@ -1125,7 +748,7 @@ export const AuthorsListWithAffiliates = ({
                         render: () => {
                             return !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro
                                 ? null
-                                : AuthorDetailPanel({
+                                : authorDetailPanel({
                                       rowData,
                                       isEditing: isEditing(rowData.aut_id),
                                       setEditing,
