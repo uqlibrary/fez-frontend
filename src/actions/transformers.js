@@ -1202,7 +1202,43 @@ export const getGrantInformationSectionSearchKeys = grantsSection => ({
     ...getGrantsListSearchKey((grantsSection && grantsSection.grants) || []),
 });
 
+/**
+ * getRecordAuthorAffiliations - returns authors object formatted for record request
+ *
+ * @param {array} of objects in format {nameAsPublished: {string}}
+ *
+ * @returns {Object} formatted {fez_record_search_key_author} for record request
+ * "fez_author_affiliation": [
+        {
+            "af_id": 478894,
+            "af_pid": "UQ:871c1f8",
+            "af_author_id": 88844,
+            "af_percent_affiliation": 50000,
+            "af_org_id": 881,
+            "af_status": 1,
+ */
+export const getRecordAuthorAffiliations = authors => {
+    if (!authors || authors.length === 0) {
+        return {
+            fez_author_affiliation: [],
+        };
+    }
+
+    return {
+        fez_author_affiliation: authors.reduce((accumulated, author) => {
+            const newArray = [...accumulated];
+            author.affiliations.forEach(affiliation => {
+                // eslint-disable-next-line camelcase
+                const { af_author_id, af_percent_affiliation, af_org_id, af_status } = affiliation;
+                newArray.push({ af_author_id, af_percent_affiliation, af_org_id, af_status });
+            });
+            return newArray;
+        }, []),
+    };
+};
+
 export const getAuthorsSearchKeys = authors => ({
+    ...getRecordAuthorAffiliations(authors),
     ...getRecordAuthorsSearchKey(authors),
     ...getRecordAuthorsIdSearchKey(authors),
     ...getRecordAuthorAffiliationSearchKey(authors),
@@ -1227,6 +1263,7 @@ export const getArchitectsSearchKeys = architects => ({
 
 export const getAuthorsSectionSearchKeys = (data = {}) => {
     const { authors, editors, supervisors, creators, architects } = data;
+    console.log('getAuthorsSectionSearchKeys', authors, getAuthorsSearchKeys(authors));
     return {
         ...(!!authors ? getAuthorsSearchKeys(authors) : {}),
         ...(!!editors ? getContributorsSearchKeys(editors) : {}),

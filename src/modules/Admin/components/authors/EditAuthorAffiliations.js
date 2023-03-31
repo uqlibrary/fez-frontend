@@ -150,7 +150,7 @@ const EditAuthorAffiliations = ({
                                 />
                             )}
                             onChange={(_, newValue) => {
-                                if (isNonHerdc(newValue)) actionHandler[ACTIONS.NONHERDC](newValue);
+                                if (isNonHerdc(newValue)) actionHandler[ACTIONS.NONHERDC](rowData, newValue);
                                 else {
                                     actionHandler[ACTIONS.CHANGE](item, newValue);
                                 }
@@ -207,8 +207,8 @@ const EditAuthorAffiliations = ({
                         )}
                         onChange={(event, newValue) => {
                             console.log(newValue, isNonHerdc(newValue));
-                            if (isNonHerdc(newValue)) actionHandler[ACTIONS.NONHERDC](newValue);
-                            else actionHandler[ACTIONS.ADD](newValue);
+                            if (isNonHerdc(newValue)) actionHandler[ACTIONS.NONHERDC](rowData, newValue);
+                            else actionHandler[ACTIONS.ADD](rowData, newValue);
                         }}
                     />
                 </Grid>
