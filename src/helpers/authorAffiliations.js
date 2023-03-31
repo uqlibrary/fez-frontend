@@ -27,20 +27,19 @@ export const has100pcAffiliations = ({ author, affiliations = [], total = MAX_TO
     );
 };
 
-export const hasAnyProblemAffiliations = ({ author, affiliations = [], total = MAX_TOTAL } = {}) => {
-    if (!!author) {
-        return (
-            author.aut_id !== 0 &&
-            (hasValidOrgAffiliations({ author }) === false || has100pcAffiliations({ author, total }) === false)
-        );
-    } else {
-        return (
-            hasValidOrgAffiliations({ affiliations }) === false ||
-            has100pcAffiliations({ affiliations, total }) === false
-        );
-    }
+export const hasAffiliationProblems = (affiliations, total = MAX_TOTAL) => {
+    return (
+        hasValidOrgAffiliations({ affiliations }) === false || has100pcAffiliations({ affiliations, total }) === false
+    );
 };
 
+export const hasAffiliationProblemsByAuthor = (author, total = MAX_TOTAL) => {
+    return (
+        !!author.aut_id &&
+        author.aut_id !== 0 &&
+        (hasValidOrgAffiliations({ author }) === false || has100pcAffiliations({ author, total }) === false)
+    );
+};
 export const getUniqueAffiliations = affiliations =>
     affiliations?.reduce(
         (accumulated, current) =>

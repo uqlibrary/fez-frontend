@@ -37,7 +37,8 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Box from '@mui/material/Box';
 import {
-    hasAnyProblemAffiliations,
+    hasAffiliationProblems,
+    hasAffiliationProblemsByAuthor,
     has100pcAffiliations,
     hasValidOrgAffiliations,
     isNonHerdc,
@@ -87,16 +88,7 @@ NameAsPublished.propTypes = {
 };
 
 export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
-    // const hasAffiliateProblem = rowData =>
-    //     problematicAffiliations.filter(
-    //         affiliate =>
-    //             affiliate.rek_author_id === rowData.aut_id &&
-    //             (affiliate.hasOrgAffiliations === false || affiliate.has100pcAffiliations === false),
-    //     ).length > 0;
-
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
-    // eslint-disable-next-line no-nested-ternary
-    // hasAffiliateProblem(rowData) ? classes.problem : !!rowData.aut_id ? classes.linked : '';
 
     const {
         header: {
@@ -147,7 +139,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             ),
             field: 'nameAsPublished',
             render: rowData => {
-                const inProblemState = hasAnyProblemAffiliations({ author: rowData });
+                const inProblemState = hasAffiliationProblemsByAuthor(rowData);
                 return (
                     <NameAsPublished
                         icon={getIcon({ rowData, disabled, inProblemState })}
@@ -204,7 +196,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             ),
             field: 'uqIdentifier',
             render: rowData => {
-                const inProblemState = hasAnyProblemAffiliations({ author: rowData });
+                const inProblemState = hasAffiliationProblemsByAuthor(rowData);
                 return (
                     <Typography
                         variant="body2"
@@ -480,7 +472,6 @@ const editAffiliationReducer = (affiliations, action) => {
 };
 
 const EditingAuthorAffiliations = ({
-    pid,
     rowData,
     setEditing,
     onChange,
@@ -556,7 +547,6 @@ const EditingAuthorAffiliations = ({
     };
 
     const createNewAffiliationObject = (organisation, id = Date.now()) => ({
-        af_pid: pid,
         af_status: 1,
         af_author_id: rowData.aut_id,
         af_id: id,
@@ -709,7 +699,7 @@ const EditingAuthorAffiliations = ({
                         onChange(newRowData);
                         setEditing({ editing: false, aut_id: rowData.aut_id });
                     }}
-                    disabled={hasAnyProblemAffiliations({ affiliations: currentAffiliations })}
+                    disabled={hasAffiliationProblems(currentAffiliations)}
                 >
                     Save
                 </Button>
@@ -717,7 +707,6 @@ const EditingAuthorAffiliations = ({
         </Grid>
     );
 };
-
 const ViewingAuthorAffiliations = ({ rowData }) => {
     const affiliations = rowData.affiliations ?? [];
     const alertOptions = { title: '', message: '' };
@@ -787,7 +776,6 @@ const ViewingAuthorAffiliations = ({ rowData }) => {
 
 /* istanbul ignore next */
 export const AuthorDetailPanel = ({
-    pid,
     rowData,
     isEditing,
     setEditing,
@@ -813,7 +801,6 @@ export const AuthorDetailPanel = ({
             {!isEditing && <ViewingAuthorAffiliations setEditing={setEditing} rowData={rowData} />}
             {isEditing && (
                 <EditingAuthorAffiliations
-                    pid={pid}
                     rowData={rowData}
                     isEditing={isEditing}
                     setEditing={setEditing}
@@ -828,7 +815,6 @@ export const AuthorDetailPanel = ({
 };
 
 export const AuthorsListWithAffiliates = ({
-    pid,
     contributorEditorId,
     disabled,
     isNtro,
@@ -1124,7 +1110,7 @@ export const AuthorsListWithAffiliates = ({
             detailPanel={[
                 rowData => {
                     const conditionalIcon =
-                        rowData.uqUsername === '' || isNtro || editState.editing
+                        !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro || editState.editing
                             ? {
                                   icon: () => {
                                       return null;
@@ -1135,10 +1121,9 @@ export const AuthorsListWithAffiliates = ({
                     return {
                         ...conditionalIcon,
                         render: () => {
-                            return rowData.uqUsername === '' || isNtro
+                            return !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro
                                 ? null
                                 : AuthorDetailPanel({
-                                      pid,
                                       rowData,
                                       isEditing: isEditing(rowData.aut_id),
                                       setEditing,
