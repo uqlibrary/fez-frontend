@@ -196,6 +196,7 @@ export default class DeleteRecord extends PureComponent {
                                                         multiline
                                                         rows={3}
                                                         label={formTxt.reason.label(isDeleted)}
+                                                        validate={[validation.maxLength255]}
                                                     />
                                                 </Grid>
                                             </Grid>
@@ -215,7 +216,7 @@ export default class DeleteRecord extends PureComponent {
                                                                 textFieldId="rek-new-doi"
                                                                 type="text"
                                                                 fullWidth
-                                                                validate={[validation.doi]}
+                                                                validate={[validation.doi, validation.maxLength255]}
                                                                 label={formTxt.newDoi.label}
                                                                 placeholder={formTxt.newDoi.placeholder}
                                                             />
@@ -236,6 +237,7 @@ export default class DeleteRecord extends PureComponent {
                                                                 fullWidth
                                                                 multiline
                                                                 rows={5}
+                                                                validate={[validation.maxListEditorTextLength2000]}
                                                                 maxValue={2000}
                                                             />
                                                         </Grid>
