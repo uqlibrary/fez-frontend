@@ -60,6 +60,7 @@ export const composeAuthorAffiliationProblems = record => {
                     has100pcAffiliations:
                         hasAffiliations &&
                         has100pcAffiliations({ author, affiliations: record.fez_author_affiliation }),
+                    isNotOrphaned: true,
                 };
             })
             .filter(item => item.rek_author_id !== 0 && !item.has100pcAffiliations) ?? [];
@@ -73,7 +74,8 @@ export const composeAuthorAffiliationProblems = record => {
                 ? {
                       rek_author_id: orphanedAuthor.fez_author.aut_id,
                       rek_author: orphanedAuthor.fez_author.aut_display_name,
-                      isOrphaned: true,
+                      has100pcAffiliations: true, // may not be true but doesn't actually matter for an orphan
+                      isNotOrphaned: false,
                   }
                 : undefined;
         })
