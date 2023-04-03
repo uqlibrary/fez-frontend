@@ -713,12 +713,12 @@ const recordWithProblematicAuthorAffiliations = {
                 "aut_id": 88844,
                 "aut_display_name": "Robertson, Avril A. B."
             },
-            "fez_org_structure": [
+            "fez_org_structure": 
                 {
                     "org_id": 881,
                     "org_title": "School of Chemistry and Molecular Biosciences"
                 }
-            ],
+            ,
         },
         {
             "af_id": 478895,
@@ -731,12 +731,12 @@ const recordWithProblematicAuthorAffiliations = {
                 "aut_id": 88844,
                 "aut_display_name": "Robertson, Avril A. B."
             },
-            "fez_org_structure": [
+            "fez_org_structure": 
                 {
                     "org_id": 968,
                     "org_title": "Institute for Molecular Bioscience"
                 }
-            ]
+            
         },
         {
             "af_id": 478896,
@@ -749,12 +749,12 @@ const recordWithProblematicAuthorAffiliations = {
                 "aut_id": 7624000,
                 "aut_display_name": "Good, All"
             },
-            "fez_org_structure": [
+            "fez_org_structure": 
                 {
                     "org_id": 1248,
                     "org_title": "Information Systems and Resource Services (University of Queensland Library)"
                 }
-            ]
+            
         },
         {
             "af_author_id": 7624839,
@@ -763,8 +763,22 @@ const recordWithProblematicAuthorAffiliations = {
             "af_percent_affiliation": 100000,
             "af_pid": "UQ:130003",
             "af_status": 1,
-            "fez_author": {"aut_id": 7624839, "aut_display_name": "Lancaster, Steve."}
-        }
+            "fez_author": {"aut_id": 7624839, "aut_display_name": "Lancaster, Steve."},
+        },
+        {
+            "af_author_id": 7624840,
+            "af_id": 16851,
+            "af_org_id": 1248,
+            "af_percent_affiliation": 100000,
+            "af_pid": "UQ:130003",
+            "af_status": 1,
+            "fez_author": {"aut_id": 7624840, "aut_display_name": "Affiliate, Orphaned"},
+            "fez_org_structure": 
+            {
+                "org_id": 1248,
+                "org_title": "Information Systems and Resource Services (University of Queensland Library)"
+            }
+        },
     ],
     "fez_record_search_key_audience_size": null,
     "fez_record_search_key_author_affiliation_id": [],
