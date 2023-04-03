@@ -12,8 +12,6 @@ import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-// import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
-// import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
 import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsListWithAffiliates';
 
 import { loadOrganisationalUnits, loadSuggestedOrganisationalUnitByAuthorId } from 'actions';

@@ -13,7 +13,7 @@ export function loadOrganisationalUnits() {
             .then(response => {
                 dispatch({
                     type: actions.ORGANISATIONAL_UNITS_LOADED,
-                    payload: response.data,
+                    payload: response,
                 });
 
                 return Promise.resolve(response);
@@ -44,7 +44,7 @@ export function loadSuggestedOrganisationalUnitByAuthorId(authorId) {
             .then(response => {
                 dispatch({
                     type: actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADED,
-                    payload: response.data,
+                    payload: response,
                 });
 
                 return Promise.resolve(response);

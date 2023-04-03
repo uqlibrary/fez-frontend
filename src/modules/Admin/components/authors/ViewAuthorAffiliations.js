@@ -5,20 +5,14 @@ import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import {
-    has100pcAffiliations,
-    hasValidOrgAffiliations,
-    calculateAffiliationPercentile,
-    PRECISION,
-} from 'helpers/authorAffiliations';
+import { has100pcAffiliations, calculateAffiliationPercentile, PRECISION } from 'helpers/authorAffiliations';
 
 const ViewAuthorAffiliations = ({ rowData, onChange }) => {
     const affiliations = rowData.affiliations ?? [];
     const alertOptions = { title: '', message: '' };
 
     const hasPercentileError = !has100pcAffiliations({ author: rowData });
-    const hasOrgErrors = !hasValidOrgAffiliations({ author: rowData });
-    const hasProblems = hasPercentileError || hasOrgErrors;
+    const hasProblems = hasPercentileError;
 
     if (hasPercentileError) {
         alertOptions.title = 'Author affiliation information is incomplete';
@@ -33,9 +27,6 @@ const ViewAuthorAffiliations = ({ rowData, onChange }) => {
         } else {
             alertOptions.message = 'Author requires at least one affiliation to be added';
         }
-    } else if (hasOrgErrors) {
-        alertOptions.title = 'Orphaned organisation affiliation information';
-        alertOptions.message = 'Organisation(s) no longer exists';
     }
 
     return (
@@ -55,7 +46,7 @@ const ViewAuthorAffiliations = ({ rowData, onChange }) => {
                     </Grid>
                     <Grid xs={10}>
                         <Typography variant="body2" color={hasProblems ? 'error' : 'primary'}>
-                            {item.fez_org_structure?.org_title ?? 'Organisational Unit has been removed'}
+                            {item.fez_org_structure?.org_title ?? 'Organisational Unit data missing'}
                         </Typography>
                     </Grid>
                 </React.Fragment>

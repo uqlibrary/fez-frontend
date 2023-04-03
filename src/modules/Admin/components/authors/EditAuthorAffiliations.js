@@ -117,7 +117,7 @@ const EditAuthorAffiliations = ({
                             disableClearable
                             value={
                                 uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ?? {
-                                    org_title: 'Organisation not found',
+                                    org_title: 'Organisation missing',
                                 }
                             }
                             options={uniqueOrgs.current ?? []}

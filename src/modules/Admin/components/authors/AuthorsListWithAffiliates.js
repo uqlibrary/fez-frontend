@@ -455,8 +455,11 @@ export const AuthorsListWithAffiliates = ({
     loadSuggestedOrganisationalUnitsList,
 }) => {
     const { organisationUnits, organisationUnitsLoading, organisationUnitsFailed } = organisationalUnitList;
-
-    if (organisationUnits.length === 0 && organisationUnitsLoading === false && organisationUnitsFailed === false) {
+    if (
+        (!!!organisationUnits || organisationUnits?.length === 0) &&
+        organisationUnitsLoading === false &&
+        organisationUnitsFailed === false
+    ) {
         // dispatch
         loadOrganisationalUnitsList();
     }
