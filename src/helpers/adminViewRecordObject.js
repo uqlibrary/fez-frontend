@@ -37,8 +37,7 @@ export const authorAffiliates = (key, content, history, pid, AAProblems) => {
                     data-testid={`affil_error_${item.rek_author_id}`}
                     aria-label={`Afffiliation error for ${item.rek_author}`}
                 >
-                    <b>{item.rek_author}</b>{' '}
-                    {config.viewRecord.adminViewRecordDrawerFields.errorDetail(item.has100pcAffiliations)}
+                    <b>{item.rek_author}</b> {config.viewRecord.adminViewRecordDrawerFields.errorDetail(item)}
                 </Typography>
             ));
 
