@@ -13,6 +13,7 @@ import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsListWithAffiliates';
+import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
 import { loadOrganisationalUnits, loadSuggestedOrganisationalUnitByAuthorId } from 'actions';
 
@@ -33,6 +34,7 @@ export class ContributorsEditor extends PureComponent {
         meta: PropTypes.object,
         onChange: PropTypes.func,
         required: PropTypes.bool,
+        shouldHandleAffiliations: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
@@ -60,6 +62,7 @@ export class ContributorsEditor extends PureComponent {
 
     constructor(props) {
         super(props);
+        console.log('ContributorsEditor >>>', props);
         this.state = {
             contributors: this.getContributorsWithAffiliationsFromProps(props),
             errorMessage: '',
@@ -329,7 +332,7 @@ export class ContributorsEditor extends PureComponent {
         }
 
         if (isAdmin) {
-            return (
+            return this.props.shouldHandleAffiliations ? (
                 <AuthorsListWithAffiliates
                     contributorEditorId={contributorEditorId}
                     disabled={disabled}
@@ -343,8 +346,7 @@ export class ContributorsEditor extends PureComponent {
                     loadSuggestedOrganisationalUnitsList={this.props.loadSuggestedOrganisationalUnitsList}
                     suggestedOrganisationalUnitList={this.props.suggestedOrganisationalUnitList}
                 />
-            );
-            /*
+            ) : (
                 <AuthorsList
                     contributorEditorId={contributorEditorId}
                     disabled={disabled}
@@ -354,7 +356,7 @@ export class ContributorsEditor extends PureComponent {
                     locale={this.props.locale}
                     isNtro={isNtro}
                 />
-            */
+            );
         }
 
         return (

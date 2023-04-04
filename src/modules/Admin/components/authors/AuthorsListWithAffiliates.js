@@ -561,11 +561,9 @@ export const AuthorsListWithAffiliates = ({
     };
 
     const handleAffiliationUpdate = list => rowData => {
-        console.log('handleAffiliationUpdate', list, rowData);
         const index = list.findIndex(item => item.aut_id === rowData.aut_id);
         const newList = [...list.slice(0, index), rowData, ...list.slice(index + 1)];
 
-        console.log('handleAffiliationUpdate', newList);
         onChange(newList);
         setData(newList);
     };

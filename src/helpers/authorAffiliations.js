@@ -47,6 +47,9 @@ export const getUniqueAffiliationIds = affiliations =>
         [],
     ) ?? [];
 
+export const isOrphanedAffiliate = (record, affiliationId) =>
+    !record.fez_record_search_key_author_id.some(author => author.rek_author_id === affiliationId);
+
 export const composeAuthorAffiliationProblems = record => {
     const uniqueAffiliationIds = getUniqueAffiliationIds(record.fez_author_affiliation);
     const affiliationsNot100pc =
@@ -67,7 +70,7 @@ export const composeAuthorAffiliationProblems = record => {
 
     const orphanedAuthors = uniqueAffiliationIds
         .map(afId => {
-            const orphanedAuthor = !record.fez_record_search_key_author_id.some(author => author.rek_author_id === afId)
+            const orphanedAuthor = isOrphanedAffiliate(record, afId)
                 ? record.fez_author_affiliation.find(author => author.af_author_id === afId)
                 : undefined;
             return !!orphanedAuthor

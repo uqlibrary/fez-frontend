@@ -78,13 +78,12 @@ export default {
             groups: [['fez_record_search_key_isderivationof']],
         },
     ],
-    authors: () => [
+    authors: ({ shouldHandleAffiliations = false }) => [
         {
             title: 'Authors',
-            groups: [['authors']],
+            groups: [...(!shouldHandleAffiliations ? [['authors']] : [['authorsWithAffiliations']])],
         },
     ],
-
     admin: () => [
         {
             title: 'Member of collections',
