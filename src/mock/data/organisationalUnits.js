@@ -1,5 +1,4 @@
-export const organisationalUnits = {
-    "data": [
+export const organisationalUnits = [
         {
             "org_id": 1062,
             "org_extdb_name": "hr",
@@ -5600,5 +5599,4 @@ export const organisationalUnits = {
             "org_desc": null,
             "org_image_filename": null
         }
-    ]
-};
+    ];

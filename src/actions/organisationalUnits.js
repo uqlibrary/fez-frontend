@@ -13,7 +13,7 @@ export function loadOrganisationalUnits() {
             .then(response => {
                 dispatch({
                     type: actions.ORGANISATIONAL_UNITS_LOADED,
-                    payload: response.data,
+                    payload: response,
                 });
 
                 return Promise.resolve(response);
@@ -39,18 +39,18 @@ export function loadOrganisationalUnits() {
  */
 export function loadSuggestedOrganisationalUnitByAuthorId(authorId) {
     return dispatch => {
-        dispatch({ type: actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADING });
+        dispatch({ type: actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADING, authorId });
         return get(SUGGESTED_ORGANISATIONAL_UNITS({ authorId }))
             .then(response => {
                 dispatch({
                     type: actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADED,
-                    payload: response.data,
+                    payload: response,
+                    authorId,
                 });
 
                 return Promise.resolve(response);
             })
             .catch(error => {
-                console.log('loadSuggestedOrganisationalUnitByAuthorId error', error);
                 dispatch({
                     type: actions.SUGGESTED_ORGANISATIONAL_UNITS_FAILED,
                     payload: error,

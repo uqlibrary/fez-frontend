@@ -15,7 +15,11 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsListWithAffiliates';
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
-import { loadOrganisationalUnits, loadSuggestedOrganisationalUnitByAuthorId } from 'actions';
+import {
+    loadOrganisationalUnits,
+    loadSuggestedOrganisationalUnitByAuthorId,
+    clearSuggestedOrganisationalUnits,
+} from 'actions';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -41,6 +45,7 @@ export class ContributorsEditor extends PureComponent {
         record: PropTypes.object,
         loadOrganisationalUnitsList: PropTypes.func.isRequired,
         loadSuggestedOrganisationalUnitsList: PropTypes.func.isRequired,
+        clearSuggestedOrganisationalUnits: PropTypes.func.isRequired,
         organisationalUnitList: PropTypes.object,
         suggestedOrganisationalUnitList: PropTypes.object,
     };
@@ -125,7 +130,6 @@ export class ContributorsEditor extends PureComponent {
             });
             return;
         }
-
         const isContributorACurrentAuthor =
             this.props.author && contributor.uqIdentifier === `${this.props.author.aut_id}`;
         this.setState({
@@ -345,6 +349,7 @@ export class ContributorsEditor extends PureComponent {
                     organisationalUnitList={this.props.organisationalUnitList}
                     loadSuggestedOrganisationalUnitsList={this.props.loadSuggestedOrganisationalUnitsList}
                     suggestedOrganisationalUnitList={this.props.suggestedOrganisationalUnitList}
+                    clearSuggestedOrganisationalUnits={this.props.clearSuggestedOrganisationalUnits}
                 />
             ) : (
                 <AuthorsList
@@ -437,6 +442,7 @@ const mapDispatchToProps = dispatch => {
     return {
         loadOrganisationalUnitsList: () => dispatch(loadOrganisationalUnits()),
         loadSuggestedOrganisationalUnitsList: authorId => dispatch(loadSuggestedOrganisationalUnitByAuthorId(authorId)),
+        clearSuggestedOrganisationalUnits: () => dispatch(clearSuggestedOrganisationalUnits()),
     };
 };
 

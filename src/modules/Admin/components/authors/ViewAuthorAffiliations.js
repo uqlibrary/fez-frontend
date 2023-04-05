@@ -31,7 +31,7 @@ const ViewAuthorAffiliations = ({ rowData, onChange }) => {
 
     return (
         <Grid container xs={12} spacing={2}>
-            <Grid xs={12} sx={{ borderBlockEnd: '1px solid #ccc' }}>
+            <Grid xs={12} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
                 <Typography variant="caption">Organisational Unit</Typography>
             </Grid>
             {affiliations.map(item => (

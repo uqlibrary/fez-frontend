@@ -407,9 +407,11 @@ export const authorDetailPanel = ({
     isEditing,
     setEditing,
     onChange,
-    organisationUnits,
+    organisationalUnitList,
+    loadOrganisationalUnitsList,
     suggestedOrganisationalUnitList,
     loadSuggestedOrganisationalUnitsList,
+    clearSuggestedOrganisationalUnits,
 }) => {
     return (
         <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }}>
@@ -432,9 +434,11 @@ export const authorDetailPanel = ({
                     isEditing={isEditing}
                     setEditing={setEditing}
                     onChange={onChange}
-                    organisationUnits={organisationUnits}
+                    organisationalUnitList={organisationalUnitList}
+                    loadOrganisationalUnitsList={loadOrganisationalUnitsList}
                     suggestedOrganisationalUnitList={suggestedOrganisationalUnitList}
                     loadSuggestedOrganisationalUnitsList={loadSuggestedOrganisationalUnitsList}
+                    clearSuggestedOrganisationalUnits={clearSuggestedOrganisationalUnits}
                 />
             )}
         </Grid>
@@ -453,17 +457,8 @@ export const AuthorsListWithAffiliates = ({
     suggestedOrganisationalUnitList,
     loadOrganisationalUnitsList,
     loadSuggestedOrganisationalUnitsList,
+    clearSuggestedOrganisationalUnits,
 }) => {
-    const { organisationUnits, organisationUnitsLoading, organisationUnitsFailed } = organisationalUnitList;
-    if (
-        (!!!organisationUnits || organisationUnits?.length === 0) &&
-        organisationUnitsLoading === false &&
-        organisationUnitsFailed === false
-    ) {
-        // dispatch
-        loadOrganisationalUnitsList();
-    }
-
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
 
     // eslint-disable-next-line camelcase
@@ -563,7 +558,6 @@ export const AuthorsListWithAffiliates = ({
     const handleAffiliationUpdate = list => rowData => {
         const index = list.findIndex(item => item.aut_id === rowData.aut_id);
         const newList = [...list.slice(0, index), rowData, ...list.slice(index + 1)];
-
         onChange(newList);
         setData(newList);
     };
@@ -573,9 +567,9 @@ export const AuthorsListWithAffiliates = ({
             tableRef={materialTableRef}
             columns={columns.current}
             components={{
-                // Container: props => (
-                //     <div {...props} id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`} />
-                // ),
+                Container: props => (
+                    <div {...props} id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`} />
+                ),
                 Action: props => {
                     if (typeof props.action !== 'function' && !props.action.action && !props.action.isFreeAction) {
                         const { icon: Icon, tooltip, ...restAction } = props.action;
@@ -754,9 +748,11 @@ export const AuthorsListWithAffiliates = ({
                                       isEditing: isEditing(rowData.aut_id),
                                       setEditing,
                                       onChange: handleAffiliationUpdate(list),
-                                      organisationUnits,
+                                      organisationalUnitList,
+                                      loadOrganisationalUnitsList,
                                       suggestedOrganisationalUnitList,
                                       loadSuggestedOrganisationalUnitsList,
+                                      clearSuggestedOrganisationalUnits,
                                   });
                         },
                     };
@@ -805,6 +801,7 @@ AuthorsListWithAffiliates.propTypes = {
     suggestedOrganisationalUnitList: PropTypes.object.isRequired,
     loadOrganisationalUnitsList: PropTypes.func,
     loadSuggestedOrganisationalUnitsList: PropTypes.func,
+    clearSuggestedOrganisationalUnits: PropTypes.func,
 };
 
 export default React.memo(AuthorsListWithAffiliates);

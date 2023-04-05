@@ -1,14 +1,16 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
+    suggestedAuthorId: null,
     suggestedOrganisationUnits: [],
     suggestedOrganisationUnitsLoading: false,
     suggestedOrganisationUnitsFailed: false,
 };
 
 const handlers = {
-    [actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADING]: () => ({
+    [actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADING]: (state, action) => ({
         ...initialState,
+        suggestedAuthorId: action.authorId,
         suggestedOrganisationUnits: [],
         suggestedOrganisationUnitsLoading: true,
         suggestedOrganisationUnitsFailed: false,
@@ -16,7 +18,8 @@ const handlers = {
 
     [actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADED]: (state, action) => ({
         ...initialState,
-        suggestedOrganisationUnits: action.payload?.data?.map(item => ({
+        suggestedAuthorId: action.authorId,
+        suggestedOrganisationUnits: action.payload.data.map(item => ({
             ...item,
             suggested: true,
         })),
@@ -26,6 +29,7 @@ const handlers = {
 
     [actions.SUGGESTED_ORGANISATIONAL_UNITS_FAILED]: () => ({
         ...initialState,
+        suggestedAuthorId: null,
         suggestedOrganisationUnits: [],
         suggestedOrganisationUnitsLoading: false,
         suggestedOrganisationUnitsFailed: true,
@@ -33,7 +37,10 @@ const handlers = {
 
     [actions.SUGGESTED_ORGANISATIONAL_UNITS_CLEARED]: () => ({
         ...initialState,
+        suggestedAuthorId: null,
         suggestedOrganisationUnits: [],
+        suggestedOrganisationUnitsLoading: false,
+        suggestedOrganisationUnitsFailed: false,
     }),
 };
 
