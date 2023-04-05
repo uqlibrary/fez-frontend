@@ -8,9 +8,9 @@ context('Record with invalid affiliation', () => {
         cy.get('#adminViewRecordDrawerDesktop [data-testid="affil_error_88844"]')
             .should('contain', 'Robertson, Avril A. B. not 100%')
             .should('contain', 'has incomplete author affiliation information');
-        cy.get('#adminViewRecordDrawerDesktop [data-testid="affil_error_7624839"]')
-            .should('contain', 'Lancaster, Steve No Org')
-            .should('contain', 'has orphaned organisation information');
+        cy.get('#adminViewRecordDrawerDesktop [data-testid="affil_error_7624840"]')
+            .should('contain', 'Affiliate, Orphaned')
+            .should('contain', 'has orphaned author information');
         cy.get('#adminViewRecordDrawerDesktop [data-testid="btnFixAffiliations"]').click();
         cy.get('#admin-work-cancel-top')
             .should('exist')

@@ -322,7 +322,7 @@ describe('NewViewRecord', () => {
 
             // Author affiliations
             expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
-                'orphaned organisation information',
+                'Valid author affiliation information has been added',
             );
 
             // WoS ID
@@ -354,7 +354,7 @@ describe('NewViewRecord', () => {
 
             // Author affiliations
             expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
-                'orphaned organisation information',
+                'Valid author affiliation information has been added',
             );
 
             // WoS ID

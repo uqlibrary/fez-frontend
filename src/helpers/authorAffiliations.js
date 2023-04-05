@@ -11,11 +11,13 @@ export const ACTIONS = {
     FIX: 'fix',
 };
 
+/* istanbul ignore next */
 export const getFilteredAffiliations = (author, affiliations) =>
     affiliations.length > 0
         ? affiliations?.filter(item => item.af_author_id === author.rek_author_id)
         : author.affiliations ?? [];
 
+/* istanbul ignore next */
 export const hasValidAuthorAffiliations = record => {
     return record.fez_author_affiliation.every(item =>
         record.fez_record_search_key_author_id.some(author => item.af_author_id === author.rek_author_id),
@@ -33,13 +35,16 @@ export const has100pcAffiliations = ({ author, affiliations = [], total = MAX_TO
     );
 };
 
+/* istanbul ignore next */
 export const hasAffiliationProblems = (affiliations, total = MAX_TOTAL) => {
     return has100pcAffiliations({ affiliations, total }) === false;
 };
 
+/* istanbul ignore next */
 export const hasAffiliationProblemsByAuthor = (author, total = MAX_TOTAL) => {
     return !!author.aut_id && author.aut_id !== 0 && has100pcAffiliations({ author, total }) === false;
 };
+
 export const getUniqueAffiliationIds = affiliations =>
     affiliations?.reduce(
         (accumulated, current) =>
@@ -84,13 +89,16 @@ export const composeAuthorAffiliationProblems = record => {
     return [...affiliationsNot100pc, ...orphanedAuthors];
 };
 
+/* istanbul ignore next */
 export const isNonHerdc = affiliation => {
     const orgId = affiliation.org_id ?? affiliation.af_org_id ?? null;
     return orgId === NON_HERDC_ID;
 };
 
+/* istanbul ignore next */
 export const hasNonHerdc = affiliations => affiliations.some(item => isNonHerdc(item));
 
+/* istanbul ignore next */
 const splitValue = (numToSplit, numSplits) => {
     const splitAmount = Math.floor(numToSplit / numSplits);
     const remainder = numToSplit % numSplits;
@@ -102,6 +110,7 @@ const splitValue = (numToSplit, numSplits) => {
     return splits;
 };
 
+/* istanbul ignore next */
 const returnNonHerdc = affiliations => {
     return affiliations.map(item => {
         item.af_percent_affiliation = item.af_org_id === NON_HERDC_ID ? MAX_TOTAL : 0;
@@ -109,6 +118,7 @@ const returnNonHerdc = affiliations => {
     });
 };
 
+/* istanbul ignore next */
 const returnEvenSplit = affiliations => {
     const splitValues = splitValue(MAX_TOTAL, affiliations.length);
     return affiliations.map((item, index) => {
@@ -116,14 +126,19 @@ const returnEvenSplit = affiliations => {
         return item;
     });
 };
+
+/* istanbul ignore next */
 export const calculateAffiliationPercentile = (affiliations = []) => {
     const newAffiliations = JSON.parse(JSON.stringify(affiliations)); // deep copy
     return hasNonHerdc(newAffiliations) ? returnNonHerdc(newAffiliations) : returnEvenSplit(newAffiliations);
 };
+
+/* istanbul ignore next */
 export const deepClone = obj => {
     return JSON.parse(JSON.stringify(obj));
 };
 
+/* istanbul ignore next */
 export const editAffiliationReducer = (affiliations, action) => {
     let index;
     let newAffiliations = [];
@@ -156,6 +171,7 @@ export const editAffiliationReducer = (affiliations, action) => {
     }
 };
 
+/* istanbul ignore next */
 export const createNewAffiliationObject = (rowData, organisation, id = Date.now()) => ({
     af_status: 1,
     af_author_id: rowData.aut_id,

@@ -3251,7 +3251,7 @@ export default {
             hasNoAffiliates: 'No linked authors.',
             buttonLabel: 'Edit Affiliations',
             errorDetail: item =>
-                ` has ${!!!item.isNotOrphaned ? 'orphaned author' : 'incomplete affiliation'} information`,
+                ` has ${!!!item.isNotOrphaned ? 'orphaned author' : 'incomplete author affiliation'} information`,
         },
         adminViewRecordDefaultContent: {
             index: {
