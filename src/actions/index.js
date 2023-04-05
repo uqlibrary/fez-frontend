@@ -18,6 +18,7 @@ export * from './manageAuthors';
 export * from './manageUsers';
 export * from './myEditorialAppointments';
 export * from './orcidSync';
+export * from './organisationalUnits';
 export * from './publications';
 export * from './records';
 export * from './search';

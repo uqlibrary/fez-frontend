@@ -32,6 +32,7 @@ export const MyEditorialAppointments = () => {
     } = useSelector(state => state.get('myEditorialAppointmentsReducer'));
 
     const handleRowAdd = newData => {
+        console.log('DISPATCH', newData);
         return dispatch(addMyEditorialAppointments(newData));
     };
 

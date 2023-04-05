@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { useDispatch } from 'react-redux';
 import makeStyles from '@mui/styles/makeStyles';
-import MaterialTable, { MTableAction, MTableBodyRow } from 'material-table';
+import MaterialTable, { MTableAction, MTableBodyRow } from '@material-table/core';
 import { tableIcons } from './ManageAuthorsListIcons';
 
 import Button from '@mui/material/Button';
@@ -378,7 +378,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         showAddRow: false,
                     });
                 }}
-                onChangeRowsPerPage={pageSize => setPageSize(pageSize)}
+                onRowsPerPageChange={pageSize => setPageSize(pageSize)}
                 icons={tableIcons}
                 title=""
                 localization={{

@@ -515,6 +515,7 @@ export const AttachedFiles = ({
                                                                 onChange={onEmbargoDateChange(item.id)}
                                                                 disabled={disabled}
                                                                 fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
+                                                                minDate={moment().toDate()}
                                                             />
                                                         )}
                                                     </Grid>

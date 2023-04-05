@@ -336,6 +336,26 @@ export const getRecordAuthorAffiliationTypeSearchKey = authors => {
     };
 };
 
+export const getRecordAuthorAffiliations = authors => {
+    if (!authors || authors.length === 0) {
+        return {
+            fez_author_affiliation: [],
+        };
+    }
+
+    return {
+        fez_author_affiliation: authors.reduce((accumulated, author) => {
+            const newArray = [...accumulated];
+            author.affiliations?.forEach(affiliation => {
+                // eslint-disable-next-line camelcase
+                const { af_author_id, af_percent_affiliation, af_org_id, af_status } = affiliation;
+                newArray.push({ af_author_id, af_percent_affiliation, af_org_id, af_status });
+            });
+            return newArray;
+        }, []),
+    };
+};
+
 /**
  * unclaimRecordAuthorsIdSearchKey - returns authors id object formatted for record request
  *
@@ -1203,6 +1223,7 @@ export const getGrantInformationSectionSearchKeys = grantsSection => ({
 });
 
 export const getAuthorsSearchKeys = authors => ({
+    ...getRecordAuthorAffiliations(authors),
     ...getRecordAuthorsSearchKey(authors),
     ...getRecordAuthorsIdSearchKey(authors),
     ...getRecordAuthorAffiliationSearchKey(authors),
@@ -1226,9 +1247,12 @@ export const getArchitectsSearchKeys = architects => ({
 });
 
 export const getAuthorsSectionSearchKeys = (data = {}) => {
-    const { authors, editors, supervisors, creators, architects } = data;
+    const { authors, authorsWithAffiliations, editors, supervisors, creators, architects } = data;
+
     return {
-        ...(!!authors ? getAuthorsSearchKeys(authors) : {}),
+        ...(!!authors || !!authorsWithAffiliations
+            ? getAuthorsSearchKeys(!!authors ? authors : authorsWithAffiliations)
+            : {}),
         ...(!!editors ? getContributorsSearchKeys(editors) : {}),
         ...(!!creators ? getCreatorsSearchKeys(creators) : {}),
         ...(!!architects ? getArchitectsSearchKeys(architects) : {}),

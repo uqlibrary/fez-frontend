@@ -151,7 +151,7 @@ export default {
                 fez_record_search_key_subject: 'Subject(s)',
                 fez_record_search_key_journal_name: 'Journal name',
                 fez_record_search_key_language_of_journal_name: 'Language of journal name',
-                fez_record_search_key_translated_journal_name: 'Translated of journal name',
+                fez_record_search_key_translated_journal_name: 'Translated journal name',
                 fez_record_search_key_book_title: 'Title of book',
                 fez_record_search_key_translated_book_title: 'Translated title of book',
                 fez_record_search_key_language_of_book_title: 'Language of book title',

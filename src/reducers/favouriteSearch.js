@@ -45,6 +45,7 @@ const handlers = {
     }),
 
     [actions.FAVOURITE_SEARCH_ITEM_UPDATE_SUCCESS]: (state, action) => {
+        console.log('action.oldData', action);
         const index = state.favouriteSearchList.indexOf(action.oldData);
         return {
             ...state,

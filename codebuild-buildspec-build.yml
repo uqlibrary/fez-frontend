@@ -46,9 +46,9 @@ phases:
       set &&
       npm run build &&
       ls dist
-  post_build:
-    commands:
-      if [ -f ./scripts/releaseNotes.sh ]; then ./scripts/releaseNotes.sh; fi
+  #post_build:
+    #commands:
+      #if [ -f ./scripts/releaseNotes.sh ]; then ./scripts/releaseNotes.sh; fi
 #reports:
   #report-name-or-arn:
     #files:

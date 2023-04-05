@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import makeStyles from '@mui/styles/makeStyles';
-import MaterialTable, { MTableAction, MTableBodyRow } from 'material-table';
+import MaterialTable, { MTableAction, MTableBodyRow } from '@material-table/core';
 import { tableIcons } from './ManageUsersListIcons';
 
 import Backdrop from '@mui/material/Backdrop';
@@ -34,6 +34,7 @@ export const getColumns = () => {
         {
             title: <UserDetailsHeader />,
             field: 'user',
+            sorting: false,
             render: rowData => <UserDetailsRow rowData={rowData} />,
         },
     ];
@@ -67,7 +68,9 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 .onRowAdd(newData)
                 .then(data => {
                     materialTable.setState(prevState => {
-                        materialTable.dataManager.setData([data, ...prevState.data]);
+                        const prev = [...prevState.data];
+                        prev.forEach(item => delete item.tableData);
+                        materialTable.dataManager.setData([data, ...prev]);
                         return {
                             ...materialTable.dataManager.getRenderState(),
                             showAddRow: false,
@@ -204,7 +207,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                             {...props}
                             {...(props.hasAnyEditingRow
                                 ? {
-                                      onRowClick: false,
+                                      onRowClick: null,
                                       hover: false,
                                   }
                                 : { hover: true })}
@@ -281,7 +284,9 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                         showAddRow: false,
                     });
                 }}
-                onChangeRowsPerPage={pageSize => setPageSize(pageSize)}
+                onRowsPerPageChange={pageSize => {
+                    return setPageSize(pageSize);
+                }}
                 icons={tableIcons}
                 title=""
                 localization={{

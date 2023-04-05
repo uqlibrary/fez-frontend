@@ -1,0 +1,2 @@
+src/modules/Admin/components/authors/AuthorsList.test.js
+src/modules/SharedComponents/Toolbox/AttachedFilesField/AttachedFiles.test.js

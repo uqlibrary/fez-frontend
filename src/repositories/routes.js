@@ -584,3 +584,11 @@ export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
 
     return params;
 };
+
+export const ORGANISATIONAL_UNITS = () => ({
+    apiUrl: 'organisations/list',
+});
+
+export const SUGGESTED_ORGANISATIONAL_UNITS = ({ authorId }) => ({
+    apiUrl: `organisations/suggest?authorId=${authorId}`,
+});

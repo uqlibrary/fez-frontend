@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
 import { useTheme } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
 import { numberToWords } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Edit from '@mui/icons-material/Edit';
 import People from '@mui/icons-material/People';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';
@@ -15,25 +15,39 @@ import Lock from '@mui/icons-material/Lock';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import Delete from '@mui/icons-material/Delete';
+import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 
 import { tableIcons } from './AuthorsListIcons';
 import OrgAffiliationTypeSelector from 'modules/SharedComponents/ContributorsEditor/components/OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from 'modules/SharedComponents/ContributorsEditor/components/NonUqOrgAffiliationFormSection';
 import Typography from '@mui/material/Typography';
 import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
-import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { TextField as CustomTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
+import IconButton from '@mui/material/IconButton';
+import EditIcon from '@mui/icons-material/Edit';
 
-export const useStyles = makeStyles(() => ({
+import ViewAuthorAffiliations from './ViewAuthorAffiliations';
+import EditAuthorAffiliations from './EditAuthorAffiliations';
+
+import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
+
+export const useStyles = makeStyles(theme => ({
     linked: {
+        fontWeight: 500,
+    },
+    problem: {
+        color: theme.palette.error.main,
         fontWeight: 500,
     },
 }));
 
-const getIcon = rowData => {
-    if (parseInt(rowData.uqIdentifier, 10)) {
+const getIcon = ({ rowData, inProblemState }) => {
+    if (!!inProblemState) {
+        return <ErrorOutlineOutlinedIcon color="error" id={`contributor-error-${rowData.tableData.id}`} />;
+    } else if (parseInt(rowData.uqIdentifier, 10)) {
         return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.tableData.id}`} />;
     } else if (rowData.disabled) {
         return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
@@ -63,6 +77,7 @@ NameAsPublished.propTypes = {
 
 export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
+
     const {
         header: {
             locale: { nameColumn, roleColumn, identifierColumn, organisationColumn },
@@ -71,6 +86,33 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             locale: { creatorRoleLabel, creatorRoleHint, nameAsPublishedLabel, nameAsPublishedHint, identifierLabel },
         },
     } = locale;
+
+    /*
+
+    rowData = {
+        affiliation: "UQ"
+        aut_display_name: "Lancaster, Steve"
+        aut_id: 7624839
+        aut_org_username: "uqslanca"
+        aut_student_username: ""
+        creatorRole: ""
+        id: 8
+        nameAsPublished: "Sibbald, Lee"
+        orgaff: "The University of Queensland"
+        orgtype: "453989"
+        tableData: {index: 8, id: 8, uuid: "8aac7ff7-2d8b-48ad-94a7-f3b9f8a9288e"}
+        uqIdentifier: "7624839"
+        uqUsername: "uqslanca"
+    }
+
+    affiliationProblems = {
+        aut_display_name: "Sibbald, Lee"
+        isIncomplete: false
+        isOrphaned: true
+        rek_author_id: 7624847
+    }
+
+    */
     return [
         {
             title: (
@@ -84,27 +126,31 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                 />
             ),
             field: 'nameAsPublished',
-            render: rowData => (
-                <NameAsPublished
-                    icon={getIcon({ ...rowData, disabled })}
-                    text={
-                        <React.Fragment>
-                            <Typography
-                                variant="body2"
-                                className={linkedClass(rowData)}
-                                id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
-                                data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
-                            >
-                                {rowData.nameAsPublished}
-                            </Typography>
-                            <Typography variant="caption" className={linkedClass(rowData)}>{`${numberToWords(
-                                rowData.tableData.id + 1,
-                            )} ${suffix}`}</Typography>
-                        </React.Fragment>
-                    }
-                    linked={!!rowData.aut_id}
-                />
-            ),
+            render: rowData => {
+                const inProblemState = hasAffiliationProblemsByAuthor(rowData);
+                return (
+                    <NameAsPublished
+                        icon={getIcon({ rowData, disabled, inProblemState })}
+                        text={
+                            <React.Fragment>
+                                <Typography
+                                    variant="body2"
+                                    className={inProblemState ? classes.problem : linkedClass(rowData)}
+                                    id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
+                                    data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
+                                >
+                                    {rowData.nameAsPublished}
+                                </Typography>
+                                <Typography
+                                    variant="caption"
+                                    className={inProblemState ? classes.problem : linkedClass(rowData)}
+                                >{`${numberToWords(rowData.tableData.id + 1)} ${suffix}`}</Typography>
+                            </React.Fragment>
+                        }
+                        linked={!!rowData.aut_id}
+                    />
+                );
+            },
             editComponent: props => {
                 const { rowData: contributor } = props;
                 return (
@@ -113,7 +159,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                             <PersonOutlined color="secondary" />
                         </Grid>
                         <Grid item style={{ flexGrow: '1' }}>
-                            <TextField
+                            <CustomTextField
                                 autoFocus
                                 value={props.value || ''}
                                 onChange={e => props.onChange(e.target.value)}
@@ -137,18 +183,21 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                 </Typography>
             ),
             field: 'uqIdentifier',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    className={linkedClass(rowData)}
-                    id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
-                    data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
-                >
-                    {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
-                        (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
-                        ''}
-                </Typography>
-            ),
+            render: rowData => {
+                const inProblemState = hasAffiliationProblemsByAuthor(rowData);
+                return (
+                    <Typography
+                        variant="body2"
+                        className={inProblemState ? classes.problem : linkedClass(rowData)}
+                        id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
+                        data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
+                    >
+                        {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
+                            (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
+                            ''}
+                    </Typography>
+                );
+            },
             editComponent: props => {
                 const { rowData: contributor } = props;
                 const prefilledSearch = !contributor.uqIdentifier || contributor.uqIdentifier === '0';
@@ -353,27 +402,85 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
     ];
 };
 
-/* istanbul ignore next */
-export const AuthorDetail = rowData => {
+export const authorDetailPanel = ({
+    rowData,
+    locale,
+    isEditing,
+    setEditing,
+    onChange,
+    organisationalUnitList,
+    loadOrganisationalUnitsList,
+    suggestedOrganisationalUnitList,
+    loadSuggestedOrganisationalUnitsList,
+    clearSuggestedOrganisationalUnits,
+}) => {
+    const {
+        form: {
+            locale: {
+                affiliations: { title },
+            },
+        },
+    } = locale;
     return (
-        <Grid container item xs={12} style={{ padding: 16 }}>
-            <Grid item xs={2}>
-                <Typography variant="subtitle2">{'Organisation affiliation'}</Typography>
-            </Grid>
-            <Grid item xs={10}>
-                <Typography variant="body2">{rowData.rowData.orgaff}</Typography>
-            </Grid>
-            <Grid item xs={2}>
-                <Typography variant="subtitle2">{'Organisation type'}</Typography>
-            </Grid>
-            <Grid item xs={10}>
-                <Typography variant="body2">{rowData.rowData.orgtype}</Typography>
-            </Grid>
+        <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }}>
+            <Typography variant="body2">
+                {title}
+                {!isEditing && (
+                    <IconButton
+                        aria-label="delete"
+                        onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
+                        size={'small'}
+                    >
+                        <EditIcon />
+                    </IconButton>
+                )}
+            </Typography>
+            {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} locale={locale} />}
+            {isEditing && (
+                <EditAuthorAffiliations
+                    rowData={rowData}
+                    locale={locale}
+                    isEditing={isEditing}
+                    setEditing={setEditing}
+                    onChange={onChange}
+                    organisationalUnitList={organisationalUnitList}
+                    loadOrganisationalUnitsList={loadOrganisationalUnitsList}
+                    suggestedOrganisationalUnitList={suggestedOrganisationalUnitList}
+                    loadSuggestedOrganisationalUnitsList={loadSuggestedOrganisationalUnitsList}
+                    clearSuggestedOrganisationalUnits={clearSuggestedOrganisationalUnits}
+                />
+            )}
         </Grid>
     );
 };
 
-export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, locale, onChange, showRoleInput }) => {
+export const AuthorsListWithAffiliates = ({
+    contributorEditorId,
+    disabled,
+    isNtro,
+    list,
+    locale,
+    onChange,
+    showRoleInput,
+    organisationalUnitList,
+    suggestedOrganisationalUnitList,
+    loadOrganisationalUnitsList,
+    loadSuggestedOrganisationalUnitsList,
+    clearSuggestedOrganisationalUnits,
+}) => {
+    const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
+
+    // eslint-disable-next-line camelcase
+    const setEditing = ({ editing, aut_id }) => {
+        setIsEditing({ editing, aut_id });
+    };
+
+    // eslint-disable-next-line camelcase
+    const isEditing = aut_id => {
+        // eslint-disable-next-line camelcase
+        return editState.editing && editState.aut_id === aut_id;
+    };
+
     const {
         row: {
             locale: {
@@ -394,8 +501,20 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     const classes = useStyles();
     const theme = useTheme();
     const materialTableRef = React.createRef();
+
     const columns = React.createRef();
-    columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale, isNtro, contributorEditorId });
+    columns.current = getColumns({
+        disabled,
+        suffix,
+        classes,
+        showRoleInput,
+        locale,
+        isNtro,
+        contributorEditorId,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    //    [editState.editing],
+    // );
 
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
@@ -443,6 +562,13 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
             ...materialTable.dataManager.getRenderState(),
             showAddRow: false,
         });
+    };
+
+    const handleAffiliationUpdate = list => rowData => {
+        const index = list.findIndex(item => item.aut_id === rowData.aut_id);
+        const newList = [...list.slice(0, index), rowData, ...list.slice(index + 1)];
+        onChange(newList);
+        setData(newList);
     };
 
     return (
@@ -504,6 +630,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                     tooltip: moveUpHint,
                     disabled:
                         disabled ||
+                        editState.editing ||
                         (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
                         rowData.tableData.id === 0,
                     onClick: () => {
@@ -525,7 +652,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         });
 
                         setData(newIndexedList);
-                        // onChange(newList);
+                        onChange(newIndexedList);
                     },
                 }),
                 rowData => ({
@@ -535,7 +662,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
                     },
                     tooltip: `${moveDownHint}-${rowData.tableData.id}`,
-                    disabled: disabled || rowData.tableData.id === data.length - 1,
+                    disabled: disabled || editState.editing || rowData.tableData.id === data.length - 1,
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = data[index + 1];
@@ -553,8 +680,6 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         });
 
                         setData(newIndexedList);
-                        // setData(newList);
-                        // onChange(newList);
                     },
                 }),
                 rowData => ({
@@ -563,7 +688,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
                     },
-                    disabled: disabled,
+                    disabled: editState.editing || disabled,
                     tooltip: editHint,
                     onClick: () => {
                         const materialTable = materialTableRef.current;
@@ -579,7 +704,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
                     },
-                    disabled: disabled,
+                    disabled: editState.editing || disabled,
                     tooltip: deleteHint,
                     onClick: () => {
                         const materialTable = materialTableRef.current;
@@ -597,6 +722,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                     },
                     isFreeAction: true,
                     tooltip: addButton,
+                    disabled: editState.editing || disabled,
                     onClick: () => {
                         const materialTable = materialTableRef.current;
                         materialTable.dataManager.changeRowEditing();
@@ -610,7 +736,38 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
             data={data}
             icons={tableIcons}
             title=""
-            {...(!isNtro ? { detailPanel: AuthorDetail } : {})}
+            detailPanel={[
+                rowData => {
+                    const conditionalIcon =
+                        !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro || editState.editing
+                            ? {
+                                  icon: () => {
+                                      return null;
+                                  },
+                              }
+                            : {};
+
+                    return {
+                        ...conditionalIcon,
+                        render: () => {
+                            return !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro
+                                ? null
+                                : authorDetailPanel({
+                                      rowData,
+                                      locale,
+                                      isEditing: isEditing(rowData.aut_id),
+                                      setEditing,
+                                      onChange: handleAffiliationUpdate(list),
+                                      organisationalUnitList,
+                                      loadOrganisationalUnitsList,
+                                      suggestedOrganisationalUnitList,
+                                      loadSuggestedOrganisationalUnitsList,
+                                      clearSuggestedOrganisationalUnits,
+                                  });
+                        },
+                    };
+                },
+            ]}
             editable={{
                 onRowUpdateCancelled: () => {},
             }}
@@ -642,7 +799,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     );
 };
 
-AuthorsList.propTypes = {
+AuthorsListWithAffiliates.propTypes = {
     contributorEditorId: PropTypes.string,
     disabled: PropTypes.bool,
     isNtro: PropTypes.bool,
@@ -650,6 +807,11 @@ AuthorsList.propTypes = {
     locale: PropTypes.object,
     onChange: PropTypes.func,
     showRoleInput: PropTypes.bool,
+    organisationalUnitList: PropTypes.object.isRequired,
+    suggestedOrganisationalUnitList: PropTypes.object.isRequired,
+    loadOrganisationalUnitsList: PropTypes.func,
+    loadSuggestedOrganisationalUnitsList: PropTypes.func,
+    clearSuggestedOrganisationalUnits: PropTypes.func,
 };
 
-export default React.memo(AuthorsList);
+export default React.memo(AuthorsListWithAffiliates);

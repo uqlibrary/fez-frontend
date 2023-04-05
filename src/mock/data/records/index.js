@@ -53,6 +53,7 @@ export { default as recordWithDatastreams } from './recordWithDatastreams';
 export { default as recordWithLotOfAuthors } from './recordWithLotOfAuthors';
 export { default as recordWithoutAuthorIds } from './recordWithoutAuthorIds';
 export { default as recordWithTiffAndThumbnail } from './recordWithTiffAndThumbnail';
+export { default as recordWithProblematicAuthorAffiliations } from './recordWithProblematicAuthorAffiliations';
 export { default as unpublishedSearchList } from './unpublishedSearchList';
 export { default as UQ716942uqagrinb } from './incompleteNTRORecordUQ716942_uqagrinb';
 export { default as UQ353708} from './editRecord';
