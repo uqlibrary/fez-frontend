@@ -404,6 +404,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
 
 export const authorDetailPanel = ({
     rowData,
+    locale,
     isEditing,
     setEditing,
     onChange,
@@ -413,10 +414,17 @@ export const authorDetailPanel = ({
     loadSuggestedOrganisationalUnitsList,
     clearSuggestedOrganisationalUnits,
 }) => {
+    const {
+        form: {
+            locale: {
+                affiliations: { title },
+            },
+        },
+    } = locale;
     return (
         <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }}>
             <Typography variant="body2">
-                Affiliations{' '}
+                {title}
                 {!isEditing && (
                     <IconButton
                         aria-label="delete"
@@ -427,10 +435,11 @@ export const authorDetailPanel = ({
                     </IconButton>
                 )}
             </Typography>
-            {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} />}
+            {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} locale={locale} />}
             {isEditing && (
                 <EditAuthorAffiliations
                     rowData={rowData}
+                    locale={locale}
                     isEditing={isEditing}
                     setEditing={setEditing}
                     onChange={onChange}
@@ -745,6 +754,7 @@ export const AuthorsListWithAffiliates = ({
                                 ? null
                                 : authorDetailPanel({
                                       rowData,
+                                      locale,
                                       isEditing: isEditing(rowData.aut_id),
                                       setEditing,
                                       onChange: handleAffiliationUpdate(list),

@@ -7,7 +7,8 @@ import Chip from '@mui/material/Chip';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { has100pcAffiliations, calculateAffiliationPercentile, PRECISION } from 'helpers/authorAffiliations';
 
-const ViewAuthorAffiliations = ({ rowData, onChange }) => {
+// eslint-disable-next-line no-unused-vars
+const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
     const affiliations = rowData.affiliations ?? [];
     const alertOptions = { title: '', message: '' };
 
@@ -74,6 +75,7 @@ const ViewAuthorAffiliations = ({ rowData, onChange }) => {
 
 ViewAuthorAffiliations.propTypes = {
     rowData: PropTypes.object.isRequired,
+    locale: PropTypes.object.isRequired,
     onChange: PropTypes.func,
 };
 

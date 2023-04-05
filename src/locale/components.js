@@ -1091,6 +1091,10 @@ export default {
                         creatorRoleLabel: "Enter creator's role",
                         creatorRoleHint:
                             'Select role from list or type the role of the creator in relation to the dataset',
+
+                        affiliations: {
+                            title: 'Affiliations',
+                        },
                     },
                 },
                 header: {
