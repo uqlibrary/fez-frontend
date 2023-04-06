@@ -1091,9 +1091,22 @@ export default {
                         creatorRoleLabel: "Enter creator's role",
                         creatorRoleHint:
                             'Select role from list or type the role of the creator in relation to the dataset',
-
                         affiliations: {
                             title: 'Affiliations',
+                            organisationalUnits: 'Organisational Unit',
+                            organisationalUnitMissing: 'Organisational Unit data missing',
+                            noAffiliationsAdded: 'No affiliations have been added',
+                            getChipLabel: (amount, precision) => `${Number(amount / precision)}%`,
+                            alert: {
+                                title: 'Author affiliation information is incomplete',
+                                percentile: {
+                                    message: 'Percentage sum total of all affiliations must equal 100%',
+                                    actionButtonLabel: 'Recalculate Percentages',
+                                },
+                                authorOrphan: {
+                                    message: 'Author requires at least one affiliation to be added',
+                                },
+                            },
                         },
                     },
                 },

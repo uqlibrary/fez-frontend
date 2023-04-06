@@ -4067,6 +4067,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+                fez_author_affiliation: [],
                 fez_record_search_key_author: [],
                 fez_record_search_key_author_affiliation_country: [],
                 fez_record_search_key_author_affiliation_full_address: [],
@@ -4088,6 +4089,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+                fez_author_affiliation: [],
                 fez_record_search_key_author: [
                     { rek_author: 'Smith A.', rek_author_order: 1 },
                     { rek_author: 'Smith B.', rek_author_order: 2 },
@@ -4272,6 +4274,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+                fez_author_affiliation: [],
                 fez_record_search_key_author: [
                     { rek_author: 'Smith A.', rek_author_order: 1 },
                     { rek_author: 'Smith B.', rek_author_order: 2 },
@@ -4375,6 +4378,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+                fez_author_affiliation: [],
                 fez_record_search_key_author: [
                     { rek_author: 'Smith A.', rek_author_order: 1 },
                     { rek_author: 'Smith B.', rek_author_order: 2 },
