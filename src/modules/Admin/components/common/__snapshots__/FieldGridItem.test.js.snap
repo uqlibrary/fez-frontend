@@ -58,6 +58,23 @@ exports[`FieldGridItem should render with correct props 1`] = `
         "form": Object {
           "locale": Object {
             "addButton": "Add editor",
+            "affiliations": Object {
+              "alert": Object {
+                "authorOrphan": Object {
+                  "message": "Author requires at least one affiliation to be added",
+                },
+                "percentile": Object {
+                  "actionButtonLabel": "Recalculate Percentages",
+                  "message": "Percentage sum total of all affiliations must equal 100%",
+                },
+                "title": "Author affiliation information is incomplete",
+              },
+              "getChipLabel": [Function],
+              "noAffiliationsAdded": "No affiliations have been added",
+              "organisationalUnitMissing": "Organisational Unit data missing",
+              "organisationalUnits": "Organisational Unit",
+              "title": "Affiliations",
+            },
             "creatorRoleHint": "Select role from list or type the role of the creator in relation to the dataset",
             "creatorRoleLabel": "Enter creator's role",
             "identifierLabel": "UQ identifier (if available)",

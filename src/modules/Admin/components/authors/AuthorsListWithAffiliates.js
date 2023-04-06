@@ -416,15 +416,13 @@ export const authorDetailPanel = ({
 }) => {
     const {
         form: {
-            locale: {
-                affiliations: { title },
-            },
+            locale: { affiliations: affiliationsLocale },
         },
     } = locale;
     return (
         <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }}>
             <Typography variant="body2">
-                {title}
+                {affiliationsLocale.title}
                 {!isEditing && (
                     <IconButton
                         aria-label="delete"
@@ -435,11 +433,11 @@ export const authorDetailPanel = ({
                     </IconButton>
                 )}
             </Typography>
-            {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} locale={locale} />}
+            {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} locale={affiliationsLocale} />}
             {isEditing && (
                 <EditAuthorAffiliations
                     rowData={rowData}
-                    locale={locale}
+                    locale={affiliationsLocale}
                     isEditing={isEditing}
                     setEditing={setEditing}
                     onChange={onChange}

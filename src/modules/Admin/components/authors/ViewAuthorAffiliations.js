@@ -15,31 +15,43 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
     const hasPercentileError = !has100pcAffiliations({ author: rowData });
     const hasProblems = hasPercentileError;
 
+    const {
+        organisationalUnits: organisationalUnitsTitle,
+        organisationalUnitMissing: organisationalUnitMissingTitle,
+        noAffiliationsAdded: noAffiliationsAddedTitle,
+        getChipLabel,
+        alert: {
+            title: alertTitle,
+            percentile: { message: alertPercentileMessage, actionButtonLabel: alertPercentileButtonLabel },
+            authorOrphan: { message: alertAuthorOrphanMessage },
+        },
+    } = locale;
+
     if (hasPercentileError) {
-        alertOptions.title = 'Author affiliation information is incomplete';
+        alertOptions.title = alertTitle;
         if (affiliations.length > 0) {
-            alertOptions.message = 'Percentage sum total of all affiliations must equal 100%';
+            alertOptions.message = alertPercentileMessage;
             alertOptions.action = () => {
                 const affiliations = calculateAffiliationPercentile(rowData.affiliations);
                 const newRowData = { ...rowData, affiliations };
                 onChange(newRowData);
             };
-            alertOptions.actionButtonLabel = 'Recalculate Percentages';
+            alertOptions.actionButtonLabel = alertPercentileButtonLabel;
         } else {
-            alertOptions.message = 'Author requires at least one affiliation to be added';
+            alertOptions.message = alertAuthorOrphanMessage;
         }
     }
 
     return (
         <Grid container xs={12} spacing={2}>
             <Grid xs={12} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
-                <Typography variant="caption">Organisational Unit</Typography>
+                <Typography variant="caption">{organisationalUnitsTitle}</Typography>
             </Grid>
             {affiliations.map(item => (
                 <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
                     <Grid xs={2}>
                         <Chip
-                            label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
+                            label={getChipLabel(item.af_percent_affiliation, PRECISION)}
                             variant="outlined"
                             size={'small'}
                             color={hasProblems ? 'error' : 'primary'}
@@ -47,7 +59,7 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
                     </Grid>
                     <Grid xs={10}>
                         <Typography variant="body2" color={hasProblems ? 'error' : 'primary'}>
-                            {item.fez_org_structure?.org_title ?? 'Organisational Unit data missing'}
+                            {item.fez_org_structure?.org_title ?? organisationalUnitMissingTitle}
                         </Typography>
                     </Grid>
                 </React.Fragment>
@@ -59,7 +71,7 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
                     </Grid>
                     <Grid xs={10}>
                         <Typography variant="body2" color={'error'}>
-                            No affiliations have been added
+                            {noAffiliationsAddedTitle}
                         </Typography>
                     </Grid>
                 </>
