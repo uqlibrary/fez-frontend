@@ -674,6 +674,13 @@ describe('ContributorsEditor', () => {
             }),
         ).toEqual({
             author: 'test',
+            organisationalUnitList: {
+                author: 'test',
+            },
+            record: undefined,
+            suggestedOrganisationalUnitList: {
+                author: 'test',
+            },
         });
         expect(
             mapStateToProps({
@@ -681,6 +688,9 @@ describe('ContributorsEditor', () => {
             }),
         ).toEqual({
             author: null,
+            organisationalUnitList: null,
+            record: null,
+            suggestedOrganisationalUnitList: null,
         });
     });
 });

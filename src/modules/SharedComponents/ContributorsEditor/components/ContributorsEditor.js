@@ -67,7 +67,6 @@ export class ContributorsEditor extends PureComponent {
 
     constructor(props) {
         super(props);
-        console.log('ContributorsEditor >>>', props);
         this.state = {
             contributors: this.getContributorsWithAffiliationsFromProps(props),
             errorMessage: '',
