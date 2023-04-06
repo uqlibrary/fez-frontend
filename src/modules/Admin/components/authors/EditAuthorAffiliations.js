@@ -64,6 +64,7 @@ const actionHandler = {
 
 const EditAuthorAffiliations = ({
     rowData,
+    locale,
     setEditing,
     onChange,
     organisationalUnitList = {},
@@ -114,18 +115,30 @@ const EditAuthorAffiliations = ({
 
     const currentAffiliationOrgIds = currentAffiliations.map(item => item.af_org_id) ?? [];
 
+    const {
+        organisationalUnits: organisationalUnitsTitle,
+        affiliationPctTitle: affiliationTitle,
+        loadingOrganisationalUnits: loadingOrganisationalUnitsText,
+        organisationMissing: organisationMissingLabel,
+        getChipLabel,
+        getSuggestedTitle,
+        organisationPlaceholder: organisationPlaceholderText,
+        cancelButton: cancelButtonLabel,
+        saveButton: saveButtonLabel,
+    } = locale;
+
     return (
         <Grid container xs={12} alignItems={'center'} spacing={2}>
             <Grid xs={7} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
-                <Typography variant="caption">Organisational Unit</Typography>
+                <Typography variant="caption">{organisationalUnitsTitle}</Typography>
             </Grid>
             <Grid xs={5} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
-                <Typography variant="caption">Affiliation %</Typography>
+                <Typography variant="caption">{affiliationTitle}</Typography>
             </Grid>
 
             {((organisationUnits.length === 0 && organisationUnitsFailed === false) ||
                 (suggestedOrganisationUnits.length === 0 && suggestedOrganisationUnitsFailed === false)) && (
-                <ContentLoader message={'Loading Organisational Units'} />
+                <ContentLoader message={loadingOrganisationalUnitsText} />
             )}
             {organisationUnits.length > 0 && suggestedOrganisationUnits.length > 0 && (
                 <React.Fragment>
@@ -137,7 +150,7 @@ const EditAuthorAffiliations = ({
                                     disableClearable
                                     value={
                                         uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ?? {
-                                            org_title: 'Organisation missing',
+                                            org_title: organisationMissingLabel,
                                         }
                                     }
                                     options={uniqueOrgs.current ?? []}
@@ -151,7 +164,9 @@ const EditAuthorAffiliations = ({
                                             {...props}
                                             key={option.org_id}
                                         >
-                                            {!!option.suggested ? `Suggested: ${option.org_title}` : option.org_title}
+                                            {!!option.suggested
+                                                ? getSuggestedTitle(option.org_title)
+                                                : option.org_title}
                                         </Box>
                                     )}
                                     renderInput={params => (
@@ -161,7 +176,7 @@ const EditAuthorAffiliations = ({
                                             variant={'standard'}
                                             inputProps={{
                                                 ...params.inputProps,
-                                                placeholder: 'Start typing or select from list',
+                                                placeholder: organisationPlaceholderText,
                                             }}
                                             InputProps={{
                                                 ...params.InputProps,
@@ -187,7 +202,7 @@ const EditAuthorAffiliations = ({
                             </Grid>
                             <Grid xs={4} padding={1}>
                                 <Chip
-                                    label={`${Number(item.af_percent_affiliation / PRECISION)}%`}
+                                    label={getChipLabel(item.af_percent_affiliation, PRECISION)}
                                     variant="outlined"
                                     size={'small'}
                                     color={
@@ -228,7 +243,7 @@ const EditAuthorAffiliations = ({
                                         {...props}
                                         key={option.org_id}
                                     >
-                                        {!!option.suggested ? `Suggested: ${option.org_title}` : option.org_title}
+                                        {!!option.suggested ? getSuggestedTitle(option.org_title) : option.org_title}
                                     </Box>
                                 )}
                                 renderInput={params => (
@@ -236,7 +251,7 @@ const EditAuthorAffiliations = ({
                                         {...params}
                                         size={'small'}
                                         variant={'standard'}
-                                        placeholder="Start typing or select from list"
+                                        placeholder={organisationPlaceholderText}
                                     />
                                 )}
                                 onChange={(event, newValue) => {
@@ -255,7 +270,9 @@ const EditAuthorAffiliations = ({
                 </React.Fragment>
             )}
             <Grid container xs={12} justifyContent={'flex-end'}>
-                <Button onClick={() => setEditing({ editing: false, aut_id: rowData.aut_id })}>Cancel</Button>
+                <Button onClick={() => setEditing({ editing: false, aut_id: rowData.aut_id })}>
+                    {cancelButtonLabel}
+                </Button>
                 <Button
                     onClick={() => {
                         const newRowData = { ...rowData, affiliations: [...currentAffiliations] };
@@ -264,7 +281,7 @@ const EditAuthorAffiliations = ({
                     }}
                     disabled={hasAffiliationProblems(currentAffiliations)}
                 >
-                    Save
+                    {saveButtonLabel}
                 </Button>
             </Grid>
         </Grid>
@@ -273,6 +290,7 @@ const EditAuthorAffiliations = ({
 
 EditAuthorAffiliations.propTypes = {
     rowData: PropTypes.object.isRequired,
+    locale: PropTypes.object.isRequired,
     setEditing: PropTypes.func,
     onChange: PropTypes.func,
     organisationalUnitList: PropTypes.object,
