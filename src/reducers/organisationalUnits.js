@@ -2,6 +2,7 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     organisationUnits: [],
+    organisationUnitsLoaded: false,
     organisationUnitsLoading: false,
     organisationUnitsFailed: false,
 };
@@ -10,6 +11,7 @@ const handlers = {
     [actions.ORGANISATIONAL_UNITS_LOADING]: () => ({
         ...initialState,
         organisationUnits: [],
+        organisationUnitsLoaded: false,
         organisationUnitsLoading: true,
         organisationUnitsFailed: false,
     }),
@@ -17,6 +19,7 @@ const handlers = {
     [actions.ORGANISATIONAL_UNITS_LOADED]: (state, action) => ({
         ...initialState,
         organisationUnits: action.payload.data,
+        organisationUnitsLoaded: true,
         organisationUnitsLoading: false,
         organisationUnitsFailed: false,
     }),
@@ -24,6 +27,7 @@ const handlers = {
     [actions.ORGANISATIONAL_UNITS_FAILED]: () => ({
         ...initialState,
         organisationUnits: [],
+        organisationUnitsLoaded: false,
         organisationUnitsLoading: false,
         organisationUnitsFailed: true,
     }),

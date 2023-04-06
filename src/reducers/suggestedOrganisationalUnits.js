@@ -3,6 +3,7 @@ import * as actions from 'actions/actionTypes';
 export const initialState = {
     suggestedAuthorId: null,
     suggestedOrganisationUnits: [],
+    suggestedOrganisationUnitsLoaded: false,
     suggestedOrganisationUnitsLoading: false,
     suggestedOrganisationUnitsFailed: false,
 };
@@ -12,6 +13,7 @@ const handlers = {
         ...initialState,
         suggestedAuthorId: action.authorId,
         suggestedOrganisationUnits: [],
+        suggestedOrganisationUnitsLoaded: false,
         suggestedOrganisationUnitsLoading: true,
         suggestedOrganisationUnitsFailed: false,
     }),
@@ -19,6 +21,7 @@ const handlers = {
     [actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADED]: (state, action) => ({
         ...initialState,
         suggestedAuthorId: action.authorId,
+        suggestedOrganisationUnitsLoaded: true,
         suggestedOrganisationUnits: action.payload.data.map(item => ({
             ...item,
             suggested: true,
@@ -31,6 +34,7 @@ const handlers = {
         ...initialState,
         suggestedAuthorId: null,
         suggestedOrganisationUnits: [],
+        suggestedOrganisationUnitsLoaded: false,
         suggestedOrganisationUnitsLoading: false,
         suggestedOrganisationUnitsFailed: true,
     }),
@@ -39,6 +43,7 @@ const handlers = {
         ...initialState,
         suggestedAuthorId: null,
         suggestedOrganisationUnits: [],
+        suggestedOrganisationUnitsLoaded: false,
         suggestedOrganisationUnitsLoading: false,
         suggestedOrganisationUnitsFailed: false,
     }),

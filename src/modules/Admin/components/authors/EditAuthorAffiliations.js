@@ -79,6 +79,7 @@ const EditAuthorAffiliations = ({
     const {
         suggestedAuthorId,
         suggestedOrganisationUnits,
+        suggestedOrganisationUnitsLoaded,
         suggestedOrganisationUnitsLoading,
         suggestedOrganisationUnitsFailed,
     } = suggestedOrganisationalUnitList;
@@ -86,7 +87,7 @@ const EditAuthorAffiliations = ({
     if (rowData.aut_id !== suggestedAuthorId) clearSuggestedOrganisationalUnits();
 
     if (
-        suggestedOrganisationUnits.length === 0 &&
+        suggestedOrganisationUnitsLoaded === false &&
         suggestedOrganisationUnitsLoading === false &&
         suggestedOrganisationUnitsFailed === false
     ) {
@@ -94,12 +95,13 @@ const EditAuthorAffiliations = ({
         loadSuggestedOrganisationalUnitsList(rowData.aut_id);
     }
 
-    const { organisationUnits, organisationUnitsLoading, organisationUnitsFailed } = organisationalUnitList;
-    if (
-        (!!!organisationUnits || organisationUnits?.length === 0) &&
-        organisationUnitsLoading === false &&
-        organisationUnitsFailed === false
-    ) {
+    const {
+        organisationUnits,
+        organisationUnitsLoaded,
+        organisationUnitsLoading,
+        organisationUnitsFailed,
+    } = organisationalUnitList;
+    if (organisationUnitsLoaded === false && organisationUnitsLoading === false && organisationUnitsFailed === false) {
         // dispatch
         loadOrganisationalUnitsList();
     }
@@ -107,7 +109,7 @@ const EditAuthorAffiliations = ({
     const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
     const [currentAffiliations, dispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
 
-    if (uniqueOrgs.current.length === 0 && suggestedOrganisationUnits.length > 0) {
+    if (uniqueOrgs.current.length === 0 && organisationUnitsLoaded && suggestedOrganisationUnitsLoaded) {
         const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
         const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
         uniqueOrgs.current = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
@@ -136,11 +138,11 @@ const EditAuthorAffiliations = ({
                 <Typography variant="caption">{affiliationTitle}</Typography>
             </Grid>
 
-            {((organisationUnits.length === 0 && organisationUnitsFailed === false) ||
-                (suggestedOrganisationUnits.length === 0 && suggestedOrganisationUnitsFailed === false)) && (
-                <ContentLoader message={loadingOrganisationalUnitsText} />
-            )}
-            {organisationUnits.length > 0 && suggestedOrganisationUnits.length > 0 && (
+            {!organisationUnitsLoaded &&
+                !suggestedOrganisationUnitsLoaded &&
+                !organisationUnitsFailed &&
+                !suggestedOrganisationUnitsFailed && <ContentLoader message={loadingOrganisationalUnitsText} />}
+            {organisationUnitsLoaded && suggestedOrganisationUnitsLoaded && (
                 <React.Fragment>
                     {currentAffiliations.map((item, index) => (
                         <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
@@ -192,7 +194,7 @@ const EditAuthorAffiliations = ({
                                                 dispatch,
                                                 rowData,
                                                 newValue,
-                                                suggestedOrganisationUnits[0],
+                                                uniqueOrgs.current[1],
                                             );
                                         } else {
                                             actionHandler[ACTIONS.CHANGE](dispatch, item, newValue);
@@ -260,7 +262,7 @@ const EditAuthorAffiliations = ({
                                             dispatch,
                                             rowData,
                                             newValue,
-                                            suggestedOrganisationUnits[0],
+                                            uniqueOrgs.current[1],
                                         );
                                     } else actionHandler[ACTIONS.ADD](dispatch, rowData, newValue);
                                 }}
