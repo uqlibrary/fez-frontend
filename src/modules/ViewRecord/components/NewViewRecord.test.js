@@ -5,6 +5,7 @@ import * as ViewRecordActions from 'actions/viewRecord';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
+import { recordWithNoAffiliationIssues } from 'mock/data/records';
 import { accounts, currentAuthor } from 'mock/data/account';
 import { useParams } from 'react-router';
 import { recordVersionLegacy } from '../../../mock/data';
@@ -64,6 +65,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should render default empty view', () => {
+        // Checked OK
         const { asFragment } = setup({});
         expect(asFragment()).toMatchInlineSnapshot(`
             <DocumentFragment>
@@ -75,6 +77,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should not render components for empty record', () => {
+        // Checked OK
         const { asFragment } = setup({ recordToView: {} });
         expect(asFragment()).toMatchInlineSnapshot(`
             <DocumentFragment>
@@ -86,12 +89,29 @@ describe('NewViewRecord', () => {
     });
 
     it('should render default view with admin menu', () => {
+        // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);
         const { getByTestId } = setup({ recordToView: record });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 
+    it('should render default view with admin menu when no AA issues exist', () => {
+        // Checked OK
+        userIsAdmin.mockImplementationOnce(() => true);
+        const { getByTestId } = setup({ recordToView: recordWithNoAffiliationIssues });
+        expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+    it('should render internal notes view with admin menu when no AA issues exist', () => {
+        // Checked OK
+        userIsAdmin.mockImplementationOnce(() => true);
+        const { getByTestId } = setup({
+            recordToView: { ...recordWithNoAffiliationIssues, fez_internal_notes: { ain_detail: 'test' } },
+        });
+        expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+
     it('should render version', () => {
+        // Checked OK
         const txt = locale.pages.viewRecord.version;
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
@@ -103,6 +123,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should render deleted version', () => {
+        // Checked OK
         const txt = locale.pages.viewRecord.version;
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
@@ -300,7 +321,9 @@ describe('NewViewRecord', () => {
             );
 
             // Author affiliations
-            expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('Yes');
+            expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
+                'Valid author affiliation information has been added',
+            );
 
             // WoS ID
             expect(getByTestId('drawer-Desktop-content-clipboard-4-1')).toHaveTextContent('000381303000009');
@@ -330,7 +353,9 @@ describe('NewViewRecord', () => {
             );
 
             // Author affiliations
-            expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('Yes');
+            expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
+                'Valid author affiliation information has been added',
+            );
 
             // WoS ID
             expect(getByTestId('drawer-Mobile-content-clipboard-4-1')).toHaveTextContent('000381303000009');

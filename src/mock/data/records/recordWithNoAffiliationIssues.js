@@ -1,4 +1,6 @@
-export default {
+import { hydrateMock } from '../../../helpers/general';
+
+const recordWithNoAffiliationIssues = {
     "rek_pid": "UQ:871c1f8",
     "rek_title_xsdmf_id": null,
     "rek_title": "Chick embryo: a preclinical model for understanding ischemia-reperfusion mechanism",
@@ -65,179 +67,86 @@ export default {
     "fez_record_search_key_assigned_user_id": [],
     "fez_record_search_key_author": [
         {
-            "rek_author_id": 35420307,
+            "rek_author_id": 35608153,
             "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Fauzia, Eram",
+            "rek_author": "OK, One",
             "rek_author_order": 1
         },
         {
-            "rek_author_id": 35420308,
+            "rek_author_id": 35608154,
             "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Barbhuyan, Tarun Kumar",
+            "rek_author": "OK, Two",
             "rek_author_order": 2
         },
-        {
-            "rek_author_id": 35420309,
-            "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Shrivastava, Amit Kumar",
-            "rek_author_order": 3
-        },
-        {
-            "rek_author_id": 35420310,
-            "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Kumar, Manish",
-            "rek_author_order": 4
-        },
-        {
-            "rek_author_id": 35420311,
-            "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Garg, Paarth",
-            "rek_author_order": 5
-        },
-        {
-            "rek_author_id": 35420312,
-            "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Khan, Mohsin Ali",
-            "rek_author_order": 6
-        },
-        {
-            "rek_author_id": 35420313,
-            "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Robertson, Avril A. B. not 100%",
-            "rek_author_order": 7
-        },
-        {
-            "rek_author_id": 35420314,
-            "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Raza, Syed Shadab",
-            "rek_author_order": 8
-        },
-        {
-            "rek_author_id": 35420316,
-            "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Lancaster, Steve No Org",
-            ",rek_author_order": 10
-        },
-        {
-            "rek_author_id": 35420315,
-            "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Sibbald, Lee No Affil",
-            "rek_author_order": 9
-        },
-        {
-            "rek_author_id": 35420317,
-            "rek_author_pid": "UQ:871c1f8",
-            "rek_author": "Good, All No Issues",
-            "rek_author_order": 11
-        }
     ],
     "fez_record_search_key_author_id": [
-        {
-            "rek_author_id_id": 35608145,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 0,
-            "rek_author_id_order": 1,
-            "author": null
-        },
-        {
-            "rek_author_id_id": 35608146,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 0,
-            "rek_author_id_order": 2,
-            "author": null
-        },
-        {
-            "rek_author_id_id": 35608147,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 0,
-            "rek_author_id_order": 3,
-            "author": null
-        },
-        {
-            "rek_author_id_id": 35608148,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 0,
-            "rek_author_id_order": 4,
-            "author": null
-        },
-        {
-            "rek_author_id_id": 35608149,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 0,
-            "rek_author_id_order": 5,
-            "author": null
-        },
-        {
-            "rek_author_id_id": 35608150,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 0,
-            "rek_author_id_order": 6,
-            "author": null
-        },
-        {
-            "rek_author_id_id": 35608151,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 88844,
-            "rek_author_id_order": 7,
-            "author": {
-                "aut_id": 88844,
-                "aut_orcid_id": "0000-0002-9652-8357",
-                "aut_title": "Professor",
-                "aut_org_username": "uqarob15",
-                "aut_student_username": null
-            },
-            "rek_author_id_lookup": "Robertson, Avril A. B. Not 100%"
-        },
-        {
-            "rek_author_id_id": 35608152,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 0,
-            "rek_author_id_order": 8,
-            "author": null
-        },
-        {
-            "rek_author_id_id": 35608153,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 7624839,
-            "rek_author_id_order": 9,
-            "author": {
-                "aut_id": 7624839,
-                "aut_orcid_id": null,
-                "aut_title": "Mr",
-                "aut_org_username": "uqslanca",
-                "aut_student_username": null
-            },
-            "rek_author_id_lookup": "Lancaster, Steve No Org",
-        },
-        {
-            "rek_author_id_id": 35608153,
-            "rek_author_id_pid": "UQ:871c1f8",
-            "rek_author_id": 7624829,
-            "rek_author_id_order": 9,
-            "author": {
-                "aut_id": 7624829,
-                "aut_orcid_id": null,
-                "aut_title": "Mr",
-                "aut_org_username": "uqlsibba",
-                "aut_student_username": null
-            },
-            "rek_author_id_lookup": "Sibbald, Lee No Affil",
-        },
         {
             "rek_author_id_id": 35608153,
             "rek_author_id_pid": "UQ:871c1f8",
             "rek_author_id": 7624000,
-            "rek_author_id_order": 9,
+            "rek_author_id_order": 1,
             "author": {
                 "aut_id": 7624000,
                 "aut_orcid_id": null,
                 "aut_title": "Mr",
-                "aut_org_username": "uqallgood",
+                "aut_org_username": "uqallgoodone",
                 "aut_student_username": null
             },
-            "rek_author_id_lookup": "Good, All No Issues",
+            "rek_author_id_lookup": "OK, one",
+        },
+        {
+            "rek_author_id_id": 35608154,
+            "rek_author_id_pid": "UQ:871c1f8",
+            "rek_author_id": 7624001,
+            "rek_author_id_order": 2,
+            "author": {
+                "aut_id": 7624001,
+                "aut_orcid_id": null,
+                "aut_title": "Mr",
+                "aut_org_username": "uqallgoodtwo",
+                "aut_student_username": null
+            },
+            "rek_author_id_lookup": "OK, two",
         },
 
+    ],
+    "fez_author_affiliation": [
+        {
+            "af_id": 478894,
+            "af_pid": "UQ:871c1f8",
+            "af_author_id": 7624000,
+            "af_percent_affiliation": 100000,
+            "af_org_id": 881,
+            "af_status": 1,
+            "fez_author": {
+                "aut_id": 88844,
+                "aut_display_name": "one OK"
+            },
+            "fez_org_structure": [
+                {
+                    "org_id": 881,
+                    "org_title": "School of Chemistry and Molecular Biosciences"
+                }
+            ],
+        },
+        {
+            "af_id": 478894,
+            "af_pid": "UQ:871c1f8",
+            "af_author_id": 7624001,
+            "af_percent_affiliation": 100000,
+            "af_org_id": 881,
+            "af_status": 1,
+            "fez_author": {
+                "aut_id": 88844,
+                "aut_display_name": "two OK"
+            },
+            "fez_org_structure": [
+                {
+                    "org_id": 881,
+                    "org_title": "School of Chemistry and Molecular Biosciences"
+                }
+            ],
+        },
     ],
     "fez_record_search_key_author_crossref_authenticated": [],
     "fez_record_search_key_author_crossref_orcid": [],
@@ -699,85 +608,6 @@ export default {
     "rek_editing_user_lookup": "Sibbald, Lee",
     "rek_editing_start_date": "2023-03-09 07:09:14",
     "fez_internal_notes": null,
-    "fez_author_affiliation": [
-        {
-            "af_id": 478894,
-            "af_pid": "UQ:871c1f8",
-            "af_author_id": 88844,
-            "af_percent_affiliation": 50000,
-            "af_org_id": 881,
-            "af_status": 1,
-            "fez_author": {
-                "aut_id": 88844,
-                "aut_display_name": "Robertson, Avril A. B."
-            },
-            "fez_org_structure": 
-                {
-                    "org_id": 881,
-                    "org_title": "School of Chemistry and Molecular Biosciences"
-                }
-            ,
-        },
-        {
-            "af_id": 478895,
-            "af_pid": "UQ:871c1f8",
-            "af_author_id": 88844,
-            "af_percent_affiliation": 40000,
-            "af_org_id": 968,
-            "af_status": 1,
-            "fez_author": {
-                "aut_id": 88844,
-                "aut_display_name": "Robertson, Avril A. B."
-            },
-            "fez_org_structure": 
-                {
-                    "org_id": 968,
-                    "org_title": "Institute for Molecular Bioscience"
-                }
-            
-        },
-        {
-            "af_id": 478896,
-            "af_pid": "UQ:871c1f8",
-            "af_author_id": 7624000,
-            "af_percent_affiliation": 100000,
-            "af_org_id": 1248,
-            "af_status": 1,
-            "fez_author": {
-                "aut_id": 7624000,
-                "aut_display_name": "Good, All"
-            },
-            "fez_org_structure": 
-                {
-                    "org_id": 1248,
-                    "org_title": "Information Systems and Resource Services (University of Queensland Library)"
-                }
-            
-        },
-        {
-            "af_author_id": 7624839,
-            "af_id": 16851,
-            "af_org_id": 828,
-            "af_percent_affiliation": 100000,
-            "af_pid": "UQ:130003",
-            "af_status": 1,
-            "fez_author": {"aut_id": 7624839, "aut_display_name": "Lancaster, Steve."},
-        },
-        {
-            "af_author_id": 7624840,
-            "af_id": 16851,
-            "af_org_id": 1248,
-            "af_percent_affiliation": 100000,
-            "af_pid": "UQ:130003",
-            "af_status": 1,
-            "fez_author": {"aut_id": 7624840, "aut_display_name": "Affiliate, Orphaned"},
-            "fez_org_structure": 
-            {
-                "org_id": 1248,
-                "org_title": "Information Systems and Resource Services (University of Queensland Library)"
-            }
-        },
-    ],
     "fez_record_search_key_audience_size": null,
     "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_country": [
@@ -1135,3 +965,4 @@ export default {
         }
     ]
 };
+export default hydrateMock(recordWithNoAffiliationIssues);

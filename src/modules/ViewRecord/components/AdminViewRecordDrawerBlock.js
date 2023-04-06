@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import FileCopyOutlinedIcon from '@mui/icons-material/FileCopyOutlined';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
+import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 
 const useStyles = makeStyles({
     contentTitle: {
@@ -19,21 +20,40 @@ const useStyles = makeStyles({
     cursor: {
         cursor: 'pointer',
     },
+    contentTitleError: {
+        textTransform: 'uppercase',
+        fontWeight: 500,
+        color: '#d32f2f',
+    },
+    errorIcon: {
+        verticalAlign: 'middle',
+        display: 'inline-flex',
+        paddingRight: 5,
+        paddingBottom: 3,
+        color: '#d32f2f',
+    },
 });
 
 export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard, variant }) => {
     const classes = useStyles();
-
     if (block.type === 'header') {
         return (
             <Typography
                 variant={'subtitle2'}
-                className={classes.contentTitle}
+                className={block.error ? classes.contentTitleError : classes.contentTitle}
                 key={`header-${parentIndex}-${index}`}
                 id={`drawer-${variant}-header-${parentIndex}-${index}`}
                 data-testid={`drawer-${variant}-header-${parentIndex}-${index}`}
                 tabIndex="0"
             >
+                {block.error && (
+                    <ErrorOutlineOutlinedIcon
+                        data-testid="affiliation_error_drawer_indicator"
+                        id="affiliation_error_drawer_indicator"
+                        className={classes.errorIcon}
+                        fontSize="inherit"
+                    />
+                )}
                 {block.value}
             </Typography>
         );
@@ -81,16 +101,18 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
             );
         } else {
             return (
-                <Typography
-                    variant={'body2'}
-                    key={`content-value-${parentIndex}-${index}`}
-                    id={`drawer-${variant}-content-value-${parentIndex}-${index}`}
-                    data-testid={`drawer-${variant}-content-value-${parentIndex}-${index}`}
-                    tabIndex="0"
-                    aria-label={block.value !== '-' ? block.value : 'No content available'}
-                >
-                    {block.value}
-                </Typography>
+                <>
+                    <Typography
+                        variant={'body2'}
+                        key={`content-value-${parentIndex}-${index}`}
+                        id={`drawer-${variant}-content-value-${parentIndex}-${index}`}
+                        data-testid={`drawer-${variant}-content-value-${parentIndex}-${index}`}
+                        tabIndex="0"
+                        aria-label={block.value !== '-' ? block.value : 'No content available'}
+                    >
+                        {block.value}
+                    </Typography>
+                </>
             );
         }
     }

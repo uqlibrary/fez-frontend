@@ -42,18 +42,35 @@ describe('AdminViewRecordDrawer', () => {
         expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
     });
     it('should show affiliates section with the text "Yes" when affiliates are available', () => {
+        const content = createDefaultDrawerDescriptorObject(
+            txt.adminRecordData.drawer.sectionTitles,
+            recordWithAuthorAffiliates,
+            fields.viewRecord.adminViewRecordDrawerFields,
+            [],
+            null,
+            true,
+            [],
+        );
         // will show error in console when undefining open flags as proptypes requires them to be set
-        const { getByTestId } = setup({ open: undefined, mobileOpen: undefined });
+        const { getByTestId } = setup({ content: content, open: undefined, mobileOpen: undefined });
         expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
         expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-        expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('Yes');
-        expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('Yes');
+        expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
+            fields.viewRecord.adminViewRecordDrawerFields.hasAffiliates,
+        );
+        expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
+            fields.viewRecord.adminViewRecordDrawerFields.hasAffiliates,
+        );
     });
     it('should show affiliates section with the text "No" when no affiliates are available', () => {
         const content = createDefaultDrawerDescriptorObject(
             txt.adminRecordData.drawer.sectionTitles,
             recordWithoutAuthorAffiliates,
             fields.viewRecord.adminViewRecordDrawerFields,
+            [],
+            null,
+            true,
+            [],
         );
         // will show error in console when undefining open flags as proptypes requires them to be set
         const { getByTestId } = setup({
@@ -64,8 +81,12 @@ describe('AdminViewRecordDrawer', () => {
 
         expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
         expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-        expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('No');
-        expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('No');
+        expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
+            fields.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates,
+        );
+        expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
+            fields.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates,
+        );
     });
     it('should render visible desktop admin drawer at >mobile breakpoint', () => {
         const { getByTestId } = setup({ open: true });

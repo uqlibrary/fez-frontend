@@ -12,6 +12,29 @@ import { FILE_SECURITY_POLICY_ADMIN, FILE_SECURITY_POLICY_PUBLIC } from 'modules
 const moment = require('moment');
 
 describe('transformers', () => {
+    describe('getRecordDoiSearchKey test', () => {
+        it('should return null with no doi data', () => {
+            expect(transformers.getRecordDoiSearchKey({})).toEqual(null);
+            expect(transformers.getRecordDoiSearchKey({ fez_record_search_key_doi: {} })).toEqual(null);
+            expect(transformers.getRecordDoiSearchKey({ fez_record_search_key_doi: { rek_doi: '' } })).toEqual(null);
+        });
+
+        it('should return request object structure with sanitised doi', () => {
+            const data = {
+                fez_record_search_key_doi: {
+                    rek_doi: 'https://doi.org/10.1007/s13596-023-00679-133333',
+                },
+            };
+            const expected = {
+                fez_record_search_key_doi: {
+                    rek_doi: '10.1007/s13596-023-00679-133333',
+                },
+            };
+            const result = transformers.getRecordDoiSearchKey(data);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('getRecordLinkSearchKey test', () => {
         it('should return request object structure with link and default description', () => {
             const data = {

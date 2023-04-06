@@ -524,8 +524,8 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                             newIndexedList.push({ ...item, id: index });
                         });
 
+                        onChange(newIndexedList);
                         setData(newIndexedList);
-                        // onChange(newList);
                     },
                 }),
                 rowData => ({
@@ -552,9 +552,8 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                             newIndexedList.push({ ...item, id: index });
                         });
 
+                        onChange(newIndexedList);
                         setData(newIndexedList);
-                        // setData(newList);
-                        // onChange(newList);
                     },
                 }),
                 rowData => ({

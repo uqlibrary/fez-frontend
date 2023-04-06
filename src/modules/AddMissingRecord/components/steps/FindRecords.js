@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { PublicationSearchForm } from 'modules/SharedComponents/PublicationSearchForm';
 import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
-import { sanitizeDoi } from '../../../../config/validation';
+import { sanitizeDoi } from 'config/validation';
 
 export default class FindRecords extends PureComponent {
     static propTypes = {

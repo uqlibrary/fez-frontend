@@ -82,7 +82,6 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
 
     const writeText = (event, data) => {
         event && event.stopPropagation && event.stopPropagation();
-
         if (!navigator.clipboard) {
             setError(txt.clipboard.unavailable);
             return;
@@ -201,7 +200,7 @@ AdminViewRecordDrawer.propTypes = {
                 PropTypes.arrayOf(
                     PropTypes.shape({
                         type: PropTypes.string.isRequired,
-                        value: PropTypes.isRequired,
+                        value: PropTypes.any.isRequired,
                         scrollable: PropTypes.bool,
                         key: PropTypes.string,
                         clipboard: PropTypes.bool,

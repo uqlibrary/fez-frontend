@@ -47,6 +47,7 @@ export function createNewRecord(data) {
         const recordRequest = {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...sanitiseData(data),
+            ...transformers.getRecordDoiSearchKey(data),
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getRecordAuthorsSearchKey(
                 data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null,

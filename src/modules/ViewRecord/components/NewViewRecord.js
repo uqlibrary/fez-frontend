@@ -16,6 +16,7 @@ import { SocialShare } from 'modules/SharedComponents/SocialShare';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import { DetailedHistory } from './DetailedHistory';
+import { shouldHandleAuthorAffiliations } from 'modules/Admin/helpers';
 
 import AdditionalInformation from './AdditionalInformation';
 import AvailableVersions from './AvailableVersions';
@@ -35,6 +36,7 @@ import { notFound } from '../../../config/routes';
 import clsx from 'clsx';
 import Badge from '@mui/material/Badge';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import makeStyles from '@mui/styles/makeStyles';
 import AdminViewRecordDrawer from './AdminViewRecordDrawer';
 import Button from '@mui/material/Button';
@@ -43,6 +45,9 @@ import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObje
 import { doesListContainItem } from 'helpers/general';
 
 import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
+
+import { useHistory } from 'react-router';
+import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
@@ -91,6 +96,7 @@ export const NewViewRecord = ({
     recordToViewError,
     recordToView,
 }) => {
+    const history = useHistory();
     const txt = locale.pages.viewRecord;
     const dispatch = useDispatch();
     const { pid, version } = useParams();
@@ -107,6 +113,10 @@ export const NewViewRecord = ({
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
 
+    // const [AAError, setAAError] = React.useState([]);
+    // const [AAOrphan, setAAOrphan] = React.useState([]);
+    // const [AAProblems, setAAProblems] = React.useState([]);
+
     const handleMobileDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -122,7 +132,37 @@ export const NewViewRecord = ({
     };
 
     const getAdminRecordButtonIcon = () => {
-        return recordToView?.fez_internal_notes?.ain_detail ? (
+        let Component = null;
+        const Problems =
+            (recordToView &&
+                shouldHandleAuthorAffiliations(recordToView) &&
+                composeAuthorAffiliationProblems(recordToView)) ||
+            /* istanbul ignore next */ [];
+        if (recordToView?.fez_internal_notes?.ain_detail) {
+            Component =
+                Problems.length > 0 ? (
+                    <ErrorOutlineOutlinedIcon
+                        data-testid="error-affiliation-toggle-icon"
+                        style={{ color: '#d32f2f' }}
+                        fontSize="inherit"
+                    />
+                ) : (
+                    <DescriptionOutlinedIcon fontSize="inherit" />
+                );
+        } else {
+            Component =
+                Problems.length > 0 ? (
+                    <ErrorOutlineOutlinedIcon
+                        style={{ color: '#d32f2f' }}
+                        data-testid="error-affiliation-toggle-icon"
+                        fontSize="inherit"
+                        onClick={handleDrawerToggle}
+                    />
+                ) : (
+                    <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} />
+                );
+        }
+        return (
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events
             <Badge
                 color="error"
@@ -133,11 +173,10 @@ export const NewViewRecord = ({
                     vertical: 'top',
                     horizontal: 'right',
                 }}
+                invisible
             >
-                <DescriptionOutlinedIcon fontSize="inherit" />
+                {Component}
             </Badge>
-        ) : (
-            <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} />
         );
     };
 
@@ -157,6 +196,10 @@ export const NewViewRecord = ({
                 txt.adminRecordData.drawer.sectionTitles,
                 recordToView,
                 fields.viewRecord.adminViewRecordDrawerFields,
+                history,
+                pid,
+                shouldHandleAuthorAffiliations(recordToView),
+                composeAuthorAffiliationProblems(recordToView),
             ),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [JSON.stringify(recordToView)],
@@ -193,7 +236,6 @@ export const NewViewRecord = ({
     } else if (!isNotFoundRoute && (!recordToView || !recordToView.rek_pid)) {
         return <div className="empty" />;
     }
-
     return (
         <div
             className={clsx(classes.content, {
@@ -233,7 +275,7 @@ export const NewViewRecord = ({
                                     <Grid item>
                                         <Button
                                             variant="outlined"
-                                            startIcon={getAdminRecordButtonIcon()}
+                                            startIcon={getAdminRecordButtonIcon(recordToView)}
                                             onClick={handleDrawerToggle}
                                             id="adminDrawerButton"
                                             data-testid="btnAdminToggleDrawerVisibility"
