@@ -42,8 +42,17 @@ describe('AdminViewRecordDrawer', () => {
         expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
     });
     it('should show affiliates section with the text "Yes" when affiliates are available', () => {
+        const content = createDefaultDrawerDescriptorObject(
+            txt.adminRecordData.drawer.sectionTitles,
+            recordWithAuthorAffiliates,
+            fields.viewRecord.adminViewRecordDrawerFields,
+            [],
+            null,
+            true,
+            [],
+        );
         // will show error in console when undefining open flags as proptypes requires them to be set
-        const { getByTestId } = setup({ open: undefined, mobileOpen: undefined });
+        const { getByTestId } = setup({ content: content, open: undefined, mobileOpen: undefined });
         expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
         expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
         expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
@@ -58,6 +67,10 @@ describe('AdminViewRecordDrawer', () => {
             txt.adminRecordData.drawer.sectionTitles,
             recordWithoutAuthorAffiliates,
             fields.viewRecord.adminViewRecordDrawerFields,
+            [],
+            null,
+            true,
+            [],
         );
         // will show error in console when undefining open flags as proptypes requires them to be set
         const { getByTestId } = setup({

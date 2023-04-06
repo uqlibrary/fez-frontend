@@ -16,6 +16,7 @@ import { SocialShare } from 'modules/SharedComponents/SocialShare';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import { DetailedHistory } from './DetailedHistory';
+import { shouldHandleAuthorAffiliations } from 'modules/Admin/helpers';
 
 import AdditionalInformation from './AdditionalInformation';
 import AvailableVersions from './AvailableVersions';
@@ -133,7 +134,10 @@ export const NewViewRecord = ({
     const getAdminRecordButtonIcon = () => {
         let Component = null;
         const Problems =
-            (recordToView && composeAuthorAffiliationProblems(recordToView)) || /* istanbul ignore next */ [];
+            (recordToView &&
+                shouldHandleAuthorAffiliations(recordToView) &&
+                composeAuthorAffiliationProblems(recordToView)) ||
+            /* istanbul ignore next */ [];
         if (recordToView?.fez_internal_notes?.ain_detail) {
             Component =
                 Problems.length > 0 ? (
@@ -194,6 +198,7 @@ export const NewViewRecord = ({
                 fields.viewRecord.adminViewRecordDrawerFields,
                 history,
                 pid,
+                shouldHandleAuthorAffiliations(recordToView),
                 composeAuthorAffiliationProblems(recordToView),
             ),
         // eslint-disable-next-line react-hooks/exhaustive-deps

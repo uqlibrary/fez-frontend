@@ -73,6 +73,20 @@ export const identifiersParams = record => ({
         ].includes(record.rek_subtype),
 });
 
+/* istanbul ignore next */
+export const shouldHandleAuthorAffiliations = record => {
+    return (
+        record.rek_subtype !== SUBTYPE_EDITED_BOOK &&
+        [
+            PUBLICATION_TYPE_BOOK_CHAPTER,
+            PUBLICATION_TYPE_BOOK,
+            PUBLICATION_TYPE_CONFERENCE_PAPER,
+            PUBLICATION_TYPE_JOURNAL_ARTICLE,
+            // PUBLICATION_TYPE_RESEARCH_REPORT,
+        ].includes(record.rek_display_type)
+    );
+};
+
 export const bibliographicParams = (record, formValues) => ({
     isLote:
         (record.fez_record_search_key_language &&
@@ -98,9 +112,11 @@ export const bibliographicParams = (record, formValues) => ({
 });
 
 export const authorsParams = (record, isNtro) => {
+    const shouldHandleAffiliations = shouldHandleAuthorAffiliations(record);
     return {
         isNtro: isNtro,
         isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
         onlyEditors: record.rek_display_type === PUBLICATION_TYPE_BOOK && record.rek_subtype === SUBTYPE_EDITED_BOOK,
+        shouldHandleAffiliations,
     };
 };
