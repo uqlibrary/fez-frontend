@@ -28,6 +28,7 @@ import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFI
 import { default as globalLocale } from 'locale/global';
 import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
+import Tooltip from '@mui/material/Tooltip';
 
 import ViewAuthorAffiliations from './ViewAuthorAffiliations';
 import EditAuthorAffiliations from './EditAuthorAffiliations';
@@ -424,13 +425,15 @@ export const authorDetailPanel = ({
             <Typography variant="body2">
                 {affiliationsLocale.title}
                 {!isEditing && (
-                    <IconButton
-                        aria-label="delete"
-                        onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
-                        size={'small'}
-                    >
-                        <EditIcon />
-                    </IconButton>
+                    <Tooltip title={affiliationsLocale.editButton.tooltip}>
+                        <IconButton
+                            aria-label="delete"
+                            onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
+                            size={'small'}
+                        >
+                            <EditIcon />
+                        </IconButton>
+                    </Tooltip>
                 )}
             </Typography>
             {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} locale={affiliationsLocale} />}

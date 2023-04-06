@@ -1096,7 +1096,17 @@ export default {
                             organisationalUnits: 'Organisational Unit',
                             organisationalUnitMissing: 'Organisational Unit data missing',
                             noAffiliationsAdded: 'No affiliations have been added',
+                            affiliationPctTitle: 'Affiliation %',
+                            loadingOrganisationalUnits: 'Loading Organisational Units',
+                            organisationMissing: 'Organisation missing',
                             getChipLabel: (amount, precision) => `${Number(amount / precision)}%`,
+                            getSuggestedTitle: organisationalUnit => `Suggested: ${organisationalUnit}`,
+                            organisationPlaceholder: 'Start typing or select from list',
+                            editButton: {
+                                tooltip: 'Edit affiliations for this author',
+                            },
+                            cancelButton: 'Cancel',
+                            saveButton: 'Save',
                             alert: {
                                 title: 'Author affiliation information is incomplete',
                                 percentile: {
