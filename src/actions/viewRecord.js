@@ -23,7 +23,7 @@ export function loadRecordToView(pid, isEdit = false) {
                     const error = new Error();
                     error.data = response.data;
                     error.status = 410;
-                    throw error;
+                    return Promise.reject(error);
                 }
 
                 dispatch({
