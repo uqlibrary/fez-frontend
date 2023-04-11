@@ -86,15 +86,6 @@ const EditAuthorAffiliations = ({
 
     if (rowData.aut_id !== suggestedAuthorId) clearSuggestedOrganisationalUnits();
 
-    if (
-        suggestedOrganisationUnitsLoaded === false &&
-        suggestedOrganisationUnitsLoading === false &&
-        suggestedOrganisationUnitsFailed === false
-    ) {
-        // dispatch
-        loadSuggestedOrganisationalUnitsList(rowData.aut_id);
-    }
-
     const {
         organisationUnits,
         organisationUnitsLoaded,
@@ -104,8 +95,22 @@ const EditAuthorAffiliations = ({
     if (organisationUnitsLoaded === false && organisationUnitsLoading === false && organisationUnitsFailed === false) {
         // dispatch
         loadOrganisationalUnitsList();
+        loadSuggestedOrganisationalUnitsList(rowData.aut_id);
+    } else if (
+        suggestedOrganisationUnitsLoaded === false &&
+        suggestedOrganisationUnitsLoading === false &&
+        suggestedOrganisationUnitsFailed === false
+    ) {
+        // dispatch
+        loadSuggestedOrganisationalUnitsList(rowData.aut_id);
     }
 
+    // here - in chrome for the first ever request of org data, these two calls fire twice each.
+    // doesnt show up in safari, just chrome. check ff just in case it's a chrome thing but doesnt seem likely.
+    // could be a component renrender thing ebfore redux has updated flags. see if both request can be merged
+    // maybe if orgs are empty, since that's clearly a first load scenario. maybe dont get suggested orgs
+    // until orgs have loaded first. Then it's all about testing unless more bugs appear. for SU,
+    // jsut say got it live then fixed a bug then doing testing this week
     const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
     const [currentAffiliations, dispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
 
@@ -194,7 +199,7 @@ const EditAuthorAffiliations = ({
                                                 dispatch,
                                                 rowData,
                                                 newValue,
-                                                uniqueOrgs.current[1],
+                                                uniqueOrgs.current[suggestedOrganisationUnits.length > 0 ? 0 : 1],
                                             );
                                         } else {
                                             actionHandler[ACTIONS.CHANGE](dispatch, item, newValue);
@@ -262,7 +267,7 @@ const EditAuthorAffiliations = ({
                                             dispatch,
                                             rowData,
                                             newValue,
-                                            uniqueOrgs.current[1],
+                                            uniqueOrgs.current[suggestedOrganisationUnits.length > 0 ? 0 : 1],
                                         );
                                     } else actionHandler[ACTIONS.ADD](dispatch, rowData, newValue);
                                 }}
