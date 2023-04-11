@@ -2,7 +2,7 @@ import DeleteRecord from './DeleteRecord';
 import { mockRecordToDelete } from 'mock/data/testing/records';
 import { communityRecord, collectionRecord } from 'mock/data/testing/communityCollection';
 import Immutable from 'immutable';
-import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
+import { DELETED, DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 
 function setup(testProps) {
     const props = {
@@ -63,6 +63,32 @@ describe('Component DeleteRecord', () => {
         const wrapper = setup({ recordToDelete: mockRecordToDelete });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(1);
+    });
+
+    it('should render delete record form with deleted record citation', () => {
+        const wrapper = setup({ recordToDelete: { ...mockRecordToDelete, rek_status: DELETED } });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Field').length).toEqual(1);
+    });
+
+    it('should render delete record form with data collection citation', () => {
+        const wrapper = setup({
+            recordToDelete: { ...mockRecordToDelete, rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Field').length).toEqual(3);
+    });
+
+    it('should render delete record form with deleted data collection citation', () => {
+        const wrapper = setup({
+            recordToDelete: {
+                ...mockRecordToDelete,
+                rek_status: DELETED,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Field').length).toEqual(3);
     });
 
     it('should display alert and disable delete button on records with Crossref UQ DOIs', () => {
