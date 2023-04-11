@@ -71,7 +71,6 @@ const EditAuthorAffiliations = ({
     loadOrganisationalUnitsList,
     suggestedOrganisationalUnitList = {}, // from redux
     loadSuggestedOrganisationalUnitsList,
-    clearSuggestedOrganisationalUnits,
 }) => {
     const uniqueOrgs = useRef([]);
     const theme = useTheme();
@@ -84,8 +83,6 @@ const EditAuthorAffiliations = ({
         suggestedOrganisationUnitsFailed,
     } = suggestedOrganisationalUnitList;
 
-    if (rowData.aut_id !== suggestedAuthorId) clearSuggestedOrganisationalUnits();
-
     const {
         organisationUnits,
         organisationUnitsLoaded,
@@ -97,7 +94,8 @@ const EditAuthorAffiliations = ({
         loadOrganisationalUnitsList();
         loadSuggestedOrganisationalUnitsList(rowData.aut_id);
     } else if (
-        suggestedOrganisationUnitsLoaded === false &&
+        organisationUnitsLoaded &&
+        (rowData.aut_id !== suggestedAuthorId || suggestedOrganisationUnitsLoaded === false) &&
         suggestedOrganisationUnitsLoading === false &&
         suggestedOrganisationUnitsFailed === false
     ) {
@@ -105,12 +103,6 @@ const EditAuthorAffiliations = ({
         loadSuggestedOrganisationalUnitsList(rowData.aut_id);
     }
 
-    // here - in chrome for the first ever request of org data, these two calls fire twice each.
-    // doesnt show up in safari, just chrome. check ff just in case it's a chrome thing but doesnt seem likely.
-    // could be a component renrender thing ebfore redux has updated flags. see if both request can be merged
-    // maybe if orgs are empty, since that's clearly a first load scenario. maybe dont get suggested orgs
-    // until orgs have loaded first. Then it's all about testing unless more bugs appear. for SU,
-    // jsut say got it live then fixed a bug then doing testing this week
     const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
     const [currentAffiliations, dispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
 
@@ -143,24 +135,110 @@ const EditAuthorAffiliations = ({
                 <Typography variant="caption">{affiliationTitle}</Typography>
             </Grid>
 
-            {!organisationUnitsLoaded &&
-                !suggestedOrganisationUnitsLoaded &&
+            {(organisationUnitsLoading || suggestedOrganisationUnitsLoading) &&
                 !organisationUnitsFailed &&
                 !suggestedOrganisationUnitsFailed && <ContentLoader message={loadingOrganisationalUnitsText} />}
-            {organisationUnitsLoaded && suggestedOrganisationUnitsLoaded && (
-                <React.Fragment>
-                    {currentAffiliations.map((item, index) => (
-                        <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
+            {!organisationUnitsLoading &&
+                !suggestedOrganisationUnitsLoading &&
+                organisationUnitsLoaded &&
+                suggestedOrganisationUnitsLoaded && (
+                    <React.Fragment>
+                        {currentAffiliations.map((item, index) => (
+                            <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
+                                <Grid xs={7} padding={1}>
+                                    <Autocomplete
+                                        clearOnBlur
+                                        disableClearable
+                                        value={
+                                            uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ?? {
+                                                org_title: organisationMissingLabel,
+                                            }
+                                        }
+                                        options={uniqueOrgs.current ?? []}
+                                        getOptionLabel={option => option.org_title}
+                                        renderOption={(props, option) => (
+                                            <Box
+                                                component="li"
+                                                sx={{
+                                                    ...(!!option.suggested
+                                                        ? { color: theme.palette.primary.main }
+                                                        : {}),
+                                                }}
+                                                {...props}
+                                                key={option.org_id}
+                                            >
+                                                {!!option.suggested
+                                                    ? getSuggestedTitle(option.org_title)
+                                                    : option.org_title}
+                                            </Box>
+                                        )}
+                                        renderInput={params => (
+                                            <TextField
+                                                {...params}
+                                                size={'small'}
+                                                variant={'standard'}
+                                                inputProps={{
+                                                    ...params.inputProps,
+                                                    placeholder: organisationPlaceholderText,
+                                                }}
+                                                InputProps={{
+                                                    ...params.InputProps,
+                                                    error: !!!uniqueOrgs.current?.find(
+                                                        org => org.org_id === item.af_org_id,
+                                                    ),
+                                                }}
+                                            />
+                                        )}
+                                        onChange={(_, newValue) => {
+                                            if (isNonHerdc(newValue)) {
+                                                actionHandler[ACTIONS.NONHERDC](
+                                                    dispatch,
+                                                    rowData,
+                                                    newValue,
+                                                    uniqueOrgs.current[suggestedOrganisationUnits.length > 0 ? 0 : 1],
+                                                );
+                                            } else {
+                                                actionHandler[ACTIONS.CHANGE](dispatch, item, newValue);
+                                            }
+                                        }}
+                                    />
+                                </Grid>
+                                <Grid xs={4} padding={1}>
+                                    <Chip
+                                        label={getChipLabel(item.af_percent_affiliation, PRECISION)}
+                                        variant="outlined"
+                                        size={'small'}
+                                        color={
+                                            !!uniqueOrgs.current?.find(org => org.org_id === item.af_org_id)
+                                                ? 'primary'
+                                                : 'error'
+                                        }
+                                    />
+                                </Grid>
+
+                                <Grid xs={1} justifyContent={'flex-end'} padding={1}>
+                                    {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
+                                        <IconButton
+                                            aria-label="delete"
+                                            onClick={() => actionHandler[ACTIONS.DELETE](dispatch, index)}
+                                        >
+                                            <DeleteIcon />
+                                        </IconButton>
+                                    )}
+                                </Grid>
+                            </React.Fragment>
+                        ))}
+                        {!hasNonHerdc(currentAffiliations) && (
                             <Grid xs={7} padding={1}>
                                 <Autocomplete
+                                    key={Date.now()}
                                     clearOnBlur
                                     disableClearable
-                                    value={
-                                        uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ?? {
-                                            org_title: organisationMissingLabel,
-                                        }
+                                    options={
+                                        uniqueOrgs.current?.filter(
+                                            org => !currentAffiliationOrgIds.includes(org.org_id),
+                                        ) ?? []
                                     }
-                                    options={uniqueOrgs.current ?? []}
                                     getOptionLabel={option => option.org_title}
                                     renderOption={(props, option) => (
                                         <Box
@@ -181,19 +259,10 @@ const EditAuthorAffiliations = ({
                                             {...params}
                                             size={'small'}
                                             variant={'standard'}
-                                            inputProps={{
-                                                ...params.inputProps,
-                                                placeholder: organisationPlaceholderText,
-                                            }}
-                                            InputProps={{
-                                                ...params.InputProps,
-                                                error: !!!uniqueOrgs.current?.find(
-                                                    org => org.org_id === item.af_org_id,
-                                                ),
-                                            }}
+                                            placeholder={organisationPlaceholderText}
                                         />
                                     )}
-                                    onChange={(_, newValue) => {
+                                    onChange={(event, newValue) => {
                                         if (isNonHerdc(newValue)) {
                                             actionHandler[ACTIONS.NONHERDC](
                                                 dispatch,
@@ -201,81 +270,13 @@ const EditAuthorAffiliations = ({
                                                 newValue,
                                                 uniqueOrgs.current[suggestedOrganisationUnits.length > 0 ? 0 : 1],
                                             );
-                                        } else {
-                                            actionHandler[ACTIONS.CHANGE](dispatch, item, newValue);
-                                        }
+                                        } else actionHandler[ACTIONS.ADD](dispatch, rowData, newValue);
                                     }}
                                 />
                             </Grid>
-                            <Grid xs={4} padding={1}>
-                                <Chip
-                                    label={getChipLabel(item.af_percent_affiliation, PRECISION)}
-                                    variant="outlined"
-                                    size={'small'}
-                                    color={
-                                        !!uniqueOrgs.current?.find(org => org.org_id === item.af_org_id)
-                                            ? 'primary'
-                                            : 'error'
-                                    }
-                                />
-                            </Grid>
-
-                            <Grid xs={1} justifyContent={'flex-end'} padding={1}>
-                                {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
-                                    <IconButton
-                                        aria-label="delete"
-                                        onClick={() => actionHandler[ACTIONS.DELETE](dispatch, index)}
-                                    >
-                                        <DeleteIcon />
-                                    </IconButton>
-                                )}
-                            </Grid>
-                        </React.Fragment>
-                    ))}
-                    {!hasNonHerdc(currentAffiliations) && (
-                        <Grid xs={7} padding={1}>
-                            <Autocomplete
-                                key={Date.now()}
-                                clearOnBlur
-                                disableClearable
-                                options={
-                                    uniqueOrgs.current?.filter(org => !currentAffiliationOrgIds.includes(org.org_id)) ??
-                                    []
-                                }
-                                getOptionLabel={option => option.org_title}
-                                renderOption={(props, option) => (
-                                    <Box
-                                        component="li"
-                                        sx={{ ...(!!option.suggested ? { color: theme.palette.primary.main } : {}) }}
-                                        {...props}
-                                        key={option.org_id}
-                                    >
-                                        {!!option.suggested ? getSuggestedTitle(option.org_title) : option.org_title}
-                                    </Box>
-                                )}
-                                renderInput={params => (
-                                    <TextField
-                                        {...params}
-                                        size={'small'}
-                                        variant={'standard'}
-                                        placeholder={organisationPlaceholderText}
-                                    />
-                                )}
-                                onChange={(event, newValue) => {
-                                    if (isNonHerdc(newValue)) {
-                                        actionHandler[ACTIONS.NONHERDC](
-                                            dispatch,
-                                            rowData,
-                                            newValue,
-                                            uniqueOrgs.current[suggestedOrganisationUnits.length > 0 ? 0 : 1],
-                                        );
-                                    } else actionHandler[ACTIONS.ADD](dispatch, rowData, newValue);
-                                }}
-                            />
-                        </Grid>
-                    )}
-                </React.Fragment>
-            )}
+                        )}
+                    </React.Fragment>
+                )}
             <Grid container xs={12} justifyContent={'flex-end'}>
                 <Button onClick={() => setEditing({ editing: false, aut_id: rowData.aut_id })}>
                     {cancelButtonLabel}
