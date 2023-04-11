@@ -176,7 +176,7 @@ export const validateConferencePaper = (
             {}),
     },
     authorsSection: {
-        ...(((as || {}).authors || []).length === 0 && {
+        ...(((as || {}).authors || (as || {}).authorsWithAffiliations || []).length === 0 && {
             authors: summary.authors,
         }),
     },
