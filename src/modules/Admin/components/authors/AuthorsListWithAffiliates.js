@@ -27,7 +27,7 @@ import { TextField as CustomTextField } from 'modules/SharedComponents/Toolbox/T
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
 import IconButton from '@mui/material/IconButton';
-import EditIcon from '@mui/icons-material/Edit';
+import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import Tooltip from '@mui/material/Tooltip';
 
 import ViewAuthorAffiliations from './ViewAuthorAffiliations';
@@ -431,7 +431,7 @@ export const authorDetailPanel = ({
                             onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
                             size={'small'}
                         >
-                            <EditIcon />
+                            <PlaylistAddCheckIcon />
                         </IconButton>
                     </Tooltip>
                 )}
