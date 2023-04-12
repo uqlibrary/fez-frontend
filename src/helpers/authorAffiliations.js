@@ -11,6 +11,10 @@ export const ACTIONS = {
     FIX: 'fix',
 };
 
+export const deepClone = obj => {
+    return JSON.parse(JSON.stringify(obj));
+};
+
 export const getFilteredAffiliations = (author, affiliations) =>
     affiliations.length > 0
         ? affiliations?.filter(item => item.af_author_id === author.rek_author_id)
@@ -27,7 +31,6 @@ export const has100pcAffiliations = ({ author, affiliations = [], total = MAX_TO
     if (!!author) {
         filteredAffiliations = getFilteredAffiliations(author, affiliations);
     }
-
     return (
         filteredAffiliations.reduce((accumulated, current) => accumulated + current.af_percent_affiliation, 0) >= total
     );
@@ -120,11 +123,8 @@ const returnEvenSplit = affiliations => {
     });
 };
 export const calculateAffiliationPercentile = (affiliations = []) => {
-    const newAffiliations = JSON.parse(JSON.stringify(affiliations)); // deep copy
+    const newAffiliations = deepClone(affiliations); // deep copy
     return hasNonHerdc(newAffiliations) ? returnNonHerdc(newAffiliations) : returnEvenSplit(newAffiliations);
-};
-export const deepClone = obj => {
-    return JSON.parse(JSON.stringify(obj));
 };
 
 export const editAffiliationReducer = (affiliations, action) => {
@@ -155,7 +155,7 @@ export const editAffiliationReducer = (affiliations, action) => {
             newAffiliations = Array(nonHerdcAffiliation, suggestedAffiliation);
             return calculateAffiliationPercentile(newAffiliations);
         default:
-            throw Error(`Unknown action '${action}'`);
+            throw `Unknown action '${action.type}'`;
     }
 };
 
