@@ -1,6 +1,6 @@
 import React from 'react';
-import AuthorsList from './AuthorsList';
-import { act, render, fireEvent, WithReduxStore, waitFor } from 'test-utils';
+import AuthorsListWithAffiliates from './AuthorsListWithAffiliates';
+import { act, render, fireEvent, WithReduxStore, within, waitFor } from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
 
@@ -12,17 +12,21 @@ const props = {
     showRoleInput: false,
     disabled: false,
     onChange: jest.fn(),
+    organisationalUnitList: {},
+    suggestedOrganisationalUnitList: {},
+    loadOrganisationalUnitsList: jest.fn(),
+    loadSuggestedOrganisationalUnitsList: jest.fn(),
 };
 
 function setup(testProps = {}) {
     return render(
         <WithReduxStore>
-            <AuthorsList {...props} {...testProps} />
+            <AuthorsListWithAffiliates {...props} {...testProps} />
         </WithReduxStore>,
     );
 }
 
-describe('AuthorsList', () => {
+describe('AuthorsListWithAffiliates', () => {
     beforeEach(() => {
         document.createRange = () => ({
             setStart: () => {},
@@ -771,5 +775,78 @@ describe('AuthorsList', () => {
 
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
         expect(getByTestId('rek-author-role-label')).toHaveClass('Mui-error');
+    });
+
+    it('should render new affiliation view', async () => {
+        const { getByTestId, getByText, getByRole } = setup({
+            list: [
+                {
+                    creatorRole: '',
+                    uqIdentifier: '88844',
+                    aut_display_name: 'Robertson, Avril A. B. Not 100%',
+                    affiliation: 'NotUQ',
+                    aut_org_username: 'uqarob15',
+                    nameAsPublished: 'Robertson, Avril A. B. not 100%',
+                    uqUsername: 'uqarob15',
+                    aut_student_username: '',
+                    aut_id: 88844,
+                    orgaff: 'University of Queensland',
+                    orgtype: '',
+                    affiliations: [
+                        {
+                            af_id: 478894,
+                            af_pid: 'UQ:871c1f8',
+                            af_author_id: 88844,
+                            af_percent_affiliation: 50000,
+                            af_org_id: 881,
+                            af_status: 1,
+                            fez_author: {
+                                aut_id: 88844,
+                                aut_display_name: 'Robertson, Avril A. B.',
+                            },
+                            fez_org_structure: {
+                                org_id: 881,
+                                org_title: 'School of Chemistry and Molecular Biosciences',
+                            },
+                        },
+                        {
+                            af_id: 478895,
+                            af_pid: 'UQ:871c1f8',
+                            af_author_id: 88844,
+                            af_percent_affiliation: 40000,
+                            af_org_id: 968,
+                            af_status: 1,
+                            fez_author: {
+                                aut_id: 88844,
+                                aut_display_name: 'Robertson, Avril A. B.',
+                            },
+                            fez_org_structure: {
+                                org_id: 968,
+                                org_title: 'Institute for Molecular Bioscience',
+                            },
+                        },
+                    ],
+                    id: 6,
+                },
+            ],
+        });
+
+        const row = getByTestId('rek-author-list-row-0');
+        expect(row).toBeInTheDocument();
+
+        expect(within(row).getByText('Robertson, Avril A. B. not 100%')).toBeInTheDocument();
+        act(() => {
+            within(row)
+                .getByTestId('expandPanelIcon')
+                .closest('button')
+                .click();
+        });
+
+        await waitFor(() => getByText('School of Chemistry and Molecular Biosciences'));
+        expect(getByText('50%')).toBeInTheDocument();
+        expect(getByText('School of Chemistry and Molecular Biosciences')).toBeInTheDocument();
+        expect(getByText('40%')).toBeInTheDocument();
+        expect(getByText('Percentage sum total of all affiliations must equal 100%')).toBeInTheDocument();
+        expect(getByRole('button', { name: /Recalculate Percentages/ })).toBeInTheDocument();
     });
 });

@@ -34,6 +34,7 @@ import ViewAuthorAffiliations from './ViewAuthorAffiliations';
 import EditAuthorAffiliations from './EditAuthorAffiliations';
 
 import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
+import { ChevronRight } from '@mui/icons-material';
 
 export const useStyles = makeStyles(theme => ({
     linked: {
@@ -88,32 +89,6 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
         },
     } = locale;
 
-    /*
-
-    rowData = {
-        affiliation: "UQ"
-        aut_display_name: "Lancaster, Steve"
-        aut_id: 7624839
-        aut_org_username: "uqslanca"
-        aut_student_username: ""
-        creatorRole: ""
-        id: 8
-        nameAsPublished: "Sibbald, Lee"
-        orgaff: "The University of Queensland"
-        orgtype: "453989"
-        tableData: {index: 8, id: 8, uuid: "8aac7ff7-2d8b-48ad-94a7-f3b9f8a9288e"}
-        uqIdentifier: "7624839"
-        uqUsername: "uqslanca"
-    }
-
-    affiliationProblems = {
-        aut_display_name: "Sibbald, Lee"
-        isIncomplete: false
-        isOrphaned: true
-        rek_author_id: 7624847
-    }
-
-    */
     return [
         {
             title: (
@@ -746,7 +721,15 @@ export const AuthorsListWithAffiliates = ({
                                       return null;
                                   },
                               }
-                            : {};
+                            : {
+                                  icon: () => (
+                                      <ChevronRight
+                                          fontSize="medium"
+                                          data-testid="expandPanelIcon"
+                                          id="expandPanelIcon"
+                                      />
+                                  ),
+                              };
 
                     return {
                         ...conditionalIcon,
