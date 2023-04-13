@@ -405,6 +405,8 @@ export const authorDetailPanel = ({
                             aria-label="delete"
                             onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
                             size={'small'}
+                            id="affiliationEditBtn"
+                            data-testid="affiliationEditBtn"
                         >
                             <PlaylistAddCheckIcon />
                         </IconButton>

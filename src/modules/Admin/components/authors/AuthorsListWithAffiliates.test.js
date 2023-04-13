@@ -778,7 +778,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should render new affiliation view', async () => {
-        const { getByTestId, getByText, getByRole } = setup({
+        const { getByTestId, getByText, getByRole, queryByTestId, getAllByText, queryByText } = setup({
             list: [
                 {
                     creatorRole: '',
@@ -828,13 +828,24 @@ describe('AuthorsListWithAffiliates', () => {
                     ],
                     id: 6,
                 },
+                {
+                    nameAsPublished: 'Smith, John',
+                    uqIdentifier: '0',
+                    uqUsername: '',
+                    orgaff: '',
+                    orgtype: '',
+                    affiliation: '',
+                },
             ],
         });
 
+        // Check the first row is for a linked author, which should
+        // have the new UI interface for affiliations.
         const row = getByTestId('rek-author-list-row-0');
         expect(row).toBeInTheDocument();
 
         expect(within(row).getByText('Robertson, Avril A. B. not 100%')).toBeInTheDocument();
+        expect(within(row).getByTestId('contributor-error-0')).toBeInTheDocument();
         act(() => {
             within(row)
                 .getByTestId('expandPanelIcon')
@@ -848,5 +859,60 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByText('40%')).toBeInTheDocument();
         expect(getByText('Percentage sum total of all affiliations must equal 100%')).toBeInTheDocument();
         expect(getByRole('button', { name: /Recalculate Percentages/ })).toBeInTheDocument();
+
+        // Check there's a second row for an unlinked author
+        const row2 = getByTestId('rek-author-list-row-1');
+        expect(row2).toBeInTheDocument();
+
+        expect(within(row2).getByText('Smith, John')).toBeInTheDocument();
+        expect(within(row2).queryByTestId('expandPanelIcon')).not.toBeInTheDocument(); // unlinked dont have expand icons in this component
+        expect(within(row2).queryByTestId('contributor-error-1')).not.toBeInTheDocument(); // shouldnt have an error icon
+        expect(within(row2).getByTestId('contributor-unlinked-1')).toBeInTheDocument(); // should have an unlinked icon
+
+        mockApi.onGet(repositories.routes.ORGANISATIONAL_UNITS().apiUrl).replyOnce(200, {
+            data: [
+                {
+                    org_id: 1,
+                    org_extdb_name: 'hr',
+                    org_extdb_id: 1,
+                    org_ext_table: null,
+                    org_title: 'Test organisation',
+                    org_is_current: 1,
+                    org_desc: null,
+                    org_image_filename: null,
+                },
+            ],
+        });
+        mockApi.onGet(repositories.routes.SUGGESTED_ORGANISATIONAL_UNITS({ authorId: 88844 }).apiUrl).replyOnce(200, {
+            data: [
+                {
+                    aut_id: 88844,
+                    org_title: 'Test suggested organisation',
+                    org_id: 2,
+                },
+            ],
+        });
+
+        // Enter edit mode for row-0
+
+        expect(queryByTestId('affiliationCancelBtn')).not.toBeInTheDocument();
+
+        act(() => {
+            getByTestId('affiliationEditBtn').click();
+        });
+
+        await waitFor(() => getByTestId('affiliationCancelBtn'));
+        act(() => {
+            getByTestId('affiliationCancelBtn').click();
+        });
+
+        await waitFor(() => getByRole('button', { name: /Recalculate Percentages/ }));
+
+        act(() => {
+            getByRole('button', { name: /Recalculate Percentages/ }).click();
+        });
+
+        expect(queryByText('Percentage sum total of all affiliations must equal 100%')).not.toBeInTheDocument();
+        expect(getAllByText('50%').length).toEqual(2);
     });
 });
