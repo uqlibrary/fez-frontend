@@ -67,9 +67,9 @@ const EditAuthorAffiliations = ({
     locale,
     setEditing,
     onChange,
-    organisationalUnitList = {},
+    organisationalUnitList,
     loadOrganisationalUnitsList,
-    suggestedOrganisationalUnitList = {}, // from redux
+    suggestedOrganisationalUnitList, // from redux
     loadSuggestedOrganisationalUnitsList,
 }) => {
     const uniqueOrgs = useRef([]);
@@ -89,19 +89,37 @@ const EditAuthorAffiliations = ({
         organisationUnitsLoading,
         organisationUnitsFailed,
     } = organisationalUnitList;
-    if (organisationUnitsLoaded === false && organisationUnitsLoading === false && organisationUnitsFailed === false) {
-        // dispatch
-        loadOrganisationalUnitsList();
-        loadSuggestedOrganisationalUnitsList(rowData.aut_id);
-    } else if (
-        organisationUnitsLoaded &&
-        (rowData.aut_id !== suggestedAuthorId || suggestedOrganisationUnitsLoaded === false) &&
-        suggestedOrganisationUnitsLoading === false &&
-        suggestedOrganisationUnitsFailed === false
-    ) {
-        // dispatch
-        loadSuggestedOrganisationalUnitsList(rowData.aut_id);
-    }
+
+    React.useEffect(() => {
+        if (
+            organisationUnitsLoaded === false &&
+            organisationUnitsLoading === false &&
+            organisationUnitsFailed === false
+        ) {
+            // dispatch
+            loadOrganisationalUnitsList();
+            loadSuggestedOrganisationalUnitsList(rowData.aut_id);
+        } else if (
+            organisationUnitsLoaded &&
+            (rowData.aut_id !== suggestedAuthorId || suggestedOrganisationUnitsLoaded === false) &&
+            suggestedOrganisationUnitsLoading === false &&
+            suggestedOrganisationUnitsFailed === false
+        ) {
+            // dispatch
+            loadSuggestedOrganisationalUnitsList(rowData.aut_id);
+        }
+    }, [
+        loadOrganisationalUnitsList,
+        loadSuggestedOrganisationalUnitsList,
+        organisationUnitsFailed,
+        organisationUnitsLoaded,
+        organisationUnitsLoading,
+        rowData.aut_id,
+        suggestedAuthorId,
+        suggestedOrganisationUnitsFailed,
+        suggestedOrganisationUnitsLoaded,
+        suggestedOrganisationUnitsLoading,
+    ]);
 
     const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
     const [currentAffiliations, dispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
@@ -278,10 +296,16 @@ const EditAuthorAffiliations = ({
                     </React.Fragment>
                 )}
             <Grid container xs={12} justifyContent={'flex-end'}>
-                <Button onClick={() => setEditing({ editing: false, aut_id: rowData.aut_id })}>
+                <Button
+                    id="affiliationCancelBtn"
+                    data-testid="affiliationCancelBtn"
+                    onClick={() => setEditing({ editing: false, aut_id: rowData.aut_id })}
+                >
                     {cancelButtonLabel}
                 </Button>
                 <Button
+                    id="affiliationSaveBtn"
+                    data-testid="affiliationSaveBtn"
                     onClick={() => {
                         const newRowData = { ...rowData, affiliations: [...currentAffiliations] };
                         onChange(newRowData);
