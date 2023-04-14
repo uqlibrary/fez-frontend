@@ -351,10 +351,10 @@ export const getRecordAuthorAffiliationTypeSearchKey = authors => {
     };
 };
 
-export const getRecordAuthorAffiliations = authors => {
-    if (!authors || authors.length === 0) {
+export const getRecordAuthorAffiliations = (authors, canHaveAffiliations = false) => {
+    if (!authors || authors.length === 0 || !canHaveAffiliations) {
         return {
-            fez_author_affiliation: [],
+            fez_author_affiliation: canHaveAffiliations ? [] : null,
         };
     }
 
@@ -1237,8 +1237,8 @@ export const getGrantInformationSectionSearchKeys = grantsSection => ({
     ...getGrantsListSearchKey((grantsSection && grantsSection.grants) || []),
 });
 
-export const getAuthorsSearchKeys = authors => ({
-    ...getRecordAuthorAffiliations(authors),
+export const getAuthorsSearchKeys = (authors, canHaveAffiliations = false) => ({
+    ...getRecordAuthorAffiliations(authors, canHaveAffiliations),
     ...getRecordAuthorsSearchKey(authors),
     ...getRecordAuthorsIdSearchKey(authors),
     ...getRecordAuthorAffiliationSearchKey(authors),
@@ -1266,7 +1266,7 @@ export const getAuthorsSectionSearchKeys = (data = {}) => {
 
     return {
         ...(!!authors || !!authorsWithAffiliations
-            ? getAuthorsSearchKeys(!!authors ? authors : authorsWithAffiliations)
+            ? getAuthorsSearchKeys(!!authors ? authors : authorsWithAffiliations, !!authorsWithAffiliations)
             : {}),
         ...(!!editors ? getContributorsSearchKeys(editors) : {}),
         ...(!!creators ? getCreatorsSearchKeys(creators) : {}),
