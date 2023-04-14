@@ -76,19 +76,19 @@ const EditAuthorAffiliations = ({
     const theme = useTheme();
 
     const {
+        organisationUnits,
+        organisationUnitsLoaded,
+        organisationUnitsLoading,
+        organisationUnitsFailed,
+    } = organisationalUnitList;
+
+    const {
         suggestedAuthorId,
         suggestedOrganisationUnits,
         suggestedOrganisationUnitsLoaded,
         suggestedOrganisationUnitsLoading,
         suggestedOrganisationUnitsFailed,
     } = suggestedOrganisationalUnitList;
-
-    const {
-        organisationUnits,
-        organisationUnitsLoaded,
-        organisationUnitsLoading,
-        organisationUnitsFailed,
-    } = organisationalUnitList;
 
     React.useEffect(() => {
         if (
@@ -97,6 +97,7 @@ const EditAuthorAffiliations = ({
             organisationUnitsFailed === false
         ) {
             // dispatch
+            console.log('dispatch 1');
             loadOrganisationalUnitsList();
             loadSuggestedOrganisationalUnitsList(rowData.aut_id);
         } else if (
@@ -106,6 +107,7 @@ const EditAuthorAffiliations = ({
             suggestedOrganisationUnitsFailed === false
         ) {
             // dispatch
+            console.log('dispatch 2');
             loadSuggestedOrganisationalUnitsList(rowData.aut_id);
         }
     }, [
@@ -130,7 +132,7 @@ const EditAuthorAffiliations = ({
         uniqueOrgs.current = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
     }
 
-    const currentAffiliationOrgIds = currentAffiliations.map(item => item.af_org_id) ?? [];
+    const currentAffiliationOrgIds = currentAffiliations.map(item => item.af_org_id);
 
     const {
         organisationalUnits: organisationalUnitsTitle,
@@ -165,6 +167,7 @@ const EditAuthorAffiliations = ({
                             <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
                                 <Grid xs={7} padding={1}>
                                     <Autocomplete
+                                        id={`orgSelect-${item.af_org_id}`}
                                         clearOnBlur
                                         disableClearable
                                         value={
@@ -197,6 +200,8 @@ const EditAuthorAffiliations = ({
                                                 variant={'standard'}
                                                 inputProps={{
                                                     ...params.inputProps,
+                                                    id: `orgSelect-${item.af_org_id}-input`,
+                                                    'data-testid': `orgSelect-${item.af_org_id}-input`,
                                                     placeholder: organisationPlaceholderText,
                                                 }}
                                                 InputProps={{
@@ -219,10 +224,16 @@ const EditAuthorAffiliations = ({
                                                 actionHandler[ACTIONS.CHANGE](dispatch, item, newValue);
                                             }
                                         }}
+                                        ListboxProps={{
+                                            id: `orgSelect-${item.af_org_id}-options`,
+                                            'data-testid': `orgSelect-${item.af_org_id}-options`,
+                                        }}
                                     />
                                 </Grid>
                                 <Grid xs={4} padding={1}>
                                     <Chip
+                                        id={`orgChip-${item.af_org_id}`}
+                                        data-testid={`orgChip-${item.af_org_id}`}
                                         label={getChipLabel(item.af_percent_affiliation, PRECISION)}
                                         variant="outlined"
                                         size={'small'}
@@ -249,6 +260,8 @@ const EditAuthorAffiliations = ({
                         {!hasNonHerdc(currentAffiliations) && (
                             <Grid xs={7} padding={1}>
                                 <Autocomplete
+                                    id={'orgSelect-add'}
+                                    data-testid={'orgSelect-add'}
                                     key={Date.now()}
                                     clearOnBlur
                                     disableClearable
@@ -278,6 +291,11 @@ const EditAuthorAffiliations = ({
                                             size={'small'}
                                             variant={'standard'}
                                             placeholder={organisationPlaceholderText}
+                                            inputProps={{
+                                                ...params.inputProps,
+                                                id: 'orgSelect-add-input',
+                                                'data-testid': 'orgSelect-add-input',
+                                            }}
                                         />
                                     )}
                                     onChange={(event, newValue) => {
@@ -289,6 +307,10 @@ const EditAuthorAffiliations = ({
                                                 uniqueOrgs.current[suggestedOrganisationUnits.length > 0 ? 0 : 1],
                                             );
                                         } else actionHandler[ACTIONS.ADD](dispatch, rowData, newValue);
+                                    }}
+                                    ListboxProps={{
+                                        id: 'orgSelect-add-options',
+                                        'data-testid': 'orgSelect-add-options',
                                     }}
                                 />
                             </Grid>

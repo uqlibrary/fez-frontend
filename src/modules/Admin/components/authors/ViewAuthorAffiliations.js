@@ -51,6 +51,8 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
                 <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
                     <Grid xs={2}>
                         <Chip
+                            id={`orgChip-${item.af_org_id}`}
+                            data-testid={`orgChip-${item.af_org_id}`}
                             label={getChipLabel(item.af_percent_affiliation, PRECISION)}
                             variant="outlined"
                             size={'small'}
@@ -67,7 +69,14 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
             {affiliations.length === 0 && (
                 <>
                     <Grid xs={2}>
-                        <Chip label={'0%'} variant="outlined" size={'small'} color={'error'} />
+                        <Chip
+                            id={'orgChip-error'}
+                            data-testid={'orgChip-error'}
+                            label={'0%'}
+                            variant="outlined"
+                            size={'small'}
+                            color={'error'}
+                        />
                     </Grid>
                     <Grid xs={10}>
                         <Typography variant="body2" color={'error'}>

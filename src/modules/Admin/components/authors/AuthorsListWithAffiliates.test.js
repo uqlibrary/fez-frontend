@@ -778,7 +778,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should render new affiliation view', async () => {
-        const { getByTestId, getByText, getByRole, queryByTestId, getAllByText, queryByText } = setup({
+        const { getByTestId, getByText, getByRole, queryByTestId, queryByText } = setup({
             list: [
                 {
                     creatorRole: '',
@@ -854,9 +854,11 @@ describe('AuthorsListWithAffiliates', () => {
         });
 
         await waitFor(() => getByText('School of Chemistry and Molecular Biosciences'));
-        expect(getByText('50%')).toBeInTheDocument();
+
+        expect(getByTestId('orgChip-881')).toHaveTextContent('50%');
         expect(getByText('School of Chemistry and Molecular Biosciences')).toBeInTheDocument();
-        expect(getByText('40%')).toBeInTheDocument();
+
+        expect(getByTestId('orgChip-968')).toHaveTextContent('40%');
         expect(getByText('Percentage sum total of all affiliations must equal 100%')).toBeInTheDocument();
         expect(getByRole('button', { name: /Recalculate Percentages/ })).toBeInTheDocument();
 
@@ -913,6 +915,8 @@ describe('AuthorsListWithAffiliates', () => {
         });
 
         expect(queryByText('Percentage sum total of all affiliations must equal 100%')).not.toBeInTheDocument();
-        expect(getAllByText('50%').length).toEqual(2);
+
+        expect(getByTestId('orgChip-881')).toHaveTextContent('50%');
+        expect(getByTestId('orgChip-968')).toHaveTextContent('50%');
     });
 });

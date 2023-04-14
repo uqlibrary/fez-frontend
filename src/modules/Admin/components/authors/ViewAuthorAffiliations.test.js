@@ -24,8 +24,9 @@ function setup(props = {}) {
 
 describe('ViewAuthorAffiliations', () => {
     it('renders', () => {
-        const { getByText } = setup();
-        expect(getByText('0%')).toBeInTheDocument();
+        const { getByText, getByTestId } = setup();
+
+        expect(getByTestId('orgChip-error')).toHaveTextContent('0%');
         expect(getByText('No affiliations have been added')).toBeInTheDocument();
         expect(getByText('Author requires at least one affiliation to be added')).toBeInTheDocument();
     });
@@ -62,8 +63,8 @@ describe('ViewAuthorAffiliations', () => {
                 },
             ],
         };
-        const { getByText } = setup({ rowData });
-        expect(getByText('100%')).toBeInTheDocument();
+        const { getByText, getByTestId } = setup({ rowData });
+        expect(getByTestId('orgChip-1')).toHaveTextContent('100%');
         expect(
             getByText('Information Systems and Resource Services (University of Queensland Library)'),
         ).toBeInTheDocument();
@@ -97,8 +98,9 @@ describe('ViewAuthorAffiliations', () => {
                 },
             ],
         };
-        const { getByText } = setup({ rowData });
-        expect(getByText('100%')).toBeInTheDocument();
+        const { getByText, getByTestId } = setup({ rowData });
+        expect(getByTestId('orgChip-1')).toHaveTextContent('100%');
+
         expect(getByText('Organisational Unit data missing')).toBeInTheDocument();
     });
 
@@ -135,8 +137,9 @@ describe('ViewAuthorAffiliations', () => {
             ],
         };
         const onChange = jest.fn(row => expect(row.affiliations[0].af_percent_affiliation).toEqual(100000));
-        const { getByText, getByRole } = setup({ rowData, onChange });
-        expect(getByText('80%')).toBeInTheDocument();
+        const { getByText, getByTestId, getByRole } = setup({ rowData, onChange });
+
+        expect(getByTestId('orgChip-1')).toHaveTextContent('80%');
         expect(getByText('Percentage sum total of all affiliations must equal 100%')).toBeInTheDocument();
 
         // coverage - make sure recalculate button fires. Note the jest.fn for onChange
@@ -162,8 +165,8 @@ describe('ViewAuthorAffiliations', () => {
             orgtype: '1',
             affiliations: [],
         };
-        const { getByText } = setup({ rowData });
-        expect(getByText('0%')).toBeInTheDocument();
+        const { getByText, getByTestId } = setup({ rowData });
+        expect(getByTestId('orgChip-error')).toHaveTextContent('0%');
         expect(getByText('Author requires at least one affiliation to be added')).toBeInTheDocument();
     });
 });
