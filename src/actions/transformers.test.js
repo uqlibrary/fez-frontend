@@ -4067,7 +4067,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
-                fez_author_affiliation: [],
+                fez_author_affiliation: null,
                 fez_record_search_key_author: [],
                 fez_record_search_key_author_affiliation_country: [],
                 fez_record_search_key_author_affiliation_full_address: [],
@@ -4089,6 +4089,70 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+                fez_author_affiliation: null,
+                fez_record_search_key_author: [
+                    { rek_author: 'Smith A.', rek_author_order: 1 },
+                    { rek_author: 'Smith B.', rek_author_order: 2 },
+                    { rek_author: 'Smith C.', rek_author_order: 3 },
+                    { rek_author: 'Smith D.', rek_author_order: 4 },
+                ],
+                fez_record_search_key_author_id: [
+                    { rek_author_id: 0, rek_author_id_order: 1 },
+                    { rek_author_id: 100, rek_author_id_order: 2 },
+                    { rek_author_id: 0, rek_author_id_order: 3 },
+                    { rek_author_id: 1001, rek_author_id_order: 4 },
+                ],
+                fez_record_search_key_author_affiliation_name: [
+                    {
+                        rek_author_affiliation_name: 'Missing',
+                        rek_author_affiliation_name_order: 1,
+                    },
+                    {
+                        rek_author_affiliation_name: 'Missing',
+                        rek_author_affiliation_name_order: 2,
+                    },
+                    {
+                        rek_author_affiliation_name: 'Missing',
+                        rek_author_affiliation_name_order: 3,
+                    },
+                    {
+                        rek_author_affiliation_name: 'Missing',
+                        rek_author_affiliation_name_order: 4,
+                    },
+                ],
+                fez_record_search_key_author_affiliation_type: [
+                    {
+                        rek_author_affiliation_type: 0,
+                        rek_author_affiliation_type_order: 1,
+                    },
+                    {
+                        rek_author_affiliation_type: 0,
+                        rek_author_affiliation_type_order: 2,
+                    },
+                    {
+                        rek_author_affiliation_type: 0,
+                        rek_author_affiliation_type_order: 3,
+                    },
+                    {
+                        rek_author_affiliation_type: 0,
+                        rek_author_affiliation_type_order: 4,
+                    },
+                ],
+            });
+        });
+
+        it('should get authors search key for authors with affiliations', () => {
+            const data = {
+                authorsWithAffiliations: [
+                    { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+                    { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+                    { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+                    { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+                ],
+            };
+
+            expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+                // fez_author_affiliation should return array in this case as it indicates a valid work type
                 fez_author_affiliation: [],
                 fez_record_search_key_author: [
                     { rek_author: 'Smith A.', rek_author_order: 1 },
@@ -4274,7 +4338,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
-                fez_author_affiliation: [],
+                fez_author_affiliation: null,
                 fez_record_search_key_author: [
                     { rek_author: 'Smith A.', rek_author_order: 1 },
                     { rek_author: 'Smith B.', rek_author_order: 2 },
@@ -4378,7 +4442,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
-                fez_author_affiliation: [],
+                fez_author_affiliation: null,
                 fez_record_search_key_author: [
                     { rek_author: 'Smith A.', rek_author_order: 1 },
                     { rek_author: 'Smith B.', rek_author_order: 2 },
