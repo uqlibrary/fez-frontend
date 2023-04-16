@@ -95,6 +95,55 @@ describe('NewViewRecord', () => {
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 
+    it('should render default view with admin menu when AA issues and internal notes exist', () => {
+        // Checked OK
+        const affiliationIssues = {
+            fez_author_affiliation: [
+                {
+                    af_id: 478894,
+                    af_pid: 'UQ:871c1f8',
+                    af_author_id: 7624000,
+                    af_percent_affiliation: 900,
+                    af_org_id: 881,
+                    af_status: 1,
+                    fez_author: {
+                        aut_id: 88844,
+                        aut_display_name: 'one Wrong',
+                    },
+                    fez_org_structure: [
+                        {
+                            org_id: 881,
+                            org_title: 'School of Chemistry and Molecular Biosciences',
+                        },
+                    ],
+                },
+                {
+                    af_id: 478894,
+                    af_pid: 'UQ:871c1f8',
+                    af_author_id: 7624001,
+                    af_percent_affiliation: 100000,
+                    af_org_id: 881,
+                    af_status: 1,
+                    fez_author: {
+                        aut_id: 88844,
+                        aut_display_name: 'two OK',
+                    },
+                    fez_org_structure: [
+                        {
+                            org_id: 881,
+                            org_title: 'School of Chemistry and Molecular Biosciences',
+                        },
+                    ],
+                },
+            ],
+            fez_internal_notes: { ain_detail: 'test' },
+        };
+        const recordwithIssues = { ...recordWithNoAffiliationIssues, ...affiliationIssues };
+        userIsAdmin.mockImplementationOnce(() => true);
+        const { getByTestId } = setup({ recordToView: recordwithIssues });
+        expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+
     it('should render default view with admin menu when no AA issues exist', () => {
         // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);
