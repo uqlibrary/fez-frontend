@@ -8048,3 +8048,14 @@ exports[`RichEditor should render given title and description with error 1`] = `
 `;
 
 exports[`RichEditor should render maxValue with missing instructions 1`] = `null`;
+
+exports[`RichEditor should render plain text value 1`] = `
+<Fragment>
+  <span />
+  <div
+    className=""
+    data-testid="rek-test"
+    id="rek-test"
+  />
+</Fragment>
+`;

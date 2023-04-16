@@ -39,7 +39,7 @@ const handlers = {
         recordToViewError: action.payload,
     }),
 
-    [actions.VIEW_RECORD_DELETED]: (state, action) => ({
+    [actions.VIEW_RECORD_DELETED_LOADED]: (state, action) => ({
         ...initialState,
         loadingRecordToView: false,
         recordToView: action.payload,
