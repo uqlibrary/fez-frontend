@@ -191,15 +191,13 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                                 selectedItem.aut_lname &&
                                 `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
                         uqIdentifier: `${selectedItem.aut_id}`,
-                        orgaff:
-                            (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
-                            contributor.orgaff,
-                        orgtype:
-                            (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
-                            contributor.orgtype,
+                        orgaff: 'Missing',
+                        orgtype: '',
                         uqUsername: `${selectedItem.aut_org_username ||
                             selectedItem.aut_student_username ||
                             selectedItem.aut_ref_num}`,
+                        affiliation: '',
+                        affiliations: contributor.aut_id !== selectedItem.aut_id ? [] : contributor.affiliations || [],
                     };
                     props.onRowDataChange({ ...contributor, ...newValue });
                 };
