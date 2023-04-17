@@ -829,12 +829,19 @@ describe('AuthorsListWithAffiliates', () => {
                     id: 6,
                 },
                 {
-                    nameAsPublished: 'Smith, John',
-                    uqIdentifier: '0',
+                    creatorRole: '',
+                    uqIdentifier: '',
+                    aut_display_name: 'Smith, John Coverage',
+                    affiliation: '',
+                    aut_org_username: '',
+                    nameAsPublished: 'Smith, John Coverage',
                     uqUsername: '',
+                    aut_student_username: '',
+                    aut_id: 1,
                     orgaff: '',
                     orgtype: '',
-                    affiliation: '',
+                    affiliations: [],
+                    id: 7,
                 },
             ],
         });
@@ -866,7 +873,7 @@ describe('AuthorsListWithAffiliates', () => {
         const row2 = getByTestId('rek-author-list-row-1');
         expect(row2).toBeInTheDocument();
 
-        expect(within(row2).getByText('Smith, John')).toBeInTheDocument();
+        expect(within(row2).getByText('Smith, John Coverage')).toBeInTheDocument();
         expect(within(row2).queryByTestId('expandPanelIcon')).not.toBeInTheDocument(); // unlinked dont have expand icons in this component
         expect(within(row2).queryByTestId('contributor-error-1')).not.toBeInTheDocument(); // shouldnt have an error icon
         expect(within(row2).getByTestId('contributor-unlinked-1')).toBeInTheDocument(); // should have an unlinked icon

@@ -24,7 +24,7 @@ import {
     createNewAffiliationObject,
 } from 'helpers/authorAffiliations';
 
-const actionHandler = {
+export const actionHandler = {
     [ACTIONS.CHANGE]: (dispatch, currentAffiliation, organisation) => {
         const newAffiliation = deepClone(currentAffiliation);
         newAffiliation.af_org_id = organisation.org_id;

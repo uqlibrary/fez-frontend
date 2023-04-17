@@ -1853,6 +1853,65 @@ describe('transformers', () => {
         });
     });
 
+    describe('getRecordAuthorAffiliations tests', () => {
+        it('should return null object 1', () => {
+            expect(transformers.getRecordAuthorAffiliations()).toEqual({ fez_author_affiliation: null });
+        });
+        it('should return null object 2', () => {
+            expect(transformers.getRecordAuthorAffiliations([], false)).toEqual({ fez_author_affiliation: null });
+        });
+        it('should return empty array object', () => {
+            expect(transformers.getRecordAuthorAffiliations([], true)).toEqual({ fez_author_affiliation: [] });
+        });
+        it('should return array object', () => {
+            const authors = [
+                {
+                    id: 2,
+                    affiliations: [
+                        {
+                            af_author_id: 2,
+                            af_percent_affiliation: 50000,
+                            af_org_id: 1,
+                            af_status: 1,
+                            af_otherkey: 'something',
+                            af_otherobj: { otherKey: 'yes' },
+                        },
+                        {
+                            af_author_id: 2,
+                            af_percent_affiliation: 50000,
+                            af_org_id: 2,
+                            af_status: 1,
+                        },
+                    ],
+                },
+            ];
+            const expected = {
+                fez_author_affiliation: [
+                    { af_author_id: 2, af_org_id: 1, af_percent_affiliation: 50000, af_status: 1 },
+                    { af_author_id: 2, af_org_id: 2, af_percent_affiliation: 50000, af_status: 1 },
+                ],
+            };
+
+            expect(transformers.getRecordAuthorAffiliations(authors, true)).toEqual(expected);
+        });
+    });
+
+    describe('getAuthorsSearchKeys', () => {
+        it('should handle the canHaveAffiliations param (coverage)', () => {
+            const authors = [
+                { nameAsPublished: 'Smith D.', disabled: false, selected: true, authorId: 100 },
+                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1000 },
+            ];
+
+            expect(transformers.getAuthorsSearchKeys(authors)).toEqual(
+                expect.objectContaining({ fez_author_affiliation: null }),
+            );
+            expect(transformers.getAuthorsSearchKeys(authors, true)).toEqual(
+                expect.objectContaining({ fez_author_affiliation: [] }),
+            );
+        });
+    });
+
     describe('getRecordAbstractDescriptionSearchKey tests', () => {
         it('should return empty object', () => {
             expect(transformers.getRecordAbstractDescriptionSearchKey()).toEqual({});
@@ -3223,7 +3282,8 @@ describe('transformers', () => {
      *  - bibliographicSection.fez_record_search_key_native_script_conference_name.rek_native_script_conference_name'
      *  - bibliographicSection.fez_record_search_key_roman_script_conference_name.rek_roman_script_conference_name'
      *  - bibliographicSection.fez_record_search_key_translated_conference_name.rek_translated_conference_name'
-     *  - bibliographicSection.fez_record_search_key_native_script_proceedings_title.rek_native_script_proceedings_title'
+     *  - bibliographicSection.fez_record_search_key_native_script_proceedings_title
+     *      .rek_native_script_proceedings_title'
      *  - bibliographicSection.fez_record_search_key_roman_script_proceedings_title.rek_roman_script_proceedings_title'
      *  - bibliographicSection.fez_record_search_key_translated_proceedings_title.rek_translated_proceedings_title'
      *  - bibliographicSection.fez_record_search_key_place_of_publication.rek_place_of_publication'

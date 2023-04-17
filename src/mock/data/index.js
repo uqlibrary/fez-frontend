@@ -56,6 +56,7 @@ export {
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
     recordWithProblematicAuthorAffiliations,
+    recordBookWithAuthorAffiliations,
     unpublishedSearchList,
     UQ716942uqagrinb,
     UQ353708,

@@ -375,6 +375,10 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         }
         return [200, { data: { ...mockData.record } }];
     })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:764e150' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.recordBookWithAuthorAffiliations } }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:871c1f8' }).apiUrl)))
     .reply(config => {
         return [200, { data: { ...mockData.recordWithProblematicAuthorAffiliations } }];

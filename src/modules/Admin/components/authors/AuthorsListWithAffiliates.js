@@ -103,7 +103,11 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             ),
             field: 'nameAsPublished',
             render: rowData => {
-                const inProblemState = hasAffiliationProblemsByAuthor(rowData);
+                const inProblemState =
+                    hasAffiliationProblemsByAuthor(rowData) &&
+                    !!rowData.uqUsername &&
+                    rowData.uqUsername !== '' &&
+                    !isNtro;
                 return (
                     <NameAsPublished
                         icon={getIcon({ rowData, disabled, inProblemState })}
