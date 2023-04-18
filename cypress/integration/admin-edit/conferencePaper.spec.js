@@ -125,3 +125,22 @@ context('Conference Paper admin edit', () => {
         });
     });
 });
+context('Author affiliations', () => {
+    const record = recordList.data[0];
+
+    beforeEach(() => {
+        cy.loadRecordForAdminEdit(record.rek_pid);
+    });
+
+    afterEach(() => {
+        cy.adminEditCleanup();
+    });
+    it('should be available for this work type', () => {
+        cy.assertAffiliationsAllowed({
+            authorName: 'Steve Su (uqysu4)',
+            orgName: 'The University of Queensland',
+            rowId: 4,
+            allowed: true,
+        });
+    });
+});

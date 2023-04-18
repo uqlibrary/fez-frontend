@@ -250,6 +250,8 @@ const EditAuthorAffiliations = ({
                                         <IconButton
                                             aria-label="delete"
                                             onClick={() => actionHandler[ACTIONS.DELETE](dispatch, index)}
+                                            id={`deleteOrgBtn-${item.af_org_id}`}
+                                            data-testid={`deleteOrgBtn-${item.af_org_id}`}
                                         >
                                             <DeleteIcon />
                                         </IconButton>

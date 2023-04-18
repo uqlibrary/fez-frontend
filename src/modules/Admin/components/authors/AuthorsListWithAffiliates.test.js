@@ -907,7 +907,7 @@ describe('AuthorsListWithAffiliates', () => {
         expect(queryByTestId('affiliationCancelBtn')).not.toBeInTheDocument();
 
         act(() => {
-            getByTestId('affiliationEditBtn').click();
+            getByTestId('affiliationEditBtn-88844').click();
         });
 
         await waitFor(() => getByTestId('affiliationCancelBtn'));
