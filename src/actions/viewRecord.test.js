@@ -5,6 +5,7 @@ import { removeShadowSuffixFromTableNames } from './viewRecord';
 import * as mockData from 'mock/data';
 import { recordVersion } from 'mock/data';
 import { locale } from 'locale';
+import { DELETED, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
 
 describe('View record actions', () => {
     const testPid = 'UQ:396321';
@@ -118,7 +119,28 @@ describe('View record actions', () => {
                 data: { ...mockData.record },
             });
 
-            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_DELETED];
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_DELETED_LOADED];
+
+            try {
+                await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions when loading a data collection that has been deleted', async () => {
+            mockApi.onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl).reply(200, {
+                status: 200,
+                message: 'Some test message',
+                data: {
+                    ...mockData.record,
+                    rek_status: DELETED,
+                    rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                },
+            });
+
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_DELETED_LOADED];
 
             try {
                 await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));

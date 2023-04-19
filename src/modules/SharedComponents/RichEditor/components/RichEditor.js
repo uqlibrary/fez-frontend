@@ -46,7 +46,9 @@ export default class RichEditor extends PureComponent {
 
         !!this.editorInstance && (this.editorInstance.id = `${this.props.richEditorId}-editor`);
         !!this.editorInstance && (this.editorInstance.name = `${this.props.richEditorId}-editor`);
-        !!this.editorInstance && !!this.props.value && this.editorInstance.setData(this.props.value.get('htmlText'));
+        !!this.editorInstance &&
+            !!this.props.value &&
+            this.editorInstance.setData(this.props.value.get ? this.props.value.get('htmlText') : this.props.value);
 
         !!this.editorInstance && (this.editorInstance.id = `${this.props.richEditorId}-editor`);
         !!this.editorInstance && (this.editorInstance.name = `${this.props.richEditorId}-editor`);

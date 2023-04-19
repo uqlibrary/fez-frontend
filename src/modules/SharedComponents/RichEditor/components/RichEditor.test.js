@@ -138,6 +138,13 @@ describe('RichEditor', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render plain text value', () => {
+        const wrapper = setup({
+            value: 'test',
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should call componentDidUpdate', () => {
         const wrapper = setup();
         wrapper.setProps({
