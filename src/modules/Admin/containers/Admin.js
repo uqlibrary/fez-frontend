@@ -68,10 +68,6 @@ const getInitialFormValues = (recordToView, recordType) => {
                       }
                     : []),
             },
-            // culturalInstitutionNoticeSection:
-            //     ((recordType === RECORD_TYPE_RECORD || recordType === RECORD_TYPE_COLLECTION) &&
-            //         getInitialValues(recordToView, 'culturalInstitutionNotice')) ||
-            //     {},
             bibliographicSection:
                 ((recordType === RECORD_TYPE_RECORD ||
                     recordType === RECORD_TYPE_COMMUNITY ||

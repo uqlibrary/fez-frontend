@@ -13,7 +13,7 @@ export const maxLength = max => value =>
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
 export const maxLengthWithWhitespace = max => value =>
-    (value && value.plainText && value.plainText.length > max) || (!value.plainText && value.length > max + 7)
+    value?.plainText?.length > max || value?.length > max + 7
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
 export const maxLength9 = maxLength(9);
@@ -66,14 +66,7 @@ export const maxWords = max => value => {
 export const maxWords100 = maxWords(100);
 
 export const maxListEditorTextLength = max => value => {
-    let valueToValidate = null;
-    if (typeof value === 'object' && value.hasOwnProperty('plainText')) {
-        valueToValidate = value.plainText;
-    } else {
-        valueToValidate = value;
-    }
-
-    return maxLengthWithWhitespace(max)(valueToValidate);
+    return maxLengthWithWhitespace(max)(value?.plainText ? value.plainText : value);
 };
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);

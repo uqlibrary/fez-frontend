@@ -319,7 +319,7 @@ export const AdminInterface = ({
                     color="primary"
                     fullWidth
                     children={submitButtonTxt}
-                    onClick={handleSubmit}
+                    onClick={!isDeleted ? handleSubmit : setPublicationStatusAndSubmit(UNPUBLISHED)}
                 />
             </Grid>
         </React.Fragment>

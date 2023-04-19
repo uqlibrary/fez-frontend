@@ -15,7 +15,7 @@ import { stripHtml } from '../../../helpers/general';
 import globalLocale from '../../../locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
-import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from '../../../config/general';
+import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, PUBLICATION_TYPE_DATA_COLLECTION } from '../../../config/general';
 
 jest.mock('../../../hooks', () => ({
     userIsAdmin: jest.fn(() => ({})),
@@ -137,6 +137,91 @@ describe('NewViewRecord', () => {
     it('should render deleted record correctly', () => {
         const { getByText } = setup({ isDeleted: true, recordToView: record });
         expect(getByText('This work has been deleted.')).toBeInTheDocument();
+        expect(
+            getByText(
+                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
+            ),
+        ).toBeInTheDocument();
+    });
+
+    it('should render deleted data collection correctly', () => {
+        const { getByText } = setup({
+            isDeleted: true,
+            recordToView: { ...record, rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION },
+        });
+        expect(getByText('This work has been deleted.')).toBeInTheDocument();
+        expect(
+            getByText(
+                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
+            ),
+        ).toBeInTheDocument();
+    });
+
+    it('should render deleted data collection with new doi correctly', () => {
+        const newDoi = '10.000/abc';
+        const { getByText, container } = setup({
+            isDeleted: true,
+            recordToView: {
+                ...record,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_new_doi: {
+                    rek_new_doi: '10.000/abc',
+                },
+            },
+        });
+        expect(container.textContent).toContain(
+            'This Data Collection has been deleted and substituted by another version.',
+        );
+        expect(container.querySelector(`[href="https://doi.org/${newDoi}"][target="_blank"]`)).toBeInTheDocument();
+        expect(
+            getByText(
+                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
+            ),
+        ).toBeInTheDocument();
+    });
+
+    it('should render deleted data collection with new doi and deletion notes correctly', () => {
+        const newDoi = '10.000/abc';
+        const deletionNotes = 'notes test';
+        const { getByText, container } = setup({
+            isDeleted: true,
+            recordToView: {
+                ...record,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_new_doi: {
+                    rek_new_doi: '10.000/abc',
+                },
+                fez_record_search_key_deletion_notes: {
+                    rek_deletion_notes: deletionNotes,
+                },
+            },
+        });
+        expect(container.textContent).toContain(
+            'This Data Collection has been deleted and substituted by another version.',
+        );
+        expect(container.querySelector(`[href="https://doi.org/${newDoi}"][target="_blank"]`)).toBeInTheDocument();
+        expect(container.textContent).toContain(deletionNotes);
+        expect(
+            getByText(
+                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
+            ),
+        ).toBeInTheDocument();
+    });
+
+    it('should render deleted data collection with deletion notes correctly', () => {
+        const deletionNotes = 'notes test';
+        const { getByText, container } = setup({
+            isDeleted: true,
+            recordToView: {
+                ...record,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_deletion_notes: {
+                    rek_deletion_notes: deletionNotes,
+                },
+            },
+        });
+        expect(getByText('This work has been deleted.')).toBeInTheDocument();
+        expect(container.textContent).toContain(deletionNotes);
         expect(
             getByText(
                 'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',

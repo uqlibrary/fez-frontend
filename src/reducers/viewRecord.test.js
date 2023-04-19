@@ -80,7 +80,7 @@ describe('viewRecord reducer', () => {
 
     it('should set isDeleted flag to true', () => {
         const test = viewRecordReducer(initialState, {
-            type: actions.VIEW_RECORD_DELETED,
+            type: actions.VIEW_RECORD_DELETED_LOADED,
             payload: {
                 rek_pid: 'UQ:1234',
                 rek_title: 'This is a title',

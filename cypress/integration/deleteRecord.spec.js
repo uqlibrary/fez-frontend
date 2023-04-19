@@ -1,8 +1,7 @@
 import formsLocale from '../../src/locale/forms';
-// import { default as pagesLocale } from '../../src/locale/pages';
-import { myRecordsList, myDatasetList } from '../../src/mock/data/records';
+import { myRecordsList, publicationTypeListThesis } from '../../src/mock/data/records';
 const record = myRecordsList.data[0];
-const uqDoiRecord = myDatasetList.data[1];
+const uqDoiRecord = publicationTypeListThesis.data[0];
 
 context('Delete work form', () => {
     const baseUrl = Cypress.config('baseUrl');
