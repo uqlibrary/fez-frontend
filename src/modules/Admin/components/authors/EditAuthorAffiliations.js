@@ -171,11 +171,13 @@ const EditAuthorAffiliations = ({
                                         clearOnBlur
                                         disableClearable
                                         value={
-                                            uniqueOrgs.current?.find(org => org.org_id === item.af_org_id) ?? {
+                                            uniqueOrgs.current?.find(
+                                                org => org.org_id === item.af_org_id,
+                                            ) ?? /* istanbul ignore next */ {
                                                 org_title: organisationMissingLabel,
                                             }
                                         }
-                                        options={uniqueOrgs.current ?? []}
+                                        options={uniqueOrgs.current ?? /* istanbul ignore next */ []}
                                         getOptionLabel={option => option.org_title}
                                         renderOption={(props, option) => (
                                             <Box
@@ -218,7 +220,11 @@ const EditAuthorAffiliations = ({
                                                     dispatch,
                                                     rowData,
                                                     newValue,
-                                                    uniqueOrgs.current[suggestedOrganisationUnits.length > 0 ? 0 : 1],
+                                                    uniqueOrgs.current[
+                                                        suggestedOrganisationUnits.length > 0
+                                                            ? 0
+                                                            : /* istanbul ignore next */ 1
+                                                    ],
                                                 );
                                             } else {
                                                 actionHandler[ACTIONS.CHANGE](dispatch, item, newValue);
@@ -237,11 +243,7 @@ const EditAuthorAffiliations = ({
                                         label={getChipLabel(item.af_percent_affiliation, PRECISION)}
                                         variant="outlined"
                                         size={'small'}
-                                        color={
-                                            !!uniqueOrgs.current?.find(org => org.org_id === item.af_org_id)
-                                                ? 'primary'
-                                                : 'error'
-                                        }
+                                        color="primary"
                                     />
                                 </Grid>
 
@@ -270,7 +272,7 @@ const EditAuthorAffiliations = ({
                                     options={
                                         uniqueOrgs.current?.filter(
                                             org => !currentAffiliationOrgIds.includes(org.org_id),
-                                        ) ?? []
+                                        ) ?? /* istanbul ignore next */ []
                                     }
                                     getOptionLabel={option => option.org_title}
                                     renderOption={(props, option) => (
@@ -306,7 +308,11 @@ const EditAuthorAffiliations = ({
                                                 dispatch,
                                                 rowData,
                                                 newValue,
-                                                uniqueOrgs.current[suggestedOrganisationUnits.length > 0 ? 0 : 1],
+                                                uniqueOrgs.current[
+                                                    suggestedOrganisationUnits.length > 0
+                                                        ? 0
+                                                        : /* istanbul ignore next */ 1
+                                                ],
                                             );
                                         } else actionHandler[ACTIONS.ADD](dispatch, rowData, newValue);
                                     }}

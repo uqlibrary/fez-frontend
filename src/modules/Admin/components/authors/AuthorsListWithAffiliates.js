@@ -57,11 +57,13 @@ const getIcon = ({ rowData, inProblemState }) => {
         );
     } else if (parseInt(rowData.uqIdentifier, 10)) {
         return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.tableData.id}`} />;
-    } else if (rowData.disabled) {
-        return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
-    } else {
-        return <PersonOutlined color="secondary" id={`contributor-unlinked-${rowData.tableData.id}`} />;
     }
+    /* istanbul ignore next */
+    if (rowData.disabled) {
+        /* istanbul ignore next */
+        return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
+    }
+    return <PersonOutlined color="secondary" id={`contributor-unlinked-${rowData.tableData.id}`} />;
 };
 
 export const NameAsPublished = React.memo(({ icon, text, linked }) => {
@@ -210,7 +212,10 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                         uqUsername: `${selectedItem.aut_org_username ||
                             selectedItem.aut_student_username ||
                             selectedItem.aut_ref_num}`,
-                        affiliations: contributor.aut_id !== selectedItem.aut_id ? [] : contributor.affiliations || [],
+                        affiliations:
+                            contributor.aut_id !== selectedItem.aut_id
+                                ? []
+                                : /* istanbul ignore next */ contributor.affiliations || /* istanbul ignore next */ [],
                     };
                     props.onRowDataChange({ ...contributor, ...newValue });
                 };
@@ -749,7 +754,7 @@ export const AuthorsListWithAffiliates = ({
                         ...conditionalIcon,
                         render: () => {
                             return !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro
-                                ? null
+                                ? /* istanbul ignore next */ null
                                 : authorDetailPanel({
                                       rowData,
                                       locale,

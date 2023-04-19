@@ -107,7 +107,7 @@ Cypress.Commands.add('addAuthorAndAssert', (authorUqname, authorId, expand = tru
         .contains('li', authorUqname)
         .click();
     cy.get('[data-testid=rek-author-add-save]').click();
-    cy.get('[data-testid=ErrorOutlineOutlinedIcon]').should('exist');
+    cy.get('[data-testid^=contributor-errorIcon-]').should('exist');
     if (expand) {
         cy.get(`[data-testid=expandPanelIcon-${authorId}]`)
             .should('exist')
@@ -119,7 +119,7 @@ Cypress.Commands.add('addAuthorAndAssert', (authorUqname, authorId, expand = tru
             'Author affiliation information is incomplete - Author requires at least one affiliation to be added',
         );
         if (edit) {
-            cy.get('[data-testid=affiliationEditBtn]')
+            cy.get('[data-testid^=affiliationEditBtn-]')
                 .should('exist')
                 .click();
             cy.get('[data-testid=affiliationCancelBtn]')
@@ -142,7 +142,7 @@ Cypress.Commands.add('assertAffiliation', (orgName, orgId, expectedPercent) => {
         .contains(expectedPercent);
 });
 
-Cypress.Commands.add('addAffiliationAndAssert', (orgName, orgId, expectedPercent) => {
+Cypress.Commands.add('addAffiliationAndAssert', (orgName, orgId, expectedPercent, suggested = false) => {
     cy.get('[data-testid=orgSelect-add-input]')
         .should('exist')
         .click();
@@ -150,7 +150,18 @@ Cypress.Commands.add('addAffiliationAndAssert', (orgName, orgId, expectedPercent
         .contains('li', orgName)
         .click();
 
-    cy.assertAffiliation(orgName, orgId, expectedPercent);
+    cy.assertAffiliation(suggested ? orgName.replace('Suggested: ', '') : orgName, orgId, expectedPercent);
+});
+
+Cypress.Commands.add('editAffiliationAndAssert', (currentOrgId, nextOrgId, nextOrgName, expectedPercent) => {
+    cy.get(`[data-testid=orgSelect-${currentOrgId}-input]`)
+        .should('exist')
+        .click();
+    cy.get(`[data-testid=orgSelect-${currentOrgId}-options]`)
+        .contains('li', nextOrgName)
+        .click();
+
+    cy.assertAffiliation(nextOrgName, nextOrgId, expectedPercent);
 });
 
 Cypress.Commands.add(

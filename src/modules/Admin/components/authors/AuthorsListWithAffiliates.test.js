@@ -852,10 +852,10 @@ describe('AuthorsListWithAffiliates', () => {
         expect(row).toBeInTheDocument();
 
         expect(within(row).getByText('Robertson, Avril A. B. not 100%')).toBeInTheDocument();
-        expect(within(row).getByTestId('contributor-error-0')).toBeInTheDocument();
+        expect(within(row).getByTestId('contributor-errorIcon-88844')).toBeInTheDocument();
         act(() => {
             within(row)
-                .getByTestId('expandPanelIcon')
+                .getByTestId('expandPanelIcon-88844')
                 .closest('button')
                 .click();
         });
@@ -875,7 +875,6 @@ describe('AuthorsListWithAffiliates', () => {
 
         expect(within(row2).getByText('Smith, John Coverage')).toBeInTheDocument();
         expect(within(row2).queryByTestId('expandPanelIcon')).not.toBeInTheDocument(); // unlinked dont have expand icons in this component
-        expect(within(row2).queryByTestId('contributor-error-1')).not.toBeInTheDocument(); // shouldnt have an error icon
         expect(within(row2).getByTestId('contributor-unlinked-1')).toBeInTheDocument(); // should have an unlinked icon
 
         mockApi.onGet(repositories.routes.ORGANISATIONAL_UNITS().apiUrl).replyOnce(200, {

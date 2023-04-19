@@ -125,18 +125,21 @@ context('As an admin,', () => {
             //
             //
             //
-            cy.cy.addAuthorAndAssert('Steve Su (uqysu4)', 85004);
+            cy.addAuthorAndAssert('Steve Su (uqysu4)', 85004);
             cy.addAffiliationAndAssert('Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+            cy.editAffiliationAndAssert(877, 973, 'Academic Administration', '100%');
 
             cy.get('[data-testid=affiliationSaveBtn]').should('not.be.disabled');
 
-            cy.get('[data-testid=deleteOrgBtn-877]')
+            cy.get('[data-testid=deleteOrgBtn-973]')
                 .should('exist')
                 .click();
 
             cy.get('[data-testid=affiliationSaveBtn]').should('be.disabled');
             cy.get('[data-testid=orgSelect-877-input]').should('not.exist');
             cy.get('[data-testid=orgChip-877]').should('not.exist');
+            cy.get('[data-testid=orgSelect-973-input]').should('not.exist');
+            cy.get('[data-testid=orgChip-973]').should('not.exist');
 
             cy.addAffiliationAndAssert('Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
 
@@ -167,7 +170,13 @@ context('As an admin,', () => {
 
             cy.get('[data-testid=affiliationSaveBtn]').should('not.be.disabled');
 
-            cy.addAffiliationAndAssert('Academic Administration', 973, '50%');
+            // add suggested org (coverage)
+            cy.addAffiliationAndAssert(
+                'Suggested: Information Systems and Resource Services (University of Queensland Library)',
+                1248,
+                '50%',
+                true,
+            );
 
             cy.get('[data-testid=orgChip-877]')
                 .should('exist')
@@ -178,7 +187,7 @@ context('As an admin,', () => {
             cy.get('[data-testid=orgChip-877]')
                 .should('exist')
                 .contains('33.334%');
-            cy.get('[data-testid=orgChip-973]')
+            cy.get('[data-testid=orgChip-1248]')
                 .should('exist')
                 .contains('33.333%');
 
@@ -188,8 +197,10 @@ context('As an admin,', () => {
 
             cy.get('[data-testid=detailPanel-75121]').contains('[data-testid=orgChip-877]', '33.334%');
             cy.get('[data-testid=detailPanel-75121]').contains('Aboriginal and Torres Strait Islander Studies Unit');
-            cy.get('[data-testid=detailPanel-75121]').contains('[data-testid=orgChip-973]', '33.333%');
-            cy.get('[data-testid=detailPanel-75121]').contains('Academic Administration');
+            cy.get('[data-testid=detailPanel-75121]').contains('[data-testid=orgChip-1248]', '33.333%');
+            cy.get('[data-testid=detailPanel-75121]').contains(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
             cy.get('[data-testid=detailPanel-75121]').contains('[data-testid=orgChip-1113]', '33.333%');
             cy.get('[data-testid=detailPanel-75121]').contains('Academic Administration Directorate');
 
@@ -240,6 +251,8 @@ context('As an admin,', () => {
             cy.get('[data-testid=orgSelect-1248-input]')
                 .should('exist')
                 .should('have.value', 'Information Systems and Resource Services (University of Queensland Library)');
+            // hides the add autocomplete element
+            cy.get('[data-testid=orgSelect-add-input]').should('not.exist');
 
             cy.get('[data-testid=affiliationSaveBtn]')
                 .should('not.be.disabled')
@@ -257,7 +270,7 @@ context('As an admin,', () => {
             cy.get('[data-testid=orgChip-error]').should('not.exist');
 
             // Now edit non-herdc to remove that option
-            cy.get('[data-testid=affiliationEditBtn]')
+            cy.get('[data-testid=affiliationEditBtn-78152]')
                 .should('exist')
                 .click();
 
@@ -282,6 +295,9 @@ context('As an admin,', () => {
             cy.get('[data-testid=orgChip-1248')
                 .should('exist')
                 .contains('100%');
+            // shows the add autocomplete element
+            cy.get('[data-testid=orgSelect-add-input]').should('exist');
+
             cy.get('[data-testid=affiliationSaveBtn]')
                 .should('not.be.disabled')
                 .click();
@@ -289,6 +305,42 @@ context('As an admin,', () => {
             cy.get('[data-testid=detailPanel-78152]').contains(
                 'Information Systems and Resource Services (University of Queensland Library)',
             );
+
+            //
+            // coverage - change the above org back to non-herdc
+            //
+
+            // currentOrgId, nextOrgId, nextOrgName, expectedPercent) =
+            cy.get('[data-testid^=affiliationEditBtn-]')
+                .should('exist')
+                .click();
+
+            cy.editAffiliationAndAssert(1248, 1062, '!NON-HERDC', '100%');
+            // double check the suggested org has been re-added
+            cy.get('[data-testid=orgSelect-1248-input]')
+                .should('exist')
+                .should('have.value', 'Information Systems and Resource Services (University of Queensland Library)');
+            cy.get('[data-testid=orgChip-1248')
+                .should('exist')
+                .contains('0%');
+
+            // hides the add autocomplete element
+            cy.get('[data-testid=orgSelect-add-input]').should('not.exist');
+
+            cy.get('[data-testid=affiliationSaveBtn]')
+                .should('not.be.disabled')
+                .click();
+
+            cy.get('[data-testid=detailPanel-78152]').contains('[data-testid=orgChip-1062]', '100%');
+            cy.get('[data-testid=detailPanel-78152]').contains('!NON-HERDC');
+            cy.get('[data-testid=detailPanel-78152]').contains('[data-testid=orgChip-1248]', '0%');
+            cy.get('[data-testid=detailPanel-78152]').contains(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+
+            cy.get('[data-testid=affiliationCancelBtn]').should('not.exist');
+            cy.get('[data-testid=affiliationSaveBtn]').should('not.exist');
+            cy.get('[data-testid=orgChip-error]').should('not.exist');
 
             cy.get('[data-testid=expandPanelIcon-78152]')
                 .should('exist')
