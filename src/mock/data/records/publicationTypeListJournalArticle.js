@@ -34,6 +34,44 @@ const publicationTypeListJournalArticle = {
             'rek_copyright': 'on',
             'rek_security_policy': 1,
             'fez_record_search_key_author': ['Burston, Adam S.', 'Tuckett, Anthony G.'],
+            "fez_author_affiliation": [
+                {
+                    "af_id": 478894,
+                    "af_pid": "UQ:288291",
+                    "af_author_id": 80316,
+                    "af_percent_affiliation": 50000,
+                    "af_org_id": 881,
+                    "af_status": 1,
+                    "fez_author": {
+                        "aut_id": 80316,
+                        "aut_display_name": "Adam Burston"
+                    },
+                    "fez_org_structure": 
+                        {
+                            "org_id": 881,
+                            "org_title": "School of Chemistry and Molecular Biosciences"
+                        }
+                    ,
+                },
+                {
+                    "af_id": 478895,
+                    "af_pid": "UQ:288291",
+                    "af_author_id": 80316,
+                    "af_percent_affiliation": 40000,
+                    "af_org_id": 968,
+                    "af_status": 1,
+                    "fez_author": {
+                        "aut_id": 80316,
+                        "aut_display_name": "Adam Burston"
+                    },
+                    "fez_org_structure": 
+                        {
+                            "org_id": 968,
+                            "org_title": "Institute for Molecular Bioscience"
+                        }
+                    
+                },
+            ],
             'fez_record_search_key_author_id': [
                 {
                     'rek_author_id': 80316,

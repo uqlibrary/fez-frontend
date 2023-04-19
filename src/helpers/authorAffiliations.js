@@ -43,22 +43,22 @@ export const hasAffiliationProblems = (affiliations, total = MAX_TOTAL) => {
 export const hasAffiliationProblemsByAuthor = (author, total = MAX_TOTAL) => {
     return !!author.aut_id && author.aut_id !== 0 && has100pcAffiliations({ author, total }) === false;
 };
-export const getUniqueAffiliationIds = affiliations =>
+export const getUniqueAffiliatedAuthorIds = affiliations =>
     affiliations?.reduce(
         (accumulated, current) =>
             accumulated.includes(current.af_author_id) ? accumulated : [...accumulated, current.af_author_id],
         [],
     ) ?? [];
 
-export const isOrphanedAffiliate = (record, affiliationId) =>
-    !record.fez_record_search_key_author_id.some(author => author.rek_author_id === affiliationId);
+export const isOrphanedAuthor = (record, authorId) =>
+    !record.fez_record_search_key_author_id.some(author => author.rek_author_id === authorId);
 
 export const composeAuthorAffiliationProblems = record => {
-    const uniqueAffiliationIds = getUniqueAffiliationIds(record.fez_author_affiliation);
+    const uniqueAffiliatedAuthorIds = getUniqueAffiliatedAuthorIds(record.fez_author_affiliation);
     const affiliationsNot100pc =
         record.fez_record_search_key_author_id
             ?.map((author, index) => {
-                const hasAffiliations = uniqueAffiliationIds.includes(author.rek_author_id);
+                const hasAffiliations = uniqueAffiliatedAuthorIds.includes(author.rek_author_id);
                 return {
                     rek_author_id: author.rek_author_id,
                     rek_author:
@@ -71,10 +71,10 @@ export const composeAuthorAffiliationProblems = record => {
             })
             .filter(item => item.rek_author_id !== 0 && !item.has100pcAffiliations) ?? [];
 
-    const orphanedAuthors = uniqueAffiliationIds
-        .map(afId => {
-            const orphanedAuthor = isOrphanedAffiliate(record, afId)
-                ? record.fez_author_affiliation.find(author => author.af_author_id === afId)
+    const orphanedAuthors = uniqueAffiliatedAuthorIds
+        .map(uniqueAuthorId => {
+            const orphanedAuthor = isOrphanedAuthor(record, uniqueAuthorId)
+                ? record.fez_author_affiliation.find(author => author.af_author_id === uniqueAuthorId)
                 : undefined;
             return !!orphanedAuthor
                 ? {

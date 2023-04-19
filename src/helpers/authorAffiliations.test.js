@@ -57,6 +57,9 @@ describe('Author Affiliation helper functions:', () => {
         const affiliations = helpers.deepClone(record.fez_author_affiliation);
         const affiliationsByAuthor = helpers.deepClone(helpers.getFilteredAffiliations(testAuthor, affiliations));
 
+        // uses defaults (coverage)
+        expect(helpers.has100pcAffiliations()).toBe(false);
+
         // doesnt total 100 for test author id
         expect(helpers.has100pcAffiliations({ author: testAuthor, affiliations })).toBe(false);
 
@@ -105,8 +108,12 @@ describe('Author Affiliation helper functions:', () => {
         expect(helpers.hasAffiliationProblemsByAuthor(testAuthorWithAffiliations, 90000)).toBe(false);
     });
 
-    it('getUniqueAffiliationIds', () => {
-        expect(helpers.getUniqueAffiliationIds(record.fez_author_affiliation)).toEqual([
+    it('getUniqueAffiliatedAuthorIds', () => {
+        // coverage
+        expect(helpers.getUniqueAffiliatedAuthorIds()).toEqual([]);
+        expect(helpers.getUniqueAffiliatedAuthorIds([])).toEqual([]);
+
+        expect(helpers.getUniqueAffiliatedAuthorIds(record.fez_author_affiliation)).toEqual([
             88844,
             7624000,
             7624839,
@@ -114,9 +121,9 @@ describe('Author Affiliation helper functions:', () => {
         ]);
     });
 
-    it('isOrphanedAffiliate', () => {
-        expect(helpers.isOrphanedAffiliate(record, 88844)).toBe(false); // has affiliations
-        expect(helpers.isOrphanedAffiliate(record, 7624840)).toBe(true); // has no affiliation
+    it('isOrphanedAuthor', () => {
+        expect(helpers.isOrphanedAuthor(record, 88844)).toBe(false); // has affiliations
+        expect(helpers.isOrphanedAuthor(record, 7624840)).toBe(true); // has no affiliation
     });
 
     it('isNonHerdc', () => {
@@ -282,6 +289,25 @@ describe('Author Affiliation helper functions:', () => {
                 rek_author_id: 7624840,
             },
         ];
+
+        // coverage
+        const recordCloneCoverage = helpers.deepClone(recordClone);
+        expect(
+            helpers.composeAuthorAffiliationProblems({
+                ...recordCloneCoverage,
+                fez_author_affiliation: [],
+                fez_record_search_key_author_id: null,
+            }),
+        ).toEqual([]);
+        recordCloneCoverage.fez_record_search_key_author[6].rek_author = null;
+        recordCloneCoverage.fez_record_search_key_author_id[6].rek_author_id_lookup = 'Test name';
+        expect(helpers.composeAuthorAffiliationProblems(recordCloneCoverage)[0]).toEqual(
+            expect.objectContaining({ rek_author: 'Test name' }),
+        );
+        recordCloneCoverage.fez_record_search_key_author_id[6].rek_author_id_lookup = null;
+        expect(helpers.composeAuthorAffiliationProblems(recordCloneCoverage)[0]).toEqual(
+            expect.objectContaining({ rek_author: '' }),
+        );
 
         expect(helpers.composeAuthorAffiliationProblems(recordClone)).toEqual(expected1);
 

@@ -489,4 +489,296 @@ context('Journal Article admin edit', () => {
         cy.adminEditVerifyAlerts(1, ['You are required to accept deposit agreement']);
         cy.adminEditCleanup();
     });
+
+    describe('Author Affiliations', () => {
+        beforeEach(() => {
+            cy.loadRecordForAdminEdit(record.rek_pid);
+        });
+
+        afterEach(() => {
+            cy.adminEditCleanup();
+        });
+        it('is only used for linked authors', () => {
+            cy.get('[data-testid=rek-author-add]').click();
+            cy.get('[data-testid=rek-author-input]').type('User, Test');
+            cy.get('[data-testid=rek-author-add-save]').click();
+            cy.get('[data-testid^="contributor-errorIcon-"]').should('have.length', 2); // will be 3 authors, 2 existing with error icons
+        });
+
+        it('can be added and edited', () => {
+            //
+            //
+            //
+            // Add author with UQ ID and single affiliation
+            //
+            //
+            //
+            cy.addAuthorAndAssert('Steve Su (uqysu4)', 85004);
+            cy.addAffiliationAndAssert('Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            cy.get('[data-testid=affiliationSaveBtn]').should('not.be.disabled');
+
+            cy.get('[data-testid=deleteOrgBtn-877]')
+                .should('exist')
+                .click();
+
+            cy.get('[data-testid=affiliationSaveBtn]').should('be.disabled');
+            cy.get('[data-testid=orgSelect-877-input]').should('not.exist');
+            cy.get('[data-testid=orgChip-877]').should('not.exist');
+
+            cy.addAffiliationAndAssert('Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            cy.get('[data-testid=affiliationSaveBtn]')
+                .should('not.be.disabled')
+                .click();
+
+            cy.get('[data-testid=detailPanel-85004]').contains('[data-testid=orgChip-877]', '100%');
+            cy.get('[data-testid=detailPanel-85004]').contains('Aboriginal and Torres Strait Islander Studies Unit');
+
+            cy.get('[data-testid=affiliationCancelBtn]').should('not.exist');
+            cy.get('[data-testid=affiliationSaveBtn]').should('not.exist');
+            cy.get('[data-testid=orgChip-error]').should('not.exist');
+
+            cy.get('[data-testid=expandPanelIcon-85004]')
+                .should('exist')
+                .click();
+
+            //
+            //
+            //
+            // Add author with UQ ID and multiple affiliations
+            //
+            //
+            //
+            cy.addAuthorAndAssert("O'Donoghue, Steven (uqsodono)", 75121);
+            cy.addAffiliationAndAssert('Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            cy.get('[data-testid=affiliationSaveBtn]').should('not.be.disabled');
+
+            // add suggested org (coverage)
+            cy.addAffiliationAndAssert(
+                'Suggested: Information Systems and Resource Services (University of Queensland Library)',
+                1248,
+                '50%',
+                true,
+            );
+
+            cy.get('[data-testid=orgChip-877]')
+                .should('exist')
+                .contains('50%');
+
+            cy.addAffiliationAndAssert('Academic Administration Directorate', 1113, '33.333%');
+
+            cy.get('[data-testid=orgChip-877]')
+                .should('exist')
+                .contains('33.334%');
+            cy.get('[data-testid=orgChip-1248]')
+                .should('exist')
+                .contains('33.333%');
+
+            cy.get('[data-testid=affiliationSaveBtn]')
+                .should('not.be.disabled')
+                .click();
+
+            cy.get('[data-testid=detailPanel-75121]').contains('[data-testid=orgChip-877]', '33.334%');
+            cy.get('[data-testid=detailPanel-75121]').contains('Aboriginal and Torres Strait Islander Studies Unit');
+            cy.get('[data-testid=detailPanel-75121]').contains('[data-testid=orgChip-1248]', '33.333%');
+            cy.get('[data-testid=detailPanel-75121]').contains(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+            cy.get('[data-testid=detailPanel-75121]').contains('[data-testid=orgChip-1113]', '33.333%');
+            cy.get('[data-testid=detailPanel-75121]').contains('Academic Administration Directorate');
+
+            cy.get('[data-testid=affiliationCancelBtn]').should('not.exist');
+            cy.get('[data-testid=affiliationSaveBtn]').should('not.exist');
+            cy.get('[data-testid=orgChip-error]').should('not.exist');
+
+            cy.get('[data-testid=expandPanelIcon-75121]')
+                .should('exist')
+                .click();
+
+            //
+            //
+            //
+            // Add author with non-HERDC affiliation
+            //
+            //
+            //
+            cy.addAuthorAndAssert('Kisely, Steve (uqskisely)', 78152);
+            cy.addAffiliationAndAssert('Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            cy.get('[data-testid=affiliationSaveBtn]').should('not.be.disabled');
+
+            cy.addAffiliationAndAssert('Academic Administration', 973, '50%');
+
+            cy.get('[data-testid=orgChip-877]')
+                .should('exist')
+                .contains('50%');
+
+            cy.addAffiliationAndAssert('Academic Administration Directorate', 1113, '33.333%');
+
+            cy.get('[data-testid=orgChip-877]')
+                .should('exist')
+                .contains('33.334%');
+            cy.get('[data-testid=orgChip-973]')
+                .should('exist')
+                .contains('33.333%');
+
+            // now test resetting to non-herdc, which should clear the above
+            cy.addAffiliationAndAssert('!NON-HERDC', 1062, '100%');
+            cy.get('[data-testid=orgChip-877]').should('not.exist');
+            cy.get('[data-testid=orgChip-973]').should('not.exist');
+            cy.get('[data-testid=orgChip-1113]').should('not.exist');
+            // auto adds suggestion
+            cy.get('[data-testid=orgChip-1248]')
+                .should('exist')
+                .contains('0%');
+            cy.get('[data-testid=orgSelect-1248-input]')
+                .should('exist')
+                .should('have.value', 'Information Systems and Resource Services (University of Queensland Library)');
+            // hides the add autocomplete element
+            cy.get('[data-testid=orgSelect-add-input]').should('not.exist');
+
+            cy.get('[data-testid=affiliationSaveBtn]')
+                .should('not.be.disabled')
+                .click();
+
+            cy.get('[data-testid=detailPanel-78152]').contains('[data-testid=orgChip-1062]', '100%');
+            cy.get('[data-testid=detailPanel-78152]').contains('!NON-HERDC');
+            cy.get('[data-testid=detailPanel-78152]').contains('[data-testid=orgChip-1248]', '0%');
+            cy.get('[data-testid=detailPanel-78152]').contains(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+
+            cy.get('[data-testid=affiliationCancelBtn]').should('not.exist');
+            cy.get('[data-testid=affiliationSaveBtn]').should('not.exist');
+            cy.get('[data-testid=orgChip-error]').should('not.exist');
+
+            // Now edit non-herdc to remove that option
+            cy.get('[data-testid=affiliationEditBtn-78152]')
+                .should('exist')
+                .click();
+
+            cy.get('[data-testid=orgSelect-1062-input]')
+                .should('exist')
+                .should('have.value', '!NON-HERDC');
+            cy.get('[data-testid=orgChip-1062')
+                .should('exist')
+                .contains('100%');
+            cy.get('[data-testid=orgSelect-1248-input]')
+                .should('exist')
+                .should('have.value', 'Information Systems and Resource Services (University of Queensland Library)');
+            cy.get('[data-testid=orgChip-1248')
+                .should('exist')
+                .contains('0%');
+
+            cy.get('[data-testid=deleteOrgBtn-1062]')
+                .should('exist')
+                .click();
+            cy.get('[data-testid=orgSelect-1062-input]').should('not.exist');
+            cy.get('[data-testid=orgChip-1062').should('not.exist');
+            cy.get('[data-testid=orgChip-1248')
+                .should('exist')
+                .contains('100%');
+            cy.get('[data-testid=affiliationSaveBtn]')
+                .should('not.be.disabled')
+                .click();
+            cy.get('[data-testid=detailPanel-78152]').contains('[data-testid=orgChip-1248]', '100%');
+            cy.get('[data-testid=detailPanel-78152]').contains(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+
+            //
+            // coverage - change the above org back to non-herdc
+            //
+
+            // currentOrgId, nextOrgId, nextOrgName, expectedPercent) =
+            cy.get('[data-testid^=affiliationEditBtn-]')
+                .should('exist')
+                .click();
+
+            cy.editAffiliationAndAssert(1248, 1062, '!NON-HERDC', '100%');
+            // double check the suggested org has been re-added
+            cy.get('[data-testid=orgSelect-1248-input]')
+                .should('exist')
+                .should('have.value', 'Information Systems and Resource Services (University of Queensland Library)');
+            cy.get('[data-testid=orgChip-1248')
+                .should('exist')
+                .contains('0%');
+
+            // hides the add autocomplete element
+            cy.get('[data-testid=orgSelect-add-input]').should('not.exist');
+
+            cy.get('[data-testid=affiliationSaveBtn]')
+                .should('not.be.disabled')
+                .click();
+
+            cy.get('[data-testid=detailPanel-78152]').contains('[data-testid=orgChip-1062]', '100%');
+            cy.get('[data-testid=detailPanel-78152]').contains('!NON-HERDC');
+            cy.get('[data-testid=detailPanel-78152]').contains('[data-testid=orgChip-1248]', '0%');
+            cy.get('[data-testid=detailPanel-78152]').contains(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+
+            cy.get('[data-testid=affiliationCancelBtn]').should('not.exist');
+            cy.get('[data-testid=affiliationSaveBtn]').should('not.exist');
+            cy.get('[data-testid=orgChip-error]').should('not.exist');
+
+            cy.get('[data-testid=expandPanelIcon-78152]')
+                .should('exist')
+                .click();
+        });
+
+        it('can fix < 100% error', () => {
+            cy.get('[data-testid^="contributor-errorIcon-80316"]').should('exist');
+            cy.get('[data-testid^="contributor-errorIcon-3223"]').should('exist');
+            cy.get('[data-testid=expandPanelIcon-80316]')
+                .should('exist')
+                .click();
+
+            cy.get('[data-testid=detailPanel-80316]').contains('p', 'School of Chemistry and Molecular Biosciences');
+            cy.get('[data-testid=detailPanel-80316]').contains('p', 'Institute for Molecular Bioscience');
+            cy.get('[data-testid=detailPanel-80316]').within(() => {
+                cy.get('[data-testid=orgChip-881]').contains('50%');
+                cy.get('[data-testid=orgChip-968]').contains('40%');
+                cy.get('[data-testid=alert]').contains(
+                    'Author affiliation information is incomplete - Percentage sum total of all affiliations must equal 100%',
+                );
+            });
+
+            // Editing the author's affiliations automatically recalculates %
+            cy.get('[data-testid=affiliationEditBtn-80316]')
+                .should('exist')
+                .click();
+            cy.assertAffiliation('School of Chemistry and Molecular Biosciences', 881, '50%');
+            cy.assertAffiliation('Institute for Molecular Bioscience', 968, '50%');
+
+            cy.get('[data-testid=affiliationCancelBtn]')
+                .should('exist')
+                .click();
+
+            // cancelling does not save the changes, affiliations still not 100%
+            cy.get('[data-testid=detailPanel-80316]').within(() => {
+                cy.get('[data-testid=orgChip-881]').contains('50%');
+                cy.get('[data-testid=orgChip-968]').contains('40%');
+                cy.get('[data-testid=alert]').contains(
+                    'Author affiliation information is incomplete - Percentage sum total of all affiliations must equal 100%',
+                );
+            });
+
+            // hit the auto recalc button
+            cy.get('[data-testid=alert]').within(() => {
+                cy.get('[data-testid=action-button]')
+                    .contains('Recalculate Percentages')
+                    .click();
+            });
+
+            cy.get('[data-testid=detailPanel-80316]').within(() => {
+                cy.get('[data-testid=orgChip-881]').contains('50%');
+                cy.get('[data-testid=orgChip-968]').contains('50%');
+                cy.get('[data-testid=alert]').should('not.exist');
+            });
+            cy.get('[data-testid^="contributor-errorIcon-80316"]').should('not.exist');
+        });
+    });
 });

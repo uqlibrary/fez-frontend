@@ -198,3 +198,22 @@ context('Book admin edit', () => {
         cy.adminEditCleanup();
     });
 });
+context('Author affiliations', () => {
+    const record = recordList.data[0];
+
+    beforeEach(() => {
+        cy.loadRecordForAdminEdit(record.rek_pid);
+    });
+
+    afterEach(() => {
+        cy.adminEditCleanup();
+    });
+    it('should be available for this work type', () => {
+        cy.assertAffiliationsAllowed({
+            authorName: 'Steve Su (uqysu4)',
+            orgName: 'The University of Queensland',
+            rowId: 2,
+            allowed: true,
+        });
+    });
+});

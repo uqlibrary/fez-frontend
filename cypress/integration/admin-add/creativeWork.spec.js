@@ -86,4 +86,37 @@ context('As an admin,', () => {
                     });
             });
     });
+    describe('Author affiliations', () => {
+        it('should not be available for this work type', () => {
+            cy.visit('/admin/add?user=uqstaff');
+
+            // Choose a collection
+            cy.get('[data-testid=rek-ismemberof-input]').type('a');
+            cy.clickAutoSuggestion('rek-ismemberof', 0);
+
+            // Choose display type
+            cy.get('[data-testid=rek-display-type-select]').click();
+            cy.get('[data-testid=rek-display-type-options]')
+                .contains('li', 'Creative Work')
+                .click();
+
+            // Choose sub type
+            cy.get('[data-testid=rek-subtype-select]').click();
+            cy.get('[data-testid=rek-subtype-options]')
+                .contains('li', 'Creative Work - Textual')
+                .click();
+
+            // Apply selections
+            cy.get('button')
+                .contains('Create work')
+                .should('exist')
+                .click();
+
+            cy.assertAffiliationsAllowed({
+                authorName: 'Steve Su (uqysu4)',
+                orgName: 'The University of Queensland',
+                rowId: 0,
+            });
+        });
+    });
 });

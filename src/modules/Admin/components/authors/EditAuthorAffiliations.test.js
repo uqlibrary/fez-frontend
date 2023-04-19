@@ -1,8 +1,8 @@
 import React from 'react';
-import EditAuthorAffiliations from './EditAuthorAffiliations';
+import EditAuthorAffiliations, { actionHandler } from './EditAuthorAffiliations';
 import { rtlRender } from 'test-utils';
 import locale from 'locale/components';
-import { NON_HERDC_ID } from 'helpers/authorAffiliations';
+import { NON_HERDC_ID, ACTIONS } from 'helpers/authorAffiliations';
 
 function setup(props = {}, renderMethod = rtlRender) {
     const tempLocale = locale.components.authorsList('');
@@ -291,5 +291,117 @@ describe('EditAuthorAffiliations', () => {
 
         expect(onChange).toHaveBeenCalled();
         expect(setEditing).toHaveBeenCalledWith(expect.objectContaining({ editing: false }));
+    });
+
+    describe('actionHandler', () => {
+        it('handles change action', () => {
+            const dispatchFn = jest.fn();
+            const currentAffiliation = {
+                af_org_id: 1,
+                fez_org_structure: {
+                    org_id: 1,
+                    org_name: 'Test Name',
+                },
+            };
+            const organisation = {
+                org_id: 2,
+                org_name: 'Updated Name',
+            };
+            actionHandler[ACTIONS.CHANGE](dispatchFn, currentAffiliation, organisation);
+            expect(dispatchFn).toHaveBeenCalledWith({
+                type: ACTIONS.CHANGE,
+                affiliation: {
+                    af_org_id: 2,
+                    fez_org_structure: {
+                        org_id: 2,
+                        org_name: 'Updated Name',
+                    },
+                },
+            });
+        });
+
+        it('handles delete action', () => {
+            const dispatchFn = jest.fn();
+            actionHandler[ACTIONS.DELETE](dispatchFn, 2);
+            expect(dispatchFn).toHaveBeenCalledWith({
+                type: ACTIONS.DELETE,
+                index: 2,
+            });
+        });
+
+        it('handles add action', () => {
+            const dispatchFn = jest.fn();
+            const rowData = {
+                aut_id: 1,
+                aut_display_name: 'Test author',
+            };
+            const organisation = {
+                org_id: 2,
+                org_name: 'Test organisation',
+            };
+            actionHandler[ACTIONS.ADD](dispatchFn, rowData, organisation);
+            expect(dispatchFn).toHaveBeenCalledWith({
+                type: ACTIONS.ADD,
+                affiliation: expect.objectContaining({
+                    af_author_id: 1,
+                    af_org_id: 2,
+                    af_status: 1,
+                    fez_author: {
+                        aut_display_name: 'Test author',
+                        aut_id: 1,
+                    },
+                    fez_org_structure: {
+                        org_id: 2,
+                        org_name: 'Test organisation',
+                    },
+                }),
+            });
+        });
+
+        it('handled non-HERDC action', () => {
+            const dispatchFn = jest.fn();
+            const rowData = {
+                aut_id: 1,
+                aut_display_name: 'Test author',
+            };
+            const organisation = {
+                org_id: 2,
+                org_name: 'Test organisation',
+            };
+            const suggestedOrganisation = {
+                org_id: 3,
+                org_name: 'Suggested organisation',
+            };
+            actionHandler[ACTIONS.NONHERDC](dispatchFn, rowData, organisation, suggestedOrganisation);
+            expect(dispatchFn).toHaveBeenCalledWith({
+                nonHerdcAffiliation: expect.objectContaining({
+                    af_author_id: 1,
+                    af_org_id: 2,
+                    af_status: 1,
+                    fez_author: {
+                        aut_display_name: 'Test author',
+                        aut_id: 1,
+                    },
+                    fez_org_structure: {
+                        org_id: 2,
+                        org_name: 'Test organisation',
+                    },
+                }),
+                suggestedAffiliation: expect.objectContaining({
+                    af_author_id: 1,
+                    af_org_id: 3,
+                    af_status: 1,
+                    fez_author: {
+                        aut_display_name: 'Test author',
+                        aut_id: 1,
+                    },
+                    fez_org_structure: {
+                        org_id: 3,
+                        org_name: 'Suggested organisation',
+                    },
+                }),
+                type: 'nonherdc',
+            });
+        });
     });
 });

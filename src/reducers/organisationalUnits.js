@@ -31,11 +31,6 @@ const handlers = {
         organisationUnitsLoading: false,
         organisationUnitsFailed: true,
     }),
-
-    // [actions.ORGANISATIONAL_UNITS_CLEARED]: () => ({
-    //     ...initialState,
-    //     organisationUnits: [],
-    // }),
 };
 
 export default function organisationalUnitsReducer(state = initialState, action) {

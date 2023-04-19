@@ -55,13 +55,12 @@ export {
     recordWithLotOfAuthors,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
+    recordWithProblematicAuthorAffiliations,
+    recordBookWithAuthorAffiliations,
     unpublishedSearchList,
     UQ716942uqagrinb,
     UQ353708,
     UQ339703,
-    recordWithIncorrectAffiliation,
-    recordWithOrphanedAffiliation,
-    recordWithProblematicAuthorAffiliations
 } from './records';
 
 export { vocabulariesList } from './vocabularies';

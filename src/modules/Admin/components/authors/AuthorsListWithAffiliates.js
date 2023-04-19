@@ -48,14 +48,22 @@ export const useStyles = makeStyles(theme => ({
 
 const getIcon = ({ rowData, inProblemState }) => {
     if (!!inProblemState) {
-        return <ErrorOutlineOutlinedIcon color="error" id={`contributor-error-${rowData.tableData.id}`} />;
+        return (
+            <ErrorOutlineOutlinedIcon
+                color="error"
+                id={`contributor-errorIcon-${rowData.aut_id}`}
+                data-testid={`contributor-errorIcon-${rowData.aut_id}`}
+            />
+        );
     } else if (parseInt(rowData.uqIdentifier, 10)) {
         return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.tableData.id}`} />;
-    } else if (rowData.disabled) {
-        return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
-    } else {
-        return <PersonOutlined color="secondary" id={`contributor-unlinked-${rowData.tableData.id}`} />;
     }
+    /* istanbul ignore next */
+    if (rowData.disabled) {
+        /* istanbul ignore next */
+        return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
+    }
+    return <PersonOutlined color="secondary" id={`contributor-unlinked-${rowData.tableData.id}`} />;
 };
 
 export const NameAsPublished = React.memo(({ icon, text, linked }) => {
@@ -103,7 +111,11 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             ),
             field: 'nameAsPublished',
             render: rowData => {
-                const inProblemState = hasAffiliationProblemsByAuthor(rowData);
+                const inProblemState =
+                    hasAffiliationProblemsByAuthor(rowData) &&
+                    !!rowData.uqUsername &&
+                    rowData.uqUsername !== '' &&
+                    !isNtro;
                 return (
                     <NameAsPublished
                         icon={getIcon({ rowData, disabled, inProblemState })}
@@ -200,6 +212,10 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                         uqUsername: `${selectedItem.aut_org_username ||
                             selectedItem.aut_student_username ||
                             selectedItem.aut_ref_num}`,
+                        affiliations:
+                            contributor.aut_id !== selectedItem.aut_id
+                                ? []
+                                : /* istanbul ignore next */ contributor.affiliations || /* istanbul ignore next */ [],
                     };
                     props.onRowDataChange({ ...contributor, ...newValue });
                 };
@@ -395,8 +411,9 @@ export const authorDetailPanel = ({
             locale: { affiliations: affiliationsLocale },
         },
     } = locale;
+
     return (
-        <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }}>
+        <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }} data-testid={`detailPanel-${rowData.aut_id}`}>
             <Typography variant="body2">
                 {affiliationsLocale.title}
                 {!isEditing && (
@@ -405,8 +422,8 @@ export const authorDetailPanel = ({
                             aria-label="delete"
                             onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
                             size={'small'}
-                            id="affiliationEditBtn"
-                            data-testid="affiliationEditBtn"
+                            id={`affiliationEditBtn-${rowData.aut_id}`}
+                            data-testid={`affiliationEditBtn-${rowData.aut_id}`}
                         >
                             <PlaylistAddCheckIcon />
                         </IconButton>
@@ -727,8 +744,8 @@ export const AuthorsListWithAffiliates = ({
                                   icon: () => (
                                       <ChevronRight
                                           fontSize="medium"
-                                          data-testid="expandPanelIcon"
-                                          id="expandPanelIcon"
+                                          data-testid={`expandPanelIcon-${rowData.aut_id}`}
+                                          id={`expandPanelIcon-${rowData.aut_id}`}
                                       />
                                   ),
                               };
@@ -737,7 +754,7 @@ export const AuthorsListWithAffiliates = ({
                         ...conditionalIcon,
                         render: () => {
                             return !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro
-                                ? null
+                                ? /* istanbul ignore next */ null
                                 : authorDetailPanel({
                                       rowData,
                                       locale,
