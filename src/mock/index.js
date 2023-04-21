@@ -390,11 +390,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     })
     .onGet(new RegExp(escapeRegExp(routes.ORGANISATIONAL_UNITS().apiUrl)))
     .reply(config => {
-        return [200, { data: [ ...mockData.organisationalUnits ] }];
+        return [200, { data: [...mockData.organisationalUnits] }];
     })
     .onGet(new RegExp(escapeRegExp(routes.SUGGESTED_ORGANISATIONAL_UNITS({ authorId: '.*' }).apiUrl)))
     .reply(config => {
-        return [200, { data: [ ...mockData.suggestedOrganisationalUnits ] }];
+        return [200, { data: [...mockData.suggestedOrganisationalUnits] }];
     })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
