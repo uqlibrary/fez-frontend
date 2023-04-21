@@ -11,6 +11,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
+import { useDispatch, useSelector } from 'react-redux';
 
 import {
     PRECISION,
@@ -23,6 +24,12 @@ import {
     editAffiliationReducer,
     createNewAffiliationObject,
 } from 'helpers/authorAffiliations';
+
+import {
+    loadOrganisationalUnits,
+    loadSuggestedOrganisationalUnitByAuthorId,
+    clearSuggestedOrganisationalUnits,
+} from 'actions';
 
 export const actionHandler = {
     [ACTIONS.CHANGE]: (dispatch, currentAffiliation, organisation) => {
@@ -62,42 +69,36 @@ export const actionHandler = {
     },
 };
 
-const EditAuthorAffiliations = ({
-    rowData,
-    locale,
-    setEditing,
-    onChange,
-    organisationalUnitList,
-    loadOrganisationalUnitsList,
-    suggestedOrganisationalUnitList, // from redux
-    loadSuggestedOrganisationalUnitsList,
-}) => {
+const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
     const uniqueOrgs = useRef([]);
     const theme = useTheme();
+    const dispatch = useDispatch();
 
     const {
         organisationUnits,
         organisationUnitsLoaded,
         organisationUnitsLoading,
         organisationUnitsFailed,
-    } = organisationalUnitList;
-
+    } = useSelector(state => state.get('organisationalUnitsReducer'));
     const {
         suggestedAuthorId,
         suggestedOrganisationUnits,
         suggestedOrganisationUnitsLoaded,
         suggestedOrganisationUnitsLoading,
         suggestedOrganisationUnitsFailed,
-    } = suggestedOrganisationalUnitList;
+    } = useSelector(state => state.get('suggestedOrganisationalUnitsReducer'));
 
     React.useEffect(() => {
+        const loadOrganisationalUnitsList = () => dispatch(loadOrganisationalUnits());
+        const loadSuggestedOrganisationalUnitsList = authorId =>
+            dispatch(loadSuggestedOrganisationalUnitByAuthorId(authorId));
+        const clearSuggestedOrganisationalUnitsList = () => dispatch(clearSuggestedOrganisationalUnits());
         if (
             organisationUnitsLoaded === false &&
             organisationUnitsLoading === false &&
             organisationUnitsFailed === false
         ) {
             // dispatch
-            console.log('dispatch 1');
             loadOrganisationalUnitsList();
             loadSuggestedOrganisationalUnitsList(rowData.aut_id);
         } else if (
@@ -107,12 +108,11 @@ const EditAuthorAffiliations = ({
             suggestedOrganisationUnitsFailed === false
         ) {
             // dispatch
-            console.log('dispatch 2');
+            clearSuggestedOrganisationalUnitsList();
             loadSuggestedOrganisationalUnitsList(rowData.aut_id);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
-        loadOrganisationalUnitsList,
-        loadSuggestedOrganisationalUnitsList,
         organisationUnitsFailed,
         organisationUnitsLoaded,
         organisationUnitsLoading,
@@ -124,7 +124,7 @@ const EditAuthorAffiliations = ({
     ]);
 
     const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
-    const [currentAffiliations, dispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
+    const [currentAffiliations, actionDispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
 
     if (uniqueOrgs.current.length === 0 && organisationUnitsLoaded && suggestedOrganisationUnitsLoaded) {
         const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
@@ -217,7 +217,7 @@ const EditAuthorAffiliations = ({
                                         onChange={(_, newValue) => {
                                             if (isNonHerdc(newValue)) {
                                                 actionHandler[ACTIONS.NONHERDC](
-                                                    dispatch,
+                                                    actionDispatch,
                                                     rowData,
                                                     newValue,
                                                     uniqueOrgs.current[
@@ -227,7 +227,7 @@ const EditAuthorAffiliations = ({
                                                     ],
                                                 );
                                             } else {
-                                                actionHandler[ACTIONS.CHANGE](dispatch, item, newValue);
+                                                actionHandler[ACTIONS.CHANGE](actionDispatch, item, newValue);
                                             }
                                         }}
                                         ListboxProps={{
@@ -251,7 +251,7 @@ const EditAuthorAffiliations = ({
                                     {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
                                         <IconButton
                                             aria-label="delete"
-                                            onClick={() => actionHandler[ACTIONS.DELETE](dispatch, index)}
+                                            onClick={() => actionHandler[ACTIONS.DELETE](actionDispatch, index)}
                                             id={`deleteOrgBtn-${item.af_org_id}`}
                                             data-testid={`deleteOrgBtn-${item.af_org_id}`}
                                         >
@@ -305,7 +305,7 @@ const EditAuthorAffiliations = ({
                                     onChange={(event, newValue) => {
                                         if (isNonHerdc(newValue)) {
                                             actionHandler[ACTIONS.NONHERDC](
-                                                dispatch,
+                                                actionDispatch,
                                                 rowData,
                                                 newValue,
                                                 uniqueOrgs.current[
@@ -314,7 +314,7 @@ const EditAuthorAffiliations = ({
                                                         : /* istanbul ignore next */ 1
                                                 ],
                                             );
-                                        } else actionHandler[ACTIONS.ADD](dispatch, rowData, newValue);
+                                        } else actionHandler[ACTIONS.ADD](actionDispatch, rowData, newValue);
                                     }}
                                     ListboxProps={{
                                         id: 'orgSelect-add-options',
@@ -355,11 +355,6 @@ EditAuthorAffiliations.propTypes = {
     locale: PropTypes.object.isRequired,
     setEditing: PropTypes.func,
     onChange: PropTypes.func,
-    organisationalUnitList: PropTypes.object,
-    suggestedOrganisationalUnitList: PropTypes.object,
-    loadSuggestedOrganisationalUnitsList: PropTypes.func,
-    loadOrganisationalUnitsList: PropTypes.func,
-    clearSuggestedOrganisationalUnits: PropTypes.func,
 };
 
 export default React.memo(EditAuthorAffiliations);

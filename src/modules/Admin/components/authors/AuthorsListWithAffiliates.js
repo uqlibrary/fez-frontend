@@ -394,18 +394,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
     ];
 };
 
-export const authorDetailPanel = ({
-    rowData,
-    locale,
-    isEditing,
-    setEditing,
-    onChange,
-    organisationalUnitList,
-    loadOrganisationalUnitsList,
-    suggestedOrganisationalUnitList,
-    loadSuggestedOrganisationalUnitsList,
-    clearSuggestedOrganisationalUnits,
-}) => {
+export const authorDetailPanel = ({ rowData, locale, isEditing, setEditing, onChange }) => {
     const {
         form: {
             locale: { affiliations: affiliationsLocale },
@@ -438,11 +427,6 @@ export const authorDetailPanel = ({
                     isEditing={isEditing}
                     setEditing={setEditing}
                     onChange={onChange}
-                    organisationalUnitList={organisationalUnitList}
-                    loadOrganisationalUnitsList={loadOrganisationalUnitsList}
-                    suggestedOrganisationalUnitList={suggestedOrganisationalUnitList}
-                    loadSuggestedOrganisationalUnitsList={loadSuggestedOrganisationalUnitsList}
-                    clearSuggestedOrganisationalUnits={clearSuggestedOrganisationalUnits}
                 />
             )}
         </Grid>
@@ -457,8 +441,6 @@ export const AuthorsListWithAffiliates = ({
     locale,
     onChange,
     showRoleInput,
-    organisationalUnitList,
-    suggestedOrganisationalUnitList,
     loadOrganisationalUnitsList,
     loadSuggestedOrganisationalUnitsList,
     clearSuggestedOrganisationalUnits,
@@ -559,7 +541,7 @@ export const AuthorsListWithAffiliates = ({
         });
     };
 
-    const handleAffiliationUpdate = list => rowData => {
+    const handleAffiliationUpdate = rowData => {
         const index = list.findIndex(item => item.aut_id === rowData.aut_id);
         const newList = [...list.slice(0, index), rowData, ...list.slice(index + 1)];
         onChange(newList);
@@ -760,10 +742,8 @@ export const AuthorsListWithAffiliates = ({
                                       locale,
                                       isEditing: isEditing(rowData.aut_id),
                                       setEditing,
-                                      onChange: handleAffiliationUpdate(list),
-                                      organisationalUnitList,
+                                      onChange: handleAffiliationUpdate,
                                       loadOrganisationalUnitsList,
-                                      suggestedOrganisationalUnitList,
                                       loadSuggestedOrganisationalUnitsList,
                                       clearSuggestedOrganisationalUnits,
                                   });
@@ -810,11 +790,6 @@ AuthorsListWithAffiliates.propTypes = {
     locale: PropTypes.object,
     onChange: PropTypes.func,
     showRoleInput: PropTypes.bool,
-    organisationalUnitList: PropTypes.object.isRequired,
-    suggestedOrganisationalUnitList: PropTypes.object.isRequired,
-    loadOrganisationalUnitsList: PropTypes.func,
-    loadSuggestedOrganisationalUnitsList: PropTypes.func,
-    clearSuggestedOrganisationalUnits: PropTypes.func,
 };
 
 export default React.memo(AuthorsListWithAffiliates);
