@@ -33,7 +33,7 @@ exports[`AuthorsSection component should render default view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "authors",
+            "authorsWithAffiliations",
           ],
         ],
         "title": "Authors",
@@ -51,7 +51,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "authors",
+            "authorsWithAffiliations",
           ],
         ],
         "title": "Authors",

@@ -73,19 +73,15 @@ export const identifiersParams = record => ({
         ].includes(record.rek_subtype),
 });
 
-/* istanbul ignore next */
-export const shouldHandleAuthorAffiliations = record => {
-    return (
-        record.rek_subtype !== SUBTYPE_EDITED_BOOK &&
-        [
-            PUBLICATION_TYPE_BOOK_CHAPTER,
-            PUBLICATION_TYPE_BOOK,
-            PUBLICATION_TYPE_CONFERENCE_PAPER,
-            PUBLICATION_TYPE_JOURNAL_ARTICLE,
-            // PUBLICATION_TYPE_RESEARCH_REPORT,
-        ].includes(record.rek_display_type)
-    );
-};
+export const shouldHandleAuthorAffiliations = record =>
+    record.rek_subtype !== SUBTYPE_EDITED_BOOK &&
+    [
+        PUBLICATION_TYPE_BOOK_CHAPTER,
+        PUBLICATION_TYPE_BOOK,
+        PUBLICATION_TYPE_CONFERENCE_PAPER,
+        PUBLICATION_TYPE_JOURNAL_ARTICLE,
+        // PUBLICATION_TYPE_RESEARCH_REPORT,
+    ].includes(record.rek_display_type);
 
 export const bibliographicParams = (record, formValues) => ({
     isLote:

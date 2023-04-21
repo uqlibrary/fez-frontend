@@ -462,6 +462,9 @@ export default {
     authors: {
         getValue: authorsGetValue,
     },
+    authorsWithAffiliations: {
+        getValue: authorsGetValue,
+    },
     editors: {
         getValue: editorsGetValue,
     },

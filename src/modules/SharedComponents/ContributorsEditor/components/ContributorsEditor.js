@@ -12,7 +12,14 @@ import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsListWithAffiliates';
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
+
+import {
+    loadOrganisationalUnits,
+    loadSuggestedOrganisationalUnitByAuthorId,
+    clearSuggestedOrganisationalUnits,
+} from 'actions';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -31,9 +38,16 @@ export class ContributorsEditor extends PureComponent {
         meta: PropTypes.object,
         onChange: PropTypes.func,
         required: PropTypes.bool,
+        shouldHandleAffiliations: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
+        record: PropTypes.object,
+        loadOrganisationalUnitsList: PropTypes.func.isRequired,
+        loadSuggestedOrganisationalUnitsList: PropTypes.func.isRequired,
+        clearSuggestedOrganisationalUnits: PropTypes.func.isRequired,
+        organisationalUnitList: PropTypes.object,
+        suggestedOrganisationalUnitList: PropTypes.object,
     };
 
     static defaultProps = {
@@ -54,18 +68,17 @@ export class ContributorsEditor extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            contributors: this.getContributorsFromProps(props),
+            contributors: this.getContributorsWithAffiliationsFromProps(props),
             errorMessage: '',
             isCurrentAuthorSelected: false,
             contributorIndexSelectedToEdit: null,
         };
+        this.props.onChange?.(this.state.contributors);
     }
 
     componentDidUpdate() {
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
-        if (this.props.onChange) {
-            this.props.onChange(this.state.contributors);
-        }
+        this.props.onChange?.(this.state.contributors);
     }
 
     getContributorsFromProps = props => {
@@ -74,6 +87,18 @@ export class ContributorsEditor extends PureComponent {
         }
 
         return [];
+    };
+
+    getContributorsWithAffiliationsFromProps = props => {
+        const authors = this.getContributorsFromProps(props);
+
+        const affiliations = props.record?.fez_author_affiliation ?? [];
+        return authors.map(author => {
+            return {
+                ...author,
+                affiliations: affiliations.filter(affiliation => affiliation.af_author_id === author.aut_id),
+            };
+        });
     };
 
     addContributor = contributor => {
@@ -104,7 +129,6 @@ export class ContributorsEditor extends PureComponent {
             });
             return;
         }
-
         const isContributorACurrentAuthor =
             this.props.author && contributor.uqIdentifier === `${this.props.author.aut_id}`;
         this.setState({
@@ -311,7 +335,22 @@ export class ContributorsEditor extends PureComponent {
         }
 
         if (isAdmin) {
-            return (
+            return this.props.shouldHandleAffiliations ? (
+                <AuthorsListWithAffiliates
+                    contributorEditorId={contributorEditorId}
+                    disabled={disabled}
+                    list={contributors}
+                    onChange={this.handleAuthorsListChange}
+                    showRoleInput={showRoleInput}
+                    locale={this.props.locale}
+                    isNtro={isNtro}
+                    loadOrganisationalUnitsList={this.props.loadOrganisationalUnitsList}
+                    organisationalUnitList={this.props.organisationalUnitList}
+                    loadSuggestedOrganisationalUnitsList={this.props.loadSuggestedOrganisationalUnitsList}
+                    suggestedOrganisationalUnitList={this.props.suggestedOrganisationalUnitList}
+                    clearSuggestedOrganisationalUnits={this.props.clearSuggestedOrganisationalUnits}
+                />
+            ) : (
                 <AuthorsList
                     contributorEditorId={contributorEditorId}
                     disabled={disabled}
@@ -389,7 +428,22 @@ export class ContributorsEditor extends PureComponent {
 
 export const mapStateToProps = state => ({
     author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
+    record: state && state.get('viewRecordReducer') ? state.get('viewRecordReducer').recordToView : null,
+    organisationalUnitList:
+        state && state.get('organisationalUnitsReducer') ? state.get('organisationalUnitsReducer') : null,
+    suggestedOrganisationalUnitList:
+        state && state.get('suggestedOrganisationalUnitsReducer')
+            ? state.get('suggestedOrganisationalUnitsReducer')
+            : null,
 });
+
+export const mapDispatchToProps = dispatch => {
+    return {
+        loadOrganisationalUnitsList: () => dispatch(loadOrganisationalUnits()),
+        loadSuggestedOrganisationalUnitsList: authorId => dispatch(loadSuggestedOrganisationalUnitByAuthorId(authorId)),
+        clearSuggestedOrganisationalUnits: () => dispatch(clearSuggestedOrganisationalUnits()),
+    };
+};
 
 export const styles = theme => ({
     list: {
@@ -408,4 +462,4 @@ export const styles = theme => ({
     },
 });
 
-export default withStyles(styles)(connect(mapStateToProps)(ContributorsEditor));
+export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(ContributorsEditor));

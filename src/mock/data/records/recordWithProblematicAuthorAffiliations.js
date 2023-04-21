@@ -1,6 +1,4 @@
-import { hydrateMock } from '../../../helpers/general';
-
-const recordWithProblematicAuthorAffiliations = {
+export default {
     "rek_pid": "UQ:871c1f8",
     "rek_title_xsdmf_id": null,
     "rek_title": "Chick embryo: a preclinical model for understanding ischemia-reperfusion mechanism",
@@ -1137,4 +1135,3 @@ const recordWithProblematicAuthorAffiliations = {
         }
     ]
 };
-export default hydrateMock(recordWithProblematicAuthorAffiliations);
