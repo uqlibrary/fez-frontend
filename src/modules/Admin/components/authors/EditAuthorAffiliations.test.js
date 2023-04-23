@@ -1,10 +1,28 @@
 import React from 'react';
 import EditAuthorAffiliations, { actionHandler } from './EditAuthorAffiliations';
-import { rtlRender } from 'test-utils';
+import { render, WithReduxStore } from 'test-utils';
 import locale from 'locale/components';
+import Immutable from 'immutable';
 import { NON_HERDC_ID, ACTIONS } from 'helpers/authorAffiliations';
+import * as OrgActions from 'actions/organisationalUnits';
 
-function setup(props = {}, renderMethod = rtlRender) {
+const defaultReducerState = {
+    organisationalUnitsReducer: {
+        organisationUnits: null,
+        organisationUnitsLoaded: false,
+        organisationUnitsLoading: false,
+        organisationUnitsFailed: false,
+    },
+    suggestedOrganisationalUnitsReducer: {
+        suggestedAuthorId: null,
+        suggestedOrganisationUnits: null,
+        suggestedOrganisationUnitsLoaded: false,
+        suggestedOrganisationUnitsLoading: false,
+        suggestedOrganisationUnitsFailed: false,
+    },
+};
+
+function setup(props = {}, initialState = {}, renderMethod = render) {
     const tempLocale = locale.components.authorsList('');
     const {
         field: {
@@ -19,16 +37,25 @@ function setup(props = {}, renderMethod = rtlRender) {
         locale: affiliationsLocale,
         onChange: jest.fn(),
         setEditing: jest.fn(),
-        organisationalUnitList: {},
-        suggestedOrganisationalUnitList: {},
-        loadOrganisationalUnitsList: jest.fn(),
-        loadSuggestedOrganisationalUnitsList: jest.fn(),
         ...props,
     };
-    return renderMethod(<EditAuthorAffiliations {...testProps} />);
+    const state = {
+        ...defaultReducerState,
+        ...initialState,
+    };
+
+    return renderMethod(
+        <WithReduxStore initialState={Immutable.Map({ ...state })}>
+            <EditAuthorAffiliations {...testProps} />
+        </WithReduxStore>,
+    );
 }
 
 describe('EditAuthorAffiliations', () => {
+    beforeEach(() => {
+        mockActionsStore = setupStoreForActions();
+    });
+
     it('renders', () => {
         const { getByTestId } = setup();
         expect(getByTestId('affiliationCancelBtn')).toBeInTheDocument();
@@ -36,60 +63,97 @@ describe('EditAuthorAffiliations', () => {
     });
 
     it('renders a loading message and call API', async () => {
-        const loadOrganisationalUnitsList = jest.fn();
-        const loadSuggestedOrganisationalUnitsList = jest.fn();
-
-        const organisationalUnitList = {
-            organisationUnits: [],
-            organisationUnitsLoaded: false,
-            organisationUnitsLoading: false,
-            organisationUnitsFailed: false,
-        };
-        const suggestedOrganisationalUnitList = {
-            suggestedAuthorId: 3,
-            suggestedOrganisationUnits: [],
-            suggestedOrganisationUnitsLoaded: false,
-            suggestedOrganisationUnitsLoading: false,
-            suggestedOrganisationUnitsFailed: false,
-        };
         const rowData = { aut_id: 3 };
+
+        const loadOrganisationalUnitsFn = jest.spyOn(OrgActions, 'loadOrganisationalUnits');
+        const loadSuggestedOrganisationalUnitsFn = jest.spyOn(OrgActions, 'loadSuggestedOrganisationalUnitByAuthorId');
+
         // first pass, loading show be shown
         const { getByText, queryByText, rerender } = setup({
             rowData,
-            organisationalUnitList,
-            suggestedOrganisationalUnitList,
-            loadOrganisationalUnitsList,
-            loadSuggestedOrganisationalUnitsList,
         });
-        expect(loadOrganisationalUnitsList).toHaveBeenCalled();
-        expect(loadSuggestedOrganisationalUnitsList).toHaveBeenCalled();
 
-        organisationalUnitList.organisationUnitsLoading = true;
-        setup({ organisationalUnitList, suggestedOrganisationalUnitList, rowData }, rerender);
+        expect(loadOrganisationalUnitsFn).toHaveBeenCalled();
+        expect(loadSuggestedOrganisationalUnitsFn).toHaveBeenCalledWith(3);
+
+        setup(
+            { rowData },
+            {
+                organisationalUnitsReducer: {
+                    ...defaultReducerState.organisationalUnitsReducer,
+                    organisationUnitsLoading: true,
+                },
+            },
+            rerender,
+        );
 
         expect(getByText('Loading Organisational Units')).toBeInTheDocument();
 
         // second pass, when orgs have loaded but suggested orgs havent yet
         // loading message should still be visible
-        organisationalUnitList.organisationUnitsLoaded = true;
-        organisationalUnitList.organisationUnitsLoading = false;
-        suggestedOrganisationalUnitList.suggestedOrganisationUnitsLoading = true;
-        setup({ organisationalUnitList, suggestedOrganisationalUnitList, rowData }, rerender);
+        setup(
+            { rowData },
+            {
+                organisationalUnitsReducer: {
+                    ...defaultReducerState.organisationalUnitsReducer,
+                    organisationUnits: [],
+                    organisationUnitsLoaded: true,
+                    organisationUnitsLoading: false,
+                },
+                suggestedOrganisationalUnitsReducer: {
+                    ...defaultReducerState.suggestedOrganisationalUnitsReducer,
+                    suggestedOrganisationUnitsLoading: true,
+                },
+            },
+            rerender,
+        );
         expect(getByText('Loading Organisational Units')).toBeInTheDocument();
 
         // third pass, when suggested orgs have loaded.
         // No message should be shown now.
-        suggestedOrganisationalUnitList.suggestedOrganisationUnitsLoading = false;
-        suggestedOrganisationalUnitList.suggestedOrganisationUnitsLoaded = true;
-        setup({ organisationalUnitList, suggestedOrganisationalUnitList, rowData }, rerender);
+        setup(
+            { rowData },
+            {
+                organisationalUnitsReducer: {
+                    ...defaultReducerState.organisationalUnitsReducer,
+                    organisationUnits: [],
+                    organisationUnitsLoaded: true,
+                    organisationUnitsLoading: false,
+                },
+                suggestedOrganisationalUnitsReducer: {
+                    ...defaultReducerState.suggestedOrganisationalUnitsReducer,
+                    suggestedAuthorId: 3,
+                    suggestedOrganisationUnits: [],
+                    suggestedOrganisationUnitsLoading: false,
+                    suggestedOrganisationUnitsLoaded: true,
+                },
+            },
+            rerender,
+        );
         expect(queryByText('Loading Organisational Units')).not.toBeInTheDocument();
 
-        suggestedOrganisationalUnitList.suggestedOrganisationUnitsLoading = true;
-        suggestedOrganisationalUnitList.suggestedOrganisationUnitsLoaded = false;
         // fourth pass, when loading a different author
         // Should call the api again
-        setup({ organisationalUnitList, suggestedOrganisationalUnitList, rowData: { aut_id: 4 } }, rerender);
-        expect(loadSuggestedOrganisationalUnitsList).toHaveBeenCalled();
+        setup(
+            { rowData: { aut_id: 4 } },
+            {
+                organisationalUnitsReducer: {
+                    ...defaultReducerState.organisationalUnitsReducer,
+                    organisationUnits: [],
+                    organisationUnitsLoaded: true,
+                    organisationUnitsLoading: false,
+                },
+                suggestedOrganisationalUnitsReducer: {
+                    ...defaultReducerState.suggestedOrganisationalUnitsReducer,
+                    suggestedAuthorId: 3,
+                    suggestedOrganisationUnits: [],
+                    suggestedOrganisationUnitsLoading: false,
+                    suggestedOrganisationUnitsLoaded: true,
+                },
+            },
+            rerender,
+        );
+        expect(loadSuggestedOrganisationalUnitsFn).toHaveBeenCalledWith(4);
         expect(getByText('Loading Organisational Units')).toBeInTheDocument();
     });
 
@@ -173,11 +237,15 @@ describe('EditAuthorAffiliations', () => {
             id: 6,
         };
 
-        const { getByTestId } = setup({
-            rowData,
-            organisationalUnitList,
-            suggestedOrganisationalUnitList,
-        });
+        const { getByTestId } = setup(
+            {
+                rowData,
+            },
+            {
+                organisationalUnitsReducer: { ...organisationalUnitList },
+                suggestedOrganisationalUnitsReducer: { ...suggestedOrganisationalUnitList },
+            },
+        );
 
         expect(getByTestId('orgChip-1')).toHaveTextContent('50%');
         expect(getByTestId('orgChip-2')).toHaveTextContent('50%');
@@ -272,13 +340,17 @@ describe('EditAuthorAffiliations', () => {
             id: 6,
         };
 
-        const { getByTestId } = setup({
-            rowData,
-            organisationalUnitList,
-            suggestedOrganisationalUnitList,
-            onChange,
-            setEditing,
-        });
+        const { getByTestId } = setup(
+            {
+                rowData,
+                onChange,
+                setEditing,
+            },
+            {
+                organisationalUnitsReducer: { ...organisationalUnitList },
+                suggestedOrganisationalUnitsReducer: { ...suggestedOrganisationalUnitList },
+            },
+        );
 
         expect(getByTestId(`orgChip-${NON_HERDC_ID}`)).toHaveTextContent('100%'); // code should recalc the non herdc entry to 100%
         expect(getByTestId('orgChip-2')).toHaveTextContent('0%'); // code should recalc the other org to 0%
