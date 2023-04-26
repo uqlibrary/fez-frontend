@@ -184,6 +184,7 @@
         "react-dropzone": "^6.2.4",
         "react-event-listener": "^0.6.6",
         "react-helmet-async": "^1.2.3",
+        "react-hook-form": "^7.43.9",
         "react-hot-loader": "4.13.0",
         "react-html-parser": "^2.0.2",
         "react-image": "^2.4.0",

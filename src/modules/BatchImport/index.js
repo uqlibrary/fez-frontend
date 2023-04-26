@@ -1,1 +1,1 @@
-export { default as BatchImport } from './components/BatchImport';
+export { default as BatchImport } from './components/RHFBatchImport';
