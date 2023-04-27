@@ -30,6 +30,7 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
             className={classes.chip}
             id={idValue}
             data-testid={idValue}
+            data-analyticsid={idValue}
             label={
                 <React.Fragment>
                     <Typography variant="body2" component="span" color="secondary">

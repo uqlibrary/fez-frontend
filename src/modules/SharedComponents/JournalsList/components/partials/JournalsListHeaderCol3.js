@@ -45,6 +45,7 @@ const JournalsListHeaderCol3 = ({ toggleView, minimalView }) => {
             spacing={0}
             alignItems="flex-end"
             data-testid={'journal-list-header-view-toggle'}
+            data-analyticsid={'journal-list-header-view-toggle'}
             className={classes.gridContainer}
         >
             <Grid item xs>
