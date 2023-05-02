@@ -1,11 +1,9 @@
-import { ContributorsEditor, mapStateToProps, mapDispatchToProps, styles } from './ContributorsEditor';
+import { ContributorsEditor, mapStateToProps, styles } from './ContributorsEditor';
 import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 import locale from 'locale/components';
 import { createTheme } from '@mui/material/styles';
-import * as actions from 'actions/actionTypes';
-import * as repositories from 'repositories';
 
 function setup(testProps = {}, args = {}) {
     const props = {
@@ -676,13 +674,7 @@ describe('ContributorsEditor', () => {
             }),
         ).toEqual({
             author: 'test',
-            organisationalUnitList: {
-                author: 'test',
-            },
             record: undefined,
-            suggestedOrganisationalUnitList: {
-                author: 'test',
-            },
         });
         expect(
             mapStateToProps({
@@ -690,59 +682,7 @@ describe('ContributorsEditor', () => {
             }),
         ).toEqual({
             author: null,
-            organisationalUnitList: null,
             record: null,
-            suggestedOrganisationalUnitList: null,
-        });
-    });
-
-    describe('actions', () => {
-        beforeEach(() => {
-            mockActionsStore = setupStoreForActions();
-            mockApi = setupMockAdapter();
-        });
-
-        afterEach(() => {
-            mockApi.reset();
-        });
-        it('loadOrganisationalUnitsList: should map dispatch to props as expected', async () => {
-            mockApi.onGet(repositories.routes.ORGANISATIONAL_UNITS().apiUrl).reply(200, []);
-
-            const expectedActionsOrgs = [actions.ORGANISATIONAL_UNITS_LOADING, actions.ORGANISATIONAL_UNITS_LOADED];
-            await mapDispatchToProps(mockActionsStore.dispatch).loadOrganisationalUnitsList();
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActionsOrgs);
-        });
-        it('loadSuggestedOrganisationalUnitsList: should map dispatch to props as expected', async () => {
-            mockApi.onGet(repositories.routes.SUGGESTED_ORGANISATIONAL_UNITS(1).apiUrl).reply(200, []);
-
-            const expectedActionsSuggOrgs = [
-                actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADING,
-                actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADED,
-            ];
-            await mapDispatchToProps(mockActionsStore.dispatch).loadSuggestedOrganisationalUnitsList();
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActionsSuggOrgs);
-        });
-        it('clearSuggestedOrganisationalUnits: should map dispatch to props as expected', async () => {
-            const expectedActionsClear = [actions.SUGGESTED_ORGANISATIONAL_UNITS_CLEARED];
-            await mapDispatchToProps(mockActionsStore.dispatch).clearSuggestedOrganisationalUnits();
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActionsClear);
-        });
-        it('loadOrganisationalUnitsList: should map dispatch to props as expected when failing', async () => {
-            mockApi.onGet(repositories.routes.ORGANISATIONAL_UNITS().apiUrl).reply(400, []);
-
-            const expectedActionsOrgs = [actions.ORGANISATIONAL_UNITS_LOADING, actions.ORGANISATIONAL_UNITS_FAILED];
-            await mapDispatchToProps(mockActionsStore.dispatch).loadOrganisationalUnitsList();
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActionsOrgs);
-        });
-        it('loadSuggestedOrganisationalUnitsList: should map dispatch to props as expected when failing', async () => {
-            mockApi.onGet(repositories.routes.SUGGESTED_ORGANISATIONAL_UNITS(1).apiUrl).reply(400, []);
-
-            const expectedActionsSuggOrgs = [
-                actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADING,
-                actions.SUGGESTED_ORGANISATIONAL_UNITS_FAILED,
-            ];
-            await mapDispatchToProps(mockActionsStore.dispatch).loadSuggestedOrganisationalUnitsList();
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActionsSuggOrgs);
         });
     });
 
