@@ -80,6 +80,7 @@ export class ContributorsEditor extends PureComponent {
 
     getContributorsWithAffiliationsFromProps = props => {
         const authors = this.getContributorsFromProps(props);
+        if (authors.every(author => !!author.affiliations)) return authors;
 
         const affiliations = props.record?.fez_author_affiliation ?? [];
         return authors.map(author => {
