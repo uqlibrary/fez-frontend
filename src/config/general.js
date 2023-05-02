@@ -1289,8 +1289,7 @@ export const RECORD_ACTION_URLS = [
     },
     {
         label: 'Edit author affiliations',
-        url: pid =>
-            `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=authors`,
         inApp: true,
         showInDeleted: false,
         options: null,
