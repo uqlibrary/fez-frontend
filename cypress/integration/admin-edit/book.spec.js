@@ -62,7 +62,7 @@ context('Book admin edit', () => {
     it('should render ISSN as expected', () => {
         const record = recordList.data[1];
         const ulrichsLinkPrefix =
-            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/';
+            'https://go.openathens.net/redirector/uq.edu.au?url=http://ulrichsweb.serialssolutions.com/title/';
 
         cy.loadRecordForAdminEdit(record.rek_pid);
         cy.get('[data-testid=bibliographic-section-content]').as('bibliographicTab');

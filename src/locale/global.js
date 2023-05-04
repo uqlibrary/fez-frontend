@@ -23,7 +23,7 @@ help: {
 
 */
 
-export const EXPROXY_URL_PREFIX = 'http://ezproxy.library.uq.edu.au/login?url=';
+export const EXPROXY_URL_PREFIX = 'https://go.openathens.net/redirector/uq.edu.au?url=';
 
 export default {
     global: {

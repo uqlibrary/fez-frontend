@@ -278,7 +278,7 @@ describe('IssnRowItemTemplate', () => {
 
             const sherpaLink = 'http://v2.sherpa.ac.uk/id/publication/9999999';
             const ulrichsLinkPrefix =
-                'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/';
+                'https://go.openathens.net/redirector/uq.edu.au?url=http://ulrichsweb.serialssolutions.com/title/';
             const ulrichsTitleId = '12345678';
 
             it('should return props for initial render', () => {

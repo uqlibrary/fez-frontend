@@ -1490,13 +1490,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                           >
                             <WithStyles(CitationCountView)
                               count={1}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                               source="wos"
                               title="Full citation in Web of science will open in a new window"
                             />
                             <WithStyles(CitationCountView)
                               count={0}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                               source="scopus"
                               title="Full citation in Scopus will open in a new window"
                             />
@@ -1976,13 +1976,13 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               "children": Array [
                                 <WithStyles(CitationCountView)
                                   count={1}
-                                  link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                                  link="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                   source="wos"
                                   title="Full citation in Web of science will open in a new window"
                                 />,
                                 <WithStyles(CitationCountView)
                                   count={0}
-                                  link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                                  link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                   source="scopus"
                                   title="Full citation in Scopus will open in a new window"
                                 />,
@@ -2430,7 +2430,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                           >
                             <WithStyles(CitationCountView)
                               count={1}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                               source="wos"
                               title="Full citation in Web of science will open in a new window"
                             >
@@ -2442,7 +2442,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   }
                                 }
                                 count={1}
-                                link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                                link="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                 source="wos"
                                 theme={
                                   Object {
@@ -3109,7 +3109,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 <ExternalLink
                                   aria-label="Full citation in Web of science will open in a new window"
                                   className="wosCitationCount CitationCountView-citationCount-4"
-                                  href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                                  href="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                   id="citation-count"
                                   openInNewIcon={false}
                                   title="Full citation in Web of science will open in a new window"
@@ -3118,7 +3118,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     aria-label="Full citation in Web of science will open in a new window"
                                     className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-17"
                                     data-testid="citation-count-link"
-                                    href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                                    href="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     id="citation-count-link"
                                     rel="noopener noreferrer"
                                     tabIndex={0}
@@ -3139,7 +3139,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             </WithStyles(CitationCountView)>
                             <WithStyles(CitationCountView)
                               count={0}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                               source="scopus"
                               title="Full citation in Scopus will open in a new window"
                             >
@@ -3151,7 +3151,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   }
                                 }
                                 count={0}
-                                link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                                link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                 source="scopus"
                                 theme={
                                   Object {
@@ -3818,7 +3818,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 <ExternalLink
                                   aria-label="Full citation in Scopus will open in a new window"
                                   className="scopusCitationCount CitationCountView-citationCount-4"
-                                  href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                                  href="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                   id="citation-count"
                                   openInNewIcon={false}
                                   title="Full citation in Scopus will open in a new window"
@@ -3827,7 +3827,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     aria-label="Full citation in Scopus will open in a new window"
                                     className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-18"
                                     data-testid="citation-count-link"
-                                    href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                                    href="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     id="citation-count-link"
                                     rel="noopener noreferrer"
                                     tabIndex={0}
@@ -9501,7 +9501,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                           >
                             <WithStyles(CitationCountView)
                               count={0}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                               source="scopus"
                               title="Full citation in Scopus will open in a new window"
                             />
@@ -9928,7 +9928,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 false,
                                 <WithStyles(CitationCountView)
                                   count={0}
-                                  link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
+                                  link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                   source="scopus"
                                   title="Full citation in Scopus will open in a new window"
                                 />,
@@ -10313,7 +10313,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                           >
                             <WithStyles(CitationCountView)
                               count={0}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                               source="scopus"
                               title="Full citation in Scopus will open in a new window"
                             >
@@ -10325,7 +10325,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   }
                                 }
                                 count={0}
-                                link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
+                                link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                 source="scopus"
                                 theme={
                                   Object {
@@ -10992,7 +10992,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 <ExternalLink
                                   aria-label="Full citation in Scopus will open in a new window"
                                   className="scopusCitationCount CitationCountView-citationCount-4"
-                                  href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
+                                  href="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                   id="citation-count"
                                   openInNewIcon={false}
                                   title="Full citation in Scopus will open in a new window"
@@ -11001,7 +11001,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     aria-label="Full citation in Scopus will open in a new window"
                                     className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-8"
                                     data-testid="citation-count-link"
-                                    href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
+                                    href="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                     id="citation-count-link"
                                     rel="noopener noreferrer"
                                     tabIndex={0}
@@ -15160,13 +15160,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                           >
                             <WithStyles(CitationCountView)
                               count={0}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                               source="wos"
                               title="Full citation in Web of science will open in a new window"
                             />
                             <WithStyles(CitationCountView)
                               count={1}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                               source="scopus"
                               title="Full citation in Scopus will open in a new window"
                             />
@@ -15627,13 +15627,13 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               "children": Array [
                                 <WithStyles(CitationCountView)
                                   count={0}
-                                  link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                                  link="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                   source="wos"
                                   title="Full citation in Web of science will open in a new window"
                                 />,
                                 <WithStyles(CitationCountView)
                                   count={1}
-                                  link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                                  link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                   source="scopus"
                                   title="Full citation in Scopus will open in a new window"
                                 />,
@@ -16053,7 +16053,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                           >
                             <WithStyles(CitationCountView)
                               count={0}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                               source="wos"
                               title="Full citation in Web of science will open in a new window"
                             >
@@ -16065,7 +16065,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   }
                                 }
                                 count={0}
-                                link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                                link="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                 source="wos"
                                 theme={
                                   Object {
@@ -16732,7 +16732,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 <ExternalLink
                                   aria-label="Full citation in Web of science will open in a new window"
                                   className="wosCitationCount CitationCountView-citationCount-4"
-                                  href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                                  href="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                   id="citation-count"
                                   openInNewIcon={false}
                                   title="Full citation in Web of science will open in a new window"
@@ -16741,7 +16741,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     aria-label="Full citation in Web of science will open in a new window"
                                     className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-12"
                                     data-testid="citation-count-link"
-                                    href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+                                    href="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     id="citation-count-link"
                                     rel="noopener noreferrer"
                                     tabIndex={0}
@@ -16762,7 +16762,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             </WithStyles(CitationCountView)>
                             <WithStyles(CitationCountView)
                               count={1}
-                              link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                              link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                               source="scopus"
                               title="Full citation in Scopus will open in a new window"
                             >
@@ -16774,7 +16774,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   }
                                 }
                                 count={1}
-                                link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                                link="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                 source="scopus"
                                 theme={
                                   Object {
@@ -17441,7 +17441,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 <ExternalLink
                                   aria-label="Full citation in Scopus will open in a new window"
                                   className="scopusCitationCount CitationCountView-citationCount-4"
-                                  href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                                  href="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                   id="citation-count"
                                   openInNewIcon={false}
                                   title="Full citation in Scopus will open in a new window"
@@ -17450,7 +17450,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     aria-label="Full citation in Scopus will open in a new window"
                                     className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-13"
                                     data-testid="citation-count-link"
-                                    href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+                                    href="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     id="citation-count-link"
                                     rel="noopener noreferrer"
                                     tabIndex={0}

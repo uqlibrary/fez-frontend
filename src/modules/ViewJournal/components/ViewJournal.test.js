@@ -90,11 +90,11 @@ describe('ViewJournal', () => {
         expect(getByTestId('ulr-title-0-value')).toHaveTextContent('American Journal of Public Health');
         expect(getByTestId('ulr-title-0-lookup-link')).toHaveAttribute(
             'href',
-            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/41698',
+            'https://go.openathens.net/redirector/uq.edu.au?url=http://ulrichsweb.serialssolutions.com/title/41698',
         );
         expect(getByTestId('ulr-title-1-lookup-link')).toHaveAttribute(
             'href',
-            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/41699',
+            'https://go.openathens.net/redirector/uq.edu.au?url=http://ulrichsweb.serialssolutions.com/title/41699',
         );
 
         // **************************************************************

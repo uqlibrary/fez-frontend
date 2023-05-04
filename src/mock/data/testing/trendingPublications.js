@@ -534,7 +534,7 @@ export const trendingPublications = {
                     "sc_3m": 1,
                     "sc_6m": 0,
                     "sc_1y": 147,
-                    "sc_citation_url": "http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-84899524861"
+                    "sc_citation_url": "https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-84899524861"
                 }
             },
             "fez_record_search_key_start_page": {
@@ -945,7 +945,7 @@ export const trendingPublications = {
                     "tc_3m": 2,
                     "tc_6m": 44,
                     "tc_1y": 259,
-                    "tc_citation_url": "http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&SrcAuth=uqueensland&KeyUT=000247207500034"
+                    "tc_citation_url": "https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&SrcAuth=uqueensland&KeyUT=000247207500034"
                 }
             },
             "fez_record_search_key_ismemberof": [
@@ -1169,7 +1169,7 @@ export const trendingPublications = {
                     "rek_link_id": 3238544,
                     "rek_link_pid": "UQ:103860",
                     "rek_link_xsdmf_id": null,
-                    "rek_link": "http://ezproxy.library.uq.edu.au/login?url=http://www.sciencedirect.com/science/journal/0264410X",
+                    "rek_link": "https://go.openathens.net/redirector/uq.edu.au?url=http://www.sciencedirect.com/science/journal/0264410X",
                     "rek_link_order": 2
                 }
             ],
