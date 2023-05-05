@@ -22,7 +22,7 @@ export const AddDataCollection = lazy(() =>
     lazyRetry(() => import('modules/AddDataCollection/containers/AddDataCollection')),
 );
 export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/containers/Admin')));
-export const BatchImport = lazy(() => lazyRetry(() => import('modules/BatchImport/components/BatchImport')));
+export const BatchImport = lazy(() => lazyRetry(() => import('modules/BatchImport/components/RFFBatchImport')));
 export const BulkUpdates = lazy(() => lazyRetry(() => import('modules/BulkUpdates')));
 export const ChangeDisplayType = lazy(() =>
     lazyRetry(() => import('modules/Admin/ChangeDisplayType/containers/ChangeDisplayType')),

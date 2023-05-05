@@ -1,11 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useField } from 'react-final-form';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { TOP_LEVEL_SECURITY_POLICIES } from 'config/general';
 import * as actions from 'actions';
 
 export const CollectionSelectField = fieldProps => {
-    const { communityId } = fieldProps;
+    // const { communityId } = fieldProps;
+    const communityId = useField('communityID')?.input.value;
     const dispatch = useDispatch();
     const itemsList = useSelector(state =>
         state.get('collectionsReducer').itemsList.map(item => {
@@ -20,6 +22,9 @@ export const CollectionSelectField = fieldProps => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [communityId]);
 
+    if (!communityId) {
+        return null;
+    }
     return (
         <NewGenericSelectField
             disabled={itemsLoading || fieldProps.disabled}
