@@ -30,6 +30,7 @@ import {
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
     SUBTYPE_EDITED_BOOK,
+    AUTHOR_AFFILIATIONS_ALLOWED_TYPES,
 } from 'config/general';
 
 export const identifiersParams = record => ({
@@ -74,14 +75,7 @@ export const identifiersParams = record => ({
 });
 
 export const shouldHandleAuthorAffiliations = record =>
-    record.rek_subtype !== SUBTYPE_EDITED_BOOK &&
-    [
-        PUBLICATION_TYPE_BOOK_CHAPTER,
-        PUBLICATION_TYPE_BOOK,
-        PUBLICATION_TYPE_CONFERENCE_PAPER,
-        PUBLICATION_TYPE_JOURNAL_ARTICLE,
-        // PUBLICATION_TYPE_RESEARCH_REPORT,
-    ].includes(record.rek_display_type);
+    AUTHOR_AFFILIATIONS_ALLOWED_TYPES?.[record.rek_display_type]?.includes(record.rek_subtype) ?? false;
 
 export const bibliographicParams = (record, formValues) => ({
     isLote:
