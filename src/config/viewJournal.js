@@ -161,7 +161,11 @@ export const viewJournalConfig = {
                     ],
                     template: 'MultiLinkTemplate',
                     templateProps: {
-                        href: item => globalLocale.global.ulrichsLink.externalUrl.replace('[id]', item.ulr_title_id),
+                        href: item =>
+                            globalLocale.global.ulrichsLink.externalUrl.replace(
+                                '[id]',
+                                encodeURIComponent(item.ulr_title_id),
+                            ),
                         text: item => item.ulr_title,
                         title: 'View Ulrichs details in a new tab',
                     },

@@ -234,7 +234,7 @@ describe('IssnRowItemTemplate', () => {
                 srm_journal_link: '',
                 srm_issn: '1234-5678',
             };
-            expect(getSherpaLink(sherpaData)).toBe('http://www.sherpa.ac.uk/romeo/search.php?issn=1234-5678');
+            expect(getSherpaLink(sherpaData)).toBe('https://www.sherpa.ac.uk/romeo/search.php?issn=1234-5678');
 
             sherpaData.srm_colour = 'gray';
             expect(getSherpaLink(sherpaData)).toBe('');
@@ -278,7 +278,7 @@ describe('IssnRowItemTemplate', () => {
 
             const sherpaLink = 'http://v2.sherpa.ac.uk/id/publication/9999999';
             const ulrichsLinkPrefix =
-                'https://go.openathens.net/redirector/uq.edu.au?url=http://ulrichsweb.serialssolutions.com/title/';
+                'https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F';
             const ulrichsTitleId = '12345678';
 
             it('should return props for initial render', () => {
