@@ -69,6 +69,7 @@ export const SearchKeyword = ({
                 onClick={handleKeywordClick}
                 id={id}
                 data-testid={id}
+                data-analyticsid={id}
                 role="button"
                 tabIndex={0}
                 aria-label={`${isSelected ? 'Remove' : 'Add'} ${type} ${keyword}`}
