@@ -117,6 +117,7 @@ const PrototypeContainer = reduxForm({
     onSubmit,
     onChange,
     validate,
+    destroyOnUnmount: false,
 })(AdminContainer);
 
 const mapStateToProps = (state, props) => {
