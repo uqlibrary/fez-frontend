@@ -37,7 +37,7 @@ import NtroSection from './ntro/NtroSectionContainer';
 import SecuritySection from './security/SecuritySectionContainer';
 import { RecordContext, TabbedContext } from 'context';
 import { StandardPage } from '../../SharedComponents/Toolbox/StandardPage';
-import { useIsMobileView } from '../../../hooks/useIsMobileView';
+import { useIsMobileView } from '../../../hooks';
 
 const useStyles = makeStyles(
     theme => ({

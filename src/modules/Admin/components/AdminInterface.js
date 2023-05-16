@@ -23,7 +23,6 @@ import * as recordForms from 'modules/SharedComponents/PublicationForm/component
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import LockedAlert from './LockedAlert';
-import { FORM_NAME } from '../constants';
 import { onSubmit } from '../submitHandler';
 
 import { useRecordContext, useTabbedContext } from 'context';
@@ -81,7 +80,6 @@ export const AdminInterface = ({
     createMode,
     isDeleted,
     isJobCreated,
-    destroy,
     dirty,
     disableSubmit,
     formErrors,
@@ -120,12 +118,6 @@ export const AdminInterface = ({
     React.useEffect(() => {
         activeTabNames.current = getActiveTabs(tabs);
     }, [tabs]);
-
-    React.useEffect(() => {
-        return () => {
-            destroy(FORM_NAME);
-        };
-    }, [destroy]);
 
     React.useEffect(() => {
         Cookies.set('adminFormTabbed', tabbed ? 'tabbed' : 'fullform');

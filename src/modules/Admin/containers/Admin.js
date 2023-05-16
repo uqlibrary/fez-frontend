@@ -103,8 +103,8 @@ const onChange = (values, dispatch) => {
     if (
         !!values.get('rek_display_type') &&
         values.get('rek_display_type') === PUBLICATION_TYPE_THESIS &&
-        !!values.get('adminSection').get('rek_subtype') &&
-        !values.get('bibliographicSection').get('rek_genre_type')
+        !!values.get('adminSection')?.get('rek_subtype') &&
+        !values.get('bibliographicSection')?.get('rek_genre_type')
     ) {
         dispatch(
             change(FORM_NAME, 'bibliographicSection.rek_genre_type', values.get('adminSection').get('rek_subtype')),
@@ -117,7 +117,6 @@ const PrototypeContainer = reduxForm({
     onSubmit,
     onChange,
     validate,
-    destroyOnUnmount: false,
 })(AdminContainer);
 
 const mapStateToProps = (state, props) => {
