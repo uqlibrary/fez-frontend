@@ -1,6 +1,6 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { change, destroy, getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';
+import { change, getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { withRouter } from 'react-router';
@@ -183,7 +183,6 @@ function mapDispatchToProps(dispatch) {
         loadRecordToView,
         clearRecordToView,
         unlockRecord,
-        destroy,
     };
 }
 
