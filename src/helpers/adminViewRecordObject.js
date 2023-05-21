@@ -1,6 +1,12 @@
+import React from 'react';
+import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import config from 'locale/viewRecord';
+import Button from '@mui/material/Button';
+export const navigateToEdit = (history, pid) => {
+    history.push(`/admin/edit/${pid}?tab=authors`);
+};
 
 export const formattedString = (type, lookup) => {
     if (!!!type && !!!lookup) return '-';
@@ -11,10 +17,48 @@ export const parseKey = (key, content) => {
     return key.split('.').reduce((prev, curr) => prev && prev[curr], content);
 };
 
-export const authorAffiliates = (key, content) => {
+export const authorAffiliates = (key, content, history, pid, AAProblems) => {
+    const hasError = AAProblems.length > 0;
     const authorAffiliate = parseKey(key, content) ?? null;
-    if (!!!authorAffiliate || !Array.isArray(authorAffiliate)) return 'No';
-    return !!authorAffiliate.length > 0 ? 'Yes' : 'No';
+
+    if (!!!authorAffiliate || !Array.isArray(authorAffiliate)) {
+        return config.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates;
+    }
+    if (hasError) {
+        const Problems =
+            AAProblems.length > 0 &&
+            AAProblems.map(item => (
+                <Typography
+                    variant={'body2'}
+                    style={{ marginTop: 10, display: 'block' }}
+                    component={'span'}
+                    key={`affil_error_${item.rek_author_id}`}
+                    id={`affil_error_${item.rek_author_id}`}
+                    data-testid={`affil_error_${item.rek_author_id}`}
+                    aria-label={`Afffiliation error for ${item.rek_author}`}
+                >
+                    <b>{item.rek_author}</b> {config.viewRecord.adminViewRecordDrawerFields.errorDetail(item)}
+                </Typography>
+            ));
+
+        const EditButton = (
+            <Button
+                key={'affil_cal_error_btn'}
+                onClick={() => navigateToEdit(history, pid)}
+                style={{ marginTop: 10, width: '100%' }}
+                variant="outlined"
+                id="admin-fix-affiliations-button"
+                data-testid="btnFixAffiliations"
+            >
+                {config.viewRecord.adminViewRecordDrawerFields.buttonLabel}
+            </Button>
+        );
+        return [...Problems, EditButton];
+    } else {
+        return !!authorAffiliate.length > 0
+            ? config.viewRecord.adminViewRecordDrawerFields.hasAffiliates
+            : config.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates;
+    }
 };
 
 export const getDefaultDrawerDescriptorObject = () => {
@@ -37,7 +81,15 @@ export const getDefaultDrawerDescriptorIndex = () => {
 };
 
 /* istanbul ignore next */
-export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], fields = {}) => {
+export const createDefaultDrawerDescriptorObject = (
+    locale = {},
+    content = [],
+    fields = {},
+    history,
+    pid,
+    shouldHandleAffiliations = false,
+    AAProblems = [],
+) => {
     const adminViewRecordDefaultContentObject = getDefaultDrawerDescriptorObject();
     const adminViewRecordDefaultContentIndex = getDefaultDrawerDescriptorIndex();
     if (!adminViewRecordDefaultContentObject || !adminViewRecordDefaultContentIndex) return {};
@@ -50,13 +102,16 @@ export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], f
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][0].value = locale.notes;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][1].value = parsedNotes;
 
-    // Authors
+    // Authors (Change this for new AA)
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][0].value =
         locale.authorAffiliations;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][0].error =
+        !!shouldHandleAffiliations && AAProblems.length > 0;
     adminViewRecordDefaultContentObject.sections[
         adminViewRecordDefaultContentIndex.authors
-    ][1].value = authorAffiliates(fields.authorAffiliates, content);
-
+    ][1].value = !!shouldHandleAffiliations
+        ? authorAffiliates(fields.authorAffiliates, content, history, pid, AAProblems)
+        : config.viewRecord.adminViewRecordDrawerFields.affiliatesDoNotApply;
     // WoS
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][0].value = locale.wosId;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][1].value = formattedString(

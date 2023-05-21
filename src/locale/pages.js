@@ -633,7 +633,7 @@ export default {
 
                     sectionTitles: {
                         notes: 'Notes',
-                        authorAffiliations: 'Has Author Affiliations?',
+                        authorAffiliations: 'Author Affiliations',
                         wosId: 'WoS ID',
                         wosDocType: 'WoS Doc Type',
                         scopusId: 'Scopus ID',
