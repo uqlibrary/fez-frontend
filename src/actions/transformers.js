@@ -264,6 +264,26 @@ export const getDatasetCreatorRolesSearchKey = creators => {
         : {};
 };
 
+export const getDatasetAuthorEmailsSearchKey = authors => {
+    if (!authors || authors.length === 0) return {};
+    const authorEmails = authors
+        .map(
+            (item, index) =>
+                (!!item.email && {
+                    rek_author_email: item.email,
+                    rek_author_email_order: index + 1,
+                }) ||
+                {},
+        )
+        .filter(author => !!author.rek_author_email);
+
+    return authorEmails.length > 0
+        ? {
+              fez_record_search_key_author_email: authorEmails,
+          }
+        : {};
+};
+
 export const getRecordSupervisorsSearchKey = supervisors => {
     if (!supervisors || supervisors.length === 0) return {};
     return {
@@ -1223,6 +1243,7 @@ export const getAuthorsSearchKeys = authors => ({
     ...getRecordAuthorAffiliationSearchKey(authors),
     ...getRecordAuthorAffiliationTypeSearchKey(authors),
     ...getDatasetCreatorRolesSearchKey(authors),
+    ...getDatasetAuthorEmailsSearchKey(authors),
 });
 
 export const getContributorsSearchKeys = editors => ({

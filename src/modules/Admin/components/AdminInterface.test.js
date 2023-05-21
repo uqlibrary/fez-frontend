@@ -6,6 +6,7 @@ import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
 import pageLocale from '../../../locale/pages';
+import * as redux from 'react-redux';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -43,7 +44,6 @@ function setup(testProps = {}) {
                 component: () => '<p>Security component</p>',
             },
         },
-        destroy: jest.fn(),
         unlockRecord: jest.fn(),
         error: null,
         ...testProps,
@@ -54,10 +54,13 @@ function setup(testProps = {}) {
 
 describe('AdminInterface component', () => {
     let mockUseEffect;
+    let useDispatchSpy;
     const cleanupFns = [];
+    const mockDispatchFn = jest.fn();
 
     beforeAll(() => {
         mockUseEffect = jest.spyOn(React, 'useEffect');
+        useDispatchSpy = jest.spyOn(redux, 'useDispatch');
     });
 
     beforeEach(() => {
@@ -76,6 +79,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 179,
             },
         }));
+        useDispatchSpy.mockReturnValue(mockDispatchFn);
     });
 
     afterEach(() => {
@@ -88,6 +92,7 @@ describe('AdminInterface component', () => {
 
     afterAll(() => {
         mockUseEffect.mockRestore();
+        useDispatchSpy.mockClear();
     });
 
     it('should render when no record is available', () => {

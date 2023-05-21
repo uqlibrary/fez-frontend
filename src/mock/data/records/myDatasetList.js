@@ -1,18 +1,15 @@
-import { hydrateMockSearchList } from '../../../helpers/general';
-
-const myDatasetList = {
-    "total": 2,
+export default {
+    "total": 1,
     "took": 15,
     "per_page": 20,
     "current_page": 1,
     "from": 1,
-    "to": 2,
+    "to": 1,
     "data": [
         {
             "rek_pid": "UQ:418081",
             "rek_title": "Appendix: Comprehensive design temperatures for Queensland.",
-            "rek_description":
-                "Data and analysis for comprehensive design temperatures for 225 Queensland locations. Appendix supports the article 'New air conditioning design temperatures for Queensland, Australia' which is published along with the dataset, with permission.<br />",
+            "rek_description": "Data and analysis for comprehensive design temperatures for 225 Queensland locations. Appendix supports the article 'New air conditioning design temperatures for Queensland, Australia' which is published along with the dataset, with permission.<br />",
             "rek_display_type": 371,
             "rek_status": 2,
             "rek_date": "2017-01-01T00:00:00Z",
@@ -29,52 +26,122 @@ const myDatasetList = {
                 "rek_access_conditions": "453619",
                 "rek_access_conditions_lookup": "Open Access"
             },
-            "fez_record_search_key_additional_notes":
-                "From: Matt Dillon (AIRAH) [mailto:matt@airah.org.au] Sent: Monday, 16 January 2017 10:56 PM To: Eric Peterson Subject: RE: [ASHRAE-TC4.2] FW: TC 4.2 might be interested Hi Eric, It’s fine for you to put online on your site. Thanks for asking. Matt Matthew Dillon Communications Manager AIRAH – National office Level 3/1 Elizabeth St Melbourne Vic 3000 T: (03) 8623 3000 D: (03) 8623 3009 www.airah.org.au matt@airah.org.au",
+            "fez_record_search_key_additional_notes": {
+                "rek_additional_notes": "From: Matt Dillon (AIRAH) [mailto:matt@airah.org.au] Sent: Monday, 16 January 2017 10:56 PM To: Eric Peterson Subject: RE: [ASHRAE-TC4.2] FW: TC 4.2 might be interested Hi Eric, It’s fine for you to put online on your site. Thanks for asking. Matt Matthew Dillon Communications Manager AIRAH – National office Level 3/1 Elizabeth St Melbourne Vic 3000 T: (03) 8623 3000 D: (03) 8623 3009 www.airah.org.au matt@airah.org.au"
+            },
             "fez_record_search_key_ands_collection_type": {
                 "rek_ands_collection_type": "453616",
                 "rek_ands_collection_type_lookup": "Dataset"
             },
-            "fez_record_search_key_author": ["Peterson, Eric", "Williams, Neville", "Gilbert, Dale", "Bremhorst, Klaus"],
+            "fez_record_search_key_assigned_group_id": [],
+            "fez_record_search_key_assigned_user_id": [],
+            "fez_record_search_key_author": [
+                {
+                    "rek_author": "Peterson, Eric",
+                    "rek_author_order": 1
+                },
+                {
+                    "rek_author": "Williams, Neville",
+                    "rek_author_order": 2
+                },
+                {
+                    "rek_author": "Gilbert, Dale",
+                    "rek_author_order": 3
+                },
+                {
+                    "rek_author": "Bremhorst, Klaus",
+                    "rek_author_order": 4
+                }
+            ],
+            "fez_record_search_key_author_email": [
+                {
+                    "rek_author_email": "author1@dataset.com",
+                    "rek_author_email_order": 1
+                },
+                {
+                    "rek_author_email": "author3@dataset.com",
+                    "rek_author_email_order": 3
+                },
+            ],
             "fez_record_search_key_author_id": [
                 {
                     "rek_author_id": 2498,
+                    "rek_author_id_order": 1,
                     "rek_author_id_lookup": "Peterson, Eric L."
                 },
                 {
                     "rek_author_id": 0,
+                    "rek_author_id_order": 2
                 },
                 {
                     "rek_author_id": 0,
+                    "rek_author_id_order": 3
                 },
                 {
+                    "rek_author_id": 266,
                     "rek_author_id_order": 4,
                     "rek_author_id_lookup": "Bremhorst, Klaus"
                 }
             ],
             "fez_record_search_key_author_role": [
-                "Postdoctoral Research Fellow, BERU",
-                "Manager, Thermal Comfort Initiative",
-                "Director, Built Environment Research Unit",
-                "Professor Emertitus, Mechanical Engineering",
+                {
+                    "rek_author_role_order": 1,
+                    "rek_author_role": "Postdoctoral Research Fellow, BERU"
+                },
+                {
+                    "rek_author_role_order": 2,
+                    "rek_author_role": "Manager, Thermal Comfort Initiative"
+                },
+                {
+                    "rek_author_role_order": 3,
+                    "rek_author_role": "Director, Built Environment Research Unit"
+                },
+                {
+                    "rek_author_role_order": 4,
+                    "rek_author_role": "Professor Emertitus, Mechanical Engineering"
+                }
             ],
-            "fez_record_search_key_contact_details_email": ["e.peterson@uq.edu.au"],
-            "fez_record_search_key_contributor": ["Peterson, Eric"],
+            "fez_record_search_key_contact_details_email": [
+                {
+                    "rek_contact_details_email_order": 1,
+                    "rek_contact_details_email": "e.peterson@uq.edu.au"
+                }
+            ],
+            "fez_record_search_key_contributor": [
+                {
+                    "rek_contributor": "Peterson, Eric",
+                    "rek_contributor_order": 1
+                }
+            ],
             "fez_record_search_key_contributor_id": [
                 {
                     "rek_contributor_id": 2498,
+                    "rek_contributor_id_order": 1,
                     "rek_contributor_id_lookup": "Peterson, Eric L."
                 }
             ],
             "fez_record_search_key_file_attachment_name": [
-                "ComprehensiveDesignTemperaturesQld.pdf",
-                "FezACML_ComprehensiveDesignTemperaturesQld.pdf.xml",
-                "FezACML_UQ_418081.xml",
-                "presmd_ComprehensiveDesignTemperaturesQld.xml",
+                {
+                    "rek_file_attachment_name": "ComprehensiveDesignTemperaturesQld.pdf",
+                    "rek_file_attachment_name_order": 1
+                },
+                {
+                    "rek_file_attachment_name": "FezACML_ComprehensiveDesignTemperaturesQld.pdf.xml",
+                    "rek_file_attachment_name_order": 2
+                },
+                {
+                    "rek_file_attachment_name": "FezACML_UQ_418081.xml",
+                    "rek_file_attachment_name_order": 3
+                },
+                {
+                    "rek_file_attachment_name": "presmd_ComprehensiveDesignTemperaturesQld.xml",
+                    "rek_file_attachment_name_order": 4
+                }
             ],
             "fez_record_search_key_isdatasetof": [
                 {
                     "rek_isdatasetof": "UQ:418885",
+                    "rek_isdatasetof_order": 1,
                     "datasetSiblings": [
                         {
                             "rek_pid": "UQ:4",
@@ -93,27 +160,55 @@ const myDatasetList = {
             "fez_record_search_key_ismemberof": [
                 {
                     "rek_ismemberof": "UQ:289097",
+                    "rek_ismemberof_order": 1,
                     "rek_ismemberof_lookup": "Research Data Collections"
                 }
             ],
-            "fez_record_search_key_keywords": ["queensland", "airconditioning"],
-            "fez_record_search_key_language": ["eng"],
+            "fez_record_search_key_keywords": [
+                {
+                    "rek_keywords": "queensland",
+                    "rek_keywords_order": 1
+                },
+                {
+                    "rek_keywords": "airconditioning",
+                    "rek_keywords_order": 2
+                }
+            ],
+            "fez_record_search_key_language": [
+                {
+                    "rek_language": "eng",
+                    "rek_language_order": 1
+                }
+            ],
             "fez_record_search_key_license": {
                 "rek_license": 453701,
                 "rek_license_lookup": "Permitted Re-use with Acknowledgement"
             },
-            "fez_record_search_key_project_description":
-                "Airconditioning project within the Queensland Government Built Environment Research Unit (BERU). Eric Peterson (postdoc) was mentored by UQ Professor Emeritus Klaus Bremhorst in the research.",
-            "fez_record_search_key_project_name": "New air conditioning design temperatures for Queensland, Australia",
-            "fez_record_search_key_publisher": "The University of Queensland",
-            "fez_record_search_key_rights": "2017, The University of Queensland",
+            "fez_record_search_key_link": [],
+            "fez_record_search_key_link_description": [],
+            "fez_record_search_key_project_description": {
+                "rek_project_description": "Airconditioning project within the Queensland Government Built Environment Research Unit (BERU). Eric Peterson (postdoc) was mentored by UQ Professor Emeritus Klaus Bremhorst in the research."
+            },
+            "fez_record_search_key_project_name": {
+                "rek_project_name": "New air conditioning design temperatures for Queensland, Australia"
+            },
+            "fez_record_search_key_publisher": {
+                "rek_publisher": "The University of Queensland"
+            },
+            "fez_record_search_key_rights": {
+                "rek_rights": "2017, The University of Queensland"
+            },
+            "fez_record_search_key_seo_code": [],
+            "fez_record_search_key_software_required": [],
             "fez_record_search_key_subject": [
                 {
                     "rek_subject": 452674,
+                    "rek_subject_order": 1,
                     "rek_subject_lookup": "120101 Architectural Design"
                 },
                 {
                     "rek_subject": 451968,
+                    "rek_subject_order": 2,
                     "rek_subject_lookup": "040105 Climatology (excl.Climate Change Processes)"
                 }
             ],
@@ -166,6 +261,7 @@ const myDatasetList = {
             "fez_record_search_key_has_related_datasets": [
                 {
                     "rek_has_related_datasets": "UQ:418885",
+                    "rek_has_related_datasets_order": 1,
                     "rek_has_related_datasets_lookup": "New air conditioning design temperatures for Queensland, Australia"
                 }
             ],
@@ -368,4 +464,3 @@ const myDatasetList = {
         }
     }
 };
-export default hydrateMockSearchList(myDatasetList);

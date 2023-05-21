@@ -1203,6 +1203,37 @@ describe('transformers', () => {
         });
     });
 
+    describe('getDatasetAuthorEmailsSearchKey tests', () => {
+        it('should return empty object', () => {
+            expect(transformers.getDatasetAuthorEmailsSearchKey()).toEqual({});
+            expect(transformers.getDatasetAuthorEmailsSearchKey([{}])).toEqual({});
+        });
+
+        it('should return empty object in entry if email key is not set for it', () => {
+            const input = [{ test: 'test1' }];
+            const expected = {};
+            expect(transformers.getDatasetAuthorEmailsSearchKey(input)).toEqual(expected);
+        });
+
+        it('should return search key with data', () => {
+            const input = [{ email: 'author1@email.com' }, { email: '' }, { email: 'author3@email.com' }];
+            const expected = {
+                fez_record_search_key_author_email: [
+                    {
+                        rek_author_email: 'author1@email.com',
+                        rek_author_email_order: 1,
+                    },
+                    {
+                        rek_author_email: 'author3@email.com',
+                        rek_author_email_order: 3,
+                    },
+                ],
+            };
+            const result = transformers.getDatasetAuthorEmailsSearchKey(input);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('getDatasetContactDetailSearchKeys tests', () => {
         it('should return empty object', () => {
             expect(transformers.getDatasetContactDetailSearchKeys()).toEqual({});

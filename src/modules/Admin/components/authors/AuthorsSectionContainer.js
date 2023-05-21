@@ -26,7 +26,7 @@ AuthorsSectionContainer.propTypes = {
 /* istanbul ignore next */
 export const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
-    const subtype = formValues.get('adminSection').get('rek_subtype');
+    const subtype = formValues.get('adminSection')?.get('rek_subtype');
     return {
         disabled: ownProps.disabled,
         formValues: formValues.get('authorsSection') || Immutable.Map({}),
