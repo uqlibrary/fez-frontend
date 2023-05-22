@@ -674,6 +674,7 @@ describe('ContributorsEditor', () => {
             }),
         ).toEqual({
             author: 'test',
+            record: undefined,
         });
         expect(
             mapStateToProps({
@@ -681,6 +682,47 @@ describe('ContributorsEditor', () => {
             }),
         ).toEqual({
             author: null,
+            record: null,
         });
+    });
+
+    it('getContributorsWithAffiliationsFromProps (coverage)', async () => {
+        const record = {
+            fez_author_affiliation: [
+                {
+                    af_id: 1,
+                    af_author_id: 101,
+                },
+                {
+                    af_id: 2,
+                    af_author_id: 101,
+                },
+                {
+                    af_id: 3,
+                    af_author_id: 102,
+                },
+                {
+                    af_id: 4,
+                    af_author_id: 103,
+                },
+            ],
+        };
+        const props = {
+            input: {
+                name: 'test',
+                value: [
+                    {
+                        aut_id: 101,
+                    },
+                ],
+            },
+            record,
+        };
+        const wrapper = setup(props);
+        expect(wrapper.state().contributors.length).toEqual(1);
+        expect(wrapper.state().contributors[0].affiliations).toEqual([
+            { af_id: 1, af_author_id: 101 },
+            { af_id: 2, af_author_id: 101 },
+        ]);
     });
 });

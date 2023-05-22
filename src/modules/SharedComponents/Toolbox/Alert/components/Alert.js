@@ -345,6 +345,7 @@ export const Alert = ({
                                     title={dismissTitle}
                                     aria-label={dismissTitle}
                                     id="dismiss-mobile"
+                                    data-testid="dismiss-mobile"
                                     size="large"
                                 >
                                     <Close className="dismiss" />
@@ -362,6 +363,7 @@ export const Alert = ({
                             fullWidth
                             className="action alert-button"
                             id="action-button"
+                            data-testid="action-button"
                             disabled={showLoader}
                         />
                     </Grid>
@@ -373,6 +375,7 @@ export const Alert = ({
                             title={dismissTitle}
                             aria-label={dismissTitle}
                             id="dismiss"
+                            data-testid="dismiss"
                             size="large"
                         >
                             <Close className="dismiss" />
