@@ -30,3 +30,22 @@ context('Data Collection admin edit', () => {
             });
     });
 });
+
+context('Author affiliations', () => {
+    const record = recordList.data[0];
+
+    beforeEach(() => {
+        cy.loadRecordForAdminEdit(record.rek_pid);
+    });
+
+    afterEach(() => {
+        cy.adminEditCleanup();
+    });
+    it('should not be available for this work type', () => {
+        cy.assertAffiliationsAllowed({
+            authorName: 'Steve Su (uqysu4)',
+            orgName: 'The University of Queensland',
+            rowId: 2,
+        });
+    });
+});

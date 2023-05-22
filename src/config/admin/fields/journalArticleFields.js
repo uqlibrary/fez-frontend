@@ -78,13 +78,12 @@ export default {
             groups: [['fez_record_search_key_isderivationof']],
         },
     ],
-    authors: () => [
+    authors: ({ shouldHandleAffiliations = false }) => [
         {
             title: 'Authors',
-            groups: [['authors']],
+            groups: [...(!shouldHandleAffiliations ? [['authors']] : [['authorsWithAffiliations']])],
         },
     ],
-
     admin: () => [
         {
             title: 'Member of collections',
@@ -130,7 +129,7 @@ export const validateJournalArticle = (
             {}),
     },
     authorsSection: {
-        ...(((as || {}).authors || []).length === 0 && {
+        ...(((as || {}).authors || (as || {}).authorsWithAffiliations || []).length === 0 && {
             authors: summary.authors,
         }),
     },

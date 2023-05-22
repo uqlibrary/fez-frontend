@@ -244,6 +244,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // This tests the "Record not found" message on viewRecord and adminEdit
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
     .reply(404, { message: 'File not found' })
+    // Author Affiliation with incorrect values
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:40186a' }).apiUrl)))
+    .reply(200, { data: mockData.recordWithIncorrectAffiliation })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:871c1f8' }).apiUrl)))
+    .reply(200, { data: { ...mockData.recordWithProblematicAuthorAffiliations } })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_VERSION_API('.*', '.*').apiUrl)))
     // versions
     .reply(config => {
@@ -374,6 +379,22 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, { data: { ...matchedRecord } }];
         }
         return [200, { data: { ...mockData.record } }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:764e150' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.recordBookWithAuthorAffiliations } }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:871c1f8' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.recordWithProblematicAuthorAffiliations } }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.ORGANISATIONAL_UNITS().apiUrl)))
+    .reply(config => {
+        return [200, { data: [...mockData.organisationalUnits] }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.SUGGESTED_ORGANISATIONAL_UNITS({ authorId: '.*' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: [...mockData.suggestedOrganisationalUnits] }];
     })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {

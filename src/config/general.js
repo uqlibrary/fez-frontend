@@ -209,6 +209,19 @@ export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - O
 export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Other or Citation Only';
 export const SUBTYPE_EDITED_BOOK = 'Edited book';
 export const SUBTYPE_NON_NTRO = 'Non-NTRO';
+export const SUBTYPE_FULLY_PUBLISHED_PAPER = 'Fully published paper';
+export const SUBTYPE_RESEARCH_BOOK_ORIGINAL_RESEARCH = 'Research book (original research)';
+export const SUBTYPE_RESEARCH_BOOK_CHAPTER_ORIGINAL_RESEARCH = 'Research book chapter (original research)';
+export const SUBTYPE_CRITICAL_REVIEW = 'Critical review of research, literature review, critical commentary';
+export const SUBTYPE_ARTICLE_ORIGINAL_RESEARCH = 'Article (original research)';
+
+export const AUTHOR_AFFILIATIONS_ALLOWED_TYPES = {
+    [PUBLICATION_TYPE_BOOK_CHAPTER]: [SUBTYPE_RESEARCH_BOOK_CHAPTER_ORIGINAL_RESEARCH, SUBTYPE_CRITICAL_REVIEW],
+    [PUBLICATION_TYPE_BOOK]: [SUBTYPE_RESEARCH_BOOK_ORIGINAL_RESEARCH],
+    [PUBLICATION_TYPE_CONFERENCE_PAPER]: [SUBTYPE_FULLY_PUBLISHED_PAPER],
+    [PUBLICATION_TYPE_JOURNAL_ARTICLE]: [SUBTYPE_ARTICLE_ORIGINAL_RESEARCH, SUBTYPE_CRITICAL_REVIEW],
+    // [PUBLICATION_TYPE_RESEARCH_REPORT]: [],
+};
 
 export const CW_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
@@ -384,6 +397,7 @@ export const publicationTypes = (components, isAdmin = false) => ({
             'Other',
         ],
     },
+
     [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
         name: DOCUMENT_TYPE_CONFERENCE_PAPER,
@@ -1289,8 +1303,7 @@ export const RECORD_ACTION_URLS = [
     },
     {
         label: 'Edit author affiliations',
-        url: pid =>
-            `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=authors`,
         inApp: true,
         showInDeleted: false,
         options: null,

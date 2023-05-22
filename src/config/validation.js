@@ -370,16 +370,14 @@ export const isFileValid = ({ files: { blacklist } }, isAdmin = false, isAdminEd
 };
 
 export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, allowOnlyEditor = false) => {
+    const authors = data.authors ?? data.authorsWithAffiliations;
     const errors = {};
     if (
-        (!data.authors && !data.editors) ||
-        (!data.authors && data.editors && data.editors.length === 0) ||
-        (!data.editors && data.authors && data.authors.length === 0) ||
-        (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
-        (!isAdmin &&
-            data.authors &&
-            data.authors.length !== 0 &&
-            data.authors.filter(item => item.selected).length === 0) ||
+        (!authors && !data.editors) ||
+        (!authors && data.editors && data.editors.length === 0) ||
+        (!data.editors && authors && authors.length === 0) ||
+        (authors && data.editors && data.editors.length === 0 && authors.length === 0) ||
+        (!isAdmin && authors && authors.length !== 0 && authors.filter(item => item.selected).length === 0) ||
         (!isAdmin &&
             data.editors &&
             data.editors.length !== 0 &&
@@ -391,7 +389,7 @@ export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = f
                 : locale.validationErrors.authorRequired;
         }
         errors.editors = isAdmin ? locale.validationErrors.editorRequiredAdmin : locale.validationErrors.editorRequired;
-    } else if (allowOnlyOne && data.authors && data.authors.length > 0 && data.editors && data.editors.length > 0) {
+    } else if (allowOnlyOne && authors && authors.length > 0 && data.editors && data.editors.length > 0) {
         errors.onlyOneOfAuthorOrEditor = locale.validationErrors.onlyOneOfAuthorOrEditor;
     }
     return errors;
