@@ -59,3 +59,6 @@ export { default as unpublishedSearchList } from './unpublishedSearchList';
 export { default as UQ716942uqagrinb } from './incompleteNTRORecordUQ716942_uqagrinb';
 export { default as UQ353708} from './editRecord';
 export { default as UQ339703} from './recordWithWSoD';
+export { default as recordWithNoAffiliationIssues } from './recordWithNoAffiliationIssues'
+export { default as recordWithIncorrectAffiliation } from './recordWithIncorrectAffiliation'
+export { default as recordWithOrphanedAffiliation } from './recordWithOrphanedAffiliation'
