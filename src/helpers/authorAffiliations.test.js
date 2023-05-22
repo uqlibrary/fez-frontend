@@ -47,9 +47,10 @@ describe('Author Affiliation helper functions:', () => {
         // by default, record has problem affils
         expect(helpers.hasValidAuthorAffiliations(record)).toEqual(false);
 
-        // check what happens after removing the problem affil
+        // check what happens after removing the problem affils
         const testRecord = helpers.deepClone(record);
-        delete testRecord.fez_author_affiliation[testRecord.fez_author_affiliation.length - 1];
+        testRecord.fez_author_affiliation.pop();
+        testRecord.fez_author_affiliation.pop();
         expect(helpers.hasValidAuthorAffiliations(testRecord)).toEqual(true);
     });
 
@@ -118,6 +119,7 @@ describe('Author Affiliation helper functions:', () => {
             7624000,
             7624839,
             7624840,
+            7624841,
         ]);
     });
 
@@ -220,6 +222,12 @@ describe('Author Affiliation helper functions:', () => {
                 rek_author: 'Affiliate, Orphaned',
                 rek_author_id: 7624840,
             },
+            {
+                has100pcAffiliations: true,
+                isNotOrphaned: false,
+                rek_author: 'This work',
+                rek_author_id: 7624841,
+            },
         ];
         const expected2 = [
             {
@@ -233,6 +241,12 @@ describe('Author Affiliation helper functions:', () => {
                 isNotOrphaned: true,
                 rek_author: 'Sibbald, Lee No Affil',
                 rek_author_id: 7624829,
+            },
+            {
+                has100pcAffiliations: true,
+                isNotOrphaned: false,
+                rek_author: 'Affiliate, Orphaned',
+                rek_author_id: 7624840,
             },
         ];
 
@@ -288,6 +302,12 @@ describe('Author Affiliation helper functions:', () => {
                 rek_author: 'Affiliate, Orphaned',
                 rek_author_id: 7624840,
             },
+            {
+                has100pcAffiliations: true,
+                isNotOrphaned: false,
+                rek_author: '',
+                rek_author_id: 7624841,
+            },
         ];
 
         // coverage
@@ -309,7 +329,7 @@ describe('Author Affiliation helper functions:', () => {
             expect.objectContaining({ rek_author: '' }),
         );
 
-        expect(helpers.composeAuthorAffiliationProblems(recordClone)).toEqual(expected1);
+        expect(helpers.composeAuthorAffiliationProblems(recordClone, 'This work')).toEqual(expected1);
 
         // remove an affiliation
         recordClone.fez_author_affiliation.pop();
