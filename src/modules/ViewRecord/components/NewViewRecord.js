@@ -199,7 +199,10 @@ export const NewViewRecord = ({
                 history,
                 pid,
                 shouldHandleAuthorAffiliations(recordToView),
-                composeAuthorAffiliationProblems(recordToView),
+                composeAuthorAffiliationProblems(
+                    recordToView,
+                    locale.pages.viewRecord.adminRecordData.drawer.nameIfAuthorUnavailable,
+                ),
             ),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [JSON.stringify(recordToView)],

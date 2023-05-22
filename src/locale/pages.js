@@ -630,7 +630,7 @@ export default {
             adminRecordData: {
                 drawer: {
                     title: 'Record Data',
-
+                    nameIfAuthorUnavailable: 'This work',
                     sectionTitles: {
                         notes: 'Notes',
                         authorAffiliations: 'Author Affiliations',

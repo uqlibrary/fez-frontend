@@ -53,16 +53,18 @@ export const getUniqueAffiliatedAuthorIds = affiliations =>
 export const isOrphanedAuthor = (record, authorId) =>
     !record.fez_record_search_key_author_id.some(author => author.rek_author_id === authorId);
 
-export const composeAuthorAffiliationProblems = record => {
+export const composeAuthorAffiliationProblems = (record, nameIfAuthorUnavailable = '') => {
     const uniqueAffiliatedAuthorIds = getUniqueAffiliatedAuthorIds(record.fez_author_affiliation);
     const affiliationsNot100pc =
         record.fez_record_search_key_author_id
             ?.map((author, index) => {
                 const hasAffiliations = uniqueAffiliatedAuthorIds.includes(author.rek_author_id);
                 return {
-                    rek_author_id: author.rek_author_id,
+                    rek_author_id: author?.rek_author_id ?? 0,
                     rek_author:
-                        record.fez_record_search_key_author?.[index]?.rek_author ?? author.rek_author_id_lookup ?? '',
+                        record.fez_record_search_key_author?.[index]?.rek_author ??
+                        author?.rek_author_id_lookup ??
+                        nameIfAuthorUnavailable,
                     has100pcAffiliations:
                         hasAffiliations &&
                         has100pcAffiliations({ author, affiliations: record.fez_author_affiliation }),
@@ -78,8 +80,8 @@ export const composeAuthorAffiliationProblems = record => {
                 : undefined;
             return !!orphanedAuthor
                 ? {
-                      rek_author_id: orphanedAuthor.fez_author.aut_id,
-                      rek_author: orphanedAuthor.fez_author.aut_display_name,
+                      rek_author_id: orphanedAuthor.af_author_id,
+                      rek_author: orphanedAuthor.fez_author?.aut_display_name ?? nameIfAuthorUnavailable,
                       has100pcAffiliations: true, // may not be true but doesn't actually matter for an orphan
                       isNotOrphaned: false,
                   }
