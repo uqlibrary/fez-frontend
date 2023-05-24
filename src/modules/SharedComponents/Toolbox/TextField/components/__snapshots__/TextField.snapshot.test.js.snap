@@ -18,7 +18,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
     inputProps={
       Object {
         "aria-label": undefined,
-        "aria-labelledby": "test",
+        "aria-labelledby": "test-input",
         "data-testid": "test-input",
         "id": "test-input",
         "label": undefined,
@@ -50,7 +50,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
     inputProps={
       Object {
         "aria-label": undefined,
-        "aria-labelledby": "test",
+        "aria-labelledby": "test-input",
         "data-testid": "test-input",
         "id": "test-input",
         "label": undefined,
@@ -82,7 +82,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
     inputProps={
       Object {
         "aria-label": "test",
-        "aria-labelledby": "test",
+        "aria-labelledby": "test-input",
         "data-testid": "test-input",
         "id": "test-input",
         "label": "test",
