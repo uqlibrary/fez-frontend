@@ -29,7 +29,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
                     'data-testid': `${props.textFieldId}-input`,
                     label: filteredProps.label,
                     'aria-label': props.ariaLabel || filteredProps.label,
-                    'aria-labelledby': `${props.textFieldId}-label`,
+                    'aria-labelledby': props.textFieldId,
                     ...filteredProps.inputProps,
                 }}
                 InputLabelProps={{
