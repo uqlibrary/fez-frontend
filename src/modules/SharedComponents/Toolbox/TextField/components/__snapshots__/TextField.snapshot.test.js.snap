@@ -73,6 +73,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
         "shrink": true,
       }
     }
+    ariaLabelledBy="fake-id"
     floatingLabelText="This is a test textfield component"
     floatinglabelfixed={true}
     fullWidth={true}
