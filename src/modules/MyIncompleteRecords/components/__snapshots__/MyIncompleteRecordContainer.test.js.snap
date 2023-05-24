@@ -784,7 +784,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           <input
                             aria-invalid="false"
                             aria-label="Funder/Sponsor name"
-                            aria-labelledby="rek-grant-agency-input"
                             autocomplete="off"
                             class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
                             data-testid="rek-grant-agency-input"
@@ -819,7 +818,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           <input
                             aria-invalid="false"
                             aria-label="Grant ID"
-                            aria-labelledby="rek-grant-id-input"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                             data-testid="rek-grant-id-input"
                             disabled=""
@@ -1716,7 +1714,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                     <textarea
                       aria-invalid="false"
                       aria-label="Notes for this work"
-                      aria-labelledby="comments-input"
                       class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
                       data-testid="comments-input"
                       id="comments-input"
