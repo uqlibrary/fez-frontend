@@ -13,7 +13,7 @@ describe('TextFieldWrapper snapshots tests', () => {
         type: 'text',
         fullWidth: true,
         floatingLabelText: 'This is a test textfield component',
-        ariaLabelledBy: 'fake-id',
+        ariaLabelledby: 'fake-id',
     };
 
     it('renders TextField component', () => {
