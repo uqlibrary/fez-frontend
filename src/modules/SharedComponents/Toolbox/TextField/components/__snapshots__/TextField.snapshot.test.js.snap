@@ -12,6 +12,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
         "shrink": undefined,
       }
     }
+    ariaLabelledBy="fake-id"
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
     id="test"
@@ -42,6 +43,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
         "shrink": undefined,
       }
     }
+    ariaLabelledBy="fake-id"
     className="requiredField"
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
