@@ -241,10 +241,16 @@ export default {
                     `Please enter a reason why you are ${isDeleted ? 'updating' : 'deleting'} this work`,
             },
             newDoi: {
-                title: (
+                tombstone_page_title: (
                     <>
                         New DOI
                         <div style={{ fontSize: '60%' }}>(displayed on the records deleted page)</div>
+                    </>
+                ),
+                redirect_title: (
+                    <>
+                        New DOI
+                        <div style={{ fontSize: '60%' }}>(redirect the DOI to)</div>
                     </>
                 ),
                 label: 'Please enter the DOI to which the record moved to',

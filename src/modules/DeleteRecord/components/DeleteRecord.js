@@ -18,12 +18,16 @@ import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/Navigation
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { pathConfig, validation } from 'config';
-import { DELETED, DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
+import {
+    DELETED,
+    DOI_CROSSREF_PREFIX,
+    DOI_DATACITE_PREFIX,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_EXCLUDE_CITATION_TEXT_LIST,
+} from 'config/general';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { doesListContainItem } from 'helpers/general';
-
-import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
-import { RichEditorField } from '../../SharedComponents/RichEditor';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 
 export default class DeleteRecord extends PureComponent {
     static propTypes = {
@@ -64,9 +68,8 @@ export default class DeleteRecord extends PureComponent {
 
     _hasUQDOI = () => {
         return (
-            this.props.recordToDelete?.rek_display_type !== PUBLICATION_TYPE_DATA_COLLECTION &&
-            (this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_CROSSREF_PREFIX) ||
-                this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_DATACITE_PREFIX))
+            this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_CROSSREF_PREFIX) ||
+            this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_DATACITE_PREFIX)
         );
     };
 
@@ -155,6 +158,7 @@ export default class DeleteRecord extends PureComponent {
         const rekDisplayTypeLowercase = this.props.recordToDelete?.rek_display_type_lookup?.toLowerCase();
         const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
         const isDeleted = this.props.recordToDelete?.rek_status === DELETED;
+        const isDataCollection = this.props.recordToDelete?.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION;
 
         return (
             <StandardPage title={txt.title(isDeleted)}>
@@ -170,92 +174,88 @@ export default class DeleteRecord extends PureComponent {
                                     />
                                 </StandardCard>
                             </Grid>
-                            {!hasUQDOI && (
-                                <React.Fragment>
-                                    <NavigationDialogBox
-                                        when={this.props.dirty && !this.props.submitSucceeded}
-                                        txt={formTxt.cancelWorkflowConfirmation}
-                                    />
-                                    <ConfirmDialogBox
-                                        onRef={this._setSuccessConfirmation}
-                                        onAction={this._navigateToViewPage}
-                                        onCancelAction={this._navigateToSearchPage}
-                                        locale={saveConfirmationLocale}
-                                    />
-                                    <Grid item xs={12}>
-                                        <StandardCard title={formTxt.reason.title(isDeleted)}>
-                                            <Grid container spacing={2}>
-                                                <Grid item xs={12}>
-                                                    <Field
-                                                        component={TextField}
-                                                        textFieldId="reason"
-                                                        disabled={this.props.submitting}
-                                                        name="reason"
-                                                        type="text"
-                                                        fullWidth
-                                                        multiline
-                                                        rows={3}
-                                                        label={formTxt.reason.label(isDeleted)}
-                                                        validate={[validation.maxLength255]}
-                                                    />
-                                                </Grid>
-                                            </Grid>
-                                        </StandardCard>
+                            <NavigationDialogBox
+                                when={this.props.dirty && !this.props.submitSucceeded}
+                                txt={formTxt.cancelWorkflowConfirmation}
+                            />
+                            <ConfirmDialogBox
+                                onRef={this._setSuccessConfirmation}
+                                onAction={this._navigateToViewPage}
+                                onCancelAction={this._navigateToSearchPage}
+                                locale={saveConfirmationLocale}
+                            />
+                            <Grid item xs={12}>
+                                <StandardCard title={formTxt.reason.title(isDeleted)}>
+                                    <Grid container spacing={2}>
+                                        <Grid item xs={12}>
+                                            <Field
+                                                component={TextField}
+                                                textFieldId="reason"
+                                                disabled={this.props.submitting}
+                                                name="reason"
+                                                type="text"
+                                                fullWidth
+                                                multiline
+                                                rows={3}
+                                                label={formTxt.reason.label(isDeleted)}
+                                                validate={[validation.maxLength255]}
+                                            />
+                                        </Grid>
                                     </Grid>
-                                    {this.props.recordToDelete?.rek_display_type ===
-                                        PUBLICATION_TYPE_DATA_COLLECTION && (
-                                        <>
+                                </StandardCard>
+                            </Grid>
+                            {(hasUQDOI || isDataCollection) && (
+                                <Grid item xs={12}>
+                                    <StandardCard
+                                        title={
+                                            isDataCollection
+                                                ? formTxt.newDoi.tombstone_page_title
+                                                : formTxt.newDoi.redirect_title
+                                        }
+                                    >
+                                        <Grid container spacing={2}>
                                             <Grid item xs={12}>
-                                                <StandardCard title={formTxt.newDoi.title}>
-                                                    <Grid container spacing={2}>
-                                                        <Grid item xs={12}>
-                                                            <Field
-                                                                component={TextField}
-                                                                disabled={this.props.submitting}
-                                                                name="publication.fez_record_search_key_new_doi.rek_new_doi"
-                                                                textFieldId="rek-new-doi"
-                                                                type="text"
-                                                                fullWidth
-                                                                validate={[validation.doi, validation.maxLength255]}
-                                                                label={formTxt.newDoi.label}
-                                                                placeholder={formTxt.newDoi.placeholder}
-                                                            />
-                                                        </Grid>
-                                                    </Grid>
-                                                </StandardCard>
+                                                <Field
+                                                    component={TextField}
+                                                    disabled={this.props.submitting}
+                                                    name="publication.fez_record_search_key_new_doi.rek_new_doi"
+                                                    textFieldId="rek-new-doi"
+                                                    type="text"
+                                                    fullWidth
+                                                    validate={[validation.doi, validation.maxLength255]}
+                                                    label={formTxt.newDoi.label}
+                                                    placeholder={formTxt.newDoi.placeholder}
+                                                />
                                             </Grid>
+                                        </Grid>
+                                    </StandardCard>
+                                </Grid>
+                            )}
+                            {isDataCollection && (
+                                <Grid item xs={12}>
+                                    <StandardCard title={formTxt.notes.title}>
+                                        <Grid container spacing={2}>
                                             <Grid item xs={12}>
-                                                <StandardCard title={formTxt.notes.title}>
-                                                    <Grid container spacing={2}>
-                                                        <Grid item xs={12}>
-                                                            <Field
-                                                                component={RichEditorField}
-                                                                name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
-                                                                textFieldId="rek-deletion-notes-text"
-                                                                richEditorId="rek-deletion-notes"
-                                                                disabled={this.props.submitting}
-                                                                fullWidth
-                                                                multiline
-                                                                rows={5}
-                                                                validate={[validation.maxListEditorTextLength2000]}
-                                                                maxValue={2000}
-                                                            />
-                                                        </Grid>
-                                                    </Grid>
-                                                </StandardCard>
+                                                <Field
+                                                    component={RichEditorField}
+                                                    name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
+                                                    textFieldId="rek-deletion-notes-text"
+                                                    richEditorId="rek-deletion-notes"
+                                                    disabled={this.props.submitting}
+                                                    fullWidth
+                                                    multiline
+                                                    rows={5}
+                                                    validate={[validation.maxListEditorTextLength2000]}
+                                                    maxValue={2000}
+                                                />
                                             </Grid>
-                                        </>
-                                    )}
-                                </React.Fragment>
+                                        </Grid>
+                                    </StandardCard>
+                                </Grid>
                             )}
                             {alertProps && (
                                 <Grid item xs={12}>
                                     <Alert pushToTop {...alertProps} />
-                                </Grid>
-                            )}
-                            {hasUQDOI && (
-                                <Grid item xs={12}>
-                                    <Alert message={formTxt.uqDoiAlert.message(this.props.recordToDelete.rek_pid)} />
                                 </Grid>
                             )}
                         </Grid>
@@ -278,7 +278,7 @@ export default class DeleteRecord extends PureComponent {
                                     fullWidth
                                     children={txt.submit(isDeleted)}
                                     onClick={this.props.handleSubmit}
-                                    disabled={hasUQDOI || this.props.submitting || this.props.disableSubmit}
+                                    disabled={this.props.submitting || this.props.disableSubmit}
                                     id="submit-delete-record"
                                     data-testid="delete-admin"
                                 />

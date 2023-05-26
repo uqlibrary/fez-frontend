@@ -11,6 +11,7 @@ const FORM_NAME = 'DeleteRecord';
 
 const onSubmit = (values, dispatch) => {
     const formValues = values.toJS();
+    console.log(formValues);
     if (formValues.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText) {
         formValues.publication.fez_record_search_key_deletion_notes.rek_deletion_notes =
             formValues.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText;

@@ -73,7 +73,10 @@ describe('Component DeleteRecord', () => {
 
     it('should render delete record form with data collection citation', () => {
         const wrapper = setup({
-            recordToDelete: { ...mockRecordToDelete, rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION },
+            recordToDelete: {
+                ...mockRecordToDelete,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(3);
@@ -91,7 +94,7 @@ describe('Component DeleteRecord', () => {
         expect(wrapper.find('Field').length).toEqual(3);
     });
 
-    it('should display alert and disable delete button on records with Crossref UQ DOIs', () => {
+    it('should render delete record form for records with Crossref UQ DOIs', () => {
         const wrapper = setup({
             recordToDelete: {
                 ...mockRecordToDelete,
@@ -99,11 +102,11 @@ describe('Component DeleteRecord', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('#submit-delete-record').props().disabled).toEqual(true);
-        expect(wrapper.find('Field').length).toEqual(0);
+        expect(wrapper.find('#submit-delete-record').disabled).toBeFalsy();
+        expect(wrapper.find('Field').length).toEqual(2);
     });
 
-    it('should display alert and disable delete button on records with DataCite UQ DOIs', () => {
+    it('should render delete record form for records with DataCite UQ DOIs', () => {
         const wrapper = setup({
             recordToDelete: {
                 ...mockRecordToDelete,
@@ -111,8 +114,8 @@ describe('Component DeleteRecord', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('#submit-delete-record').props().disabled).toEqual(true);
-        expect(wrapper.find('Field').length).toEqual(0);
+        expect(wrapper.find('#submit-delete-record').disabled).toBeFalsy();
+        expect(wrapper.find('Field').length).toEqual(2);
     });
 
     it('should display specific alert if trying to delete a Community that contains Collections', () => {
