@@ -5,7 +5,6 @@ import 'regenerator-runtime/runtime';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { connectRouter } from 'connected-react-router/immutable';
 import { AppContainer } from 'react-hot-loader';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
@@ -17,10 +16,8 @@ import MomentUtils from '@date-io/moment';
 // Internal
 import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
-import rootReducer from './reducer';
 import 'sass/index.scss';
-import { store } from 'config/store';
-import { history } from 'config/history';
+import { store, reducers, reduxHistory } from 'config/store';
 
 // Increase default (10) event listeners to 30
 require('events').EventEmitter.prototype._maxListeners = 30;
@@ -63,7 +60,7 @@ const render = () => {
             <AppContainer>
                 <Provider store={store}>
                     <LocalizationProvider dateAdapter={MomentUtils}>
-                        <Root history={history} />
+                        <Root history={reduxHistory} />
                     </LocalizationProvider>
                 </Provider>
             </AppContainer>
@@ -83,6 +80,6 @@ if (module.hot) {
 
     // Reload reducers
     module.hot.accept('./reducer', () => {
-        store.replaceReducer(connectRouter(history)(rootReducer));
+        store.replaceReducer(reducers);
     });
 }
