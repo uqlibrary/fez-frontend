@@ -14,6 +14,10 @@ const setup = ({ state = {}, props = {} } = {}) => {
 };
 
 const mocks = {};
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: jest.fn(),
+}));
 describe('AddToFavouritesButton', () => {
     afterEach(() => {
         Object.keys(mocks).map(name => mocks[name].mockRestore());
@@ -24,7 +28,7 @@ describe('AddToFavouritesButton', () => {
     });
     it('should display confirmation after adding a fav', async () => {
         jest.useFakeTimers();
-        mocks.useDispatch = jest.spyOn(redux, 'useDispatch');
+        mocks.useDispatch = redux.useDispatch;
         mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
         const { queryByTestId, getByTestId } = setup({
             props: { selectedJournals: { 1: true }, clearSelectedJournals: jest.fn() },

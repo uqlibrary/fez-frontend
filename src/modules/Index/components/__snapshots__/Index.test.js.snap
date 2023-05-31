@@ -23,8 +23,23 @@ exports[`Index page should render placeholders 1`] = `
           Array [],
           Array [],
           Array [],
+          Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
