@@ -262,7 +262,6 @@ export const getErrorMessage = record => {
 
 const renderTitle = titlePieces => {
     const titleTemplate = txt.pageTitle({ ...titlePieces, title: '[TITLE]' });
-    dd(titlePieces.title);
     const pieces = titleTemplate.split('[TITLE]');
     return (
         <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="doi-page-title">
