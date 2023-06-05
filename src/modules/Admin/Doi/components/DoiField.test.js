@@ -8,7 +8,7 @@ jest.mock('modules/ViewRecord/components/AdditionalInformation');
 jest.mock('react-html-parser');
 
 import { formatPublicationDate } from 'modules/ViewRecord/components/AdditionalInformation';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 
 const setup = (testProps = {}, args = { isShallow: false }) => {
     const props = {
@@ -56,7 +56,7 @@ describe('DoiField', () => {
             {
                 field: 'rek_description',
                 test: () => {
-                    expect(ReactHtmlParser).toHaveBeenCalledWith(record.rek_description);
+                    expect(parseHtmlToJSX).toHaveBeenCalledWith(record.rek_description);
                 },
             },
             // Date

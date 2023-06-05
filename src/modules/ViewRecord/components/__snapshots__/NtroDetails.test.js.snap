@@ -24,11 +24,9 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -36,11 +34,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -2135,11 +2129,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                             <Unknown
                               className="NtroDetailsClass-richTextParagraphFix-2"
                               data={
-                                Array [
-                                  <p>
-                                    It was significant.
-                                  </p>,
-                                ]
+                                <p>
+                                  It was significant.
+                                </p>
                               }
                               heading="Creator research statement"
                               rowId="rek-creator-contribution-statement-0"
@@ -2147,11 +2139,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                             />
                             <Unknown
                               className="NtroDetailsClass-richTextParagraphFix-2"
-                              data={
-                                Array [
-                                  "Missing.",
-                                ]
-                              }
+                              data="Missing."
                               heading="Creator research statement"
                               rowId="rek-creator-contribution-statement-1"
                               subheading="(Someone else)"
@@ -2159,11 +2147,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                             <Unknown
                               className="NtroDetailsClass-richTextParagraphFix-2"
                               data={
-                                Array [
-                                  <p>
-                                    This is an abstract
-                                  </p>,
-                                ]
+                                <p>
+                                  This is an abstract
+                                </p>
                               }
                               heading="Abstract/Description"
                               rowId="rek-formatted-abstract"
@@ -2665,11 +2651,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                       <Unknown
                                         className="NtroDetailsClass-richTextParagraphFix-2"
                                         data={
-                                          Array [
-                                            <p>
-                                              It was significant.
-                                            </p>,
-                                          ]
+                                          <p>
+                                            It was significant.
+                                          </p>
                                         }
                                         heading="Creator research statement"
                                         rowId="rek-creator-contribution-statement-0"
@@ -2677,11 +2661,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                       />
                                       <Unknown
                                         className="NtroDetailsClass-richTextParagraphFix-2"
-                                        data={
-                                          Array [
-                                            "Missing.",
-                                          ]
-                                        }
+                                        data="Missing."
                                         heading="Creator research statement"
                                         rowId="rek-creator-contribution-statement-1"
                                         subheading="(Someone else)"
@@ -2689,11 +2669,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                       <Unknown
                                         className="NtroDetailsClass-richTextParagraphFix-2"
                                         data={
-                                          Array [
-                                            <p>
-                                              This is an abstract
-                                            </p>,
-                                          ]
+                                          <p>
+                                            This is an abstract
+                                          </p>
                                         }
                                         heading="Abstract/Description"
                                         rowId="rek-formatted-abstract"
@@ -3179,11 +3157,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           <Unknown
                                             className="NtroDetailsClass-richTextParagraphFix-2"
                                             data={
-                                              Array [
-                                                <p>
-                                                  It was significant.
-                                                </p>,
-                                              ]
+                                              <p>
+                                                It was significant.
+                                              </p>
                                             }
                                             heading="Creator research statement"
                                             rowId="rek-creator-contribution-statement-0"
@@ -3191,11 +3167,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           />
                                           <Unknown
                                             className="NtroDetailsClass-richTextParagraphFix-2"
-                                            data={
-                                              Array [
-                                                "Missing.",
-                                              ]
-                                            }
+                                            data="Missing."
                                             heading="Creator research statement"
                                             rowId="rek-creator-contribution-statement-1"
                                             subheading="(Someone else)"
@@ -3203,11 +3175,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           <Unknown
                                             className="NtroDetailsClass-richTextParagraphFix-2"
                                             data={
-                                              Array [
-                                                <p>
-                                                  This is an abstract
-                                                </p>,
-                                              ]
+                                              <p>
+                                                This is an abstract
+                                              </p>
                                             }
                                             heading="Abstract/Description"
                                             rowId="rek-formatted-abstract"
@@ -4790,11 +4760,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                 <Unknown
                                                   className="NtroDetailsClass-richTextParagraphFix-2"
                                                   data={
-                                                    Array [
-                                                      <p>
-                                                        It was significant.
-                                                      </p>,
-                                                    ]
+                                                    <p>
+                                                      It was significant.
+                                                    </p>
                                                   }
                                                   heading="Creator research statement"
                                                   rowId="rek-creator-contribution-statement-0"
@@ -4802,11 +4770,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                 />,
                                                 <Unknown
                                                   className="NtroDetailsClass-richTextParagraphFix-2"
-                                                  data={
-                                                    Array [
-                                                      "Missing.",
-                                                    ]
-                                                  }
+                                                  data="Missing."
                                                   heading="Creator research statement"
                                                   rowId="rek-creator-contribution-statement-1"
                                                   subheading="(Someone else)"
@@ -4815,11 +4779,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               <Unknown
                                                 className="NtroDetailsClass-richTextParagraphFix-2"
                                                 data={
-                                                  Array [
-                                                    <p>
-                                                      This is an abstract
-                                                    </p>,
-                                                  ]
+                                                  <p>
+                                                    This is an abstract
+                                                  </p>
                                                 }
                                                 heading="Abstract/Description"
                                                 rowId="rek-formatted-abstract"
@@ -9922,11 +9884,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           <Component
                                             className="NtroDetailsClass-richTextParagraphFix-2"
                                             data={
-                                              Array [
-                                                <p>
-                                                  It was significant.
-                                                </p>,
-                                              ]
+                                              <p>
+                                                It was significant.
+                                              </p>
                                             }
                                             heading="Creator research statement"
                                             key="0"
@@ -11894,11 +11854,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               ownerState={
                                                                 Object {
                                                                   "align": "inherit",
-                                                                  "children": Array [
-                                                                    <p>
-                                                                      It was significant.
-                                                                    </p>,
-                                                                  ],
+                                                                  "children": <p>
+                                                                    It was significant.
+                                                                  </p>,
                                                                   "className": "NtroDetailsClass-richTextParagraphFix-2",
                                                                   "color": undefined,
                                                                   "component": "span",
@@ -12256,9 +12214,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 className="MuiTypography-root MuiTypography-body2 NtroDetailsClass-richTextParagraphFix-2 css-e784if-MuiTypography-root"
                                                                 data-testid="rek-creator-contribution-statement-0"
                                                               >
-                                                                <p
-                                                                  key="0"
-                                                                >
+                                                                <p>
                                                                   It was significant.
                                                                 </p>
                                                               </span>
@@ -12274,11 +12230,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           </Component>
                                           <Component
                                             className="NtroDetailsClass-richTextParagraphFix-2"
-                                            data={
-                                              Array [
-                                                "Missing.",
-                                              ]
-                                            }
+                                            data="Missing."
                                             heading="Creator research statement"
                                             key="1"
                                             rowId="rek-creator-contribution-statement-1"
@@ -14241,9 +14193,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               ownerState={
                                                                 Object {
                                                                   "align": "inherit",
-                                                                  "children": Array [
-                                                                    "Missing.",
-                                                                  ],
+                                                                  "children": "Missing.",
                                                                   "className": "NtroDetailsClass-richTextParagraphFix-2",
                                                                   "color": undefined,
                                                                   "component": "span",
@@ -14616,11 +14566,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           <Component
                                             className="NtroDetailsClass-richTextParagraphFix-2"
                                             data={
-                                              Array [
-                                                <p>
-                                                  This is an abstract
-                                                </p>,
-                                              ]
+                                              <p>
+                                                This is an abstract
+                                              </p>
                                             }
                                             heading="Abstract/Description"
                                             rowId="rek-formatted-abstract"
@@ -16176,11 +16124,9 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               ownerState={
                                                                 Object {
                                                                   "align": "inherit",
-                                                                  "children": Array [
-                                                                    <p>
-                                                                      This is an abstract
-                                                                    </p>,
-                                                                  ],
+                                                                  "children": <p>
+                                                                    This is an abstract
+                                                                  </p>,
                                                                   "className": "NtroDetailsClass-richTextParagraphFix-2",
                                                                   "color": undefined,
                                                                   "component": "span",
@@ -16538,9 +16484,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 className="MuiTypography-root MuiTypography-body2 NtroDetailsClass-richTextParagraphFix-2 css-e784if-MuiTypography-root"
                                                                 data-testid="rek-formatted-abstract"
                                                               >
-                                                                <p
-                                                                  key="0"
-                                                                >
+                                                                <p>
                                                                   This is an abstract
                                                                 </p>
                                                               </span>
@@ -30291,11 +30235,9 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -30303,11 +30245,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -30315,11 +30253,9 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -30453,11 +30389,9 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -30465,11 +30399,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -30477,11 +30407,9 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -30628,11 +30556,9 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -30640,11 +30566,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -30652,11 +30574,9 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -30789,11 +30709,9 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -30801,11 +30719,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -30813,11 +30727,9 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -30950,11 +30862,9 @@ exports[`NtroDetails  renders component as expected 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -30962,11 +30872,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -30974,11 +30880,9 @@ exports[`NtroDetails  renders component as expected 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -31105,11 +31009,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
       subheading="(Someone else)"
     />
     <Component
-      data={
-        Array [
-          "A statement",
-        ]
-      }
+      data="A statement"
       heading="Creator research statement"
       key="0"
       rowId="rek-creator-contribution-statement-0"
@@ -31124,11 +31024,9 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -31255,11 +31153,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
       subheading="(Someone else)"
     />
     <Component
-      data={
-        Array [
-          "A statement",
-        ]
-      }
+      data="A statement"
       heading="Creator research statement"
       key="0"
       rowId="rek-creator-contribution-statement-0"
@@ -31267,11 +31161,9 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -31399,11 +31291,9 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -31411,11 +31301,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -31423,11 +31309,9 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -31568,11 +31452,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
       subheading="()"
     />
     <Component
-      data={
-        Array [
-          "A statement",
-        ]
-      }
+      data="A statement"
       heading="Creator research statement"
       key="0"
       rowId="rek-creator-contribution-statement-0"
@@ -31601,11 +31481,9 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -31735,11 +31613,9 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -31747,11 +31623,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -31759,11 +31631,9 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -31903,11 +31773,9 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -31915,11 +31783,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -32062,11 +31926,9 @@ exports[`NtroDetails  should render component with record 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -32074,11 +31936,7 @@ exports[`NtroDetails  should render component with record 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -32086,11 +31944,9 @@ exports[`NtroDetails  should render component with record 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"
@@ -32352,11 +32208,9 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            It was significant.
-          </p>,
-        ]
+        <p>
+          It was significant.
+        </p>
       }
       heading="Creator research statement"
       key="0"
@@ -32364,11 +32218,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing."
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
@@ -32376,11 +32226,9 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
     />
     <Component
       data={
-        Array [
-          <p>
-            This is an abstract
-          </p>,
-        ]
+        <p>
+          This is an abstract
+        </p>
       }
       heading="Abstract/Description"
       rowId="rek-formatted-abstract"

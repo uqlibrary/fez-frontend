@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { destroy, Field } from 'redux-form/immutable';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import queryString from 'query-string';
 
 import Tabs from '@mui/material/Tabs';
@@ -351,7 +351,7 @@ export const AdminInterface = ({
                     <Grid item xs style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 18, fontWeight: 400 }}>
                             {!createMode
-                                ? ReactHtmlParser(
+                                ? parseHtmlToJSX(
                                       `${pageTitlePrefix} ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
                                   )
                                 : `Add a new ${selectedPublicationType}`}
