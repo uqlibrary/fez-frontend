@@ -4,7 +4,7 @@ import React from 'react';
 import Immutable from 'immutable';
 import MyIncompleteRecordContainer from './MyIncompleteRecordContainer';
 import { incompleteNTRORecordUQ352045 } from 'mock/data/records';
-import { render, WithReduxStore, waitForElementToBeRemoved, WithRouter, fireEvent, waitFor } from 'test-utils';
+import { render, WithReduxStore, waitForElementToBeRemoved, WithRouter, fireEvent } from 'test-utils';
 import * as repositories from 'repositories';
 
 import { useParams } from 'react-router';
@@ -55,6 +55,27 @@ describe('MyIncompleteRecordContainer', () => {
         fireEvent.click(getByText('Major'));
 
         expect(getByTestId('page-title')).toHaveTextContent('Complete my work');
+    });
+
+    it('should handle undefined fez_record_search_key_grant_agency', async () => {
+        mockApi.onGet(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:111111' }).apiUrl).replyOnce(200, {
+            data: {
+                ...incompleteNTRORecordUQ352045,
+                fez_record_search_key_grant_agency: undefined,
+            },
+        });
+
+        const { getByText, asFragment } = setup(
+            {},
+            {
+                accountReducer: {
+                    author: { aut_id: 78691 },
+                },
+            },
+        );
+
+        await waitForElementToBeRemoved(() => getByText('Loading'));
+        expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render default component with default values', async () => {
