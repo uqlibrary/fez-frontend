@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import { useParams } from 'react-router';
 
 import Grid from '@mui/material/Grid';
@@ -266,7 +266,7 @@ const renderTitle = titlePieces => {
     return (
         <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="doi-page-title">
             {pieces[0]}
-            {ReactHtmlParser(titlePieces.title)}
+            {parseHtmlToJSX(titlePieces.title)}
             {pieces[1]}
         </Typography>
     );

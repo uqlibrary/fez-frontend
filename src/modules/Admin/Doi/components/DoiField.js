@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -8,6 +7,7 @@ import makeStyles from '@mui/styles/makeStyles';
 
 import { formatPublicationDate } from 'modules/ViewRecord/components/AdditionalInformation';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { parseHtmlToJSX } from 'helpers/general';
 
 export const useStyles = makeStyles(theme => ({
     gridRow: {
@@ -55,7 +55,7 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
 
         case 'rek_description':
         case 'rek_title':
-            value = ReactHtmlParser(data);
+            value = parseHtmlToJSX(data);
             break;
 
         case 'rek_date':

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
 import { pathConfig } from 'config';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import AdminActions from './AdminActions';
 import PropTypes from 'prop-types';
 import Collapse from '@mui/material/Collapse';
@@ -342,7 +342,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                     id={`collection-title-${row.rek_pid}`}
                                                                     data-testid={`collection-title-${row.rek_pid}`}
                                                                 >
-                                                                    {ReactHtmlParser(row.rek_title)}
+                                                                    {parseHtmlToJSX(row.rek_title)}
                                                                 </Link>
                                                             </Typography>
                                                             {!!row.rek_description && (

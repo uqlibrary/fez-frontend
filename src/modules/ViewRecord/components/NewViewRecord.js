@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -247,7 +247,7 @@ export const NewViewRecord = ({
         >
             <StandardPage
                 className="viewRecord"
-                title={ReactHtmlParser(recordToView.rek_title)}
+                title={parseHtmlToJSX(recordToView.rek_title)}
                 style={{ display: 'flex' }}
             >
                 {isAdmin && !isDeleted && !!recordToView && (

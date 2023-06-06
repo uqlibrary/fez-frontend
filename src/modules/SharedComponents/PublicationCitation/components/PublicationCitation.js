@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import { Link } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
@@ -308,9 +308,9 @@ export class PublicationCitation extends PureComponent {
     renderTitle = () => {
         const { publication, hideLinks } = this.props;
         return publication.rek_pid && !hideLinks ? (
-            <Link to={pathConfig.records.view(publication.rek_pid)}>{ReactHtmlParser(publication.rek_title)}</Link>
+            <Link to={pathConfig.records.view(publication.rek_pid)}>{parseHtmlToJSX(publication.rek_title)}</Link>
         ) : (
-            ReactHtmlParser(publication.rek_title)
+            parseHtmlToJSX(publication.rek_title)
         );
     };
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import AdminActions from './AdminActions';
 import * as actions from 'actions';
 import makeStyles from '@mui/styles/makeStyles';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import { pathConfig } from 'config';
 import CollectionsListEmbedded from './CollectionsListEmbedded';
 import IconButton from '@mui/material/IconButton';
@@ -103,7 +103,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                     id={`community-title-${row.rek_pid}`}
                                     data-testid={`community-title-${row.rek_pid}`}
                                 >
-                                    {ReactHtmlParser(row.rek_title)}
+                                    {parseHtmlToJSX(row.rek_title)}
                                 </Link>
                             </Typography>
                             {!!row.rek_description && <Typography variant="caption">{row.rek_description}</Typography>}
