@@ -9,7 +9,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-4 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-83 css-14y2kic-MuiTypography-root"
         data-testid="page-title"
         id="page-title"
       >
@@ -17,7 +17,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
       </h2>
     </div>
     <div
-      class="Page-helpIcon-5"
+      class="Page-helpIcon-84"
     >
       <button
         aria-label="Click for more information"
@@ -29,7 +29,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-85 css-i4bv87-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -51,7 +51,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-3 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-82 css-13i4rnv-MuiGrid-root"
     >
       <div
         class="publicationCitation"
@@ -74,7 +74,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   style="min-width: 1px;"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-8 css-1uywuy6-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-87 css-1uywuy6-MuiTypography-root"
                   >
                     <a
                       href="/view/UQ:352045"
@@ -84,7 +84,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   </h6>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-9 css-1idn90j-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-88 css-1idn90j-MuiGrid-root"
                 >
                   <div
                     class="citationContent citationCreativeWork"
@@ -146,7 +146,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-10 css-1wrgmsj-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-89 css-1wrgmsj-MuiGrid-root"
                       style="flex-grow: 1;"
                     >
                       <div
@@ -157,7 +157,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         >
                           <a
                             aria-label="Full citation in Google scholar will open in a new window"
-                            class="googleCitationCount CitationCountView-citationCount-19 makeStyles-externalLink-21 makeStyles-externalLink-57"
+                            class="googleCitationCount CitationCountView-citationCount-98 makeStyles-externalLink-100 makeStyles-externalLink-136"
                             data-testid="citation-count-link"
                             href="https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello"
                             id="citation-count-link"
@@ -189,7 +189,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
           </div>
         </div>
         <hr
-          class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-7 css-9mgopn-MuiDivider-root"
+          class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-86 css-9mgopn-MuiDivider-root"
         />
       </div>
       <form>
@@ -205,7 +205,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-27 MuiGrid-container makeStyles-info_outline-42 makeStyles-common-28 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root makeStyles-root-106 MuiGrid-container makeStyles-info_outline-121 makeStyles-common-107 css-1k6h6af-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -214,7 +214,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-31 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item makeStyles-icon-110 alert-icon  css-13i4rnv-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -230,7 +230,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-32 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-111 alert-text css-1vd824g-MuiGrid-root"
                     >
                       <b>
                         Missing data - 
@@ -246,7 +246,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-123 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-type-&-collection"
               id="standard-card-type-&-collection"
             >
@@ -257,7 +257,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-128 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-type-&-collection-header"
                     id="standard-card-type-&-collection-header"
                   >
@@ -271,7 +271,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                 id="standard-card-type-&-collection-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridType-1 css-13cjagy-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridType-80 css-13cjagy-MuiGrid2-root"
                 >
                   <div
                     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-13y5oxm-MuiGrid2-root"
@@ -297,7 +297,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   </div>
                 </div>
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridSubType-2 css-13cjagy-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridSubType-81 css-13cjagy-MuiGrid2-root"
                 >
                   <div
                     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-13y5oxm-MuiGrid2-root"
@@ -329,7 +329,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-123 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-author/creator-research-statement"
               id="standard-card-author/creator-research-statement"
             >
@@ -340,7 +340,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-128 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-author/creator-research-statement-header"
                     id="standard-card-author/creator-research-statement-header"
                   >
@@ -360,7 +360,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-85 css-i4bv87-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -524,7 +524,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-123 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-ntro-data"
               id="standard-card-ntro-data"
             >
@@ -535,7 +535,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-128 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-ntro-data-header"
                     id="standard-card-ntro-data-header"
                   >
@@ -555,7 +555,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-85 css-i4bv87-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -733,7 +733,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-123 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-grant-details"
               id="standard-card-grant-details"
             >
@@ -744,7 +744,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-128 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-grant-details-header"
                     id="standard-card-grant-details-header"
                   >
@@ -906,7 +906,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-123 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-authors"
               id="standard-card-authors"
             >
@@ -917,7 +917,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-128 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-authors-header"
                     id="standard-card-authors-header"
                   >
@@ -937,7 +937,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-85 css-i4bv87-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -1012,7 +1012,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                           class="MuiListItem-container css-oyakqy-MuiListItem-container"
                         >
                           <div
-                            class="MuiListItem-root ContributorRowHeader-header-63 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+                            class="MuiListItem-root ContributorRowHeader-header-142 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
                           >
                             <div
                               class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -1056,7 +1056,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                 class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
                               >
                                 <span
-                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-62 ContributorRowHeader-paddingRightEdit-64 css-1vklb8l-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-141 ContributorRowHeader-paddingRightEdit-143 css-1vklb8l-MuiTypography-root"
                                 >
                                   Reorder items
                                 </span>
@@ -1095,18 +1095,18 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         </li>
                       </ul>
                       <ul
-                        class="MuiList-root ContributorList Connect(ContributorsEditor)-list-50 Connect(ContributorsEditor)-scroll-51 MuiList-padding css-h4y409-MuiList-root"
+                        class="MuiList-root ContributorList Connect(ContributorsEditor)-list-129 Connect(ContributorsEditor)-scroll-130 MuiList-padding css-h4y409-MuiList-root"
                         data-testid="rek-author-list"
                         id="rek-author-list"
                       >
                         <li
                           aria-label="Select this author (Topology) to update their affiliation data."
-                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-highlighted-71 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          class="MuiListItem-root makeStyles-listItem-148 makeStyles-highlighted-150 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-0"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-147 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
@@ -1132,7 +1132,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                 class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                                  class="MuiTypography-root makeStyles-primary-154  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   Topology
                                 </p>
@@ -1152,7 +1152,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-79"
+                              class="makeStyles-actionsContainer-158"
                               data-testid="rek-author-list-row-0-actions"
                               id="rek-author-list-row-0-actions"
                             >
@@ -1229,12 +1229,12 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         </li>
                         <li
                           aria-label="Select this author (Davidson, Robert) to update their affiliation data."
-                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-disabledListItem-70 makeStyles-contributorLinked-78 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          class="MuiListItem-root makeStyles-listItem-148 makeStyles-disabledListItem-149 makeStyles-contributorLinked-157 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-1"
                           tabindex="-1"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-147 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
@@ -1261,7 +1261,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                 class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                                  class="MuiTypography-root makeStyles-primary-154  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   Davidson, Robert
                                 </p>
@@ -1281,7 +1281,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-79"
+                              class="makeStyles-actionsContainer-158"
                               data-testid="rek-author-list-row-1-actions"
                               id="rek-author-list-row-1-actions"
                             >
@@ -1378,12 +1378,12 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         </li>
                         <li
                           aria-label="Select this author (Babbage, John) to update their affiliation data."
-                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-highlighted-71 makeStyles-contributorLinked-78 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          class="MuiListItem-root makeStyles-listItem-148 makeStyles-highlighted-150 makeStyles-contributorLinked-157 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-2"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-147 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
@@ -1410,7 +1410,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                 class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                                  class="MuiTypography-root makeStyles-primary-154  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   Babbage, John
                                 </p>
@@ -1430,7 +1430,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-79"
+                              class="makeStyles-actionsContainer-158"
                               data-testid="rek-author-list-row-2-actions"
                               id="rek-author-list-row-2-actions"
                             >
@@ -1529,12 +1529,12 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         </li>
                         <li
                           aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
-                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-highlighted-71 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          class="MuiListItem-root makeStyles-listItem-148 makeStyles-highlighted-150 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-3"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-147 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
@@ -1560,7 +1560,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                 class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                                  class="MuiTypography-root makeStyles-primary-154  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   The Brodsky Quartet
                                 </p>
@@ -1580,7 +1580,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-79"
+                              class="makeStyles-actionsContainer-158"
                               data-testid="rek-author-list-row-3-actions"
                               id="rek-author-list-row-3-actions"
                             >
@@ -1671,7 +1671,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-123 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-notes"
               id="standard-card-notes"
             >
@@ -1682,7 +1682,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-128 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-notes-header"
                     id="standard-card-notes-header"
                   >
