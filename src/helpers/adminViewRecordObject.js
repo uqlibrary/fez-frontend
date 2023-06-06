@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import config from 'locale/viewRecord';
 import Button from '@mui/material/Button';
 export const navigateToEdit = (history, pid) => {
@@ -98,7 +98,7 @@ export const createDefaultDrawerDescriptorObject = (
     const parsedNotesKey = formattedString(parseKey(fields.notes, content));
     // don't ReactHtmlParse notes if they're empty and the above function has returned '-',
     // otherwise ReactHtmlParse will return an array and will cause issues when rendering to screen.
-    const parsedNotes = parsedNotesKey !== '-' ? ReactHtmlParser(parsedNotesKey) : parsedNotesKey;
+    const parsedNotes = parsedNotesKey !== '-' ? parseHtmlToJSX(parsedNotesKey) : parsedNotesKey;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][0].value = locale.notes;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][1].value = parsedNotes;
 

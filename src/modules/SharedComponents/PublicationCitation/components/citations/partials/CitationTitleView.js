@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 
 export default class CitationTitleView extends PureComponent {
     static propTypes = {
@@ -27,7 +27,7 @@ export default class CitationTitleView extends PureComponent {
         return (
             <span className={className || ''}>
                 {prefix}
-                {ReactHtmlParser(value)}
+                {parseHtmlToJSX(value)}
                 {suffix === value.slice(-1) ? '' : suffix}
             </span>
         );

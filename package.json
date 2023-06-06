@@ -100,6 +100,7 @@
         "eslint-plugin-uqlibrary": "file:eslint-plugin-uqlibrary",
         "fake-timers": "^0.1.2",
         "file-loader": "^6.2.0",
+        "html-react-parser": "^4.0.0",
         "html-webpack-plugin": "^5.5.0",
         "jest": "^26.6.3",
         "jest-cli": "^26.6.3",
