@@ -76,6 +76,7 @@ describe('Component DeleteRecord', () => {
             recordToDelete: {
                 ...mockRecordToDelete,
                 rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_doi: { rek_doi: `${DOI_DATACITE_PREFIX}12345` },
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -88,6 +89,7 @@ describe('Component DeleteRecord', () => {
                 ...mockRecordToDelete,
                 rek_status: DELETED,
                 rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_doi: { rek_doi: `${DOI_DATACITE_PREFIX}12345` },
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -115,7 +117,7 @@ describe('Component DeleteRecord', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('#submit-delete-record').disabled).toBeFalsy();
-        expect(wrapper.find('Field').length).toEqual(2);
+        expect(wrapper.find('Field').length).toEqual(3);
     });
 
     it('should display specific alert if trying to delete a Community that contains Collections', () => {

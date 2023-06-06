@@ -20,6 +20,12 @@ export const createPayload = data => ({
     rek_status: DELETED,
     ...(!!data.reason ? { reason: data.reason } : {}),
     ...{
+        fez_record_search_key_doi_resolution_url: !!data.publication?.fez_record_search_key_doi_resolution_url
+            ?.rek_doi_resolution_url
+            ? data.publication?.fez_record_search_key_doi_resolution_url
+            : null,
+    },
+    ...{
         fez_record_search_key_new_doi: !!data.publication?.fez_record_search_key_new_doi?.rek_new_doi
             ? data.publication?.fez_record_search_key_new_doi
             : null,

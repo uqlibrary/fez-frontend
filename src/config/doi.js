@@ -439,5 +439,8 @@ export const doiFields = {
     },
 };
 
+// Default DOI Resolution URL for Crossref DOIs
+export const deletedDoiResolutionUrl = ' https://web.library.uq.edu.au/record-unavailable';
+
 // Collection with RCC datasets
 export const rccDatasetCollection = 'UQ:5d1d4fb';

@@ -2806,7 +2806,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
           <StandardCard
             title={
               <React.Fragment>
-                New DOI
+                New Location
                 <div
                   style={
                     Object {
@@ -2814,7 +2814,9 @@ exports[`Component DeleteRecord should render delete record form for records wit
                     }
                   }
                 >
-                  (redirect the DOI to)
+                  (default to 
+                   https://web.library.uq.edu.au/record-unavailable
+                   if left blank)
                 </div>
               </React.Fragment>
             }
@@ -2876,10 +2878,10 @@ exports[`Component DeleteRecord should render delete record form for records wit
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Please enter the DOI to which the record moved to"
-                  name="publication.fez_record_search_key_new_doi.rek_new_doi"
-                  placeholder="Enter a valid DOI (e.g. 10.123/456)"
-                  textFieldId="rek-new-doi"
+                  label="Please enter the URL to which the DOI would resolve to"
+                  name="publication.fez_record_search_key_doi_resolution_url.rek_doi_resolution_url"
+                  placeholder="Enter a valid URL (e.g. https://espace.library.uq.edu.au/view/UQ:12345)"
+                  textFieldId="rek-doi-resolution-url"
                   type="text"
                   validate={
                     Array [
@@ -3520,7 +3522,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                     }
                   }
                 >
-                  (redirect the DOI to)
+                  (displayed on the records deleted page)
                 </div>
               </React.Fragment>
             }
@@ -3590,6 +3592,54 @@ exports[`Component DeleteRecord should render delete record form for records wit
                   validate={
                     Array [
                       [Function],
+                      [Function],
+                    ]
+                  }
+                />
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </StandardCard>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title={
+              <React.Fragment>
+                Deletion Notes
+                <div
+                  style={
+                    Object {
+                      "fontSize": "60%",
+                    }
+                  }
+                >
+                  (displayed on the records deleted page)
+                </div>
+              </React.Fragment>
+            }
+          >
+            <ForwardRef(Grid)
+              container={true}
+              spacing={2}
+            >
+              <ForwardRef(Grid)
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  fullWidth={true}
+                  maxValue={2000}
+                  multiline={true}
+                  name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
+                  richEditorId="rek-deletion-notes"
+                  rows={5}
+                  textFieldId="rek-deletion-notes-text"
+                  validate={
+                    Array [
                       [Function],
                     ]
                   }
@@ -3807,7 +3857,9 @@ exports[`Component DeleteRecord should render delete record form with data colle
                   "fez_record_search_key_date_photo_taken": null,
                   "fez_record_search_key_date_recorded": null,
                   "fez_record_search_key_date_scanned": null,
-                  "fez_record_search_key_doi": null,
+                  "fez_record_search_key_doi": Object {
+                    "rek_doi": "10.2364312345",
+                  },
                   "fez_record_search_key_edition": null,
                   "fez_record_search_key_end_date": null,
                   "fez_record_search_key_end_page": Object {
@@ -4559,7 +4611,9 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                   "fez_record_search_key_date_photo_taken": null,
                   "fez_record_search_key_date_recorded": null,
                   "fez_record_search_key_date_scanned": null,
-                  "fez_record_search_key_doi": null,
+                  "fez_record_search_key_doi": Object {
+                    "rek_doi": "10.2364312345",
+                  },
                   "fez_record_search_key_edition": null,
                   "fez_record_search_key_end_date": null,
                   "fez_record_search_key_end_page": Object {

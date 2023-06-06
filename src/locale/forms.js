@@ -1,4 +1,5 @@
 import React from 'react';
+import { deletedDoiResolutionUrl } from '../config/doi';
 
 export default {
     forms: {
@@ -240,17 +241,21 @@ export default {
                 label: isDeleted =>
                     `Please enter a reason why you are ${isDeleted ? 'updating' : 'deleting'} this work`,
             },
+            doiResolutionUrl: {
+                title: (
+                    <>
+                        New Location
+                        <div style={{ fontSize: '60%' }}>(default to {deletedDoiResolutionUrl} if left blank)</div>
+                    </>
+                ),
+                label: 'Please enter the URL to which the DOI would resolve to',
+                placeholder: 'Enter a valid URL (e.g. https://espace.library.uq.edu.au/view/UQ:12345)',
+            },
             newDoi: {
-                tombstone_page_title: (
+                title: (
                     <>
                         New DOI
                         <div style={{ fontSize: '60%' }}>(displayed on the records deleted page)</div>
-                    </>
-                ),
-                redirect_title: (
-                    <>
-                        New DOI
-                        <div style={{ fontSize: '60%' }}>(redirect the DOI to)</div>
                     </>
                 ),
                 label: 'Please enter the DOI to which the record moved to',

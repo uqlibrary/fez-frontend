@@ -22,7 +22,6 @@ import {
     DELETED,
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_PREFIX,
-    PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_EXCLUDE_CITATION_TEXT_LIST,
 } from 'config/general';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -65,13 +64,6 @@ export default class DeleteRecord extends PureComponent {
     }
 
     #COMMUNITY_COLLECTION_KEY = 'communityCollection';
-
-    _hasUQDOI = () => {
-        return (
-            this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_CROSSREF_PREFIX) ||
-            this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_DATACITE_PREFIX)
-        );
-    };
 
     _navigateToSearchPage = () => {
         this.props.history.push(pathConfig.records.search);
@@ -142,7 +134,14 @@ export default class DeleteRecord extends PureComponent {
             );
         }
 
-        const hasUQDOI = this._hasUQDOI();
+        const hasCrossrefDoi = this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(
+            DOI_CROSSREF_PREFIX,
+        );
+
+        const hasDataCiteDoi = this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(
+            DOI_DATACITE_PREFIX,
+        );
+
         const saveConfirmationLocale = { ...formTxt.successWorkflowConfirmation };
 
         const errorResponse = this.props.error && JSON.parse(this.props.error);
@@ -158,7 +157,6 @@ export default class DeleteRecord extends PureComponent {
         const rekDisplayTypeLowercase = this.props.recordToDelete?.rek_display_type_lookup?.toLowerCase();
         const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
         const isDeleted = this.props.recordToDelete?.rek_status === DELETED;
-        const isDataCollection = this.props.recordToDelete?.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION;
 
         return (
             <StandardPage title={txt.title(isDeleted)}>
@@ -204,54 +202,69 @@ export default class DeleteRecord extends PureComponent {
                                     </Grid>
                                 </StandardCard>
                             </Grid>
-                            {(hasUQDOI || isDataCollection) && (
+                            {hasCrossrefDoi && (
                                 <Grid item xs={12}>
-                                    <StandardCard
-                                        title={
-                                            isDataCollection
-                                                ? formTxt.newDoi.tombstone_page_title
-                                                : formTxt.newDoi.redirect_title
-                                        }
-                                    >
+                                    <StandardCard title={formTxt.doiResolutionUrl.title}>
                                         <Grid container spacing={2}>
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={TextField}
                                                     disabled={this.props.submitting}
-                                                    name="publication.fez_record_search_key_new_doi.rek_new_doi"
-                                                    textFieldId="rek-new-doi"
+                                                    name="publication.fez_record_search_key_doi_resolution_url.rek_doi_resolution_url"
+                                                    textFieldId="rek-doi-resolution-url"
                                                     type="text"
                                                     fullWidth
-                                                    validate={[validation.doi, validation.maxLength255]}
-                                                    label={formTxt.newDoi.label}
-                                                    placeholder={formTxt.newDoi.placeholder}
+                                                    validate={[validation.url, validation.maxLength255]}
+                                                    label={formTxt.doiResolutionUrl.label}
+                                                    placeholder={formTxt.doiResolutionUrl.placeholder}
                                                 />
                                             </Grid>
                                         </Grid>
                                     </StandardCard>
                                 </Grid>
                             )}
-                            {isDataCollection && (
-                                <Grid item xs={12}>
-                                    <StandardCard title={formTxt.notes.title}>
-                                        <Grid container spacing={2}>
-                                            <Grid item xs={12}>
-                                                <Field
-                                                    component={RichEditorField}
-                                                    name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
-                                                    textFieldId="rek-deletion-notes-text"
-                                                    richEditorId="rek-deletion-notes"
-                                                    disabled={this.props.submitting}
-                                                    fullWidth
-                                                    multiline
-                                                    rows={5}
-                                                    validate={[validation.maxListEditorTextLength2000]}
-                                                    maxValue={2000}
-                                                />
+                            {hasDataCiteDoi && (
+                                <>
+                                    <Grid item xs={12}>
+                                        <StandardCard title={formTxt.newDoi.title}>
+                                            <Grid container spacing={2}>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={TextField}
+                                                        disabled={this.props.submitting}
+                                                        name="publication.fez_record_search_key_new_doi.rek_new_doi"
+                                                        textFieldId="rek-new-doi"
+                                                        type="text"
+                                                        fullWidth
+                                                        validate={[validation.doi, validation.maxLength255]}
+                                                        label={formTxt.newDoi.label}
+                                                        placeholder={formTxt.newDoi.placeholder}
+                                                    />
+                                                </Grid>
                                             </Grid>
-                                        </Grid>
-                                    </StandardCard>
-                                </Grid>
+                                        </StandardCard>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <StandardCard title={formTxt.notes.title}>
+                                            <Grid container spacing={2}>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={RichEditorField}
+                                                        name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
+                                                        textFieldId="rek-deletion-notes-text"
+                                                        richEditorId="rek-deletion-notes"
+                                                        disabled={this.props.submitting}
+                                                        fullWidth
+                                                        multiline
+                                                        rows={5}
+                                                        validate={[validation.maxListEditorTextLength2000]}
+                                                        maxValue={2000}
+                                                    />
+                                                </Grid>
+                                            </Grid>
+                                        </StandardCard>
+                                    </Grid>
+                                </>
                             )}
                             {alertProps && (
                                 <Grid item xs={12}>
