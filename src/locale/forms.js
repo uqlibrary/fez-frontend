@@ -1,5 +1,4 @@
 import React from 'react';
-import { deletedDoiResolutionUrl } from '../config/doi';
 
 export default {
     forms: {
@@ -245,7 +244,9 @@ export default {
                 title: (
                     <>
                         New Location
-                        <div style={{ fontSize: '60%' }}>(default to {deletedDoiResolutionUrl} if left blank)</div>
+                        <div style={{ fontSize: '60%' }}>
+                            (default to https://web.library.uq.edu.au/record-unavailable if left blank)
+                        </div>
                     </>
                 ),
                 label: 'Please enter the URL to which the DOI would resolve to',

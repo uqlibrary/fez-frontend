@@ -2814,9 +2814,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                     }
                   }
                 >
-                  (default to 
-                   https://web.library.uq.edu.au/record-unavailable
-                   if left blank)
+                  (default to https://web.library.uq.edu.au/record-unavailable if left blank)
                 </div>
               </React.Fragment>
             }
