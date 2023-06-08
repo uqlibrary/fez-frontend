@@ -6,7 +6,10 @@ import { publicationEnhancer, saveReducerOnSessionExpired, journalSearchKeywords
 import rootReducer from '../reducer';
 import { history } from './history';
 
-const { createReduxHistory, routerMiddleware, routerReducer } = createReduxHistoryContext({ history });
+const { createReduxHistory, routerMiddleware, routerReducer } = createReduxHistoryContext({
+    history: history,
+    selectRouterState: state => state.get('router'),
+});
 
 export const reducers = rootReducer({ routerReducer });
 

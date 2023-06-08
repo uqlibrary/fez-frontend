@@ -17,7 +17,7 @@ import MomentUtils from '@date-io/moment';
 import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
 import 'sass/index.scss';
-import { store, reducers, reduxHistory } from 'config/store';
+import { store, reduxHistory, reducers } from 'config/store';
 
 // Increase default (10) event listeners to 30
 require('events').EventEmitter.prototype._maxListeners = 30;
@@ -56,15 +56,17 @@ if (process.env.ENABLE_LOG) {
 
 const render = () => {
     ReactDOM.render(
-        <AppErrorBoundary>
-            <AppContainer>
-                <Provider store={store}>
-                    <LocalizationProvider dateAdapter={MomentUtils}>
-                        <Root history={reduxHistory} />
-                    </LocalizationProvider>
-                </Provider>
-            </AppContainer>
-        </AppErrorBoundary>,
+        <Provider store={store}>
+            <AppErrorBoundary>
+                <AppContainer>
+                    <Provider store={store}>
+                        <LocalizationProvider dateAdapter={MomentUtils}>
+                            <Root history={reduxHistory} />
+                        </LocalizationProvider>
+                    </Provider>
+                </AppContainer>
+            </AppErrorBoundary>
+        </Provider>,
         document.getElementById('react-root'),
     );
 };

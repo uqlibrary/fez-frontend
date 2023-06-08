@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Router } from 'react-router';
+import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 // MUI1
 import { mui1theme } from 'config';
