@@ -7,7 +7,7 @@ import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { general } from 'config';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import {
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     DOCUMENT_TYPE_JOURNAL_ARTICLE,
@@ -153,7 +153,7 @@ export class NtroDetailsClass extends PureComponent {
                                         data={
                                             (item.rek_creator_contribution_statement &&
                                                 item.rek_creator_contribution_statement.trim().length !== 0 &&
-                                                ReactHtmlParser(item.rek_creator_contribution_statement)) ||
+                                                parseHtmlToJSX(item.rek_creator_contribution_statement)) ||
                                             global.global.defaultAuthorDataPlaceholder
                                         }
                                         rowId={`rek-creator-contribution-statement-${index}`}
@@ -169,7 +169,7 @@ export class NtroDetailsClass extends PureComponent {
                             <this.ViewNtroRow
                                 className={this.props.classes.richTextParagraphFix}
                                 heading={locale.viewRecord.headings.NTRO.ntroAbstract}
-                                data={ReactHtmlParser(publication.rek_formatted_abstract)}
+                                data={parseHtmlToJSX(publication.rek_formatted_abstract)}
                                 rowId="rek-formatted-abstract"
                             />
                         ) : (

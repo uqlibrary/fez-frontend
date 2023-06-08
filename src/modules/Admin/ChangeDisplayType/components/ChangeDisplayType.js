@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import { useParams } from 'react-router';
 import { Field } from 'redux-form/immutable';
 import { useConfirmationState } from 'hooks';
@@ -38,7 +38,7 @@ const txt = {
 const renderTitle = record => {
     const prefixTxt = componentsLocale.components.changeDisplayType.title;
     const subtypeSuffix = !!record.rek_subtype ? ` - ${record.rek_subtype}` : '';
-    const pageTitle = ReactHtmlParser(`${prefixTxt}${record.rek_display_type_lookup}${subtypeSuffix}`);
+    const pageTitle = parseHtmlToJSX(`${prefixTxt}${record.rek_display_type_lookup}${subtypeSuffix}`);
     return (
         <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="change-display-type-page-title">
             {pageTitle}

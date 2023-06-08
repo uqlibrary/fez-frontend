@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -42,7 +42,7 @@ export const getfileUploadAlertProps = (locale, author, showRetries) => {
         .replace('[studentFullName]', `${author.aut_fname} ${author.aut_lname}`)
         .replace('[studentNumber]', author.aut_org_student_id);
     const mailtoUri = `mailto:${locale.emailRecipient}?subject=${encodeURIComponent(emailSubject)}`;
-    const message = ReactHtmlParser(
+    const message = parseHtmlToJSX(
         (showRetries ? locale.messageWithRetry : locale.message)
             .replace('[linkStart]', `<a href="${mailtoUri}">`)
             .replace('[linkEnd]', '</a>'),
