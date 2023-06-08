@@ -1288,8 +1288,7 @@ export const LANGUAGE = [
     { value: 'yid', text: 'Yiddish' },
 ];
 
-export const USE_HASH_PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development';
-export const PATH_PREFIX = USE_HASH_PATH_PREFIX ? '#/' : '';
+export const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
 export const DELETE_SELECTED_RECORD_LABEL = 'Delete selected record';
 export const UPDATE_DELETED_RECORD_LABEL = 'Update tombstone page info';
 
