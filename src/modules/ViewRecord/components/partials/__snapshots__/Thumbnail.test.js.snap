@@ -80,9 +80,7 @@ exports[`Thumbnail component should render PDF files as a thumbnail only plus li
   <Img
     alt="thumbnail.jpg"
     className=""
-    container={[Function]}
-    crossOrigin="anonymous"
-    decode={true}
+    crossorigin="anonymous"
     loader={
       <ForwardRef(CircularProgress)
         size={15}
