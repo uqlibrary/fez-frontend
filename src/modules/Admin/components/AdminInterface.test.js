@@ -19,6 +19,11 @@ jest.mock('js-cookie', () => ({
     set: jest.fn(),
 }));
 
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: jest.fn(),
+}));
+
 function setup(testProps = {}) {
     const props = {
         createMode: false,
@@ -54,13 +59,11 @@ function setup(testProps = {}) {
 
 describe('AdminInterface component', () => {
     let mockUseEffect;
-    let useDispatchSpy;
     const cleanupFns = [];
-    const mockDispatchFn = jest.fn();
+    const useDispatchMock = redux.useDispatch;
 
     beforeAll(() => {
         mockUseEffect = jest.spyOn(React, 'useEffect');
-        useDispatchSpy = jest.spyOn(redux, 'useDispatch');
     });
 
     beforeEach(() => {
@@ -79,7 +82,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 179,
             },
         }));
-        useDispatchSpy.mockReturnValue(mockDispatchFn);
+        useDispatchMock.mockImplementation(() => () => {});
     });
 
     afterEach(() => {
@@ -88,11 +91,11 @@ describe('AdminInterface component', () => {
         while (cleanupFns.length > 0) {
             cleanupFns.pop()();
         }
+        useDispatchMock.mockRestore();
     });
 
     afterAll(() => {
         mockUseEffect.mockRestore();
-        useDispatchSpy.mockClear();
     });
 
     it('should render when no record is available', () => {

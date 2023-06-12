@@ -1,6 +1,6 @@
 import React from 'react';
-import { ConnectedRouter } from 'connected-react-router/immutable';
-import { Route, Switch } from 'react-router';
+import { Router } from 'react-router';
+import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 // MUI1
 import { mui1theme } from 'config';
@@ -19,7 +19,7 @@ import { ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToTop';
 
 const Root = ({ history }) => {
     return (
-        <ConnectedRouter history={history}>
+        <Router history={history}>
             <ScrollToTop>
                 <StyledEngineProvider injectFirst>
                     <JssProvider generateClassName={generateClassName}>
@@ -33,7 +33,7 @@ const Root = ({ history }) => {
                     </JssProvider>
                 </StyledEngineProvider>
             </ScrollToTop>
-        </ConnectedRouter>
+        </Router>
     );
 };
 
