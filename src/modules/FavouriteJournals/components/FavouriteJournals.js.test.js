@@ -16,6 +16,10 @@ const setup = ({ state = {} } = {}) => {
 };
 
 const mocks = {};
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: jest.fn(),
+}));
 describe('FavouriteJournals', () => {
     afterEach(() => {
         Object.keys(mocks).map(name => mocks[name].mockRestore());
@@ -24,7 +28,7 @@ describe('FavouriteJournals', () => {
     it('should toggle selection of all favourite journals', () => {
         const selectAllCheckboxSelectorString = 'journal-list-header-col-1-select-all';
         const checkboxSelectorString = 'input[id^="journal-list-data-col-1-checkbox-"]:checked';
-        mocks.useDispatch = jest.spyOn(redux, 'useDispatch');
+        mocks.useDispatch = redux.useDispatch;
         mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
         const { queryByTestId, container } = setup({
             state: { loading: false, response: { total: 1, data: mockData } },
@@ -53,7 +57,7 @@ describe('FavouriteJournals', () => {
             'input[id="journal-list-header-col-1-select-all"]:checked';
         const checkboxUncheckedSelectorString = 'input[id^="journal-list-data-col-1-checkbox-"]';
         const checkboxCheckedSelectorString = 'input[id^="journal-list-data-col-1-checkbox-"]:checked';
-        mocks.useDispatch = jest.spyOn(redux, 'useDispatch');
+        mocks.useDispatch = redux.useDispatch;
         mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
         const { queryByTestId, container } = setup({
             state: { loading: false, response: { total: 1, data: mockData } },
@@ -83,7 +87,7 @@ describe('FavouriteJournals', () => {
         mocks.useState
             .mockImplementationOnce(() => [{ [mockData[0].jnl_jid]: true }, jest.fn()])
             .mockImplementationOnce(() => [false, jest.fn()]);
-        mocks.useDispatch = jest.spyOn(redux, 'useDispatch');
+        mocks.useDispatch = redux.useDispatch;
         mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
         const { getByTestId, queryByTestId } = setup({
             state: { loading: false, response: { total: 1, data: mockData } },
@@ -92,7 +96,9 @@ describe('FavouriteJournals', () => {
         fireEvent.click(getByTestId('remove-from-favourites-button'));
     });
 
-    it('should render when there are favs', () => {
+    it('should render when there are no favs', () => {
+        mocks.useDispatch = redux.useDispatch;
+        mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
         const { queryByTestId } = setup();
         expect(queryByTestId('remove-from-favourites-button')).not.toBeInTheDocument();
         expect(queryByTestId('return-to-search-results-button')).toBeInTheDocument();

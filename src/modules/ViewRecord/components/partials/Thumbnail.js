@@ -5,7 +5,7 @@ import BrokenImage from '@mui/icons-material/BrokenImage';
 import Lock from '@mui/icons-material/Lock';
 import withStyles from '@mui/styles/withStyles';
 import locale from 'locale/pages';
-import Img from 'react-image';
+import { Img } from 'react-image';
 import CircularProgress from '@mui/material/CircularProgress';
 
 export const styles = () => ({
@@ -70,7 +70,7 @@ export class Thumbnail extends Component {
             return (
                 <ExternalLink href={mediaUrl} title={fileName} openInNewIcon={false} id="thumbnail">
                     <Img
-                        crossOrigin="anonymous"
+                        crossorigin="anonymous"
                         src={thumbnailMediaUrl}
                         alt={thumbnailFileName}
                         loader={<CircularProgress size={15} thickness={1} />}
