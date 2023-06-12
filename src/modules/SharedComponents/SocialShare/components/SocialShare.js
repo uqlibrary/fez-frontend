@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 import { APP_URL } from 'config';
 import { PrintIcon, ResearchGateIcon, MendeleyIcon } from './Icons';
-import { EmailIcon, FacebookIcon, TwitterIcon, LinkedinIcon } from 'react-share/lib';
+import { EmailIcon, FacebookIcon, TwitterIcon, LinkedinIcon } from 'react-share';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export const SocialShare = ({ publication, size, spaceBetween, services, round }) => {

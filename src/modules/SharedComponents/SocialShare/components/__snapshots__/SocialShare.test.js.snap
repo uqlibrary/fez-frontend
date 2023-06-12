@@ -25,10 +25,9 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -53,10 +52,9 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -81,10 +79,9 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -109,10 +106,9 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -137,10 +133,9 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -163,10 +158,9 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       title="Share this record via Email"
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -191,10 +185,9 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       title="Print this record"
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -228,10 +221,9 @@ exports[`Component SocialShare should render component 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -256,10 +248,9 @@ exports[`Component SocialShare should render component 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -284,10 +275,9 @@ exports[`Component SocialShare should render component 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -312,10 +302,9 @@ exports[`Component SocialShare should render component 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -340,10 +329,9 @@ exports[`Component SocialShare should render component 1`] = `
       width={500}
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -366,10 +354,9 @@ exports[`Component SocialShare should render component 1`] = `
       title="Share this record via Email"
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
@@ -394,10 +381,9 @@ exports[`Component SocialShare should render component 1`] = `
       title="Print this record"
     >
       <Icon
+        bgStyle={Object {}}
         borderRadius={0}
-        className=""
-        iconBgStyle={Object {}}
-        logoFillColor="white"
+        iconFillColor="white"
         round={true}
         size={24}
       />
