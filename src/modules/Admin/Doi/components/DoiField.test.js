@@ -5,7 +5,6 @@ import publicationTypeListResearchReport from 'mock/data/records/publicationType
 const record = publicationTypeListResearchReport.data[0];
 
 jest.mock('modules/ViewRecord/components/AdditionalInformation');
-jest.mock('react-html-parser');
 
 import { formatPublicationDate } from 'modules/ViewRecord/components/AdditionalInformation';
 
