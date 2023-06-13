@@ -630,10 +630,10 @@ export default {
             adminRecordData: {
                 drawer: {
                     title: 'Record Data',
-
+                    nameIfAuthorUnavailable: 'This work',
                     sectionTitles: {
                         notes: 'Notes',
-                        authorAffiliations: 'Has Author Affiliations?',
+                        authorAffiliations: 'Author Affiliations',
                         wosId: 'WoS ID',
                         wosDocType: 'WoS Doc Type',
                         scopusId: 'Scopus ID',

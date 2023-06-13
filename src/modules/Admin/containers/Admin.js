@@ -1,6 +1,6 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { change, destroy, getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';
+import { change, getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { withRouter } from 'react-router';
@@ -103,8 +103,8 @@ const onChange = (values, dispatch) => {
     if (
         !!values.get('rek_display_type') &&
         values.get('rek_display_type') === PUBLICATION_TYPE_THESIS &&
-        !!values.get('adminSection').get('rek_subtype') &&
-        !values.get('bibliographicSection').get('rek_genre_type')
+        !!values.get('adminSection')?.get('rek_subtype') &&
+        !values.get('bibliographicSection')?.get('rek_genre_type')
     ) {
         dispatch(
             change(FORM_NAME, 'bibliographicSection.rek_genre_type', values.get('adminSection').get('rek_subtype')),
@@ -183,7 +183,6 @@ function mapDispatchToProps(dispatch) {
         loadRecordToView,
         clearRecordToView,
         unlockRecord,
-        destroy,
     };
 }
 

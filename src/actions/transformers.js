@@ -264,6 +264,26 @@ export const getDatasetCreatorRolesSearchKey = creators => {
         : {};
 };
 
+export const getDatasetAuthorEmailsSearchKey = authors => {
+    if (!authors || authors.length === 0) return {};
+    const authorEmails = authors
+        .map(
+            (item, index) =>
+                (!!item.email && {
+                    rek_author_email: item.email,
+                    rek_author_email_order: index + 1,
+                }) ||
+                {},
+        )
+        .filter(author => !!author.rek_author_email);
+
+    return authorEmails.length > 0
+        ? {
+              fez_record_search_key_author_email: authorEmails,
+          }
+        : {};
+};
+
 export const getRecordSupervisorsSearchKey = supervisors => {
     if (!supervisors || supervisors.length === 0) return {};
     return {
@@ -348,6 +368,26 @@ export const getRecordAuthorAffiliationTypeSearchKey = authors => {
             rek_author_affiliation_type: (item.orgtype && parseInt(item.orgtype, 10)) || 0,
             rek_author_affiliation_type_order: index + 1,
         })),
+    };
+};
+
+export const getRecordAuthorAffiliations = (authors, canHaveAffiliations = false) => {
+    if (!authors || authors.length === 0 || !canHaveAffiliations) {
+        return {
+            fez_author_affiliation: canHaveAffiliations ? [] : null,
+        };
+    }
+
+    return {
+        fez_author_affiliation: authors.reduce((accumulated, author) => {
+            const newArray = [...accumulated];
+            author.affiliations?.forEach(affiliation => {
+                // eslint-disable-next-line camelcase
+                const { af_author_id, af_percent_affiliation, af_org_id, af_status } = affiliation;
+                newArray.push({ af_author_id, af_percent_affiliation, af_org_id, af_status });
+            });
+            return newArray;
+        }, []),
     };
 };
 
@@ -1217,12 +1257,14 @@ export const getGrantInformationSectionSearchKeys = grantsSection => ({
     ...getGrantsListSearchKey((grantsSection && grantsSection.grants) || []),
 });
 
-export const getAuthorsSearchKeys = authors => ({
+export const getAuthorsSearchKeys = (authors, canHaveAffiliations = false) => ({
+    ...getRecordAuthorAffiliations(authors, canHaveAffiliations),
     ...getRecordAuthorsSearchKey(authors),
     ...getRecordAuthorsIdSearchKey(authors),
     ...getRecordAuthorAffiliationSearchKey(authors),
     ...getRecordAuthorAffiliationTypeSearchKey(authors),
     ...getDatasetCreatorRolesSearchKey(authors),
+    ...getDatasetAuthorEmailsSearchKey(authors),
 });
 
 export const getContributorsSearchKeys = editors => ({
@@ -1241,9 +1283,12 @@ export const getArchitectsSearchKeys = architects => ({
 });
 
 export const getAuthorsSectionSearchKeys = (data = {}) => {
-    const { authors, editors, supervisors, creators, architects } = data;
+    const { authors, authorsWithAffiliations, editors, supervisors, creators, architects } = data;
+
     return {
-        ...(!!authors ? getAuthorsSearchKeys(authors) : {}),
+        ...(!!authors || !!authorsWithAffiliations
+            ? getAuthorsSearchKeys(!!authors ? authors : authorsWithAffiliations, !!authorsWithAffiliations)
+            : {}),
         ...(!!editors ? getContributorsSearchKeys(editors) : {}),
         ...(!!creators ? getCreatorsSearchKeys(creators) : {}),
         ...(!!architects ? getArchitectsSearchKeys(architects) : {}),

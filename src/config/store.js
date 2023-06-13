@@ -1,20 +1,27 @@
 import { applyMiddleware, compose, createStore } from 'redux';
-import { routerMiddleware } from 'connected-react-router/immutable';
+import { createReduxHistoryContext } from 'redux-first-history';
 import Immutable from 'immutable';
 import thunk from 'redux-thunk';
 import { publicationEnhancer, saveReducerOnSessionExpired, journalSearchKeywordsEnhancer } from 'middleware';
 import rootReducer from '../reducer';
 import { history } from './history';
 
+const { createReduxHistory, routerMiddleware, routerReducer } = createReduxHistoryContext({
+    history: history,
+    selectRouterState: state => state.get('router'),
+});
+
+export const reducers = rootReducer({ routerReducer });
+
 export const getStore = (initialState = Immutable.Map()) => {
     const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
     const store = createStore(
-        rootReducer,
+        reducers,
         initialState,
         composeEnhancer(
             applyMiddleware(
-                routerMiddleware(history),
+                routerMiddleware,
                 thunk,
                 publicationEnhancer,
                 saveReducerOnSessionExpired,
@@ -31,3 +38,5 @@ export const getStore = (initialState = Immutable.Map()) => {
 };
 
 export const store = getStore();
+
+export const reduxHistory = createReduxHistory(store);

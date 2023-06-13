@@ -34,6 +34,8 @@ export { default as orcidSyncReducer } from './orcidSync';
 export { default as publicationsReducer } from './publications';
 export { default as searchJournalsReducer } from './searchJournals';
 export { default as favouriteJournalsReducer } from './favouriteJournals';
+export { default as organisationalUnitsReducer } from './organisationalUnits';
+export { default as suggestedOrganisationalUnitsReducer } from './suggestedOrganisationalUnits';
 export { default as searchKeysReducer } from './searchKeys';
 export { default as searchRecordsReducer } from './searchRecords';
 export { default as thirdPartyLookupToolReducer } from './thirdPartyLookupTool';

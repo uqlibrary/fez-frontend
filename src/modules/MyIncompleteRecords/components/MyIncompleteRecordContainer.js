@@ -26,7 +26,7 @@ import { getFormSyncErrors } from 'redux-form/immutable';
 import { userIsAdmin } from 'hooks';
 
 const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) => {
-    const grants = recordToFix.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
+    const grants = recordToFix.fez_record_search_key_grant_agency?.map((grantAgency, index) => ({
         grantAgencyName: grantAgency.rek_grant_agency,
         grantId:
             (recordToFix.fez_record_search_key_grant_id &&

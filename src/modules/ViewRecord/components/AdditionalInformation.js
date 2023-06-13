@@ -11,7 +11,7 @@ import {
     EditorsCitationView,
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
@@ -317,7 +317,7 @@ export class AdditionalInformationClass extends PureComponent {
 
     // title/description/abstract have been sanitized in middleware
     renderHTML = data => {
-        return ReactHtmlParser(data);
+        return parseHtmlToJSX(data);
     };
 
     // get lookup data if it exsts, except rek_issn_lookup as it returns sherpa romeo color

@@ -55,10 +55,14 @@ export {
     recordWithLotOfAuthors,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
+    recordWithProblematicAuthorAffiliations,
+    recordBookWithAuthorAffiliations,
     unpublishedSearchList,
     UQ716942uqagrinb,
     UQ353708,
     UQ339703,
+    recordWithIncorrectAffiliation,
+    recordWithOrphanedAffiliation,
 } from './records';
 
 export { vocabulariesList } from './vocabularies';
@@ -91,3 +95,5 @@ export { default as myEditorialAppointmentsList } from './myEditorialAppointment
 export { default as myEditorialAppointmentItem } from './myEditorialAppointments/myEditorialAppointmentItem';
 
 export { userList } from './testing/usersList';
+export { organisationalUnits } from './organisationalUnits';
+export { suggestedOrganisationalUnits } from './suggestedOrganisationalUnits';
