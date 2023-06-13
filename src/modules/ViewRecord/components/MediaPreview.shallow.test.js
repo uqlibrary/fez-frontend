@@ -2,8 +2,6 @@ import React from 'react';
 import MediaPreview from './MediaPreview';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
 
-jest.mock('react-jw-player');
-
 function setup(testProps = {}) {
     const props = {
         mediaUrl: 'http://test.com',

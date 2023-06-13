@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import ReactJWPlayer from 'react-jw-player';
+import JWPlayer from '@jwplayer/jwplayer-react';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
 import makeStyles from '@mui/styles/makeStyles';
 import { useTheme } from '@mui/material/styles';
@@ -144,13 +144,13 @@ export const MediaPreview = ({ ...props }) => {
                 </div>
             )}
             {isVideo && !videoErrorMsg && (
-                <ReactJWPlayer
-                    playerId="previewVideo"
-                    playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
-                    onVideoLoad={onVideoLoad}
+                <JWPlayer
+                    id="previewVideo"
+                    library="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+                    onPlaylistItem={onVideoLoad}
                     onSetupError={onVideoFailed}
-                    onMediaError={onVideoFailed}
-                    isAutoPlay
+                    onError={onVideoFailed}
+                    autostart="viewable"
                     file={previewMediaUrl}
                     // TODO : Was put in for cloudfront not liking 'range' in request headers
                     // playlist={
