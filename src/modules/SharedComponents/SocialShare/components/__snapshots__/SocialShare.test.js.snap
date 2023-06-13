@@ -16,60 +16,6 @@ exports[`Component SocialShare should fire print method on click 1`] = `
     }
   >
     <ExternalLink
-      data-testid="social-share-facebook-link"
-      height={500}
-      href="https://www.facebook.com/sharer/sharer.php?u=https://fez-staging.library.uq.edu.au/view/UQ:676287"
-      id="facebook"
-      openInNewIcon={false}
-      title="Share this record on Facebook"
-      width={500}
-    >
-      <Icon
-        bgStyle={Object {}}
-        borderRadius={0}
-        iconFillColor="white"
-        round={true}
-        size={24}
-      />
-    </ExternalLink>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    key="1"
-    style={
-      Object {
-        "marginRight": 4,
-      }
-    }
-  >
-    <ExternalLink
-      data-testid="social-share-twitter-link"
-      height={300}
-      href="https://twitter.com/share?url=https://fez-staging.library.uq.edu.au/view/UQ:676287&text=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells - "
-      id="twitter"
-      openInNewIcon={false}
-      title="Share this record on Twitter"
-      width={500}
-    >
-      <Icon
-        bgStyle={Object {}}
-        borderRadius={0}
-        iconFillColor="white"
-        round={true}
-        size={24}
-      />
-    </ExternalLink>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    key="2"
-    style={
-      Object {
-        "marginRight": 4,
-      }
-    }
-  >
-    <ExternalLink
       data-testid="social-share-linkedin-link"
       height={500}
       href="https://linkedin.com/shareArticle?url=https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -89,61 +35,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
   </ForwardRef(Grid)>
   <ForwardRef(Grid)
     item={true}
-    key="3"
-    style={
-      Object {
-        "marginRight": 4,
-      }
-    }
-  >
-    <ExternalLink
-      data-testid="social-share-researchgate-link"
-      height={600}
-      href="https://www.researchgate.net/go.Share.html?url=https://fez-staging.library.uq.edu.au/view/UQ:676287&title=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
-      id="researchgate"
-      openInNewIcon={false}
-      title="Share this record on Research Gate"
-      width={500}
-    >
-      <Icon
-        bgStyle={Object {}}
-        borderRadius={0}
-        iconFillColor="white"
-        round={true}
-        size={24}
-      />
-    </ExternalLink>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    key="4"
-    style={
-      Object {
-        "marginRight": 4,
-      }
-    }
-  >
-    <ExternalLink
-      data-testid="social-share-mendeley-link"
-      height={500}
-      href="https://profitquery.com/add-to/mendeley/?url=https://fez-staging.library.uq.edu.au/view/UQ:676287"
-      id="mendeley"
-      openInNewIcon={false}
-      title="Share this record on Mendeley"
-      width={500}
-    >
-      <Icon
-        bgStyle={Object {}}
-        borderRadius={0}
-        iconFillColor="white"
-        round={true}
-        size={24}
-      />
-    </ExternalLink>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    key="5"
+    key="1"
     style={
       Object {
         "marginRight": 4,
@@ -168,7 +60,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
   </ForwardRef(Grid)>
   <ForwardRef(Grid)
     item={true}
-    key="6"
+    key="2"
     style={
       Object {
         "marginRight": 4,
@@ -212,60 +104,6 @@ exports[`Component SocialShare should render component 1`] = `
     }
   >
     <ExternalLink
-      data-testid="social-share-facebook-link"
-      height={500}
-      href="https://www.facebook.com/sharer/sharer.php?u=https://fez-staging.library.uq.edu.au/view/UQ:676287"
-      id="facebook"
-      openInNewIcon={false}
-      title="Share this record on Facebook"
-      width={500}
-    >
-      <Icon
-        bgStyle={Object {}}
-        borderRadius={0}
-        iconFillColor="white"
-        round={true}
-        size={24}
-      />
-    </ExternalLink>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    key="1"
-    style={
-      Object {
-        "marginRight": 4,
-      }
-    }
-  >
-    <ExternalLink
-      data-testid="social-share-twitter-link"
-      height={300}
-      href="https://twitter.com/share?url=https://fez-staging.library.uq.edu.au/view/UQ:676287&text=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells - "
-      id="twitter"
-      openInNewIcon={false}
-      title="Share this record on Twitter"
-      width={500}
-    >
-      <Icon
-        bgStyle={Object {}}
-        borderRadius={0}
-        iconFillColor="white"
-        round={true}
-        size={24}
-      />
-    </ExternalLink>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    key="2"
-    style={
-      Object {
-        "marginRight": 4,
-      }
-    }
-  >
-    <ExternalLink
       data-testid="social-share-linkedin-link"
       height={500}
       href="https://linkedin.com/shareArticle?url=https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -285,61 +123,7 @@ exports[`Component SocialShare should render component 1`] = `
   </ForwardRef(Grid)>
   <ForwardRef(Grid)
     item={true}
-    key="3"
-    style={
-      Object {
-        "marginRight": 4,
-      }
-    }
-  >
-    <ExternalLink
-      data-testid="social-share-researchgate-link"
-      height={600}
-      href="https://www.researchgate.net/go.Share.html?url=https://fez-staging.library.uq.edu.au/view/UQ:676287&title=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
-      id="researchgate"
-      openInNewIcon={false}
-      title="Share this record on Research Gate"
-      width={500}
-    >
-      <Icon
-        bgStyle={Object {}}
-        borderRadius={0}
-        iconFillColor="white"
-        round={true}
-        size={24}
-      />
-    </ExternalLink>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    key="4"
-    style={
-      Object {
-        "marginRight": 4,
-      }
-    }
-  >
-    <ExternalLink
-      data-testid="social-share-mendeley-link"
-      height={500}
-      href="https://profitquery.com/add-to/mendeley/?url=https://fez-staging.library.uq.edu.au/view/UQ:676287"
-      id="mendeley"
-      openInNewIcon={false}
-      title="Share this record on Mendeley"
-      width={500}
-    >
-      <Icon
-        bgStyle={Object {}}
-        borderRadius={0}
-        iconFillColor="white"
-        round={true}
-        size={24}
-      />
-    </ExternalLink>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    key="5"
+    key="1"
     style={
       Object {
         "marginRight": 4,
@@ -364,7 +148,7 @@ exports[`Component SocialShare should render component 1`] = `
   </ForwardRef(Grid)>
   <ForwardRef(Grid)
     item={true}
-    key="6"
+    key="2"
     style={
       Object {
         "marginRight": 4,
