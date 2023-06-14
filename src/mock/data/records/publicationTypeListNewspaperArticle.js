@@ -208,7 +208,7 @@ const publicationTypeListNewspaperArticle = {
                     "sc_3m": 0,
                     "sc_6m": 0,
                     "sc_1y": 0,
-                    "sc_citation_url": "http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/www.scopus.com\/results\/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-68049142903"
+                    "sc_citation_url": "https:\/\/go.openathens.net\/redirector\/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Fresults%2Fcitedbyresults.url%3Fsort%3Dplf-f%26src%3Ds%26sot%3Dcite%26sdt%3Da%26cite%3D2-s2.0-68049142903"
                 }
             },
             "fez_record_search_key_start_page": "36",
