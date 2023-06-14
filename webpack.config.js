@@ -7,6 +7,7 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 const port = 3000;
@@ -22,10 +23,9 @@ module.exports = {
     context: resolve(__dirname),
     devtool: 'source-map',
     entry: {
-        browserUpdate: join(__dirname, 'public', 'browser-update.js'),
-        patch: 'react-hot-loader/patch',
         webpackDevClient: `webpack-dev-server/client?http://${url}:${port}`,
         webPackDevServer: 'webpack/hot/only-dev-server',
+        browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         index: join(__dirname, 'src', 'index.js'),
     },
     output: {
@@ -74,14 +74,10 @@ module.exports = {
                             '@babel/plugin-proposal-class-properties',
                             '@babel/plugin-syntax-dynamic-import',
                             ['@babel/plugin-transform-spread', { loose: true }],
+                            'react-refresh/babel',
                         ],
                     },
                 },
-            },
-            {
-                test: /\.js$/,
-                include: /node_modules/,
-                use: 'react-hot-loader/webpack',
             },
             {
                 test: /\.json$/,
@@ -125,6 +121,7 @@ module.exports = {
             )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
+        new ReactRefreshWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.LoaderOptionsPlugin({
             options: {
