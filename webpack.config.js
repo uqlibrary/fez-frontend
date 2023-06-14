@@ -191,6 +191,7 @@ module.exports = {
     optimization: {
         emitOnErrors: false,
         // moduleIds: 'named',
+        runtimeChunk: 'single',
         splitChunks: {
             chunks: 'all',
         },
