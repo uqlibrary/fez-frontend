@@ -14,6 +14,8 @@ const port = 3000;
 const url = process.env.URL || 'localhost';
 const useMock = !!process.env.USE_MOCK || false;
 const publicPath = '';
+const enableFastRefresh =
+    process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc' && process.env.NODE_ENV !== 'production';
 
 const orcidUrl = 'https://sandbox.orcid.org';
 const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
@@ -74,8 +76,8 @@ module.exports = {
                             '@babel/plugin-proposal-class-properties',
                             '@babel/plugin-syntax-dynamic-import',
                             ['@babel/plugin-transform-spread', { loose: true }],
-                            'react-refresh/babel',
-                        ],
+                            enableFastRefresh && 'react-refresh/babel',
+                        ].filter(Boolean),
                     },
                 },
             },
@@ -121,7 +123,7 @@ module.exports = {
             )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
-        new ReactRefreshWebpackPlugin(),
+        enableFastRefresh && new ReactRefreshWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.LoaderOptionsPlugin({
             options: {
@@ -156,7 +158,7 @@ module.exports = {
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
         new Dotenv(),
-    ],
+    ].filter(Boolean),
     resolve: {
         descriptionFiles: ['package.json'],
         enforceExtension: false,
