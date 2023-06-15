@@ -173,6 +173,44 @@ To keep initial load to a minimum, the following optimisations have been added t
 
 ### Webpack
 
+#### version: 5
+
+As of March 2023, Fez uses Webpack version 5. 
+
+- Use of Asset Loader instead of File Loader when emitting assets. 
+***Important*** Note that on dev branches (development.library.edu.au) any icons referenced from CSS (e.g. as background images) or images loaded in to components via an ```import``` statement ***will not appear in the web page***. This is due to the lengthy path structure of the URL on dev branches, and the inclusion of a hash (#). These assets are all generated in the the root ```/assets``` folder and will work as expected on staging and prod branches.
+
+```{
+    test: /\.(png|jp(e*)g|svg|gif)$/,
+    type: 'asset/resource',
+    generator: {
+        publicPath: '/assets/',
+        outputPath: 'assets/',
+        filename: '[hash][ext]',
+    },
+},
+```
+
+- CSS and JS assets now reside in a subfolder with the Hash of the most current Git Commit. Filenames continue to include contentHash in the name (Note that CSS was moved from the root to a `frontend-css` folder.). 
+
+```
+output: {
+      filename: `frontend-js/${currentCommitHash}/[name]-[contenthash].min.js`,
+}
+```
+
+```
+new MiniCssExtractPlugin({
+            filename: `frontend-css/${currentCommitHash}/[name]-[contenthash].min.css`,
+})
+```
+
+- See ```webpack-dist.config.js``` for details of the ```currentCommitHash``` variable and the ```outputLastCommitHashes``` function, which builds a ```hash.txt``` file that includes the last 20 commit hashes.
+
+- The outputting of source-maps has been removed.
+
+- The PWA package has been disabled as it no longer served a purpose.
+
 #### version: 4
 
 ##### Webpack plugins
@@ -381,9 +419,12 @@ Then:
 
 Before pushing to a branch make sure to run `npm run test:all`. This runs the unit and cypress tests.
 
-Codebuild runs `npm run test:e2e:dashboard` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for now until we have API integration with docker, but only in `master` branch.
+Codebuild runs `npm run test:e2e:ci1` `npm run test:e2e:ci2` and uses webpack-dev-server to serve the frontend with mock data.
 
-You can watch video recordings of any failed test runs and view some debug messages via the [Cypress dashboard](https://dashboard.cypress.io/projects/mvfnrv/runs). We have open-source license which allows unlimited runs.
+If there build issues in the CI server, you can enable the dashboard by updating bin/codebuild-test.sh to run
+`npm run test:e2e:ci1:dashboard` `npm run test:e2e:ci2:dashboard`. You can the watch video recordings of any failed test runs 
+and view some debug messages via the [Cypress dashboard](https://dashboard.cypress.io/projects/mvfnrv/runs). 
+We have open-source license which allows unlimited runs.
 
 To manage the account, the admin username/pass is in PasswordState under "GitHub Cypress.io Admin User" (login to Github as this user, then use the github account to log into Cypress).
 

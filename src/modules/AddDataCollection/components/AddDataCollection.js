@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 import moment from 'moment';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -145,7 +145,7 @@ export default class AddDataCollection extends Component {
                         properly acknowledged.
                     </p>
                     <h4>Current types of licences</h4>
-                    {ReactHtmlParser(licenseText(CURRENT_LICENCES))}
+                    {parseHtmlToJSX(licenseText(CURRENT_LICENCES))}
                     <p>
                         View more on{' '}
                         <a

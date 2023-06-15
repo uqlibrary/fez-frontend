@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import { Field } from 'redux-form/immutable';
-import ReactHtmlParser from 'react-html-parser';
+import { destroy, Field } from 'redux-form/immutable';
+import { parseHtmlToJSX } from 'helpers/general';
 import queryString from 'query-string';
 
 import Tabs from '@mui/material/Tabs';
@@ -23,8 +23,8 @@ import * as recordForms from 'modules/SharedComponents/PublicationForm/component
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import LockedAlert from './LockedAlert';
-import { FORM_NAME } from '../constants';
 import { onSubmit } from '../submitHandler';
+import { FORM_NAME } from '../constants';
 
 import { useRecordContext, useTabbedContext } from 'context';
 import pageLocale from 'locale/pages';
@@ -40,6 +40,7 @@ import {
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
 import { translateFormErrorsToText } from '../../../config/validation';
+import { useDispatch } from 'react-redux';
 
 // import { debounce } from 'throttle-debounce';
 
@@ -81,7 +82,6 @@ export const AdminInterface = ({
     createMode,
     isDeleted,
     isJobCreated,
-    destroy,
     dirty,
     disableSubmit,
     formErrors,
@@ -95,6 +95,7 @@ export const AdminInterface = ({
     unlockRecord,
     error,
 }) => {
+    const dispatch = useDispatch();
     const { record } = useRecordContext();
     const { tabbed, toggleTabbed } = useTabbedContext();
     const isSuperAdmin = useIsUserSuperAdmin();
@@ -122,14 +123,15 @@ export const AdminInterface = ({
     }, [tabs]);
 
     React.useEffect(() => {
-        return () => {
-            destroy(FORM_NAME);
-        };
-    }, [destroy]);
-
-    React.useEffect(() => {
         Cookies.set('adminFormTabbed', tabbed ? 'tabbed' : 'fullform');
     }, [tabbed]);
+
+    // clear form state on unmount, so the form state from admin edit form wont show up in the add form
+    React.useEffect(() => {
+        return () => {
+            dispatch(destroy(FORM_NAME));
+        };
+    }, [dispatch]);
 
     React.useEffect(() => {
         if (!submitting && submitSucceeded && successConfirmationRef.current) {
@@ -319,7 +321,7 @@ export const AdminInterface = ({
                     color="primary"
                     fullWidth
                     children={submitButtonTxt}
-                    onClick={handleSubmit}
+                    onClick={!isDeleted ? handleSubmit : setPublicationStatusAndSubmit(UNPUBLISHED)}
                 />
             </Grid>
         </React.Fragment>
@@ -349,7 +351,7 @@ export const AdminInterface = ({
                     <Grid item xs style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 18, fontWeight: 400 }}>
                             {!createMode
-                                ? ReactHtmlParser(
+                                ? parseHtmlToJSX(
                                       `${pageTitlePrefix} ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
                                   )
                                 : `Add a new ${selectedPublicationType}`}
@@ -441,7 +443,6 @@ AdminInterface.propTypes = {
     createMode: PropTypes.bool,
     isDeleted: PropTypes.bool,
     isJobCreated: PropTypes.bool,
-    destroy: PropTypes.func,
     dirty: PropTypes.bool,
     disableSubmit: PropTypes.bool,
     formErrors: PropTypes.object,

@@ -880,6 +880,18 @@ export default {
                 locale: locale.components.authorsList('author').field,
                 contributorEditorId: 'rek-author',
                 isAdmin: true,
+                shouldHandleAffiliations: false,
+            },
+        },
+        authorsWithAffiliations: {
+            component: ContributorsEditorField,
+            componentProps: {
+                name: 'authorsSection.authorsWithAffiliations',
+                showIdentifierLookup: true,
+                locale: locale.components.authorsList('author').field,
+                contributorEditorId: 'rek-author',
+                isAdmin: true,
+                shouldHandleAffiliations: true,
             },
         },
         editors: {

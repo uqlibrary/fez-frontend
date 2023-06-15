@@ -2001,7 +2001,40 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
           hideTitle={true}
           publication={
             Object {
-              "fez_author_affiliation": Array [],
+              "fez_author_affiliation": Array [
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478894,
+                  "af_org_id": 881,
+                  "af_percent_affiliation": 50000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 881,
+                    "org_title": "School of Chemistry and Molecular Biosciences",
+                  },
+                },
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478895,
+                  "af_org_id": 968,
+                  "af_percent_affiliation": 40000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 968,
+                    "org_title": "Institute for Molecular Bioscience",
+                  },
+                },
+              ],
               "fez_datastream_info": Array [
                 Object {
                   "dsi_copyright": null,
@@ -3079,7 +3112,40 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
           hideTitle={true}
           publication={
             Object {
-              "fez_author_affiliation": Array [],
+              "fez_author_affiliation": Array [
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478894,
+                  "af_org_id": 881,
+                  "af_percent_affiliation": 50000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 881,
+                    "org_title": "School of Chemistry and Molecular Biosciences",
+                  },
+                },
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478895,
+                  "af_org_id": 968,
+                  "af_percent_affiliation": 40000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 968,
+                    "org_title": "Institute for Molecular Bioscience",
+                  },
+                },
+              ],
               "fez_datastream_info": Array [
                 Object {
                   "dsi_copyright": null,
@@ -5757,7 +5823,40 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           hideTitle={true}
           publication={
             Object {
-              "fez_author_affiliation": Array [],
+              "fez_author_affiliation": Array [
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478894,
+                  "af_org_id": 881,
+                  "af_percent_affiliation": 50000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 881,
+                    "org_title": "School of Chemistry and Molecular Biosciences",
+                  },
+                },
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478895,
+                  "af_org_id": 968,
+                  "af_percent_affiliation": 40000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 968,
+                    "org_title": "Institute for Molecular Bioscience",
+                  },
+                },
+              ],
               "fez_datastream_info": Array [
                 Object {
                   "dsi_copyright": null,
@@ -6835,7 +6934,40 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           hideTitle={true}
           publication={
             Object {
-              "fez_author_affiliation": Array [],
+              "fez_author_affiliation": Array [
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478894,
+                  "af_org_id": 881,
+                  "af_percent_affiliation": 50000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 881,
+                    "org_title": "School of Chemistry and Molecular Biosciences",
+                  },
+                },
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478895,
+                  "af_org_id": 968,
+                  "af_percent_affiliation": 40000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 968,
+                    "org_title": "Institute for Molecular Bioscience",
+                  },
+                },
+              ],
               "fez_datastream_info": Array [
                 Object {
                   "dsi_copyright": null,
@@ -7913,7 +8045,40 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           hideTitle={true}
           publication={
             Object {
-              "fez_author_affiliation": Array [],
+              "fez_author_affiliation": Array [
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478894,
+                  "af_org_id": 881,
+                  "af_percent_affiliation": 50000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 881,
+                    "org_title": "School of Chemistry and Molecular Biosciences",
+                  },
+                },
+                Object {
+                  "af_author_id": 80316,
+                  "af_id": 478895,
+                  "af_org_id": 968,
+                  "af_percent_affiliation": 40000,
+                  "af_pid": "UQ:288291",
+                  "af_status": 1,
+                  "fez_author": Object {
+                    "aut_display_name": "Adam Burston",
+                    "aut_id": 80316,
+                  },
+                  "fez_org_structure": Object {
+                    "org_id": 968,
+                    "org_title": "Institute for Molecular Bioscience",
+                  },
+                },
+              ],
               "fez_datastream_info": Array [
                 Object {
                   "dsi_copyright": null,

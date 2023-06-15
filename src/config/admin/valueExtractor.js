@@ -44,6 +44,14 @@ const authorsGetValue = record => {
         {},
     );
 
+    const authorEmails = (record.fez_record_search_key_author_email || []).reduce(
+        (authorEmailsObject, authorEmail) => ({
+            ...authorEmailsObject,
+            [authorEmail.rek_author_email_order]: authorEmail,
+        }),
+        {},
+    );
+
     const returnValue = (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
         nameAsPublished: (authors[order] || {}).rek_author,
         creatorRole: (authorRoles[order] || {}).rek_author_role || '',
@@ -59,12 +67,13 @@ const authorsGetValue = record => {
             (authorAffiliationNames[order] || {}).rek_author_affiliation_name === locale.global.orgTitle
                 ? AFFILIATION_TYPE_UQ
                 : AFFILIATION_TYPE_NOT_UQ,
+        email: (authorEmails[order] || {}).rek_author_email || '',
         aut_org_username: ((authorIds[order] || {}).author || {}).aut_org_username || '',
         aut_student_username: ((authorIds[order] || {}).author || {}).aut_student_username || '',
         aut_display_name: (authorIds[order] || {}).rek_author_id_lookup || 0,
     }));
 
-    delete record.fez_record_search_key_author_id;
+    // delete record.fez_record_search_key_author_id;
     delete record.fez_record_search_key_author_affiliation_name;
     delete record.fez_record_search_key_author_affiliation_type;
     delete record.fez_record_search_key_author_role;
@@ -460,6 +469,9 @@ export default {
         },
     },
     authors: {
+        getValue: authorsGetValue,
+    },
+    authorsWithAffiliations: {
         getValue: authorsGetValue,
     },
     editors: {

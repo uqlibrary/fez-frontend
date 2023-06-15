@@ -13,7 +13,7 @@ export const maxLength = max => value =>
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
 export const maxLengthWithWhitespace = max => value =>
-    (value && value.plainText && value.plainText.length > max) || (!value.plainText && value.length > max + 7)
+    value?.plainText?.length > max || value?.length > max + 7
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
 export const maxLength9 = maxLength(9);
@@ -66,14 +66,7 @@ export const maxWords = max => value => {
 export const maxWords100 = maxWords(100);
 
 export const maxListEditorTextLength = max => value => {
-    let valueToValidate = null;
-    if (typeof value === 'object' && value.hasOwnProperty('plainText')) {
-        valueToValidate = value.plainText;
-    } else {
-        valueToValidate = value;
-    }
-
-    return maxLengthWithWhitespace(max)(valueToValidate);
+    return maxLengthWithWhitespace(max)(value?.plainText ? value.plainText : value);
 };
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
@@ -377,16 +370,14 @@ export const isFileValid = ({ files: { blacklist } }, isAdmin = false, isAdminEd
 };
 
 export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, allowOnlyEditor = false) => {
+    const authors = data.authors ?? data.authorsWithAffiliations;
     const errors = {};
     if (
-        (!data.authors && !data.editors) ||
-        (!data.authors && data.editors && data.editors.length === 0) ||
-        (!data.editors && data.authors && data.authors.length === 0) ||
-        (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
-        (!isAdmin &&
-            data.authors &&
-            data.authors.length !== 0 &&
-            data.authors.filter(item => item.selected).length === 0) ||
+        (!authors && !data.editors) ||
+        (!authors && data.editors && data.editors.length === 0) ||
+        (!data.editors && authors && authors.length === 0) ||
+        (authors && data.editors && data.editors.length === 0 && authors.length === 0) ||
+        (!isAdmin && authors && authors.length !== 0 && authors.filter(item => item.selected).length === 0) ||
         (!isAdmin &&
             data.editors &&
             data.editors.length !== 0 &&
@@ -398,7 +389,7 @@ export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = f
                 : locale.validationErrors.authorRequired;
         }
         errors.editors = isAdmin ? locale.validationErrors.editorRequiredAdmin : locale.validationErrors.editorRequired;
-    } else if (allowOnlyOne && data.authors && data.authors.length > 0 && data.editors && data.editors.length > 0) {
+    } else if (allowOnlyOne && authors && authors.length > 0 && data.editors && data.editors.length > 0) {
         errors.onlyOneOfAuthorOrEditor = locale.validationErrors.onlyOneOfAuthorOrEditor;
     }
     return errors;

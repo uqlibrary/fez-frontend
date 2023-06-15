@@ -498,6 +498,55 @@ export const AttachedFiles = ({
                                                     {item.calculatedSize}
                                                 </Typography>
                                             </Grid>
+                                            <Grid
+                                                item
+                                                sm
+                                                style={{ textAlign: 'right' }}
+                                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                            >
+                                                <OpenAccessIcon
+                                                    {...item.openAccessStatus}
+                                                    securityStatus={item.securityStatus}
+                                                />
+                                            </Grid>
+                                            {isAdmin && canEdit && (
+                                                <React.Fragment>
+                                                    {/* cypress test does not like full stop in the id */}
+                                                    <Grid
+                                                        item
+                                                        xs={2}
+                                                        id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
+                                                    >
+                                                        {(openAccessConfig.openAccessFiles.includes(
+                                                            openAccessStatusId,
+                                                        ) ||
+                                                            !!item.securityPolicyStatus.isEmbargoed) && (
+                                                            <FileUploadEmbargoDate
+                                                                value={
+                                                                    item.openAccessStatus.embargoDate ??
+                                                                    item.securityPolicyStatus.embargoDate
+                                                                }
+                                                                onChange={onEmbargoDateChange(item.id)}
+                                                                disabled={disabled}
+                                                                fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
+                                                                minDate={moment().toDate()}
+                                                            />
+                                                        )}
+                                                    </Grid>
+                                                    <Grid item xs style={{ textAlign: 'right' }}>
+                                                        <Tooltip title={deleteHint}>
+                                                            <span>
+                                                                <IconButton
+                                                                    id={`delete-file-${index}`}
+                                                                    data-testid={`delete-file-${index}`}
+                                                                    onClick={onFileDelete(item.fileName)}
+                                                                    disabled={disabled}
+                                                                    size="large"
+                                                                >
+                                                                    <Delete />
+                                                                </IconButton>
+                                                            </span>
+                                                        </Tooltip>
                                             {!isAdminEditing && (
                                                 <Grid item xs sx={{ textAlign: 'right' }}>
                                                     <Box sx={{ whiteSpace: 'nowrap' }}>

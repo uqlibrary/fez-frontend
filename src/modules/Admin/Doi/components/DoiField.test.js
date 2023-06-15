@@ -5,10 +5,8 @@ import publicationTypeListResearchReport from 'mock/data/records/publicationType
 const record = publicationTypeListResearchReport.data[0];
 
 jest.mock('modules/ViewRecord/components/AdditionalInformation');
-jest.mock('react-html-parser');
 
 import { formatPublicationDate } from 'modules/ViewRecord/components/AdditionalInformation';
-import ReactHtmlParser from 'react-html-parser';
 
 const setup = (testProps = {}, args = { isShallow: false }) => {
     const props = {
@@ -32,6 +30,8 @@ describe('DoiField', () => {
     });
 
     it('should render known fields', () => {
+        const helpers = jest.requireActual('helpers/general');
+        const spy = jest.spyOn(helpers, 'parseHtmlToJSX');
         const testFn = ({ data, displayTypeLookup, field, label, test }) => {
             const wrapper = setup({
                 data: data || record[field],
@@ -56,7 +56,8 @@ describe('DoiField', () => {
             {
                 field: 'rek_description',
                 test: () => {
-                    expect(ReactHtmlParser).toHaveBeenCalledWith(record.rek_description);
+                    expect(spy).toHaveBeenCalledWith(record.rek_description);
+                    spy.mockRestore();
                 },
             },
             // Date

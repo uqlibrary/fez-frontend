@@ -244,6 +244,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // This tests the "Record not found" message on viewRecord and adminEdit
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
     .reply(404, { message: 'File not found' })
+    // Author Affiliation with incorrect values
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:40186a' }).apiUrl)))
+    .reply(200, { data: mockData.recordWithIncorrectAffiliation })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:871c1f8' }).apiUrl)))
+    .reply(200, { data: { ...mockData.recordWithProblematicAuthorAffiliations } })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_VERSION_API('.*', '.*').apiUrl)))
     // versions
     .reply(config => {
@@ -374,6 +379,22 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, { data: { ...matchedRecord } }];
         }
         return [200, { data: { ...mockData.record } }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:764e150' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.recordBookWithAuthorAffiliations } }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:871c1f8' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.recordWithProblematicAuthorAffiliations } }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.ORGANISATIONAL_UNITS().apiUrl)))
+    .reply(config => {
+        return [200, { data: [...mockData.organisationalUnits] }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.SUGGESTED_ORGANISATIONAL_UNITS({ authorId: '.*' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: [...mockData.suggestedOrganisationalUnits] }];
     })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
@@ -666,6 +687,62 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
             '1000000293': 'User deleted',
             '9999999999': 'User not found',
         },
+    })
+    .onPost('fez-users')
+    .reply(200, {
+        data: {
+            usr_id: 2000000999,
+            usr_created_date: '2023-03-03T02:13:17Z',
+            usr_updated_date: '2023-03-03T02:13:17Z',
+            usr_status: 'active',
+            usr_given_names: null,
+            usr_family_name: null,
+            usr_full_name: 'MOCK USER',
+            usr_email: 'mock@user.com',
+            usr_preferences: null,
+            usr_sms_email: null,
+            usr_username: 'mock_user',
+            usr_shib_username: null,
+            usr_administrator: 0,
+            usr_ldap_authentication: 0,
+            usr_login_count: 0,
+            usr_shib_login_count: 0,
+            usr_last_login_date: '2023-03-03T02:13:17Z',
+            usr_external_usr_id: null,
+            usr_super_administrator: 0,
+            usr_auth_rule_groups: '11',
+            usr_real_last_login_date: '2023-03-03T02:13:17Z',
+        },
+    })
+    .onPut('fez-users/1000000293')
+    .reply(200, {
+        data: {
+            usr_id: 1000000293,
+            usr_created_date: '2023-03-03T02:13:17Z',
+            usr_updated_date: '2023-03-03T02:13:17Z',
+            usr_status: 'active',
+            usr_given_names: null,
+            usr_family_name: null,
+            usr_full_name: 'Test User UPDATE',
+            usr_email: 't.user@library.uq.edu.au',
+            usr_preferences: null,
+            usr_sms_email: null,
+            usr_username: 'mock_user',
+            usr_shib_username: null,
+            usr_administrator: 1,
+            usr_ldap_authentication: 0,
+            usr_login_count: 0,
+            usr_shib_login_count: 0,
+            usr_last_login_date: '2023-03-03T02:13:17Z',
+            usr_external_usr_id: null,
+            usr_super_administrator: 1,
+            usr_auth_rule_groups: '11',
+            usr_real_last_login_date: '2023-03-03T02:13:17Z',
+        },
+    })
+    .onDelete('fez-users/1000000293')
+    .reply(200, {
+        data: 'User deleted',
     })
     // .reply(500)
     .onPost('fez-authors/delete-list')

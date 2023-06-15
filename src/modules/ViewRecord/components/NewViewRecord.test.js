@@ -5,6 +5,7 @@ import * as ViewRecordActions from 'actions/viewRecord';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
+import { recordWithNoAffiliationIssues } from 'mock/data/records';
 import { accounts, currentAuthor } from 'mock/data/account';
 import { useParams } from 'react-router';
 import { recordVersionLegacy } from '../../../mock/data';
@@ -14,7 +15,7 @@ import { stripHtml } from '../../../helpers/general';
 import globalLocale from '../../../locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
-import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from '../../../config/general';
+import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, PUBLICATION_TYPE_DATA_COLLECTION } from '../../../config/general';
 
 jest.mock('../../../hooks', () => ({
     userIsAdmin: jest.fn(() => ({})),
@@ -64,6 +65,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should render default empty view', () => {
+        // Checked OK
         const { asFragment } = setup({});
         expect(asFragment()).toMatchInlineSnapshot(`
             <DocumentFragment>
@@ -75,6 +77,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should not render components for empty record', () => {
+        // Checked OK
         const { asFragment } = setup({ recordToView: {} });
         expect(asFragment()).toMatchInlineSnapshot(`
             <DocumentFragment>
@@ -86,12 +89,78 @@ describe('NewViewRecord', () => {
     });
 
     it('should render default view with admin menu', () => {
+        // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);
         const { getByTestId } = setup({ recordToView: record });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 
+    it('should render default view with admin menu when AA issues and internal notes exist', () => {
+        // Checked OK
+        const affiliationIssues = {
+            fez_author_affiliation: [
+                {
+                    af_id: 478894,
+                    af_pid: 'UQ:871c1f8',
+                    af_author_id: 7624000,
+                    af_percent_affiliation: 900,
+                    af_org_id: 881,
+                    af_status: 1,
+                    fez_author: {
+                        aut_id: 88844,
+                        aut_display_name: 'one Wrong',
+                    },
+                    fez_org_structure: [
+                        {
+                            org_id: 881,
+                            org_title: 'School of Chemistry and Molecular Biosciences',
+                        },
+                    ],
+                },
+                {
+                    af_id: 478894,
+                    af_pid: 'UQ:871c1f8',
+                    af_author_id: 7624001,
+                    af_percent_affiliation: 100000,
+                    af_org_id: 881,
+                    af_status: 1,
+                    fez_author: {
+                        aut_id: 88844,
+                        aut_display_name: 'two OK',
+                    },
+                    fez_org_structure: [
+                        {
+                            org_id: 881,
+                            org_title: 'School of Chemistry and Molecular Biosciences',
+                        },
+                    ],
+                },
+            ],
+            fez_internal_notes: { ain_detail: 'test' },
+        };
+        const recordwithIssues = { ...recordWithNoAffiliationIssues, ...affiliationIssues };
+        userIsAdmin.mockImplementationOnce(() => true);
+        const { getByTestId } = setup({ recordToView: recordwithIssues });
+        expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+
+    it('should render default view with admin menu when no AA issues exist', () => {
+        // Checked OK
+        userIsAdmin.mockImplementationOnce(() => true);
+        const { getByTestId } = setup({ recordToView: recordWithNoAffiliationIssues });
+        expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+    it('should render internal notes view with admin menu when no AA issues exist', () => {
+        // Checked OK
+        userIsAdmin.mockImplementationOnce(() => true);
+        const { getByTestId } = setup({
+            recordToView: { ...recordWithNoAffiliationIssues, fez_internal_notes: { ain_detail: 'test' } },
+        });
+        expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+
     it('should render version', () => {
+        // Checked OK
         const txt = locale.pages.viewRecord.version;
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
@@ -103,6 +172,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should render deleted version', () => {
+        // Checked OK
         const txt = locale.pages.viewRecord.version;
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
@@ -116,6 +186,91 @@ describe('NewViewRecord', () => {
     it('should render deleted record correctly', () => {
         const { getByText } = setup({ isDeleted: true, recordToView: record });
         expect(getByText('This work has been deleted.')).toBeInTheDocument();
+        expect(
+            getByText(
+                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
+            ),
+        ).toBeInTheDocument();
+    });
+
+    it('should render deleted data collection correctly', () => {
+        const { getByText } = setup({
+            isDeleted: true,
+            recordToView: { ...record, rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION },
+        });
+        expect(getByText('This work has been deleted.')).toBeInTheDocument();
+        expect(
+            getByText(
+                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
+            ),
+        ).toBeInTheDocument();
+    });
+
+    it('should render deleted data collection with new doi correctly', () => {
+        const newDoi = '10.000/abc';
+        const { getByText, container } = setup({
+            isDeleted: true,
+            recordToView: {
+                ...record,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_new_doi: {
+                    rek_new_doi: '10.000/abc',
+                },
+            },
+        });
+        expect(container.textContent).toContain(
+            'This Data Collection has been deleted and substituted by another version.',
+        );
+        expect(container.querySelector(`[href="https://doi.org/${newDoi}"][target="_blank"]`)).toBeInTheDocument();
+        expect(
+            getByText(
+                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
+            ),
+        ).toBeInTheDocument();
+    });
+
+    it('should render deleted data collection with new doi and deletion notes correctly', () => {
+        const newDoi = '10.000/abc';
+        const deletionNotes = 'notes test';
+        const { getByText, container } = setup({
+            isDeleted: true,
+            recordToView: {
+                ...record,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_new_doi: {
+                    rek_new_doi: '10.000/abc',
+                },
+                fez_record_search_key_deletion_notes: {
+                    rek_deletion_notes: deletionNotes,
+                },
+            },
+        });
+        expect(container.textContent).toContain(
+            'This Data Collection has been deleted and substituted by another version.',
+        );
+        expect(container.querySelector(`[href="https://doi.org/${newDoi}"][target="_blank"]`)).toBeInTheDocument();
+        expect(container.textContent).toContain(deletionNotes);
+        expect(
+            getByText(
+                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
+            ),
+        ).toBeInTheDocument();
+    });
+
+    it('should render deleted data collection with deletion notes correctly', () => {
+        const deletionNotes = 'notes test';
+        const { getByText, container } = setup({
+            isDeleted: true,
+            recordToView: {
+                ...record,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_deletion_notes: {
+                    rek_deletion_notes: deletionNotes,
+                },
+            },
+        });
+        expect(getByText('This work has been deleted.')).toBeInTheDocument();
+        expect(container.textContent).toContain(deletionNotes);
         expect(
             getByText(
                 'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
@@ -300,7 +455,9 @@ describe('NewViewRecord', () => {
             );
 
             // Author affiliations
-            expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('Yes');
+            expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent(
+                'Valid author affiliation information has been added',
+            );
 
             // WoS ID
             expect(getByTestId('drawer-Desktop-content-clipboard-4-1')).toHaveTextContent('000381303000009');
@@ -330,7 +487,9 @@ describe('NewViewRecord', () => {
             );
 
             // Author affiliations
-            expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('Yes');
+            expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent(
+                'Valid author affiliation information has been added',
+            );
 
             // WoS ID
             expect(getByTestId('drawer-Mobile-content-clipboard-4-1')).toHaveTextContent('000381303000009');

@@ -24,7 +24,8 @@ export const DEVELOPMENT_DOMAIN = 'development.library.uq.edu.au';
 export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
 export const APP_URL = process.env.APP_URL || STAGING_URL;
 export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
-export const IS_DEVELOPMENT_SERVER = !process.env.USE_MOCK && APP_URL.indexOf(DEVELOPMENT_DOMAIN) > -1;
+export const IS_DEVELOPMENT_SERVER =
+    APP_URL.indexOf('localhost') > -1 || (!process.env.USE_MOCK && APP_URL.indexOf(DEVELOPMENT_DOMAIN) > -1);
 
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login.php';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
@@ -208,6 +209,19 @@ export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - O
 export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Other or Citation Only';
 export const SUBTYPE_EDITED_BOOK = 'Edited book';
 export const SUBTYPE_NON_NTRO = 'Non-NTRO';
+export const SUBTYPE_FULLY_PUBLISHED_PAPER = 'Fully published paper';
+export const SUBTYPE_RESEARCH_BOOK_ORIGINAL_RESEARCH = 'Research book (original research)';
+export const SUBTYPE_RESEARCH_BOOK_CHAPTER_ORIGINAL_RESEARCH = 'Research book chapter (original research)';
+export const SUBTYPE_CRITICAL_REVIEW = 'Critical review of research, literature review, critical commentary';
+export const SUBTYPE_ARTICLE_ORIGINAL_RESEARCH = 'Article (original research)';
+
+export const AUTHOR_AFFILIATIONS_ALLOWED_TYPES = {
+    [PUBLICATION_TYPE_BOOK_CHAPTER]: [SUBTYPE_RESEARCH_BOOK_CHAPTER_ORIGINAL_RESEARCH, SUBTYPE_CRITICAL_REVIEW],
+    [PUBLICATION_TYPE_BOOK]: [SUBTYPE_RESEARCH_BOOK_ORIGINAL_RESEARCH],
+    [PUBLICATION_TYPE_CONFERENCE_PAPER]: [SUBTYPE_FULLY_PUBLISHED_PAPER],
+    [PUBLICATION_TYPE_JOURNAL_ARTICLE]: [SUBTYPE_ARTICLE_ORIGINAL_RESEARCH, SUBTYPE_CRITICAL_REVIEW],
+    // [PUBLICATION_TYPE_RESEARCH_REPORT]: [],
+};
 
 export const CW_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
@@ -383,6 +397,7 @@ export const publicationTypes = (components, isAdmin = false) => ({
             'Other',
         ],
     },
+
     [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
         name: DOCUMENT_TYPE_CONFERENCE_PAPER,
@@ -695,6 +710,7 @@ export const RETRACTED = 7;
 export const SUBMITTED_FOR_APPROVAL = 3;
 export const UNPUBLISHED = 1;
 export const PUBLISHED = 2;
+export const DELETED = 8;
 
 export const UNPUBLISHED_STATUS = [
     {
@@ -735,6 +751,7 @@ export const UNPUBLISHED_STATUS_MAP = {
     Retracted: RETRACTED,
     'Submitted for Approval': SUBMITTED_FOR_APPROVAL,
     Unpublished: UNPUBLISHED,
+    Deleted: DELETED,
 };
 
 export const UNPUBLISHED_STATUS_TEXT_MAP = {
@@ -745,6 +762,7 @@ export const UNPUBLISHED_STATUS_TEXT_MAP = {
     [RETRACTED]: 'Retracted',
     [SUBMITTED_FOR_APPROVAL]: 'Submitted for Approval',
     [UNPUBLISHED]: 'Unpublished',
+    [DELETED]: 'Deleted',
 };
 export const DATA_COLLECTION_CREATOR_ROLES = [
     {
@@ -1272,6 +1290,7 @@ export const LANGUAGE = [
 
 export const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
 export const DELETE_SELECTED_RECORD_LABEL = 'Delete selected record';
+export const UPDATE_DELETED_RECORD_LABEL = 'Update tombstone page info';
 
 export const RECORD_ACTION_URLS = [
     {
@@ -1284,8 +1303,7 @@ export const RECORD_ACTION_URLS = [
     },
     {
         label: 'Edit author affiliations',
-        url: pid =>
-            `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=authors`,
         inApp: true,
         showInDeleted: false,
         options: null,
@@ -1309,6 +1327,13 @@ export const RECORD_ACTION_URLS = [
         url: pid => `${APP_URL}${PATH_PREFIX}admin/delete/${pid}`,
         inApp: true,
         showInDeleted: false,
+        options: null,
+    },
+    {
+        label: UPDATE_DELETED_RECORD_LABEL,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/delete/${pid}`,
+        inApp: true,
+        showInDeleted: true,
         options: null,
     },
     {

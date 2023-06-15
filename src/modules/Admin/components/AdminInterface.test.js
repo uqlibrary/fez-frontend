@@ -6,6 +6,7 @@ import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
 import pageLocale from '../../../locale/pages';
+import * as redux from 'react-redux';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -16,6 +17,11 @@ jest.mock('redux-form/immutable');
 jest.mock('js-cookie', () => ({
     get: jest.fn(),
     set: jest.fn(),
+}));
+
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: jest.fn(),
 }));
 
 function setup(testProps = {}) {
@@ -43,7 +49,6 @@ function setup(testProps = {}) {
                 component: () => '<p>Security component</p>',
             },
         },
-        destroy: jest.fn(),
         unlockRecord: jest.fn(),
         error: null,
         ...testProps,
@@ -55,6 +60,7 @@ function setup(testProps = {}) {
 describe('AdminInterface component', () => {
     let mockUseEffect;
     const cleanupFns = [];
+    const useDispatchMock = redux.useDispatch;
 
     beforeAll(() => {
         mockUseEffect = jest.spyOn(React, 'useEffect');
@@ -76,6 +82,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 179,
             },
         }));
+        useDispatchMock.mockImplementation(() => () => {});
     });
 
     afterEach(() => {
@@ -84,6 +91,7 @@ describe('AdminInterface component', () => {
         while (cleanupFns.length > 0) {
             cleanupFns.pop()();
         }
+        useDispatchMock.mockRestore();
     });
 
     afterAll(() => {

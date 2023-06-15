@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { numberToWords, SIGNIFICANCE_MAP } from 'config/general';
-import ReactHtmlParser from 'react-html-parser';
+import { parseHtmlToJSX } from 'helpers/general';
 
 export const ScaleOfSignificanceTemplate = ({ item }) => {
     // eslint-disable-next-line camelcase
@@ -22,7 +22,7 @@ export const ScaleOfSignificanceTemplate = ({ item }) => {
             </Grid>
             <Grid item xs={12} md={9}>
                 <Typography variant="body2" component={'span'} id={`statement-item-${item.id}`}>
-                    {ReactHtmlParser(item.value.plainText || item.value.htmlText || '')}
+                    {parseHtmlToJSX(item.value.plainText || item.value.htmlText || '')}
                 </Typography>
             </Grid>
         </Grid>

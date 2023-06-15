@@ -108,6 +108,7 @@ export const JournalSearchInterface = ({
                             onClick={handleKeywordReset}
                             id="journal-search-clear-keywords-button"
                             data-testid="journal-search-clear-keywords-button"
+                            data-analyticsid="journal-search-clear-keywords-button"
                             size="large"
                         >
                             <CloseIcon />
@@ -138,6 +139,7 @@ export const JournalSearchInterface = ({
                                     onClick={onSearch}
                                     id="journal-search-button"
                                     data-testid="journal-search-button"
+                                    data-analyticsid="journal-search-button"
                                     fullWidth
                                 />
                             </Grid>

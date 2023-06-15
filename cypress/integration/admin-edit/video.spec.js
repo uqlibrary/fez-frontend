@@ -41,7 +41,7 @@ context('Video admin edit', () => {
     it('should submit successfully', () => {
         const baseUrl = Cypress.config('baseUrl');
         cy.typeCKEditor('rek-description', 'some description'); // description
-        cy.get('#admin-work-submit').click({ force: true });
+        cy.get('#admin-work-submit').click({ scrollBehavior: 'center' });
 
         // Confirmation message
         cy.get('[role=dialog]')
@@ -52,5 +52,24 @@ context('Video admin edit', () => {
             .contains('button', 'View updated work')
             .click();
         cy.url().should('equal', `${baseUrl}/view/${record.rek_pid}`);
+    });
+});
+
+context('Author affiliations', () => {
+    const record = recordList.data[0];
+
+    beforeEach(() => {
+        cy.loadRecordForAdminEdit(record.rek_pid);
+    });
+
+    afterEach(() => {
+        cy.adminEditCleanup();
+    });
+    it('should not be available for this work type', () => {
+        cy.assertAffiliationsAllowed({
+            authorName: 'Steve Su (uqysu4)',
+            orgName: 'The University of Queensland',
+            rowId: 4,
+        });
     });
 });

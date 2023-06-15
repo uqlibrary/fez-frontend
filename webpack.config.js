@@ -7,12 +7,15 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 const port = 3000;
 const url = process.env.URL || 'localhost';
 const useMock = !!process.env.USE_MOCK || false;
 const publicPath = '';
+const enableFastRefresh =
+    process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc' && process.env.NODE_ENV !== 'production';
 
 const orcidUrl = 'https://sandbox.orcid.org';
 const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
@@ -22,15 +25,12 @@ module.exports = {
     context: resolve(__dirname),
     devtool: 'source-map',
     entry: {
-        browserUpdate: join(__dirname, 'public', 'browser-update.js'),
-        patch: 'react-hot-loader/patch',
         webpackDevClient: `webpack-dev-server/client?http://${url}:${port}`,
         webPackDevServer: 'webpack/hot/only-dev-server',
+        browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         index: join(__dirname, 'src', 'index.js'),
     },
     output: {
-        filename: '[name].js',
-        path: resolve(__dirname),
         pathinfo: true,
         publicPath: `http://${url}:${port}/${publicPath}`,
     },
@@ -40,7 +40,6 @@ module.exports = {
         headers: { 'X-Custom-Header': 'yes' },
         historyApiFallback: true,
         host: url,
-        hot: true,
         https: false,
         open: false,
         port: port,
@@ -77,14 +76,10 @@ module.exports = {
                             '@babel/plugin-proposal-class-properties',
                             '@babel/plugin-syntax-dynamic-import',
                             ['@babel/plugin-transform-spread', { loose: true }],
-                        ],
+                            enableFastRefresh && 'react-refresh/babel',
+                        ].filter(Boolean),
                     },
                 },
-            },
-            {
-                test: /\.js$/,
-                include: /node_modules/,
-                use: 'react-hot-loader/webpack',
             },
             {
                 test: /\.json$/,
@@ -106,8 +101,9 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'assets/',
-                            publicPath: 'assets/',
+                            esModule: false,
+                            outputPath: '/assets/',
+                            publicPath: '/assets/',
                         },
                     },
                 ],
@@ -127,6 +123,7 @@ module.exports = {
             )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
+        enableFastRefresh && new ReactRefreshWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.LoaderOptionsPlugin({
             options: {
@@ -161,26 +158,44 @@ module.exports = {
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
         new Dotenv(),
-    ],
+    ].filter(Boolean),
     resolve: {
         descriptionFiles: ['package.json'],
         enforceExtension: false,
         extensions: ['.jsx', '.js', '.json'],
         modules: ['src', 'node_modules', 'custom_modules'],
-        alias: {
-            '@material-ui/styles': resolve(__dirname, 'node_modules', '@material-ui/styles'),
+        fallback: {
+            assert: require.resolve('assert'),
+            buffer: require.resolve('buffer'),
+            console: require.resolve('console-browserify'),
+            constants: require.resolve('constants-browserify'),
+            crypto: require.resolve('crypto-browserify'),
+            domain: require.resolve('domain-browser'),
+            events: require.resolve('events'),
+            http: require.resolve('stream-http'),
+            https: require.resolve('https-browserify'),
+            os: require.resolve('os-browserify/browser'),
+            path: require.resolve('path-browserify'),
+            punycode: require.resolve('punycode'),
+            process: require.resolve('process/browser'),
+            querystring: require.resolve('querystring-es3'),
+            stream: require.resolve('stream-browserify'),
+            string_decoder: require.resolve('string_decoder'),
+            sys: require.resolve('util'),
+            timers: require.resolve('timers-browserify'),
+            tty: require.resolve('tty-browserify'),
+            url: require.resolve('url'),
+            util: require.resolve('util'),
+            vm: require.resolve('vm-browserify'),
+            zlib: require.resolve('browserify-zlib'),
         },
     },
     optimization: {
-        noEmitOnErrors: true,
-        namedModules: true,
+        emitOnErrors: false,
+        // moduleIds: 'named',
+        runtimeChunk: 'single',
         splitChunks: {
-            minChunks: 6,
-            cacheGroups: {
-                commons: {
-                    chunks: 'all',
-                },
-            },
+            chunks: 'all',
         },
     },
 };

@@ -2,7 +2,7 @@ import DeleteRecord from './DeleteRecord';
 import { mockRecordToDelete } from 'mock/data/testing/records';
 import { communityRecord, collectionRecord } from 'mock/data/testing/communityCollection';
 import Immutable from 'immutable';
-import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
+import { DELETED, DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 
 function setup(testProps) {
     const props = {
@@ -65,7 +65,38 @@ describe('Component DeleteRecord', () => {
         expect(wrapper.find('Field').length).toEqual(1);
     });
 
-    it('should display alert and disable delete button on records with Crossref UQ DOIs', () => {
+    it('should render delete record form with deleted record citation', () => {
+        const wrapper = setup({ recordToDelete: { ...mockRecordToDelete, rek_status: DELETED } });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Field').length).toEqual(1);
+    });
+
+    it('should render delete record form with data collection citation', () => {
+        const wrapper = setup({
+            recordToDelete: {
+                ...mockRecordToDelete,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_doi: { rek_doi: `${DOI_DATACITE_PREFIX}12345` },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Field').length).toEqual(3);
+    });
+
+    it('should render delete record form with deleted data collection citation', () => {
+        const wrapper = setup({
+            recordToDelete: {
+                ...mockRecordToDelete,
+                rek_status: DELETED,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_doi: { rek_doi: `${DOI_DATACITE_PREFIX}12345` },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Field').length).toEqual(3);
+    });
+
+    it('should render delete record form for records with Crossref UQ DOIs', () => {
         const wrapper = setup({
             recordToDelete: {
                 ...mockRecordToDelete,
@@ -73,11 +104,11 @@ describe('Component DeleteRecord', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('#submit-delete-record').props().disabled).toEqual(true);
-        expect(wrapper.find('Field').length).toEqual(0);
+        expect(wrapper.find('#submit-delete-record').disabled).toBeFalsy();
+        expect(wrapper.find('Field').length).toEqual(2);
     });
 
-    it('should display alert and disable delete button on records with DataCite UQ DOIs', () => {
+    it('should render delete record form for records with DataCite UQ DOIs', () => {
         const wrapper = setup({
             recordToDelete: {
                 ...mockRecordToDelete,
@@ -85,8 +116,8 @@ describe('Component DeleteRecord', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('#submit-delete-record').props().disabled).toEqual(true);
-        expect(wrapper.find('Field').length).toEqual(0);
+        expect(wrapper.find('#submit-delete-record').disabled).toBeFalsy();
+        expect(wrapper.find('Field').length).toEqual(3);
     });
 
     it('should display specific alert if trying to delete a Community that contains Collections', () => {

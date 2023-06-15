@@ -1,4 +1,4 @@
-import ReactHtmlParser from 'react-html-parser';
+import HTMLReactParser from 'html-react-parser';
 
 // note: dd usage by WebpackStrip for dist builds
 global.dd = (...args) => console.dir(args, { depth: null });
@@ -23,6 +23,10 @@ export const stripHtml = html => {
     temporalDivElement.innerHTML = html.replace(/<(?:br|p)[^>]*>/gim, ' ').replace(/\s+/, ' ');
     /* istanbul ignore next */
     return temporalDivElement.textContent || temporalDivElement.innerText || '';
+};
+
+export const parseHtmlToJSX = html => {
+    return HTMLReactParser(isString(html) ? html : '');
 };
 
 export const doesListContainItem = (list, term) => {
@@ -367,7 +371,7 @@ export const formatUrlTextWithWbrTags = url => {
         )
         .join('//<wbr>');
 
-    return ReactHtmlParser(formatted);
+    return parseHtmlToJSX(formatted);
 };
 
 export const handleKeyboardPressActivate = (key, callbackFn) => {
