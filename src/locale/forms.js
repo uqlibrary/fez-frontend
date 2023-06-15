@@ -240,6 +240,18 @@ export default {
                 label: isDeleted =>
                     `Please enter a reason why you are ${isDeleted ? 'updating' : 'deleting'} this work`,
             },
+            doiResolutionUrl: {
+                title: (
+                    <>
+                        New Location
+                        <div style={{ fontSize: '60%' }}>
+                            (default to https://web.library.uq.edu.au/record-unavailable if left blank)
+                        </div>
+                    </>
+                ),
+                label: 'Please enter the URL to which the DOI would resolve to',
+                placeholder: 'Enter a valid URL (e.g. https://espace.library.uq.edu.au/view/UQ:12345)',
+            },
             newDoi: {
                 title: (
                     <>
