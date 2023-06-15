@@ -297,7 +297,7 @@ export const NewViewRecord = ({
                                 <Grid item className={classes.alignVerticalAxisCentre}>
                                     <SocialShare
                                         publication={recordToView}
-                                        services={['linkedin', 'email', 'print']}
+                                        services={['email', 'print']}
                                         spaceBetween={4}
                                         round
                                     />
