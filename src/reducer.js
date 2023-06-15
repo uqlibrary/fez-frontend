@@ -1,6 +1,4 @@
 import { combineReducers } from 'redux-immutable';
-import { connectRouter } from 'connected-react-router/immutable';
-import { history } from 'config/history';
 
 // Load reducers
 import { reducer as formReducer } from 'redux-form/immutable';
@@ -10,17 +8,18 @@ import { default as fileUploadReducer } from 'modules/SharedComponents/Toolbox/F
 import * as reducers from './reducers';
 import * as plugins from './reducers/formReducerPlugins';
 
-const rootReducer = combineReducers({
-    form: formReducer.plugin({
-        PublicationForm: plugins.resetValue,
-        AdminWorkForm: plugins.adminReduxFormPlugin,
-        ChangeSearchKeyValueForm: plugins.resetValue,
-        ChangeAuthorIdForm: plugins.resetValue,
-    }),
-    helpDrawer: helpDrawerReducer,
-    fileUpload: fileUploadReducer,
-    router: connectRouter(history),
-    ...reducers,
-});
+const rootReducer = ({ routerReducer }) =>
+    combineReducers({
+        form: formReducer.plugin({
+            PublicationForm: plugins.resetValue,
+            AdminWorkForm: plugins.adminReduxFormPlugin,
+            ChangeSearchKeyValueForm: plugins.resetValue,
+            ChangeAuthorIdForm: plugins.resetValue,
+        }),
+        helpDrawer: helpDrawerReducer,
+        fileUpload: fileUploadReducer,
+        router: routerReducer,
+        ...reducers,
+    });
 
 export default rootReducer;

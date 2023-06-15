@@ -2,35 +2,13 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 import { APP_URL } from 'config';
-import { PrintIcon, ResearchGateIcon, MendeleyIcon } from './Icons';
-import { EmailIcon, FacebookIcon, TwitterIcon, LinkedinIcon } from 'react-share/lib';
+import { PrintIcon } from './Icons';
+import { EmailIcon, LinkedinIcon } from 'react-share';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export const SocialShare = ({ publication, size, spaceBetween, services, round }) => {
     const printPage = () => window.print();
     const locale = {
-        facebook: {
-            id: 'facebook',
-            link: {
-                href: `https://www.facebook.com/sharer/sharer.php?u=${APP_URL}view/${publication.rek_pid}`,
-                width: 500,
-                height: 500,
-                title: 'Share this record on Facebook',
-                openInNewIcon: false,
-            },
-            icon: FacebookIcon,
-        },
-        twitter: {
-            id: 'twitter',
-            link: {
-                href: `https://twitter.com/share?url=${APP_URL}view/${publication.rek_pid}&text=${publication.rek_title} - `,
-                width: 500,
-                height: 300,
-                title: 'Share this record on Twitter',
-                openInNewIcon: false,
-            },
-            icon: TwitterIcon,
-        },
         linkedin: {
             id: 'linkedin',
             link: {
@@ -41,28 +19,6 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
                 openInNewIcon: false,
             },
             icon: LinkedinIcon,
-        },
-        researchgate: {
-            id: 'researchgate',
-            link: {
-                href: `https://www.researchgate.net/go.Share.html?url=${APP_URL}view/${publication.rek_pid}&title=${publication.rek_title}`,
-                width: 500,
-                height: 600,
-                title: 'Share this record on Research Gate',
-                openInNewIcon: false,
-            },
-            icon: ResearchGateIcon,
-        },
-        mendeley: {
-            id: 'mendeley',
-            link: {
-                href: `https://profitquery.com/add-to/mendeley/?url=${APP_URL}view/${publication.rek_pid}`,
-                width: 500,
-                height: 500,
-                title: 'Share this record on Mendeley',
-                openInNewIcon: false,
-            },
-            icon: MendeleyIcon,
         },
         email: {
             id: 'email',

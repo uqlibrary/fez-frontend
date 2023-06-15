@@ -337,6 +337,7 @@ exports[`DashboardOrcidSyncContainer should render properly 1`] = `
 <ContextProvider
   value={
     Object {
+      "getServerState": undefined,
       "store": Object {
         "dispatch": [MockFunction],
         "getState": [MockFunction] {
