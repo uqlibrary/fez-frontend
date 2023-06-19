@@ -9,14 +9,13 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
   >
     <a
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-      onClick={[Function]}
     >
       <span>
         Journal of Cell Science
       </span>
     </a>
     <span
-      className="eraYearListed"
+      data-testid="era-year-listed"
     >
        
       (ERA 2010 Journal(s) Listed)
@@ -26,18 +25,18 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
      
     <a
       aria-label="Check publisher's OA archiving policy in a new window"
-      className="makeStyles-externalLink-1 makeStyles-externalLink-3"
+      class="makeStyles-externalLink-1 makeStyles-externalLink-3"
       data-testid="rek-journal-name-sherpa-link"
       href="https://example.com/"
       id="rek-journal-name-sherpa-link"
       rel="noopener noreferrer"
-      tabIndex={0}
+      tabindex="0"
       target="_blank"
       title="Link to https://example.com/ will open in a new window."
     >
       <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-2 css-i4bv87-MuiSvgIcon-root"
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-2 css-i4bv87-MuiSvgIcon-root"
         data-testid="OpenInNewIcon"
         focusable="false"
         id="rek-journal-name-sherpa-link-new-window-icon"
@@ -60,7 +59,6 @@ exports[`Journal Name Component test  should render without era journal listed 1
   >
     <a
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-      onClick={[Function]}
     >
       <span>
         Journal of Cell Science
@@ -72,18 +70,18 @@ exports[`Journal Name Component test  should render without era journal listed 1
      
     <a
       aria-label="Check publisher's OA archiving policy in a new window"
-      className="makeStyles-externalLink-1 makeStyles-externalLink-4"
+      class="makeStyles-externalLink-4 makeStyles-externalLink-6"
       data-testid="rek-journal-name-sherpa-link"
       href="https://example.com/"
       id="rek-journal-name-sherpa-link"
       rel="noopener noreferrer"
-      tabIndex={0}
+      tabindex="0"
       target="_blank"
       title="Link to https://example.com/ will open in a new window."
     >
       <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-2 css-i4bv87-MuiSvgIcon-root"
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-5 css-i4bv87-MuiSvgIcon-root"
         data-testid="OpenInNewIcon"
         focusable="false"
         id="rek-journal-name-sherpa-link-new-window-icon"
@@ -106,14 +104,13 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
   >
     <a
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-      onClick={[Function]}
     >
       <span>
         Journal of Cell Science
       </span>
     </a>
     <span
-      className="eraYearListed"
+      data-testid="era-year-listed"
     >
        
       (ERA 2010 Journal(s) Listed)

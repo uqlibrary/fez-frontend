@@ -20,13 +20,6 @@ import mediaQuery from 'css-mediaquery';
 const domTestingLib = require('@testing-library/dom');
 const reactTestingLib = require('@testing-library/react');
 
-const { configure } = domTestingLib;
-
-configure(config => ({
-    ...config,
-    testIdAttribute: 'id',
-}));
-
 export const AllTheProviders = props => {
     return (
         <MuiThemeProvider theme={mui1theme}>

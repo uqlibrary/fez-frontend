@@ -1,16 +1,18 @@
+import React from 'react';
 import JournalName from './JournalName';
 import { journalArticle } from 'mock/data/testing/records';
 import { sanitiseData } from 'actions/records';
+import { renderWithRouter } from 'test-utils';
 
 let testJournalArticle = sanitiseData(journalArticle);
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || testJournalArticle,
     };
 
-    return renderComponent(JournalName, props, args);
+    return renderWithRouter(<JournalName {...props} />);
 }
 
 describe('Journal Name Component test ', () => {
@@ -20,23 +22,21 @@ describe('Journal Name Component test ', () => {
     });
 
     it('should render with journal article', () => {
-        const wrapper = setup();
-        expect(wrapper.root.findByProps({ className: 'eraYearListed' }).children.join('')).toEqual(
-            ' (ERA 2010 Journal(s) Listed)',
-        );
-        expect(wrapper.toJSON()).toMatchSnapshot();
+        const { container, getByTestId } = setup();
+        expect(getByTestId('era-year-listed')).toHaveTextContent('(ERA 2010 Journal(s) Listed)');
+        expect(container.firstChild).toMatchSnapshot();
     });
 
     it('should render with empty props', () => {
-        const wrapper = setup({ publication: {} });
-        expect(wrapper.toJSON()).toMatchSnapshot();
+        const { container } = setup({ publication: {} });
+        expect(container.firstChild).toMatchSnapshot();
     });
 
     it('should render without era journal listed', () => {
         delete testJournalArticle.fez_matched_journals.fez_journal;
-        const wrapper = setup();
-        expect(wrapper.root.findAllByProps({ className: 'eraYearListed' }).length).toEqual(0);
-        expect(wrapper.toJSON()).toMatchSnapshot();
+        const { container, queryByTestId } = setup();
+        expect(queryByTestId('era-year-listed')).toBeNull();
+        expect(container.firstChild).toMatchSnapshot();
     });
 
     it('should render with deduped era years', () => {
@@ -52,10 +52,8 @@ describe('Journal Name Component test ', () => {
                 },
             ],
         };
-        const wrapper = setup();
-        expect(wrapper.root.findByProps({ className: 'eraYearListed' }).children.join('')).toEqual(
-            ' (ERA 2001 Journal(s) Listed)',
-        );
+        const { getByTestId } = setup();
+        expect(getByTestId('era-year-listed')).toHaveTextContent('(ERA 2001 Journal(s) Listed)');
     });
 
     it('should render with multiple era years', () => {
@@ -71,23 +69,21 @@ describe('Journal Name Component test ', () => {
                 },
             ],
         };
-        const wrapper = setup();
-        expect(wrapper.root.findByProps({ className: 'eraYearListed' }).children.join('')).toEqual(
-            ' (ERA 2001, 2002 Journal(s) Listed)',
-        );
+        const { getByTestId } = setup();
+        expect(getByTestId('era-year-listed')).toHaveTextContent('(ERA 2001, 2002 Journal(s) Listed)');
     });
 
     it('should render without matched journals', () => {
         testJournalArticle.fez_matched_journals.fez_journal = [];
-        const wrapper = setup();
-        expect(wrapper.root.findAllByProps({ className: 'eraYearListed' }).length).toEqual(0);
+        const { queryByTestId } = setup();
+        expect(queryByTestId('era-year-listed')).toBeNull();
     });
 
     it('should render without sherpa romeo', () => {
         delete testJournalArticle.fez_record_search_key_issn[0].rek_issn_lookup;
         delete testJournalArticle.fez_record_search_key_issn[0].fez_sherpa_romeo;
 
-        const wrapper = setup();
-        expect(wrapper.toJSON()).toMatchSnapshot();
+        const { container } = setup();
+        expect(container.firstChild).toMatchSnapshot();
     });
 });
