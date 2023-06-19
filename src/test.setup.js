@@ -19,7 +19,8 @@ import { StyledEngineProvider } from '@mui/material/styles';
 import ThemeProvider from '@mui/styles/ThemeProvider';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import prettyFormat from 'pretty-format';
-import renderer from 'react-test-renderer';
+import TestRenderer from 'react-test-renderer';
+import ShallowRenderer from 'react-test-renderer/shallow';
 
 // jest.mock('@date-io/moment');
 import MomentUtils from '@date-io/moment';
@@ -49,7 +50,46 @@ const setupSessionMockAdapter = () => {
     return new MockAdapter(sessionApi, { delayResponse: 100 });
 };
 
-// get a mounted or shallow element
+// render component with React Test Renderer
+global.renderComponent = (component, props, args = {}) => {
+    const { isShallow, requiresStore, context, store, renderer } = {
+        isShallow: true,
+        requiresStore: false,
+        context: {},
+        store: setupStoreForMount().store,
+        renderer: TestRenderer,
+        ...args,
+    };
+
+    if (isShallow) {
+        if (requiresStore) {
+            return new ShallowRenderer().render(
+                <Provider store={store}>{React.createElement(component, props)}</Provider>,
+                {
+                    context,
+                },
+            );
+        } else {
+            return new ShallowRenderer().render(React.createElement(component, props), { context });
+        }
+    }
+
+    return renderer.create(
+        <Provider store={store}>
+            <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
+                <StyledEngineProvider injectFirst>
+                    <ThemeProvider theme={mui1theme}>
+                        <LocalizationProvider dateAdapter={MomentUtils}>
+                            {React.createElement(component, props)}
+                        </LocalizationProvider>
+                    </ThemeProvider>
+                </StyledEngineProvider>
+            </MemoryRouter>
+        </Provider>,
+    );
+};
+
+// get a mounted or shallow element rendererd by Enzyme
 global.getElement = (component, props, args = {}) => {
     const { isShallow, requiresStore, context, store, renderer } = {
         isShallow: true,
@@ -86,7 +126,7 @@ global.getElement = (component, props, args = {}) => {
 };
 
 global.componentToString = component => {
-    return prettyFormat(renderer.create(component), {
+    return prettyFormat(TestRenderer.create(component), {
         plugins: [prettyFormat.plugins.ReactTestComponent],
     }).toString();
 };
