@@ -3,23 +3,12 @@ import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 import { APP_URL } from 'config';
 import { PrintIcon } from './Icons';
-import { EmailIcon, LinkedinIcon } from 'react-share';
+import { EmailIcon } from 'react-share';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export const SocialShare = ({ publication, size, spaceBetween, services, round }) => {
     const printPage = () => window.print();
     const locale = {
-        linkedin: {
-            id: 'linkedin',
-            link: {
-                href: `https://linkedin.com/shareArticle?url=${APP_URL}view/${publication.rek_pid}`,
-                width: 500,
-                height: 500,
-                title: 'Share this record on LinkedIn',
-                openInNewIcon: false,
-            },
-            icon: LinkedinIcon,
-        },
         email: {
             id: 'email',
             link: {
