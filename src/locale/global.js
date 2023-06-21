@@ -156,12 +156,9 @@ export default {
                 title: 'Web of science',
                 priority: 1,
                 externalUrl:
-                    EXPROXY_URL_PREFIX +
-                    encodeURIComponent(
-                        'https://www.webofscience.com/api/gateway?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=',
-                    ) +
+                    'https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D' +
                     '[id]' +
-                    encodeURIComponent('&SrcAuth=uqueensland'),
+                    '%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS',
                 idKey: 'fez_record_search_key_isi_loc.rek_isi_loc',
             },
             scopus: {

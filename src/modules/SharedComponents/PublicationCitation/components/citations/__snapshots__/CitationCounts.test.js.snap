@@ -1490,7 +1490,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                           >
                             <WithStyles(CitationCountView)
                               count={1}
-                              link="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                              link="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                               source="wos"
                               title="Full citation in Web of science will open in a new window"
                             />
@@ -1976,7 +1976,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               "children": Array [
                                 <WithStyles(CitationCountView)
                                   count={1}
-                                  link="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                                  link="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                                   source="wos"
                                   title="Full citation in Web of science will open in a new window"
                                 />,
@@ -2430,7 +2430,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                           >
                             <WithStyles(CitationCountView)
                               count={1}
-                              link="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                              link="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                               source="wos"
                               title="Full citation in Web of science will open in a new window"
                             >
@@ -2442,7 +2442,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   }
                                 }
                                 count={1}
-                                link="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                                link="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                                 source="wos"
                                 theme={
                                   Object {
@@ -3109,7 +3109,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 <ExternalLink
                                   aria-label="Full citation in Web of science will open in a new window"
                                   className="wosCitationCount CitationCountView-citationCount-4"
-                                  href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                                  href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                                   id="citation-count"
                                   openInNewIcon={false}
                                   title="Full citation in Web of science will open in a new window"
@@ -3118,7 +3118,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     aria-label="Full citation in Web of science will open in a new window"
                                     className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-17"
                                     data-testid="citation-count-link"
-                                    href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                                    href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                                     id="citation-count-link"
                                     rel="noopener noreferrer"
                                     tabIndex={0}
@@ -15160,7 +15160,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                           >
                             <WithStyles(CitationCountView)
                               count={0}
-                              link="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                              link="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                               source="wos"
                               title="Full citation in Web of science will open in a new window"
                             />
@@ -15627,7 +15627,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               "children": Array [
                                 <WithStyles(CitationCountView)
                                   count={0}
-                                  link="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                                  link="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                                   source="wos"
                                   title="Full citation in Web of science will open in a new window"
                                 />,
@@ -16053,7 +16053,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                           >
                             <WithStyles(CitationCountView)
                               count={0}
-                              link="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                              link="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                               source="wos"
                               title="Full citation in Web of science will open in a new window"
                             >
@@ -16065,7 +16065,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   }
                                 }
                                 count={0}
-                                link="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                                link="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                                 source="wos"
                                 theme={
                                   Object {
@@ -16732,7 +16732,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 <ExternalLink
                                   aria-label="Full citation in Web of science will open in a new window"
                                   className="wosCitationCount CitationCountView-citationCount-4"
-                                  href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                                  href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                                   id="citation-count"
                                   openInNewIcon={false}
                                   title="Full citation in Web of science will open in a new window"
@@ -16741,7 +16741,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     aria-label="Full citation in Web of science will open in a new window"
                                     className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-12"
                                     data-testid="citation-count-link"
-                                    href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.webofscience.com%2Fapi%2Fgateway%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DFullRecord%26DestApp%3DWOS_CPL%26KeyUT%3D12345%26SrcAuth%3Duqueensland"
+                                    href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253DExLibris%2526SrcApp%253DPrimo1%2526DestLinkType%253DCitingArticles%2526KeyUT%253D12345%2526DestApp%253DWOS&ShibFederation=OpenAthensFederation&DestApp=WOS"
                                     id="citation-count-link"
                                     rel="noopener noreferrer"
                                     tabIndex={0}
