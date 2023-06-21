@@ -5,7 +5,6 @@ import 'regenerator-runtime/runtime';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { AppContainer } from 'react-hot-loader';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
@@ -58,13 +57,11 @@ const render = () => {
     ReactDOM.render(
         <Provider store={store}>
             <AppErrorBoundary>
-                <AppContainer>
-                    <Provider store={store}>
-                        <LocalizationProvider dateAdapter={MomentUtils}>
-                            <Root history={reduxHistory} />
-                        </LocalizationProvider>
-                    </Provider>
-                </AppContainer>
+                <Provider store={store}>
+                    <LocalizationProvider dateAdapter={MomentUtils}>
+                        <Root history={reduxHistory} />
+                    </LocalizationProvider>
+                </Provider>
             </AppErrorBoundary>
         </Provider>,
         document.getElementById('react-root'),

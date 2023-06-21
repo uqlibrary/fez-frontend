@@ -4,7 +4,7 @@ import { journalArticle } from 'mock/data/testing/records';
 function setup(testProps, isShallow = true, requiresStore = false, context = {}) {
     const props = {
         publication: journalArticle,
-        services: ['linkedin', 'email', 'print'],
+        services: ['email', 'print'],
         ...testProps,
     };
     return getElement(SocialShare, props, isShallow, requiresStore, context);
