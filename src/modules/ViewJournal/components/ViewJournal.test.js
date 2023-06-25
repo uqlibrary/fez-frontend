@@ -90,11 +90,11 @@ describe('ViewJournal', () => {
         expect(getByTestId('ulr-title-0-value')).toHaveTextContent('American Journal of Public Health');
         expect(getByTestId('ulr-title-0-lookup-link')).toHaveAttribute(
             'href',
-            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/41698',
+            'https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41698',
         );
         expect(getByTestId('ulr-title-1-lookup-link')).toHaveAttribute(
             'href',
-            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/41699',
+            'https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41699',
         );
 
         // **************************************************************
@@ -172,7 +172,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-home-page-scie-value')).toHaveTextContent('Go to JCR website');
         expect(getByTestId('jcr-home-page-scie-lookup-link')).toHaveAttribute(
             'href',
-            'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
+            'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
         );
 
         expect(getByTestId('jcr-more-info-scie-header')).toHaveTextContent('JCR more info');
@@ -228,7 +228,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-home-page-ssci-value')).toHaveTextContent('Go to JCR website');
         expect(getByTestId('jcr-home-page-ssci-lookup-link')).toHaveAttribute(
             'href',
-            'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
+            'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
         );
 
         expect(getByTestId('jcr-more-info-ssci-header')).toHaveTextContent('JCR more info');
@@ -264,7 +264,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-cite-score-source-id-value')).toHaveTextContent('Go to record in CiteScore');
         expect(getByTestId('jnl-cite-score-source-id-lookup-link')).toHaveAttribute(
             'href',
-            'https://www-scopus-com.ezproxy.library.uq.edu.au/sourceid/19561',
+            'https://go.openathens.net/redirector/uq.edu.au?url=https://www.scopus.com/sourceid/19561',
         );
 
         expect(getByTestId('jnl-cite-score-snip-header')).toHaveTextContent('SNIP');

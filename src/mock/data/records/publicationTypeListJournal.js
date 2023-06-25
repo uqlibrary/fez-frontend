@@ -229,7 +229,7 @@ const publicationTypeListJournal = {
                     "tc_3m": 0,
                     "tc_6m": 0,
                     "tc_1y": 0,
-                    "tc_citation_url": "http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/gateway.isiknowledge.com\/gateway\/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&SrcAuth=uqueensland&KeyUT=000328156000001"
+                    "tc_citation_url": "https:\/\/go.openathens.net\/redirector\/uq.edu.au?url=https%3A%2F%2Fgateway.isiknowledge.com%2Fgateway%2FGateway.cgi%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DCitingArticles%26DestApp%3DWOS_CPL%26SrcAuth%3Duqueensland%26KeyUT%3D000328156000001"
                 }
             },
             "fez_record_search_key_ismemberof": [{
