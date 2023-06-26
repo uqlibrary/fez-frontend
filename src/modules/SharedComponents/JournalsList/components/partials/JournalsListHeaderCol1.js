@@ -64,6 +64,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                     <Tooltip title="Select All" placement="right">
                         <Checkbox
                             id="journal-list-header-col-1-select-all"
+                            data-analyticsid="journal-list-header-col-1-select-all"
                             data-testid="journal-list-header-col-1-select-all"
                             onChange={onChange}
                             className={classes.checkbox}

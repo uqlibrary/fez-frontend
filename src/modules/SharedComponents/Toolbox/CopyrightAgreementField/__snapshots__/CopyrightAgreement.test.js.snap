@@ -60,6 +60,7 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
       }
       inputProps={
         Object {
+          "data-analyticsid": "test-input",
           "data-testid": "test-input",
           "id": "test-input",
         }
@@ -104,6 +105,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       }
       inputProps={
         Object {
+          "data-analyticsid": "test-input",
           "data-testid": "test-input",
           "id": "test-input",
         }

@@ -181,6 +181,7 @@ export default class CommunityForm extends Component {
                                 <Grid item xs={false} sm />
                                 <Grid item xs={12} sm="auto">
                                     <Button
+                                        data-analyticsid="cancel-community"
                                         data-testid="cancel-community"
                                         variant="contained"
                                         fullWidth
@@ -193,6 +194,7 @@ export default class CommunityForm extends Component {
 
                                 <Grid item xs={12} sm="auto">
                                     <Button
+                                        data-analyticsid="submit-community"
                                         data-testid="submit-community"
                                         variant="contained"
                                         color="primary"

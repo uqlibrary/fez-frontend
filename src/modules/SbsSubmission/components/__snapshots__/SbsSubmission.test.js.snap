@@ -682,6 +682,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="submit-thesis"
             fullWidth={true}
             id="submit-thesis"
             onClick={[Function]}
@@ -1322,6 +1323,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="submit-thesis"
             fullWidth={true}
             id="submit-thesis"
             onClick={[Function]}

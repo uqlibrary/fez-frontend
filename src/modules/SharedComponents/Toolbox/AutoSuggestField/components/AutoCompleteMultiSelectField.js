@@ -53,6 +53,7 @@ export const AutoCompleteMultiSelectField = ({
                     inputProps={{
                         ...params.inputProps,
                         id: `${autoCompleteMultiSelectFieldId}-input`,
+                        'data-analyticsid': `${autoCompleteMultiSelectFieldId}-input`,
                         'data-testid': `${autoCompleteMultiSelectFieldId}-input`,
                     }}
                 />
@@ -69,6 +70,7 @@ export const AutoCompleteMultiSelectField = ({
             }
             ListboxProps={{
                 id: `${autoCompleteMultiSelectFieldId}-options`,
+                'data-analyticsid': `${autoCompleteMultiSelectFieldId}-options`,
                 'data-testid': `${autoCompleteMultiSelectFieldId}-options`,
             }}
             {...(!!OptionTemplate

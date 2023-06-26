@@ -45,6 +45,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                                           aria-label="Copy to clipboard"
                                           onClick={handleCopy}
                                           id={`${columnDataId}-copy-text`}
+                                          data-analyticsid={`${columnDataId}-copy-text`}
                                           data-testid={`${columnDataId}-copy-text`}
                                           size="small"
                                       >

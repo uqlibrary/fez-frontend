@@ -72,6 +72,7 @@ exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
     <ForwardRef(Button)
       aria-label="Upload works to ORCID"
       color="primary"
+      data-analyticsid="orcid-upload-start-button"
       data-testid="orcid-upload-start-button"
       fullWidth={true}
       variant="contained"
@@ -90,6 +91,7 @@ exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
     <ForwardRef(Button)
       aria-label="View works in ORCID"
       color="secondary"
+      data-analyticsid="orcid-view-works-button"
       data-testid="orcid-view-works-button"
       fullWidth={true}
       variant="contained"

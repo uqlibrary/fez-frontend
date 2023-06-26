@@ -385,6 +385,7 @@ export default class ClaimRecord extends PureComponent {
                                             onClick={this.props.handleSubmit}
                                             disabled={this.props.submitting || this.props.disableSubmit}
                                             id="claimSubmit"
+                                            data-analyticsid="claimSubmit"
                                         />
                                     </Grid>
                                 )}

@@ -7744,6 +7744,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                             />,
                                             <ForwardRef(CardContent)
                                               className=""
+                                              data-analyticsid="standard-card-possible-matches-found-content"
                                               data-testid="standard-card-possible-matches-found-content"
                                               id="standard-card-possible-matches-found-content"
                                             >
@@ -9228,6 +9229,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                 />,
                                                 <ForwardRef(CardContent)
                                                   className=""
+                                                  data-analyticsid="standard-card-possible-matches-found-content"
                                                   data-testid="standard-card-possible-matches-found-content"
                                                   id="standard-card-possible-matches-found-content"
                                                 >
@@ -14807,12 +14809,14 @@ exports[`Search record results should render a single unclaimable item with no a
                                             </ForwardRef(CardHeader)>
                                             <ForwardRef(CardContent)
                                               className=""
+                                              data-analyticsid="standard-card-possible-matches-found-content"
                                               data-testid="standard-card-possible-matches-found-content"
                                               id="standard-card-possible-matches-found-content"
                                             >
                                               <MuiCardContentRoot
                                                 as="div"
                                                 className="MuiCardContent-root"
+                                                data-analyticsid="standard-card-possible-matches-found-content"
                                                 data-testid="standard-card-possible-matches-found-content"
                                                 id="standard-card-possible-matches-found-content"
                                                 ownerState={
@@ -14929,6 +14933,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                     </ForwardRef(Grid)>,
                                                     "className": "",
                                                     "component": "div",
+                                                    "data-analyticsid": "standard-card-possible-matches-found-content",
                                                     "data-testid": "standard-card-possible-matches-found-content",
                                                     "id": "standard-card-possible-matches-found-content",
                                                   }
@@ -16260,6 +16265,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                 />
                                                 <div
                                                   className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                                  data-analyticsid="standard-card-possible-matches-found-content"
                                                   data-testid="standard-card-possible-matches-found-content"
                                                   id="standard-card-possible-matches-found-content"
                                                 >

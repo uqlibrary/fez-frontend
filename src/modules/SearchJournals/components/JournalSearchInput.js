@@ -111,6 +111,7 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
                                             onClick={handleClearSearchInput}
                                             disabled={!journalSearchInput.length}
                                             id="clear-journal-search-keywords"
+                                            data-analyticsid="clear-journal-search-keywords"
                                             data-testid="clear-journal-search-keywords"
                                             size="large"
                                         >

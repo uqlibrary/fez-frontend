@@ -353,6 +353,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                     <ForwardRef(Button)
                       autoFocus={true}
                       color="primary"
+                      data-analyticsid="confirm-dialog-box"
                       data-testid="confirm-dialog-box"
                       fullWidth={true}
                       onClick={[Function]}
@@ -367,6 +368,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                   >
                     <ForwardRef(Button)
                       color="primary"
+                      data-analyticsid="cancel-dialog-box"
                       data-testid="cancel-dialog-box"
                       fullWidth={true}
                       onClick={[Function]}

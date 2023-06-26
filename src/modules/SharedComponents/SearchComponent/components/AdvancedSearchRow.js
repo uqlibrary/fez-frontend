@@ -193,6 +193,7 @@ export const AdvancedSearchRow = props => {
                                     className="deleteFieldButton"
                                     onClick={_deleteRow}
                                     id={`delete-advanced-search-row-${rowIndex}`}
+                                    data-analyticsid={`delete-advanced-search-row-${rowIndex}`}
                                     size="large"
                                 >
                                     <Close />

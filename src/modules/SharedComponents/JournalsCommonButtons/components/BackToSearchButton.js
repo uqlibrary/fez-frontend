@@ -14,6 +14,7 @@ const BackToSearchButton = props => {
             type="submit"
             color="primary"
             id="return-to-search-results-button"
+            data-analyticsid="return-to-search-results-button"
             data-testid="return-to-search-results-button"
             onClick={handleReturnToSearchClick}
             {...otherProps}

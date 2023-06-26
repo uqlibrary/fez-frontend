@@ -298,6 +298,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
             }
           }
           color="primary"
+          data-analyticsid="publication-action-undefined-primary"
           data-testid="publication-action-undefined-primary"
           disabled={true}
           fullWidth={true}
@@ -1341,6 +1342,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
             }
           }
           color="primary"
+          data-analyticsid="publication-action-UQ41878-primary"
           data-testid="publication-action-UQ41878-primary"
           disabled={true}
           fullWidth={true}
@@ -20471,6 +20473,7 @@ Array [
         }
       }
       color="primary"
+      data-analyticsid="publication-action-UQ41878-primary"
       data-testid="publication-action-UQ41878-primary"
       disabled={false}
       fullWidth={true}

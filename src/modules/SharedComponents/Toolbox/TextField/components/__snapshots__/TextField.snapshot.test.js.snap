@@ -20,6 +20,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
       Object {
         "aria-label": undefined,
         "aria-labelledby": "fake-id",
+        "data-analyticsid": "test-input",
         "data-testid": "test-input",
         "id": "test-input",
         "label": undefined,
@@ -53,7 +54,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
       Object {
         "aria-label": undefined,
         "aria-labelledby": "fake-id",
-        "data-testid": "test-input",
+        "data-analyticsid": "test-input",        "data-testid": "test-input",
         "id": "test-input",
         "label": undefined,
       }
@@ -86,6 +87,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
       Object {
         "aria-label": "test",
         "aria-labelledby": "fake-id",
+        "data-analyticsid": "test-input",
         "data-testid": "test-input",
         "id": "test-input",
         "label": "test",

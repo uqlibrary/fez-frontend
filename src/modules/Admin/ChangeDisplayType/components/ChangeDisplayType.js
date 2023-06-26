@@ -221,6 +221,7 @@ export const ChangeDisplayType = ({
                                 <Grid item xs={12} sm="auto">
                                     <Button
                                         id="rek-change-display-type-cancel"
+                                        data-analyticsid="rek-change-display-type-cancel"
                                         data-testid="rek-change-display-type-cancel"
                                         disabled={saveRequesting}
                                         variant="contained"
@@ -234,6 +235,7 @@ export const ChangeDisplayType = ({
                                 <Grid item xs={12} sm="auto">
                                     <Button
                                         id="change-display-type-submit"
+                                        data-analyticsid="change-display-type-submit"
                                         data-testid="change-display-type-submit"
                                         variant="contained"
                                         color="primary"

@@ -14,6 +14,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
   <ForwardRef(Select)
     MenuProps={
       Object {
+        "data-analyticsid": "org-affiliation-options",
         "data-testid": "org-affiliation-options",
         "id": "org-affiliation-options",
       }
@@ -67,6 +68,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
   <ForwardRef(Select)
     MenuProps={
       Object {
+        "data-analyticsid": "org-affiliation-options",
         "data-testid": "org-affiliation-options",
         "id": "org-affiliation-options",
       }
@@ -120,6 +122,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
   <ForwardRef(Select)
     MenuProps={
       Object {
+        "data-analyticsid": "org-affiliation-options",
         "data-testid": "org-affiliation-options",
         "id": "org-affiliation-options",
       }

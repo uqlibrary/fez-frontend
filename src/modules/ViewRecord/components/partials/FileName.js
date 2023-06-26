@@ -136,6 +136,7 @@ const FileName = ({
                                     aria-label={txt.downloadButtonLabel}
                                     onClick={showConfirmation}
                                     id={`${id}-download-button`}
+                                    data-analyticsid={`${id}-download-button`}
                                     data-testid={`${id}-download-button`}
                                     size="large"
                                 >

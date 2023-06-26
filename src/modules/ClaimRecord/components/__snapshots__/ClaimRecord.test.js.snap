@@ -1243,6 +1243,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -2304,6 +2305,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -3589,6 +3591,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -4600,6 +4603,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -6093,6 +6097,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -7586,6 +7591,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -9079,6 +9085,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -10572,6 +10579,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -13084,6 +13092,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -14577,6 +14586,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -16088,6 +16098,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             disabled={true}
             fullWidth={true}
             id="claimSubmit"
@@ -17600,6 +17611,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -19125,6 +19137,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -20652,6 +20665,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}
@@ -21040,6 +21054,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="claimSubmit"
             fullWidth={true}
             id="claimSubmit"
             onClick={[MockFunction]}

@@ -764,6 +764,7 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
                   <a
                     aria-label="Open this DOI in an new window"
                     className="citationDoiLink makeStyles-externalLink-1 makeStyles-externalLink-3"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.121212/lskdjflsdjf"
                     id="citation-doi-link"

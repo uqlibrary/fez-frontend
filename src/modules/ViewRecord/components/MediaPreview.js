@@ -41,6 +41,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                     <Grid item xs={12} sm="auto">
                         <Button
                             id="open-original-file"
+                            data-analyticsid="open-original-file"
                             variant="contained"
                             onClick={openFileInNewWindow}
                             color="primary"
@@ -55,6 +56,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                     <Grid item xs={12} sm="auto">
                         <Button
                             id="open-web-file"
+                            data-analyticsid="open-web-file"
                             variant="contained"
                             onClick={openWebFileInNewWindow}
                             color="primary"
@@ -66,7 +68,13 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                 )}
 
                 <Grid item xs={12} sm="auto">
-                    <Button id="close-preview" variant="contained" onClick={onClose} fullWidth>
+                    <Button
+                        id="close-preview"
+                        data-analyticsid="close-preview"
+                        variant="contained"
+                        onClick={onClose}
+                        fullWidth
+                    >
                         {close}
                     </Button>
                 </Grid>

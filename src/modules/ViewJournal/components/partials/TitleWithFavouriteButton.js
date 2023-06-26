@@ -55,6 +55,7 @@ const TitleWithFavouriteButton = props => {
             <Tooltip title={active ? tooltips.favourite : tooltips.notFavourite}>
                 <IconButton
                     id={`favourite-journal-${active ? 'saved' : 'notsaved'}`}
+                    data-analyticsid={`favourite-journal-${active ? 'saved' : 'notsaved'}`}
                     data-testid={`favourite-journal-${active ? 'saved' : 'notsaved'}`}
                     component={isBusy ? 'div' : undefined}
                     onClick={!isBusy ? () => onClickFavouriteButtonHandler(!active) : undefined}

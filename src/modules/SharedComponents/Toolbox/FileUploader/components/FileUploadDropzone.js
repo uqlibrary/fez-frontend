@@ -311,6 +311,7 @@ export class FileUploadDropzone extends PureComponent {
                             inputProps={{
                                 id: 'Uploader',
                                 'aria-label': 'Upload files',
+                                'data-analyticsid': 'fez-datastream-info-input',
                                 'data-testid': 'fez-datastream-info-input',
                             }}
                             ref={ref => {

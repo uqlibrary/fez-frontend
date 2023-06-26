@@ -954,6 +954,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -970,6 +971,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -1939,6 +1941,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -1955,6 +1958,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -3050,6 +3054,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -3066,6 +3071,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -4161,6 +4167,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -4177,6 +4184,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -4961,6 +4969,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -4977,6 +4986,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -5761,6 +5771,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -5777,6 +5788,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -6872,6 +6884,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -6888,6 +6901,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -7983,6 +7997,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -7999,6 +8014,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -9094,6 +9110,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -9110,6 +9127,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -10085,6 +10103,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -10101,6 +10120,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"
@@ -11070,6 +11090,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
             xs={12}
           >
             <ForwardRef(Button)
+              data-analyticsid="rek-change-display-type-cancel"
               data-testid="rek-change-display-type-cancel"
               fullWidth={true}
               id="rek-change-display-type-cancel"
@@ -11086,6 +11107,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
           >
             <ForwardRef(Button)
               color="primary"
+              data-analyticsid="change-display-type-submit"
               data-testid="change-display-type-submit"
               fullWidth={true}
               id="change-display-type-submit"

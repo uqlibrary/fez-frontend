@@ -3117,6 +3117,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
                                     className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-17"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D12345"
                                     id="citation-count-link"
@@ -3826,6 +3827,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
                                     className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-18"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D12345%26origin%3Dinward"
                                     id="citation-count-link"
@@ -4535,6 +4537,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
                                     className="altmetricCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-19"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://queensland.altmetric.com/details/12345"
                                     id="citation-count-link"
@@ -5244,6 +5247,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
                                     className="googleCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-20"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     id="citation-count-link"
@@ -11000,6 +11004,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
                                     className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-8"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
                                     id="citation-count-link"
@@ -11709,6 +11714,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
                                     className="altmetricCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-9"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://queensland.altmetric.com/details/23535331"
                                     id="citation-count-link"
@@ -12418,6 +12424,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
                                     className="googleCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-10"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                                     id="citation-count-link"
@@ -12848,6 +12855,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             >
                               <a
                                 className="CitationCounts-statsLink-1 makeStyles-externalLink-6 makeStyles-externalLink-11"
+                                data-analyticsid="full-statistics-link"
                                 data-testid="full-statistics-link"
                                 href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
                                 id="full-statistics-link"
@@ -16740,6 +16748,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
                                     className="wosCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-12"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D12345"
                                     id="citation-count-link"
@@ -17449,6 +17458,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
                                     className="scopusCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-13"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D12345%26origin%3Dinward"
                                     id="citation-count-link"
@@ -18158,6 +18168,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
                                     className="altmetricCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-14"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://queensland.altmetric.com/details/12345"
                                     id="citation-count-link"
@@ -18867,6 +18878,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
                                     className="googleCitationCount CitationCountView-citationCount-4 makeStyles-externalLink-6 makeStyles-externalLink-15"
+                                    data-analyticsid="citation-count-link"
                                     data-testid="citation-count-link"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     id="citation-count-link"
@@ -19337,6 +19349,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             >
                               <a
                                 className="CitationCounts-statsLink-1 makeStyles-externalLink-6 makeStyles-externalLink-16"
+                                data-analyticsid="full-statistics-link"
                                 data-testid="full-statistics-link"
                                 href="https://app.library.uq.edu.au/#/authors/view/pid:111"
                                 id="full-statistics-link"

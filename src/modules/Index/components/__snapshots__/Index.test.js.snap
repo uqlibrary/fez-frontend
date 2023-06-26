@@ -8206,6 +8206,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   }
                                                                 }
                                                                 container={true}
+                                                                data-analyticsid="alert-error"
                                                                 data-testid="alert-error"
                                                                 id="alert-error"
                                                                 justifyContent="center"
@@ -8218,6 +8219,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                       "root": "makeStyles-root-7",
                                                                     }
                                                                   }
+                                                                  data-analyticsid="alert-error"
                                                                   data-testid="alert-error"
                                                                   id="alert-error"
                                                                   ownerState={
@@ -8273,6 +8275,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                       "columnSpacing": 0,
                                                                       "columns": 12,
                                                                       "container": true,
+                                                                      "data-analyticsid": "alert-error",
                                                                       "data-testid": "alert-error",
                                                                       "direction": "row",
                                                                       "id": "alert-error",
@@ -9318,6 +9321,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   />
                                                                   <div
                                                                     className="MuiGrid-root makeStyles-root-7 MuiGrid-container makeStyles-error-16 makeStyles-common-8 css-1k6h6af-MuiGrid-root"
+                                                                    data-analyticsid="alert-error"
                                                                     data-testid="alert-error"
                                                                     id="alert-error"
                                                                   >
@@ -17961,6 +17965,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                           />,
                                                                           <ForwardRef(CardContent)
                                                                             className=""
+                                                                            data-analyticsid="standard-card-acknowledgement-of-country-content"
                                                                             data-testid="standard-card-acknowledgement-of-country-content"
                                                                             id="standard-card-acknowledgement-of-country-content"
                                                                           >
@@ -19038,6 +19043,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                               />,
                                                                               <ForwardRef(CardContent)
                                                                                 className=""
+                                                                                data-analyticsid="standard-card-acknowledgement-of-country-content"
                                                                                 data-testid="standard-card-acknowledgement-of-country-content"
                                                                                 id="standard-card-acknowledgement-of-country-content"
                                                                               >
@@ -23298,12 +23304,14 @@ exports[`Index page should render placeholders 1`] = `
                                                                           </ForwardRef(CardHeader)>
                                                                           <ForwardRef(CardContent)
                                                                             className=""
+                                                                            data-analyticsid="standard-card-acknowledgement-of-country-content"
                                                                             data-testid="standard-card-acknowledgement-of-country-content"
                                                                             id="standard-card-acknowledgement-of-country-content"
                                                                           >
                                                                             <MuiCardContentRoot
                                                                               as="div"
                                                                               className="MuiCardContent-root"
+                                                                              data-analyticsid="standard-card-acknowledgement-of-country-content"
                                                                               data-testid="standard-card-acknowledgement-of-country-content"
                                                                               id="standard-card-acknowledgement-of-country-content"
                                                                               ownerState={
@@ -23317,6 +23325,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                   </ForwardRef(Typography)>,
                                                                                   "className": "",
                                                                                   "component": "div",
+                                                                                  "data-analyticsid": "standard-card-acknowledgement-of-country-content",
                                                                                   "data-testid": "standard-card-acknowledgement-of-country-content",
                                                                                   "id": "standard-card-acknowledgement-of-country-content",
                                                                                 }
@@ -24344,6 +24353,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                               />
                                                                               <div
                                                                                 className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                                                                data-analyticsid="standard-card-acknowledgement-of-country-content"
                                                                                 data-testid="standard-card-acknowledgement-of-country-content"
                                                                                 id="standard-card-acknowledgement-of-country-content"
                                                                               >
@@ -26527,6 +26537,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                           />,
                                                                           <ForwardRef(CardContent)
                                                                             className=""
+                                                                            data-analyticsid="standard-card-cultural-advice-content"
                                                                             data-testid="standard-card-cultural-advice-content"
                                                                             id="standard-card-cultural-advice-content"
                                                                           >
@@ -27607,6 +27618,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                               />,
                                                                               <ForwardRef(CardContent)
                                                                                 className=""
+                                                                                data-analyticsid="standard-card-cultural-advice-content"
                                                                                 data-testid="standard-card-cultural-advice-content"
                                                                                 id="standard-card-cultural-advice-content"
                                                                               >
@@ -31870,12 +31882,14 @@ exports[`Index page should render placeholders 1`] = `
                                                                           </ForwardRef(CardHeader)>
                                                                           <ForwardRef(CardContent)
                                                                             className=""
+                                                                            data-analyticsid="standard-card-cultural-advice-content"
                                                                             data-testid="standard-card-cultural-advice-content"
                                                                             id="standard-card-cultural-advice-content"
                                                                           >
                                                                             <MuiCardContentRoot
                                                                               as="div"
                                                                               className="MuiCardContent-root"
+                                                                              data-analyticsid="standard-card-cultural-advice-content"
                                                                               data-testid="standard-card-cultural-advice-content"
                                                                               id="standard-card-cultural-advice-content"
                                                                               ownerState={
@@ -31892,6 +31906,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                   </ForwardRef(Typography)>,
                                                                                   "className": "",
                                                                                   "component": "div",
+                                                                                  "data-analyticsid": "standard-card-cultural-advice-content",
                                                                                   "data-testid": "standard-card-cultural-advice-content",
                                                                                   "id": "standard-card-cultural-advice-content",
                                                                                 }
@@ -32919,6 +32934,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                               />
                                                                               <div
                                                                                 className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                                                                data-analyticsid="standard-card-cultural-advice-content"
                                                                                 data-testid="standard-card-cultural-advice-content"
                                                                                 id="standard-card-cultural-advice-content"
                                                                               >
@@ -35108,6 +35124,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                           />,
                                                                           <ForwardRef(CardContent)
                                                                             className=""
+                                                                            data-analyticsid="standard-card-open-to-collaborate-content"
                                                                             data-testid="standard-card-open-to-collaborate-content"
                                                                             id="standard-card-open-to-collaborate-content"
                                                                           >
@@ -36194,6 +36211,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                               />,
                                                                               <ForwardRef(CardContent)
                                                                                 className=""
+                                                                                data-analyticsid="standard-card-open-to-collaborate-content"
                                                                                 data-testid="standard-card-open-to-collaborate-content"
                                                                                 id="standard-card-open-to-collaborate-content"
                                                                               >
@@ -40463,12 +40481,14 @@ exports[`Index page should render placeholders 1`] = `
                                                                           </ForwardRef(CardHeader)>
                                                                           <ForwardRef(CardContent)
                                                                             className=""
+                                                                            data-analyticsid="standard-card-open-to-collaborate-content"
                                                                             data-testid="standard-card-open-to-collaborate-content"
                                                                             id="standard-card-open-to-collaborate-content"
                                                                           >
                                                                             <MuiCardContentRoot
                                                                               as="div"
                                                                               className="MuiCardContent-root"
+                                                                              data-analyticsid="standard-card-open-to-collaborate-content"
                                                                               data-testid="standard-card-open-to-collaborate-content"
                                                                               id="standard-card-open-to-collaborate-content"
                                                                               ownerState={
@@ -40491,6 +40511,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                   </div>,
                                                                                   "className": "",
                                                                                   "component": "div",
+                                                                                  "data-analyticsid": "standard-card-open-to-collaborate-content",
                                                                                   "data-testid": "standard-card-open-to-collaborate-content",
                                                                                   "id": "standard-card-open-to-collaborate-content",
                                                                                 }
@@ -41518,6 +41539,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                               />
                                                                               <div
                                                                                 className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                                                                data-analyticsid="standard-card-open-to-collaborate-content"
                                                                                 data-testid="standard-card-open-to-collaborate-content"
                                                                                 id="standard-card-open-to-collaborate-content"
                                                                               >

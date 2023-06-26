@@ -194,6 +194,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                                         aria-label={txt.journalSearchInterface.buttons.compareJournals.aria}
                                         color="primary"
                                         id="journal-comparison-button"
+                                        data-analyticsid="journal-comparison-button"
                                         data-testid="journal-comparison-button"
                                         fullWidth
                                     />

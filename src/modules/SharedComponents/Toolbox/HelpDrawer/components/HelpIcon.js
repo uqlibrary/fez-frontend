@@ -35,6 +35,7 @@ export const HelpIcon = ({ title, text, buttonLabel, iconSize, style, tooltip, o
                 onClick={setDrawerContent}
                 aria-label={tooltip}
                 id={id}
+                data-analyticsid={id}
                 data-testid={id}
                 size={iconSize}
                 style={style}

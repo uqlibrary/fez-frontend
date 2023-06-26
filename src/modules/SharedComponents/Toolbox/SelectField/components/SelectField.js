@@ -29,6 +29,7 @@ const SelectFieldWrapper = props => {
                     variant="standard"
                     inputProps={{
                         'aria-labelledby': `${props.selectFieldId}-label`,
+                        'data-analyticsid': `${props.selectFieldId}-input`,
                         'data-testid': `${props.selectFieldId}-input`,
                         id: `${props.selectFieldId}-input`,
                     }}
@@ -38,6 +39,7 @@ const SelectFieldWrapper = props => {
                     }}
                     MenuProps={{
                         id: `${props.selectFieldId}-options`,
+                        'data-analyticsid': `${props.selectFieldId}-options`,
                         'data-testid': `${props.selectFieldId}-options`,
                     }}
                     {...filteredProps}

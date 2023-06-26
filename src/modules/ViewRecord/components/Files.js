@@ -518,6 +518,7 @@ export class FilesClass extends Component {
                                     xs={2}
                                     sm={1}
                                     className={this.props.classes.thumbIconCentered}
+                                    data-analyticsid={`dsi-mimetype-${index}`}
                                     data-testid={`dsi-mimetype-${index}`}
                                 >
                                     {item.icon}
@@ -526,6 +527,7 @@ export class FilesClass extends Component {
                                     item
                                     sm={4}
                                     className={this.props.classes.dataWrapper}
+                                    data-analyticsid={`dsi-dsid-${index}`}
                                     data-testid={`dsi-dsid-${index}`}
                                 >
                                     <FileName
@@ -562,6 +564,7 @@ export class FilesClass extends Component {
                                     item
                                     sm
                                     style={{ textAlign: 'right' }}
+                                    data-analyticsid={`rek-oa-status-${index}`}
                                     data-testid={`rek-oa-status-${index}`}
                                     sx={{ display: { xs: 'none', sm: 'block' } }}
                                 >

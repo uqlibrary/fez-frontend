@@ -77,6 +77,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
   >
     <ForwardRef(Button)
       color="primary"
+      data-analyticsid="rek-significance-add"
       data-testid="rek-significance-add"
       disabled={true}
       fullWidth={true}
@@ -92,6 +93,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
     xs={3}
   >
     <ForwardRef(Button)
+      data-analyticsid="rek-significance-clear"
       data-testid="rek-significance-clear"
       fullWidth={true}
       id="clear-items"

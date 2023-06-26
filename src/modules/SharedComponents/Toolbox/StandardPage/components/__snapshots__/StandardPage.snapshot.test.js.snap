@@ -12,6 +12,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
     <ForwardRef(Typography)
       color="primary"
       component="h2"
+      data-analyticsid="page-title"
       data-testid="page-title"
       id="page-title"
     >
@@ -49,6 +50,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
     <ForwardRef(Typography)
       color="primary"
       component="h2"
+      data-analyticsid="page-title"
       data-testid="page-title"
       id="page-title"
     >
@@ -1571,6 +1573,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 className="Page-layoutTitle-2"
                                 color="primary"
                                 component="h2"
+                                data-analyticsid="page-title"
                                 data-testid="page-title"
                                 id="page-title"
                               >
@@ -2143,6 +2146,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   className="Page-layoutTitle-2"
                                   color="primary"
                                   component="h2"
+                                  data-analyticsid="page-title"
                                   data-testid="page-title"
                                   id="page-title"
                                 >
@@ -2676,12 +2680,14 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 className="Page-layoutTitle-2"
                                 color="primary"
                                 component="h2"
+                                data-analyticsid="page-title"
                                 data-testid="page-title"
                                 id="page-title"
                               >
                                 <MuiTypographyRoot
                                   as="h2"
                                   className="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2"
+                                  data-analyticsid="page-title"
                                   data-testid="page-title"
                                   id="page-title"
                                   ownerState={
@@ -2691,6 +2697,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       "className": "Page-layoutTitle-2",
                                       "color": "primary.main",
                                       "component": "h2",
+                                      "data-analyticsid": "page-title",
                                       "data-testid": "page-title",
                                       "gutterBottom": false,
                                       "id": "page-title",
@@ -3229,6 +3236,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   />
                                   <h2
                                     className="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-vkc4v8-MuiTypography-root"
+                                    data-analyticsid="page-title"
                                     data-testid="page-title"
                                     id="page-title"
                                   >
@@ -3293,6 +3301,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   aria-label="Click for more information"
                                   aria-labelledby={null}
                                   className=""
+                                  data-analyticsid="help-icon"
                                   data-mui-internal-clone-element={true}
                                   data-testid="help-icon"
                                   id="help-icon"
@@ -3309,6 +3318,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     aria-labelledby={null}
                                     centerRipple={true}
                                     className="MuiIconButton-root MuiIconButton-sizeMedium"
+                                    data-analyticsid="help-icon"
                                     data-mui-internal-clone-element={true}
                                     data-testid="help-icon"
                                     disabled={false}
@@ -3331,6 +3341,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         />,
                                         "className": "",
                                         "color": "default",
+                                        "data-analyticsid": "help-icon",
                                         "data-mui-internal-clone-element": true,
                                         "data-testid": "help-icon",
                                         "disableFocusRipple": false,
@@ -3860,6 +3871,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       aria-labelledby={null}
                                       centerRipple={true}
                                       className="MuiIconButton-root MuiIconButton-sizeMedium css-da3c9u-MuiIconButton-root"
+                                      data-analyticsid="help-icon"
                                       data-mui-internal-clone-element={true}
                                       data-testid="help-icon"
                                       disabled={false}
@@ -3878,6 +3890,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         aria-labelledby={null}
                                         as="button"
                                         className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-da3c9u-MuiIconButton-root"
+                                        data-analyticsid="help-icon"
                                         data-mui-internal-clone-element={true}
                                         data-testid="help-icon"
                                         disabled={false}
@@ -3907,6 +3920,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                             />,
                                             "className": "MuiIconButton-root MuiIconButton-sizeMedium css-da3c9u-MuiIconButton-root",
                                             "component": "button",
+                                            "data-analyticsid": "help-icon",
                                             "data-mui-internal-clone-element": true,
                                             "data-testid": "help-icon",
                                             "disableRipple": false,
@@ -4439,6 +4453,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                           aria-label="Click for more information"
                                           aria-labelledby={null}
                                           className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+                                          data-analyticsid="help-icon"
                                           data-mui-internal-clone-element={true}
                                           data-testid="help-icon"
                                           disabled={false}
@@ -5549,6 +5564,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     <button
                                       aria-label="Click for more information"
                                       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+                                      data-analyticsid="help-icon"
                                       data-mui-internal-clone-element="true"
                                       data-testid="help-icon"
                                       id="help-icon"
@@ -5632,6 +5648,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       "arrow": false,
                                       "children": <ForwardRef(IconButton)
                                         aria-label="Click for more information"
+                                        data-analyticsid="help-icon"
                                         data-testid="help-icon"
                                         id="help-icon"
                                         onClick={[Function]}
@@ -6181,6 +6198,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       <button
                                         aria-label="Click for more information"
                                         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+                                        data-analyticsid="help-icon"
                                         data-mui-internal-clone-element="true"
                                         data-testid="help-icon"
                                         id="help-icon"
@@ -6240,6 +6258,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         <button
                                           aria-label="Click for more information"
                                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+                                          data-analyticsid="help-icon"
                                           data-mui-internal-clone-element="true"
                                           data-testid="help-icon"
                                           id="help-icon"
@@ -6811,6 +6830,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                           <button
                                             aria-label="Click for more information"
                                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+                                            data-analyticsid="help-icon"
                                             data-mui-internal-clone-element="true"
                                             data-testid="help-icon"
                                             id="help-icon"

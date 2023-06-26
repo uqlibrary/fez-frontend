@@ -49,6 +49,7 @@ const DepositAgreement = ({
             control={
                 <Checkbox
                     inputProps={{
+                        'data-analyticsid': `${depositAgreementFieldId}-input`,
                         'data-testid': `${depositAgreementFieldId}-input`,
                         id: `${depositAgreementFieldId}-input`,
                     }}

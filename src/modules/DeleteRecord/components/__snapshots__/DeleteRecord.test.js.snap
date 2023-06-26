@@ -600,6 +600,7 @@ exports[`Component DeleteRecord componentDidUpdate() 1`] = `
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -614,6 +615,7 @@ exports[`Component DeleteRecord componentDidUpdate() 1`] = `
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -920,6 +922,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -934,6 +937,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -1549,6 +1553,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -1563,6 +1568,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -1884,6 +1890,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -1898,6 +1905,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -2204,6 +2212,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -2218,6 +2227,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -2910,6 +2920,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -2924,6 +2935,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -3664,6 +3676,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -3678,6 +3691,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -4418,6 +4432,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -4432,6 +4447,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -5172,6 +5188,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -5186,6 +5203,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -5783,6 +5801,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -5797,6 +5816,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
@@ -6394,6 +6414,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
           item={true}
         >
           <ForwardRef(Button)
+            data-analyticsid="cancel-delete-record"
             disabled={false}
             fullWidth={true}
             id="cancel-delete-record"
@@ -6408,6 +6429,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="delete-admin"
             data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"

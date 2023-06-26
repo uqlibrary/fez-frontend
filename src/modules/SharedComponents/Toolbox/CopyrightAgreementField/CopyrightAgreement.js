@@ -31,6 +31,7 @@ export class CopyrightAgreement extends PureComponent {
                 control={
                     <Checkbox
                         inputProps={{
+                            'data-analyticsid': `${this.props.copyrightAgreementFieldId}-input`,
                             'data-testid': `${this.props.copyrightAgreementFieldId}-input`,
                             id: `${this.props.copyrightAgreementFieldId}-input`,
                         }}

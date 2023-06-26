@@ -145,6 +145,7 @@ export const ScaleOfSignificanceForm = ({
                 <Button
                     fullWidth
                     id="add-items"
+                    data-analyticsid="rek-significance-add"
                     data-testid="rek-significance-add"
                     color="primary"
                     variant="contained"
@@ -159,6 +160,7 @@ export const ScaleOfSignificanceForm = ({
                 <Button
                     fullWidth
                     id="clear-items"
+                    data-analyticsid="rek-significance-clear"
                     data-testid="rek-significance-clear"
                     variant="contained"
                     children={resetFormLabel}

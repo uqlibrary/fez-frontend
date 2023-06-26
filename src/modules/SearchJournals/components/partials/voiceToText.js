@@ -35,6 +35,7 @@ export const VoiceToText = ({ sendHandler }) => {
                             onClick={SpeechRecognition.startListening}
                             size={'small'}
                             id={`${id}-start-button`}
+                            data-analyticsid={`${id}-start-button`}
                             data-testid={`${id}-start-button`}
                         >
                             <MicIcon />
@@ -49,6 +50,7 @@ export const VoiceToText = ({ sendHandler }) => {
                             onClick={sendTranscript}
                             size={'small'}
                             id={`${id}-stop-button`}
+                            data-analyticsid={`${id}-stop-button`}
                             data-testid={`${id}-stop-button`}
                         >
                             <MicIcon style={{ color: '#167b00' }} />

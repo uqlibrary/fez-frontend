@@ -2199,6 +2199,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
                                 />,
                                 <ForwardRef(CardContent)
                                   className=""
+                                  data-analyticsid="standard-card-grant-information-content"
                                   data-testid="standard-card-grant-information-content"
                                   id="standard-card-grant-information-content"
                                 >
@@ -2633,6 +2634,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
                                     />,
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-grant-information-content"
                                       data-testid="standard-card-grant-information-content"
                                       id="standard-card-grant-information-content"
                                     >
@@ -4153,12 +4155,14 @@ exports[`Grant Information Component  should not break if grant text is not in t
                                 </ForwardRef(CardHeader)>
                                 <ForwardRef(CardContent)
                                   className=""
+                                  data-analyticsid="standard-card-grant-information-content"
                                   data-testid="standard-card-grant-information-content"
                                   id="standard-card-grant-information-content"
                                 >
                                   <MuiCardContentRoot
                                     as="div"
                                     className="MuiCardContent-root"
+                                    data-analyticsid="standard-card-grant-information-content"
                                     data-testid="standard-card-grant-information-content"
                                     id="standard-card-grant-information-content"
                                     ownerState={
@@ -4233,6 +4237,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
                                         ],
                                         "className": "",
                                         "component": "div",
+                                        "data-analyticsid": "standard-card-grant-information-content",
                                         "data-testid": "standard-card-grant-information-content",
                                         "id": "standard-card-grant-information-content",
                                       }
@@ -4561,6 +4566,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
                                     />
                                     <div
                                       className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                      data-analyticsid="standard-card-grant-information-content"
                                       data-testid="standard-card-grant-information-content"
                                       id="standard-card-grant-information-content"
                                     >
@@ -13733,6 +13739,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                                 />,
                                 <ForwardRef(CardContent)
                                   className=""
+                                  data-analyticsid="standard-card-grant-information-content"
                                   data-testid="standard-card-grant-information-content"
                                   id="standard-card-grant-information-content"
                                 >
@@ -14172,6 +14179,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                                     />,
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-grant-information-content"
                                       data-testid="standard-card-grant-information-content"
                                       id="standard-card-grant-information-content"
                                     >
@@ -15697,12 +15705,14 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                                 </ForwardRef(CardHeader)>
                                 <ForwardRef(CardContent)
                                   className=""
+                                  data-analyticsid="standard-card-grant-information-content"
                                   data-testid="standard-card-grant-information-content"
                                   id="standard-card-grant-information-content"
                                 >
                                   <MuiCardContentRoot
                                     as="div"
                                     className="MuiCardContent-root"
+                                    data-analyticsid="standard-card-grant-information-content"
                                     data-testid="standard-card-grant-information-content"
                                     id="standard-card-grant-information-content"
                                     ownerState={
@@ -15781,6 +15791,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                                         ],
                                         "className": "",
                                         "component": "div",
+                                        "data-analyticsid": "standard-card-grant-information-content",
                                         "data-testid": "standard-card-grant-information-content",
                                         "id": "standard-card-grant-information-content",
                                       }
@@ -16109,6 +16120,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                                     />
                                     <div
                                       className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                      data-analyticsid="standard-card-grant-information-content"
                                       data-testid="standard-card-grant-information-content"
                                       id="standard-card-grant-information-content"
                                     >

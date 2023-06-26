@@ -40,6 +40,7 @@ export class FileUploadRowStatus extends PureComponent {
                             <IconButton
                                 onClick={this.props.onDelete}
                                 disabled={disabled}
+                                data-analyticsid={`${this.props.fileUploadRowStatusId}-delete`}
                                 data-testid={`${this.props.fileUploadRowStatusId}-delete`}
                                 size="large"
                             >

@@ -24,6 +24,7 @@ exports[`StandardCard component renders given ID for standard card 1`] = `
     </div>
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="test-card-content"
       data-testid="test-card-content"
       id="test-card-content"
     />
@@ -57,6 +58,7 @@ exports[`StandardCard component renders with custom colours and full height 1`] 
     </div>
     <div
       class="MuiCardContent-root makeStyles-cardContentNoPadding-21 css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-card-title-content"
       data-testid="standard-card-card-title-content"
       id="standard-card-card-title-content"
     />
@@ -86,6 +88,7 @@ exports[`StandardCard component renders with no title 1`] = `
     </div>
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card--content"
       data-testid="standard-card--content"
       id="standard-card--content"
     />
@@ -117,6 +120,7 @@ exports[`StandardCard component renders with small title and as a subcard 1`] = 
     </div>
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-card-title-content"
       data-testid="standard-card-card-title-content"
       id="standard-card-card-title-content"
     />
@@ -149,6 +153,7 @@ exports[`StandardCard component renders with square top and accent header 1`] = 
     </div>
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-card-title-content"
       data-testid="standard-card-card-title-content"
       id="standard-card-card-title-content"
     />
@@ -183,6 +188,7 @@ exports[`StandardCard component renders with title and help button 1`] = `
         <button
           aria-label="Click for more information"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="help-icon"
           data-mui-internal-clone-element="true"
           data-testid="help-icon"
           id="help-icon"
@@ -211,6 +217,7 @@ exports[`StandardCard component renders with title and help button 1`] = `
     </div>
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-card-title-content"
       data-testid="standard-card-card-title-content"
       id="standard-card-card-title-content"
     />
@@ -242,6 +249,7 @@ exports[`StandardCard component renders with title and no help icon 1`] = `
     </div>
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-card-title-content"
       data-testid="standard-card-card-title-content"
       id="standard-card-card-title-content"
     />

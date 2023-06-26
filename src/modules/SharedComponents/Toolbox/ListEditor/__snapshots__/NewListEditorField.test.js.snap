@@ -16,6 +16,7 @@ exports[`NewListEditorField component should render new list editor component wi
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-analyticsid="test-input"
           data-testid="test-input"
         >
           <label
@@ -45,6 +46,7 @@ exports[`NewListEditorField component should render new list editor component wi
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
           id="test-add"
@@ -89,6 +91,7 @@ exports[`NewListEditorField component should render new list editor component wi
           >
             <button
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
               id="delete-all-test"
               tabindex="0"
@@ -150,6 +153,7 @@ exports[`NewListEditorField component should render new list editor component wi
                 >
                   <button
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
                     id="test-list-row-0-move-down"
                     tabindex="0"
@@ -184,6 +188,7 @@ exports[`NewListEditorField component should render new list editor component wi
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
                 id="test-list-row-0-delete"
                 tabindex="0"
@@ -241,6 +246,7 @@ exports[`NewListEditorField component should render new list editor component wi
                 >
                   <button
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
                     id="test-list-row-1-move-up"
                     tabindex="0"
@@ -275,6 +281,7 @@ exports[`NewListEditorField component should render new list editor component wi
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
                 id="test-list-row-1-delete"
                 tabindex="0"
@@ -325,6 +332,7 @@ exports[`NewListEditorField component should render new list editor component wi
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-analyticsid="test-input"
           data-testid="test-input"
         >
           <label
@@ -354,6 +362,7 @@ exports[`NewListEditorField component should render new list editor component wi
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
           id="test-add"
@@ -398,6 +407,7 @@ exports[`NewListEditorField component should render new list editor component wi
           >
             <button
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
               id="delete-all-test"
               tabindex="0"
@@ -459,6 +469,7 @@ exports[`NewListEditorField component should render new list editor component wi
                 >
                   <button
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
                     id="test-list-row-0-move-down"
                     tabindex="0"
@@ -493,6 +504,7 @@ exports[`NewListEditorField component should render new list editor component wi
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
                 id="test-list-row-0-delete"
                 tabindex="0"
@@ -550,6 +562,7 @@ exports[`NewListEditorField component should render new list editor component wi
                 >
                   <button
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
                     id="test-list-row-1-move-up"
                     tabindex="0"
@@ -584,6 +597,7 @@ exports[`NewListEditorField component should render new list editor component wi
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
                 id="test-list-row-1-delete"
                 tabindex="0"
@@ -634,6 +648,7 @@ exports[`NewListEditorField component should render new list editor component wi
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-analyticsid="test-input"
           data-testid="test-input"
         >
           <label
@@ -663,6 +678,7 @@ exports[`NewListEditorField component should render new list editor component wi
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
           id="test-add"
