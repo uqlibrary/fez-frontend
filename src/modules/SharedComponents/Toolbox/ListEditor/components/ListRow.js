@@ -87,6 +87,7 @@ export const ListRow = ({
                                                 onClick={_handleMoveUp}
                                                 disabled={disabled}
                                                 id={`${listRowId}-move-up`}
+                                                data-analyticsid={`${listRowId}-move-up`}
                                                 data-testid={`${listRowId}-move-up`}
                                                 size="large"
                                             >
@@ -104,6 +105,7 @@ export const ListRow = ({
                                                 onClick={_handleMoveDown}
                                                 disabled={disabled}
                                                 id={`${listRowId}-move-down`}
+                                                data-analyticsid={`${listRowId}-move-down`}
                                                 data-testid={`${listRowId}-move-down`}
                                                 size="large"
                                             >
@@ -126,6 +128,7 @@ export const ListRow = ({
                                             onClick={_handleEdit}
                                             disabled={disabled}
                                             id={`${listRowId}-edit`}
+                                            data-analyticsid={`${listRowId}-edit`}
                                             data-testid={`${listRowId}-edit`}
                                             size="large"
                                         >
@@ -144,6 +147,7 @@ export const ListRow = ({
                                 onClick={showConfirmation}
                                 disabled={disabled}
                                 id={`${listRowId}-delete`}
+                                data-analyticsid={`${listRowId}-delete`}
                                 data-testid={`${listRowId}-delete`}
                                 size="large"
                             >

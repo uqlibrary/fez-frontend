@@ -352,6 +352,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                             return (
                                 <Button
                                     id={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                    data-analyticsid={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                     data-testid={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                     disabled={props.disabled}
                                     variant="contained"

@@ -311,6 +311,7 @@ export const Alert = ({
                 alignItems="flex-start"
                 alignContent="center"
                 id={alertId}
+                data-analyticsid={alertId}
                 data-testid={alertId}
                 classes={{ root: classes.root }}
             >
@@ -346,6 +347,7 @@ export const Alert = ({
                                     aria-label={dismissTitle}
                                     id="dismiss-mobile"
                                     data-testid="dismiss-mobile"
+                                    data-analyticsid="dismiss-mobile"
                                     size="large"
                                 >
                                     <Close className="dismiss" />
@@ -364,6 +366,7 @@ export const Alert = ({
                             className="action alert-button"
                             id="action-button"
                             data-testid="action-button"
+                            data-analyticsid="action-button"
                             disabled={showLoader}
                         />
                     </Grid>
@@ -376,6 +379,7 @@ export const Alert = ({
                             aria-label={dismissTitle}
                             id="dismiss"
                             data-testid="dismiss"
+                            data-analyticsid="dismiss"
                             size="large"
                         >
                             <Close className="dismiss" />

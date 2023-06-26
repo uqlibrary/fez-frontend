@@ -311,6 +311,7 @@ export class PartialDateForm extends PureComponent {
                                     label: 'day',
                                     maxLength: 2,
                                     id: `${this.props.partialDateFormId}-day-input`,
+                                    'data-analyticsid': `${this.props.partialDateFormId}-day-input`,
                                     'data-testid': `${this.props.partialDateFormId}-day-input`,
                                 }}
                                 value={this.state.day}
@@ -331,15 +332,18 @@ export class PartialDateForm extends PureComponent {
                                 inputProps={{
                                     label: 'month',
                                     maxLength: 2,
+                                    'data-analyticsid': `${this.props.partialDateFormId}-month-input`,
                                     'data-testid': `${this.props.partialDateFormId}-month-input`,
                                     id: `${this.props.partialDateFormId}-month-input`,
                                 }}
                                 SelectDisplayProps={{
                                     id: `${this.props.partialDateFormId}-month-select`,
+                                    'data-analyticsid': `${this.props.partialDateFormId}-month-select`,
                                     'data-testid': `${this.props.partialDateFormId}-month-select`,
                                 }}
                                 MenuProps={{
                                     id: `${this.props.partialDateFormId}-month-options`,
+                                    'data-analyticsid': `${this.props.partialDateFormId}-month-options`,
                                     'data-testid': `${this.props.partialDateFormId}-month-options`,
                                 }}
                             >
@@ -366,6 +370,7 @@ export class PartialDateForm extends PureComponent {
                                     label: 'year',
                                     maxLength: 4,
                                     id: `${this.props.partialDateFormId}-year-input`,
+                                    'data-analyticsid': `${this.props.partialDateFormId}-year-input`,
                                     'data-testid': `${this.props.partialDateFormId}-year-input`,
                                 }}
                                 value={this.state.year}

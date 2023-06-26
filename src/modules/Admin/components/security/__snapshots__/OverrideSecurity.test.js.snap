@@ -7,6 +7,7 @@ exports[`OverrideSecurity component should render properly 1`] = `
       checked={false}
       inputProps={
         Object {
+          "data-analyticsid": "test-input",
           "data-testid": "test-input",
           "id": "test-input",
         }

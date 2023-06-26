@@ -75,6 +75,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                         <IconButton
                             onClick={e => copyToClipboard(e, block.value)}
                             id={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
+                            data-analyticsid={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
                             data-testid={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
                             aria-label="Copy to clipboard"
                             size="small"

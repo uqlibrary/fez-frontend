@@ -193,6 +193,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                             <Button
                                 aria-label={batchImportTxt.formLabels.cancelButtonLabel}
                                 children={batchImportTxt.formLabels.cancelButtonLabel}
+                                data-analyticsid="batch-import-cancel"
                                 data-testid="batch-import-cancel"
                                 disabled={submitting}
                                 fullWidth
@@ -207,6 +208,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                 aria-label={batchImportTxt.formLabels.submitButtonLabel}
                                 children={batchImportTxt.formLabels.submitButtonLabel}
                                 color="primary"
+                                data-analyticsid="batch-import-submit"
                                 data-testid="batch-import-submit"
                                 disabled={submitting || submitSucceeded || disableSubmit}
                                 fullWidth

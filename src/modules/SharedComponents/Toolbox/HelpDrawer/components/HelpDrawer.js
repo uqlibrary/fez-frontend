@@ -80,6 +80,7 @@ export class HelpDrawer extends Component {
                             children={buttonLabel}
                             className={classes.button}
                             color="primary"
+                            data-analyticsid="help-drawer-close"
                             data-testid="help-drawer-close"
                             onClick={hide}
                             variant="contained"

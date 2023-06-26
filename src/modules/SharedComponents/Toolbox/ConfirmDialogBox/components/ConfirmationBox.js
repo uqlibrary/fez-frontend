@@ -80,6 +80,7 @@ export const ConfirmationBox = ({
                                 fullWidth
                                 onClick={_onAction}
                                 id="confirm-action"
+                                data-analyticsid={`confirm-${confirmationBoxId}`}
                                 data-testid={`confirm-${confirmationBoxId}`}
                             />
                         </Grid>
@@ -94,6 +95,7 @@ export const ConfirmationBox = ({
                                 fullWidth
                                 onClick={_onAlternateAction}
                                 id="confirm-alternate-action"
+                                data-analyticsid={`confirm-alternate-${confirmationBoxId}`}
                                 data-testid={`confirm-alternate-${confirmationBoxId}`}
                             />
                         </Grid>
@@ -107,6 +109,7 @@ export const ConfirmationBox = ({
                                 fullWidth
                                 onClick={_onCancelAction}
                                 id="confirm-cancel-action"
+                                data-analyticsid={`cancel-${confirmationBoxId}`}
                                 data-testid={`cancel-${confirmationBoxId}`}
                             />
                         </Grid>

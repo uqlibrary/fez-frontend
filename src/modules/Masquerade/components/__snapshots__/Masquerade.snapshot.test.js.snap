@@ -53,6 +53,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
       >
         <ForwardRef(Button)
           color="primary"
+          data-analyticsid="submitMasquerade"
           disabled={false}
           fullWidth={true}
           id="submitMasquerade"
@@ -120,6 +121,7 @@ exports[`Component Masquerade Should render readonly description 1`] = `
       >
         <ForwardRef(Button)
           color="primary"
+          data-analyticsid="submitMasquerade"
           disabled={false}
           fullWidth={true}
           id="submitMasquerade"

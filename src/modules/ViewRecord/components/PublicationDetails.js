@@ -110,6 +110,7 @@ export class PublicationDetailsClass extends PureComponent {
                                     (item, index) => (
                                         <span
                                             key={index}
+                                            data-analyticsid={`rek-content-indicator-${index}`}
                                             data-testid={`rek-content-indicator-${index}`}
                                             className={this.props.classes.contentIndicator}
                                         >
@@ -132,6 +133,7 @@ export class PublicationDetailsClass extends PureComponent {
                                                 collection.rek_ismemberof_lookup && (
                                                     <li
                                                         key={`collection-${index}`}
+                                                        data-analyticsid={`rek-ismemberof-${index}`}
                                                         data-testid={`rek-ismemberof-${index}`}
                                                     >
                                                         <Link

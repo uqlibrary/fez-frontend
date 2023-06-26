@@ -281,6 +281,7 @@ export const NewViewRecord = ({
                                             startIcon={getAdminRecordButtonIcon(recordToView)}
                                             onClick={handleDrawerToggle}
                                             id="adminDrawerButton"
+                                            data-analyticsid="btnAdminToggleDrawerVisibility"
                                             data-testid="btnAdminToggleDrawerVisibility"
                                         >
                                             {`View ${

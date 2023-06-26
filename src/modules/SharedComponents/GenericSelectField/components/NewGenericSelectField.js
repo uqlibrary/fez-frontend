@@ -139,6 +139,7 @@ export const NewGenericSelectField = ({
                         key={index + 1}
                         disabled={item && ((!canUnselect && !item.value) || !!item.disabled)}
                         aria-label={item.text}
+                        data-analyticsid={`${genericSelectFieldId}-option-${index}`}
                         data-testid={`${genericSelectFieldId}-option-${index}`}
                     >
                         {item.text}
@@ -165,12 +166,14 @@ export const NewGenericSelectField = ({
                 displayEmpty={displayEmpty}
                 inputProps={{
                     'aria-labelledby': `${genericSelectFieldId}-label`,
+                    'data-analyticsid': `${genericSelectFieldId}-input`,
                     'data-testid': `${genericSelectFieldId}-input`,
                     id: `${genericSelectFieldId}-input`,
                 }}
                 multiple={multiple}
                 MenuProps={{
                     id: `${genericSelectFieldId}-options`,
+                    'data-analyticsid': `${genericSelectFieldId}-options`,
                     'data-testid': `${genericSelectFieldId}-options`,
                 }}
                 onChange={handleChange}

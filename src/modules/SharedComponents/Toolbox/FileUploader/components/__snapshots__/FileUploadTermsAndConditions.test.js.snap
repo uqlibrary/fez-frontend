@@ -18,6 +18,7 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
       }
       inputProps={
         Object {
+          "data-analyticsid": "terms-and-conditions-input",
           "data-testid": "terms-and-conditions-input",
           "id": "terms-and-conditions-input",
         }
@@ -57,6 +58,7 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
       }
       inputProps={
         Object {
+          "data-analyticsid": "terms-and-conditions-input",
           "data-testid": "terms-and-conditions-input",
           "id": "terms-and-conditions-input",
         }
@@ -869,6 +871,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                       }
                       inputProps={
                         Object {
+                          "data-analyticsid": "terms-and-conditions-input",
                           "data-testid": "terms-and-conditions-input",
                           "id": "terms-and-conditions-input",
                         }
@@ -910,6 +913,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                           }
                           inputProps={
                             Object {
+                              "data-analyticsid": "terms-and-conditions-input",
                               "data-testid": "terms-and-conditions-input",
                               "id": "terms-and-conditions-input",
                             }
@@ -1380,6 +1384,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                         disabled={false}
                         inputProps={
                           Object {
+                            "data-analyticsid": "terms-and-conditions-input",
                             "data-testid": "terms-and-conditions-input",
                             "id": "terms-and-conditions-input",
                           }
@@ -1408,6 +1413,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                           }
                           inputProps={
                             Object {
+                              "data-analyticsid": "terms-and-conditions-input",
                               "data-indeterminate": false,
                               "data-testid": "terms-and-conditions-input",
                               "id": "terms-and-conditions-input",
@@ -1425,6 +1431,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                               "disabled": false,
                               "indeterminate": false,
                               "inputProps": Object {
+                                "data-analyticsid": "terms-and-conditions-input",
                                 "data-testid": "terms-and-conditions-input",
                                 "id": "terms-and-conditions-input",
                               },
@@ -1892,6 +1899,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                             }
                             inputProps={
                               Object {
+                                "data-analyticsid": "terms-and-conditions-input",
                                 "data-indeterminate": false,
                                 "data-testid": "terms-and-conditions-input",
                                 "id": "terms-and-conditions-input",
@@ -1932,6 +1940,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                     fontSize="medium"
                                   />,
                                   "inputProps": Object {
+                                    "data-analyticsid": "terms-and-conditions-input",
                                     "data-indeterminate": false,
                                     "data-testid": "terms-and-conditions-input",
                                     "id": "terms-and-conditions-input",
@@ -2422,6 +2431,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                         <Styled(input)
                                           checked={false}
                                           className="PrivateSwitchBase-input"
+                                          data-analyticsid="terms-and-conditions-input"
                                           data-indeterminate={false}
                                           data-testid="terms-and-conditions-input"
                                           disabled={false}
@@ -2445,6 +2455,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                                 fontSize="medium"
                                               />,
                                               "inputProps": Object {
+                                                "data-analyticsid": "terms-and-conditions-input",
                                                 "data-indeterminate": false,
                                                 "data-testid": "terms-and-conditions-input",
                                                 "id": "terms-and-conditions-input",
@@ -2934,6 +2945,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                     <Styled(input)
                                       checked={false}
                                       className="PrivateSwitchBase-input"
+                                      data-analyticsid="terms-and-conditions-input"
                                       data-indeterminate={false}
                                       data-testid="terms-and-conditions-input"
                                       disabled={false}
@@ -2957,6 +2969,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                             fontSize="medium"
                                           />,
                                           "inputProps": Object {
+                                            "data-analyticsid": "terms-and-conditions-input",
                                             "data-indeterminate": false,
                                             "data-testid": "terms-and-conditions-input",
                                             "id": "terms-and-conditions-input",
@@ -3407,6 +3420,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                       <input
                                         checked={false}
                                         className="PrivateSwitchBase-input css-1m9pwf3"
+                                        data-analyticsid="terms-and-conditions-input"
                                         data-indeterminate={false}
                                         data-testid="terms-and-conditions-input"
                                         disabled={false}

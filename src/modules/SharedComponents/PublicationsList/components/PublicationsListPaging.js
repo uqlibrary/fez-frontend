@@ -175,6 +175,7 @@ export class PublicationsListPaging extends Component {
                     .replace('[pageNumber]', key)
                     .replace('[totalPages]', totalPages)}
                 children={key}
+                data-analyticsid={`${this.props.pagingId}-select-page-${key}`}
                 data-testid={`${this.props.pagingId}-select-page-${key}`}
                 id={`${this.props.pagingId}-select-page-${key}`}
             />
@@ -225,6 +226,7 @@ export class PublicationsListPaging extends Component {
                             sm={'auto'}
                             className={classes.paginationGridContainer}
                             sx={{ display: { xs: 'none', sm: 'block' } }}
+                            data-analyticsid={`${this.props.pagingId}-desktop-controls`}
                             data-testid={`${this.props.pagingId}-desktop-controls`}
                             id={`${this.props.pagingId}-desktop-controls`}
                         >
@@ -238,6 +240,7 @@ export class PublicationsListPaging extends Component {
                             item
                             xs
                             sx={{ display: { xs: 'block', sm: 'none' } }}
+                            data-analyticsid={`${this.props.pagingId}-mobile-controls`}
                             data-testid={`${this.props.pagingId}-mobile-controls`}
                             id={`${this.props.pagingId}-mobile-controls`}
                         >

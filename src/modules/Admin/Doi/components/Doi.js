@@ -380,6 +380,7 @@ export const Doi = ({
                             <Grid item xs={12} sm="auto">
                                 <Button
                                     id="rek-doi-cancel"
+                                    data-analyticsid="rek-doi-cancel"
                                     data-testid="rek-doi-cancel"
                                     variant="contained"
                                     fullWidth
@@ -393,6 +394,7 @@ export const Doi = ({
                             <Grid item xs={12} sm="auto">
                                 <Button
                                     id="rek-doi-submit"
+                                    data-analyticsid="rek-doi-submit"
                                     data-testid="rek-doi-submit"
                                     variant="contained"
                                     color="primary"

@@ -2633,6 +2633,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                     />,
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
                                       data-testid="standard-card-non-traditional-research-output-metadata-content"
                                       id="standard-card-non-traditional-research-output-metadata-content"
                                     >
@@ -3139,6 +3140,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                         />,
                                         <ForwardRef(CardContent)
                                           className=""
+                                          data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
                                           data-testid="standard-card-non-traditional-research-output-metadata-content"
                                           id="standard-card-non-traditional-research-output-metadata-content"
                                         >
@@ -4731,12 +4733,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                     </ForwardRef(CardHeader)>
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
                                       data-testid="standard-card-non-traditional-research-output-metadata-content"
                                       id="standard-card-non-traditional-research-output-metadata-content"
                                     >
                                       <MuiCardContentRoot
                                         as="div"
                                         className="MuiCardContent-root"
+                                        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
                                         data-testid="standard-card-non-traditional-research-output-metadata-content"
                                         id="standard-card-non-traditional-research-output-metadata-content"
                                         ownerState={
@@ -4888,6 +4892,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             ],
                                             "className": "",
                                             "component": "div",
+                                            "data-analyticsid": "standard-card-non-traditional-research-output-metadata-content",
                                             "data-testid": "standard-card-non-traditional-research-output-metadata-content",
                                             "id": "standard-card-non-traditional-research-output-metadata-content",
                                           }
@@ -5216,6 +5221,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                         />
                                         <div
                                           className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                          data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
                                           data-testid="standard-card-non-traditional-research-output-metadata-content"
                                           id="standard-card-non-traditional-research-output-metadata-content"
                                         >

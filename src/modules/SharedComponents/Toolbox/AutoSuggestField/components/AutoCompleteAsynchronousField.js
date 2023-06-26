@@ -137,6 +137,7 @@ export const AutoCompleteAsynchronousField = ({
                         inputProps={{
                             ...params.inputProps,
                             id: `${autoCompleteAsynchronousFieldId}-input`,
+                            'data-analyticsid': `${autoCompleteAsynchronousFieldId}-input`,
                             'data-testid': `${autoCompleteAsynchronousFieldId}-input`,
                         }}
                         value={inputValue}
@@ -146,6 +147,7 @@ export const AutoCompleteAsynchronousField = ({
                 )}
                 ListboxProps={{
                     id: `${autoCompleteAsynchronousFieldId}-options`,
+                    'data-analyticsid': `${autoCompleteAsynchronousFieldId}-options`,
                     'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
                 }}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}

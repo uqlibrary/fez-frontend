@@ -46,6 +46,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
     >
       <ForwardRef(Button)
         color="primary"
+        data-analyticsid="help-drawer-close"
         data-testid="help-drawer-close"
         onClick={[MockFunction]}
         variant="contained"
@@ -107,6 +108,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
     >
       <ForwardRef(Button)
         color="primary"
+        data-analyticsid="help-drawer-close"
         data-testid="help-drawer-close"
         onClick={[MockFunction]}
         variant="contained"
@@ -164,6 +166,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
     >
       <ForwardRef(Button)
         color="primary"
+        data-analyticsid="help-drawer-close"
         data-testid="help-drawer-close"
         onClick={[MockFunction]}
         variant="contained"
@@ -1668,6 +1671,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                             <ForwardRef(Button)
                               className="HelpDrawer-button-3"
                               color="primary"
+                              data-analyticsid="help-drawer-close"
                               data-testid="help-drawer-close"
                               onClick={[MockFunction]}
                               variant="contained"
@@ -2359,6 +2363,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                       >
                                         <button
                                           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium HelpDrawer-button-3 css-sghohy-MuiButtonBase-root-MuiButton-root"
+                                          data-analyticsid="help-drawer-close"
                                           data-testid="help-drawer-close"
                                           tabindex="0"
                                           type="button"
@@ -2436,6 +2441,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                               <ForwardRef(Button)
                                                 className="HelpDrawer-button-3"
                                                 color="primary"
+                                                data-analyticsid="help-drawer-close"
                                                 data-testid="help-drawer-close"
                                                 onClick={[MockFunction]}
                                                 variant="contained"
@@ -2490,6 +2496,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                           <ForwardRef(Button)
                                             className="HelpDrawer-button-3"
                                             color="primary"
+                                            data-analyticsid="help-drawer-close"
                                             data-testid="help-drawer-close"
                                             onClick={[MockFunction]}
                                             variant="contained"
@@ -3170,6 +3177,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                   <ForwardRef(Button)
                                                     className="HelpDrawer-button-3"
                                                     color="primary"
+                                                    data-analyticsid="help-drawer-close"
                                                     data-testid="help-drawer-close"
                                                     onClick={[MockFunction]}
                                                     variant="contained"
@@ -3224,6 +3232,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                               <ForwardRef(Button)
                                                 className="HelpDrawer-button-3"
                                                 color="primary"
+                                                data-analyticsid="help-drawer-close"
                                                 data-testid="help-drawer-close"
                                                 onClick={[MockFunction]}
                                                 variant="contained"
@@ -4544,6 +4553,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                               >
                                                 <button
                                                   class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium HelpDrawer-button-3 css-sghohy-MuiButtonBase-root-MuiButton-root"
+                                                  data-analyticsid="help-drawer-close"
                                                   data-testid="help-drawer-close"
                                                   tabindex="0"
                                                   type="button"
@@ -4616,6 +4626,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                 <ForwardRef(Button)
                                                   className="HelpDrawer-button-3"
                                                   color="primary"
+                                                  data-analyticsid="help-drawer-close"
                                                   data-testid="help-drawer-close"
                                                   onClick={[MockFunction]}
                                                   variant="contained"
@@ -5223,6 +5234,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                     <ForwardRef(Button)
                                                       className="HelpDrawer-button-3"
                                                       color="primary"
+                                                      data-analyticsid="help-drawer-close"
                                                       data-testid="help-drawer-close"
                                                       onClick={[MockFunction]}
                                                       variant="contained"
@@ -5838,6 +5850,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                           <ForwardRef(Button)
                                                             className="HelpDrawer-button-3"
                                                             color="primary"
+                                                            data-analyticsid="help-drawer-close"
                                                             data-testid="help-drawer-close"
                                                             onClick={[MockFunction]}
                                                             variant="contained"
@@ -8175,6 +8188,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                             "children": <ForwardRef(Button)
                                                               className="HelpDrawer-button-3"
                                                               color="primary"
+                                                              data-analyticsid="help-drawer-close"
                                                               data-testid="help-drawer-close"
                                                               onClick={[MockFunction]}
                                                               variant="contained"
@@ -8733,6 +8747,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                           <ForwardRef(Button)
                                                             className="HelpDrawer-button-3"
                                                             color="primary"
+                                                            data-analyticsid="help-drawer-close"
                                                             data-testid="help-drawer-close"
                                                             onClick={[MockFunction]}
                                                             variant="contained"
@@ -8748,6 +8763,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                                 }
                                                               }
                                                               component="button"
+                                                              data-analyticsid="help-drawer-close"
                                                               data-testid="help-drawer-close"
                                                               disabled={false}
                                                               focusRipple={true}
@@ -8759,6 +8775,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                                   "className": "HelpDrawer-button-3",
                                                                   "color": "primary",
                                                                   "component": "button",
+                                                                  "data-analyticsid": "help-drawer-close",
                                                                   "data-testid": "help-drawer-close",
                                                                   "disableElevation": false,
                                                                   "disableFocusRipple": false,
@@ -9311,6 +9328,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                                   }
                                                                 }
                                                                 component="button"
+                                                                data-analyticsid="help-drawer-close"
                                                                 data-testid="help-drawer-close"
                                                                 disabled={false}
                                                                 focusRipple={true}
@@ -9328,6 +9346,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                                       "startIcon": "MuiButton-startIcon MuiButton-iconSizeMedium",
                                                                     }
                                                                   }
+                                                                  data-analyticsid="help-drawer-close"
                                                                   data-testid="help-drawer-close"
                                                                   disabled={false}
                                                                   onBlur={[Function]}
@@ -9359,6 +9378,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                                         "startIcon": "MuiButton-startIcon MuiButton-iconSizeMedium",
                                                                       },
                                                                       "component": "button",
+                                                                      "data-analyticsid": "help-drawer-close",
                                                                       "data-testid": "help-drawer-close",
                                                                       "disableRipple": false,
                                                                       "disableTouchRipple": false,
@@ -9905,6 +9925,7 @@ exports[`HelpDrawer snapshots tests should render with styles 1`] = `
                                                                   />
                                                                   <button
                                                                     className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium HelpDrawer-button-3 css-sghohy-MuiButtonBase-root-MuiButton-root"
+                                                                    data-analyticsid="help-drawer-close"
                                                                     data-testid="help-drawer-close"
                                                                     disabled={false}
                                                                     onBlur={[Function]}

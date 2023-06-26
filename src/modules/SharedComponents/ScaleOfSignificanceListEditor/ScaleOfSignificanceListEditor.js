@@ -376,6 +376,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
                 ) : (
                     <Box display="flex" justifyContent="flex-end" alignItems="flex-end">
                         <IconButton
+                            data-analyticsid="rek-significance-showhidebutton"
                             data-testid="rek-significance-showhidebutton"
                             onClick={this.showFormInAddMode}
                             aria-label={this.props.locale.form.locale.addEntryButton}

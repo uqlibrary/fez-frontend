@@ -92,6 +92,7 @@ export const StandardCard = ({
             )}
             <CardContent
                 id={`${standardCardIdActual}-content`}
+                data-analyticsid={`${standardCardIdActual}-content`}
                 data-testid={`${standardCardIdActual}-content`}
                 className={(noPadding && classes.cardContentNoPadding) || ''}
             >

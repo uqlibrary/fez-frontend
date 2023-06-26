@@ -4149,6 +4149,7 @@ exports[`Related publications Component  should render component 2`] = `
                                     />,
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-title-content"
                                       data-testid="standard-card-title-content"
                                       id="standard-card-title-content"
                                     >
@@ -4449,6 +4450,7 @@ exports[`Related publications Component  should render component 2`] = `
                                         />,
                                         <ForwardRef(CardContent)
                                           className=""
+                                          data-analyticsid="standard-card-title-content"
                                           data-testid="standard-card-title-content"
                                           id="standard-card-title-content"
                                         >
@@ -5538,12 +5540,14 @@ exports[`Related publications Component  should render component 2`] = `
                                     </ForwardRef(CardHeader)>
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-title-content"
                                       data-testid="standard-card-title-content"
                                       id="standard-card-title-content"
                                     >
                                       <MuiCardContentRoot
                                         as="div"
                                         className="MuiCardContent-root"
+                                        data-analyticsid="standard-card-title-content"
                                         data-testid="standard-card-title-content"
                                         id="standard-card-title-content"
                                         ownerState={
@@ -5578,6 +5582,7 @@ exports[`Related publications Component  should render component 2`] = `
                                             </ul>,
                                             "className": "",
                                             "component": "div",
+                                            "data-analyticsid": "standard-card-title-content",
                                             "data-testid": "standard-card-title-content",
                                             "id": "standard-card-title-content",
                                           }
@@ -5807,6 +5812,7 @@ exports[`Related publications Component  should render component 2`] = `
                                         />
                                         <div
                                           className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                          data-analyticsid="standard-card-title-content"
                                           data-testid="standard-card-title-content"
                                           id="standard-card-title-content"
                                         >
@@ -10525,6 +10531,7 @@ exports[`Related publications Component  should render with a publication title 
                                     />,
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-a-test-title-content"
                                       data-testid="standard-card-a-test-title-content"
                                       id="standard-card-a-test-title-content"
                                     >
@@ -10836,6 +10843,7 @@ exports[`Related publications Component  should render with a publication title 
                                         />,
                                         <ForwardRef(CardContent)
                                           className=""
+                                          data-analyticsid="standard-card-a-test-title-content"
                                           data-testid="standard-card-a-test-title-content"
                                           id="standard-card-a-test-title-content"
                                         >
@@ -11936,12 +11944,14 @@ exports[`Related publications Component  should render with a publication title 
                                     </ForwardRef(CardHeader)>
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-a-test-title-content"
                                       data-testid="standard-card-a-test-title-content"
                                       id="standard-card-a-test-title-content"
                                     >
                                       <MuiCardContentRoot
                                         as="div"
                                         className="MuiCardContent-root"
+                                        data-analyticsid="standard-card-a-test-title-content"
                                         data-testid="standard-card-a-test-title-content"
                                         id="standard-card-a-test-title-content"
                                         ownerState={
@@ -11987,6 +11997,7 @@ exports[`Related publications Component  should render with a publication title 
                                             </ul>,
                                             "className": "",
                                             "component": "div",
+                                            "data-analyticsid": "standard-card-a-test-title-content",
                                             "data-testid": "standard-card-a-test-title-content",
                                             "id": "standard-card-a-test-title-content",
                                           }
@@ -12216,6 +12227,7 @@ exports[`Related publications Component  should render with a publication title 
                                         />
                                         <div
                                           className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                          data-analyticsid="standard-card-a-test-title-content"
                                           data-testid="standard-card-a-test-title-content"
                                           id="standard-card-a-test-title-content"
                                         >
@@ -17231,6 +17243,7 @@ exports[`Related publications Component  should render without a child search ke
                                     />,
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-title-content"
                                       data-testid="standard-card-title-content"
                                       id="standard-card-title-content"
                                     >
@@ -17531,6 +17544,7 @@ exports[`Related publications Component  should render without a child search ke
                                         />,
                                         <ForwardRef(CardContent)
                                           className=""
+                                          data-analyticsid="standard-card-title-content"
                                           data-testid="standard-card-title-content"
                                           id="standard-card-title-content"
                                         >
@@ -18620,12 +18634,14 @@ exports[`Related publications Component  should render without a child search ke
                                     </ForwardRef(CardHeader)>
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-title-content"
                                       data-testid="standard-card-title-content"
                                       id="standard-card-title-content"
                                     >
                                       <MuiCardContentRoot
                                         as="div"
                                         className="MuiCardContent-root"
+                                        data-analyticsid="standard-card-title-content"
                                         data-testid="standard-card-title-content"
                                         id="standard-card-title-content"
                                         ownerState={
@@ -18660,6 +18676,7 @@ exports[`Related publications Component  should render without a child search ke
                                             </ul>,
                                             "className": "",
                                             "component": "div",
+                                            "data-analyticsid": "standard-card-title-content",
                                             "data-testid": "standard-card-title-content",
                                             "id": "standard-card-title-content",
                                           }
@@ -18889,6 +18906,7 @@ exports[`Related publications Component  should render without a child search ke
                                         />
                                         <div
                                           className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                          data-analyticsid="standard-card-title-content"
                                           data-testid="standard-card-title-content"
                                           id="standard-card-title-content"
                                         >
@@ -31766,6 +31784,7 @@ exports[`Related publications Component  should render without a parent search k
                                     />,
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-title-content"
                                       data-testid="standard-card-title-content"
                                       id="standard-card-title-content"
                                     >
@@ -32054,6 +32073,7 @@ exports[`Related publications Component  should render without a parent search k
                                         />,
                                         <ForwardRef(CardContent)
                                           className=""
+                                          data-analyticsid="standard-card-title-content"
                                           data-testid="standard-card-title-content"
                                           id="standard-card-title-content"
                                         >
@@ -33131,12 +33151,14 @@ exports[`Related publications Component  should render without a parent search k
                                     </ForwardRef(CardHeader)>
                                     <ForwardRef(CardContent)
                                       className=""
+                                      data-analyticsid="standard-card-title-content"
                                       data-testid="standard-card-title-content"
                                       id="standard-card-title-content"
                                     >
                                       <MuiCardContentRoot
                                         as="div"
                                         className="MuiCardContent-root"
+                                        data-analyticsid="standard-card-title-content"
                                         data-testid="standard-card-title-content"
                                         id="standard-card-title-content"
                                         ownerState={
@@ -33159,6 +33181,7 @@ exports[`Related publications Component  should render without a parent search k
                                             </ul>,
                                             "className": "",
                                             "component": "div",
+                                            "data-analyticsid": "standard-card-title-content",
                                             "data-testid": "standard-card-title-content",
                                             "id": "standard-card-title-content",
                                           }
@@ -33388,6 +33411,7 @@ exports[`Related publications Component  should render without a parent search k
                                         />
                                         <div
                                           className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                                          data-analyticsid="standard-card-title-content"
                                           data-testid="standard-card-title-content"
                                           id="standard-card-title-content"
                                         >
