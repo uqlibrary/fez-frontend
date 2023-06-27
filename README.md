@@ -1,8 +1,6 @@
 # Fez frontend
 
 [![AWS Codebuild Status for uqlibrary/fez-frontend](https://codebuild.ap-southeast-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoidS80NCs2UmNpVHdKc3Q2RVpoK2w0NlZ0d1ZlRGMrZDFUNDZFUTZZUEdrQ0NTY1N4RGdHNEtDaUxZY3RsdVlWTEJQZUFQaWh5LzBDUDNBU3VicXNFaC84PSIsIml2UGFyYW1ldGVyU3BlYyI6IkdKeUVUVVpubk56NDBjVHEiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend-master/view?region=ap-southeast-2)
-[![Dependency Status](https://david-dm.org/uqlibrary/fez-frontend.svg)](https://david-dm.org/uqlibrary/fez-frontend)
-[![Dev Dependency Status](https://david-dm.org/uqlibrary/fez-frontend/dev-status.svg)](https://david-dm.org/uqlibrary/fez-frontend)
 
 Fez frontend is a web interface application for digital repository.
 [Staging/Production release notes](https://libnet.library.uq.edu.au/display/LIB/eSpace+UI+Release+Notes)
