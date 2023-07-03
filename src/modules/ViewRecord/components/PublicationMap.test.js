@@ -1,22 +1,22 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PublicationMap from './PublicationMap';
 import { render } from 'test-utils';
 import { initialize } from '@googlemaps/jest-mocks';
 
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 jest.mock('@react-google-maps/api', () => ({
     useJsApiLoader: jest.fn(),
-    Polygon: props => <div id="mock-polygon" />,
-    Marker: props => <div id="mock-marker" />,
+    Polygon: props => <div data-testid="mock-polygon" />,
+    Marker: props => <div data-testid="mock-marker" />,
     GoogleMap: props => (
         <div>
-            <div id="mock-google-maps" />
+            <div data-testid="mock-google-maps" />
             {props.children}
         </div>
     ),
-    StandaloneSearchBox: props => <div id="mock-search-box" />,
-    DrawingManager: props => <div id="mock-drawing-manager" />,
+    StandaloneSearchBox: props => <div data-testid="mock-search-box" />,
+    DrawingManager: props => <div data-testid="mock-drawing-manager" />,
 }));
 import { useJsApiLoader } from '@react-google-maps/api';
 

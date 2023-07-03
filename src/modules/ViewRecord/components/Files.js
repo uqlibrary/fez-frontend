@@ -278,10 +278,6 @@ export class FilesClass extends Component {
         return pid && fileName && pathConfig.file.url(pid, fileName, checksum);
     };
 
-    searchByKey = (list, key, value) => {
-        return list && list.filter(item => item[key] === value)[0];
-    };
-
     isFileValid = dataStream => {
         return getSecurityAccess(dataStream, this.props) && !isDerivative(dataStream) && isAdded(dataStream);
     };

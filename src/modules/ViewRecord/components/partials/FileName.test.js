@@ -1,5 +1,5 @@
 import React from 'react';
-import { rtlRender, fireEvent, act, createMatchMedia } from 'test-utils';
+import { rtlRender, fireEvent, createMatchMedia } from 'test-utils';
 import FileName from './FileName';
 
 import { journalArticle } from 'mock/data/testing/records';
@@ -85,7 +85,7 @@ describe('File Name Component ', () => {
         });
         expect(getByText('test.mp3')).toBeInTheDocument();
         expect(queryByTestId(`${id}-download-button`)).toBe(null);
-        expect(queryByTestId('audioPlayer')).toBeInTheDocument();
+        expect(queryByTestId('audio-player')).toBeInTheDocument();
         expect(container.querySelector('button[aria-label^="Click to play audio file"]')).toBeInTheDocument();
     });
 
@@ -112,9 +112,8 @@ describe('File Name Component ', () => {
             previewFileName: 'preview_test.jpg',
             onFileSelect: testFn,
         });
-        act(() => {
-            fireEvent.click(getByText('test.jpg'));
-        });
+        fireEvent.click(getByText('test.jpg'));
+
         expect(testFn).toHaveBeenCalledTimes(1);
     });
 
@@ -127,9 +126,7 @@ describe('File Name Component ', () => {
             mimeType: 'video/mp4',
             onFileSelect: testFn,
         });
-        act(() => {
-            fireEvent.keyPress(getByText('test.mp4'), { key: 'Enter', code: 13, charCode: 13 });
-        });
+        fireEvent.keyPress(getByText('test.mp4'), { key: 'Enter', code: 13, charCode: 13 });
         expect(testFn).toHaveBeenCalledTimes(1);
     });
 
@@ -140,13 +137,9 @@ describe('File Name Component ', () => {
             mimeType: 'application/zip',
             downloadLicence: CURRENT_LICENCES[0],
         });
-        act(() => {
-            fireEvent.click(getByTestId(`${id}-download-button`));
-        });
-        expect(getByTestId('confirm-cancel-action')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(getByTestId('confirm-cancel-action'));
-        });
+        fireEvent.click(getByTestId(`${id}-download-button`));
+        expect(getByTestId('cancel-file-download-accept-licence')).toBeInTheDocument();
+        fireEvent.click(getByTestId('cancel-file-download-accept-licence'));
     });
 
     it('should be able to trigger and accept licence confirmation', () => {
@@ -157,11 +150,9 @@ describe('File Name Component ', () => {
             mimeType: 'application/zip',
             downloadLicence: CURRENT_LICENCES[0],
         });
-        act(() => {
-            fireEvent.click(getByTestId(`${id}-download-button`));
-        });
-        expect(getByTestId('confirm-action')).toBeInTheDocument();
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId(`${id}-download-button`));
+        expect(getByTestId('confirm-file-download-accept-licence')).toBeInTheDocument();
+        fireEvent.click(getByTestId('confirm-file-download-accept-licence'));
 
         expect(global.open).toHaveBeenCalledWith('http://localhost/view/UQ:676287/test.zip', '_blank');
     });

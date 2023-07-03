@@ -1,6 +1,6 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { act, fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
@@ -8,14 +8,14 @@ import { default as record } from 'mock/data/records/record';
 import { recordWithNoAffiliationIssues } from 'mock/data/records';
 import { accounts, currentAuthor } from 'mock/data/account';
 import { useParams } from 'react-router';
-import { recordVersionLegacy } from '../../../mock/data';
-import locale from '../../../locale/pages';
-import { notFound } from '../../../config/routes';
-import { stripHtml } from '../../../helpers/general';
-import globalLocale from '../../../locale/global';
+import { recordVersionLegacy } from 'mock/data';
+import locale from 'locale/pages';
+import { notFound } from 'config/routes';
+import { stripHtml } from 'helpers/general';
+import globalLocale from 'locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
-import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, PUBLICATION_TYPE_DATA_COLLECTION } from '../../../config/general';
+import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 
 jest.mock('../../../hooks', () => ({
     userIsAdmin: jest.fn(() => ({})),
@@ -399,8 +399,8 @@ describe('NewViewRecord', () => {
             });
             expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
             expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
-            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+            expect(getByTestId('btnAdminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+            expect(getByTestId('btnAdminRecordDrawerCloseBtnMobile')).not.toBeVisible();
         });
 
         it('should open desktop admin drawer when button pressed', () => {
@@ -410,14 +410,12 @@ describe('NewViewRecord', () => {
             });
 
             expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
-            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+            expect(getByTestId('btnAdminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
 
-            act(() => {
-                fireEvent.click(getByTestId('adminDrawerButton'));
-            });
+            fireEvent.click(getByTestId('btnAdminToggleDrawerVisibility'));
 
-            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).toBeVisible();
-            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+            expect(getByTestId('btnAdminRecordDrawerCloseBtnDesktop')).toBeVisible();
+            expect(getByTestId('btnAdminRecordDrawerCloseBtnMobile')).not.toBeVisible();
         });
 
         it('should open mobile admin drawer when button pressed', () => {
@@ -429,14 +427,12 @@ describe('NewViewRecord', () => {
             });
 
             expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+            expect(getByTestId('btnAdminRecordDrawerCloseBtnMobile')).not.toBeVisible();
 
-            act(() => {
-                fireEvent.click(getByTestId('adminDrawerButton'));
-            });
+            fireEvent.click(getByTestId('btnAdminToggleDrawerVisibility'));
 
-            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
-            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).toBeVisible();
+            expect(getByTestId('btnAdminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+            expect(getByTestId('btnAdminRecordDrawerCloseBtnMobile')).toBeVisible();
         });
 
         it('should render data in both admin drawers', () => {
