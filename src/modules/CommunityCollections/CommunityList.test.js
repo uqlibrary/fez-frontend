@@ -8,7 +8,8 @@ import {
     WithRouter,
     waitFor,
     waitForElementToBeRemoved,
-    createMatchMedia, within,
+    createMatchMedia,
+    within,
 } from 'test-utils';
 
 import * as mockData from 'mock/data';
