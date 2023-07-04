@@ -161,7 +161,11 @@ export const viewJournalConfig = {
                     ],
                     template: 'MultiLinkTemplate',
                     templateProps: {
-                        href: item => globalLocale.global.ulrichsLink.externalUrl.replace('[id]', item.ulr_title_id),
+                        href: item =>
+                            globalLocale.global.ulrichsLink.externalUrl.replace(
+                                '[id]',
+                                encodeURIComponent(item.ulr_title_id),
+                            ),
                         text: item => item.ulr_title,
                         title: 'View Ulrichs details in a new tab',
                     },
@@ -358,7 +362,7 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
+                        href: () => 'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
                         text: () => 'Go to JCR website',
                         title: 'Open JCR website in a new tab',
                     },
@@ -480,7 +484,7 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
+                        href: () => 'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
                         text: () => 'Go to JCR website',
                         title: 'Open JCR website in a new tab',
                     },
@@ -583,7 +587,8 @@ export const viewJournalConfig = {
                     ],
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: item => `https://www-scopus-com.ezproxy.library.uq.edu.au/sourceid/${item}`,
+                        href: item =>
+                            `https://go.openathens.net/redirector/uq.edu.au?url=https://www.scopus.com/sourceid/${item}`,
                         title: 'Open CiteScore record in a new tab',
                         text: () => 'Go to record in CiteScore',
                     },

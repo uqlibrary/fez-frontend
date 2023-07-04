@@ -64,7 +64,7 @@ const trendingPubsPayload = [
                 created: '1506802198',
                 last_checked: '1506802198',
                 citation_url:
-                    'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000393077300011&SrcAuth=uqueensland',
+                    'https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000393077300011&SrcAuth=uqueensland',
                 rek_pid: 'UQ:396321',
                 rek_date: '2016-07-04 00:00:00',
                 title: 'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer',
@@ -77,7 +77,7 @@ const trendingPubsPayload = [
                 created: '1506799026',
                 last_checked: '1506799026',
                 citation_url:
-                    'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000347707800001&SrcAuth=uqueensland',
+                    'https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000347707800001&SrcAuth=uqueensland',
                 rek_pid: 'UQ:348436',
                 rek_date: '2015-01-08 00:00:00',
                 title:
@@ -92,7 +92,7 @@ const trendingPubsPayload = [
                 created: '1506798769',
                 last_checked: '1506798769',
                 citation_url:
-                    'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000342985700003&SrcAuth=uqueensland',
+                    'https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000342985700003&SrcAuth=uqueensland',
                 rek_pid: 'UQ:345184',
                 rek_date: '2014-09-01 00:00:00',
                 title: 'Evidence that breast cancer risk at the 2q35 locus is mediated through IGFBP5 regulation',
@@ -110,7 +110,7 @@ const trendingPubsPayload = [
                 created: '1506800059',
                 last_checked: '1506800059',
                 citation_url:
-                    'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=2-s2.0-84962771937&src=s&sot=cite&sdt=a',
+                    'https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=2-s2.0-84962771937&src=s&sot=cite&sdt=a',
                 rek_pid: 'UQ:384236',
                 rek_date: '2016-04-04 00:00:00',
                 title:
@@ -125,7 +125,7 @@ const trendingPubsPayload = [
                 created: '1506797607',
                 last_checked: '1506797607',
                 citation_url:
-                    'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=2-s2.0-84930766350&src=s&sot=cite&sdt=a',
+                    'https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=2-s2.0-84930766350&src=s&sot=cite&sdt=a',
                 rek_pid: 'UQ:328887',
                 rek_date: '2013-01-01 00:00:00',
                 title:
@@ -141,7 +141,7 @@ const trendingPubsPayload = [
                 created: '1506795654',
                 last_checked: '1506795654',
                 citation_url:
-                    'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=2-s2.0-84867485246&src=s&sot=cite&sdt=a',
+                    'https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=2-s2.0-84867485246&src=s&sot=cite&sdt=a',
                 rek_pid: 'UQ:286101',
                 rek_date: '2012-01-01 00:00:00',
                 title: 'A guide for functional analysis of BRCA1 variants of uncertain significance',

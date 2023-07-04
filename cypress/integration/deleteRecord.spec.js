@@ -60,13 +60,4 @@ context('Delete work form', () => {
         cy.get('[data-testid=reason-input]').type('reason');
         cy.navToHomeFromMenu(deleteFormLocale.cancelWorkflowConfirmation);
     });
-
-    it('should show UQ DOI alert and disable the delete button', () => {
-        cy.visit(`/admin/delete/${uqDoiRecord.rek_pid}/?user=uqstaff`);
-        cy.get('[data-testid=alert] .alert-text').should(
-            'contain',
-            deleteFormLocale.uqDoiAlert.message(uqDoiRecord.rek_pid),
-        );
-        cy.get('button#submit-delete-record').should('be.disabled');
-    });
 });

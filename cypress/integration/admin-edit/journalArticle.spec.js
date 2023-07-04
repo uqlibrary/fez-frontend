@@ -156,7 +156,8 @@ context('Journal Article admin edit', () => {
                                         .should(
                                             'have.attr',
                                             'href',
-                                            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/' +
+                                            'https://go.openathens.net/redirector/uq.edu.au?url=' +
+                                                encodeURIComponent('https://ulrichsweb.serialssolutions.com/title/') +
                                                 ulrichsId[index],
                                         );
                                 });
