@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, WithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 
 import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
@@ -8,7 +8,7 @@ import locale from 'locale/components';
 import deparam from 'can-deparam';
 
 import JournalSearchResult, { getSearchResultSortingParams } from './JournalSearchResult';
-import { mockDataEmpty, mockData } from '../../../mock/data/testing/journals/journalSearchResults';
+import { mockDataEmpty, mockData } from 'mock/data/testing/journals/journalSearchResults';
 
 const setup = ({
     state = {},
@@ -153,7 +153,7 @@ describe('Search Journals Results component', () => {
         });
 
         expect(getByText('Loading journals list')).toBeInTheDocument();
-        expect(queryByTestId('sortBy')).not.toBeInTheDocument();
+        expect(queryByTestId('publication-list-sorting-sort-by')).not.toBeInTheDocument();
     });
     it('should show an error message when a loading error occurs', () => {
         const testQueryPart =
@@ -216,7 +216,7 @@ describe('Search Journals Results component', () => {
         expect(pageSize).toEqual(50);
     });
 
-    it('should update the URL when the Journal comparsion button is clicked', () => {
+    it('should update the URL when the Journal comparison button is clicked', () => {
         const testQueryPart =
             'keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology';
         const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
@@ -230,7 +230,7 @@ describe('Search Journals Results component', () => {
         });
         const journalsList = mockData;
 
-        const { queryByTestId } = setup({
+        const { queryByTestId, getByRole } = setup({
             state: { journalsListLoaded: true, journalsList },
             testHistory,
         });
@@ -239,19 +239,15 @@ describe('Search Journals Results component', () => {
         expect(queryByTestId('journal-comparison-button')).toBeDisabled();
 
         // should be at least two journals to select for comparison
-        expect(queryByTestId('journal-list-data-col-1-checkbox-0')).toBeInTheDocument();
-        expect(queryByTestId('journal-list-data-col-1-checkbox-1')).toBeInTheDocument();
+        expect(getByRole('checkbox', { name: 'Select International Journal of Astrobiology' })).toBeInTheDocument();
+        expect(getByRole('checkbox', { name: 'Select Astrobiology' })).toBeInTheDocument();
 
-        act(() => {
-            fireEvent.click(queryByTestId('journal-list-data-col-1-checkbox-0'));
-            fireEvent.click(queryByTestId('journal-list-data-col-1-checkbox-1'));
-        });
+        fireEvent.click(getByRole('checkbox', { name: 'Select International Journal of Astrobiology' }));
+        fireEvent.click(getByRole('checkbox', { name: 'Select Astrobiology' }));
 
         expect(queryByTestId('journal-comparison-button')).not.toBeDisabled();
 
-        act(() => {
-            fireEvent.click(queryByTestId('journal-comparison-button'));
-        });
+        fireEvent.click(queryByTestId('journal-comparison-button'));
 
         // compare button should update the URL path
         expect(testHistory.location.pathname).toEqual(pathConfig.journals.compare);
@@ -277,9 +273,7 @@ describe('Search Journals Results component', () => {
             testHistory,
         });
 
-        act(() => {
-            fireEvent.mouseDown(getAllByRole('button', { id: 'sortBy' })[0]);
-        });
+        fireEvent.mouseDown(getAllByRole('button', { id: 'sortBy' })[0]);
 
         const listItem = getByRole('listbox');
 

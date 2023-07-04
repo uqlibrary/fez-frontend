@@ -105,6 +105,9 @@ export const AutoCompleteSelectField = ({
                         id: `${autoCompleteSelectFieldId}-input`,
                         'data-testid': `${autoCompleteSelectFieldId}-input`,
                     }}
+                    InputLabelProps={{
+                        'data-testid': `${autoCompleteSelectFieldId}-label`,
+                    }}
                 />
             )}
             ListboxProps={{

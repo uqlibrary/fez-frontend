@@ -969,7 +969,7 @@ describe('SearchComponent', () => {
         invalidPIDs.forEach(invalidInput => {
             fireEvent.change(getByTestId('rek-pid-input'), { target: { value: '' } });
             fireEvent.change(getByTestId('rek-pid-input'), { target: { value: invalidInput } });
-            expect(getByTestId('rek-pid-helper-text')).toHaveTextContent('Please provide a valid PID (e.g. UQ:129af6)');
+            expect(getByText('Please provide a valid PID (e.g. UQ:129af6)')).toBeInTheDocument();
             expect(getByTestId('advanced-search')).toHaveAttribute('disabled');
         });
 

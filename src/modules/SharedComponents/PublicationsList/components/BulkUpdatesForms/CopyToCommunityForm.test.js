@@ -50,11 +50,10 @@ describe('CopyToCommunityForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText, queryByText } = setup();
 
         // assert initial state of the form
-        expect(getByTestId('rek-ismemberof-helper-text')).toBeInTheDocument();
-        expect(getByTestId('rek-ismemberof-helper-text')).toHaveTextContent('This field is required');
+        expect(getByText('This field is required')).toBeInTheDocument();
         expect(getByTestId('copy-to-community-submit')).toHaveAttribute('disabled');
 
         // interact with the form
@@ -63,7 +62,7 @@ describe('CopyToCommunityForm', () => {
         fireEvent.click(getByText('Testing community'));
 
         // assert next state of the form
-        expect(queryByTestId('rek-ismemberof-helper-text')).not.toBeInTheDocument();
+        expect(queryByText('This field is required')).not.toBeInTheDocument();
         expect(getByTestId('copy-to-community-submit')).not.toHaveAttribute('disabled');
 
         // submit form
@@ -88,11 +87,10 @@ describe('CopyToCommunityForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText, queryByText } = setup();
 
         // assert initial state of the form
-        expect(getByTestId('rek-ismemberof-helper-text')).toBeInTheDocument();
-        expect(getByTestId('rek-ismemberof-helper-text')).toHaveTextContent('This field is required');
+        expect(getByText('This field is required')).toBeInTheDocument();
         expect(getByTestId('copy-to-community-submit')).toHaveAttribute('disabled');
 
         // interact with the form
@@ -101,7 +99,7 @@ describe('CopyToCommunityForm', () => {
         fireEvent.click(getByText('Testing community'));
 
         // assert next state of the form
-        expect(queryByTestId('rek-ismemberof-helper-text')).not.toBeInTheDocument();
+        expect(queryByText('This field is required')).not.toBeInTheDocument();
         expect(getByTestId('copy-to-community-submit')).not.toHaveAttribute('disabled');
 
         // submit form
@@ -126,11 +124,10 @@ describe('CopyToCommunityForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText, queryByTestId } = setup({ isRemoveFrom: true });
+        const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
 
         // assert initial state of the form
-        expect(getByTestId('rek-ismemberof-helper-text')).toBeInTheDocument();
-        expect(getByTestId('rek-ismemberof-helper-text')).toHaveTextContent('This field is required');
+        expect(getByText('This field is required')).toBeInTheDocument();
         expect(getByTestId('remove-from-community-submit')).toHaveAttribute('disabled');
 
         // interact with the form
@@ -139,7 +136,7 @@ describe('CopyToCommunityForm', () => {
         fireEvent.click(getByText('Testing community'));
 
         // assert next state of the form
-        expect(queryByTestId('rek-ismemberof-helper-text')).not.toBeInTheDocument();
+        expect(queryByText('This field is required')).not.toBeInTheDocument();
         expect(getByTestId('remove-from-community-submit')).not.toHaveAttribute('disabled');
 
         // submit form
@@ -164,11 +161,10 @@ describe('CopyToCommunityForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText, queryByTestId } = setup({ isRemoveFrom: true });
+        const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
 
         // assert initial state of the form
-        expect(getByTestId('rek-ismemberof-helper-text')).toBeInTheDocument();
-        expect(getByTestId('rek-ismemberof-helper-text')).toHaveTextContent('This field is required');
+        expect(getByText('This field is required')).toBeInTheDocument();
         expect(getByTestId('remove-from-community-submit')).toHaveAttribute('disabled');
 
         // interact with the form
@@ -177,7 +173,7 @@ describe('CopyToCommunityForm', () => {
         fireEvent.click(getByText('Testing community'));
 
         // assert next state of the form
-        expect(queryByTestId('rek-ismemberof-helper-text')).not.toBeInTheDocument();
+        expect(queryByText('This field is required')).not.toBeInTheDocument();
         expect(getByTestId('remove-from-community-submit')).not.toHaveAttribute('disabled');
 
         // submit form

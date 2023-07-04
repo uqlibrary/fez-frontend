@@ -33,7 +33,9 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
         <React.Fragment>
             <InputBase
                 id={columnDataId}
-                data-testid={columnDataId}
+                inputProps={{
+                    'data-testid': columnDataId,
+                }}
                 className={classes.columnData}
                 value={!!data ? data : ''}
                 readOnly

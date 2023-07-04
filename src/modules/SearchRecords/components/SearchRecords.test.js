@@ -1,12 +1,11 @@
 import React from 'react';
 import { default as SearchRecords, normaliseDisplayLookup } from './SearchRecords';
 import { pathConfig } from 'config';
-import { act, fireEvent, WithReduxStore, createMatchMedia } from 'test-utils';
+import { act, fireEvent, renderWithRouter, WithReduxStore, createMatchMedia } from 'test-utils';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
 import { EXPORT_FORMAT_TO_EXTENSION, COLLECTION_VIEW_TYPE } from 'config/general';
 import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
-import { renderWithRouter } from '../../../../utils/test-utils';
 import { queryParamsDefaults } from '../hooks';
 import param from 'can-param';
 
@@ -115,9 +114,7 @@ const assertQueryString = (history, params) => {
 
 const doSimpleSearch = (getByTestId, api, history, params) => {
     fireEvent.change(getByTestId('simple-search-input'), { target: { value: params.searchQueryParams.all } });
-    act(() => {
-        fireEvent.click(getByTestId('simple-search-button'));
-    });
+    fireEvent.click(getByTestId('simple-search-button'));
     assertQueryString(history, params);
     expect(api).toHaveBeenLastCalledWith(params);
 };
@@ -171,9 +168,10 @@ describe('SearchRecords page', () => {
 
     it('should render advanced search component', () => {
         const { getByTestId, getByText } = setup({ isAdvancedSearch: true });
-        expect(getByTestId('advancedSearchForm')).toBeInTheDocument();
+        expect(getByTestId('advanced-search-form')).toBeInTheDocument();
         expect(getByText('Advanced search')).toBeInTheDocument();
-        expect(getByTestId('minimize-advanced-search')).toBeInTheDocument();
+        expect(getByTestId('KeyboardArrowUpIcon')).toBeInTheDocument();
+        // expect(getByTestId('minimize-advanced-search')).toBeInTheDocument();
         expect(getByText('Select a field')).toBeInTheDocument();
         expect(getByText('Please select a field to search')).toBeInTheDocument();
     });
@@ -254,7 +252,7 @@ describe('SearchRecords page', () => {
         const testPushFn = jest.spyOn(historyMock, 'push');
         const testAction = jest.fn();
 
-        const { getByTestId, getAllByRole } = setup({
+        const { getByRole, getAllByRole } = setup({
             ...props,
             actions: {
                 searchEspacePublications: testAction,
@@ -262,13 +260,9 @@ describe('SearchRecords page', () => {
             history: historyMock,
         });
 
-        act(() => {
-            fireEvent.mouseDown(getByTestId('pageSize'));
-        });
+        fireEvent.mouseDown(getByRole('button', { name: '20' }));
         expect(getAllByRole('option').length).toBe(4);
-        act(() => {
-            fireEvent.click(getAllByRole('option')[2]);
-        });
+        fireEvent.click(getAllByRole('option')[2]);
 
         expect(testAction).toHaveBeenCalled();
         expect(testPushFn).toHaveBeenCalledWith({
@@ -290,9 +284,7 @@ describe('SearchRecords page', () => {
             history: historyMock,
         });
 
-        act(() => {
-            fireEvent.click(getByTestId('search-records-paging-top-select-page-2'));
-        });
+        fireEvent.click(getByTestId('search-records-paging-top-select-page-2'));
 
         expect(testAction).toHaveBeenCalled();
         expect(testPushFn).toHaveBeenCalledWith({
@@ -306,7 +298,7 @@ describe('SearchRecords page', () => {
         const testPushFn = jest.spyOn(historyMock, 'push');
         const testAction = jest.fn();
 
-        const { getByTestId, getAllByRole } = setup({
+        const { getByRole, getAllByRole } = setup({
             ...props,
             actions: {
                 searchEspacePublications: testAction,
@@ -314,13 +306,9 @@ describe('SearchRecords page', () => {
             history: historyMock,
         });
 
-        act(() => {
-            fireEvent.mouseDown(getByTestId('sortOrder'));
-        });
+        fireEvent.mouseDown(getByRole('button', { name: 'Desc' }));
         expect(getAllByRole('option').length).toBe(2);
-        act(() => {
-            fireEvent.click(getAllByRole('option')[1]);
-        });
+        fireEvent.click(getAllByRole('option')[1]);
 
         expect(testAction).toHaveBeenCalled();
         expect(testPushFn).toHaveBeenCalledWith({
@@ -338,16 +326,12 @@ describe('SearchRecords page', () => {
             },
         });
 
-        act(() => {
-            fireEvent.click(getByTestId('show-advanced-search'));
-        });
+        fireEvent.click(getByTestId('show-advanced-search'));
 
         fireEvent.change(getByTestId('from'), { target: { value: '2015' } });
         fireEvent.change(getByTestId('to'), { target: { value: '2018' } });
 
-        act(() => {
-            fireEvent.click(getByTestId('advanced-search'));
-        });
+        fireEvent.click(getByTestId('advanced-search'));
 
         expect(testAction).toHaveBeenNthCalledWith(1, {
             ...searchQuery,
@@ -370,28 +354,19 @@ describe('SearchRecords page', () => {
         const { getByTestId, getAllByRole } = setup(props);
 
         // Do one advanced search
-        act(() => {
-            fireEvent.click(getByTestId('show-advanced-search'));
-        });
-        act(() => {
-            fireEvent.click(getByTestId('advanced-search'));
-        });
+        fireEvent.click(getByTestId('show-advanced-search'));
+        fireEvent.click(getByTestId('advanced-search'));
 
         expect(getByTestId('facets-filter')).toHaveTextContent('Author');
 
         // Do another advanced search
-        act(() => {
-            fireEvent.mouseDown(getByTestId('field-type-select'));
-        });
+        fireEvent.mouseDown(getByTestId('field-type-select'));
         expect(getAllByRole('option').length).toBe(18);
         expect(getAllByRole('option')[5]).toHaveTextContent('Author Name');
-        act(() => {
-            fireEvent.click(getAllByRole('option')[5]);
-        });
+
+        fireEvent.click(getAllByRole('option')[5]);
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        act(() => {
-            fireEvent.click(getByTestId('advanced-search'));
-        });
+        fireEvent.click(getByTestId('advanced-search'));
 
         expect(getByTestId('facets-filter')).not.toHaveTextContent('Author');
     });
@@ -410,12 +385,8 @@ describe('SearchRecords page', () => {
             history: historyMock,
         });
 
-        act(() => {
-            fireEvent.click(getByTestId('clickable-facet-category-author'));
-        });
-        act(() => {
-            fireEvent.click(getByText('Martin, Sally (68)'));
-        });
+        fireEvent.click(getByTestId('clickable-facet-category-author'));
+        fireEvent.click(getByText('Martin, Sally (68)'));
 
         expect(testAction).toHaveBeenCalled();
         expect(testPushFn).toHaveBeenCalledWith({
@@ -438,9 +409,7 @@ describe('SearchRecords page', () => {
             history: historyMock,
         });
 
-        act(() => {
-            fireEvent.click(getByText('Title 01'));
-        });
+        fireEvent.click(getByText('Title 01'));
 
         // this is the initial call when the component loads,
         // without bug fix in #182603156 the "toHaveBeenCalledTimes" value here would be 2
@@ -454,7 +423,7 @@ describe('SearchRecords page', () => {
         const historyMock = createMemoryHistory();
         const testPushFn = jest.spyOn(historyMock, 'push');
 
-        const { getByTestId, getAllByRole } = setup({
+        const { getByRole, getAllByRole } = setup({
             history: historyMock,
             location: {
                 pathname: pathConfig.admin.unpublished,
@@ -470,13 +439,9 @@ describe('SearchRecords page', () => {
             },
         });
 
-        act(() => {
-            fireEvent.mouseDown(getByTestId('pageSize'));
-        });
+        fireEvent.mouseDown(getByRole('button', { name: '20' }));
         expect(getAllByRole('option').length).toBe(4);
-        act(() => {
-            fireEvent.click(getAllByRole('option')[2]);
-        });
+        fireEvent.click(getAllByRole('option')[2]);
 
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: pathConfig.admin.unpublished,
@@ -554,15 +519,11 @@ describe('SearchRecords page', () => {
             searchQuery,
         };
 
-        const { getAllByRole, getByTestId, rerender } = setup(testProps);
-        act(() => {
-            fireEvent.mouseDown(getByTestId('pageSize'));
-        });
+        const { getByRole, getAllByRole, rerender } = setup(testProps);
+        fireEvent.mouseDown(getByRole('button', { name: '20' }));
         expect(getAllByRole('option').length).toBe(4);
         const pageSizeOptionElement = getAllByRole('option')[2];
-        act(() => {
-            fireEvent.click(pageSizeOptionElement);
-        });
+        fireEvent.click(pageSizeOptionElement);
 
         setup(
             {
@@ -573,13 +534,10 @@ describe('SearchRecords page', () => {
             },
             rerender,
         );
-        act(() => {
-            fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
-        });
+
+        fireEvent.mouseDown(getByRole('button', { name: 'Please select' }));
         expect(getAllByRole('option').length).toBe(3);
-        act(() => {
-            fireEvent.click(getAllByRole('option')[1]);
-        });
+        fireEvent.click(getAllByRole('option')[1]);
 
         expect(testExportAction).toHaveBeenCalledWith({
             ...searchQuery,
@@ -701,9 +659,7 @@ describe('SearchRecords page', () => {
         });
 
         // select page 2
-        act(() => {
-            fireEvent.click(getByTestId('search-records-paging-top-select-page-2'));
-        });
+        fireEvent.click(getByTestId('search-records-paging-top-select-page-2'));
         assertQueryString(historyMock, getParams(2));
         expect(apiMock).toHaveBeenLastCalledWith(getParams(2));
 
@@ -742,16 +698,14 @@ describe('SearchRecords page', () => {
             initialEntries,
         });
         historyMock.push(initialEntries[0]);
-        const { getByTestId, getAllByRole } = setup({
+        const { getByRole, getAllByRole } = setup({
             ...props, // this props pretends there is a bunch of search results
             history: historyMock,
             actions: { searchEspacePublications: apiMock },
         });
 
         // change pageSize
-        act(() => {
-            fireEvent.mouseDown(getByTestId('pageSize'));
-        });
+        fireEvent.mouseDown(getByRole('button', { name: '20' }));
         expect(getAllByRole('option').length).toBe(4);
         act(() => {
             fireEvent.click(getAllByRole('option')[2]);
@@ -795,16 +749,14 @@ describe('SearchRecords page', () => {
             initialEntries,
         });
         historyMock.push(initialEntries[0]);
-        const { getByTestId, getAllByRole } = setup({
+        const { getByRole, getAllByRole } = setup({
             ...props, // this props pretends there is a bunch of search results
             history: historyMock,
             actions: { searchEspacePublications: apiMock },
         });
 
         // change sort direction
-        act(() => {
-            fireEvent.mouseDown(getByTestId('sortOrder'));
-        });
+        fireEvent.mouseDown(getByRole('button', { name: 'Desc' }));
         expect(getAllByRole('option').length).toBe(2);
         act(() => {
             fireEvent.click(getAllByRole('option')[1]);
@@ -848,16 +800,14 @@ describe('SearchRecords page', () => {
             initialEntries,
         });
         historyMock.push(initialEntries[0]);
-        const { getByTestId, getAllByRole } = setup({
+        const { getByRole, getAllByRole } = setup({
             ...props, // this props pretends there is a bunch of search results
             history: historyMock,
             actions: { searchEspacePublications: apiMock },
         });
 
         // change sort
-        act(() => {
-            fireEvent.mouseDown(getByTestId('sortBy'));
-        });
+        fireEvent.mouseDown(getByRole('button', { name: 'Search relevance' }));
         expect(getAllByRole('option').length).toBe(8);
         act(() => {
             fireEvent.click(getAllByRole('option')[2]);
@@ -911,12 +861,8 @@ describe('SearchRecords page', () => {
         });
 
         // face filter it
-        act(() => {
-            fireEvent.click(getByTestId('clickable-facet-category-author'));
-        });
-        act(() => {
-            fireEvent.click(getByText('Martin, Sally (68)'));
-        });
+        fireEvent.click(getByTestId('clickable-facet-category-author'));
+        fireEvent.click(getByText('Martin, Sally (68)'));
         const newValue = {
             showOpenAccessOnly: false,
             filters: {
@@ -975,16 +921,14 @@ describe('SearchRecords page', () => {
                 initialEntries,
             });
             historyMock.push(initialEntries[0]);
-            const { getByTestId, getAllByRole } = setup({
+            const { getByRole, getAllByRole } = setup({
                 ...props, // this props pretends there is a bunch of search results
                 history: historyMock,
                 actions: { searchEspacePublications: apiMock },
             });
 
             // change display type
-            act(() => {
-                fireEvent.mouseDown(getByTestId('displayRecordsAs'));
-            });
+            fireEvent.mouseDown(getByRole('button', { name: 'Auto' }));
             expect(getAllByRole('option').length).toBe(3);
             act(() => {
                 fireEvent.click(getAllByRole('option')[1]);
@@ -1146,6 +1090,7 @@ describe('SearchRecords page', () => {
             expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
             expect(getByTestId('image-gallery')).toBeInTheDocument();
         });
+
         it("should should maintain user's display choice even if querystring contains displayRecordsAs parameter", () => {
             const getParams = ({ displayRecordsAs = 'image-gallery', ...params } = {}) => {
                 return {
@@ -1173,7 +1118,7 @@ describe('SearchRecords page', () => {
                 historyEntries,
             });
             historyMock.push(historyEntries[0]);
-            const { getByTestId, queryByTestId, getAllByRole } = setup({
+            const { getByTestId, queryByTestId, getByRole, getAllByRole } = setup({
                 ...props, // this props pretends there is a bunch of search results
                 location: {
                     ...historyEntries[0],
@@ -1183,12 +1128,9 @@ describe('SearchRecords page', () => {
 
             expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
             expect(getByTestId('image-gallery')).toBeInTheDocument();
-            expect(getByTestId('displayRecordsAs').textContent).toEqual('Image Gallery');
-
+            expect(getByTestId('publication-list-display-records-as').textContent).toEqual('Image Gallery');
             // change display type
-            act(() => {
-                fireEvent.mouseDown(getByTestId('displayRecordsAs'));
-            });
+            fireEvent.mouseDown(getByRole('button', { name: 'Image Gallery' }));
             expect(getAllByRole('option').length).toBe(3);
             act(() => {
                 fireEvent.click(getAllByRole('option')[1]);
@@ -1202,7 +1144,8 @@ describe('SearchRecords page', () => {
             act(() => {
                 historyMock.push(historyEntries[1]);
             });
-            expect(getByTestId('displayRecordsAs').textContent).toEqual('Standard');
+
+            expect(getByTestId('publication-list-display-records-as').textContent).toEqual('Standard');
         });
     });
 });

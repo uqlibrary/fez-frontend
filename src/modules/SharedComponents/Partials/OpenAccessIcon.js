@@ -58,7 +58,12 @@ export class OpenAccessIcon extends PureComponent {
             return (
                 <Fragment>
                     <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
-                        <span className="fez-icon openAccess large" role="img" aria-label={openAccessTitle} />
+                        <span
+                            className="fez-icon openAccess large"
+                            role="img"
+                            aria-label={openAccessTitle}
+                            data-testid="open-access"
+                        />
                     </Tooltip>
                 </Fragment>
             );
@@ -79,13 +84,14 @@ export class OpenAccessIcon extends PureComponent {
                                 className="fez-icon openAccessEmbargoed large"
                                 role="img"
                                 aria-label={openAccessTitle}
+                                data-testid="open-access-embargoed"
                             />
                         </Tooltip>
                     </Badge>
                 </Fragment>
             );
         }
-        return <span className="noOaIcon" />;
+        return <span className="noOaIcon" data-testid="no-oa-icon" />;
     }
 }
 

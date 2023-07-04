@@ -14,12 +14,12 @@ function setup(testProps = {}) {
 describe('ExternalLink test ', () => {
     it('should render component with open-in-new window icon class', () => {
         const { getByTestId } = setup({ href: 'www.google.com', text: 'Google' });
-        expect(getByTestId('test-link-new-window-icon')).toBeInTheDocument();
+        expect(getByTestId('OpenInNewIcon')).toBeInTheDocument();
     });
 
     it('should render component without open-in-new window icon', () => {
         const { queryAllByTestId } = setup({ href: 'www.google.com', text: 'Google', openInNewIcon: false });
-        expect(queryAllByTestId('test-link-new-window-icon').length).toBe(0);
+        expect(queryAllByTestId('OpenInNewIcon').length).toBe(0);
     });
 
     it('should render component without open-in-new window icon and open in a new sized window', () => {

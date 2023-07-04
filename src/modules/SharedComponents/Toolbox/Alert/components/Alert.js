@@ -323,7 +323,13 @@ export const Alert = ({
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
                             {showLoader ? (
-                                <CircularProgress id="spinner" className="spinner" size={38} thickness={3} />
+                                <CircularProgress
+                                    id="spinner"
+                                    data-testid="spinner"
+                                    className="spinner"
+                                    size={38}
+                                    thickness={3}
+                                />
                             ) : (
                                 renderIcon(type)
                             )}

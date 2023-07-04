@@ -36,7 +36,7 @@ describe('CreateOrUpdateDoiForm', () => {
     it('should not show collection warning when no collections are selected', async () => {
         const { getByTestId } = setup();
         expect(() => getByTestId('collection-alert-warning-create-or-update-doi')).toThrow(
-            'Unable to find an element by: [id="collection-alert-warning-create-or-update-doi"]',
+            'Unable to find an element by: [data-testid="collection-alert-warning-create-or-update-doi"]',
         );
     });
 

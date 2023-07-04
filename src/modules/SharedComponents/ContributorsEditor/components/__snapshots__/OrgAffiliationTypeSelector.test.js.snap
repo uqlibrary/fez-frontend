@@ -7,6 +7,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
   variant="standard"
 >
   <ForwardRef(InputLabel)
+    data-testid="org-affiliation-label"
     id="org-affiliation-label"
   >
     Org affiliation
@@ -60,6 +61,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
   variant="standard"
 >
   <ForwardRef(InputLabel)
+    data-testid="org-affiliation-label"
     id="org-affiliation-label"
   >
     Org affiliation
@@ -113,6 +115,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
   variant="standard"
 >
   <ForwardRef(InputLabel)
+    data-testid="org-affiliation-label"
     id="org-affiliation-label"
   >
     Org affiliation

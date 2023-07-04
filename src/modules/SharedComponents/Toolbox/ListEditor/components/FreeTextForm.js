@@ -84,9 +84,9 @@ export const FreeTextForm = ({
                     variant="standard"
                     fullWidth
                     id={`${listEditorId}-input`}
-                    data-testid={`${listEditorId}-input`}
                     inputProps={{
                         ref: textField,
+                        'data-testid': `${listEditorId}-input`,
                     }}
                     label={inputFieldLabel}
                     placeholder={inputFieldHint}

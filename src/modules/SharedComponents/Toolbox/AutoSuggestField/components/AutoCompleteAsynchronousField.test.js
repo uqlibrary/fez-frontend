@@ -1,6 +1,6 @@
 import React from 'react';
 import AutoCompleteAsynchronousField from './AutoCompleteAsynchronousField';
-import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
+import { rtlRender, fireEvent, waitFor } from 'test-utils';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -41,9 +41,7 @@ describe('AutoCompleteAsynchronousField component', () => {
             loadSuggestions: loadSuggestionsFn,
         });
 
-        act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'apple' } });
-        });
+        fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'apple' } });
 
         expect(loadSuggestionsFn).toHaveBeenCalledWith('apple');
     });
@@ -53,14 +51,12 @@ describe('AutoCompleteAsynchronousField component', () => {
 
         const onChangeFn = jest.fn();
 
-        const { getByTestId, getByRole, rerender } = setup({
+        const { getByTestId, getByRole, getAllByRole, rerender } = setup({
             loadSuggestions: loadSuggestionsFn,
             onChange: onChangeFn,
         });
 
-        act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'ap' } });
-        });
+        fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'ap' } });
 
         setup({ itemsLoading: true, onChange: onChangeFn }, rerender);
 
@@ -69,9 +65,9 @@ describe('AutoCompleteAsynchronousField component', () => {
         setup({ itemsList: ['apple', 'orange', 'banana', 'pineapple', 'pear'], onChange: onChangeFn }, rerender);
 
         const suggestions = await waitFor(() => getByRole('presentation'));
-        act(() => {
-            fireEvent.click(getByTestId('autocomplete-asynchronous-field-option-0', suggestions));
-        });
+        const options = getAllByRole('option', suggestions);
+        expect(options[0]).toHaveTextContent('apple');
+        fireEvent.click(options[0]);
 
         expect(onChangeFn).toHaveBeenCalledWith('apple');
     });
@@ -84,15 +80,11 @@ describe('AutoCompleteAsynchronousField component', () => {
             onChange: onChangeFn,
         });
 
-        act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
-        });
+        fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
 
         setup({ itemsList: [], onChange: onChangeFn }, rerender);
 
-        act(() => {
-            fireEvent.keyDown(getByTestId('autocomplete-asynchronous-field-input'), { key: 'Enter', code: 13 });
-        });
+        fireEvent.keyDown(getByTestId('autocomplete-asynchronous-field-input'), { key: 'Enter', code: 13 });
 
         expect(onChangeFn).toHaveBeenCalledWith({ value: 'cherry' });
     });
@@ -104,14 +96,10 @@ describe('AutoCompleteAsynchronousField component', () => {
             onClear: onClearFn,
         });
 
-        act(() => {
-            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
-        });
+        fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
+        fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
 
-        act(() => {
-            fireEvent.click(getByTitle('Clear'));
-        });
+        fireEvent.click(getByTitle('Clear'));
         expect(onClearFn).toBeCalled();
     });
 
@@ -121,28 +109,22 @@ describe('AutoCompleteAsynchronousField component', () => {
             onClear: onClearFn,
         });
 
-        act(() => {
-            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
-        });
+        fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
+        fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
 
-        act(() => {
-            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
-        });
+        fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
+        fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
 
         expect(onClearFn).not.toBeCalled();
     });
 
     it('should render given option template for options', async () => {
         // eslint-disable-next-line react/prop-types
-        const OptionTemplate = ({ option }) => <div id="option-template">{option}</div>;
+        const OptionTemplate = ({ option }) => <div data-testid="option-template">{option}</div>;
 
         const { getByTestId, getByRole, getAllByTestId, rerender } = setup({});
 
-        act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'ap' } });
-        });
+        fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'ap' } });
 
         setup({ itemsLoading: true }, rerender);
 
@@ -170,15 +152,11 @@ describe('AutoCompleteAsynchronousField component', () => {
             onClear: onClearFn,
         });
 
-        act(() => {
-            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
-        });
+        fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
+        fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
 
-        act(() => {
-            fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
-        });
+        fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
+        fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
 
         expect(onClearFn).toBeCalled();
     });

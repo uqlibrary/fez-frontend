@@ -61,8 +61,8 @@ describe('ListRow renders ', () => {
         expect(getByTestId('test-list-row-0-delete')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('test-list-row-0-delete'));
-        await waitFor(() => getByTestId('confirm-action'));
-        fireEvent.click(getByTestId('confirm-action'));
+        await waitFor(() => getByTestId('confirm-test-list-row-0-delete'));
+        fireEvent.click(getByTestId('confirm-test-list-row-0-delete'));
         expect(testFunction).toHaveBeenCalled();
     });
 

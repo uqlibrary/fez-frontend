@@ -93,6 +93,7 @@ export const AdminActions = ({
         <React.Fragment>
             <IconButton
                 id="admin-actions-button"
+                data-testid="admin-actions-button"
                 aria-label="More"
                 aria-haspopup="true"
                 onClick={handleClick}
@@ -100,7 +101,13 @@ export const AdminActions = ({
             >
                 <MoreVertIcon fontSize="small" />
             </IconButton>
-            <Menu id="admin-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
+            <Menu
+                id="admin-actions-menu"
+                data-testid="admin-actions-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+            >
                 {menuOptions.map((option, index) => (
                     <MenuItem
                         key={index}

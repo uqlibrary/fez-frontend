@@ -50,7 +50,7 @@ describe('AdvancedSearchRowInput', () => {
 
     it('should render title with given value and display error for max length', () => {
         const onChangeFn = jest.fn();
-        const { getByTestId } = setup({
+        const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'TextField',
                 hint: 'This is hint for text input',
@@ -63,7 +63,6 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const searchField = getByTestId('rek-title-input');
-        const searchFieldError = getByTestId('rek-title-helper-text');
 
         expect(searchField).toHaveAttribute('name', 'search-field-rek-title');
         expect(searchField).toHaveAttribute('aria-invalid', 'true');
@@ -71,8 +70,7 @@ describe('AdvancedSearchRowInput', () => {
         expect(searchField).toHaveAttribute('value', 'Test');
         expect(searchField.closest('div')).toHaveClass('Mui-error');
 
-        expect(searchFieldError).toHaveTextContent('Must be at least 10 characters');
-        expect(searchFieldError).toHaveClass('Mui-error');
+        expect(getByText('Must be at least 10 characters')).toBeInTheDocument();
 
         fireEvent.change(searchField, { target: { value: 'Testing' } });
 
@@ -123,7 +121,7 @@ describe('AdvancedSearchRowInput', () => {
     });
 
     it('should render author id search field with given value and display error', () => {
-        const { getByTestId } = setup({
+        const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'AuthorIdLookup',
                 hint: 'Add an author id',
@@ -137,7 +135,6 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const searchField = getByTestId('rek-author-id-input');
-        const searchFieldError = getByTestId('rek-author-id-helper-text');
 
         expect(searchField).toHaveAttribute('name', 'search-field-rek-author-id');
         expect(searchField).toHaveAttribute('aria-invalid', 'true');
@@ -145,12 +142,11 @@ describe('AdvancedSearchRowInput', () => {
         expect(searchField).toHaveAttribute('value', '1234567890 (Test user (uqtest))');
         expect(searchField.closest('div')).toHaveClass('Mui-error');
 
-        expect(searchFieldError).toHaveTextContent('Must be 9 characters or less');
-        expect(searchFieldError).toHaveClass('Mui-error');
+        expect(getByText('Must be 9 characters or less')).toBeInTheDocument();
     });
 
     it('should render error text for required rule', () => {
-        const { getByTestId } = setup({
+        const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'ContributorIdLookup',
                 validation: ['required', 'maxLength9'],
@@ -163,19 +159,17 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const searchField = getByTestId('rek-author-id-input');
-        const searchFieldError = getByTestId('rek-author-id-helper-text');
 
         expect(searchField).toHaveAttribute('name', 'search-field-rek-contributor-id');
         expect(searchField).toHaveAttribute('aria-invalid', 'true');
         expect(searchField).toHaveAttribute('placeholder', 'Add an contributor id');
         expect(searchField).toHaveAttribute('value', '');
 
-        expect(searchFieldError).toHaveTextContent('This field is required');
-        expect(searchFieldError).toHaveClass('Mui-error');
+        expect(getByText('This field is required')).toBeInTheDocument();
     });
 
     it('should render correct error message for publisher lookup field', () => {
-        const { getByTestId } = setup({
+        const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'PublisherLookup',
                 validation: ['required'],
@@ -187,15 +181,13 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const searchField = getByTestId('rek-publisher-input');
-        const searchFieldError = getByTestId('rek-publisher-helper-text');
 
         expect(searchField).toHaveAttribute('name', 'search-field-rek-publisher');
         expect(searchField).toHaveAttribute('aria-invalid', 'true');
         expect(searchField).toHaveAttribute('placeholder', 'Add a publisher');
         expect(searchField).toHaveAttribute('value', '');
 
-        expect(searchFieldError).toHaveTextContent('This field is required');
-        expect(searchFieldError).toHaveClass('Mui-error');
+        expect(getByText('This field is required')).toBeInTheDocument();
     });
 
     it('should render correct value for publisher lookup field', () => {
@@ -302,7 +294,7 @@ describe('AdvancedSearchRowInput', () => {
     });
 
     it('should render correct input for collection lookup field', () => {
-        const { getByTestId } = setup({
+        const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'CollectionsLookup',
                 validation: ['requiredList'],
@@ -316,14 +308,11 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const searchField = getByTestId('rek-ismemberof-input');
-        const searchFieldError = getByTestId('rek-ismemberof-helper-text');
 
         expect(searchField).toHaveAttribute('aria-invalid', 'true');
         expect(searchField).toHaveAttribute('placeholder', 'Select multiple collections to search for');
         expect(searchField.closest('div')).toHaveClass('Mui-error');
-
-        expect(searchFieldError).toHaveTextContent('This field is required');
-        expect(searchFieldError).toHaveClass('Mui-error');
+        expect(getByText('This field is required')).toBeInTheDocument();
     });
 
     it('should render correct input for publication status field', () => {

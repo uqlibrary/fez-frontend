@@ -75,6 +75,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -350,6 +351,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -681,6 +683,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -1002,6 +1005,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -1311,6 +1315,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -1625,6 +1630,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -1946,6 +1952,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -2241,6 +2248,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -2513,6 +2521,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -2834,6 +2843,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -3274,6 +3284,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -3561,6 +3572,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -3822,6 +3834,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -4122,6 +4135,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -4374,6 +4388,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -4646,6 +4661,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -4983,6 +4999,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -5325,6 +5342,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -5605,6 +5623,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -5812,6 +5831,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div
@@ -6133,6 +6153,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         </a>
                         <span
                           class="noOaIcon"
+                          data-testid="no-oa-icon"
                         />
                       </div>
                       <div

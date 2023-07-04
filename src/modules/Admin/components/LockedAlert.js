@@ -18,7 +18,7 @@ export const LockedAlert = () => {
 
     // no locked alert for the first editing user
     if (!!selfLocked.current) {
-        return <div id="no-alert" />;
+        return <div data-testid="no-alert" />;
     }
 
     return (

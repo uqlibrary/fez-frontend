@@ -47,7 +47,7 @@ describe('FavouriteSearchList', () => {
             ],
         });
         const listItem = getByTestId('favourite-search-list-item-0');
-        fireEvent.click(getByTestId('favourite-search-list-item-edit', listItem));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit', listItem));
 
         expect(getByTestId('favourite-search-list-edit-item-0')).toBeInTheDocument();
     });
@@ -64,7 +64,7 @@ describe('FavouriteSearchList', () => {
             ],
         });
         const listItem = getByTestId('favourite-search-list-item-0');
-        fireEvent.click(getByTestId('favourite-search-list-item-edit', listItem));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit', listItem));
 
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: '' } });
         expect(getByTestId('fvs-description-helper-text')).toBeInTheDocument();
@@ -83,7 +83,7 @@ describe('FavouriteSearchList', () => {
             ],
         });
         const listItem = getByTestId('favourite-search-list-item-0');
-        fireEvent.click(getByTestId('favourite-search-list-item-edit', listItem));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit', listItem));
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: '' } });
         expect(queryByTestId('fvs-alias-helper-text')).not.toBeInTheDocument();
@@ -124,13 +124,13 @@ describe('FavouriteSearchList', () => {
         expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
         expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
 
-        fireEvent.click(getByTestId('favourite-search-list-item-edit'));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
 
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing-testing' } });
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
 
         // listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
@@ -157,13 +157,13 @@ describe('FavouriteSearchList', () => {
         expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
         expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
 
-        fireEvent.click(getByTestId('favourite-search-list-item-edit'));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
 
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing-testing' } });
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
 
         listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
@@ -173,7 +173,7 @@ describe('FavouriteSearchList', () => {
     });
 
     it('should delete favourite search item', async () => {
-        const { getByTestId, getAllByTestId } = setup({
+        const { getByTestId } = setup({
             list: [
                 {
                     fvs_id: 1,
@@ -194,10 +194,10 @@ describe('FavouriteSearchList', () => {
         const listItem1 = getByTestId('favourite-search-list-item-1');
         expect(listItem1).toBeInTheDocument();
 
-        fireEvent.click(getAllByTestId('favourite-search-list-item-delete')[0]);
+        fireEvent.click(getByTestId('favourite-search-list-item-0-delete'));
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
 
         // const listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));

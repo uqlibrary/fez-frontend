@@ -1,6 +1,6 @@
 import React from 'react';
 import FileUploadRowHeader from './FileUploadRowHeader';
-import { rtlRender, fireEvent, waitFor, createMatchMedia } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, createMatchMedia, within } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -17,29 +17,23 @@ describe('Component FileUploadRowHeader', () => {
     });
 
     it('should render with default setup', () => {
-        const { getByText, getByTestId, queryByText } = setup();
+        const { getByText, queryByText, getByLabelText } = setup();
         expect(getByText('File name')).toBeInTheDocument();
         expect(queryByText('Access conditions')).toBeNull();
         expect(queryByText('Embargo release date')).toBeNull();
-        expect(getByTestId('delete-all-files').parentElement).toHaveAttribute(
-            'aria-label',
-            'Remove all files from the upload queue',
-        );
+        expect(getByLabelText('Remove all files from the upload queue')).toBeInTheDocument();
     });
 
     it('should render with access condition and embargo date column', () => {
-        const { getByText, getByTestId } = setup({ requireOpenAccessStatus: true });
+        const { getByText, getByLabelText } = setup({ requireOpenAccessStatus: true });
         expect(getByText('File name')).toBeInTheDocument();
         expect(getByText('Access conditions')).toBeInTheDocument();
         expect(getByText('Embargo release date')).toBeInTheDocument();
-        expect(getByTestId('delete-all-files').parentElement).toHaveAttribute(
-            'aria-label',
-            'Remove all files from the upload queue',
-        );
+        expect(getByLabelText('Remove all files from the upload queue')).toBeInTheDocument();
     });
 
     it('should render for admins with security policy and embargo date column', () => {
-        const { getByText, queryByText, getByTestId } = setup({
+        const { getByText, queryByText, getByLabelText } = setup({
             requireOpenAccessStatus: true,
             isAdmin: true,
         });
@@ -48,24 +42,23 @@ describe('Component FileUploadRowHeader', () => {
         expect(queryByText('Access conditions')).toBeNull();
         expect(getByText('Security policy')).toBeInTheDocument();
         expect(getByText('Embargo release date')).toBeInTheDocument();
-        expect(getByTestId('delete-all-files').parentElement).toHaveAttribute(
-            'aria-label',
-            'Remove all files from the upload queue',
-        );
+        expect(getByLabelText('Remove all files from the upload queue')).toBeInTheDocument();
     });
 
     it('should render in disabled state', () => {
-        const { getByTestId } = setup({ disabled: true });
-        expect(getByTestId('delete-all-files').disabled).toBeTruthy();
+        const { getByLabelText } = setup({ disabled: true });
+        expect(
+            within(getByLabelText('Remove all files from the upload queue')).getByRole('button').disabled,
+        ).toBeTruthy();
     });
 
     it('should render confirmation on delete all', async () => {
         const onDeleteAllFn = jest.fn();
-        const { getByTestId } = setup({ requireOpenAccessStatus: true, onDeleteAll: onDeleteAllFn });
+        const { getByTestId, getByLabelText } = setup({ requireOpenAccessStatus: true, onDeleteAll: onDeleteAllFn });
 
-        fireEvent.click(getByTestId('delete-all-files'));
-        await waitFor(() => getByTestId('confirm-action'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(within(getByLabelText('Remove all files from the upload queue')).getByRole('button'));
+        await waitFor(() => getByTestId('confirm-delete-all-files'));
+        fireEvent.click(getByTestId('confirm-delete-all-files'));
 
         expect(onDeleteAllFn).toHaveBeenCalled();
     });

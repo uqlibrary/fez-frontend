@@ -74,16 +74,16 @@ describe('FavouriteSearch', () => {
     });
 
     it('should not update row if alias has found', async () => {
-        const { getByText, getByTestId, getAllByTestId } = setup({});
+        const { getByText, getByTestId } = setup({});
 
         await waitFor(() => getByText('Favourite searches'));
 
-        fireEvent.click(getAllByTestId('favourite-search-list-item-edit')[0]);
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing' } });
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
         await waitFor(() => getByTestId('favourite-search-list-item-0'));
 
@@ -92,14 +92,14 @@ describe('FavouriteSearch', () => {
     });
 
     it('should handle row delete', async () => {
-        const { getByText, getByTestId, getAllByTestId } = setup({});
+        const { getByText, getByTestId } = setup({});
         const deleteFavouriteSearchListItemFn = jest.spyOn(FavouriteSearchActions, 'deleteFavouriteSearchListItem');
 
         await waitFor(() => getByText('Favourite searches'));
-        fireEvent.click(getAllByTestId('favourite-search-list-item-delete')[0]);
 
+        fireEvent.click(getByTestId('favourite-search-list-item-0-delete'));
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
         expect(deleteFavouriteSearchListItemFn).toBeCalled();
     });

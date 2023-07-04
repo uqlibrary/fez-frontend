@@ -46,7 +46,7 @@ describe('Component AddFavouriteSearchIcon', () => {
         fireEvent.change(descriptionInput, { target: { value: 'test favourite search' } });
 
         act(() => {
-            fireEvent.click(getByTestId('confirm-action'));
+            fireEvent.click(getByTestId('confirm-favourite-search-save'));
         });
 
         expect(addFavouriteSearch).toHaveBeenCalledWith({

@@ -187,7 +187,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
     return (
         <div>
             {collectionListLoading && loadingCollectionsPid === pid && (
-                <div data-testid="collections-page-loading">
+                <div>
                     <InlineLoader loaderId="collections-page-loading" message={conf.loading.message} />
                 </div>
             )}

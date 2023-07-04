@@ -346,7 +346,7 @@ describe('ManageAuthorsList', () => {
         act(() => {
             fireEvent.click(getByTestId('authors-delete-selected-authors'));
         });
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
         await act(() =>
             waitFor(() => {

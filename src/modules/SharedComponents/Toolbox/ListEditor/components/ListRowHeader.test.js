@@ -35,8 +35,8 @@ describe('ListRowHeader renders ', () => {
         const { getByTestId } = setup({ onDeleteAll: onDeleteAllFn });
 
         fireEvent.click(getByTestId('delete-all-test'));
-        await waitFor(() => getByTestId('confirm-action'));
-        fireEvent.click(getByTestId('confirm-action'));
+        await waitFor(() => getByTestId('confirm-test-delete-all'));
+        fireEvent.click(getByTestId('confirm-test-delete-all'));
 
         expect(onDeleteAllFn).toHaveBeenCalled();
     });

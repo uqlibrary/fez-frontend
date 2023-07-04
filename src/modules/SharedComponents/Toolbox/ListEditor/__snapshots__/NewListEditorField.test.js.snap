@@ -16,7 +16,6 @@ exports[`NewListEditorField component should render new list editor component wi
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-          data-testid="test-input"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
@@ -32,6 +31,7 @@ exports[`NewListEditorField component should render new list editor component wi
             <input
               aria-invalid="false"
               class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-testid="test-input"
               id="test-input"
               placeholder="Please type the item name"
               type="text"
@@ -325,7 +325,6 @@ exports[`NewListEditorField component should render new list editor component wi
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-          data-testid="test-input"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
@@ -341,6 +340,7 @@ exports[`NewListEditorField component should render new list editor component wi
             <input
               aria-invalid="false"
               class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-testid="test-input"
               id="test-input"
               placeholder="Please type the item name"
               type="text"
@@ -634,7 +634,6 @@ exports[`NewListEditorField component should render new list editor component wi
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-          data-testid="test-input"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
@@ -650,6 +649,7 @@ exports[`NewListEditorField component should render new list editor component wi
             <input
               aria-invalid="false"
               class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-testid="test-input"
               id="test-input"
               placeholder="Please type the item name"
               type="text"

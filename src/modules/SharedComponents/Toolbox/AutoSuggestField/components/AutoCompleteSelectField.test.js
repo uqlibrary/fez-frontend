@@ -45,29 +45,28 @@ describe('AutoCompleteSelectField component', () => {
         });
 
         const suggestions = await waitFor(() => getByRole('presentation'));
-        expect(getAllByRole('option', suggestions).length).toBe(2);
-        expect(getByTestId('autocomplete-select-field-option-0')).toHaveTextContent('apple');
-        expect(getByTestId('autocomplete-select-field-option-1')).toHaveTextContent('pineapple');
+        const options = getAllByRole('option', suggestions);
+        expect(options.length).toBe(2);
+        expect(options[0]).toHaveTextContent('apple');
+        expect(options[1]).toHaveTextContent('pineapple');
     });
 
     it('should render component and select options', async () => {
         const onChangeFn = jest.fn();
 
-        const { getByTestId, getByRole } = setup({
+        const { getByTestId, getByRole, getAllByRole } = setup({
             onChange: onChangeFn,
             itemsList: ['apple', 'orange', 'banana', 'pineapple', 'pear'],
         });
 
-        act(() => {
-            fireEvent.click(getByTestId('autocomplete-select-field-input'));
-            fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'an' } });
-        });
+        fireEvent.click(getByTestId('autocomplete-select-field-input'));
+        fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'an' } });
 
         const suggestions = await waitFor(() => getByRole('presentation'));
-
-        act(() => {
-            fireEvent.click(getByTestId('autocomplete-select-field-option-0', suggestions));
-        });
+        const options = getAllByRole('option', suggestions);
+        expect(options.length).toBe(2);
+        expect(options[0]).toHaveTextContent('orange');
+        fireEvent.click(options[0]);
 
         expect(onChangeFn).toHaveBeenCalledWith('orange');
     });

@@ -310,7 +310,7 @@ export const GetColumns = () => {
                             openTo="year"
                             disableFuture
                             className={classes.datePicker}
-                            InputProps={{
+                            inputProps={{
                                 id: 'eap-start-year-input',
                                 'data-testid': 'eap-start-year-input',
                                 label: startYearLabel,
@@ -414,7 +414,7 @@ export const GetColumns = () => {
                                 'data-testid': 'eap-end-year-button-input',
                             }}
                             className={classes.datePicker}
-                            InputProps={{
+                            inputProps={{
                                 id: 'eap-end-year-input',
                                 'data-testid': 'eap-end-year-input',
                                 label: endYearLabel,

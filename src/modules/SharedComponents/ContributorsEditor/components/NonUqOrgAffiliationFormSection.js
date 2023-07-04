@@ -43,11 +43,19 @@ export default function NonUqOrgAffiliationFormSection({
                     disabled={disableAffiliationEdit}
                     error={orgAffiliationError}
                     id="org-affiliation-name"
+                    inputProps={{
+                        'data-testid': 'org-affiliation-name',
+                    }}
+                    InputLabelProps={{
+                        'data-testid': 'org-affiliation-name-label',
+                    }}
                 />
             </Grid>
             <Grid item xs={fullWidthFields ? 12 : 6} sm={6}>
                 <FormControl variant="standard" required fullWidth error={orgAffiliationTypeError}>
-                    <InputLabel id="org-affiliation-type-label">{locale.fields.organisationType.inputLabel}</InputLabel>
+                    <InputLabel id="org-affiliation-type-label" data-testid="org-affiliation-type-label">
+                        {locale.fields.organisationType.inputLabel}
+                    </InputLabel>
                     <Select
                         variant="standard"
                         value={orgType}
@@ -57,6 +65,7 @@ export default function NonUqOrgAffiliationFormSection({
                         labelId="org-affiliation-type-label"
                         SelectDisplayProps={{
                             id: 'org-affiliation-type',
+                            'data-testid': 'org-affiliation-type',
                         }}
                     >
                         <MenuItem disabled>{locale.fields.organisationType.placeholder}</MenuItem>
