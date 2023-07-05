@@ -161,7 +161,12 @@ export const AuthorLinking = ({
             let j = 0;
             for (let i = 0; i < authors.length; i += itemsPerRow) {
                 rows.push(
-                    <Grid container key={i} id={`${authorLinkingId}-row-${j}`}>
+                    <Grid
+                        container
+                        key={i}
+                        id={`${authorLinkingId}-row-${j}`}
+                        data-testid={`${authorLinkingId}-row-${j}`}
+                    >
                         {authors.slice(i, i + itemsPerRow)}
                     </Grid>,
                 );

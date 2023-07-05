@@ -418,7 +418,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('select-author-1'));
         fireEvent.click(getByTestId('select-author-2'));
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
         await act(() =>
             waitFor(() => {
@@ -469,7 +469,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('select-author-1'));
         fireEvent.click(getByTestId('select-author-2'));
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
         await act(() =>
             waitFor(() => {
@@ -881,7 +881,7 @@ describe('ManageAuthors', () => {
         expect(listItem1).toBeInTheDocument();
 
         fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-authors-delete-this-author-confirmation'));
 
         await act(() => waitFor(() => expect(showAppAlert).toHaveBeenCalled()));
 
@@ -987,7 +987,7 @@ describe('ManageAuthors', () => {
         expect(listItem1).toBeInTheDocument();
 
         fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-authors-delete-this-author-confirmation'));
 
         await act(() => waitFor(() => expect(showAppAlert).toHaveBeenCalled()));
 
@@ -1194,7 +1194,7 @@ describe('ManageAuthors', () => {
         expect(getByTestId('authors-list-row-2-ingest-from-scopus').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.click(getByTestId('authors-list-row-0-ingest-from-scopus'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-scopus-ingest-confirmation'));
 
         await act(() =>
             waitFor(() => {
@@ -1264,7 +1264,7 @@ describe('ManageAuthors', () => {
         expect(getByTestId('authors-list-row-0-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
 
         fireEvent.click(getByTestId('authors-list-row-0-ingest-from-scopus'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-scopus-ingest-confirmation'));
 
         await act(() =>
             waitFor(() => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
-import { rtlRender, fireEvent, waitFor, act, createMatchMedia } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, act, createMatchMedia, within } from 'test-utils';
 import { openAccessConfig } from 'config';
 import * as fileUploadLocale from '../FileUploader/locale';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
@@ -397,23 +397,14 @@ describe('AttachedFiles component', () => {
             getByText('Please RIGHT CLICK then select link SAVE AS option to save and play video files'),
         ).toBeInTheDocument();
 
-        act(() => {
-            // fireEvent.click(getByTitle('Click to open a preview of http://localhost/view/UQ:252236/test.mp4'));
-            fireEvent.click(getByTestId('preview-link-test.mp4'));
-        });
-        let previewEl = await waitFor(() => expect(getByTestId('media-preview')).toBeInTheDocument());
-        act(() => {
-            fireEvent.click(getByTestId('close-preview', previewEl));
-        });
+        // fireEvent.click(getByTitle('Click to open a preview of http://localhost/view/UQ:252236/test.mp4'));
+        fireEvent.click(getByTestId('preview-link-test.mp4'));
+
+        fireEvent.click(within(getByTestId('media-preview')).getByRole('button', { name: 'Close' }));
         await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
 
-        act(() => {
-            fireEvent.click(getByTestId('file-name-1-preview'));
-        });
-        previewEl = await waitFor(() => expect(getByTestId('media-preview')).toBeInTheDocument());
-        act(() => {
-            fireEvent.click(getByTestId('close-preview', previewEl));
-        });
+        fireEvent.click(getByTestId('file-name-1-preview'));
+        fireEvent.click(within(getByTestId('media-preview')).getByRole('button', { name: 'Close' }));
         await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
 
         done();

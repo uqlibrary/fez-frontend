@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor, createMatchMedia } from 'test-utils';
+import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor, createMatchMedia, within } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -111,10 +111,10 @@ describe('CollectionsListEmbedded form', () => {
         const { getByText, getByTestId, getByRole, getAllByRole } = setup(testProps);
 
         await waitFor(() => getByText('Sort results by'));
-        expect(getByTestId('pageSize').innerHTML).toBe('10');
+        expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('10');
 
-        const element = getByTestId('pageSize');
-        fireEvent.mouseDown(element);
+        const element = getByTestId('publication-list-sorting-page-size');
+        fireEvent.mouseDown(within(element).getByRole('button'));
         expect(getByRole('listbox')).not.toEqual(null);
         act(() => {
             const options = getAllByRole('option');
@@ -122,7 +122,7 @@ describe('CollectionsListEmbedded form', () => {
             options[3].click();
         });
         await waitFor(() => getByText('Sort results by'));
-        expect(getByTestId('pageSize').innerHTML).toBe('10');
+        expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('10');
     });
 
     it('should allow sortBy changing', async () => {
@@ -141,10 +141,10 @@ describe('CollectionsListEmbedded form', () => {
 
         await waitFor(() => getByText('Sort results by'));
 
-        expect(getByTestId('sortBy').innerHTML).toBe('Title');
+        expect(getByTestId('publication-list-sorting-sort-by')).toHaveTextContent('Title');
 
-        const element = getByTestId('sortBy');
-        fireEvent.mouseDown(element);
+        const element = getByTestId('publication-list-sorting-sort-by');
+        fireEvent.mouseDown(within(element).getByRole('button'));
         expect(getByRole('listbox')).not.toEqual(null);
         act(() => {
             const options = getAllByRole('option');
@@ -154,7 +154,7 @@ describe('CollectionsListEmbedded form', () => {
         });
 
         await waitFor(() => getByText('Sort results by'));
-        expect(getByTestId('sortBy').innerHTML).toBe('Updated Date');
+        expect(getByTestId('publication-list-sorting-sort-by')).toHaveTextContent('Updated Date');
     });
 
     it('should render admin elements for admin user', async () => {
@@ -183,9 +183,9 @@ describe('CollectionsListEmbedded form', () => {
         const { getByText, getByTestId, getByRole } = setup({ ...testProps });
         await waitFor(() => getByText('Export page results'));
 
-        expect(getByTestId('exportPublicationsFormat')).toBeInTheDocument();
+        expect(getByTestId('export-publications-format')).toBeInTheDocument();
         act(() => {
-            fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
+            fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('button'));
         });
         expect(getByRole('listbox')).toBeInTheDocument();
         act(() => {

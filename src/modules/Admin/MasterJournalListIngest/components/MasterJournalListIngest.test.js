@@ -40,7 +40,7 @@ describe('MasterJournalListIngest Component', () => {
         fireEvent.click(getByText('Test directory 1'));
 
         act(() => {
-            fireEvent.click(getByTestId('submitIngest'));
+            fireEvent.click(getByTestId('master-journal-list-ingest-submit'));
         });
 
         expect(requestMJLIngest).toBeCalledWith({ directory: 'Test directory 1' });
@@ -62,7 +62,7 @@ describe('MasterJournalListIngest Component', () => {
         fireEvent.click(getByText('Test directory 1'));
 
         act(() => {
-            fireEvent.click(getByTestId('submitIngest'));
+            fireEvent.click(getByTestId('master-journal-list-ingest-submit'));
         });
 
         expect(requestMJLIngest).toBeCalledWith({ directory: 'Test directory 1' });
@@ -73,7 +73,7 @@ describe('MasterJournalListIngest Component', () => {
         const testFn = jest.fn();
         const { getByTestId } = setup({ history: { push: testFn } });
         act(() => {
-            fireEvent.click(getByTestId('cancelIngest'));
+            fireEvent.click(getByTestId('master-journal-list-ingest-cancel'));
         });
         expect(testFn).toHaveBeenCalledWith('/');
     });

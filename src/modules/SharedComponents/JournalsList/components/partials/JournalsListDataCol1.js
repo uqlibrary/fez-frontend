@@ -31,13 +31,15 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                     <Tooltip title={`Select ${journal.jnl_title}`} placement="right">
                         <Checkbox
                             id={`journal-list-data-col-1-checkbox-${index}`}
-                            data-testid={`journal-list-data-col-1-checkbox-${index}`}
                             style={{ padding: 2, marginTop: 10 }}
                             value={journal.jnl_jid}
                             onChange={onChange}
                             checked={checked}
                             label={`Select ${journal.jnl_title}`}
-                            inputProps={{ 'aria-label': `Select ${journal.jnl_title}` }}
+                            inputProps={{
+                                'aria-label': `Select ${journal.jnl_title}`,
+                                'data-testid': `journal-list-data-col-1-checkbox-${index}`,
+                            }}
                         />
                     </Tooltip>
                 </Grid>

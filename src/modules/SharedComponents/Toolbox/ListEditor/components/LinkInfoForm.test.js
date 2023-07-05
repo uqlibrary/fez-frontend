@@ -25,14 +25,14 @@ describe('LinkInfoForm', () => {
         const { getByTestId } = setup();
         expect(getByTestId('rek-link-input')).toBeVisible();
         expect(getByTestId('rek-link-description-input')).toBeVisible();
-        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByTestId('rek-link-add')).toHaveAttribute('disabled', '');
     });
 
     it('should enable "Add link" button if valid link is entered', () => {
         const { getByTestId } = setup();
 
         fireEvent.change(getByTestId('rek-link-input'), { target: { value: 'http://test.com' } });
-        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
+        expect(getByTestId('rek-link-add')).not.toHaveAttribute('disabled', '');
     });
 
     it('should display error message if link is not valid', () => {
@@ -40,7 +40,7 @@ describe('LinkInfoForm', () => {
 
         fireEvent.change(getByTestId('rek-link-input'), { target: { value: 'test.com' } });
         expect(getByText('URL is not valid')).toBeVisible();
-        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByTestId('rek-link-add')).toHaveAttribute('disabled', '');
     });
 
     it('should add link info and reset form if link is valid and "Enter" is pressed', () => {

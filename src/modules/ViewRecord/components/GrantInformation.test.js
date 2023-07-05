@@ -1,8 +1,9 @@
+import React from 'react';
 import { journalArticle } from 'mock/data/testing/records';
-// import { GrantInformationClass } from './GrantInformation';
 import GrantInformation from './GrantInformation';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         publication: journalArticle,
         history: { push: jest.fn() },
@@ -10,39 +11,29 @@ function setup(testProps = {}, args = { isShallow: false }) {
         classes: {},
         ...testProps,
     };
-    return getElement(GrantInformation, props, args);
+    return rtlRender(<GrantInformation {...props} />);
 }
 
 describe('Grant Information Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({}, { isShallow: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('#grantInformation').length).toEqual(1);
-    });
-
-    it('should render component mounted', () => {
-        const wrapper = getElement(GrantInformation, {
-            publication: journalArticle,
-            history: { push: jest.fn() },
-            actions: {},
-            classes: {},
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container, getAllByTestId } = setup({});
+        expect(container).toMatchSnapshot();
+        expect(getAllByTestId('rek-grant-text').length).toEqual(1);
     });
 
     it('should not render component with empty publication', () => {
-        const wrapper = setup({ publication: {} }, { isShallow: true });
-        expect(toJson(wrapper)).toBe('');
+        const { container } = setup({ publication: {} });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with publication without grant id data', () => {
         const publication = Object.assign({}, journalArticle);
         delete publication.fez_record_search_key_grant_id;
-        const wrapper = setup({ publication: publication });
+        const { getByTestId } = setup({ publication: publication });
 
-        const grantRow = wrapper.find('GrantDetails').first();
-        expect(grantRow.find('p[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
-        expect(grantRow.find('p[data-testid="rek-grant-text-0"]').text()).toBe('');
+        // const grantRow = wrapper.find('GrantDetails').first();
+        expect(getByTestId('rek-grant-label-0')).toHaveTextContent('Grant agency');
+        expect(getByTestId('rek-grant-text-0')).toHaveTextContent('');
     });
 
     it('should not render empty grant ids', () => {
@@ -52,19 +43,19 @@ describe('Grant Information Component ', () => {
             { rek_grant_text: 'testing rek_grant_text', rek_grant_text_order: 1 },
         ];
 
-        const wrapper = setup({ publication: publication });
+        const { getByTestId } = setup({ publication: publication });
 
-        const grantRow = wrapper.find('GrantDetails').first();
+        // const grantRow = wrapper.find('GrantDetails').first();
 
-        expect(grantRow.find('p[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
-        expect(grantRow.find('p[data-testid="rek-grant-text-0"]').text()).toBe('');
+        expect(getByTestId('rek-grant-label-0')).toHaveTextContent('Grant agency');
+        expect(getByTestId('rek-grant-text-0')).toHaveTextContent('');
     });
 
     it('should not break if grant text is not in the record', () => {
         const { ...publicationToTest } = journalArticle;
         delete publicationToTest.fez_record_search_key_grant_text;
-        const wrapper = setup({ publication: publicationToTest });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: publicationToTest });
+        expect(container).toMatchSnapshot();
     });
 
     it('should not break if rek_grant_id is not in the search key', () => {
@@ -79,7 +70,7 @@ describe('Grant Information Component ', () => {
             fez_record_search_key_grant_id: fsrkwithouGrantID,
         };
 
-        const wrapper = setup({ publication: newJournalArticle });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: newJournalArticle });
+        expect(container).toMatchSnapshot();
     });
 });

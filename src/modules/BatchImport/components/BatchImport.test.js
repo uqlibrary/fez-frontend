@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, waitForElementToBeRemoved, waitFor } from 'test-utils';
+import { fireEvent, render, WithReduxStore, waitForElementToBeRemoved, waitFor } from 'test-utils';
 import * as repositories from 'repositories';
 import * as BatchImportActions from 'actions/batchImport';
 
@@ -59,14 +59,12 @@ describe('BatchImport Component', () => {
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
-        act(() => {
-            fireEvent.click(getByTestId('submitBatchImport'));
-        });
+        fireEvent.click(getByTestId('batch-import-submit'));
 
         await waitFor(() => getByTestId('action-button'));
 
         expect(getByText('The request to batch-import has been submitted successfully.')).toBeInTheDocument();
-        expect(getByTestId('submitBatchImport')).toHaveAttribute('disabled');
+        expect(getByTestId('batch-import-submit')).toHaveAttribute('disabled');
         expect(createBatchImport).toBeCalled();
 
         done();
@@ -117,9 +115,7 @@ describe('BatchImport Component', () => {
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
-        act(() => {
-            fireEvent.click(getByTestId('submitBatchImport'));
-        });
+        fireEvent.click(getByTestId('batch-import-submit'));
 
         await waitFor(() => getByTestId('alert-error-batch-import'));
 
@@ -170,7 +166,7 @@ describe('BatchImport Component', () => {
         const pushFn = jest.fn();
         const history = { push: pushFn };
         const { getByTestId } = setup({ history: history });
-        fireEvent.click(getByTestId('cancelBatchImport'));
+        fireEvent.click(getByTestId('batch-import-cancel'));
         expect(pushFn).toHaveBeenCalledWith('/');
     });
 });

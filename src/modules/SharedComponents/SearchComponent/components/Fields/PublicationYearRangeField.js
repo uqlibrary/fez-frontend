@@ -66,6 +66,7 @@ export default class PublicationYearRangeField extends PureComponent {
                             aria-label={txt.fromAria}
                             inputProps={{
                                 'aria-labelledby': 'from-label',
+                                'data-testid': 'from',
                             }}
                             disabled={this.props.disabled}
                         />
@@ -76,10 +77,10 @@ export default class PublicationYearRangeField extends PureComponent {
                             style={{ width: 24 }}
                             value={' to '}
                             disabled
-                            inputProps={{
+                            InputProps={{
+                                disableUnderline: true,
                                 'aria-labelledby': 'combiner-label',
                             }}
-                            InputProps={{ disableUnderline: true }}
                         />
                     </Grid>
                     <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
@@ -96,6 +97,7 @@ export default class PublicationYearRangeField extends PureComponent {
                             disabled={this.props.disabled}
                             inputProps={{
                                 'aria-labelledby': 'to-label',
+                                'data-testid': 'to',
                             }}
                         />
                     </Grid>

@@ -180,6 +180,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
             </Drawer>
             <Snackbar
                 id="copied-text-snackbar"
+                data-testid="copied-text-snackbar"
                 anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'center',

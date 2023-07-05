@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within } from 'test-utils';
 import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
@@ -538,49 +538,35 @@ describe('SearchJournals', () => {
             testHistory,
         });
 
+        // expect(container).toMatchSnapshot();
         // sortBy
-        expect(queryByTestId('sortBy')).toBeInTheDocument();
-        act(() => {
-            fireEvent.mouseDown(queryByTestId('sortBy'));
-        });
+        expect(queryByTestId('publication-list-sorting-sort-by')).toBeInTheDocument();
+        fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-sort-by')).getByRole('button'));
+
         expect(getByRole('listbox')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(queryByTestId('publication-list-sorting-sort-by-option-0'));
-        });
+        fireEvent.click(queryByTestId('publication-list-sorting-sort-by-option-0'));
         expect(testHistory.location.search).toContain('sortBy=title');
 
         // sortOrder
-        expect(queryByTestId('sortOrder')).toBeInTheDocument();
-        act(() => {
-            fireEvent.mouseDown(queryByTestId('sortOrder'));
-        });
+        expect(queryByTestId('publication-list-sorting-sort-order')).toBeInTheDocument();
+        fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-sort-order')).getByRole('button'));
         expect(getByRole('listbox')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(queryByTestId('publication-list-sorting-sort-order-option-0'));
-        });
+        fireEvent.click(queryByTestId('publication-list-sorting-sort-order-option-0'));
         expect(testHistory.location.search).toContain('sortDirection=Desc');
 
         // pageSize
-        expect(queryByTestId('pageSize')).toBeInTheDocument();
-        act(() => {
-            fireEvent.mouseDown(queryByTestId('pageSize'));
-        });
+        expect(queryByTestId('publication-list-sorting-page-size')).toBeInTheDocument();
+        fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-page-size')).getByRole('button'));
         expect(getByRole('listbox')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(queryByTestId('publication-list-sorting-page-size-option-100'));
-        });
+        fireEvent.click(queryByTestId('publication-list-sorting-page-size-option-100'));
         expect(testHistory.location.search).toContain('pageSize=100');
 
         // export
         const exportJournals = jest.spyOn(actions, 'exportJournals');
-        expect(queryByTestId('exportPublicationsFormat')).toBeInTheDocument();
-        act(() => {
-            fireEvent.mouseDown(queryByTestId('exportPublicationsFormat'));
-        });
+        expect(queryByTestId('export-publications-format')).toBeInTheDocument();
+        fireEvent.mouseDown(within(queryByTestId('export-publications-format')).getByRole('button'));
         expect(getByRole('listbox')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(queryByTestId('export-publication-option-0'));
-        });
+        fireEvent.click(queryByTestId('export-publication-option-0'));
         expect(exportJournals).toHaveBeenCalled();
 
         // change page

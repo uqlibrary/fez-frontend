@@ -3,6 +3,7 @@
 exports[`Audio Player Component  should play audio 1`] = `
 <div>
   <audio
+    data-testid="audio-player"
     id="audioPlayer"
     onEnded={[Function]}
   >
@@ -784,6 +785,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
             >
               <div>
                 <audio
+                  data-testid="audio-player"
                   id="audioPlayer"
                   onEnded={[Function]}
                 >
@@ -1910,6 +1912,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
 exports[`Audio Player Component  should render component 1`] = `
 <div>
   <audio
+    data-testid="audio-player"
     id="audioPlayer"
     onEnded={[Function]}
   >
@@ -1940,6 +1943,7 @@ exports[`Audio Player Component  should render component 1`] = `
 exports[`Audio Player Component  should render when image ends 1`] = `
 <div>
   <audio
+    data-testid="audio-player"
     id="audioPlayer"
     onEnded={[Function]}
   >
@@ -1970,6 +1974,7 @@ exports[`Audio Player Component  should render when image ends 1`] = `
 exports[`Audio Player Component  should render when image ends 2`] = `
 <div>
   <audio
+    data-testid="audio-player"
     id="audioPlayer"
     onEnded={[Function]}
   >
@@ -2000,6 +2005,7 @@ exports[`Audio Player Component  should render when image ends 2`] = `
 exports[`Audio Player Component  should set component state to playing 1`] = `
 <div>
   <audio
+    data-testid="audio-player"
     id="audioPlayer"
     onEnded={[Function]}
   >
@@ -2030,6 +2036,7 @@ exports[`Audio Player Component  should set component state to playing 1`] = `
 exports[`Audio Player Component  should set component state to playing 2`] = `
 <div>
   <audio
+    data-testid="audio-player"
     id="audioPlayer"
     onEnded={[Function]}
   >

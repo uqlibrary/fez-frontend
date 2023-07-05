@@ -134,7 +134,7 @@ export const AdvancedSearchComponent = ({
     const alreadyAddedFields = fieldRows.map(item => item.searchField);
 
     return (
-        <form id="advancedSearchForm" onSubmit={_handleAdvancedSearch}>
+        <form id="advancedSearchForm" data-testid="advanced-search-form" onSubmit={_handleAdvancedSearch}>
             <Grid container spacing={0}>
                 <Grid container spacing={5} alignItems={'center'}>
                     <Grid item style={{ flexGrow: 1, width: 1 }}>
@@ -146,6 +146,7 @@ export const AdvancedSearchComponent = ({
                             onClick={_toggleMinimise}
                             tooltip={isMinimised ? txt.advancedSearch.tooltip.show : txt.advancedSearch.tooltip.hide}
                             id={!isMinimised ? 'minimize-advanced-search' : 'maximize-advanced-search'}
+                            data-testid={!isMinimised ? 'minimize-advanced-search' : 'maximize-advanced-search'}
                             size="large"
                         >
                             {!isMinimised ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
@@ -228,6 +229,7 @@ export const AdvancedSearchComponent = ({
                                                 <Checkbox
                                                     id="advanced-search-open-access"
                                                     inputProps={{
+                                                        'data-testid': 'advanced-search-open-access',
                                                         'aria-label': txt.advancedSearch.openAccess.ariaLabel,
                                                     }}
                                                     checked={isOpenAccess}

@@ -9,6 +9,7 @@ import {
     waitFor,
     waitForElementToBeRemoved,
     createMatchMedia,
+    within,
 } from 'test-utils';
 
 import * as mockData from 'mock/data';
@@ -178,10 +179,10 @@ describe('CommunityList form', () => {
         const { getByText, getByTestId, getByRole, getAllByRole } = setup();
 
         await waitFor(() => getByText('Sort results by'));
-        expect(getByTestId('pageSize').innerHTML).toBe('10');
+        expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('10');
 
-        const element = getByTestId('pageSize');
-        fireEvent.mouseDown(element);
+        const element = getByTestId('publication-list-sorting-page-size');
+        fireEvent.mouseDown(within(element).getByRole('button'));
         expect(getByRole('listbox')).not.toEqual(null);
         act(() => {
             const options = getAllByRole('option');
@@ -189,7 +190,7 @@ describe('CommunityList form', () => {
             options[3].click();
         });
         await waitFor(() => getByText('Sort results by'));
-        expect(getByTestId('pageSize').innerHTML).toBe('100');
+        expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('100');
     });
     it('should allow sortBy changing', async () => {
         mockApi
@@ -206,10 +207,10 @@ describe('CommunityList form', () => {
 
         await waitFor(() => getByText('Sort results by'));
 
-        expect(getByTestId('sortBy').innerHTML).toBe('Title');
+        expect(getByTestId('publication-list-sorting-sort-by')).toHaveTextContent('Title');
 
-        const element = getByTestId('sortBy');
-        fireEvent.mouseDown(element);
+        const element = getByTestId('publication-list-sorting-sort-by');
+        fireEvent.mouseDown(within(element).getByRole('button'));
         expect(getByRole('listbox')).not.toEqual(null);
         act(() => {
             const options = getAllByRole('option');
@@ -219,7 +220,7 @@ describe('CommunityList form', () => {
         });
 
         await waitFor(() => getByText('Sort results by'));
-        expect(getByTestId('sortBy').innerHTML).toBe('Updated Date');
+        expect(getByTestId('publication-list-sorting-sort-by')).toHaveTextContent('Updated Date');
     });
 
     it('should allow exporting of community page results', async () => {
@@ -228,9 +229,9 @@ describe('CommunityList form', () => {
         const { getByText, getByTestId, getByRole } = setup();
         await waitFor(() => getByText('Export page results'));
 
-        expect(getByTestId('exportPublicationsFormat')).toBeInTheDocument();
+        expect(getByTestId('export-publications-format')).toBeInTheDocument();
         act(() => {
-            fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
+            fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('button'));
         });
         expect(getByRole('listbox')).toBeInTheDocument();
         act(() => {

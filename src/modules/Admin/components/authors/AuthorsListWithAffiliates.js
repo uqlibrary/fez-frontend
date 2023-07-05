@@ -63,7 +63,13 @@ const getIcon = ({ rowData, inProblemState }) => {
         /* istanbul ignore next */
         return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
     }
-    return <PersonOutlined color="secondary" id={`contributor-unlinked-${rowData.tableData.id}`} />;
+    return (
+        <PersonOutlined
+            color="secondary"
+            id={`contributor-unlinked-${rowData.tableData.id}`}
+            data-testid={`contributor-unlinked-${rowData.tableData.id}`}
+        />
+    );
 };
 
 export const NameAsPublished = React.memo(({ icon, text, linked }) => {

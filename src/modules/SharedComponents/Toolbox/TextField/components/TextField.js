@@ -24,6 +24,10 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
                 ref={ref}
                 helperText={helperText}
                 id={props.textFieldId}
+                data-testid={props.textFieldId}
+                FormHelperTextProps={{
+                    'data-testid': `${props.textFieldId}-helper-text`,
+                }}
                 inputProps={{
                     id: `${props.textFieldId}-input`,
                     'data-testid': `${props.textFieldId}-input`,
