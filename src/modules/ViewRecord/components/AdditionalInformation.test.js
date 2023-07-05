@@ -332,22 +332,23 @@ describe('Additional Information Component ', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should render map with geo coordinates', () => {
-        initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
+    it('should not render map with empty geo coordinates', () => {
         const { container } = setup({
-            publication: { ...records.journalArticle, fez_record_search_key_geographic_area: null },
+            publication: {
+                ...records.audioDocument,
+                fez_record_search_key_geographic_area: [{ rek_geographic_area: null }],
+            },
         });
         expect(container).toMatchSnapshot();
     });
 
-    it('should not render map with no geo coordinates', () => {
+    it('should render map with geo coordinates', () => {
         initialize();
         useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({
             publication: {
-                ...records.journalArticle,
-                fez_record_search_key_geographic_area: { rek_geographic_area: 'test' },
+                ...records.audioDocument,
+                fez_record_search_key_geographic_area: [{ rek_geographic_area: 'test' }],
             },
         });
         expect(container).toMatchSnapshot();

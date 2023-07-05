@@ -928,13 +928,13 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
 </div>
 `;
 
-exports[`Additional Information Component  should not render map with no geo coordinates 1`] = `
+exports[`Additional Information Component  should not render map with empty geo coordinates 1`] = `
 <div>
   <div
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-493 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-479 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-additional-information"
       id="standard-card-additional-information"
     >
@@ -945,7 +945,7 @@ exports[`Additional Information Component  should not render map with no geo coo
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-498 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-484 css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -959,10 +959,10 @@ exports[`Additional Information Component  should not render map with no geo coo
         id="standard-card-additional-information-content"
       >
         <div
-          class="AdditionalInformationClass-containerPadding-492"
+          class="AdditionalInformationClass-containerPadding-478"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
@@ -971,7 +971,7 @@ exports[`Additional Information Component  should not render map with no geo coo
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-author-label"
               >
-                Author(s)
+                Creator(s)
               </span>
             </div>
             <div
@@ -986,16 +986,16 @@ exports[`Additional Information Component  should not render map with no geo coo
                   
                   
                   <a
-                    class="AuthorsCitationView-authorIdLink-499"
+                    class="authorNameLink"
                     data-testid="rek-author-0-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=88893&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=88893+(Azimi%2C+Iman)&searchMode=advanced"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Shutter%2C+Leigh&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
                       
-                      Azimi, Iman
+                      Shutter, Leigh
                       
                     </span>
                   </a>
@@ -1004,78 +1004,30 @@ exports[`Additional Information Component  should not render map with no geo coo
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Arthurs%2C+Andy&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
                       
-                      Milevskiy, Michael J. G.
+                      Arthurs, Andy
                       
                     </span>
                   </a>
                   , 
                   
                   <a
-                    class="AuthorsCitationView-authorIdLink-499"
+                    class="AuthorsCitationView-authorIdLink-485"
                     data-testid="rek-author-2-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1706239&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1706239+(Kaemmerer%2C+Elke)&searchMode=advanced"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=486&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=486+(Bamford%2C+Greg)&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
                       
-                      Kaemmerer, Elke
-                      
-                    </span>
-                  </a>
-                  , 
-                  
-                  <a
-                    class="AuthorsCitationView-authorIdLink-499"
-                    data-testid="rek-author-3-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=97626&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=97626+(Turner%2C+Dane)&searchMode=advanced"
-                  >
-                    <span
-                      class="citationAuthor"
-                      data-testid="rek-author-3"
-                    >
-                      
-                      Turner, Dane
-                      
-                    </span>
-                  </a>
-                  , 
-                  
-                  <a
-                    class="AuthorsCitationView-authorIdLink-499"
-                    data-testid="rek-author-4-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=95450&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=95450+(Yapa%2C+Kunsala+T.+D.+S.)&searchMode=advanced"
-                  >
-                    <span
-                      class="citationAuthor"
-                      data-testid="rek-author-4"
-                    >
-                      
-                      Yapa, Kunsala T. D. S.
-                      
-                    </span>
-                  </a>
-                  , 
-                  
-                  <a
-                    class="AuthorsCitationView-authorIdLink-499"
-                    data-testid="rek-author-5-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1671&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1671+(Brown%2C+Melissa+A.)&searchMode=advanced"
-                  >
-                    <span
-                      class="citationAuthor"
-                      data-testid="rek-author-5"
-                    >
-                      
-                      Brown, Melissa A.
+                      Bamford, Greg
                       
                     </span>
                   </a>
@@ -1083,47 +1035,31 @@ exports[`Additional Information Component  should not render map with no geo coo
                   
                   <a
                     class="authorNameLink"
-                    data-testid="rek-author-6-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Thompson%2C+Erik+W.&searchMode=advanced"
+                    data-testid="rek-author-3-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=McColl%2C+Mary+Rose&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
-                      data-testid="rek-author-6"
+                      data-testid="rek-author-3"
                     >
                       
-                      Thompson, Erik W.
-                      
-                    </span>
-                  </a>
-                  , 
-                  
-                  <a
-                    class="AuthorsCitationView-authorIdLink-499"
-                    data-testid="rek-author-7-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=973&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=973+(Roberts-Thomson%2C+Sarah+J.)&searchMode=advanced"
-                  >
-                    <span
-                      class="citationAuthor"
-                      data-testid="rek-author-7"
-                    >
-                      
-                      Roberts-Thomson, Sarah J.
+                      McColl, Mary Rose
                       
                     </span>
                   </a>
                   , 
                    and 
                   <a
-                    class="AuthorsCitationView-authorIdLink-499"
-                    data-testid="rek-author-8-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=972&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=972+(Monteith%2C+Gregory+R.)&searchMode=advanced"
+                    class="AuthorsCitationView-authorIdLink-485"
+                    data-testid="rek-author-4-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=146&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=146+(Skinner%2C+Peter+R.)&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
-                      data-testid="rek-author-8"
+                      data-testid="rek-author-4"
                     >
                       
-                      Monteith, Gregory R.
+                      Skinner, Peter R.
                       
                     </span>
                   </a>
@@ -1135,10 +1071,10 @@ exports[`Additional Information Component  should not render map with no geo coo
           </div>
         </div>
         <div
-          class="AdditionalInformationClass-containerPadding-492"
+          class="AdditionalInformationClass-containerPadding-478"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
@@ -1159,560 +1095,17 @@ exports[`Additional Information Component  should not render map with no geo coo
                 <span
                   data-testid="rek-title"
                 >
-                  TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
+                  Hearing the city Symposium Title 5: In conversation
                 </span>
               </span>
             </div>
           </div>
         </div>
         <div
-          class="AdditionalInformationClass-containerPadding-492"
+          class="AdditionalInformationClass-containerPadding-478"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-description-label"
-              >
-                Abstract
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-description"
-                >
-                  This is a test of the abstract
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-journal-name-label"
-              >
-                Journal name
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span>
-                  <span
-                    data-testid="rek-journal-name"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                    >
-                      <span>
-                        Journal of Cell Science
-                      </span>
-                    </a>
-                    <span
-                      data-testid="era-year-listed"
-                    >
-                       
-                      (ERA 2010 Journal(s) Listed)
-                    </span>
-                  </span>
-                  <span>
-                     
-                    <a
-                      aria-label="Check publisher's OA archiving policy in a new window"
-                      class="makeStyles-externalLink-500 makeStyles-externalLink-502"
-                      data-testid="rek-journal-name-sherpa-link"
-                      href="https://example.com/"
-                      id="rek-journal-name-sherpa-link"
-                      rel="noopener noreferrer"
-                      tabindex="0"
-                      target="_blank"
-                      title="Link to https://example.com/ will open in a new window."
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-501 css-i4bv87-MuiSvgIcon-root"
-                        data-testid="OpenInNewIcon"
-                        focusable="false"
-                        id="rek-journal-name-sherpa-link-new-window-icon"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                        />
-                      </svg>
-                      Check publisher's open access policy
-                    </a>
-                  </span>
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-issn-label"
-              >
-                ISSN
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <ul
-                  class="AdditionalInformationClass-list-491 list"
-                >
-                  <li
-                    data-testid="rek-issn-0"
-                  >
-                    1477-9137
-                  </li>
-                </ul>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-date-label"
-              >
-                Publication/Start date
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-date"
-                >
-                  <span
-                    class="citationDate"
-                  >
-                    
-                    2017-07-01
-                    
-                  </span>
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-date-available-label"
-              >
-                Year available
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  class="citationDate"
-                >
-                  
-                  2017
-                  
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-doi-label"
-              >
-                DOI
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-doi"
-                >
-                  <a
-                    aria-label="Open this DOI in an new window"
-                    class="citationDoiLink makeStyles-externalLink-500 makeStyles-externalLink-503"
-                    data-testid="citation-doi-link"
-                    href="https://doi.org/10.1242/jcs.196659"
-                    id="citation-doi-link"
-                    rel="noopener noreferrer"
-                    tabindex="0"
-                    target="_blank"
-                    title="Open this DOI in an new window"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-501 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="OpenInNewIcon"
-                      focusable="false"
-                      id="citation-doi-link-new-window-icon"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                      />
-                    </svg>
-                    https://doi.org/10.1242/jcs.196659
-                  </a>
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-oa-status-label"
-              >
-                Open access status
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-oa-status"
-                >
-                  DOI
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-oa-status-type-label"
-              >
-                Open access status type
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-oa-status-type"
-                >
-                  Bronze
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-volume-number-label"
-              >
-                Volume
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-volume-number"
-                >
-                  130
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-issue-number-label"
-              >
-                Issue
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-issue-number"
-                >
-                  14
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-start-page-label"
-              >
-                Start page
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-start-page"
-                >
-                  2292
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-end-page-label"
-              >
-                End page
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-end-page"
-                >
-                  2305
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-total-pages-label"
-              >
-                Total pages
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-total-pages"
-                >
-                  14
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-article-number-label"
-              >
-                Article number
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-article-number"
-                >
-                  article 123
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-place-of-publication-label"
-              >
-                Place of publication
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-place-of-publication"
-                >
-                  Cambridge, United Kingdom
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-492"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
@@ -1732,28 +1125,155 @@ exports[`Additional Information Component  should not render map with no geo coo
               >
                 <a
                   data-testid="rek-publisher"
-                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
+                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
                 >
-                  Company of Biologists
+                  Centre for Subtropical Design, Queensland University of Technology
                 </a>
               </span>
             </div>
           </div>
         </div>
         <div
-          class="AdditionalInformationClass-containerPadding-492"
+          class="AdditionalInformationClass-containerPadding-478"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-490 gridRow css-1gzor41-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-keywords-label"
+                data-testid="rek-date-label"
               >
-                Keyword(s)
+                Date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-date"
+                >
+                  <span
+                    class="citationDate"
+                  >
+                    
+                    2007
+                    
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-478"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-date-recorded-label"
+              >
+                Recording date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationDate"
+                >
+                  
+                  1963-10-17
+                  
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-478"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-geographic-area-label"
+              >
+                Geographic co-ordinates
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-478"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-series-label"
+              >
+                Series
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <a
+                  data-testid="rek-series"
+                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=undefined&searchMode=advanced"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-478"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-language-label"
+              >
+                Language
               </span>
             </div>
             <div
@@ -1763,72 +1283,186 @@ exports[`Additional Information Component  should not render map with no geo coo
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
               >
                 <ul
-                  class="AdditionalInformationClass-list-491 list"
+                  class="AdditionalInformationClass-list-477 list"
                 >
                   <li
-                    data-testid="rek-keywords-0"
+                    data-testid="rek-language-0"
                   >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt&searchQueryParams%5Ball%5D="
-                    >
-                      Akt
-                    </a>
+                    eng
                   </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-478"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-license-label"
+              >
+                Licence
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span>
+                  <a
+                    data-testid="rek-license-lookup"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution-NonCommercial+3.0+International+(CC+BY-NC+3.0)+no+derivatives"
+                  >
+                    Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0) no derivatives
+                  </a>
+                  <a
+                    class="makeStyles-externalLink-486 makeStyles-externalLink-488"
+                    data-testid="rek-license-link"
+                    href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
+                    id="rek-license-link"
+                    rel="noopener noreferrer"
+                    tabindex="0"
+                    target="_blank"
+                  >
+                    <div
+                      class="fez-icon license cc-by-nc-nd"
+                    />
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-478"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-alternate-genre-label"
+              >
+                Genres
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="AdditionalInformationClass-list-477 list"
+                >
                   <li
-                    data-testid="rek-keywords-1"
+                    data-testid="rek-alternate-genre-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D="
                     >
-                      Breast cancer
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-2"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B&searchQueryParams%5Ball%5D="
-                    >
-                      Ca2+
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-3"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia&searchQueryParams%5Ball%5D="
-                    >
-                      Hypoxia
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-4"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN&searchQueryParams%5Ball%5D="
-                    >
-                      PTEN
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-5"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction&searchQueryParams%5Ball%5D="
-                    >
-                      Signal transduction
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-6"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1&searchQueryParams%5Ball%5D="
-                    >
-                      TRPC1
+                      Conversation
                     </a>
                   </li>
                 </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-478"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-subject-label"
+              >
+                Subject(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="AdditionalInformationClass-list-477 list"
+                >
+                  <li
+                    data-testid="rek-subject-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D="
+                    >
+                      310199
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-subject-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D="
+                    >
+                      450019
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-subject-2"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D="
+                    >
+                      450776
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-478"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-transcript-label"
+              >
+                Transcript
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                Researcher: Food?
+                <br />
+                 Participant: (Traditional Language)
               </span>
             </div>
           </div>
@@ -23519,7 +23153,7 @@ exports[`Additional Information Component  should render map with geo coordinate
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-479 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-492 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-additional-information"
       id="standard-card-additional-information"
     >
@@ -23530,7 +23164,7 @@ exports[`Additional Information Component  should render map with geo coordinate
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-484 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-497 css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -23544,10 +23178,10 @@ exports[`Additional Information Component  should render map with geo coordinate
         id="standard-card-additional-information-content"
       >
         <div
-          class="AdditionalInformationClass-containerPadding-478"
+          class="AdditionalInformationClass-containerPadding-491"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
@@ -23556,7 +23190,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-author-label"
               >
-                Author(s)
+                Creator(s)
               </span>
             </div>
             <div
@@ -23571,16 +23205,16 @@ exports[`Additional Information Component  should render map with geo coordinate
                   
                   
                   <a
-                    class="AuthorsCitationView-authorIdLink-485"
+                    class="authorNameLink"
                     data-testid="rek-author-0-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=88893&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=88893+(Azimi%2C+Iman)&searchMode=advanced"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Shutter%2C+Leigh&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
                       
-                      Azimi, Iman
+                      Shutter, Leigh
                       
                     </span>
                   </a>
@@ -23589,78 +23223,30 @@ exports[`Additional Information Component  should render map with geo coordinate
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Arthurs%2C+Andy&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
                       
-                      Milevskiy, Michael J. G.
+                      Arthurs, Andy
                       
                     </span>
                   </a>
                   , 
                   
                   <a
-                    class="AuthorsCitationView-authorIdLink-485"
+                    class="AuthorsCitationView-authorIdLink-498"
                     data-testid="rek-author-2-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1706239&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1706239+(Kaemmerer%2C+Elke)&searchMode=advanced"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=486&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=486+(Bamford%2C+Greg)&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
                       
-                      Kaemmerer, Elke
-                      
-                    </span>
-                  </a>
-                  , 
-                  
-                  <a
-                    class="AuthorsCitationView-authorIdLink-485"
-                    data-testid="rek-author-3-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=97626&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=97626+(Turner%2C+Dane)&searchMode=advanced"
-                  >
-                    <span
-                      class="citationAuthor"
-                      data-testid="rek-author-3"
-                    >
-                      
-                      Turner, Dane
-                      
-                    </span>
-                  </a>
-                  , 
-                  
-                  <a
-                    class="AuthorsCitationView-authorIdLink-485"
-                    data-testid="rek-author-4-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=95450&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=95450+(Yapa%2C+Kunsala+T.+D.+S.)&searchMode=advanced"
-                  >
-                    <span
-                      class="citationAuthor"
-                      data-testid="rek-author-4"
-                    >
-                      
-                      Yapa, Kunsala T. D. S.
-                      
-                    </span>
-                  </a>
-                  , 
-                  
-                  <a
-                    class="AuthorsCitationView-authorIdLink-485"
-                    data-testid="rek-author-5-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1671&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1671+(Brown%2C+Melissa+A.)&searchMode=advanced"
-                  >
-                    <span
-                      class="citationAuthor"
-                      data-testid="rek-author-5"
-                    >
-                      
-                      Brown, Melissa A.
+                      Bamford, Greg
                       
                     </span>
                   </a>
@@ -23668,47 +23254,31 @@ exports[`Additional Information Component  should render map with geo coordinate
                   
                   <a
                     class="authorNameLink"
-                    data-testid="rek-author-6-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Thompson%2C+Erik+W.&searchMode=advanced"
+                    data-testid="rek-author-3-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=McColl%2C+Mary+Rose&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
-                      data-testid="rek-author-6"
+                      data-testid="rek-author-3"
                     >
                       
-                      Thompson, Erik W.
-                      
-                    </span>
-                  </a>
-                  , 
-                  
-                  <a
-                    class="AuthorsCitationView-authorIdLink-485"
-                    data-testid="rek-author-7-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=973&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=973+(Roberts-Thomson%2C+Sarah+J.)&searchMode=advanced"
-                  >
-                    <span
-                      class="citationAuthor"
-                      data-testid="rek-author-7"
-                    >
-                      
-                      Roberts-Thomson, Sarah J.
+                      McColl, Mary Rose
                       
                     </span>
                   </a>
                   , 
                    and 
                   <a
-                    class="AuthorsCitationView-authorIdLink-485"
-                    data-testid="rek-author-8-link"
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=972&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=972+(Monteith%2C+Gregory+R.)&searchMode=advanced"
+                    class="AuthorsCitationView-authorIdLink-498"
+                    data-testid="rek-author-4-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=146&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=146+(Skinner%2C+Peter+R.)&searchMode=advanced"
                   >
                     <span
                       class="citationAuthor"
-                      data-testid="rek-author-8"
+                      data-testid="rek-author-4"
                     >
                       
-                      Monteith, Gregory R.
+                      Skinner, Peter R.
                       
                     </span>
                   </a>
@@ -23720,10 +23290,10 @@ exports[`Additional Information Component  should render map with geo coordinate
           </div>
         </div>
         <div
-          class="AdditionalInformationClass-containerPadding-478"
+          class="AdditionalInformationClass-containerPadding-491"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
@@ -23744,560 +23314,17 @@ exports[`Additional Information Component  should render map with geo coordinate
                 <span
                   data-testid="rek-title"
                 >
-                  TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
+                  Hearing the city Symposium Title 5: In conversation
                 </span>
               </span>
             </div>
           </div>
         </div>
         <div
-          class="AdditionalInformationClass-containerPadding-478"
+          class="AdditionalInformationClass-containerPadding-491"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-description-label"
-              >
-                Abstract
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-description"
-                >
-                  This is a test of the abstract
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-journal-name-label"
-              >
-                Journal name
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span>
-                  <span
-                    data-testid="rek-journal-name"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                    >
-                      <span>
-                        Journal of Cell Science
-                      </span>
-                    </a>
-                    <span
-                      data-testid="era-year-listed"
-                    >
-                       
-                      (ERA 2010 Journal(s) Listed)
-                    </span>
-                  </span>
-                  <span>
-                     
-                    <a
-                      aria-label="Check publisher's OA archiving policy in a new window"
-                      class="makeStyles-externalLink-486 makeStyles-externalLink-488"
-                      data-testid="rek-journal-name-sherpa-link"
-                      href="https://example.com/"
-                      id="rek-journal-name-sherpa-link"
-                      rel="noopener noreferrer"
-                      tabindex="0"
-                      target="_blank"
-                      title="Link to https://example.com/ will open in a new window."
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-487 css-i4bv87-MuiSvgIcon-root"
-                        data-testid="OpenInNewIcon"
-                        focusable="false"
-                        id="rek-journal-name-sherpa-link-new-window-icon"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                        />
-                      </svg>
-                      Check publisher's open access policy
-                    </a>
-                  </span>
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-issn-label"
-              >
-                ISSN
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <ul
-                  class="AdditionalInformationClass-list-477 list"
-                >
-                  <li
-                    data-testid="rek-issn-0"
-                  >
-                    1477-9137
-                  </li>
-                </ul>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-date-label"
-              >
-                Publication/Start date
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-date"
-                >
-                  <span
-                    class="citationDate"
-                  >
-                    
-                    2017-07-01
-                    
-                  </span>
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-date-available-label"
-              >
-                Year available
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  class="citationDate"
-                >
-                  
-                  2017
-                  
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-doi-label"
-              >
-                DOI
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-doi"
-                >
-                  <a
-                    aria-label="Open this DOI in an new window"
-                    class="citationDoiLink makeStyles-externalLink-486 makeStyles-externalLink-489"
-                    data-testid="citation-doi-link"
-                    href="https://doi.org/10.1242/jcs.196659"
-                    id="citation-doi-link"
-                    rel="noopener noreferrer"
-                    tabindex="0"
-                    target="_blank"
-                    title="Open this DOI in an new window"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-487 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="OpenInNewIcon"
-                      focusable="false"
-                      id="citation-doi-link-new-window-icon"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                      />
-                    </svg>
-                    https://doi.org/10.1242/jcs.196659
-                  </a>
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-oa-status-label"
-              >
-                Open access status
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-oa-status"
-                >
-                  DOI
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-oa-status-type-label"
-              >
-                Open access status type
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-oa-status-type"
-                >
-                  Bronze
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-volume-number-label"
-              >
-                Volume
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-volume-number"
-                >
-                  130
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-issue-number-label"
-              >
-                Issue
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-issue-number"
-                >
-                  14
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-start-page-label"
-              >
-                Start page
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-start-page"
-                >
-                  2292
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-end-page-label"
-              >
-                End page
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-end-page"
-                >
-                  2305
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-total-pages-label"
-              >
-                Total pages
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-total-pages"
-                >
-                  14
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-article-number-label"
-              >
-                Article number
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-article-number"
-                >
-                  article 123
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-place-of-publication-label"
-              >
-                Place of publication
-              </span>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-              >
-                <span
-                  data-testid="rek-place-of-publication"
-                >
-                  Cambridge, United Kingdom
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="AdditionalInformationClass-containerPadding-478"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
@@ -24317,28 +23344,162 @@ exports[`Additional Information Component  should render map with geo coordinate
               >
                 <a
                   data-testid="rek-publisher"
-                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
+                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Centre+for+Subtropical+Design%2C+Queensland+University+of+Technology&searchMode=advanced"
                 >
-                  Company of Biologists
+                  Centre for Subtropical Design, Queensland University of Technology
                 </a>
               </span>
             </div>
           </div>
         </div>
         <div
-          class="AdditionalInformationClass-containerPadding-478"
+          class="AdditionalInformationClass-containerPadding-491"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-476 gridRow css-1gzor41-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                data-testid="rek-keywords-label"
+                data-testid="rek-date-label"
               >
-                Keyword(s)
+                Date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-date"
+                >
+                  <span
+                    class="citationDate"
+                  >
+                    
+                    2007
+                    
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-491"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-date-recorded-label"
+              >
+                Recording date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationDate"
+                >
+                  
+                  1963-10-17
+                  
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-491"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-geographic-area-label"
+              >
+                Geographic co-ordinates
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <div>
+                  <div
+                    id="mock-google-maps"
+                  />
+                  <div
+                    id="mock-marker"
+                  />
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-491"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-series-label"
+              >
+                Series
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <a
+                  data-testid="rek-series"
+                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=undefined&searchMode=advanced"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-491"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-language-label"
+              >
+                Language
               </span>
             </div>
             <div
@@ -24348,72 +23509,186 @@ exports[`Additional Information Component  should render map with geo coordinate
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
               >
                 <ul
-                  class="AdditionalInformationClass-list-477 list"
+                  class="AdditionalInformationClass-list-490 list"
                 >
                   <li
-                    data-testid="rek-keywords-0"
+                    data-testid="rek-language-0"
                   >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt&searchQueryParams%5Ball%5D="
-                    >
-                      Akt
-                    </a>
+                    eng
                   </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-491"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-license-label"
+              >
+                Licence
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span>
+                  <a
+                    data-testid="rek-license-lookup"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution-NonCommercial+3.0+International+(CC+BY-NC+3.0)+no+derivatives"
+                  >
+                    Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0) no derivatives
+                  </a>
+                  <a
+                    class="makeStyles-externalLink-499 makeStyles-externalLink-501"
+                    data-testid="rek-license-link"
+                    href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
+                    id="rek-license-link"
+                    rel="noopener noreferrer"
+                    tabindex="0"
+                    target="_blank"
+                  >
+                    <div
+                      class="fez-icon license cc-by-nc-nd"
+                    />
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-491"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-alternate-genre-label"
+              >
+                Genres
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="AdditionalInformationClass-list-490 list"
+                >
                   <li
-                    data-testid="rek-keywords-1"
+                    data-testid="rek-alternate-genre-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D="
                     >
-                      Breast cancer
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-2"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B&searchQueryParams%5Ball%5D="
-                    >
-                      Ca2+
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-3"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia&searchQueryParams%5Ball%5D="
-                    >
-                      Hypoxia
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-4"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN&searchQueryParams%5Ball%5D="
-                    >
-                      PTEN
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-5"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction&searchQueryParams%5Ball%5D="
-                    >
-                      Signal transduction
-                    </a>
-                  </li>
-                  <li
-                    data-testid="rek-keywords-6"
-                  >
-                    <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1&searchQueryParams%5Ball%5D="
-                    >
-                      TRPC1
+                      Conversation
                     </a>
                   </li>
                 </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-491"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-subject-label"
+              >
+                Subject(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="AdditionalInformationClass-list-490 list"
+                >
+                  <li
+                    data-testid="rek-subject-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D="
+                    >
+                      310199
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-subject-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D="
+                    >
+                      450019
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-subject-2"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D="
+                    >
+                      450776
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AdditionalInformationClass-containerPadding-491"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 AdditionalInformationClass-gridRow-489 gridRow css-1gzor41-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-transcript-label"
+              >
+                Transcript
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                Researcher: Food?
+                <br />
+                 Participant: (Traditional Language)
               </span>
             </div>
           </div>

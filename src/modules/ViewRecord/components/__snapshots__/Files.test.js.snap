@@ -3821,9 +3821,9 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-0"
             >
               <a
-                data-testid="preview-link-test.txt"
-                id="preview-link-test.txt"
-                title="Click to open a preview of http://localhost/view/UQ:1/test.txt"
+                data-testid="preview-link-test.mov"
+                id="preview-link-test.mov"
+                title="Click to open a preview of http://localhost/view/UQ:1/test.mov"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
@@ -3858,30 +3858,17 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
-                  <a
-                    class="makeStyles-filename-317 makeStyles-filenameParent-316 makeStyles-externalLink-320 makeStyles-externalLink-322"
-                    data-testid="file-name-0-download-link"
-                    href="http://localhost/view/UQ:1/test.txt"
-                    id="file-name-0-download-link"
-                    rel="noopener noreferrer"
-                    tabindex="0"
-                    target="_blank"
-                    title="test.txt"
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-316 css-1omq3q2-MuiTypography-root"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-321 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="OpenInNewIcon"
-                      focusable="false"
-                      id="file-name-0-download-link-new-window-icon"
-                      viewBox="0 0 24 24"
+                    <a
+                      class="makeStyles-filename-317"
+                      data-testid="file-name-0-preview"
+                      id="file-name-0-preview"
                     >
-                      <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                      />
-                    </svg>
-                    test.txt
-                  </a>
+                      test.mov
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -3925,31 +3912,17 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-305 css-1phf2xn-MuiGrid2-root"
               data-testid="dsi-mimetype-1"
             >
-              <a
-                data-testid="preview-link-test.jpg"
-                id="preview-link-test.jpg"
-                title="Click to open a preview of http://localhost/view/UQ:1/test.jpg"
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-304 css-ez3bwd-MuiSvgIcon-root"
+                data-testid="VideocamIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <span
-                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
-                  role="progressbar"
-                  style="width: 15px; height: 15px;"
-                >
-                  <svg
-                    class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-                    viewBox="22 22 44 44"
-                  >
-                    <circle
-                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-                      cx="44"
-                      cy="44"
-                      fill="none"
-                      r="21.5"
-                      stroke-width="1"
-                    />
-                  </svg>
-                </span>
-              </a>
+                <path
+                  d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"
+                />
+              </svg>
             </div>
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-4 FilesClass-dataWrapper-303 css-16wq85-MuiGrid2-root"
@@ -3971,7 +3944,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
-                      test.jpg
+                      apple.mxf
                     </a>
                   </p>
                 </div>
@@ -4018,9 +3991,9 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-2"
             >
               <a
-                data-testid="preview-link-test.mov"
-                id="preview-link-test.mov"
-                title="Click to open a preview of http://localhost/view/UQ:1/test.mov"
+                data-testid="preview-link-test.jpg"
+                id="preview-link-test.jpg"
+                title="Click to open a preview of http://localhost/view/UQ:1/test.jpg"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
@@ -4063,7 +4036,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                       data-testid="file-name-2-preview"
                       id="file-name-2-preview"
                     >
-                      test.mov
+                      test.jpg
                     </a>
                   </p>
                 </div>
@@ -4148,7 +4121,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-10 css-immclv-MuiGrid-root"
                 >
                   <a
-                    class="makeStyles-filename-317 makeStyles-filenameParent-316 makeStyles-externalLink-320 makeStyles-externalLink-325"
+                    class="makeStyles-filename-317 makeStyles-filenameParent-316 makeStyles-externalLink-322 makeStyles-externalLink-324"
                     data-testid="file-name-3-download-link"
                     href="http://localhost/view/UQ:1/test.mp3"
                     id="file-name-3-download-link"
@@ -4159,7 +4132,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-321 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-323 css-i4bv87-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-3-download-link-new-window-icon"
@@ -4253,14 +4226,9 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-4"
             >
               <a
-                class="makeStyles-externalLink-320 makeStyles-externalLink-326"
-                data-testid="thumbnail-link"
-                href="http://localhost/view/UQ:1/test.pdf"
-                id="thumbnail-link"
-                rel="noopener noreferrer"
-                tabindex="0"
-                target="_blank"
-                title="test.pdf"
+                data-testid="preview-link-test.tiff"
+                id="preview-link-test.tiff"
+                title="Click to open a preview of http://localhost/view/UQ:1/test.tiff"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
@@ -4295,30 +4263,17 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
-                  <a
-                    class="makeStyles-filename-317 makeStyles-filenameParent-316 makeStyles-externalLink-320 makeStyles-externalLink-327"
-                    data-testid="file-name-4-download-link"
-                    href="http://localhost/view/UQ:1/test.pdf"
-                    id="file-name-4-download-link"
-                    rel="noopener noreferrer"
-                    tabindex="0"
-                    target="_blank"
-                    title="test.pdf"
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-316 css-1omq3q2-MuiTypography-root"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-321 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="OpenInNewIcon"
-                      focusable="false"
-                      id="file-name-4-download-link-new-window-icon"
-                      viewBox="0 0 24 24"
+                    <a
+                      class="makeStyles-filename-317"
+                      data-testid="file-name-4-preview"
+                      id="file-name-4-preview"
                     >
-                      <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                      />
-                    </svg>
-                    test.pdf
-                  </a>
+                      test.tiff
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -4363,9 +4318,14 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-5"
             >
               <a
-                data-testid="preview-link-test.tiff"
-                id="preview-link-test.tiff"
-                title="Click to open a preview of http://localhost/view/UQ:1/test.tiff"
+                class="makeStyles-externalLink-322 makeStyles-externalLink-325"
+                data-testid="thumbnail-link"
+                href="http://localhost/view/UQ:1/test.pdf"
+                id="thumbnail-link"
+                rel="noopener noreferrer"
+                tabindex="0"
+                target="_blank"
+                title="test.pdf"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
@@ -4400,17 +4360,30 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-316 css-1omq3q2-MuiTypography-root"
+                  <a
+                    class="makeStyles-filename-317 makeStyles-filenameParent-316 makeStyles-externalLink-322 makeStyles-externalLink-326"
+                    data-testid="file-name-5-download-link"
+                    href="http://localhost/view/UQ:1/test.pdf"
+                    id="file-name-5-download-link"
+                    rel="noopener noreferrer"
+                    tabindex="0"
+                    target="_blank"
+                    title="test.pdf"
                   >
-                    <a
-                      class="makeStyles-filename-317"
-                      data-testid="file-name-5-preview"
-                      id="file-name-5-preview"
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-323 css-i4bv87-MuiSvgIcon-root"
+                      data-testid="OpenInNewIcon"
+                      focusable="false"
+                      id="file-name-5-download-link-new-window-icon"
+                      viewBox="0 0 24 24"
                     >
-                      test.tiff
-                    </a>
-                  </p>
+                      <path
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                      />
+                    </svg>
+                    test.pdf
+                  </a>
                 </div>
               </div>
             </div>
@@ -4435,6 +4408,97 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-9cwyln-MuiGrid2-root"
               data-testid="rek-oa-status-5"
+              style="text-align: right;"
+            >
+              <span
+                class="noOaIcon"
+                data-testid="no-oa-icon"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="FilesClass-containerPadding-306"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-302 header css-1e0siu4-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-305 css-1phf2xn-MuiGrid2-root"
+              data-testid="dsi-mimetype-6"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-304 css-ez3bwd-MuiSvgIcon-root"
+                data-testid="InsertDriveFileIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-4 FilesClass-dataWrapper-303 css-16wq85-MuiGrid2-root"
+              data-testid="dsi-dsid-6"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-ygucae-MuiGrid-root"
+                data-testid="file-name-6"
+                id="file-name-6"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
+                >
+                  <a
+                    class="makeStyles-filename-317 makeStyles-filenameParent-316 makeStyles-externalLink-322 makeStyles-externalLink-327"
+                    data-testid="file-name-6-download-link"
+                    href="http://localhost/view/UQ:1/random.txt"
+                    id="file-name-6-download-link"
+                    rel="noopener noreferrer"
+                    tabindex="0"
+                    target="_blank"
+                    title="random.txt"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-323 css-i4bv87-MuiSvgIcon-root"
+                      data-testid="OpenInNewIcon"
+                      focusable="false"
+                      id="file-name-6-download-link-new-window-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                      />
+                    </svg>
+                    random.txt
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-303 css-170m22o-MuiGrid2-root"
+              data-testid="dsi-label-6"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+              />
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-303 css-ukxn5j-MuiGrid2-root"
+              data-testid="dsi-size-6"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+              >
+                NaN undefined
+              </p>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-9cwyln-MuiGrid2-root"
+              data-testid="rek-oa-status-6"
               style="text-align: right;"
             >
               <span

@@ -256,7 +256,7 @@ export class FilesClass extends Component {
         });
     };
 
-    showPreview = ({ checksums = {}, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl }) => {
+    showPreview = ({ checksums, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl }) => {
         if (securityStatus) {
             this.setState({
                 preview: {
