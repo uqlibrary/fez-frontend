@@ -706,7 +706,7 @@ describe('ManageUsers', () => {
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
-        const { getByTestId, getByText, debug } = setup({});
+        const { getByTestId, getByText } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
@@ -720,7 +720,6 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('confirm-users-delete-this-user-confirmation'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
-        debug(undefined, 100000);
         expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-username-1')).toHaveAttribute('value', 'uqvdesai');
