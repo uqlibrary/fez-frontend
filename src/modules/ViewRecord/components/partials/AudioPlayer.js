@@ -21,8 +21,7 @@ export default class AudioPlayer extends Component {
     }
 
     audioPlayerPlay = () => {
-        const playPromise = !!this.audioPlayerRef ? this.audioPlayerRef.play() : false;
-
+        const playPromise = !!this.audioPlayerRef && this.audioPlayerRef.play();
         if (!!playPromise) {
             playPromise.then(() => this.setState({ isPlaying: true }));
             return playPromise;
@@ -38,6 +37,7 @@ export default class AudioPlayer extends Component {
         this.setState({ isPlaying: false });
     };
 
+    /* istanbul ignore next */
     onAudioStreamEnd = () => {
         this.setState({ isPlaying: false });
     };

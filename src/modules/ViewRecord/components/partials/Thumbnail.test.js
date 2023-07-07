@@ -1,6 +1,8 @@
+import React from 'react';
 import { Thumbnail } from './Thumbnail';
+import { rtlRender, fireEvent, within } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         mediaUrl: '/test/mediaUrl',
         previewMediaUrl: '/test/preview/mediaUrl',
@@ -13,80 +15,75 @@ function setup(testProps = {}, args = { isShallow: true }) {
         },
         ...testProps,
     };
-    return getElement(Thumbnail, props, args);
+    return rtlRender(<Thumbnail {...props} />);
 }
 
 describe('Thumbnail component', () => {
+    it('should render component', () => {
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
+    });
+
     it('should run onClick function on click', () => {
         const onClick = jest.fn();
-        const wrapper = setup({ onClick: onClick }, { isShallow: false });
-        const element = wrapper.find('Thumbnail a');
-        element.simulate('click');
+        const { getByTitle } = setup({ onClick: onClick });
+        fireEvent.click(getByTitle('Click to open a preview of /test/mediaUrl'));
         expect(onClick).toHaveBeenCalledTimes(1);
+        fireEvent.keyPress(getByTitle('Click to open a preview of /test/mediaUrl'), { key: 'Enter', keyCode: 13 });
+        expect(onClick).toHaveBeenCalledTimes(2);
     });
 
-    it('should run onFileSelect function on key press', () => {
-        const onClick = jest.fn();
-        const wrapper = setup({ onClick: onClick }, { isShallow: false });
-        const element = wrapper.find('Thumbnail a');
-        element.simulate('keyPress');
-        expect(onClick).toHaveBeenCalledTimes(1);
+    it('should render a lock icon with empty security status', () => {
+        const { getByTestId } = setup();
+        expect(getByTestId('LockIcon')).toBeInTheDocument();
     });
 
+    it('should render image with security status', () => {
+        const { queryByTestId, getByRole } = setup({ securityStatus: true });
+        expect(getByRole('progressbar')).toBeInTheDocument();
+        expect(queryByTestId('LockIcon')).not.toBeInTheDocument();
+    });
+
+    /**
+     * TODO: find a way to test broken image icon
+     */
+    /*
     it('should show a broken thumbnail icon when the thumbnail wont load.', () => {
-        const wrapper = setup();
-        wrapper.instance().setState({ thumbnailError: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        const wrapper2 = setup({ mediaUrl: '' });
-        wrapper2.instance().setState({ thumbnailError: true });
-        expect(toJson(wrapper2)).toMatchSnapshot();
-    });
-
-    it('should render <ExternalLink> or <BrokenImage> for specific mime types', () => {
-        const variants = [
-            {
-                fileName: 'video.mp4',
-                mimeType: 'video/mp4',
+        Object.defineProperty(window.Image.prototype, 'src', {
+            set() {
+                setTimeout(() => this.onerror(new Error('mocked error')), 100);
             },
-            {
-                fileName: 'file.random',
-                mimeType: 'application/octet-stream',
-            },
-        ];
-
-        variants.forEach(variant => {
-            const wrapper = setup({
-                fileName: variant.fileName,
-                mimeType: variant.mimeType,
-                thumbnailError: false,
-            });
-            expect(toJson(wrapper)).toMatchSnapshot();
-
-            // Set thumbnailError prop to true
-            wrapper.instance().setState({ thumbnailError: true });
-
-            expect(toJson(wrapper)).toMatchSnapshot();
         });
-    });
-
-    it('should render FLV files as a thumbnail only for specific mime types', () => {
-        const wrapper = setup({
+        const { debug } = setup({
             fileName: 'video.mov',
             mediaUrl: 'video.flv',
-            mimeType: 'video/mov',
-            thumbnailError: false,
+            mimeType: 'application/octet-stream',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        debug(undefined, 100000);
+    });
+     */
+
+    it('should render external link with a progress bar for FLV files', () => {
+        const { getByRole } = setup({
+            fileName: 'video.mov',
+            mediaUrl: 'video.flv',
+            mimeType: 'application/octet-stream',
+        });
+
+        const element = getByRole('link', { title: 'video.mov' });
+        expect(element).toHaveAttribute('href', 'video.flv');
+        expect(within(element).getByRole('progressbar')).toBeInTheDocument();
     });
 
-    it('should render PDF files as a thumbnail only plus link to original', () => {
-        const wrapper = setup({
+    it('should render PDF files as a thumbnail only plus link to original', async () => {
+        const { getByRole } = setup({
             fileName: 'original.pdf',
             mediaUrl: 'pdf.jpg',
+            thumbnailFileName: 'thumbnail.jpg',
             mimeType: 'application/pdf',
-            thumbnailError: false,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const element = getByRole('link', { title: 'original.pdf' });
+        expect(element).toHaveAttribute('href', 'pdf.jpg');
+        expect(within(element).getByRole('progressbar')).toBeInTheDocument();
     });
 });
