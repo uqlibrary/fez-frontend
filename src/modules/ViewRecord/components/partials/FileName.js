@@ -118,6 +118,7 @@ const FileName = ({
                             onKeyPress={showPreview}
                             className={classes.filename}
                             id={`${id}-preview`}
+                            data-testid={`${id}-preview`}
                         >
                             {fileName}
                         </a>

@@ -70,7 +70,7 @@ export const NotFound = () => {
         return <StandardPage standardPageId="not-found" {...locale.pages.notFound} />;
     }
 
-    return <div id="empty" />;
+    return <div data-testid="empty" />;
 };
 
 export default React.memo(NotFound);

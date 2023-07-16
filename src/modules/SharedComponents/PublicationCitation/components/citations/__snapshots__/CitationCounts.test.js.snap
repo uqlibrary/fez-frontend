@@ -5283,6 +5283,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               >
                                 <span
                                   className="noOaIcon"
+                                  data-testid="no-oa-icon"
                                 />
                               </OpenAccessIcon>
                             </WithStyles(OpenAccessIcon)>
@@ -12455,6 +12456,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               >
                                 <span
                                   className="noOaIcon"
+                                  data-testid="no-oa-icon"
                                 />
                               </OpenAccessIcon>
                             </WithStyles(OpenAccessIcon)>
@@ -18914,6 +18916,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               >
                                 <span
                                   className="noOaIcon"
+                                  data-testid="no-oa-icon"
                                 />
                               </OpenAccessIcon>
                             </WithStyles(OpenAccessIcon)>
@@ -22319,6 +22322,7 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                               >
                                 <span
                                   className="noOaIcon"
+                                  data-testid="no-oa-icon"
                                 />
                               </OpenAccessIcon>
                             </WithStyles(OpenAccessIcon)>
@@ -22986,6 +22990,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
 >
   <span
     className="noOaIcon"
+    data-testid="no-oa-icon"
   />
 </OpenAccessIcon>
 `;

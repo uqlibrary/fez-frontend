@@ -211,7 +211,7 @@ export const FacetsFilter = ({
     };
 
     if (facetsToDisplay.length === 0 && !hasActiveFilters) {
-        return <span id="empty-facet-filters" className="facetsFilter empty" />;
+        return <span id="empty-facet-filters" data-testid="empty-facet-filters" className="facetsFilter empty" />;
     }
     return (
         <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">

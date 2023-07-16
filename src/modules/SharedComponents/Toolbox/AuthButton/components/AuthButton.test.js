@@ -16,20 +16,20 @@ function setup(testProps = {}) {
 describe('AuthButton snapshots test', () => {
     it('renders logged out status', () => {
         const { getByTestId, getByRole } = setup({ isAuthorizedUser: false });
-        expect(getByTestId('logged-out-icon')).toBeInTheDocument();
+        expect(getByTestId('PersonOutlineIcon')).toBeInTheDocument(); // logged out icon
         expect(getByRole('button')).toHaveAttribute('aria-label', 'Please log in');
     });
 
     it('renders logged in user status', () => {
         const { getByTestId, getByRole } = setup({ isAuthorizedUser: true });
-        expect(getByTestId('logged-in-icon')).toBeInTheDocument();
+        expect(getByTestId('PersonIcon')).toBeInTheDocument(); // logged in icon
         expect(getByRole('button')).toHaveAttribute('aria-label', 'Log out');
     });
 
     it('should fire a given action on clicking the button', () => {
         const onClickFn = jest.fn();
         const { getByTestId } = setup({ isAuthorizedUser: true, onClick: onClickFn });
-        fireEvent.click(getByTestId('logged-in-icon'));
+        fireEvent.click(getByTestId('PersonIcon'));
         expect(onClickFn).toHaveBeenCalled();
     });
 });

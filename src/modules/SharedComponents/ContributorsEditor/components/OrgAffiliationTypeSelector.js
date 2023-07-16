@@ -9,7 +9,9 @@ import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ } from 'config/general';
 export default function OrgAffilicationTypeSelector({ affiliation, onAffiliationChange, locale, error, disabled }) {
     return (
         <FormControl variant="standard" fullWidth error={error}>
-            <InputLabel id="org-affiliation-label">{locale.inputLabel}</InputLabel>
+            <InputLabel id="org-affiliation-label" data-testid="org-affiliation-label">
+                {locale.inputLabel}
+            </InputLabel>
             <Select
                 variant="standard"
                 value={affiliation}

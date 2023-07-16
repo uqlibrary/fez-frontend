@@ -38,8 +38,8 @@ describe('AdminViewRecordDrawer', () => {
         const { getByTestId } = setup({ open: undefined, mobileOpen: undefined });
         expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
         expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-        expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
-        expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+        expect(getByTestId('btnAdminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+        expect(getByTestId('btnAdminRecordDrawerCloseBtnMobile')).not.toBeVisible();
     });
     it('should show affiliates section with the text "Yes" when affiliates are available', () => {
         const content = createDefaultDrawerDescriptorObject(
@@ -92,16 +92,16 @@ describe('AdminViewRecordDrawer', () => {
         const { getByTestId } = setup({ open: true });
         expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
         expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-        expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).toBeVisible();
-        expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+        expect(getByTestId('btnAdminRecordDrawerCloseBtnDesktop')).toBeVisible();
+        expect(getByTestId('btnAdminRecordDrawerCloseBtnMobile')).not.toBeVisible();
     });
     it('should render mobile admin drawer at mobile breakpoint', () => {
         window.matchMedia = createMatchMedia(320);
         const { getByTestId } = setup({ mobileOpen: true });
         expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
         expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-        expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
-        expect(getByTestId('adminRecordDrawerCloseBtnMobile')).toBeVisible();
+        expect(getByTestId('btnAdminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+        expect(getByTestId('btnAdminRecordDrawerCloseBtnMobile')).toBeVisible();
     });
     it('should call the clipboard copy function when a copy icon is clicked', async () => {
         const { getByTestId, queryByTestId } = setup({ open: true });

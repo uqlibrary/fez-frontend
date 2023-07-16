@@ -51,6 +51,7 @@ export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, face
                 <ListItemIcon>
                     <Clear
                         id={`clear-facet-filter-nested-item-${typeof index === 'string' ? index : idText}`}
+                        data-testid={`clear-facet-filter-nested-item-${typeof index === 'string' ? index : idText}`}
                         disabled={disabled}
                     />
                 </ListItemIcon>

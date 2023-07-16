@@ -91,7 +91,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
             !journalSearchQueryParams?.keywords ||
             Object.values(journalSearchQueryParams?.keywords).length === 0)
     ) {
-        return <div id="journal-search-results-no-keywords" />;
+        return <div data-testid="journal-search-results-no-keywords" />;
     }
 
     if (

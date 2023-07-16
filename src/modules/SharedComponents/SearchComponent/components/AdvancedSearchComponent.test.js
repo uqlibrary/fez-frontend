@@ -1,7 +1,7 @@
 import React from 'react';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor, act } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, act, within } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -32,7 +32,7 @@ describe('AdvancedSearchComponent', () => {
         const { getByTestId, getByText } = setup();
         expect(getByText(/advanced search/i)).toBeInTheDocument();
         expect(getByText(/please select a field to search/i)).toBeInTheDocument();
-        expect(getByTestId('add-another-search-row').disabled).toBeTruthy();
+        expect(getByTestId('advanced-search-row-add').disabled).toBeTruthy();
         expect(getByTestId('initial-input').disabled).toBeTruthy();
         expect(getByTestId('advanced-search')).toBeInTheDocument();
     });
@@ -51,7 +51,7 @@ describe('AdvancedSearchComponent', () => {
         const { getByTestId, getByText } = setup({ isOpenAccess: true, onToggleOpenAccess: testFn });
         expect(getByText(/advanced search/i)).toBeInTheDocument();
         expect(getByText(/please select a field to search/i)).toBeInTheDocument();
-        expect(getByTestId('add-another-search-row').disabled).toBeTruthy();
+        expect(getByTestId('advanced-search-row-add').disabled).toBeTruthy();
         expect(getByTestId('initial-input').disabled).toBeTruthy();
         expect(getByTestId('advanced-search')).toBeInTheDocument();
         expect(getByText('open access/full text')).toBeInTheDocument();
@@ -67,7 +67,7 @@ describe('AdvancedSearchComponent', () => {
         });
         expect(getByText(/advanced search/i)).toBeInTheDocument();
         expect(getByTestId('any-field-input').value).toEqual('i feel lucky');
-        expect(getByTestId('add-another-search-row').disabled).toBeFalsy();
+        expect(getByTestId('advanced-search-row-add').disabled).toBeFalsy();
         expect(getByTestId('advanced-search')).toBeInTheDocument();
         expect(getByText('open access/full text')).toBeInTheDocument();
     });
@@ -75,7 +75,7 @@ describe('AdvancedSearchComponent', () => {
     it('should toggle search mode from advanced to simple', () => {
         const testFn = jest.fn();
         const { getByTestId } = setup({ onToggleSearchMode: testFn });
-        fireEvent.click(getByTestId('toggle-to-simple-search-mode'));
+        fireEvent.click(getByTestId('toggle-to-simple-search'));
         expect(testFn).toHaveBeenCalled();
     });
 
@@ -85,7 +85,7 @@ describe('AdvancedSearchComponent', () => {
             onAdvancedSearchRowAdd: testFn,
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
-        fireEvent.click(getByTestId('add-another-search-row'));
+        fireEvent.click(getByTestId('advanced-search-row-add'));
         expect(testFn).toHaveBeenCalled();
     });
 
@@ -113,7 +113,7 @@ describe('AdvancedSearchComponent', () => {
             ],
         });
 
-        fireEvent.click(getByTestId('reset-advanced-search'));
+        fireEvent.click(getByTestId('advanced-search-reset'));
         expect(testFn).toHaveBeenCalled();
     });
 
@@ -172,14 +172,14 @@ describe('AdvancedSearchComponent', () => {
     });
 
     it('should render advanced search docTypes with checked values based on props', async () => {
-        const { getByTestId, getAllByRole } = setup({
+        const { getByTestId, getByRole, getAllByRole } = setup({
             isOpenAccess: true,
             docTypes: [179, 202],
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
 
-        fireEvent.mouseDown(getByTestId('document-type-selector'));
-        const list = await waitFor(() => getByTestId('menu-document-type-selector'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        const list = await waitFor(() => getByRole('presentation'));
         const options = getAllByRole('option', list);
         expect(options[4]).toHaveClass('Mui-selected'); // Journal article
         expect(options[4].checked).toBeTruthy(); // Journal article
@@ -188,28 +188,29 @@ describe('AdvancedSearchComponent', () => {
     });
 
     it('should render advanced search docTypes with checked values based on fixed invalid props', async () => {
-        const { getByTestId, getAllByRole } = setup({
+        const { getByTestId, getByRole, getAllByRole } = setup({
             isOpenAccess: true,
             docTypes: ['179', '202'],
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
 
-        fireEvent.mouseDown(getByTestId('document-type-selector'));
-        const list = await waitFor(() => getByTestId('menu-document-type-selector'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        const list = await waitFor(() => getByRole('presentation'));
+        // const list = await waitFor(() => getByTestId('menu-document-type-selector'));
         const options = getAllByRole('option', list);
         expect(options[4]).toHaveClass('Mui-selected'); // Journal article
         expect(options[12]).toHaveClass('Mui-selected'); // Generic document
     });
 
     it('should render advanced search with no valid checked docTypes based on invalid props', async () => {
-        const { getByTestId, getAllByRole } = setup({
+        const { getByTestId, getByRole, getAllByRole } = setup({
             isOpenAccess: true,
             docTypes: ['test', 202],
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
 
-        fireEvent.mouseDown(getByTestId('document-type-selector'));
-        const list = await waitFor(() => getByTestId('menu-document-type-selector'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        const list = await waitFor(() => getByRole('presentation'));
         const options = getAllByRole('option', list);
         expect(options[12].checked).toBeTruthy(); // Generic document
         expect(options[12]).toHaveClass('Mui-selected'); // Generic document

@@ -637,7 +637,7 @@ describe('ManageUsers', () => {
         expect(listItem1).toBeInTheDocument();
 
         fireEvent.click(getByTestId('users-list-row-0-delete-this-user'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-users-delete-this-user-confirmation'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
@@ -717,10 +717,9 @@ describe('ManageUsers', () => {
         expect(listItem1).toBeInTheDocument();
 
         fireEvent.click(getByTestId('users-list-row-0-delete-this-user'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-users-delete-this-user-confirmation'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
-
         expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-username-1')).toHaveAttribute('value', 'uqvdesai');
@@ -772,7 +771,7 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('select-user-1'));
         fireEvent.click(getByTestId('select-user-2'));
         fireEvent.click(getByTestId('users-delete-selected-users'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-bulk-delete-users-confirmation'));
 
         await act(() =>
             waitFor(() => {
@@ -821,7 +820,7 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('select-user-1'));
         fireEvent.click(getByTestId('select-user-2'));
         fireEvent.click(getByTestId('users-delete-selected-users'));
-        fireEvent.click(getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-bulk-delete-users-confirmation'));
 
         await waitFor(() => {
             expect(getByTestId('users-list-row-0')).toBeInTheDocument();

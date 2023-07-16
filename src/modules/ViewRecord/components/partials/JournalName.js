@@ -64,7 +64,7 @@ export default class JournalName extends PureComponent {
                 <Link to={pathConfig.list.journalName(journalName)}>
                     <span>{journalName}</span>
                 </Link>
-                {eraJournalListedText && <span className={'eraYearListed'}> {eraJournalListedText}</span>}
+                {eraJournalListedText && <span data-testid="era-year-listed"> {eraJournalListedText}</span>}
             </span>
         );
     };

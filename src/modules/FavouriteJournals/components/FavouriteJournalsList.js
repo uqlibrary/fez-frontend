@@ -26,12 +26,12 @@ export const FavouriteJournalsList = ({
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
 
     if (!loading && !error && journalsList?.total !== 0 && !journalsList?.data) {
-        return <div id="favourite-journals-list-nothing" />;
+        return <div id="favourite-journals-list-nothing" data-testid="favourite-journals-list-nothing" />;
     }
 
     if (loading) {
         return (
-            <Grid id="favourite-journals-list-loading" item xs={12}>
+            <Grid id="favourite-journals-list-loading" data-testid="favourite-journals-list-loading" item xs={12}>
                 <InlineLoader message={txt.loading} />
             </Grid>
         );
@@ -39,7 +39,7 @@ export const FavouriteJournalsList = ({
 
     if (error) {
         return (
-            <Grid id="favourite-journals-list-error" item xs={12}>
+            <Grid id="favourite-journals-list-error" data-testid="favourite-journals-list-error" item xs={12}>
                 <Alert {...error} />
             </Grid>
         );
@@ -47,7 +47,7 @@ export const FavouriteJournalsList = ({
 
     if (!journalsList.total) {
         return (
-            <Grid id="favourite-journals-list-empty" item xs={12}>
+            <Grid id="favourite-journals-list-empty" data-testid="favourite-journals-list-empty" item xs={12}>
                 {txt.empty}
             </Grid>
         );

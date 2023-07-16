@@ -66,9 +66,6 @@ export class AdditionalInformationClass extends PureComponent {
         classes: PropTypes.object,
         isNtro: PropTypes.bool,
     };
-    static contextTypes = {
-        userCountry: PropTypes.any,
-    };
 
     renderRow = (heading, data, index, field) => {
         const labelTestId = `${field.replace(/_/g, '-')}-label`;

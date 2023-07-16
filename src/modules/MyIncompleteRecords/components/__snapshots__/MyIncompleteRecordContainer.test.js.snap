@@ -175,6 +175,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                           </a>
                           <span
                             class="noOaIcon"
+                            data-testid="no-oa-icon"
                           />
                         </div>
                         <div
@@ -781,6 +782,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                        data-testid="rek-grant-agency"
                       >
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
@@ -816,6 +818,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                        data-testid="rek-grant-id"
                       >
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
@@ -1145,6 +1148,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                              data-testid="rek-author-list-row-0-name-as-published"
                               id="rek-author-list-row-0-name-as-published"
                             >
                               <div
@@ -1164,6 +1168,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+                              data-testid="rek-author-list-row-0-affiliation"
                               id="rek-author-list-row-0-affiliation"
                             >
                               <div
@@ -1277,6 +1282,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                              data-testid="rek-author-list-row-1-name-as-published"
                               id="rek-author-list-row-1-name-as-published"
                             >
                               <div
@@ -1296,6 +1302,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+                              data-testid="rek-author-list-row-1-affiliation"
                               id="rek-author-list-row-1-affiliation"
                             >
                               <div
@@ -1430,6 +1437,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                              data-testid="rek-author-list-row-2-name-as-published"
                               id="rek-author-list-row-2-name-as-published"
                             >
                               <div
@@ -1449,6 +1457,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+                              data-testid="rek-author-list-row-2-affiliation"
                               id="rek-author-list-row-2-affiliation"
                             >
                               <div
@@ -1584,6 +1593,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                              data-testid="rek-author-list-row-3-name-as-published"
                               id="rek-author-list-row-3-name-as-published"
                             >
                               <div
@@ -1603,6 +1613,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+                              data-testid="rek-author-list-row-3-affiliation"
                               id="rek-author-list-row-3-affiliation"
                             >
                               <div
@@ -1731,6 +1742,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                  data-testid="comments"
                   style="margin-top: -24px;"
                 >
                   <label
@@ -1987,6 +1999,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           </a>
                           <span
                             class="noOaIcon"
+                            data-testid="no-oa-icon"
                           />
                         </div>
                         <div
@@ -2593,6 +2606,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                        data-testid="rek-grant-agency"
                       >
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
@@ -2628,6 +2642,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                        data-testid="rek-grant-id"
                       >
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
@@ -2957,6 +2972,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                              data-testid="rek-author-list-row-0-name-as-published"
                               id="rek-author-list-row-0-name-as-published"
                             >
                               <div
@@ -2976,6 +2992,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+                              data-testid="rek-author-list-row-0-affiliation"
                               id="rek-author-list-row-0-affiliation"
                             >
                               <div
@@ -3089,6 +3106,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                              data-testid="rek-author-list-row-1-name-as-published"
                               id="rek-author-list-row-1-name-as-published"
                             >
                               <div
@@ -3108,6 +3126,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+                              data-testid="rek-author-list-row-1-affiliation"
                               id="rek-author-list-row-1-affiliation"
                             >
                               <div
@@ -3242,6 +3261,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                              data-testid="rek-author-list-row-2-name-as-published"
                               id="rek-author-list-row-2-name-as-published"
                             >
                               <div
@@ -3261,6 +3281,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+                              data-testid="rek-author-list-row-2-affiliation"
                               id="rek-author-list-row-2-affiliation"
                             >
                               <div
@@ -3396,6 +3417,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                              data-testid="rek-author-list-row-3-name-as-published"
                               id="rek-author-list-row-3-name-as-published"
                             >
                               <div
@@ -3415,6 +3437,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+                              data-testid="rek-author-list-row-3-affiliation"
                               id="rek-author-list-row-3-affiliation"
                             >
                               <div
@@ -3543,6 +3566,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                  data-testid="comments"
                   style="margin-top: -24px;"
                 >
                   <label

@@ -27,7 +27,7 @@ describe('GoogleScholar form', () => {
             .onPatch(repositories.routes.AUTHOR_API({ authorId: 111 }).apiUrl)
             .replyOnce(200, { data: { aut_id: 111, aut_google_scholar_id: 'abcd1234efgh' } });
 
-        const { getByTestId, getByText, queryByTestId } = setup({
+        const { getByTestId, getByText, queryByText } = setup({
             state: {
                 accountReducer: {
                     author: {
@@ -40,12 +40,11 @@ describe('GoogleScholar form', () => {
         expect(getByText('Add your Google Scholar identifier')).toBeInTheDocument();
 
         expect(getByTestId('aut-google-scholar-id-input')).toBeInTheDocument();
-        expect(getByTestId('aut-google-scholar-id-helper-text')).toBeInTheDocument();
-        expect(getByTestId('aut-google-scholar-id-helper-text')).toHaveTextContent('This field is required');
+        expect(getByText('This field is required')).toBeInTheDocument();
 
         fireEvent.change(getByTestId('aut-google-scholar-id-input'), { target: { value: 'abcd1234efgh' } });
 
-        expect(queryByTestId('aut-google-scholar-id-helper-text')).not.toBeInTheDocument();
+        expect(queryByText('This field is required')).toBeNull();
 
         act(() => {
             fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
@@ -61,7 +60,7 @@ describe('GoogleScholar form', () => {
 
         mockApi.onPatch(repositories.routes.AUTHOR_API({ authorId: 111 }).apiUrl).replyOnce(500);
 
-        const { getByTestId, getByText, queryByTestId } = setup({
+        const { getByTestId, getByText, queryByText } = setup({
             state: {
                 accountReducer: {
                     author: {
@@ -72,14 +71,12 @@ describe('GoogleScholar form', () => {
         });
 
         expect(getByText('Add your Google Scholar identifier')).toBeInTheDocument();
-
         expect(getByTestId('aut-google-scholar-id-input')).toBeInTheDocument();
-        expect(getByTestId('aut-google-scholar-id-helper-text')).toBeInTheDocument();
-        expect(getByTestId('aut-google-scholar-id-helper-text')).toHaveTextContent('This field is required');
+        expect(getByText('This field is required')).toBeInTheDocument();
 
         fireEvent.change(getByTestId('aut-google-scholar-id-input'), { target: { value: 'abcd1234efgh' } });
 
-        expect(queryByTestId('aut-google-scholar-id-helper-text')).not.toBeInTheDocument();
+        expect(queryByText('This field is required')).toBeNull();
 
         await act(async () => {
             fireEvent.keyDown(getByTestId('submit-aut-google-scholar-id'), { key: 'Enter', code: 'Enter' });
