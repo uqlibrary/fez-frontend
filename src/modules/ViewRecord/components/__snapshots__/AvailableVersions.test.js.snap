@@ -27,6 +27,7 @@ exports[`Available Versions Component  should render component 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-available-versions-content"
         data-testid="standard-card-available-versions-content"
         id="standard-card-available-versions-content"
       >

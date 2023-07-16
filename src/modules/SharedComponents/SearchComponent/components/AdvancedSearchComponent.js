@@ -229,8 +229,8 @@ export const AdvancedSearchComponent = ({
                                             control={
                                                 <Checkbox
                                                     id="advanced-search-open-access"
-                                                    data-analyticsid="advanced-search-open-access"
                                                     inputProps={{
+                                                        'data-analyticsid': 'advanced-search-open-access',
                                                         'data-testid': 'advanced-search-open-access',
                                                         'aria-label': txt.advancedSearch.openAccess.ariaLabel,
                                                     }}

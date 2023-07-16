@@ -31,6 +31,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-type-&-community-content"
         data-testid="standard-card-type-&-community-content"
         id="standard-card-type-&-community-content"
       >
@@ -87,12 +88,14 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               >
                 <span
                   class="PublicationDetailsClass-contentIndicator-65"
+                  data-analyticsid="rek-content-indicator-0"
                   data-testid="rek-content-indicator-0"
                 >
                   Scholarship of Teaching and Learning
                 </span>
                 <span
                   class="PublicationDetailsClass-contentIndicator-65"
+                  data-analyticsid="rek-content-indicator-1"
                   data-testid="rek-content-indicator-1"
                 >
                   Protocol
@@ -128,6 +131,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
                   class="PublicationDetailsClass-ul-64 ul"
                 >
                   <li
+                    data-analyticsid="rek-ismemberof-0"
                     data-testid="rek-ismemberof-0"
                   >
                     <a
@@ -137,6 +141,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-1"
                     data-testid="rek-ismemberof-1"
                   >
                     <a
@@ -183,6 +188,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-type-&-community-content"
         data-testid="standard-card-type-&-community-content"
         id="standard-card-type-&-community-content"
       >
@@ -239,12 +245,14 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               >
                 <span
                   class="PublicationDetailsClass-contentIndicator-55"
+                  data-analyticsid="rek-content-indicator-0"
                   data-testid="rek-content-indicator-0"
                 >
                   Scholarship of Teaching and Learning
                 </span>
                 <span
                   class="PublicationDetailsClass-contentIndicator-55"
+                  data-analyticsid="rek-content-indicator-1"
                   data-testid="rek-content-indicator-1"
                 >
                   Protocol
@@ -280,6 +288,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
                   class="PublicationDetailsClass-ul-54 ul"
                 >
                   <li
+                    data-analyticsid="rek-ismemberof-0"
                     data-testid="rek-ismemberof-0"
                   >
                     <a
@@ -326,6 +335,7 @@ exports[`Publication Details Component  Renders the Type title for Communities 1
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-type-content"
         data-testid="standard-card-type-content"
         id="standard-card-type-content"
       >
@@ -382,12 +392,14 @@ exports[`Publication Details Component  Renders the Type title for Communities 1
               >
                 <span
                   class="PublicationDetailsClass-contentIndicator-45"
+                  data-analyticsid="rek-content-indicator-0"
                   data-testid="rek-content-indicator-0"
                 >
                   Scholarship of Teaching and Learning
                 </span>
                 <span
                   class="PublicationDetailsClass-contentIndicator-45"
+                  data-analyticsid="rek-content-indicator-1"
                   data-testid="rek-content-indicator-1"
                 >
                   Protocol
@@ -431,6 +443,7 @@ exports[`Publication Details Component  should render component 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-type-&-collection-content"
         data-testid="standard-card-type-&-collection-content"
         id="standard-card-type-&-collection-content"
       >
@@ -515,12 +528,14 @@ exports[`Publication Details Component  should render component 1`] = `
               >
                 <span
                   class="PublicationDetailsClass-contentIndicator-3"
+                  data-analyticsid="rek-content-indicator-0"
                   data-testid="rek-content-indicator-0"
                 >
                   Scholarship of Teaching and Learning
                 </span>
                 <span
                   class="PublicationDetailsClass-contentIndicator-3"
+                  data-analyticsid="rek-content-indicator-1"
                   data-testid="rek-content-indicator-1"
                 >
                   Protocol
@@ -556,6 +571,7 @@ exports[`Publication Details Component  should render component 1`] = `
                   class="PublicationDetailsClass-ul-2 ul"
                 >
                   <li
+                    data-analyticsid="rek-ismemberof-0"
                     data-testid="rek-ismemberof-0"
                   >
                     <a
@@ -565,6 +581,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-1"
                     data-testid="rek-ismemberof-1"
                   >
                     <a
@@ -574,6 +591,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-2"
                     data-testid="rek-ismemberof-2"
                   >
                     <a
@@ -583,6 +601,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-3"
                     data-testid="rek-ismemberof-3"
                   >
                     <a
@@ -592,6 +611,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-4"
                     data-testid="rek-ismemberof-4"
                   >
                     <a
@@ -601,6 +621,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-5"
                     data-testid="rek-ismemberof-5"
                   >
                     <a
@@ -647,6 +668,7 @@ exports[`Publication Details Component  should render with publication without c
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-type-&-collection-content"
         data-testid="standard-card-type-&-collection-content"
         id="standard-card-type-&-collection-content"
       >
@@ -703,12 +725,14 @@ exports[`Publication Details Component  should render with publication without c
               >
                 <span
                   class="PublicationDetailsClass-contentIndicator-27"
+                  data-analyticsid="rek-content-indicator-0"
                   data-testid="rek-content-indicator-0"
                 >
                   Scholarship of Teaching and Learning
                 </span>
                 <span
                   class="PublicationDetailsClass-contentIndicator-27"
+                  data-analyticsid="rek-content-indicator-1"
                   data-testid="rek-content-indicator-1"
                 >
                   Protocol
@@ -750,6 +774,7 @@ exports[`Publication Details Component  should render with publication without s
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-type-&-collection-content"
         data-testid="standard-card-type-&-collection-content"
         id="standard-card-type-&-collection-content"
       >
@@ -806,12 +831,14 @@ exports[`Publication Details Component  should render with publication without s
               >
                 <span
                   class="PublicationDetailsClass-contentIndicator-17"
+                  data-analyticsid="rek-content-indicator-0"
                   data-testid="rek-content-indicator-0"
                 >
                   Scholarship of Teaching and Learning
                 </span>
                 <span
                   class="PublicationDetailsClass-contentIndicator-17"
+                  data-analyticsid="rek-content-indicator-1"
                   data-testid="rek-content-indicator-1"
                 >
                   Protocol
@@ -847,6 +874,7 @@ exports[`Publication Details Component  should render with publication without s
                   class="PublicationDetailsClass-ul-16 ul"
                 >
                   <li
+                    data-analyticsid="rek-ismemberof-0"
                     data-testid="rek-ismemberof-0"
                   >
                     <a
@@ -856,6 +884,7 @@ exports[`Publication Details Component  should render with publication without s
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-1"
                     data-testid="rek-ismemberof-1"
                   >
                     <a
@@ -865,6 +894,7 @@ exports[`Publication Details Component  should render with publication without s
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-2"
                     data-testid="rek-ismemberof-2"
                   >
                     <a
@@ -874,6 +904,7 @@ exports[`Publication Details Component  should render with publication without s
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-3"
                     data-testid="rek-ismemberof-3"
                   >
                     <a
@@ -883,6 +914,7 @@ exports[`Publication Details Component  should render with publication without s
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-4"
                     data-testid="rek-ismemberof-4"
                   >
                     <a
@@ -892,6 +924,7 @@ exports[`Publication Details Component  should render with publication without s
                     </a>
                   </li>
                   <li
+                    data-analyticsid="rek-ismemberof-5"
                     data-testid="rek-ismemberof-5"
                   >
                     <a

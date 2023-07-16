@@ -27,6 +27,7 @@ exports[`Additional Information Component  renderLicense() 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -99,6 +100,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -385,6 +387,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-422 makeStyles-externalLink-424"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
                       id="rek-journal-name-sherpa-link"
@@ -955,6 +958,7 @@ exports[`Additional Information Component  should not render map with empty geo 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -1326,6 +1330,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                   </a>
                   <a
                     class="makeStyles-externalLink-486 makeStyles-externalLink-488"
+                    data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                     id="rek-license-link"
@@ -1500,6 +1505,7 @@ exports[`Additional Information Component  should render component with Attribut
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -1786,6 +1792,7 @@ exports[`Additional Information Component  should render component with Attribut
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-79 makeStyles-externalLink-81"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
                       id="rek-journal-name-sherpa-link"
@@ -1947,6 +1954,7 @@ exports[`Additional Information Component  should render component with Attribut
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-79 makeStyles-externalLink-82"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1242/jcs.196659"
                     id="citation-doi-link"
@@ -2454,6 +2462,7 @@ exports[`Additional Information Component  should render component with a collec
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -2569,6 +2578,7 @@ exports[`Additional Information Component  should render component with a commun
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -2644,6 +2654,7 @@ exports[`Additional Information Component  should render component with audio do
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -2988,6 +2999,7 @@ exports[`Additional Information Component  should render component with audio do
                   </a>
                   <a
                     class="makeStyles-externalLink-66 makeStyles-externalLink-68"
+                    data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                     id="rek-license-link"
@@ -3162,6 +3174,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -3706,6 +3719,7 @@ exports[`Additional Information Component  should render component with book cha
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -4043,6 +4057,7 @@ exports[`Additional Information Component  should render component with book cha
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-131 makeStyles-externalLink-133"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1007/978-94-017-7417-8_7"
                     id="citation-doi-link"
@@ -4632,6 +4647,7 @@ exports[`Additional Information Component  should render component with conferen
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -5056,6 +5072,7 @@ exports[`Additional Information Component  should render component with conferen
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-144 makeStyles-externalLink-146"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="http://example.com"
                       id="rek-journal-name-sherpa-link"
@@ -5212,6 +5229,7 @@ exports[`Additional Information Component  should render component with conferen
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-144 makeStyles-externalLink-147"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1111/dar.12222"
                     id="citation-doi-link"
@@ -5502,6 +5520,7 @@ exports[`Additional Information Component  should render component with conferen
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -6316,6 +6335,7 @@ exports[`Additional Information Component  should render component with creative
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -6678,6 +6698,7 @@ exports[`Additional Information Component  should render component with creative
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -7040,6 +7061,7 @@ exports[`Additional Information Component  should render component with creative
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -7421,6 +7443,7 @@ exports[`Additional Information Component  should render component with data col
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -8110,6 +8133,7 @@ exports[`Additional Information Component  should render component with data col
                   </p>
                   <a
                     class="makeStyles-externalLink-38 makeStyles-externalLink-40"
+                    data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="https://guides.library.uq.edu.au/deposit-your-data/license-reuse-with-acknowledgement"
                     id="rek-license-link"
@@ -8213,6 +8237,7 @@ exports[`Additional Information Component  should render component with data col
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-38 makeStyles-externalLink-41"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.14264/uql.2016.841"
                     id="citation-doi-link"
@@ -8804,6 +8829,7 @@ exports[`Additional Information Component  should render component with data col
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -9218,6 +9244,7 @@ exports[`Additional Information Component  should render component with data col
                   </a>
                   <a
                     class="makeStyles-externalLink-361 makeStyles-externalLink-363"
+                    data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="http://creativecommons.org/licenses/by/3.0/deed.en_US"
                     id="rek-license-link"
@@ -9319,6 +9346,7 @@ exports[`Additional Information Component  should render component with data col
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-361 makeStyles-externalLink-364"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1594/PANGAEA.830076"
                     id="citation-doi-link"
@@ -9777,6 +9805,7 @@ exports[`Additional Information Component  should render component with data col
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -10469,6 +10498,7 @@ exports[`Additional Information Component  should render component with data col
                   </p>
                   <a
                     class="makeStyles-externalLink-52 makeStyles-externalLink-54"
+                    data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="https://guides.library.uq.edu.au/deposit-your-data/license-reuse-data-agreement"
                     id="rek-license-link"
@@ -10572,6 +10602,7 @@ exports[`Additional Information Component  should render component with data col
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-52 makeStyles-externalLink-55"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.14264/uql.2016.841"
                     id="citation-doi-link"
@@ -11163,6 +11194,7 @@ exports[`Additional Information Component  should render component with design d
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -11938,6 +11970,7 @@ exports[`Additional Information Component  should render component with digilib 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -12450,6 +12483,7 @@ exports[`Additional Information Component  should render component with generic 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -12867,6 +12901,7 @@ exports[`Additional Information Component  should render component with image 1`
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -12930,6 +12965,7 @@ exports[`Additional Information Component  should render component with journal 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -13398,6 +13434,7 @@ exports[`Additional Information Component  should render component with journal 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -13684,6 +13721,7 @@ exports[`Additional Information Component  should render component with journal 
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-14 makeStyles-externalLink-16"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
                       id="rek-journal-name-sherpa-link"
@@ -13845,6 +13883,7 @@ exports[`Additional Information Component  should render component with journal 
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-17"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1242/jcs.196659"
                     id="citation-doi-link"
@@ -14309,6 +14348,7 @@ exports[`Additional Information Component  should render component with manuscri
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -14857,6 +14897,7 @@ exports[`Additional Information Component  should render component with newspape
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -15554,6 +15595,7 @@ exports[`Additional Information Component  should render component with patent 1
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -15975,6 +16017,7 @@ exports[`Additional Information Component  should render component with preprint
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -16534,6 +16577,7 @@ exports[`Additional Information Component  should render component with proceedi
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -16814,6 +16858,7 @@ exports[`Additional Information Component  should render component with proceedi
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-375 makeStyles-externalLink-377"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="http://example.com"
                       id="rek-journal-name-sherpa-link"
@@ -17003,6 +17048,7 @@ exports[`Additional Information Component  should render component with proceedi
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-375 makeStyles-externalLink-378"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1016/j.toxicon.2012.04.130"
                     id="citation-doi-link"
@@ -17381,6 +17427,7 @@ exports[`Additional Information Component  should render component with referenc
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -17982,6 +18029,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -18268,6 +18316,7 @@ exports[`Additional Information Component  should render component with rek_herd
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-389 makeStyles-externalLink-391"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
                       id="rek-journal-name-sherpa-link"
@@ -18429,6 +18478,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-389 makeStyles-externalLink-392"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1242/jcs.196659"
                     id="citation-doi-link"
@@ -18989,6 +19039,7 @@ exports[`Additional Information Component  should render component with rek_star
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -19436,6 +19487,7 @@ exports[`Additional Information Component  should render component with research
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -19614,6 +19666,7 @@ exports[`Additional Information Component  should render component with research
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-305 makeStyles-externalLink-307"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.129839/sometext"
                     id="citation-doi-link"
@@ -19835,6 +19888,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -20291,6 +20345,7 @@ exports[`Additional Information Component  should render component with video do
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -20642,6 +20697,7 @@ exports[`Additional Information Component  should render component with working 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -20991,6 +21047,7 @@ exports[`Additional Information Component  should render component with working 
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-328 makeStyles-externalLink-330"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1242/jcs.196651"
                     id="citation-doi-link"
@@ -21352,6 +21409,7 @@ exports[`Additional Information Component  should render component without Attri
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -21638,6 +21696,7 @@ exports[`Additional Information Component  should render component without Attri
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-93 makeStyles-externalLink-95"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
                       id="rek-journal-name-sherpa-link"
@@ -21799,6 +21858,7 @@ exports[`Additional Information Component  should render component without Attri
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-93 makeStyles-externalLink-96"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1242/jcs.196659"
                     id="citation-doi-link"
@@ -22263,6 +22323,7 @@ exports[`Additional Information Component  should render component without Attri
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -22549,6 +22610,7 @@ exports[`Additional Information Component  should render component without Attri
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-107 makeStyles-externalLink-109"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
                       id="rek-journal-name-sherpa-link"
@@ -22710,6 +22772,7 @@ exports[`Additional Information Component  should render component without Attri
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-107 makeStyles-externalLink-110"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1242/jcs.196659"
                     id="citation-doi-link"
@@ -23174,6 +23237,7 @@ exports[`Additional Information Component  should render map with geo coordinate
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -23552,6 +23616,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                   </a>
                   <a
                     class="makeStyles-externalLink-499 makeStyles-externalLink-501"
+                    data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                     id="rek-license-link"
@@ -23726,6 +23791,7 @@ exports[`Additional Information Component  should render oa status value link in
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -24184,6 +24250,7 @@ exports[`Additional Information Component  should render with description only 1
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -24470,6 +24537,7 @@ exports[`Additional Information Component  should render with description only 1
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-472 makeStyles-externalLink-474"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
                       id="rek-journal-name-sherpa-link"
@@ -24631,6 +24699,7 @@ exports[`Additional Information Component  should render with description only 1
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-472 makeStyles-externalLink-475"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1242/jcs.196659"
                     id="citation-doi-link"
@@ -25095,6 +25164,7 @@ exports[`Additional Information Component  should render with no formatted abstr
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -25350,6 +25420,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-444 makeStyles-externalLink-446"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
                       id="rek-journal-name-sherpa-link"
@@ -25511,6 +25582,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-444 makeStyles-externalLink-447"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1242/jcs.196659"
                     id="citation-doi-link"
@@ -25975,6 +26047,7 @@ exports[`Additional Information Component  should render with no formatted abstr
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       >
@@ -26261,6 +26334,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
                       class="makeStyles-externalLink-458 makeStyles-externalLink-460"
+                      data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
                       id="rek-journal-name-sherpa-link"
@@ -26422,6 +26496,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   <a
                     aria-label="Open this DOI in an new window"
                     class="citationDoiLink makeStyles-externalLink-458 makeStyles-externalLink-461"
+                    data-analyticsid="citation-doi-link"
                     data-testid="citation-doi-link"
                     href="https://doi.org/10.1242/jcs.196659"
                     id="citation-doi-link"
@@ -26886,6 +26961,7 @@ exports[`Additional Information Component  should skip render of date if it has 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
         data-testid="standard-card-additional-information-content"
         id="standard-card-additional-information-content"
       />
