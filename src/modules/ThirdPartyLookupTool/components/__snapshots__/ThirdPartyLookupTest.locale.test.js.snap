@@ -10,6 +10,7 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-23 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
       >
@@ -42,6 +43,7 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
             </div>
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-content"
               data-testid="standard-card-content"
               id="standard-card-content"
             >
@@ -71,6 +73,7 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
                 </div>
                 <div
                   class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  data-analyticsid="standard-card-results-content"
                   data-testid="standard-card-results-content"
                   id="standard-card-results-content"
                 >
@@ -111,6 +114,7 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-20 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
       >
@@ -188,6 +192,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
       >
@@ -213,6 +218,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
           >
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-content"
               data-testid="standard-card-content"
               id="standard-card-content"
             >
@@ -341,6 +347,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-11 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
       >
@@ -366,6 +373,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
           >
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-content"
               data-testid="standard-card-content"
               id="standard-card-content"
             >

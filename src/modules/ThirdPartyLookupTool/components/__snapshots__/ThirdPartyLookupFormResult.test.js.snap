@@ -30,6 +30,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
         </div>
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-test-form-content"
           data-testid="standard-card-test-form-content"
           id="standard-card-test-form-content"
         >
@@ -60,6 +61,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
             </div>
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
             >
@@ -120,6 +122,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
         </div>
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-label-9-content"
           data-testid="standard-card-label-9-content"
           id="standard-card-label-9-content"
         >
@@ -150,6 +153,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
             </div>
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
             >
@@ -210,6 +214,7 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
         </div>
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-test-form-content"
           data-testid="standard-card-test-form-content"
           id="standard-card-test-form-content"
         >
@@ -240,6 +245,7 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
             </div>
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-results-content"
               data-testid="standard-card-results-content"
               id="standard-card-results-content"
             >
@@ -260,6 +266,7 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
                   </div>
                   <div
                     class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                    data-analyticsid="standard-card-content"
                     data-testid="standard-card-content"
                     id="standard-card-content"
                   >
@@ -317,6 +324,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
         </div>
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-label-10-content"
           data-testid="standard-card-label-10-content"
           id="standard-card-label-10-content"
         >
@@ -352,6 +360,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
             </div>
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
             >
@@ -412,6 +421,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
         </div>
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-label-8-content"
           data-testid="standard-card-label-8-content"
           id="standard-card-label-8-content"
         >
@@ -442,6 +452,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
             </div>
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
             >
@@ -502,6 +513,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
         </div>
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-test-form-content"
           data-testid="standard-card-test-form-content"
           id="standard-card-test-form-content"
         >
@@ -532,6 +544,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
             </div>
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
             >
@@ -552,6 +565,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
                   </div>
                   <div
                     class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                    data-analyticsid="standard-card-content"
                     data-testid="standard-card-content"
                     id="standard-card-content"
                   >
@@ -609,6 +623,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
         </div>
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-test-form-content"
           data-testid="standard-card-test-form-content"
           id="standard-card-test-form-content"
         >
@@ -639,6 +654,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
             </div>
             <div
               class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-results-content"
               data-testid="standard-card-results-content"
               id="standard-card-results-content"
             >

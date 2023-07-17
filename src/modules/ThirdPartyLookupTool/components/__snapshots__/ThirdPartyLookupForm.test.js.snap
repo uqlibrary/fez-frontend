@@ -15,6 +15,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
       >
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
@@ -80,6 +81,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
       >
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
@@ -187,6 +189,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
       >
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
@@ -316,6 +319,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
       >
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
@@ -381,6 +385,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
       >
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
@@ -510,6 +515,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
       >
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
@@ -575,6 +581,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
       >
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
@@ -706,6 +713,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
       >
         <div
           class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >

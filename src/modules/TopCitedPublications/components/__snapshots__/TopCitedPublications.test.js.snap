@@ -78,6 +78,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
   >
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-content"
       data-testid="standard-card-content"
       id="standard-card-content"
     >
@@ -164,6 +165,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
           <button
             aria-label="Click for more information"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
             data-testid="help-icon"
             id="help-icon"
@@ -235,6 +237,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="makeStyles-externalLink-59 makeStyles-externalLink-61"
+                          data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
                           id="my-trending-pubs-altmetric-link"
@@ -345,6 +348,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                             <a
                               aria-label="Open this DOI in an new window"
                               class="citationDoiLink makeStyles-externalLink-59 makeStyles-externalLink-63"
+                              data-analyticsid="citation-doi-link"
                               data-testid="citation-doi-link"
                               href="https://doi.org/10.4049/jimmunol.1490012"
                               id="citation-doi-link"
@@ -389,6 +393,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
                                   class="wosCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-67"
+                                  data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
                                   id="citation-count-link"
@@ -409,6 +414,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
                                   class="scopusCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-68"
+                                  data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
                                   id="citation-count-link"
@@ -429,6 +435,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
                                   class="altmetricCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-69"
+                                  data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
                                   id="citation-count-link"
@@ -449,6 +456,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
                                   class="googleCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-70"
+                                  data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
                                   id="citation-count-link"
@@ -500,6 +508,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
   >
     <div
       class="MuiGrid-root makeStyles-root-79 MuiGrid-container makeStyles-error-88 makeStyles-common-80 css-1k6h6af-MuiGrid-root"
+      data-analyticsid="alert-error"
       data-testid="alert-error"
       id="alert-error"
     >
@@ -549,6 +558,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
   >
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-content"
       data-testid="standard-card-content"
       id="standard-card-content"
     >
@@ -629,6 +639,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
           <button
             aria-label="Click for more information"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
             data-testid="help-icon"
             id="help-icon"
@@ -700,6 +711,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="makeStyles-externalLink-23 makeStyles-externalLink-25"
+                          data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
                           id="my-trending-pubs-altmetric-link"
@@ -810,6 +822,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                             <a
                               aria-label="Open this DOI in an new window"
                               class="citationDoiLink makeStyles-externalLink-23 makeStyles-externalLink-27"
+                              data-analyticsid="citation-doi-link"
                               data-testid="citation-doi-link"
                               href="https://doi.org/10.4049/jimmunol.1490012"
                               id="citation-doi-link"
@@ -854,6 +867,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
                                   class="wosCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-31"
+                                  data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
                                   id="citation-count-link"
@@ -874,6 +888,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
                                   class="scopusCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-32"
+                                  data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
                                   id="citation-count-link"
@@ -894,6 +909,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
                                   class="altmetricCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-33"
+                                  data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
                                   id="citation-count-link"
@@ -914,6 +930,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
                                   class="googleCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-34"
+                                  data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
                                   id="citation-count-link"
