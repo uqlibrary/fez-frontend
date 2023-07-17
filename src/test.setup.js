@@ -62,16 +62,15 @@ global.renderComponent = (component, props, args = {}) => {
     };
 
     if (isShallow) {
+        const render = new ShallowRenderer();
         if (requiresStore) {
-            return new ShallowRenderer().render(
-                <Provider store={store}>{React.createElement(component, props)}</Provider>,
-                {
-                    context,
-                },
-            );
+            render.render(<Provider store={store}>{React.createElement(component, props)}</Provider>, {
+                context,
+            });
         } else {
-            return new ShallowRenderer().render(React.createElement(component, props), { context });
+            return render.render(React.createElement(component, props), { context });
         }
+        return render;
     }
 
     return renderer.create(
