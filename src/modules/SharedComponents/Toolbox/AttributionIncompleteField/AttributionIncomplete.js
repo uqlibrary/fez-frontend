@@ -41,6 +41,7 @@ export class AttributionIncomplete extends PureComponent {
                     control={
                         <Checkbox
                             inputProps={{
+                                'data-analyticsid': 'attributionIncomplete-input',
                                 'data-testid': 'attributionIncomplete-input',
                                 id: 'attributionIncomplete-input',
                             }}

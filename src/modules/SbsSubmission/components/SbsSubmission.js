@@ -327,6 +327,7 @@ export default class SbsSubmission extends Component {
                                     disabled={this.props.submitting || this.props.disableSubmit}
                                     fullWidth
                                     id="submit-thesis"
+                                    data-analyticsid="submit-thesis"
                                     onClick={this.deposit}
                                     variant="contained"
                                 />

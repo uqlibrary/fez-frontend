@@ -104,6 +104,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                 <Button
                     fullWidth
                     id="add-items"
+                    data-analyticsid="rek-link-add"
                     data-testid="rek-link-add"
                     color="primary"
                     variant="contained"

@@ -244,6 +244,7 @@ export default class PublicationForm extends Component {
                                 <Button
                                     style={{ whiteSpace: 'nowrap' }}
                                     id="submit-work"
+                                    data-analyticsid="submit-work"
                                     data-testid="submit-work"
                                     variant="contained"
                                     color="primary"

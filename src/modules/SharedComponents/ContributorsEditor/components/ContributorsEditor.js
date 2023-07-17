@@ -381,6 +381,7 @@ export class ContributorsEditor extends PureComponent {
                             </List>
                             <List
                                 id={`${contributorEditorId}-list`}
+                                data-analyticsid={`${contributorEditorId}-list`}
                                 data-testid={`${contributorEditorId}-list`}
                                 classes={{
                                     root: `ContributorList ${classes.list} ${

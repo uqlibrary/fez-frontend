@@ -76,6 +76,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                         <IconButton
                             disabled={index === 0}
                             id={`new-file-upload-down-${index}`}
+                            data-analyticsid={`new-file-upload-up-${index}`}
                             data-testid={`new-file-upload-up-${index}`}
                             className={classes.upDownArrow}
                             onClick={this.props.onOrderUpClick}
@@ -200,6 +201,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                     <Grid item xs={1} className={classes.upDownArrowContainerBottom}>
                         <IconButton
                             id={`new-file-upload-down-${index}`}
+                            data-analyticsid={`new-file-upload-down-${index}`}
                             data-testid={`new-file-upload-down-${index}`}
                             disabled={index === rowCount - 1}
                             className={classes.upDownArrow}

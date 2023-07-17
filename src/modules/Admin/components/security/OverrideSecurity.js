@@ -8,6 +8,7 @@ export const OverrideSecurity = ({ label, input, disabled, overrideSecurityId })
         control={
             <Checkbox
                 inputProps={{
+                    'data-analyticsid': `${overrideSecurityId}-input`,
                     'data-testid': `${overrideSecurityId}-input`,
                     id: `${overrideSecurityId}-input`,
                 }}

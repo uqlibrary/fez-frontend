@@ -93,6 +93,7 @@ export const FullUserDetails = ({
                                                 <Grid item>
                                                     <Button
                                                         id={`users-${mode}-this-user-save`}
+                                                        data-analyticsid={`users-${mode}-this-user-save`}
                                                         data-testid={`users-${mode}-this-user-save`}
                                                         disabled={disableSubmit || submitting || disabled}
                                                         variant="contained"
@@ -105,6 +106,7 @@ export const FullUserDetails = ({
                                                 <Grid item>
                                                     <Button
                                                         id={`users-${mode}-this-user-cancel`}
+                                                        data-analyticsid={`users-${mode}-this-user-cancel`}
                                                         data-testid={`users-${mode}-this-user-cancel`}
                                                         disabled={disabled}
                                                         variant="outlined"

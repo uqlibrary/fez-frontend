@@ -1754,6 +1754,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="fixSubmit"
             fullWidth={true}
             id="fixSubmit"
             onClick={[MockFunction]}
@@ -3040,6 +3041,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="fixSubmit"
             fullWidth={true}
             id="fixSubmit"
             onClick={[MockFunction]}
@@ -3806,6 +3808,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="fixSubmit"
             fullWidth={true}
             id="fixSubmit"
             onClick={[MockFunction]}
@@ -4345,6 +4348,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
         >
           <ForwardRef(Button)
             color="primary"
+            data-analyticsid="fixSubmit"
             fullWidth={true}
             id="fixSubmit"
             onClick={[MockFunction]}

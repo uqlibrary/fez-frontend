@@ -55,7 +55,14 @@ export class LinksClass extends PureComponent {
                     {link}
                 </Typography>
             </Grid>
-            <Grid item xs={11} sm={4} className={this.props.classes.description} data-testid={`${linkId}-description`}>
+            <Grid
+                item
+                xs={11}
+                sm={4}
+                className={this.props.classes.description}
+                data-analyticsid={`${linkId}-description`}
+                data-testid={`${linkId}-description`}
+            >
                 <Typography variant={'body2'} component={'span'}>
                     {description}
                 </Typography>

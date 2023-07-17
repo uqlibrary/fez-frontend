@@ -27,6 +27,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       </ForwardRef(Button)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
+      data-analyticsid="undefined-desktop-controls"
       data-testid="undefined-desktop-controls"
       id="undefined-desktop-controls"
       item={true}
@@ -44,6 +45,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         aria-label="Click to select page 1 of 50 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-1"
         data-testid="undefined-select-page-1"
         disabled={false}
         id="undefined-select-page-1"
@@ -59,6 +61,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         aria-label="Click to select page 8 of 50 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-8"
         data-testid="undefined-select-page-8"
         disabled={false}
         id="undefined-select-page-8"
@@ -73,6 +76,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         aria-label="Click to select page 9 of 50 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-9"
         data-testid="undefined-select-page-9"
         disabled={false}
         id="undefined-select-page-9"
@@ -87,6 +91,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         aria-label="Click to select page 10 of 50 result pages"
         className=" paging-button"
         color="primary"
+        data-analyticsid="undefined-select-page-10"
         data-testid="undefined-select-page-10"
         disabled={false}
         id="undefined-select-page-10"
@@ -101,6 +106,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         aria-label="Click to select page 11 of 50 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-11"
         data-testid="undefined-select-page-11"
         disabled={false}
         id="undefined-select-page-11"
@@ -115,6 +121,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         aria-label="Click to select page 12 of 50 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-12"
         data-testid="undefined-select-page-12"
         disabled={false}
         id="undefined-select-page-12"
@@ -130,6 +137,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         aria-label="Click to select page 50 of 50 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-50"
         data-testid="undefined-select-page-50"
         disabled={false}
         id="undefined-select-page-50"
@@ -142,6 +150,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       </ForwardRef(Button)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
+      data-analyticsid="undefined-mobile-controls"
       data-testid="undefined-mobile-controls"
       id="undefined-mobile-controls"
       item={true}
@@ -212,6 +221,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       </ForwardRef(Button)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
+      data-analyticsid="undefined-desktop-controls"
       data-testid="undefined-desktop-controls"
       id="undefined-desktop-controls"
       item={true}
@@ -229,6 +239,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         aria-label="Click to select page 1 of 3 result pages"
         className=" paging-button"
         color="primary"
+        data-analyticsid="undefined-select-page-1"
         data-testid="undefined-select-page-1"
         disabled={false}
         id="undefined-select-page-1"
@@ -243,6 +254,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         aria-label="Click to select page 2 of 3 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-2"
         data-testid="undefined-select-page-2"
         disabled={false}
         id="undefined-select-page-2"
@@ -257,6 +269,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         aria-label="Click to select page 3 of 3 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-3"
         data-testid="undefined-select-page-3"
         disabled={false}
         id="undefined-select-page-3"
@@ -269,6 +282,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       </ForwardRef(Button)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
+      data-analyticsid="undefined-mobile-controls"
       data-testid="undefined-mobile-controls"
       id="undefined-mobile-controls"
       item={true}
@@ -333,6 +347,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       </ForwardRef(Button)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
+      data-analyticsid="undefined-desktop-controls"
       data-testid="undefined-desktop-controls"
       id="undefined-desktop-controls"
       item={true}
@@ -350,6 +365,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         aria-label="Click to select page 1 of 3 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-1"
         data-testid="undefined-select-page-1"
         disabled={false}
         id="undefined-select-page-1"
@@ -364,6 +380,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         aria-label="Click to select page 2 of 3 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-2"
         data-testid="undefined-select-page-2"
         disabled={false}
         id="undefined-select-page-2"
@@ -378,6 +395,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         aria-label="Click to select page 3 of 3 result pages"
         className=" paging-button"
         color="primary"
+        data-analyticsid="undefined-select-page-3"
         data-testid="undefined-select-page-3"
         disabled={false}
         id="undefined-select-page-3"
@@ -390,6 +408,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       </ForwardRef(Button)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
+      data-analyticsid="undefined-mobile-controls"
       data-testid="undefined-mobile-controls"
       id="undefined-mobile-controls"
       item={true}
@@ -454,6 +473,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       </ForwardRef(Button)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
+      data-analyticsid="undefined-desktop-controls"
       data-testid="undefined-desktop-controls"
       id="undefined-desktop-controls"
       item={true}
@@ -471,6 +491,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         aria-label="Click to select page 1 of 3 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-1"
         data-testid="undefined-select-page-1"
         disabled={false}
         id="undefined-select-page-1"
@@ -485,6 +506,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         aria-label="Click to select page 2 of 3 result pages"
         className=" paging-button"
         color="primary"
+        data-analyticsid="undefined-select-page-2"
         data-testid="undefined-select-page-2"
         disabled={false}
         id="undefined-select-page-2"
@@ -499,6 +521,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         aria-label="Click to select page 3 of 3 result pages"
         className=" paging-button"
         color="inherit"
+        data-analyticsid="undefined-select-page-3"
         data-testid="undefined-select-page-3"
         disabled={false}
         id="undefined-select-page-3"
@@ -511,6 +534,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       </ForwardRef(Button)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
+      data-analyticsid="undefined-mobile-controls"
       data-testid="undefined-mobile-controls"
       id="undefined-mobile-controls"
       item={true}
@@ -2017,6 +2041,7 @@ exports[`PublicationsListPaging renders  should render buttons with zero total p
   aria-label="Click to select page test of 0 result pages"
   className=" paging-button"
   color="inherit"
+  data-analyticsid="undefined-select-page-test"
   data-testid="undefined-select-page-test"
   disabled={false}
   id="undefined-select-page-test"

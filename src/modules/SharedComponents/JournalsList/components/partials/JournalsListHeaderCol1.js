@@ -71,6 +71,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                             inputProps={{
                                 'aria-label': 'Select All',
                                 'data-testid': 'journal-list-header-col-1-select-all',
+                                'data-analyticsid': 'journal-list-header-col-1-select-all',
                             }}
                         />
                     </Tooltip>

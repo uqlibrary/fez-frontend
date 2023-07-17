@@ -4210,6 +4210,7 @@ exports[`Component PublicationForm should render component initialised with two 
       >
         <ForwardRef(Button)
           color="primary"
+          data-analyticsid="submit-work"
           data-testid="submit-work"
           fullWidth={true}
           id="submit-work"
@@ -7303,6 +7304,7 @@ exports[`Component PublicationForm should render form after selecting both publi
       >
         <ForwardRef(Button)
           color="primary"
+          data-analyticsid="submit-work"
           data-testid="submit-work"
           fullWidth={true}
           id="submit-work"

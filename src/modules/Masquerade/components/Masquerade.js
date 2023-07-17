@@ -68,6 +68,7 @@ export default class Masquerade extends PureComponent {
                             <Button
                                 variant="contained"
                                 id="submitMasquerade"
+                                data-analyticsid="submitMasquerade"
                                 fullWidth
                                 color="primary"
                                 children={txt.labels.submit}

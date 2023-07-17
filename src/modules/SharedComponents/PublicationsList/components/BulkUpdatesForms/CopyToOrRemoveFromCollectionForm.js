@@ -112,6 +112,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                     <Button
                         aria-label={txt.copyToOrRemoveFromCollectionForm.formLabels.cancelButtonLabel}
                         children={txt.copyToOrRemoveFromCollectionForm.formLabels.cancelButtonLabel}
+                        data-analyticsid={`${idText}-collection-cancel`}
                         data-testid={`${idText}-collection-cancel`}
                         disabled={submitting}
                         fullWidth
@@ -125,6 +126,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         aria-label={txt.copyToOrRemoveFromCollectionForm.formLabels.submitButtonLabel}
                         children={txt.copyToOrRemoveFromCollectionForm.formLabels.submitButtonLabel}
                         color="primary"
+                        data-analyticsid={`${idText}-collection-submit`}
                         data-testid={`${idText}-collection-submit`}
                         disabled={
                             submitting || disableSubmit || submitSucceeded || !!alertUser || !!hasACollectionSelected

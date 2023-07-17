@@ -4,6 +4,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
 Array [
   <a
     className="makeStyles-externalLink-1 makeStyles-externalLink-13"
+    data-analyticsid="researcher-link"
     data-testid="researcher-link"
     href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
     id="researcher-link"
@@ -747,6 +748,7 @@ Array [
   </a>,
   <a
     className="makeStyles-externalLink-1 makeStyles-externalLink-14"
+    data-analyticsid="scopus-link"
     data-testid="scopus-link"
     href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
     id="scopus-link"
@@ -1490,6 +1492,7 @@ Array [
   </a>,
   <a
     className="makeStyles-externalLink-1 makeStyles-externalLink-15"
+    data-analyticsid="google_scholar-link"
     data-testid="google_scholar-link"
     href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
     id="google_scholar-link"
@@ -2250,6 +2253,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 1`] = `
 Array [
   <a
     className="makeStyles-externalLink-1 makeStyles-externalLink-10"
+    data-analyticsid="researcher-link"
     data-testid="researcher-link"
     href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
     id="researcher-link"
@@ -2951,6 +2955,7 @@ Array [
   </a>,
   <a
     className="makeStyles-externalLink-1 makeStyles-externalLink-11"
+    data-analyticsid="scopus-link"
     data-testid="scopus-link"
     href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
     id="scopus-link"
@@ -3652,6 +3657,7 @@ Array [
   </a>,
   <a
     className="makeStyles-externalLink-1 makeStyles-externalLink-12"
+    data-analyticsid="google_scholar-link"
     data-testid="google_scholar-link"
     href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
     id="google_scholar-link"
@@ -4404,6 +4410,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
     >
       <a
         class="makeStyles-externalLink-1 makeStyles-externalLink-20"
+        data-analyticsid="researcher-link"
         data-testid="researcher-link"
         href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
         id="researcher-link"
@@ -4424,6 +4431,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
     >
       <a
         class="makeStyles-externalLink-1 makeStyles-externalLink-21"
+        data-analyticsid="scopus-link"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
         id="scopus-link"
@@ -4444,6 +4452,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
     >
       <a
         class="makeStyles-externalLink-1 makeStyles-externalLink-22"
+        data-analyticsid="google_scholar-link"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
         id="google_scholar-link"
@@ -4464,6 +4473,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
     >
       <a
         class="makeStyles-externalLink-1 makeStyles-externalLink-23"
+        data-analyticsid="orcid-link"
         data-testid="orcid-link"
         href="https://orcid.org/0000-0001-1111-1111"
         id="orcid-link"
@@ -4482,6 +4492,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         <button
           aria-label="Information about uploading your eSpace works to ORCID"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="help-icon-orcid"
           data-mui-internal-clone-element="true"
           data-testid="help-icon-orcid"
           id="help-icon-orcid"

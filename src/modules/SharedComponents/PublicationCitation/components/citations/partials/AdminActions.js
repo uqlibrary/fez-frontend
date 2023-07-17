@@ -94,6 +94,7 @@ export const AdminActions = ({
             <IconButton
                 id="admin-actions-button"
                 data-testid="admin-actions-button"
+                data-analyticsid="admin-actions-button"
                 aria-label="More"
                 aria-haspopup="true"
                 onClick={handleClick}

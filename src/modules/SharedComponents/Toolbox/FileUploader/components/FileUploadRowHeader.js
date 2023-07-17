@@ -72,6 +72,7 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                                     onClick={showConfirmation}
                                     disabled={disabled}
                                     id="delete-all-files"
+                                    data-analyticsid="delete-all-files"
                                     size="large"
                                 >
                                     <DeleteForeverIcon />

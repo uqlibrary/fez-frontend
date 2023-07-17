@@ -204,6 +204,7 @@ exports[`NavigationDialogBox component should render 1`] = `
                             <ForwardRef(Button)
                               autoFocus={true}
                               color="primary"
+                              data-analyticsid="confirm-dialog-box"
                               data-testid="confirm-dialog-box"
                               fullWidth={true}
                               onClick={[Function]}
@@ -218,6 +219,7 @@ exports[`NavigationDialogBox component should render 1`] = `
                           >
                             <ForwardRef(Button)
                               color="primary"
+                              data-analyticsid="cancel-dialog-box"
                               data-testid="cancel-dialog-box"
                               fullWidth={true}
                               onClick={[Function]}

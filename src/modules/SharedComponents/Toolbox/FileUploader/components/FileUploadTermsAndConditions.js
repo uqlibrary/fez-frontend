@@ -30,6 +30,7 @@ export class FileUploadTermsAndConditions extends PureComponent {
                 control={
                     <Checkbox
                         inputProps={{
+                            'data-analyticsid': 'terms-and-conditions-input',
                             'data-testid': 'terms-and-conditions-input',
                             id: 'terms-and-conditions-input',
                         }}

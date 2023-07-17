@@ -178,6 +178,7 @@ export const GrantListEditorForm = ({
                 <Grid item xs={12}>
                     <Button
                         id={(!!grantSelectedToEdit && 'rek-grant-update') || 'rek-grant-add'}
+                        data-analyticsid={(!!grantSelectedToEdit && 'rek-grant-update') || 'rek-grant-add'}
                         data-testid={(!!grantSelectedToEdit && 'rek-grant-update') || 'rek-grant-add'}
                         variant="contained"
                         fullWidth

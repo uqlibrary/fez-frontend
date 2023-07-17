@@ -327,6 +327,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         onClick={this._handleSearch}
                                         fullWidth
                                         id="simple-search-button"
+                                        data-analyticsid="simple-search-button"
                                         data-testid="simple-search-button"
                                     />
                                 </Grid>
@@ -340,6 +341,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         className="advancedButton"
                                         fullWidth
                                         id="show-advanced-search"
+                                        data-analyticsid="show-advanced-search"
                                         data-testid="show-advanced-search"
                                     />
                                 </Grid>

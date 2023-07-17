@@ -27,6 +27,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -450,6 +451,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -910,6 +912,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -1403,6 +1406,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -1886,6 +1890,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -2369,6 +2374,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -2823,6 +2829,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -3275,6 +3282,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -3692,6 +3700,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -4146,6 +4155,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -4728,6 +4738,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -5242,6 +5253,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -5696,6 +5708,7 @@ exports[`NtroDetails  should render component with record 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -6311,6 +6324,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >
@@ -6636,6 +6650,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-non-traditional-research-output-metadata-content"
         data-testid="standard-card-non-traditional-research-output-metadata-content"
         id="standard-card-non-traditional-research-output-metadata-content"
       >

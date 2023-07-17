@@ -237,6 +237,7 @@ export const AuthorLinking = ({
                             id="authorAcceptDeclaration"
                             inputProps={{
                                 id: 'author-accept-declaration-input',
+                                'data-analyticsid': 'author-accept-declaration-input',
                                 'data-testid': 'author-accept-declaration-input',
                             }}
                         />

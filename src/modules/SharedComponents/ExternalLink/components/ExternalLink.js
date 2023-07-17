@@ -56,6 +56,7 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
                 ...rest,
                 id: `${rest.id}-link`,
             }}
+            data-analyticsid={`${rest.id}-link`}
             data-testid={`${rest.id}-link`}
             tabIndex={0}
             title={

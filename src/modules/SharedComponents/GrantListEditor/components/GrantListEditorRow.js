@@ -247,6 +247,7 @@ export class GrantListEditorRow extends PureComponent {
                                                         onClick={this._handleEdit}
                                                         disabled={disabled}
                                                         id={`${editButtonId}-${index}`}
+                                                        data-analyticsid={`${editButtonId}-${index}`}
                                                         size="large"
                                                     >
                                                         <Edit />

@@ -42,6 +42,7 @@ const DashboardOrcidSyncMessage = ({
                 aria-label={locale.actionButtonLabel}
                 children={locale.actionButtonLabel}
                 color="primary"
+                data-analyticsid="orcid-upload-start-button"
                 data-testid="orcid-upload-start-button"
                 disabled={disableRequest}
                 fullWidth
@@ -54,6 +55,7 @@ const DashboardOrcidSyncMessage = ({
                 aria-label={locale.alternateActionButtonLabel}
                 children={locale.alternateActionButtonLabel}
                 color="secondary"
+                data-analyticsid="orcid-view-works-button"
                 data-testid="orcid-view-works-button"
                 fullWidth
                 onClick={secondaryClick}

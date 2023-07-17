@@ -46,6 +46,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
         <ForwardRef(Button)
           autoFocus={true}
           color="primary"
+          data-analyticsid="confirm-dialog-box"
           data-testid="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -59,6 +60,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
         xs={12}
       >
         <ForwardRef(Button)
+          data-analyticsid="alternate-dialog-box"
           data-testid="alternate-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -74,6 +76,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
       >
         <ForwardRef(Button)
           color="primary"
+          data-analyticsid="cancel-dialog-box"
           data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -133,6 +136,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
         <ForwardRef(Button)
           autoFocus={true}
           color="primary"
+          data-analyticsid="confirm-dialog-box"
           data-testid="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -191,6 +195,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
         <ForwardRef(Button)
           autoFocus={true}
           color="primary"
+          data-analyticsid="confirm-dialog-box"
           data-testid="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -205,6 +210,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
       >
         <ForwardRef(Button)
           color="primary"
+          data-analyticsid="cancel-dialog-box"
           data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -264,6 +270,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
         <ForwardRef(Button)
           autoFocus={true}
           color="primary"
+          data-analyticsid="confirm-dialog-box"
           data-testid="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -277,6 +284,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
         xs={12}
       >
         <ForwardRef(Button)
+          data-analyticsid="alternate-dialog-box"
           data-testid="alternate-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -292,6 +300,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
       >
         <ForwardRef(Button)
           color="primary"
+          data-analyticsid="cancel-dialog-box"
           data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -387,6 +396,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
         <ForwardRef(Button)
           autoFocus={true}
           color="primary"
+          data-analyticsid="confirm-dialog-box"
           data-testid="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -401,6 +411,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
       >
         <ForwardRef(Button)
           color="primary"
+          data-analyticsid="cancel-dialog-box"
           data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -460,6 +471,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
         <ForwardRef(Button)
           autoFocus={true}
           color="primary"
+          data-analyticsid="confirm-dialog-box"
           data-testid="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
@@ -474,6 +486,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
       >
         <ForwardRef(Button)
           color="primary"
+          data-analyticsid="cancel-dialog-box"
           data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}

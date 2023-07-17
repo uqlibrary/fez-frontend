@@ -107,6 +107,7 @@ export const FullAuthorDetails = ({
                                                 <Grid item>
                                                     <Button
                                                         id={`authors-${mode}-this-author-save`}
+                                                        data-analyticsid={`authors-${mode}-this-author-save`}
                                                         data-testid={`authors-${mode}-this-author-save`}
                                                         disabled={disableSubmit || submitting || disabled}
                                                         variant="contained"
@@ -119,6 +120,7 @@ export const FullAuthorDetails = ({
                                                 <Grid item>
                                                     <Button
                                                         id={`authors-${mode}-this-author-cancel`}
+                                                        data-analyticsid={`authors-${mode}-this-author-cancel`}
                                                         data-testid={`authors-${mode}-this-author-cancel`}
                                                         disabled={disabled}
                                                         variant="outlined"

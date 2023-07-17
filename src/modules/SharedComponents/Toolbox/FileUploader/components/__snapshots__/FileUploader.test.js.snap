@@ -4039,6 +4039,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                               inputProps={
                                                 Object {
                                                   "aria-label": "Upload files",
+                                                  "data-analyticsid": "fez-datastream-info-input",
                                                   "data-testid": "fez-datastream-info-input",
                                                   "id": "Uploader",
                                                 }
@@ -4585,6 +4586,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                   inputProps={
                                                     Object {
                                                       "aria-label": "Upload files",
+                                                      "data-analyticsid": "fez-datastream-info-input",
                                                       "data-testid": "fez-datastream-info-input",
                                                       "id": "Uploader",
                                                     }
@@ -5115,6 +5117,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                 inputProps={
                                                   Object {
                                                     "aria-label": "Upload files",
+                                                    "data-analyticsid": "fez-datastream-info-input",
                                                     "data-testid": "fez-datastream-info-input",
                                                     "id": "Uploader",
                                                   }
@@ -9586,6 +9589,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                   <input
                                                     aria-label="Upload files"
                                                     autoComplete="off"
+                                                    data-analyticsid="fez-datastream-info-input"
                                                     data-testid="fez-datastream-info-input"
                                                     disabled={false}
                                                     id="Uploader"
@@ -12606,6 +12610,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                               inputProps={
                                                 Object {
                                                   "aria-label": "Upload files",
+                                                  "data-analyticsid": "fez-datastream-info-input",
                                                   "data-testid": "fez-datastream-info-input",
                                                   "id": "Uploader",
                                                 }
@@ -13098,6 +13103,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                   inputProps={
                                                     Object {
                                                       "aria-label": "Upload files",
+                                                      "data-analyticsid": "fez-datastream-info-input",
                                                       "data-testid": "fez-datastream-info-input",
                                                       "id": "Uploader",
                                                     }
@@ -13574,6 +13580,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                 inputProps={
                                                   Object {
                                                     "aria-label": "Upload files",
+                                                    "data-analyticsid": "fez-datastream-info-input",
                                                     "data-testid": "fez-datastream-info-input",
                                                     "id": "Uploader",
                                                   }
@@ -17613,6 +17620,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                   <input
                                                     aria-label="Upload files"
                                                     autoComplete="off"
+                                                    data-analyticsid="fez-datastream-info-input"
                                                     data-testid="fez-datastream-info-input"
                                                     disabled={false}
                                                     id="Uploader"

@@ -78,6 +78,7 @@ export class FileUploadRowMobileView extends PureComponent {
                         secondary={filenameColumn}
                         primaryTypographyProps={{ variant: 'body1', noWrap: true }}
                         secondaryTypographyProps={{ variant: 'caption' }}
+                        data-analyticsid={`dsi-dsid-${index}`}
                         data-testid={`dsi-dsid-${index}`}
                     />
                 </ListItem>
