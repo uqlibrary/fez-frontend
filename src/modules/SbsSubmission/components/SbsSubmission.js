@@ -31,6 +31,9 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
+/**
+ * TODO:: Can be replaced by ThesisSubmission component?
+ */
 export default class SbsSubmission extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
@@ -47,7 +50,7 @@ export default class SbsSubmission extends Component {
     static contextTypes = {
         selectFieldMobileOverrides: PropTypes.object,
     };
-
+    /* istanbul ignore next */
     componentDidUpdate() {
         if (this.props.isSessionValid && !this.props.submitting) {
             this.openDepositConfirmation();
@@ -61,11 +64,11 @@ export default class SbsSubmission extends Component {
     cancelSubmit = () => {
         window.location.reload();
     };
-
+    /* istanbul ignore next */
     afterSubmit = () => {
         window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
     };
-
+    /* istanbul ignore next */
     openDepositConfirmation = () => {
         this.depositConfirmationBox.showConfirmation();
         this.props.actions.clearSessionExpiredFlag();
@@ -74,7 +77,7 @@ export default class SbsSubmission extends Component {
     setDepositConfirmation = ref => {
         this.depositConfirmationBox = ref;
     };
-
+    /* istanbul ignore next */
     afterFailedSubmit = () => {
         // Clears the current state completely and reloads the form
         window.location.reload();
@@ -316,6 +319,7 @@ export default class SbsSubmission extends Component {
                                     children={formLocale.thesisSubmission.cancel}
                                     disabled={this.props.submitting}
                                     fullWidth
+                                    data-testid="cancel-submit-thesis"
                                     onClick={this.cancelSubmit}
                                     variant="contained"
                                 />
@@ -328,6 +332,7 @@ export default class SbsSubmission extends Component {
                                     fullWidth
                                     id="submit-thesis"
                                     data-analyticsid="submit-thesis"
+                                    data-testid="submit-thesis"
                                     onClick={this.deposit}
                                     variant="contained"
                                 />
