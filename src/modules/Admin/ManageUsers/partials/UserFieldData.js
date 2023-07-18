@@ -25,6 +25,7 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type, ...pro
                         color={!!props.input.value ? 'primary' : 'secondary'}
                         checked={!!props.input.value}
                         inputProps={{
+                            'data-analyticsid': `${userFieldDataId}-input`,
                             'data-testid': `${userFieldDataId}-input`,
                             id: `${userFieldDataId}-input`,
                         }}

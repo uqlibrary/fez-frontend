@@ -319,6 +319,7 @@ export const ContributorForm = ({
                         disabled={buttonDisabled}
                         onClick={_onSubmit}
                         id={`${contributorFormId}-add`}
+                        data-analyticsid={`${contributorFormId}-add`}
                         data-testid={`${contributorFormId}-add`}
                         className={classes.contributorFormButton}
                     >
@@ -334,6 +335,7 @@ export const ContributorForm = ({
                             disabled={!contributor.nameAsPublished}
                             onClick={_onCancel}
                             id={`${contributorFormId}-cancel`}
+                            data-analyticsid={`${contributorFormId}-cancel`}
                             data-testid={`${contributorFormId}-cancel`}
                             className={classes.contributorFormButton}
                         >

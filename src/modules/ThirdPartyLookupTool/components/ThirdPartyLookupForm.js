@@ -41,9 +41,7 @@ export class ThirdPartyLookupForm extends PureComponent {
         });
     };
 
-    _handleSubmitLookup = event => {
-        if (event && event.key && event.key !== 'Enter') return;
-
+    _handleSubmitLookup = () => {
         const apiType = this.props.localeform.apiType;
         const primaryValue = this.state.primaryValue;
         const secondaryValue = this.state.secondaryValue ? this.state.secondaryValue : undefined;
@@ -100,6 +98,7 @@ export class ThirdPartyLookupForm extends PureComponent {
                                     onClick={this._toggleMinimise}
                                     tooltip={!!this.state.isMinimised ? `${txt.labelShow}` : `${txt.labelHide}`}
                                     size="large"
+                                    data-testid="minimise-toggle"
                                 >
                                     {!!this.state.isMinimised ? <KeyboardArrowDown /> : <KeyboardArrowUp />}
                                 </IconButton>
@@ -121,9 +120,9 @@ export class ThirdPartyLookupForm extends PureComponent {
                                                 ? txt.thisForm.primaryField.inputPlaceholder
                                                 : ''
                                         }
-                                        aria-label={
-                                            txt.thisForm.primaryField.fromAria ? txt.thisForm.primaryField.fromAria : ''
-                                        }
+                                        inputProps={{
+                                            'aria-label': txt.thisForm.primaryField.fromAria || '',
+                                        }}
                                         value={primaryValue}
                                         onChange={this._onChange}
                                         required
@@ -139,14 +138,12 @@ export class ThirdPartyLookupForm extends PureComponent {
                                             variant="standard"
                                             fullWidth
                                             name={'secondaryValue'}
+                                            inputProps={{
+                                                'aria-label': txt.thisForm.secondaryField.fromAria || '',
+                                            }}
                                             placeholder={
                                                 txt.thisForm.secondaryField.inputPlaceholder
                                                     ? txt.thisForm.secondaryField.inputPlaceholder
-                                                    : ''
-                                            }
-                                            aria-label={
-                                                txt.thisForm.secondaryField.fromAria
-                                                    ? txt.thisForm.secondaryField.fromAria
                                                     : ''
                                             }
                                             value={secondaryValue}
@@ -165,7 +162,8 @@ export class ThirdPartyLookupForm extends PureComponent {
                                         txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'
                                     }
                                     color={'primary'}
-                                    onClick={() => this._handleSubmitLookup()}
+                                    onClick={this._handleSubmitLookup}
+                                    onKeyPress={this._handleSubmitLookup}
                                 />
                             </form>
                         )}

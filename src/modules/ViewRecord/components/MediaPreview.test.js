@@ -95,4 +95,34 @@ describe('Media Preview Component ', () => {
         setup({ mimeType: 'image/jpeg', imageError: true });
         expect(scrollToPreview).toBeCalled();
     });
+
+    /**
+     * Copied from MediaPreview.shallow.test.js
+     * TODO: the mock function doesnt seem to be checked
+     */
+    it('should show the preview onload', () => {
+        jest.useFakeTimers();
+        const onLoadFn = jest.fn();
+        global.window.Image.onLoad = onLoadFn;
+
+        setup({ mimeType: 'image/jpeg' });
+
+        jest.advanceTimersByTime(100);
+        expect(scrollToPreview).toBeCalled();
+    });
+
+    /**
+     * Copied from MediaPreview.shallow.test.js
+     * TODO: the mock doesnt seem to be working
+     */
+    it('should render when image fails', () => {
+        Object.defineProperty(global.Image.prototype, 'src', {
+            set() {
+                setTimeout(() => this.onerror(new Error('mocked error')), 100);
+            },
+        });
+
+        setup();
+        expect(scrollToPreview).toHaveBeenCalled();
+    });
 });

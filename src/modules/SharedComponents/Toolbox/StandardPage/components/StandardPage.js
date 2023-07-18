@@ -58,6 +58,7 @@ export class Page extends Component {
                             color="primary"
                             component="h2"
                             id="page-title"
+                            data-analyticsid="page-title"
                             data-testid="page-title"
                         >
                             {title}

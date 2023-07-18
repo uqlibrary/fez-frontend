@@ -363,6 +363,7 @@ export class PublicationCitation extends PureComponent {
                                   disabled={!!publicationsLoading || primaryButtonDisabled}
                                   classes={{ label: pid, root: pid }}
                                   variant="contained"
+                                  data-analyticsid={`${testId}-primary`}
                                   data-testid={`${testId}-primary`}
                               >
                                   {action.label}

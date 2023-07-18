@@ -1,3 +1,5 @@
+import React from 'react';
+import { rtlRender, fireEvent } from 'test-utils';
 import { ThirdPartyLookupTool } from './ThirdPartyLookupTool';
 jest.mock('locale', () => ({
     locale: {
@@ -22,13 +24,13 @@ jest.mock('locale', () => ({
                         lookupLabel: 'Incites',
                         primaryField: {
                             heading: 'UTs',
-                            fromAria: '',
+                            fromAria: 'primaryValue',
                             tip: '',
                             inputPlaceholder: 'Enter one or more UTs separated by a comma e.g. 000455548800001',
                         },
                         secondaryField: {
                             heading: 'API Key',
-                            fromAria: '',
+                            fromAria: 'secondaryValue',
                             tip: 'Optional, a default key is provided. Limit: 1,000 queries per day',
                             inputPlaceholder: 'Enter API key',
                             reportInOutput: false, // determines if secondaryField will apear in the results page
@@ -43,49 +45,48 @@ jest.mock('locale', () => ({
     },
 }));
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         ...testProps,
         actions: testProps.actions || {},
     };
-    return getElement(ThirdPartyLookupTool, props, isShallow);
+    return rtlRender(<ThirdPartyLookupTool {...props} />);
 }
 
 describe('Component ThirdPartyLookupTool', () => {
     it('should render a form ready for input', () => {
-        const wrapper = setup({});
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should set state with submitted data', () => {
-        const wrapper = setup({ actions: {} });
-        expect(wrapper.state().primaryValue).toEqual('');
-        expect(wrapper.state().secondaryValue).toEqual('');
-        expect(wrapper.state().formDisplay).toEqual({});
+        const loadResultMock = jest.fn();
+        const { container, getByRole } = setup({ actions: { loadThirdPartyResults: loadResultMock } });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(getByRole('textbox', { name: 'primaryValue' }).value).toEqual('');
+        expect(getByRole('textbox', { name: 'secondaryValue' }).value).toEqual('');
 
-        wrapper.instance().recordInputs('a value', 'another value', { test: '123' });
-        wrapper.update();
+        expect(container).toMatchSnapshot();
 
-        expect(wrapper.state().primaryValue).toEqual('a value');
-        expect(wrapper.state().secondaryValue).toEqual('another value');
-        expect(wrapper.state().formDisplay).toEqual({ test: '123' });
+        fireEvent.change(getByRole('textbox', { name: 'primaryValue' }), { target: { value: 'a value' } });
+        fireEvent.change(getByRole('textbox', { name: 'secondaryValue' }), { target: { value: 'another value' } });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(getByRole('button', { name: 'Submit to Incites' })).toBeInTheDocument();
+        fireEvent.click(getByRole('button', { name: 'Submit to Incites' }));
+
+        expect(getByRole('textbox', { name: 'primaryValue' }).value).toEqual('a value');
+        expect(getByRole('textbox', { name: 'secondaryValue' }).value).toEqual('another value');
+
+        expect(loadResultMock).toBeCalled();
     });
 
     it('renders loading screen while loading data', () => {
-        const wrapper = setup({ loadingResults: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ loadingResults: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('renders a results screen', () => {
-        const testprops = {
-            lookupResults: ['blah blah blah'],
-        };
-        const wrapper = setup(testprops);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ lookupResults: ['blah blah blah'] });
+        expect(container).toMatchSnapshot();
     });
 });

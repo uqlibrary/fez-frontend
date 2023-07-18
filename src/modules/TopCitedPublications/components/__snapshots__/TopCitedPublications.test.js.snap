@@ -1,1483 +1,975 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component TopCitedPublications should render loading indicator 1`] = `
-<ForwardRef(Grid)
-  container={true}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={true}
-  />
-  <ForwardRef(Grid)
-    item={true}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
   >
-    <WithStyles(InlineLoader)
-      message="Loading trending works"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={true}
-  />
-</ForwardRef(Grid)>
-`;
-
-exports[`Component TopCitedPublications should render tabs with xs width properly 1`] = `
-<Fragment>
-  <StandardCard
-    noHeader={true}
-  >
-    <ForwardRef(Tabs)
-      centered={true}
-      classes={
-        Object {
-          "indicator": undefined,
-        }
-      }
-      indicatorColor="primary"
-      onChange={[Function]}
-      textColor="inherit"
-      value="altmetric"
-      variant="fullWidth"
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
-      <ForwardRef(Tab)
-        key="altmetric"
-        label="Trending"
-        value="altmetric"
-      />
-      <ForwardRef(Tab)
-        key="scopus"
-        label="Scopus"
-        value="scopus"
-      />
-      <ForwardRef(Tab)
-        key="thomson"
-        label="WOS"
-        value="thomson"
-      />
-    </ForwardRef(Tabs)>
-    <ForwardRef(Grid)
-      alignContent="flex-start"
-      alignItems="flex-start"
-      container={true}
-      key="altmetric"
-      style={
-        Object {
-          "marginTop": 24,
-        }
-      }
-    >
-      <ForwardRef(Grid)
-        item={true}
-        xs={true}
+      <div
+        style="padding: 8px;"
       >
-        <ForwardRef(Typography)
-          color="primary"
-          key="altmetric"
-          variant="h6"
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
         >
           <div
-            className="fez-icon altmetric xxlarge"
-            key="altmetric"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
           />
-          Altmetric score
-        </ForwardRef(Typography)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        style={
-          Object {
-            "marginTop": -12,
-          }
-        }
-        xs="auto"
-      >
-        <Connect(HelpIcon)
-          buttonLabel="CLOSE"
-          text={
-            <React.Fragment>
-              <h3>
-                WOS and Scopus
-              </h3>
-              <p>
-                The + (plus) value indicates how much the citation count has increased in the last three months.
-              </p>
-              <h3>
-                Altmetric score (social media activity)
-              </h3>
-              <p>
-                The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
-              </p>
-              <p>
-                You can click on the number as a link to see who is citing each work, or in the case of Altmetric who is referencing the work in social media and news outlets.
-              </p>
-              For more information visit :
-              <br />
-              <a
-                href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/"
-                rel="noopener noreferrer"
-                target="_blank"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            style="text-align: center;"
+          >
+            <span
+              aria-label="Loading"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+              role="progressbar"
+              style="width: 18px; height: 18px;"
+            >
+              <svg
+                class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
               >
-                https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
-              </a>
-            </React.Fragment>
-          }
-          title="About these metrics"
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        id="topCitedPublications"
-        item={true}
-        style={
-          Object {
-            "paddingTop": 24,
-          }
-        }
-        xs={12}
-      >
-        <Memo(PublicationsList)
-          hideCountTotal={true}
-          key="altmetric"
-          publicationsList={
-            Array [
-              Object {
-                "fez_datastream_info": Array [],
-                "fez_matched_journals": Object {
-                  "mtj_jnl_id": 3283,
-                  "mtj_pid": "UQ:330391",
-                  "mtj_status": "A",
-                },
-                "fez_record_search_key_article_number": null,
-                "fez_record_search_key_assigned_group_id": Array [],
-                "fez_record_search_key_assigned_user_id": Array [],
-                "fez_record_search_key_author": Array [
-                  Object {
-                    "rek_author": "Frazer, Ian H.",
-                    "rek_author_id": 28844413,
-                    "rek_author_order": 1,
-                    "rek_author_pid": "UQ:330391",
-                    "rek_author_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_author_affiliation_country": Array [
-                  Object {
-                    "rek_author_affiliation_country": "aus",
-                    "rek_author_affiliation_country_id": 344457,
-                    "rek_author_affiliation_country_order": 1,
-                    "rek_author_affiliation_country_pid": "UQ:330391",
-                    "rek_author_affiliation_country_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_author_affiliation_full_address": Array [
-                  Object {
-                    "rek_author_affiliation_full_address": "Woolloongabba, QLD 4102",
-                    "rek_author_affiliation_full_address_id": 377945,
-                    "rek_author_affiliation_full_address_order": 1,
-                    "rek_author_affiliation_full_address_pid": "UQ:330391",
-                    "rek_author_affiliation_full_address_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_author_affiliation_id": Array [],
-                "fez_record_search_key_author_affiliation_name": Array [
-                  Object {
-                    "rek_author_affiliation_name": "University of Queensland Diamantina Institute, Translational Research Institute, University of Queensland",
-                    "rek_author_affiliation_name_id": 345319,
-                    "rek_author_affiliation_name_order": 1,
-                    "rek_author_affiliation_name_pid": "UQ:330391",
-                    "rek_author_affiliation_name_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_author_id": Array [
-                  Object {
-                    "rek_author_id": 410,
-                    "rek_author_id_id": 28217147,
-                    "rek_author_id_lookup": "Frazer, Ian H.",
-                    "rek_author_id_order": 1,
-                    "rek_author_id_pid": "UQ:330391",
-                    "rek_author_id_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_biosis_id": null,
-                "fez_record_search_key_contributor": Array [],
-                "fez_record_search_key_contributor_id": Array [],
-                "fez_record_search_key_corresponding_country": Array [
-                  Object {
-                    "rek_corresponding_country": "aus",
-                    "rek_corresponding_country_id": 285972,
-                    "rek_corresponding_country_order": 1,
-                    "rek_corresponding_country_pid": "UQ:330391",
-                    "rek_corresponding_country_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_corresponding_email": Array [
-                  Object {
-                    "rek_corresponding_email": "i.frazer@uq.edu.au",
-                    "rek_corresponding_email_id": 63548,
-                    "rek_corresponding_email_order": 1,
-                    "rek_corresponding_email_pid": "UQ:330391",
-                    "rek_corresponding_email_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_corresponding_name": Array [
-                  Object {
-                    "rek_corresponding_name": "Frazer I.H.",
-                    "rek_corresponding_name_id": 56163,
-                    "rek_corresponding_name_order": 1,
-                    "rek_corresponding_name_pid": "UQ:330391",
-                    "rek_corresponding_name_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_corresponding_organisation": Array [],
-                "fez_record_search_key_datastream_policy": null,
-                "fez_record_search_key_date_available": Object {
-                  "rek_date_available": "2014-01-01T00:00:00Z",
-                  "rek_date_available_id": 914088,
-                  "rek_date_available_pid": "UQ:330391",
-                  "rek_date_available_xsdmf_id": null,
-                },
-                "fez_record_search_key_doi": Object {
-                  "fez_altmetric": Object {
-                    "as_1d": 0,
-                    "as_1m": 0,
-                    "as_1w": 0,
-                    "as_1y": 5.7,
-                    "as_2d": 0,
-                    "as_3d": 0,
-                    "as_3m": 3,
-                    "as_4d": 0,
-                    "as_5d": 0,
-                    "as_6d": 0,
-                    "as_6m": 5.7,
-                    "as_amid": 101417,
-                    "as_blogs_posts_count": 28,
-                    "as_citation_url": "https://queensland.altmetric.com/details/101417",
-                    "as_created": "1393319416",
-                    "as_doi": "10.1038/nature05874",
-                    "as_f1000_posts_count": 3,
-                    "as_facebook_posts_count": 1,
-                    "as_googleplus_posts_count": 0,
-                    "as_id": 7912,
-                    "as_last_checked": "1525691899",
-                    "as_linkedin_posts_count": 0,
-                    "as_news_posts_count": 3,
-                    "as_peer_reviews_posts_count": 0,
-                    "as_pinterest_posts_count": 1,
-                    "as_policy_posts_count": 1,
-                    "as_qa_posts_count": 0,
-                    "as_reddit_posts_count": 0,
-                    "as_score": 5,
-                    "as_syllabi_posts_count": 0,
-                    "as_total_posts_count": 61,
-                    "as_twitter_posts_count": 7,
-                    "as_video_posts_count": 1,
-                    "as_weibo_posts_count": 0,
-                    "as_wikipedia_posts_count": 15,
-                  },
-                  "rek_doi": "10.4049/jimmunol.1490012",
-                  "rek_doi_id": 1519269,
-                  "rek_doi_pid": "UQ:330391",
-                  "rek_doi_xsdmf_id": null,
-                },
-                "fez_record_search_key_end_page": Object {
-                  "rek_end_page": "4011",
-                  "rek_end_page_id": 5496808,
-                  "rek_end_page_pid": "UQ:330391",
-                  "rek_end_page_xsdmf_id": null,
-                },
-                "fez_record_search_key_file_attachment_access_condition": Array [],
-                "fez_record_search_key_file_attachment_embargo_date": Array [],
-                "fez_record_search_key_file_attachment_name": Array [],
-                "fez_record_search_key_grant_acronym": Array [],
-                "fez_record_search_key_grant_agency": Array [],
-                "fez_record_search_key_grant_agency_id": Array [],
-                "fez_record_search_key_grant_id": Array [],
-                "fez_record_search_key_grant_text": Array [],
-                "fez_record_search_key_herdc_code": Object {
-                  "rek_herdc_code": 450009,
-                  "rek_herdc_code_id": 4651366,
-                  "rek_herdc_code_lookup": "C1",
-                  "rek_herdc_code_pid": "UQ:330391",
-                  "rek_herdc_code_xsdmf_id": null,
-                },
-                "fez_record_search_key_herdc_status": Object {
-                  "rek_herdc_status": 453221,
-                  "rek_herdc_status_id": 3563996,
-                  "rek_herdc_status_lookup": "Confirmed Code",
-                  "rek_herdc_status_pid": "UQ:330391",
-                  "rek_herdc_status_xsdmf_id": null,
-                },
-                "fez_record_search_key_institutional_status": Object {
-                  "rek_institutional_status": 453223,
-                  "rek_institutional_status_id": 3225739,
-                  "rek_institutional_status_lookup": "UQ",
-                  "rek_institutional_status_pid": "UQ:330391",
-                  "rek_institutional_status_xsdmf_id": null,
-                },
-                "fez_record_search_key_isbn": Array [],
-                "fez_record_search_key_isderivationof": Array [],
-                "fez_record_search_key_isi_loc": Object {
-                  "rek_isi_loc": "000334672800003",
-                  "rek_isi_loc_id": 3888561,
-                  "rek_isi_loc_pid": "UQ:330391",
-                  "rek_isi_loc_xsdmf_id": null,
-                },
-                "fez_record_search_key_ismemberof": Array [
-                  Object {
-                    "rek_ismemberof": "UQ:3931",
-                    "rek_ismemberof_id": 11502328,
-                    "rek_ismemberof_lookup": "UQ Diamantina Institute Publications",
-                    "rek_ismemberof_order": 1,
-                    "rek_ismemberof_pid": "UQ:330391",
-                    "rek_ismemberof_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_ismemberof": "UQ:320785",
-                    "rek_ismemberof_id": 11502329,
-                    "rek_ismemberof_lookup": "Official 2015 Collection",
-                    "rek_ismemberof_order": 2,
-                    "rek_ismemberof_pid": "UQ:330391",
-                    "rek_ismemberof_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_issn": Array [
-                  Object {
-                    "fez_journal_issns": Array [
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2010-11-19 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2010,
-                          "jnl_foreign_name": null,
-                          "jnl_id": 3283,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": "A*",
-                          "jnl_updated_date": "2010-11-19 00:00:00",
-                        },
-                        "jni_id": 5435,
-                        "jni_issn": "1550-6606",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 3283,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2011-10-28 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2012,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 30578,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2011-10-28 00:00:00",
-                        },
-                        "jni_id": 50560,
-                        "jni_issn": "1550-6606",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 30578,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2014-07-16 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2015,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 47977,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2014-07-16 00:00:00",
-                        },
-                        "jni_id": 78427,
-                        "jni_issn": "1550-6606",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 47977,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2017-09-06 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2018,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 100768,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2017-09-06 00:00:00",
-                        },
-                        "jni_id": 165940,
-                        "jni_issn": "1550-6606",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 100768,
-                      },
-                    ],
-                    "fez_sherpa_romeo": Object {
-                      "srm_date_updated": "2017-09-30 18:51:44",
-                      "srm_id": 6131,
-                      "srm_issn": "1550-6606",
-                      "srm_journal_link": "http://example.com",
-                      "srm_journal_name": "Journal of Immunology",
-                      "srm_json": "{}",
-                    },
-                    "rek_issn": "1550-6606",
-                    "rek_issn_id": 5088122,
-                    "rek_issn_lookup": "",
-                    "rek_issn_order": 1,
-                    "rek_issn_pid": "UQ:330391",
-                    "rek_issn_xsdmf_id": null,
-                  },
-                  Object {
-                    "fez_journal_issns": Array [
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2010-11-19 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2010,
-                          "jnl_foreign_name": null,
-                          "jnl_id": 3283,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": "A*",
-                          "jnl_updated_date": "2010-11-19 00:00:00",
-                        },
-                        "jni_id": 5434,
-                        "jni_issn": "0022-1767",
-                        "jni_issn_order": 1,
-                        "jni_jnl_id": 3283,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2011-10-28 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2012,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 30578,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2011-10-28 00:00:00",
-                        },
-                        "jni_id": 50559,
-                        "jni_issn": "0022-1767",
-                        "jni_issn_order": 1,
-                        "jni_jnl_id": 30578,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2014-07-16 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2015,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 47977,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2014-07-16 00:00:00",
-                        },
-                        "jni_id": 78426,
-                        "jni_issn": "0022-1767",
-                        "jni_issn_order": 1,
-                        "jni_jnl_id": 47977,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2017-09-06 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2018,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 100768,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2017-09-06 00:00:00",
-                        },
-                        "jni_id": 165939,
-                        "jni_issn": "0022-1767",
-                        "jni_issn_order": 1,
-                        "jni_jnl_id": 100768,
-                      },
-                    ],
-                    "fez_sherpa_romeo": Object {
-                      "srm_date_updated": "2017-09-30 15:14:27",
-                      "srm_id": 6130,
-                      "srm_issn": "0022-1767",
-                      "srm_journal_link": "http://example.com",
-                      "srm_journal_name": "Journal of Immunology",
-                      "srm_json": "{}",
-                    },
-                    "rek_issn": "0022-1767",
-                    "rek_issn_id": 5088123,
-                    "rek_issn_lookup": "",
-                    "rek_issn_order": 2,
-                    "rek_issn_pid": "UQ:330391",
-                    "rek_issn_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_issue_number": Object {
-                  "rek_issue_number": "9",
-                  "rek_issue_number_id": 4396330,
-                  "rek_issue_number_pid": "UQ:330391",
-                  "rek_issue_number_xsdmf_id": null,
-                },
-                "fez_record_search_key_journal_name": Object {
-                  "rek_journal_name": "Journal of Immunology",
-                  "rek_journal_name_id": 5045853,
-                  "rek_journal_name_pid": "UQ:330391",
-                  "rek_journal_name_xsdmf_id": null,
-                },
-                "fez_record_search_key_keywords": Array [
-                  Object {
-                    "rek_keywords": "Human papillomavirus",
-                    "rek_keywords_id": 29137284,
-                    "rek_keywords_order": 1,
-                    "rek_keywords_pid": "UQ:330391",
-                    "rek_keywords_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_keywords": "Papillomavirus",
-                    "rek_keywords_id": 29137285,
-                    "rek_keywords_order": 2,
-                    "rek_keywords_pid": "UQ:330391",
-                    "rek_keywords_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_keywords": "Virus-like particle",
-                    "rek_keywords_id": 29137286,
-                    "rek_keywords_order": 3,
-                    "rek_keywords_pid": "UQ:330391",
-                    "rek_keywords_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_language": Array [
-                  Object {
-                    "rek_language": "eng",
-                    "rek_language_id": 5217768,
-                    "rek_language_order": 1,
-                    "rek_language_pid": "UQ:330391",
-                    "rek_language_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_language_of_journal_name": Array [],
-                "fez_record_search_key_language_of_title": Array [],
-                "fez_record_search_key_license": null,
-                "fez_record_search_key_link": Array [],
-                "fez_record_search_key_link_description": Array [],
-                "fez_record_search_key_native_script_journal_name": null,
-                "fez_record_search_key_native_script_title": null,
-                "fez_record_search_key_notes": null,
-                "fez_record_search_key_oa_embargo_days": Object {
-                  "rek_oa_embargo_days": "365",
-                  "rek_oa_embargo_days_id": 5678,
-                  "rek_oa_embargo_days_pid": "UQ:330391",
-                  "rek_oa_embargo_days_xsdmf_id": null,
-                },
-                "fez_record_search_key_oa_notes": Object {
-                  "rek_oa_notes": "12 month embargo",
-                  "rek_oa_notes_id": 131336,
-                  "rek_oa_notes_pid": "UQ:330391",
-                  "rek_oa_notes_xsdmf_id": null,
-                },
-                "fez_record_search_key_oa_status": Object {
-                  "rek_oa_status": 453693,
-                  "rek_oa_status_id": 311344,
-                  "rek_oa_status_lookup": "DOI",
-                  "rek_oa_status_pid": "UQ:330391",
-                  "rek_oa_status_xsdmf_id": null,
-                },
-                "fez_record_search_key_oa_status_type": null,
-                "fez_record_search_key_place_of_publication": Object {
-                  "rek_place_of_publication": "Bethesda, MD, United States",
-                  "rek_place_of_publication_id": 4161211,
-                  "rek_place_of_publication_pid": "UQ:330391",
-                  "rek_place_of_publication_xsdmf_id": null,
-                },
-                "fez_record_search_key_publisher": Object {
-                  "rek_publisher": "American Association of Immunologists",
-                  "rek_publisher_id": 4424543,
-                  "rek_publisher_pid": "UQ:330391",
-                  "rek_publisher_xsdmf_id": null,
-                },
-                "fez_record_search_key_pubmed_central_id": null,
-                "fez_record_search_key_pubmed_id": Object {
-                  "rek_pubmed_id": "24748633",
-                  "rek_pubmed_id_id": 218283,
-                  "rek_pubmed_id_pid": "UQ:330391",
-                  "rek_pubmed_id_xsdmf_id": null,
-                },
-                "fez_record_search_key_refereed": null,
-                "fez_record_search_key_refereed_source": Object {
-                  "rek_refereed_source": "453635",
-                  "rek_refereed_source_id": 1174248,
-                  "rek_refereed_source_lookup": "Ulrichs",
-                  "rek_refereed_source_pid": "UQ:330391",
-                  "rek_refereed_source_xsdmf_id": null,
-                },
-                "fez_record_search_key_retracted": null,
-                "fez_record_search_key_roman_script_journal_name": null,
-                "fez_record_search_key_roman_script_title": null,
-                "fez_record_search_key_scopus_id": Object {
-                  "fez_scopus_citations": Object {
-                    "sc_1d": 0,
-                    "sc_1m": 0,
-                    "sc_1w": 0,
-                    "sc_1y": 147,
-                    "sc_2d": 0,
-                    "sc_3d": 0,
-                    "sc_3m": 1,
-                    "sc_4d": 0,
-                    "sc_5d": 0,
-                    "sc_6d": 0,
-                    "sc_6m": 0,
-                    "sc_citation_url": "https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-84899524861",
-                    "sc_count": 13,
-                    "sc_created": "1526521574",
-                    "sc_eid": "2-s2.0-84899524861",
-                    "sc_last_checked": "1526521574",
-                  },
-                  "rek_scopus_id": "2-s2.0-84899524861",
-                  "rek_scopus_id_id": 2395638,
-                  "rek_scopus_id_pid": "UQ:330391",
-                  "rek_scopus_id_xsdmf_id": null,
-                },
-                "fez_record_search_key_start_page": Object {
-                  "rek_start_page": "4007",
-                  "rek_start_page_id": 5567023,
-                  "rek_start_page_pid": "UQ:330391",
-                  "rek_start_page_xsdmf_id": null,
-                },
-                "fez_record_search_key_subject": Array [
-                  Object {
-                    "rek_subject": 453394,
-                    "rek_subject_id": 9519701,
-                    "rek_subject_lookup": "2403 Immunology",
-                    "rek_subject_order": 1,
-                    "rek_subject_pid": "UQ:330391",
-                    "rek_subject_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_total_pages": Object {
-                  "rek_total_pages": "5",
-                  "rek_total_pages_id": 5474537,
-                  "rek_total_pages_pid": "UQ:330391",
-                  "rek_total_pages_xsdmf_id": null,
-                },
-                "fez_record_search_key_translated_journal_name": null,
-                "fez_record_search_key_translated_title": null,
-                "fez_record_search_key_volume_number": Object {
-                  "rek_volume_number": "192",
-                  "rek_volume_number_id": 5103536,
-                  "rek_volume_number_pid": "UQ:330391",
-                  "rek_volume_number_xsdmf_id": null,
-                },
-                "fez_record_search_key_wok_doc_types": Array [],
-                "fez_record_search_key_zoorec_id": null,
-                "metricData": Object {
-                  "citation_url": "https://queensland.altmetric.com/details/101417",
-                  "count": 5,
-                  "difference": 3,
-                  "source": "altmetric",
-                },
-                "rek_altmetric_id": 2291601,
-                "rek_altmetric_id_xsdmf_id": null,
-                "rek_altmetric_score": 5,
-                "rek_altmetric_score_xsdmf_id": null,
-                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Frazer, Ian H.\\" href=\\"/list/author_id/410/\\">Frazer, Ian H.</a> (<span class=\\"citation_date\\">2014</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: Development and implementation of papillomavirus prophylactic vaccines\\" href=\\"/view/UQ:330391\\">Development and implementation of papillomavirus prophylactic vaccines</a>. <i><span class=\\"citation_journal_name\\">Journal of Immunology</span></i>, <i><span class=\\"citation_volume_number\\">192</span></i> <span class=\\"citation_issue_number\\">9</span>: <span class=\\"citation_start_page\\">4007</span>-<span class=\\"citation_end_page\\">4011</span>. doi:<span class=\\"citation_doi\\">10.4049/jimmunol.1490012</span>",
-                "rek_copyright": "on",
-                "rek_copyright_xsdmf_id": null,
-                "rek_created_date": "2014-05-20T00:24:11Z",
-                "rek_created_date_xsdmf_id": null,
-                "rek_date": "2014-05-01T00:00:00Z",
-                "rek_date_xsdmf_id": null,
-                "rek_depositor": 8524,
-                "rek_depositor_affiliation": 1048,
-                "rek_depositor_affiliation_xsdmf_id": null,
-                "rek_depositor_xsdmf_id": null,
-                "rek_description": "Translation of basic scientific findings into practical patient outcomes is a significant exercise even when the goal is conceptually straightforward, as in the development of a vaccine for an infectious disease. Recognition of the association of cervical cancer with papillomavirus infection encouraged development of a vaccine to help with prevention of this very common cancer, causing over 250,000 deaths each year worldwide. To introduce a vaccine program, it was however necessary to develop a technology for making viral Ag, demonstrate that systemic immunization could provide mucosal surface protection in the genital tract, develop assays for vaccine potency, and understand enough about the epidemiology and natural history of the infection to plan effective intervention strategies. This process took ~25 years. The major hurdle, now that effective vaccines are available, is to ensure their deployment in the countries where they are most needed. The development and deployment of human papillomavirus vaccines demonstrate the benefits of collaborative research activity across the globe, and between academia and industry, to translate scientific discoveries into public health benefits.",
-                "rek_description_xsdmf_id": null,
-                "rek_display_type": 179,
-                "rek_display_type_lookup": "Journal Article",
-                "rek_display_type_xsdmf_id": null,
-                "rek_file_downloads": 0,
-                "rek_formatted_abstract": null,
-                "rek_formatted_abstract_xsdmf_id": null,
-                "rek_formatted_title": null,
-                "rek_formatted_title_xsdmf_id": null,
-                "rek_genre": "Journal Article",
-                "rek_genre_type": "Article (original research)",
-                "rek_genre_type_xsdmf_id": null,
-                "rek_genre_xsdmf_id": null,
-                "rek_herdc_notes": "&nbsp;Ian H. Frazer, University of Queensland Diamantina Institute, Translational Research Institute, 37 Kent Street, Woolloongabba, QLD 4102, Australia.",
-                "rek_herdc_notes_xsdmf_id": null,
-                "rek_object_type": 3,
-                "rek_object_type_lookup": "Record",
-                "rek_object_type_xsdmf_id": null,
-                "rek_pid": "UQ:330391",
-                "rek_pubmed_doc_type": null,
-                "rek_pubmed_doc_type_lookup": null,
-                "rek_pubmed_doc_type_xsdmf_id": null,
-                "rek_scopus_citation_count": 13,
-                "rek_scopus_doc_type": "ar",
-                "rek_scopus_doc_type_lookup": null,
-                "rek_scopus_doc_type_xsdmf_id": null,
-                "rek_security_inherited": 1,
-                "rek_status": 2,
-                "rek_status_lookup": "Published",
-                "rek_status_xsdmf_id": null,
-                "rek_subtype": "Article (original research)",
-                "rek_subtype_xsdmf_id": null,
-                "rek_thomson_citation_count": 12,
-                "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "Development and implementation of papillomavirus prophylactic vaccines",
-                "rek_title_xsdmf_id": null,
-                "rek_updated_date": "2018-01-19T02:57:37Z",
-                "rek_updated_date_xsdmf_id": null,
-                "rek_wok_doc_type": "@",
-                "rek_wok_doc_type_lookup": null,
-                "rek_wok_doc_type_xsdmf_id": null,
-              },
-            ]
-          }
-          showMetrics={true}
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </StandardCard>
-</Fragment>
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="21"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            style="text-align: center;"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+              style="font-size: 1.33rem;"
+            >
+              Loading trending works
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    />
+  </div>
+</div>
 `;
 
-exports[`Component TopCitedPublications should render top cited publications 1`] = `
-<Fragment>
-  <StandardCard
-    noHeader={true}
+exports[`Component TopCitedPublications should render tabs larger than xs width properly 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-40 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+    data-testid="standard-card"
+    id="standard-card"
   >
-    <ForwardRef(Tabs)
-      centered={true}
-      classes={
-        Object {
-          "indicator": undefined,
-        }
-      }
-      indicatorColor="primary"
-      onChange={[Function]}
-      textColor="inherit"
-      value="altmetric"
-      variant="fullWidth"
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-content"
+      data-testid="standard-card-content"
+      id="standard-card-content"
     >
-      <ForwardRef(Tab)
-        key="altmetric"
-        label={
-          <span>
-            Trending on Altmetric
-          </span>
-        }
-        value="altmetric"
-      />
-      <ForwardRef(Tab)
-        key="scopus"
-        label={
-          <span>
-            Trending on Scopus
-          </span>
-        }
-        value="scopus"
-      />
-      <ForwardRef(Tab)
-        key="thomson"
-        label={
-          <span>
-            Trending on Web of science
-          </span>
-        }
-        value="thomson"
-      />
-    </ForwardRef(Tabs)>
-    <ForwardRef(Grid)
-      alignContent="flex-start"
-      alignItems="flex-start"
-      container={true}
-      key="altmetric"
-      style={
-        Object {
-          "marginTop": 24,
-        }
-      }
-    >
-      <ForwardRef(Grid)
-        item={true}
-        xs={true}
+      <div
+        class="MuiTabs-root Component-tabs-37 css-1ujnqem-MuiTabs-root"
       >
-        <ForwardRef(Typography)
-          color="primary"
-          key="altmetric"
-          variant="h6"
+        <div
+          class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+          style="overflow: hidden; margin-bottom: 0px;"
         >
           <div
-            className="fez-icon altmetric xxlarge"
-            key="altmetric"
+            class="MuiTabs-flexContainer MuiTabs-centered css-1wf8b0h-MuiTabs-flexContainer"
+            role="tablist"
+          >
+            <button
+              aria-selected="true"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected Component-tab-38 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              role="tab"
+              tabindex="0"
+              type="button"
+            >
+              <span>
+                Trending on Altmetric
+              </span>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Component-tab-38 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>
+                Trending on Scopus
+              </span>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Component-tab-38 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>
+                Trending on Web of science
+              </span>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <span
+            class="MuiTabs-indicator Component-tabIndicator-39 css-14t6lgd-MuiTabs-indicator"
+            style="left: 0px; width: 0px;"
           />
-          Altmetric score
-        </ForwardRef(Typography)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        style={
-          Object {
-            "marginTop": -12,
-          }
-        }
-        xs="auto"
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-1ozqwjr-MuiGrid-root"
+        style="margin-top: 24px;"
       >
-        <Connect(HelpIcon)
-          buttonLabel="CLOSE"
-          text={
-            <React.Fragment>
-              <h3>
-                WOS and Scopus
-              </h3>
-              <p>
-                The + (plus) value indicates how much the citation count has increased in the last three months.
-              </p>
-              <h3>
-                Altmetric score (social media activity)
-              </h3>
-              <p>
-                The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
-              </p>
-              <p>
-                You can click on the number as a link to see who is citing each work, or in the case of Altmetric who is referencing the work in social media and news outlets.
-              </p>
-              For more information visit :
-              <br />
-              <a
-                href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/"
-                rel="noopener noreferrer"
-                target="_blank"
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+          >
+            <div
+              class="fez-icon altmetric xxlarge"
+            />
+            Altmetric score
+          </h6>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+          style="margin-top: -12px;"
+        >
+          <button
+            aria-label="Click for more information"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="help-icon"
+            data-mui-internal-clone-element="true"
+            data-testid="help-icon"
+            id="help-icon"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-46 css-i4bv87-MuiSvgIcon-root"
+              data-testid="HelpOutlineIcon"
+              focusable="false"
+              role="img"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+              />
+              <title>
+                Click for more information
+              </title>
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          id="topCitedPublications"
+          style="padding-top: 24px;"
+        >
+          <div
+            class="MuiBox-root css-0"
+            data-testid="search-results-publications-list"
+            id="search-results-publications-list"
+          >
+            <div
+              class="publicationCitation"
+            >
+              <div
+                data-testid="publication-citation-parent-UQ:330391"
+                id="publication-citation-parent-UQ:330391"
               >
-                https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
-              </a>
-            </React.Fragment>
-          }
-          title="About these metrics"
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        id="topCitedPublications"
-        item={true}
-        style={
-          Object {
-            "paddingTop": 24,
-          }
-        }
-        xs={12}
-      >
-        <Memo(PublicationsList)
-          hideCountTotal={true}
-          key="altmetric"
-          publicationsList={
-            Array [
-              Object {
-                "fez_datastream_info": Array [],
-                "fez_matched_journals": Object {
-                  "mtj_jnl_id": 3283,
-                  "mtj_pid": "UQ:330391",
-                  "mtj_status": "A",
-                },
-                "fez_record_search_key_article_number": null,
-                "fez_record_search_key_assigned_group_id": Array [],
-                "fez_record_search_key_assigned_user_id": Array [],
-                "fez_record_search_key_author": Array [
-                  Object {
-                    "rek_author": "Frazer, Ian H.",
-                    "rek_author_id": 28844413,
-                    "rek_author_order": 1,
-                    "rek_author_pid": "UQ:330391",
-                    "rek_author_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_author_affiliation_country": Array [
-                  Object {
-                    "rek_author_affiliation_country": "aus",
-                    "rek_author_affiliation_country_id": 344457,
-                    "rek_author_affiliation_country_order": 1,
-                    "rek_author_affiliation_country_pid": "UQ:330391",
-                    "rek_author_affiliation_country_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_author_affiliation_full_address": Array [
-                  Object {
-                    "rek_author_affiliation_full_address": "Woolloongabba, QLD 4102",
-                    "rek_author_affiliation_full_address_id": 377945,
-                    "rek_author_affiliation_full_address_order": 1,
-                    "rek_author_affiliation_full_address_pid": "UQ:330391",
-                    "rek_author_affiliation_full_address_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_author_affiliation_id": Array [],
-                "fez_record_search_key_author_affiliation_name": Array [
-                  Object {
-                    "rek_author_affiliation_name": "University of Queensland Diamantina Institute, Translational Research Institute, University of Queensland",
-                    "rek_author_affiliation_name_id": 345319,
-                    "rek_author_affiliation_name_order": 1,
-                    "rek_author_affiliation_name_pid": "UQ:330391",
-                    "rek_author_affiliation_name_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_author_id": Array [
-                  Object {
-                    "rek_author_id": 410,
-                    "rek_author_id_id": 28217147,
-                    "rek_author_id_lookup": "Frazer, Ian H.",
-                    "rek_author_id_order": 1,
-                    "rek_author_id_pid": "UQ:330391",
-                    "rek_author_id_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_biosis_id": null,
-                "fez_record_search_key_contributor": Array [],
-                "fez_record_search_key_contributor_id": Array [],
-                "fez_record_search_key_corresponding_country": Array [
-                  Object {
-                    "rek_corresponding_country": "aus",
-                    "rek_corresponding_country_id": 285972,
-                    "rek_corresponding_country_order": 1,
-                    "rek_corresponding_country_pid": "UQ:330391",
-                    "rek_corresponding_country_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_corresponding_email": Array [
-                  Object {
-                    "rek_corresponding_email": "i.frazer@uq.edu.au",
-                    "rek_corresponding_email_id": 63548,
-                    "rek_corresponding_email_order": 1,
-                    "rek_corresponding_email_pid": "UQ:330391",
-                    "rek_corresponding_email_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_corresponding_name": Array [
-                  Object {
-                    "rek_corresponding_name": "Frazer I.H.",
-                    "rek_corresponding_name_id": 56163,
-                    "rek_corresponding_name_order": 1,
-                    "rek_corresponding_name_pid": "UQ:330391",
-                    "rek_corresponding_name_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_corresponding_organisation": Array [],
-                "fez_record_search_key_datastream_policy": null,
-                "fez_record_search_key_date_available": Object {
-                  "rek_date_available": "2014-01-01T00:00:00Z",
-                  "rek_date_available_id": 914088,
-                  "rek_date_available_pid": "UQ:330391",
-                  "rek_date_available_xsdmf_id": null,
-                },
-                "fez_record_search_key_doi": Object {
-                  "fez_altmetric": Object {
-                    "as_1d": 0,
-                    "as_1m": 0,
-                    "as_1w": 0,
-                    "as_1y": 5.7,
-                    "as_2d": 0,
-                    "as_3d": 0,
-                    "as_3m": 3,
-                    "as_4d": 0,
-                    "as_5d": 0,
-                    "as_6d": 0,
-                    "as_6m": 5.7,
-                    "as_amid": 101417,
-                    "as_blogs_posts_count": 28,
-                    "as_citation_url": "https://queensland.altmetric.com/details/101417",
-                    "as_created": "1393319416",
-                    "as_doi": "10.1038/nature05874",
-                    "as_f1000_posts_count": 3,
-                    "as_facebook_posts_count": 1,
-                    "as_googleplus_posts_count": 0,
-                    "as_id": 7912,
-                    "as_last_checked": "1525691899",
-                    "as_linkedin_posts_count": 0,
-                    "as_news_posts_count": 3,
-                    "as_peer_reviews_posts_count": 0,
-                    "as_pinterest_posts_count": 1,
-                    "as_policy_posts_count": 1,
-                    "as_qa_posts_count": 0,
-                    "as_reddit_posts_count": 0,
-                    "as_score": 5,
-                    "as_syllabi_posts_count": 0,
-                    "as_total_posts_count": 61,
-                    "as_twitter_posts_count": 7,
-                    "as_video_posts_count": 1,
-                    "as_weibo_posts_count": 0,
-                    "as_wikipedia_posts_count": 15,
-                  },
-                  "rek_doi": "10.4049/jimmunol.1490012",
-                  "rek_doi_id": 1519269,
-                  "rek_doi_pid": "UQ:330391",
-                  "rek_doi_xsdmf_id": null,
-                },
-                "fez_record_search_key_end_page": Object {
-                  "rek_end_page": "4011",
-                  "rek_end_page_id": 5496808,
-                  "rek_end_page_pid": "UQ:330391",
-                  "rek_end_page_xsdmf_id": null,
-                },
-                "fez_record_search_key_file_attachment_access_condition": Array [],
-                "fez_record_search_key_file_attachment_embargo_date": Array [],
-                "fez_record_search_key_file_attachment_name": Array [],
-                "fez_record_search_key_grant_acronym": Array [],
-                "fez_record_search_key_grant_agency": Array [],
-                "fez_record_search_key_grant_agency_id": Array [],
-                "fez_record_search_key_grant_id": Array [],
-                "fez_record_search_key_grant_text": Array [],
-                "fez_record_search_key_herdc_code": Object {
-                  "rek_herdc_code": 450009,
-                  "rek_herdc_code_id": 4651366,
-                  "rek_herdc_code_lookup": "C1",
-                  "rek_herdc_code_pid": "UQ:330391",
-                  "rek_herdc_code_xsdmf_id": null,
-                },
-                "fez_record_search_key_herdc_status": Object {
-                  "rek_herdc_status": 453221,
-                  "rek_herdc_status_id": 3563996,
-                  "rek_herdc_status_lookup": "Confirmed Code",
-                  "rek_herdc_status_pid": "UQ:330391",
-                  "rek_herdc_status_xsdmf_id": null,
-                },
-                "fez_record_search_key_institutional_status": Object {
-                  "rek_institutional_status": 453223,
-                  "rek_institutional_status_id": 3225739,
-                  "rek_institutional_status_lookup": "UQ",
-                  "rek_institutional_status_pid": "UQ:330391",
-                  "rek_institutional_status_xsdmf_id": null,
-                },
-                "fez_record_search_key_isbn": Array [],
-                "fez_record_search_key_isderivationof": Array [],
-                "fez_record_search_key_isi_loc": Object {
-                  "rek_isi_loc": "000334672800003",
-                  "rek_isi_loc_id": 3888561,
-                  "rek_isi_loc_pid": "UQ:330391",
-                  "rek_isi_loc_xsdmf_id": null,
-                },
-                "fez_record_search_key_ismemberof": Array [
-                  Object {
-                    "rek_ismemberof": "UQ:3931",
-                    "rek_ismemberof_id": 11502328,
-                    "rek_ismemberof_lookup": "UQ Diamantina Institute Publications",
-                    "rek_ismemberof_order": 1,
-                    "rek_ismemberof_pid": "UQ:330391",
-                    "rek_ismemberof_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_ismemberof": "UQ:320785",
-                    "rek_ismemberof_id": 11502329,
-                    "rek_ismemberof_lookup": "Official 2015 Collection",
-                    "rek_ismemberof_order": 2,
-                    "rek_ismemberof_pid": "UQ:330391",
-                    "rek_ismemberof_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_issn": Array [
-                  Object {
-                    "fez_journal_issns": Array [
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2010-11-19 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2010,
-                          "jnl_foreign_name": null,
-                          "jnl_id": 3283,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": "A*",
-                          "jnl_updated_date": "2010-11-19 00:00:00",
-                        },
-                        "jni_id": 5435,
-                        "jni_issn": "1550-6606",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 3283,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2011-10-28 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2012,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 30578,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2011-10-28 00:00:00",
-                        },
-                        "jni_id": 50560,
-                        "jni_issn": "1550-6606",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 30578,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2014-07-16 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2015,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 47977,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2014-07-16 00:00:00",
-                        },
-                        "jni_id": 78427,
-                        "jni_issn": "1550-6606",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 47977,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2017-09-06 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2018,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 100768,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2017-09-06 00:00:00",
-                        },
-                        "jni_id": 165940,
-                        "jni_issn": "1550-6606",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 100768,
-                      },
-                    ],
-                    "fez_sherpa_romeo": Object {
-                      "srm_date_updated": "2017-09-30 18:51:44",
-                      "srm_id": 6131,
-                      "srm_issn": "1550-6606",
-                      "srm_journal_link": "http://example.com",
-                      "srm_journal_name": "Journal of Immunology",
-                      "srm_json": "{}",
-                    },
-                    "rek_issn": "1550-6606",
-                    "rek_issn_id": 5088122,
-                    "rek_issn_lookup": "",
-                    "rek_issn_order": 1,
-                    "rek_issn_pid": "UQ:330391",
-                    "rek_issn_xsdmf_id": null,
-                  },
-                  Object {
-                    "fez_journal_issns": Array [
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2010-11-19 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2010,
-                          "jnl_foreign_name": null,
-                          "jnl_id": 3283,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": "A*",
-                          "jnl_updated_date": "2010-11-19 00:00:00",
-                        },
-                        "jni_id": 5434,
-                        "jni_issn": "0022-1767",
-                        "jni_issn_order": 1,
-                        "jni_jnl_id": 3283,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2011-10-28 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2012,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 30578,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2011-10-28 00:00:00",
-                        },
-                        "jni_id": 50559,
-                        "jni_issn": "0022-1767",
-                        "jni_issn_order": 1,
-                        "jni_jnl_id": 30578,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2014-07-16 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2015,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 47977,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2014-07-16 00:00:00",
-                        },
-                        "jni_id": 78426,
-                        "jni_issn": "0022-1767",
-                        "jni_issn_order": 1,
-                        "jni_jnl_id": 47977,
-                      },
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2017-09-06 00:00:00",
-                          "jnl_era_id": 15513,
-                          "jnl_era_year": 2018,
-                          "jnl_foreign_name": "",
-                          "jnl_id": 100768,
-                          "jnl_journal_name": "Journal of Immunology",
-                          "jnl_rank": null,
-                          "jnl_updated_date": "2017-09-06 00:00:00",
-                        },
-                        "jni_id": 165939,
-                        "jni_issn": "0022-1767",
-                        "jni_issn_order": 1,
-                        "jni_jnl_id": 100768,
-                      },
-                    ],
-                    "fez_sherpa_romeo": Object {
-                      "srm_date_updated": "2017-09-30 15:14:27",
-                      "srm_id": 6130,
-                      "srm_issn": "0022-1767",
-                      "srm_journal_link": "http://example.com",
-                      "srm_journal_name": "Journal of Immunology",
-                      "srm_json": "{}",
-                    },
-                    "rek_issn": "0022-1767",
-                    "rek_issn_id": 5088123,
-                    "rek_issn_lookup": "",
-                    "rek_issn_order": 2,
-                    "rek_issn_pid": "UQ:330391",
-                    "rek_issn_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_issue_number": Object {
-                  "rek_issue_number": "9",
-                  "rek_issue_number_id": 4396330,
-                  "rek_issue_number_pid": "UQ:330391",
-                  "rek_issue_number_xsdmf_id": null,
-                },
-                "fez_record_search_key_journal_name": Object {
-                  "rek_journal_name": "Journal of Immunology",
-                  "rek_journal_name_id": 5045853,
-                  "rek_journal_name_pid": "UQ:330391",
-                  "rek_journal_name_xsdmf_id": null,
-                },
-                "fez_record_search_key_keywords": Array [
-                  Object {
-                    "rek_keywords": "Human papillomavirus",
-                    "rek_keywords_id": 29137284,
-                    "rek_keywords_order": 1,
-                    "rek_keywords_pid": "UQ:330391",
-                    "rek_keywords_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_keywords": "Papillomavirus",
-                    "rek_keywords_id": 29137285,
-                    "rek_keywords_order": 2,
-                    "rek_keywords_pid": "UQ:330391",
-                    "rek_keywords_xsdmf_id": null,
-                  },
-                  Object {
-                    "rek_keywords": "Virus-like particle",
-                    "rek_keywords_id": 29137286,
-                    "rek_keywords_order": 3,
-                    "rek_keywords_pid": "UQ:330391",
-                    "rek_keywords_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_language": Array [
-                  Object {
-                    "rek_language": "eng",
-                    "rek_language_id": 5217768,
-                    "rek_language_order": 1,
-                    "rek_language_pid": "UQ:330391",
-                    "rek_language_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_language_of_journal_name": Array [],
-                "fez_record_search_key_language_of_title": Array [],
-                "fez_record_search_key_license": null,
-                "fez_record_search_key_link": Array [],
-                "fez_record_search_key_link_description": Array [],
-                "fez_record_search_key_native_script_journal_name": null,
-                "fez_record_search_key_native_script_title": null,
-                "fez_record_search_key_notes": null,
-                "fez_record_search_key_oa_embargo_days": Object {
-                  "rek_oa_embargo_days": "365",
-                  "rek_oa_embargo_days_id": 5678,
-                  "rek_oa_embargo_days_pid": "UQ:330391",
-                  "rek_oa_embargo_days_xsdmf_id": null,
-                },
-                "fez_record_search_key_oa_notes": Object {
-                  "rek_oa_notes": "12 month embargo",
-                  "rek_oa_notes_id": 131336,
-                  "rek_oa_notes_pid": "UQ:330391",
-                  "rek_oa_notes_xsdmf_id": null,
-                },
-                "fez_record_search_key_oa_status": Object {
-                  "rek_oa_status": 453693,
-                  "rek_oa_status_id": 311344,
-                  "rek_oa_status_lookup": "DOI",
-                  "rek_oa_status_pid": "UQ:330391",
-                  "rek_oa_status_xsdmf_id": null,
-                },
-                "fez_record_search_key_oa_status_type": null,
-                "fez_record_search_key_place_of_publication": Object {
-                  "rek_place_of_publication": "Bethesda, MD, United States",
-                  "rek_place_of_publication_id": 4161211,
-                  "rek_place_of_publication_pid": "UQ:330391",
-                  "rek_place_of_publication_xsdmf_id": null,
-                },
-                "fez_record_search_key_publisher": Object {
-                  "rek_publisher": "American Association of Immunologists",
-                  "rek_publisher_id": 4424543,
-                  "rek_publisher_pid": "UQ:330391",
-                  "rek_publisher_xsdmf_id": null,
-                },
-                "fez_record_search_key_pubmed_central_id": null,
-                "fez_record_search_key_pubmed_id": Object {
-                  "rek_pubmed_id": "24748633",
-                  "rek_pubmed_id_id": 218283,
-                  "rek_pubmed_id_pid": "UQ:330391",
-                  "rek_pubmed_id_xsdmf_id": null,
-                },
-                "fez_record_search_key_refereed": null,
-                "fez_record_search_key_refereed_source": Object {
-                  "rek_refereed_source": "453635",
-                  "rek_refereed_source_id": 1174248,
-                  "rek_refereed_source_lookup": "Ulrichs",
-                  "rek_refereed_source_pid": "UQ:330391",
-                  "rek_refereed_source_xsdmf_id": null,
-                },
-                "fez_record_search_key_retracted": null,
-                "fez_record_search_key_roman_script_journal_name": null,
-                "fez_record_search_key_roman_script_title": null,
-                "fez_record_search_key_scopus_id": Object {
-                  "fez_scopus_citations": Object {
-                    "sc_1d": 0,
-                    "sc_1m": 0,
-                    "sc_1w": 0,
-                    "sc_1y": 147,
-                    "sc_2d": 0,
-                    "sc_3d": 0,
-                    "sc_3m": 1,
-                    "sc_4d": 0,
-                    "sc_5d": 0,
-                    "sc_6d": 0,
-                    "sc_6m": 0,
-                    "sc_citation_url": "https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-84899524861",
-                    "sc_count": 13,
-                    "sc_created": "1526521574",
-                    "sc_eid": "2-s2.0-84899524861",
-                    "sc_last_checked": "1526521574",
-                  },
-                  "rek_scopus_id": "2-s2.0-84899524861",
-                  "rek_scopus_id_id": 2395638,
-                  "rek_scopus_id_pid": "UQ:330391",
-                  "rek_scopus_id_xsdmf_id": null,
-                },
-                "fez_record_search_key_start_page": Object {
-                  "rek_start_page": "4007",
-                  "rek_start_page_id": 5567023,
-                  "rek_start_page_pid": "UQ:330391",
-                  "rek_start_page_xsdmf_id": null,
-                },
-                "fez_record_search_key_subject": Array [
-                  Object {
-                    "rek_subject": 453394,
-                    "rek_subject_id": 9519701,
-                    "rek_subject_lookup": "2403 Immunology",
-                    "rek_subject_order": 1,
-                    "rek_subject_pid": "UQ:330391",
-                    "rek_subject_xsdmf_id": null,
-                  },
-                ],
-                "fez_record_search_key_total_pages": Object {
-                  "rek_total_pages": "5",
-                  "rek_total_pages_id": 5474537,
-                  "rek_total_pages_pid": "UQ:330391",
-                  "rek_total_pages_xsdmf_id": null,
-                },
-                "fez_record_search_key_translated_journal_name": null,
-                "fez_record_search_key_translated_title": null,
-                "fez_record_search_key_volume_number": Object {
-                  "rek_volume_number": "192",
-                  "rek_volume_number_id": 5103536,
-                  "rek_volume_number_pid": "UQ:330391",
-                  "rek_volume_number_xsdmf_id": null,
-                },
-                "fez_record_search_key_wok_doc_types": Array [],
-                "fez_record_search_key_zoorec_id": null,
-                "metricData": Object {
-                  "citation_url": "https://queensland.altmetric.com/details/101417",
-                  "count": 5,
-                  "difference": 3,
-                  "source": "altmetric",
-                },
-                "rek_altmetric_id": 2291601,
-                "rek_altmetric_id_xsdmf_id": null,
-                "rek_altmetric_score": 5,
-                "rek_altmetric_score_xsdmf_id": null,
-                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Frazer, Ian H.\\" href=\\"/list/author_id/410/\\">Frazer, Ian H.</a> (<span class=\\"citation_date\\">2014</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: Development and implementation of papillomavirus prophylactic vaccines\\" href=\\"/view/UQ:330391\\">Development and implementation of papillomavirus prophylactic vaccines</a>. <i><span class=\\"citation_journal_name\\">Journal of Immunology</span></i>, <i><span class=\\"citation_volume_number\\">192</span></i> <span class=\\"citation_issue_number\\">9</span>: <span class=\\"citation_start_page\\">4007</span>-<span class=\\"citation_end_page\\">4011</span>. doi:<span class=\\"citation_doi\\">10.4049/jimmunol.1490012</span>",
-                "rek_copyright": "on",
-                "rek_copyright_xsdmf_id": null,
-                "rek_created_date": "2014-05-20T00:24:11Z",
-                "rek_created_date_xsdmf_id": null,
-                "rek_date": "2014-05-01T00:00:00Z",
-                "rek_date_xsdmf_id": null,
-                "rek_depositor": 8524,
-                "rek_depositor_affiliation": 1048,
-                "rek_depositor_affiliation_xsdmf_id": null,
-                "rek_depositor_xsdmf_id": null,
-                "rek_description": "Translation of basic scientific findings into practical patient outcomes is a significant exercise even when the goal is conceptually straightforward, as in the development of a vaccine for an infectious disease. Recognition of the association of cervical cancer with papillomavirus infection encouraged development of a vaccine to help with prevention of this very common cancer, causing over 250,000 deaths each year worldwide. To introduce a vaccine program, it was however necessary to develop a technology for making viral Ag, demonstrate that systemic immunization could provide mucosal surface protection in the genital tract, develop assays for vaccine potency, and understand enough about the epidemiology and natural history of the infection to plan effective intervention strategies. This process took ~25 years. The major hurdle, now that effective vaccines are available, is to ensure their deployment in the countries where they are most needed. The development and deployment of human papillomavirus vaccines demonstrate the benefits of collaborative research activity across the globe, and between academia and industry, to translate scientific discoveries into public health benefits.",
-                "rek_description_xsdmf_id": null,
-                "rek_display_type": 179,
-                "rek_display_type_lookup": "Journal Article",
-                "rek_display_type_xsdmf_id": null,
-                "rek_file_downloads": 0,
-                "rek_formatted_abstract": null,
-                "rek_formatted_abstract_xsdmf_id": null,
-                "rek_formatted_title": null,
-                "rek_formatted_title_xsdmf_id": null,
-                "rek_genre": "Journal Article",
-                "rek_genre_type": "Article (original research)",
-                "rek_genre_type_xsdmf_id": null,
-                "rek_genre_xsdmf_id": null,
-                "rek_herdc_notes": "&nbsp;Ian H. Frazer, University of Queensland Diamantina Institute, Translational Research Institute, 37 Kent Street, Woolloongabba, QLD 4102, Australia.",
-                "rek_herdc_notes_xsdmf_id": null,
-                "rek_object_type": 3,
-                "rek_object_type_lookup": "Record",
-                "rek_object_type_xsdmf_id": null,
-                "rek_pid": "UQ:330391",
-                "rek_pubmed_doc_type": null,
-                "rek_pubmed_doc_type_lookup": null,
-                "rek_pubmed_doc_type_xsdmf_id": null,
-                "rek_scopus_citation_count": 13,
-                "rek_scopus_doc_type": "ar",
-                "rek_scopus_doc_type_lookup": null,
-                "rek_scopus_doc_type_xsdmf_id": null,
-                "rek_security_inherited": 1,
-                "rek_status": 2,
-                "rek_status_lookup": "Published",
-                "rek_status_xsdmf_id": null,
-                "rek_subtype": "Article (original research)",
-                "rek_subtype_xsdmf_id": null,
-                "rek_thomson_citation_count": 12,
-                "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "Development and implementation of papillomavirus prophylactic vaccines",
-                "rek_title_xsdmf_id": null,
-                "rek_updated_date": "2018-01-19T02:57:37Z",
-                "rek_updated_date_xsdmf_id": null,
-                "rek_wok_doc_type": "@",
-                "rek_wok_doc_type_lookup": null,
-                "rek_wok_doc_type_xsdmf_id": null,
-              },
-            ]
-          }
-          showMetrics={true}
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </StandardCard>
-</Fragment>
+                <div
+                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                        style="min-width: 1px;"
+                      >
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-50 css-1uywuy6-MuiTypography-root"
+                        >
+                          <a
+                            href="/view/UQ:330391"
+                          >
+                            Development and implementation of papillomavirus prophylactic vaccines
+                          </a>
+                        </h6>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-pr9bjb-MuiGrid-root"
+                      >
+                        <a
+                          aria-label="Full citation in Altmetric will open in a new window"
+                          class="makeStyles-externalLink-59 makeStyles-externalLink-61"
+                          data-analyticsid="my-trending-pubs-altmetric-link"
+                          data-testid="my-trending-pubs-altmetric-link"
+                          href="https://queensland.altmetric.com/details/101417"
+                          id="my-trending-pubs-altmetric-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                          title="Full citation in Altmetric will open in a new window"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                            >
+                              <h6
+                                class="MuiTypography-root MuiTypography-h6 difference css-1yxa96n-MuiTypography-root"
+                                title="Difference in social media activities"
+                              >
+                                +
+                                3
+                              </h6>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-51 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          class="citationContent citationJournalArticle"
+                        >
+                          <span
+                            class="citationAuthors"
+                          >
+                            
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-0"
+                            >
+                              
+                              Frazer, Ian H.
+                              
+                            </span>
+                            
+                             
+                          </span>
+                          <span
+                            class="citationDate"
+                          >
+                            (
+                            2014
+                            ).
+                          </span>
+                          <span
+                            class="citationTitle"
+                          >
+                             
+                            Development and implementation of papillomavirus prophylactic vaccines
+                            .
+                          </span>
+                          <span
+                            class="citationJournalName"
+                          >
+                             
+                            Journal of Immunology
+                             
+                          </span>
+                          <span
+                            class="citationVolumeNumber"
+                          >
+                             
+                            192
+                             
+                          </span>
+                          <span
+                            class="citationIssueNumber"
+                          >
+                            (
+                            9
+                            ) 
+                          </span>
+                          <span
+                            class="citationArticleNumber empty"
+                          />
+                          <span
+                            class="citationPageRange"
+                          >
+                            
+                            <span
+                              class="citationStartPage"
+                            >
+                              4007
+                            </span>
+                            -
+                            <span
+                              class="citationEndPage"
+                            >
+                              4011
+                            </span>
+                            
+                          </span>
+                          <span>
+                            . 
+                          </span>
+                          <span
+                            data-testid="rek-doi"
+                          >
+                            <a
+                              aria-label="Open this DOI in an new window"
+                              class="citationDoiLink makeStyles-externalLink-59 makeStyles-externalLink-63"
+                              data-analyticsid="citation-doi-link"
+                              data-testid="citation-doi-link"
+                              href="https://doi.org/10.4049/jimmunol.1490012"
+                              id="citation-doi-link"
+                              rel="noopener noreferrer"
+                              tabindex="0"
+                              target="_blank"
+                              title="Open this DOI in an new window"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-60 css-i4bv87-MuiSvgIcon-root"
+                                data-testid="OpenInNewIcon"
+                                focusable="false"
+                                id="citation-doi-link-new-window-icon"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                                />
+                              </svg>
+                              https://doi.org/10.4049/jimmunol.1490012
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-52 css-1wrgmsj-MuiGrid-root"
+                            style="flex-grow: 1;"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                            >
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                              >
+                                <a
+                                  aria-label="Full citation in Web of science will open in a new window"
+                                  class="wosCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-67"
+                                  data-analyticsid="citation-count-link"
+                                  data-testid="citation-count-link"
+                                  href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
+                                  id="citation-count-link"
+                                  rel="noopener noreferrer"
+                                  tabindex="0"
+                                  target="_blank"
+                                  title="Full citation in Web of science will open in a new window"
+                                >
+                                  <span
+                                    class="fez-icon wos large"
+                                  />
+                                  <span
+                                    class="CitationCountView-citationCountNumber-66"
+                                  >
+                                    12
+                                  </span>
+                                </a>
+                                <a
+                                  aria-label="Full citation in Scopus will open in a new window"
+                                  class="scopusCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-68"
+                                  data-analyticsid="citation-count-link"
+                                  data-testid="citation-count-link"
+                                  href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
+                                  id="citation-count-link"
+                                  rel="noopener noreferrer"
+                                  tabindex="0"
+                                  target="_blank"
+                                  title="Full citation in Scopus will open in a new window"
+                                >
+                                  <span
+                                    class="fez-icon scopus large"
+                                  />
+                                  <span
+                                    class="CitationCountView-citationCountNumber-66"
+                                  >
+                                    13
+                                  </span>
+                                </a>
+                                <a
+                                  aria-label="Full citation in Altmetric will open in a new window"
+                                  class="altmetricCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-69"
+                                  data-analyticsid="citation-count-link"
+                                  data-testid="citation-count-link"
+                                  href="https://queensland.altmetric.com/details/2291601"
+                                  id="citation-count-link"
+                                  rel="noopener noreferrer"
+                                  tabindex="0"
+                                  target="_blank"
+                                  title="Full citation in Altmetric will open in a new window"
+                                >
+                                  <span
+                                    class="fez-icon altmetric large"
+                                  />
+                                  <span
+                                    class="CitationCountView-citationCountNumber-66"
+                                  >
+                                    5
+                                  </span>
+                                </a>
+                                <a
+                                  aria-label="Full citation in Google scholar will open in a new window"
+                                  class="googleCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-70"
+                                  data-analyticsid="citation-count-link"
+                                  data-testid="citation-count-link"
+                                  href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
+                                  id="citation-count-link"
+                                  rel="noopener noreferrer"
+                                  tabindex="0"
+                                  target="_blank"
+                                  title="Full citation in Google scholar will open in a new window"
+                                >
+                                  <span
+                                    class="fez-icon google large"
+                                  />
+                                </a>
+                                <span
+                                  class="noOaIcon"
+                                  data-testid="no-oa-icon"
+                                />
+                              </div>
+                              <div
+                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              />
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-49 css-9mgopn-MuiDivider-root"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Component TopCitedPublications should render top cited publications module with not available message 1`] = `
-<Fragment>
-  <Alert
-    alertId="alert-error"
-    allowDismiss={false}
-    customIcon={null}
-    customType={null}
-    disableAlertClick={false}
-    dismissTitle="Click to dismiss this alert"
-    message="Trending works are temporarily unavailable"
-    showLoader={false}
-    title="There has been an error"
-    type="error"
-    wiggle={null}
-  />
-</Fragment>
+<div>
+  <div
+    data-testid="alert"
+    style="margin-top: 5px;"
+  >
+    <div
+      class="MuiGrid-root makeStyles-root-79 MuiGrid-container makeStyles-error-88 makeStyles-common-80 css-1k6h6af-MuiGrid-root"
+      data-analyticsid="alert-error"
+      data-testid="alert-error"
+      id="alert-error"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item makeStyles-icon-83 alert-icon  css-13i4rnv-MuiGrid-root"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+              data-testid="ErrorIcon"
+              focusable="false"
+              id="error-icon"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+              />
+            </svg>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-84 alert-text css-1vd824g-MuiGrid-root"
+          >
+            <b>
+              There has been an error - 
+            </b>
+            Trending works are temporarily unavailable
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component TopCitedPublications should render top cited publications with default width xs 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-4 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+    data-testid="standard-card"
+    id="standard-card"
+  >
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-content"
+      data-testid="standard-card-content"
+      id="standard-card-content"
+    >
+      <div
+        class="MuiTabs-root Component-tabs-1 css-1ujnqem-MuiTabs-root"
+      >
+        <div
+          class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+          style="overflow: hidden; margin-bottom: 0px;"
+        >
+          <div
+            class="MuiTabs-flexContainer MuiTabs-centered css-1wf8b0h-MuiTabs-flexContainer"
+            role="tablist"
+          >
+            <button
+              aria-selected="true"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected Component-tab-2 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              role="tab"
+              tabindex="0"
+              type="button"
+            >
+              Trending
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Component-tab-2 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              Scopus
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Component-tab-2 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              WOS
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <span
+            class="MuiTabs-indicator Component-tabIndicator-3 css-14t6lgd-MuiTabs-indicator"
+            style="left: 0px; width: 0px;"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-1ozqwjr-MuiGrid-root"
+        style="margin-top: 24px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+          >
+            <div
+              class="fez-icon altmetric xxlarge"
+            />
+            Altmetric score
+          </h6>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+          style="margin-top: -12px;"
+        >
+          <button
+            aria-label="Click for more information"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="help-icon"
+            data-mui-internal-clone-element="true"
+            data-testid="help-icon"
+            id="help-icon"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-10 css-i4bv87-MuiSvgIcon-root"
+              data-testid="HelpOutlineIcon"
+              focusable="false"
+              role="img"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+              />
+              <title>
+                Click for more information
+              </title>
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          id="topCitedPublications"
+          style="padding-top: 24px;"
+        >
+          <div
+            class="MuiBox-root css-0"
+            data-testid="search-results-publications-list"
+            id="search-results-publications-list"
+          >
+            <div
+              class="publicationCitation"
+            >
+              <div
+                data-testid="publication-citation-parent-UQ:330391"
+                id="publication-citation-parent-UQ:330391"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                        style="min-width: 1px;"
+                      >
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-14 css-1uywuy6-MuiTypography-root"
+                        >
+                          <a
+                            href="/view/UQ:330391"
+                          >
+                            Development and implementation of papillomavirus prophylactic vaccines
+                          </a>
+                        </h6>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-pr9bjb-MuiGrid-root"
+                      >
+                        <a
+                          aria-label="Full citation in Altmetric will open in a new window"
+                          class="makeStyles-externalLink-23 makeStyles-externalLink-25"
+                          data-analyticsid="my-trending-pubs-altmetric-link"
+                          data-testid="my-trending-pubs-altmetric-link"
+                          href="https://queensland.altmetric.com/details/101417"
+                          id="my-trending-pubs-altmetric-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                          title="Full citation in Altmetric will open in a new window"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                            >
+                              <h6
+                                class="MuiTypography-root MuiTypography-h6 difference css-1yxa96n-MuiTypography-root"
+                                title="Difference in social media activities"
+                              >
+                                +
+                                3
+                              </h6>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-15 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          class="citationContent citationJournalArticle"
+                        >
+                          <span
+                            class="citationAuthors"
+                          >
+                            
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-0"
+                            >
+                              
+                              Frazer, Ian H.
+                              
+                            </span>
+                            
+                             
+                          </span>
+                          <span
+                            class="citationDate"
+                          >
+                            (
+                            2014
+                            ).
+                          </span>
+                          <span
+                            class="citationTitle"
+                          >
+                             
+                            Development and implementation of papillomavirus prophylactic vaccines
+                            .
+                          </span>
+                          <span
+                            class="citationJournalName"
+                          >
+                             
+                            Journal of Immunology
+                             
+                          </span>
+                          <span
+                            class="citationVolumeNumber"
+                          >
+                             
+                            192
+                             
+                          </span>
+                          <span
+                            class="citationIssueNumber"
+                          >
+                            (
+                            9
+                            ) 
+                          </span>
+                          <span
+                            class="citationArticleNumber empty"
+                          />
+                          <span
+                            class="citationPageRange"
+                          >
+                            
+                            <span
+                              class="citationStartPage"
+                            >
+                              4007
+                            </span>
+                            -
+                            <span
+                              class="citationEndPage"
+                            >
+                              4011
+                            </span>
+                            
+                          </span>
+                          <span>
+                            . 
+                          </span>
+                          <span
+                            data-testid="rek-doi"
+                          >
+                            <a
+                              aria-label="Open this DOI in an new window"
+                              class="citationDoiLink makeStyles-externalLink-23 makeStyles-externalLink-27"
+                              data-analyticsid="citation-doi-link"
+                              data-testid="citation-doi-link"
+                              href="https://doi.org/10.4049/jimmunol.1490012"
+                              id="citation-doi-link"
+                              rel="noopener noreferrer"
+                              tabindex="0"
+                              target="_blank"
+                              title="Open this DOI in an new window"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-24 css-i4bv87-MuiSvgIcon-root"
+                                data-testid="OpenInNewIcon"
+                                focusable="false"
+                                id="citation-doi-link-new-window-icon"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                                />
+                              </svg>
+                              https://doi.org/10.4049/jimmunol.1490012
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-16 css-1wrgmsj-MuiGrid-root"
+                            style="flex-grow: 1;"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                            >
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                              >
+                                <a
+                                  aria-label="Full citation in Web of science will open in a new window"
+                                  class="wosCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-31"
+                                  data-analyticsid="citation-count-link"
+                                  data-testid="citation-count-link"
+                                  href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
+                                  id="citation-count-link"
+                                  rel="noopener noreferrer"
+                                  tabindex="0"
+                                  target="_blank"
+                                  title="Full citation in Web of science will open in a new window"
+                                >
+                                  <span
+                                    class="fez-icon wos large"
+                                  />
+                                  <span
+                                    class="CitationCountView-citationCountNumber-30"
+                                  >
+                                    12
+                                  </span>
+                                </a>
+                                <a
+                                  aria-label="Full citation in Scopus will open in a new window"
+                                  class="scopusCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-32"
+                                  data-analyticsid="citation-count-link"
+                                  data-testid="citation-count-link"
+                                  href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
+                                  id="citation-count-link"
+                                  rel="noopener noreferrer"
+                                  tabindex="0"
+                                  target="_blank"
+                                  title="Full citation in Scopus will open in a new window"
+                                >
+                                  <span
+                                    class="fez-icon scopus large"
+                                  />
+                                  <span
+                                    class="CitationCountView-citationCountNumber-30"
+                                  >
+                                    13
+                                  </span>
+                                </a>
+                                <a
+                                  aria-label="Full citation in Altmetric will open in a new window"
+                                  class="altmetricCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-33"
+                                  data-analyticsid="citation-count-link"
+                                  data-testid="citation-count-link"
+                                  href="https://queensland.altmetric.com/details/2291601"
+                                  id="citation-count-link"
+                                  rel="noopener noreferrer"
+                                  tabindex="0"
+                                  target="_blank"
+                                  title="Full citation in Altmetric will open in a new window"
+                                >
+                                  <span
+                                    class="fez-icon altmetric large"
+                                  />
+                                  <span
+                                    class="CitationCountView-citationCountNumber-30"
+                                  >
+                                    5
+                                  </span>
+                                </a>
+                                <a
+                                  aria-label="Full citation in Google scholar will open in a new window"
+                                  class="googleCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-34"
+                                  data-analyticsid="citation-count-link"
+                                  data-testid="citation-count-link"
+                                  href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
+                                  id="citation-count-link"
+                                  rel="noopener noreferrer"
+                                  tabindex="0"
+                                  target="_blank"
+                                  title="Full citation in Google scholar will open in a new window"
+                                >
+                                  <span
+                                    class="fez-icon google large"
+                                  />
+                                </a>
+                                <span
+                                  class="noOaIcon"
+                                  data-testid="no-oa-icon"
+                                />
+                              </div>
+                              <div
+                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              />
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-13 css-9mgopn-MuiDivider-root"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

@@ -141,6 +141,7 @@ export const PublicationsList = ({
                         <Grid item xs={2} sm={1}>
                             <Checkbox
                                 inputProps={{
+                                    'data-analyticsid': `select-publication-${index}-input`,
                                     'data-testid': `select-publication-${index}-input`,
                                     id: `select-publication-${index}-input`,
                                 }}

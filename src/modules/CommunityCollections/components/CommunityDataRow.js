@@ -91,6 +91,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                 size="small"
                                 onClick={() => handleSetOpen(!open)}
                                 id={`expand-row-${row.rek_pid}`}
+                                data-analyticsid={`expand-row-${row.rek_pid}`}
                                 data-testid={`expand-row-${row.rek_pid}`}
                             >
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}

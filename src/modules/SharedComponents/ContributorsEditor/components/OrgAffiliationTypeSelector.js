@@ -26,6 +26,7 @@ export default function OrgAffilicationTypeSelector({ affiliation, onAffiliation
                 }}
                 MenuProps={{
                     id: 'org-affiliation-options',
+                    'data-analyticsid': 'org-affiliation-options',
                     'data-testid': 'org-affiliation-options',
                 }}
             >

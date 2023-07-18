@@ -234,6 +234,7 @@ export default class CollectionForm extends Component {
                             <Grid item xs={false} sm />
                             <Grid item xs={12} sm="auto">
                                 <Button
+                                    data-analyticsid="cancel-collection"
                                     data-testid="cancel-collection"
                                     variant="contained"
                                     fullWidth
@@ -246,6 +247,7 @@ export default class CollectionForm extends Component {
                             </Grid>
                             <Grid item xs={12} sm="auto">
                                 <Button
+                                    data-analyticsid="submit-collection"
                                     data-testid="submit-collection"
                                     variant="contained"
                                     color="primary"

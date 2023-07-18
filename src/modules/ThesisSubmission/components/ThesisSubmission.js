@@ -357,8 +357,10 @@ export const ThesisSubmission = ({
                         <Grid item xs={false} sm />
                         <Grid item xs={12} sm="auto">
                             <Button
+                                data-testid="cancel-deposit-thesis"
                                 variant="contained"
                                 fullWidth
+                                aria-label={formLocale.thesisSubmission.cancel}
                                 children={formLocale.thesisSubmission.cancel}
                                 disabled={submitting}
                                 onClick={cancelSubmit}

@@ -29,6 +29,7 @@ const JournalsListHeaderRow = ({ checked, onChange, classes, isSelectable = true
                                     inputProps={{
                                         'aria-label': 'Select All',
                                         'data-testid': 'journal-list-header-col-1-select-all',
+                                        'data-analyticsid': 'journal-list-header-col-1-select-all',
                                     }}
                                     size="small"
                                 />

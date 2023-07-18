@@ -27,6 +27,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-grant-information-content"
         data-testid="standard-card-grant-information-content"
         id="standard-card-grant-information-content"
       >
@@ -183,6 +184,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-grant-information-content"
         data-testid="standard-card-grant-information-content"
         id="standard-card-grant-information-content"
       >
@@ -336,6 +338,7 @@ exports[`Grant Information Component  should render component 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-grant-information-content"
         data-testid="standard-card-grant-information-content"
         id="standard-card-grant-information-content"
       >

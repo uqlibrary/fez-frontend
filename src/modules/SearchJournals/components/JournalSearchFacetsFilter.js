@@ -238,6 +238,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
                                 variant="contained"
                                 arial-label="rest facet filters"
                                 id={resetFacetFiltersButtonId}
+                                data-analyticsid={resetFacetFiltersButtonId}
                                 data-testid={resetFacetFiltersButtonId}
                                 onClick={_handleResetClick}
                             >

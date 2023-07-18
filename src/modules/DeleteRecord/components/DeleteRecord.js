@@ -282,6 +282,7 @@ export default class DeleteRecord extends PureComponent {
                                     disabled={this.props.submitting}
                                     onClick={this._cancel}
                                     id="cancel-delete-record"
+                                    data-analyticsid="cancel-delete-record"
                                 />
                             </Grid>
                             <Grid item>
@@ -293,6 +294,7 @@ export default class DeleteRecord extends PureComponent {
                                     onClick={this.props.handleSubmit}
                                     disabled={this.props.submitting || this.props.disableSubmit}
                                     id="submit-delete-record"
+                                    data-analyticsid="delete-admin"
                                     data-testid="delete-admin"
                                 />
                             </Grid>

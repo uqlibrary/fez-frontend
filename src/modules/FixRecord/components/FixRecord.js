@@ -320,6 +320,7 @@ export default class FixRecord extends PureComponent {
                                         onClick={this.props.handleSubmit}
                                         disabled={this.props.submitting || this.props.disableSubmit}
                                         id="fixSubmit"
+                                        data-analyticsid="fixSubmit"
                                     />
                                 </Grid>
                             )}

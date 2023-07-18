@@ -114,6 +114,7 @@ export class ConfirmDialogBox extends Component {
                                 color={'primary'}
                                 fullWidth
                                 onClick={this._onAction}
+                                data-analyticsid={`confirm-${this.props.confirmDialogBoxId}`}
                                 data-testid={`confirm-${this.props.confirmDialogBoxId}`}
                             />
                         </Grid>
@@ -122,6 +123,7 @@ export class ConfirmDialogBox extends Component {
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'contained'}
+                                    data-analyticsid={`alternate-${this.props.confirmDialogBoxId}`}
                                     data-testid={`alternate-${this.props.confirmDialogBoxId}`}
                                     className={classes.alternateActionButtonClass}
                                     children={this.props.locale.alternateActionButtonLabel}
@@ -135,6 +137,7 @@ export class ConfirmDialogBox extends Component {
                                 <Button
                                     variant={'contained'}
                                     color={'primary'}
+                                    data-analyticsid={`cancel-${this.props.confirmDialogBoxId}`}
                                     data-testid={`cancel-${this.props.confirmDialogBoxId}`}
                                     children={this.props.locale.cancelButtonLabel}
                                     fullWidth

@@ -60,6 +60,7 @@ export const CreateOrUpdateDoiForm = ({
                     <Button
                         aria-label={txt.createOrUpdateDoiForm.formLabels.cancelButtonLabel}
                         children={txt.createOrUpdateDoiForm.formLabels.cancelButtonLabel}
+                        data-analyticsid="create-or-update-doi-cancel"
                         data-testid="create-or-update-doi-cancel"
                         disabled={submitting}
                         fullWidth
@@ -73,6 +74,7 @@ export const CreateOrUpdateDoiForm = ({
                         aria-label={txt.createOrUpdateDoiForm.formLabels.submitButtonLabel}
                         children={txt.createOrUpdateDoiForm.formLabels.submitButtonLabel}
                         color="primary"
+                        data-analyticsid="create-or-update-doi-submit"
                         data-testid="create-or-update-doi-submit"
                         disabled={submitting || submitSucceeded}
                         fullWidth

@@ -1,75 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThesisSubmission should display confirmation box before submission 1`] = `
-<WithStyles(ConfirmDialogBox)
-  confirmDialogBoxId="thesis"
-  locale={
-    Object {
-      "cancelButtonLabel": "No, continue editing",
-      "confirmButtonLabel": "Yes, deposit thesis",
-      "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
-      "confirmationTitle": "Thesis deposit",
-    }
-  }
-  onAction={[MockFunction]}
-  onRef={[Function]}
-/>
-`;
-
 exports[`ThesisSubmission should display successfull submission screen 1`] = `
-<StandardPage
-  standardPageId="rhd-submission-succeeded"
-  title="Professional doctorate deposit"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={3}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    data-testid="rhd-submission-succeeded"
+    id="rhd-submission-succeeded"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        title="Your thesis has been deposited"
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-77 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Grid)
-          container={true}
-          spacing={3}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <ForwardRef(Typography)>
-              You will receive an email confirming your thesis deposit shortly.
-            </ForwardRef(Typography)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={true}
+        Professional doctorate deposit
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
-    <ForwardRef(Grid)
-      item={true}
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-76 css-13i4rnv-MuiGrid-root"
     >
-      <ForwardRef(Button)
-        color="primary"
-        fullWidth={true}
-        onClick={[Function]}
-        variant="contained"
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
       >
-        Return to the Graduate School website
-      </ForwardRef(Button)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-79 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-your-thesis-has-been-deposited"
+            id="standard-card-your-thesis-has-been-deposited"
+          >
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-84 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-your-thesis-has-been-deposited-header"
+                  id="standard-card-your-thesis-has-been-deposited-header"
+                >
+                  Your thesis has been deposited
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-your-thesis-has-been-deposited-content"
+              data-testid="standard-card-your-thesis-has-been-deposited-content"
+              id="standard-card-your-thesis-has-been-deposited-content"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                  >
+                    You will receive an email confirming your thesis deposit shortly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        />
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Return to the Graduate School website
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ThesisSubmission should have a helper to generate alert props 1`] = `
@@ -80,1284 +108,1543 @@ Object {
 }
 `;
 
-exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`] = `
-<StandardPage
-  standardPageId="rhd-submission-succeeded"
-  title="Higher degree by research thesis deposit"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={3}
+exports[`ThesisSubmission should render component with buttons disabled on submitting 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    data-testid="rhd-submission"
+    id="rhd-submission"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        title="Your thesis has been deposited"
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-40 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Grid)
-          container={true}
-          spacing={3}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <ForwardRef(Typography)>
-              You will receive an email confirming your thesis deposit shortly.
-            </ForwardRef(Typography)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={true}
+        Higher degree by research thesis deposit
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
-    <ForwardRef(Grid)
-      item={true}
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-39 css-13i4rnv-MuiGrid-root"
     >
-      <ForwardRef(Button)
-        color="primary"
-        fullWidth={true}
-        onClick={[Function]}
-        variant="contained"
+      <form>
+        <span />
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-thesis-information"
+              id="standard-card-thesis-information"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-thesis-information-header"
+                    id="standard-card-thesis-information-header"
+                  >
+                    Thesis information
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-thesis-information-content"
+                data-testid="standard-card-thesis-information-content"
+                id="standard-card-thesis-information-content"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      name="thesisTitle"
+                      required="true"
+                      title="Thesis title"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      label="Author name"
+                      name="currentAuthor.0.nameAsPublished"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      label="Thesis type"
+                      name="rek_genre_type"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      label="Enrolling unit"
+                      name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      name="thesisAbstract"
+                      required="true"
+                      title="Abstract"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-supervisors"
+              id="standard-card-supervisors"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-supervisors-header"
+                    id="standard-card-supervisors-header"
+                  >
+                    Supervisors
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-supervisors-content"
+                data-testid="standard-card-supervisors-content"
+                id="standard-card-supervisors-content"
+              >
+                <field
+                  is="mock"
+                  name="supervisors"
+                  required="true"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-field-of-research"
+              id="standard-card-field-of-research"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-field-of-research-header"
+                    id="standard-card-field-of-research-header"
+                  >
+                    Field of research
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-field-of-research-content"
+                data-testid="standard-card-field-of-research-content"
+                id="standard-card-field-of-research-content"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                >
+                  Select up to 3 Field of Research (FoR) codes at the 4 digit level
+                </p>
+                <field
+                  is="mock"
+                  name="fieldOfResearch"
+                  required="true"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-keywords"
+              id="standard-card-keywords"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-keywords-header"
+                    id="standard-card-keywords-header"
+                  >
+                    Keywords
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-keywords-content"
+                data-testid="standard-card-keywords-content"
+                id="standard-card-keywords-content"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                >
+                  Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
+                </p>
+                <field
+                  is="mock"
+                  name="fez_record_search_key_keywords"
+                  required="true"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-upload-files"
+              id="standard-card-upload-files"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-upload-files-header"
+                    id="standard-card-upload-files-header"
+                  >
+                    Upload files
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-upload-files-content"
+                data-testid="standard-card-upload-files-content"
+                id="standard-card-upload-files-content"
+              >
+                <field
+                  is="mock"
+                  name="files"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              data-testid="alert"
+              style="margin-top: 5px;"
+            >
+              <div
+                class="MuiGrid-root makeStyles-root-49 MuiGrid-container makeStyles-info_outline-64 makeStyles-common-50 css-1k6h6af-MuiGrid-root"
+                data-analyticsid="thesis-submission-validation"
+                data-testid="thesis-submission-validation"
+                id="thesis-submission-validation"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item makeStyles-icon-53 alert-icon  css-13i4rnv-MuiGrid-root"
+                    >
+                      <span
+                        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary spinner css-u4ps4u-MuiCircularProgress-root"
+                        data-testid="spinner"
+                        id="spinner"
+                        role="progressbar"
+                        style="width: 38px; height: 38px;"
+                      >
+                        <svg
+                          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                          viewBox="22 22 44 44"
+                        >
+                          <circle
+                            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                            cx="44"
+                            cy="44"
+                            fill="none"
+                            r="20.5"
+                            stroke-width="3"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-54 alert-text css-1vd824g-MuiGrid-root"
+                    >
+                      <b>
+                        Saving - 
+                      </b>
+                      Creating new work is in progress.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-true css-1vknvy4-MuiGrid-root"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+          >
+            <button
+              aria-label="Cancel"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="cancel-deposit-thesis"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="deposit-thesis"
+              disabled=""
+              id="submit-thesis"
+              tabindex="-1"
+              type="button"
+            >
+              Deposit your thesis
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    data-testid="rhd-submission-succeeded"
+    id="rhd-submission-succeeded"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-31 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        Return to the Graduate School website
-      </ForwardRef(Button)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+        Higher degree by research thesis deposit
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-30 css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-33 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-your-thesis-has-been-deposited"
+            id="standard-card-your-thesis-has-been-deposited"
+          >
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-38 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-your-thesis-has-been-deposited-header"
+                  id="standard-card-your-thesis-has-been-deposited-header"
+                >
+                  Your thesis has been deposited
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-your-thesis-has-been-deposited-content"
+              data-testid="standard-card-your-thesis-has-been-deposited-content"
+              id="standard-card-your-thesis-has-been-deposited-content"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                  >
+                    You will receive an email confirming your thesis deposit shortly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        />
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Return to the Graduate School website
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
-<StandardPage
-  standardPageId="rhd-submission"
-  title="Higher degree by research thesis deposit"
+<div
+  aria-hidden="true"
 >
-  <ConfirmDiscardFormChanges
-    dirty={true}
-    submitSucceeded={false}
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    data-testid="rhd-submission"
+    id="rhd-submission"
   >
-    <form>
-      <NavigationDialogBox
-        txt={
-          Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to abandon workflow?",
-            "confirmationTitle": "Abandon workflow",
-          }
-        }
-        when={true}
-      />
-      <WithStyles(ConfirmDialogBox)
-        confirmDialogBoxId="thesis"
-        locale={
-          Object {
-            "cancelButtonLabel": "No, continue editing",
-            "confirmButtonLabel": "Yes, deposit thesis",
-            "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
-            "confirmationTitle": "Thesis deposit",
-          }
-        }
-        onAction={[MockFunction]}
-        onRef={[Function]}
-      />
-      <ForwardRef(Grid)
-        container={true}
-        spacing={3}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-21 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        Higher degree by research thesis deposit
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-20 css-13i4rnv-MuiGrid-root"
+    >
+      <form>
+        <span />
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
         >
-          <StandardCard
-            title="Thesis information"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
-            <ForwardRef(Grid)
-              container={true}
-              spacing={3}
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-thesis-information"
+              id="standard-card-thesis-information"
             >
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  height={50}
-                  name="thesisTitle"
-                  required={true}
-                  richEditorId="rek-title"
-                  title="Thesis title"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                sm={6}
-                xs={12}
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-thesis-information-header"
+                    id="standard-card-thesis-information-header"
+                  >
+                    Thesis information
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-thesis-information-content"
+                data-testid="standard-card-thesis-information-content"
+                id="standard-card-thesis-information-content"
               >
-                <Field
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "propTypes": Object {
-                        "FormHelperTextProps": [Function],
-                        "InputLabelProps": [Function],
-                        "InputProps": [Function],
-                        "SelectProps": [Function],
-                        "autoComplete": [Function],
-                        "autoFocus": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "classes": [Function],
-                        "color": [Function],
-                        "defaultValue": [Function],
-                        "disabled": [Function],
-                        "error": [Function],
-                        "fullWidth": [Function],
-                        "help": [Function],
-                        "helperText": [Function],
-                        "id": [Function],
-                        "inputProps": [Function],
-                        "inputRef": [Function],
-                        "label": [Function],
-                        "margin": [Function],
-                        "maxRows": [Function],
-                        "minRows": [Function],
-                        "multiline": [Function],
-                        "name": [Function],
-                        "onBlur": [Function],
-                        "onChange": [Function],
-                        "onFocus": [Function],
-                        "placeholder": [Function],
-                        "required": [Function],
-                        "rows": [Function],
-                        "select": [Function],
-                        "size": [Function],
-                        "sx": [Function],
-                        "textFieldId": [Function],
-                        "type": [Function],
-                        "value": [Function],
-                        "variant": [Function],
-                      },
-                      "render": [Function],
-                    }
-                  }
-                  disabled={false}
-                  fullWidth={true}
-                  label="Author name"
-                  name="currentAuthor.0.nameAsPublished"
-                  placeholder=""
-                  required={true}
-                  rows={1}
-                  textFieldId="rek-author"
-                  type="text"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                sm={6}
-                xs={12}
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      name="thesisTitle"
+                      required="true"
+                      title="Thesis title"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      label="Author name"
+                      name="currentAuthor.0.nameAsPublished"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      label="Thesis type"
+                      name="rek_genre_type"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      label="Enrolling unit"
+                      name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      name="thesisAbstract"
+                      required="true"
+                      title="Abstract"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-supervisors"
+              id="standard-card-supervisors"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <Field
-                  ariaLabel="Select a thesis type"
-                  component={[Function]}
-                  disabled={false}
-                  id="thesis-subtype"
-                  itemsList={
-                    Array [
-                      Object {
-                        "text": "MPhil Thesis",
-                        "value": "MPhil Thesis",
-                      },
-                      Object {
-                        "text": "PhD Thesis",
-                        "value": "PhD Thesis",
-                      },
-                      Object {
-                        "text": "Professional Doctorate",
-                        "value": "Professional Doctorate",
-                      },
-                    ]
-                  }
-                  label="Thesis type"
-                  name="rek_genre_type"
-                  required={true}
-                  selectPrompt="Please select a thesis type"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-supervisors-header"
+                    id="standard-card-supervisors-header"
+                  >
+                    Supervisors
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-supervisors-content"
+                data-testid="standard-card-supervisors-content"
+                id="standard-card-supervisors-content"
               >
-                <Field
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.memo),
-                      "WrappedComponent": Object {
-                        "$$typeof": Symbol(react.memo),
-                        "compare": null,
-                        "type": [Function],
-                      },
-                      "compare": null,
-                      "type": [Function],
-                    }
-                  }
-                  disabled={false}
-                  floatingLabelText="Enrolling unit"
-                  hintText="Enrolling unit, eg. School of Business"
-                  name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-                  required={true}
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
+                <field
+                  is="mock"
+                  name="supervisors"
+                  required="true"
                 />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-field-of-research"
+              id="standard-card-field-of-research"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  name="thesisAbstract"
-                  required={true}
-                  richEditorId="rek-description"
-                  title="Abstract"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-field-of-research-header"
+                    id="standard-card-field-of-research-header"
+                  >
+                    Field of research
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-field-of-research-content"
+                data-testid="standard-card-field-of-research-content"
+                id="standard-card-field-of-research-content"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                >
+                  Select up to 3 Field of Research (FoR) codes at the 4 digit level
+                </p>
+                <field
+                  is="mock"
+                  name="fieldOfResearch"
+                  required="true"
                 />
-              </ForwardRef(Grid)>
-            </ForwardRef(Grid)>
-          </StandardCard>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <StandardCard
-            title="Supervisors"
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
-            <Field
-              component={[Function]}
-              contributorEditorId="rek-supervisor"
-              disabled={false}
-              locale={
-                Object {
-                  "form": Object {
-                    "locale": Object {
-                      "addButton": "Add supervisor",
-                      "descriptionStep1": "",
-                      "descriptionStep1NoStep2": "List your current supervisors",
-                      "identifierLabel": "UQ identifier (if available)",
-                      "nameAsPublishedFieldId": "supervisors-name-as-published-field",
-                      "nameAsPublishedHint": "",
-                      "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
-                    },
-                  },
-                  "header": Object {
-                    "locale": Object {
-                      "contributorAssignmentColumn": "Select your name",
-                      "deleteAll": "Remove all items",
-                      "deleteAllConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete all items?",
-                        "confirmationTitle": "Delete all",
-                      },
-                      "descriptionStep2": "",
-                      "identifierColumn": "UQ identifier",
-                      "nameColumn": "Supervisor's name",
-                      "reorderColumn": "Reorder items",
-                    },
-                  },
-                  "row": Object {
-                    "locale": Object {
-                      "deleteHint": "Remove this item",
-                      "deleteRecordConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete this item?",
-                        "confirmationTitle": "Delete item",
-                      },
-                      "editHint": "Edit this item",
-                      "moveDownHint": "Move item down the order",
-                      "moveUpHint": "Move item up the order",
-                      "selectHint": "Select this supervisor ([name]) to assign it as you",
-                      "suffix": " listed supervisor",
-                    },
-                  },
-                }
-              }
-              name="supervisors"
-              required={true}
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <StandardCard
-            title="Field of research"
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-keywords"
+              id="standard-card-keywords"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-keywords-header"
+                    id="standard-card-keywords-header"
+                  >
+                    Keywords
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-keywords-content"
+                data-testid="standard-card-keywords-content"
+                id="standard-card-keywords-content"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                >
+                  Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
+                </p>
+                <field
+                  is="mock"
+                  name="fez_record_search_key_keywords"
+                  required="true"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
-            <ForwardRef(Typography)>
-              Select up to 3 Field of Research (FoR) codes at the 4 digit level
-            </ForwardRef(Typography)>
-            <Field
-              component={[Function]}
-              disabled={false}
-              distinctOnly={true}
-              hideReorder={true}
-              listEditorId="rek-subject"
-              locale={
-                Object {
-                  "form": Object {
-                    "locale": Object {
-                      "inputFieldHint": "Start typing code or field name and select from list",
-                      "inputFieldLabel": "Field of research",
-                    },
-                  },
-                  "header": Object {
-                    "locale": Object {
-                      "deleteAll": "Remove all items",
-                      "deleteAllConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete all items?",
-                        "confirmationTitle": "Delete all",
-                      },
-                      "nameColumn": "Field of research",
-                    },
-                  },
-                  "row": Object {
-                    "locale": Object {
-                      "deleteHint": "Remove this item",
-                      "deleteRecordConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete this item?",
-                        "confirmationTitle": "Delete item",
-                      },
-                    },
-                  },
-                }
-              }
-              maxCount={3}
-              name="fieldOfResearch"
-              required={true}
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-upload-files"
+              id="standard-card-upload-files"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-upload-files-header"
+                    id="standard-card-upload-files-header"
+                  >
+                    Upload files
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-upload-files-content"
+                data-testid="standard-card-upload-files-content"
+                id="standard-card-upload-files-content"
+              >
+                <field
+                  is="mock"
+                  name="files"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
         >
-          <StandardCard
-            title="Keywords"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-true css-1vknvy4-MuiGrid-root"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
           >
-            <ForwardRef(Typography)>
-              Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
-            </ForwardRef(Typography)>
-            <Field
-              component={[Function]}
-              disabled={false}
-              isValid={[Function]}
-              listEditorId="rek-keywords"
-              locale={
-                Object {
-                  "form": Object {
-                    "locale": Object {
-                      "addButtonLabel": "Add",
-                      "editButtonLabel": "Update",
-                      "id": "keywords-input",
-                      "inputFieldHint": "Type keywords (Add multiple using pipes eg: one|two|three)",
-                      "inputFieldLabel": "Keywords",
-                    },
-                  },
-                  "header": Object {
-                    "locale": Object {
-                      "deleteAll": "Remove all keywords",
-                      "deleteAllConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete all keywords?",
-                        "confirmationTitle": "Delete all",
-                      },
-                      "nameColumn": "Keyword",
-                      "reorderColumn": "Reorder keywords",
-                    },
-                  },
-                  "row": Object {
-                    "locale": Object {
-                      "deleteHint": "Remove this keyword",
-                      "deleteRecordConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete this keyword?",
-                        "confirmationTitle": "Delete keyword",
-                      },
-                      "editHint": "Edit this item",
-                      "moveDownHint": "Move keyword down the order",
-                      "moveUpHint": "Move keyword up the order",
-                    },
-                  },
-                }
-              }
-              maxCount={10}
-              name="fez_record_search_key_keywords"
-              required={true}
-              searchKey={
-                Object {
-                  "order": "rek_keywords_order",
-                  "value": "rek_keywords",
-                }
-              }
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <StandardCard
-            title="Upload files"
+            <button
+              aria-label="Cancel"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="cancel-deposit-thesis"
+              tabindex="0"
+              type="button"
+            >
+              Cancel
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
           >
-            <Field
-              component={[Function]}
-              defaultQuickTemplateId={3}
-              disabled={false}
-              locale={
-                Object {
-                  "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the work.",
-                  "delayNotice": "Notice",
-                  "errorTitle": "Upload Errors",
-                  "fileUploadInstruction": <p>
-                    Click here to select files, or drag files into this area to upload
-                  </p>,
-                  "fileUploadRestrictionHeading": "File upload restrictions",
-                  "fileUploadRestrictions": <div>
-                    Maximum file size is 5GB. 
-                    <br />
-                    PDF files must be saved using the following naming structure
-                     
-                    <b>
-                      &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
-                    </b>
-                    . Document name could be thesis, abstract, and etc. For example:
-                    <ul>
-                      <li>
-                        s1234567_phd_thesis.pdf
-                      </li>
-                      <li>
-                        s1234567_phd_abstract.pdf
-                      </li>
-                    </ul>
-                    Supplementary audio files are to be in MP 3 format. 
-                    <br />
-                    Supplementary video files are to be in WMV or AVI format. 
-                    <br />
-                  </div>,
-                  "instructions": "",
-                  "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-                  "successTitle": "Success",
-                  "validation": Object {
-                    "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-                    "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
-                    "notFiles": "Invalid files ([fileNames])",
-                    "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-                    "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-                  },
-                }
-              }
-              name="files"
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        container={true}
-        spacing={2}
-      >
-        <ForwardRef(Grid)
-          item={true}
-          sm={true}
-          xs={false}
-        />
-        <ForwardRef(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <ForwardRef(Button)
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Cancel
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <ForwardRef(Button)
-            color="primary"
-            data-testid="deposit-thesis"
-            fullWidth={true}
-            id="submit-thesis"
-            onClick={[Function]}
-            variant="contained"
-          >
-            Deposit your thesis
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </form>
-  </ConfirmDiscardFormChanges>
-</StandardPage>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="deposit-thesis"
+              id="submit-thesis"
+              tabindex="0"
+              type="button"
+            >
+              Deposit your thesis
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`] = `
-<StandardPage
-  standardPageId="rhd-submission-succeeded"
-  title="Professional doctorate deposit"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={3}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    data-testid="rhd-submission-succeeded"
+    id="rhd-submission-succeeded"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        title="Your thesis has been deposited"
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-12 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Grid)
-          container={true}
-          spacing={3}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <ForwardRef(Typography)>
-              You will receive an email confirming your thesis deposit shortly.
-            </ForwardRef(Typography)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={true}
+        Professional doctorate deposit
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
-    <ForwardRef(Grid)
-      item={true}
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-11 css-13i4rnv-MuiGrid-root"
     >
-      <ForwardRef(Button)
-        color="primary"
-        fullWidth={true}
-        onClick={[Function]}
-        variant="contained"
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
       >
-        Return to the Graduate School website
-      </ForwardRef(Button)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-14 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-your-thesis-has-been-deposited"
+            id="standard-card-your-thesis-has-been-deposited"
+          >
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-19 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-your-thesis-has-been-deposited-header"
+                  id="standard-card-your-thesis-has-been-deposited-header"
+                >
+                  Your thesis has been deposited
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-your-thesis-has-been-deposited-content"
+              data-testid="standard-card-your-thesis-has-been-deposited-content"
+              id="standard-card-your-thesis-has-been-deposited-content"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                  >
+                    You will receive an email confirming your thesis deposit shortly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        />
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Return to the Graduate School website
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
-<StandardPage
-  standardPageId="rhd-submission"
-  title="Professional doctorate deposit"
+<div
+  aria-hidden="true"
 >
-  <ConfirmDiscardFormChanges
-    dirty={true}
-    submitSucceeded={false}
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    data-testid="rhd-submission"
+    id="rhd-submission"
   >
-    <form>
-      <NavigationDialogBox
-        txt={
-          Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to abandon workflow?",
-            "confirmationTitle": "Abandon workflow",
-          }
-        }
-        when={true}
-      />
-      <WithStyles(ConfirmDialogBox)
-        confirmDialogBoxId="thesis"
-        locale={
-          Object {
-            "cancelButtonLabel": "No, continue editing",
-            "confirmButtonLabel": "Yes, deposit thesis",
-            "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
-            "confirmationTitle": "Thesis deposit",
-          }
-        }
-        onAction={[MockFunction]}
-        onRef={[Function]}
-      />
-      <ForwardRef(Grid)
-        container={true}
-        spacing={3}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        Professional doctorate deposit
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+    >
+      <form>
+        <span />
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
         >
-          <StandardCard
-            title="Thesis information"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
-            <ForwardRef(Grid)
-              container={true}
-              spacing={3}
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-thesis-information"
+              id="standard-card-thesis-information"
             >
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  height={50}
-                  name="thesisTitle"
-                  required={true}
-                  richEditorId="rek-title"
-                  title="Thesis title"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                sm={6}
-                xs={12}
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-thesis-information-header"
+                    id="standard-card-thesis-information-header"
+                  >
+                    Thesis information
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-thesis-information-content"
+                data-testid="standard-card-thesis-information-content"
+                id="standard-card-thesis-information-content"
               >
-                <Field
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "propTypes": Object {
-                        "FormHelperTextProps": [Function],
-                        "InputLabelProps": [Function],
-                        "InputProps": [Function],
-                        "SelectProps": [Function],
-                        "autoComplete": [Function],
-                        "autoFocus": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "classes": [Function],
-                        "color": [Function],
-                        "defaultValue": [Function],
-                        "disabled": [Function],
-                        "error": [Function],
-                        "fullWidth": [Function],
-                        "help": [Function],
-                        "helperText": [Function],
-                        "id": [Function],
-                        "inputProps": [Function],
-                        "inputRef": [Function],
-                        "label": [Function],
-                        "margin": [Function],
-                        "maxRows": [Function],
-                        "minRows": [Function],
-                        "multiline": [Function],
-                        "name": [Function],
-                        "onBlur": [Function],
-                        "onChange": [Function],
-                        "onFocus": [Function],
-                        "placeholder": [Function],
-                        "required": [Function],
-                        "rows": [Function],
-                        "select": [Function],
-                        "size": [Function],
-                        "sx": [Function],
-                        "textFieldId": [Function],
-                        "type": [Function],
-                        "value": [Function],
-                        "variant": [Function],
-                      },
-                      "render": [Function],
-                    }
-                  }
-                  disabled={false}
-                  fullWidth={true}
-                  label="Author name"
-                  name="currentAuthor.0.nameAsPublished"
-                  placeholder=""
-                  required={true}
-                  rows={1}
-                  textFieldId="rek-author"
-                  type="text"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                sm={6}
-                xs={12}
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      name="thesisTitle"
+                      required="true"
+                      title="Thesis title"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      label="Author name"
+                      name="currentAuthor.0.nameAsPublished"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      label="Thesis type"
+                      name="rek_genre_type"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      label="Enrolling unit"
+                      name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      is="mock"
+                      name="thesisAbstract"
+                      required="true"
+                      title="Abstract"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-supervisors"
+              id="standard-card-supervisors"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <Field
-                  ariaLabel="Select a thesis type"
-                  component={[Function]}
-                  disabled={false}
-                  id="thesis-subtype"
-                  itemsList={
-                    Array [
-                      Object {
-                        "text": "MPhil Thesis",
-                        "value": "MPhil Thesis",
-                      },
-                      Object {
-                        "text": "PhD Thesis",
-                        "value": "PhD Thesis",
-                      },
-                      Object {
-                        "text": "Professional Doctorate",
-                        "value": "Professional Doctorate",
-                      },
-                    ]
-                  }
-                  label="Thesis type"
-                  name="rek_genre_type"
-                  required={true}
-                  selectPrompt="Please select a thesis type"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-supervisors-header"
+                    id="standard-card-supervisors-header"
+                  >
+                    Supervisors
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-supervisors-content"
+                data-testid="standard-card-supervisors-content"
+                id="standard-card-supervisors-content"
               >
-                <Field
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.memo),
-                      "WrappedComponent": Object {
-                        "$$typeof": Symbol(react.memo),
-                        "compare": null,
-                        "type": [Function],
-                      },
-                      "compare": null,
-                      "type": [Function],
-                    }
-                  }
-                  disabled={false}
-                  floatingLabelText="Enrolling unit"
-                  hintText="Enrolling unit, eg. School of Business"
-                  name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-                  required={true}
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
+                <field
+                  is="mock"
+                  name="supervisors"
+                  required="true"
                 />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-field-of-research"
+              id="standard-card-field-of-research"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  name="thesisAbstract"
-                  required={true}
-                  richEditorId="rek-description"
-                  title="Abstract"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-field-of-research-header"
+                    id="standard-card-field-of-research-header"
+                  >
+                    Field of research
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-field-of-research-content"
+                data-testid="standard-card-field-of-research-content"
+                id="standard-card-field-of-research-content"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                >
+                  Select up to 3 Field of Research (FoR) codes at the 4 digit level
+                </p>
+                <field
+                  is="mock"
+                  name="fieldOfResearch"
+                  required="true"
                 />
-              </ForwardRef(Grid)>
-            </ForwardRef(Grid)>
-          </StandardCard>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <StandardCard
-            title="Supervisors"
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
-            <Field
-              component={[Function]}
-              contributorEditorId="rek-supervisor"
-              disabled={false}
-              locale={
-                Object {
-                  "form": Object {
-                    "locale": Object {
-                      "addButton": "Add supervisor",
-                      "descriptionStep1": "",
-                      "descriptionStep1NoStep2": "List your current supervisors",
-                      "identifierLabel": "UQ identifier (if available)",
-                      "nameAsPublishedFieldId": "supervisors-name-as-published-field",
-                      "nameAsPublishedHint": "",
-                      "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
-                    },
-                  },
-                  "header": Object {
-                    "locale": Object {
-                      "contributorAssignmentColumn": "Select your name",
-                      "deleteAll": "Remove all items",
-                      "deleteAllConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete all items?",
-                        "confirmationTitle": "Delete all",
-                      },
-                      "descriptionStep2": "",
-                      "identifierColumn": "UQ identifier",
-                      "nameColumn": "Supervisor's name",
-                      "reorderColumn": "Reorder items",
-                    },
-                  },
-                  "row": Object {
-                    "locale": Object {
-                      "deleteHint": "Remove this item",
-                      "deleteRecordConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete this item?",
-                        "confirmationTitle": "Delete item",
-                      },
-                      "editHint": "Edit this item",
-                      "moveDownHint": "Move item down the order",
-                      "moveUpHint": "Move item up the order",
-                      "selectHint": "Select this supervisor ([name]) to assign it as you",
-                      "suffix": " listed supervisor",
-                    },
-                  },
-                }
-              }
-              name="supervisors"
-              required={true}
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <StandardCard
-            title="Field of research"
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-keywords"
+              id="standard-card-keywords"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-keywords-header"
+                    id="standard-card-keywords-header"
+                  >
+                    Keywords
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-keywords-content"
+                data-testid="standard-card-keywords-content"
+                id="standard-card-keywords-content"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                >
+                  Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
+                </p>
+                <field
+                  is="mock"
+                  name="fez_record_search_key_keywords"
+                  required="true"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
-            <ForwardRef(Typography)>
-              Select up to 3 Field of Research (FoR) codes at the 4 digit level
-            </ForwardRef(Typography)>
-            <Field
-              component={[Function]}
-              disabled={false}
-              distinctOnly={true}
-              hideReorder={true}
-              listEditorId="rek-subject"
-              locale={
-                Object {
-                  "form": Object {
-                    "locale": Object {
-                      "inputFieldHint": "Start typing code or field name and select from list",
-                      "inputFieldLabel": "Field of research",
-                    },
-                  },
-                  "header": Object {
-                    "locale": Object {
-                      "deleteAll": "Remove all items",
-                      "deleteAllConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete all items?",
-                        "confirmationTitle": "Delete all",
-                      },
-                      "nameColumn": "Field of research",
-                    },
-                  },
-                  "row": Object {
-                    "locale": Object {
-                      "deleteHint": "Remove this item",
-                      "deleteRecordConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete this item?",
-                        "confirmationTitle": "Delete item",
-                      },
-                    },
-                  },
-                }
-              }
-              maxCount={3}
-              name="fieldOfResearch"
-              required={true}
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-upload-files"
+              id="standard-card-upload-files"
+            >
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-upload-files-header"
+                    id="standard-card-upload-files-header"
+                  >
+                    Upload files
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-upload-files-content"
+                data-testid="standard-card-upload-files-content"
+                id="standard-card-upload-files-content"
+              >
+                <field
+                  is="mock"
+                  name="files"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
         >
-          <StandardCard
-            title="Keywords"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-true css-1vknvy4-MuiGrid-root"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
           >
-            <ForwardRef(Typography)>
-              Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
-            </ForwardRef(Typography)>
-            <Field
-              component={[Function]}
-              disabled={false}
-              isValid={[Function]}
-              listEditorId="rek-keywords"
-              locale={
-                Object {
-                  "form": Object {
-                    "locale": Object {
-                      "addButtonLabel": "Add",
-                      "editButtonLabel": "Update",
-                      "id": "keywords-input",
-                      "inputFieldHint": "Type keywords (Add multiple using pipes eg: one|two|three)",
-                      "inputFieldLabel": "Keywords",
-                    },
-                  },
-                  "header": Object {
-                    "locale": Object {
-                      "deleteAll": "Remove all keywords",
-                      "deleteAllConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete all keywords?",
-                        "confirmationTitle": "Delete all",
-                      },
-                      "nameColumn": "Keyword",
-                      "reorderColumn": "Reorder keywords",
-                    },
-                  },
-                  "row": Object {
-                    "locale": Object {
-                      "deleteHint": "Remove this keyword",
-                      "deleteRecordConfirmation": Object {
-                        "cancelButtonLabel": "No",
-                        "confirmButtonLabel": "Yes",
-                        "confirmationMessage": "Are you sure you want to delete this keyword?",
-                        "confirmationTitle": "Delete keyword",
-                      },
-                      "editHint": "Edit this item",
-                      "moveDownHint": "Move keyword down the order",
-                      "moveUpHint": "Move keyword up the order",
-                    },
-                  },
-                }
-              }
-              maxCount={10}
-              name="fez_record_search_key_keywords"
-              required={true}
-              searchKey={
-                Object {
-                  "order": "rek_keywords_order",
-                  "value": "rek_keywords",
-                }
-              }
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <StandardCard
-            title="Upload files"
+            <button
+              aria-label="Cancel"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="cancel-deposit-thesis"
+              tabindex="0"
+              type="button"
+            >
+              Cancel
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
           >
-            <Field
-              component={[Function]}
-              defaultQuickTemplateId={3}
-              disabled={false}
-              locale={
-                Object {
-                  "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the work.",
-                  "delayNotice": "Notice",
-                  "errorTitle": "Upload Errors",
-                  "fileUploadInstruction": <p>
-                    Click here to select files, or drag files into this area to upload
-                  </p>,
-                  "fileUploadRestrictionHeading": "File upload restrictions",
-                  "fileUploadRestrictions": <div>
-                    Maximum file size is 5GB. 
-                    <br />
-                    PDF files must be saved using the following naming structure
-                     
-                    <b>
-                      &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
-                    </b>
-                    . Document name could be thesis, abstract, and etc. For example:
-                    <ul>
-                      <li>
-                        s1234567_phd_thesis.pdf
-                      </li>
-                      <li>
-                        s1234567_phd_abstract.pdf
-                      </li>
-                    </ul>
-                    Supplementary audio files are to be in MP 3 format. 
-                    <br />
-                    Supplementary video files are to be in WMV or AVI format. 
-                    <br />
-                  </div>,
-                  "instructions": "",
-                  "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-                  "successTitle": "Success",
-                  "validation": Object {
-                    "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-                    "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
-                    "notFiles": "Invalid files ([fileNames])",
-                    "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-                    "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-                  },
-                }
-              }
-              name="files"
-              validate={
-                Array [
-                  [Function],
-                ]
-              }
-            />
-          </StandardCard>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        container={true}
-        spacing={2}
-      >
-        <ForwardRef(Grid)
-          item={true}
-          sm={true}
-          xs={false}
-        />
-        <ForwardRef(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <ForwardRef(Button)
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Cancel
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <ForwardRef(Button)
-            color="primary"
-            data-testid="deposit-thesis"
-            fullWidth={true}
-            id="submit-thesis"
-            onClick={[Function]}
-            variant="contained"
-          >
-            Deposit your thesis
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </form>
-  </ConfirmDiscardFormChanges>
-</StandardPage>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="deposit-thesis"
+              id="submit-thesis"
+              tabindex="0"
+              type="button"
+            >
+              Deposit your thesis
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
-Array [
-  "Not all files were uploaded. Please contact ",
-  <a
-    href="mailto:thesis@gradschool.uq.edu.au?subject=Problem%20with%20Submission%20to%20UQ%20eSpace%20-%20First%20Last%2C%201234567"
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    data-testid="rhd-submission-succeeded"
+    id="rhd-submission-succeeded"
   >
-    the Graduate School
-  </a>,
-  " for assistance.",
-]
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-122 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
+      >
+        Professional doctorate deposit
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-121 css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-124 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-your-thesis-has-been-deposited"
+            id="standard-card-your-thesis-has-been-deposited"
+          >
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-129 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-your-thesis-has-been-deposited-header"
+                  id="standard-card-your-thesis-has-been-deposited-header"
+                >
+                  Your thesis has been deposited
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-your-thesis-has-been-deposited-content"
+              data-testid="standard-card-your-thesis-has-been-deposited-content"
+              id="standard-card-your-thesis-has-been-deposited-content"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                  >
+                    You will receive an email confirming your thesis deposit shortly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            data-testid="alert"
+            style="margin-top: 5px;"
+          >
+            <div
+              class="MuiGrid-root makeStyles-root-130 MuiGrid-container makeStyles-error-139 makeStyles-common-131 css-1k6h6af-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item makeStyles-icon-134 alert-icon  css-13i4rnv-MuiGrid-root"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ErrorIcon"
+                      focusable="false"
+                      id="error-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-135 alert-text css-1vd824g-MuiGrid-root"
+                  >
+                    <b>
+                      FILE UPLOAD ERROR - 
+                    </b>
+                    Not all files were uploaded. Please contact 
+                    <a
+                      href="mailto:thesis@gradschool.uq.edu.au?subject=Problem%20with%20Submission%20to%20UQ%20eSpace%20-%20First%20Last%2C%201234567"
+                    >
+                      the Graduate School
+                    </a>
+                     for assistance.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        />
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit MuiButton-fullWidth css-16alwzc-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Return to the Graduate School website
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ThesisSubmission should show the file upload failure alert 1`] = `
-<StandardPage
-  standardPageId="rhd-submission-succeeded"
-  title="Professional doctorate deposit"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={3}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    data-testid="rhd-submission-succeeded"
+    id="rhd-submission-succeeded"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        title="Your thesis has been deposited"
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-96 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Grid)
-          container={true}
-          spacing={3}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <ForwardRef(Typography)>
-              You will receive an email confirming your thesis deposit shortly.
-            </ForwardRef(Typography)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={3}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
-    >
-      <Alert
-        action={[Function]}
-        actionButtonLabel="Retry upload"
-        allowDismiss={false}
-        customIcon={null}
-        customType={null}
-        disableAlertClick={true}
-        dismissTitle="Click to dismiss this alert"
-        message={
-          Array [
-            "There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact ",
-            <a
-              href="mailto:thesis@gradschool.uq.edu.au?subject=Problem%20with%20Submission%20to%20UQ%20eSpace%20-%20First%20Last%2C%201234567"
-            >
-              the Graduate School
-            </a>,
-            ".",
-          ]
-        }
-        showLoader={false}
-        title="FILE UPLOAD ERROR"
-        type="error"
-        wiggle={null}
-      />
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={true}
+        Professional doctorate deposit
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
-    <ForwardRef(Grid)
-      item={true}
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-95 css-13i4rnv-MuiGrid-root"
     >
-      <ForwardRef(Button)
-        color="inherit"
-        fullWidth={true}
-        onClick={[Function]}
-        variant="contained"
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
       >
-        Return to the Graduate School website
-      </ForwardRef(Button)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-98 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-your-thesis-has-been-deposited"
+            id="standard-card-your-thesis-has-been-deposited"
+          >
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-103 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-your-thesis-has-been-deposited-header"
+                  id="standard-card-your-thesis-has-been-deposited-header"
+                >
+                  Your thesis has been deposited
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-your-thesis-has-been-deposited-content"
+              data-testid="standard-card-your-thesis-has-been-deposited-content"
+              id="standard-card-your-thesis-has-been-deposited-content"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                  >
+                    You will receive an email confirming your thesis deposit shortly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            data-testid="alert"
+            style="margin-top: 5px;"
+          >
+            <div
+              class="MuiGrid-root makeStyles-root-104 MuiGrid-container makeStyles-error-113 makeStyles-common-105 css-1k6h6af-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item makeStyles-icon-108 alert-icon  css-13i4rnv-MuiGrid-root"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ErrorIcon"
+                      focusable="false"
+                      id="error-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-109 alert-text css-1vd824g-MuiGrid-root"
+                  >
+                    <b>
+                      FILE UPLOAD ERROR - 
+                    </b>
+                    There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact 
+                    <a
+                      href="mailto:thesis@gradschool.uq.edu.au?subject=Problem%20with%20Submission%20to%20UQ%20eSpace%20-%20First%20Last%2C%201234567"
+                    >
+                      the Graduate School
+                    </a>
+                    .
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto makeStyles-actionButton-110 css-11gq09b-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="action-button"
+                  data-testid="action-button"
+                  id="action-button"
+                  tabindex="0"
+                  type="button"
+                >
+                  Retry upload
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        />
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit MuiButton-fullWidth css-16alwzc-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Return to the Graduate School website
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

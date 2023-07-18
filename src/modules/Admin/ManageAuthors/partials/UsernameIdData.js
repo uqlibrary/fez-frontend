@@ -59,6 +59,7 @@ export const UsernameIdColumnData = () => {
                                                 aria-label={isUsernameOverridden.label}
                                                 onClick={handleNameOverridden}
                                                 id="aut-name-overridden"
+                                                data-analyticsid="aut-name-overridden"
                                                 data-testid="aut-name-overridden"
                                                 size="large"
                                             >

@@ -258,6 +258,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                             return (
                                 <Button
                                     id={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                    data-analyticsid={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                     data-testid={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                     disabled={props.disabled}
                                     variant="contained"

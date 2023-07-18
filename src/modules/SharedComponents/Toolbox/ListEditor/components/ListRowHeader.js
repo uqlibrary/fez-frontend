@@ -51,6 +51,7 @@ export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder, list
                                 onClick={showConfirmation}
                                 disabled={disabled}
                                 id={`delete-all-${listEditorId}`}
+                                data-analyticsid={`delete-all-${listEditorId}`}
                                 data-testid={`delete-all-${listEditorId}`}
                                 size="large"
                             >

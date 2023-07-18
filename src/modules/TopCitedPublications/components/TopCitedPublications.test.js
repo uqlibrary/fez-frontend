@@ -1,8 +1,15 @@
+import React from 'react';
+import { useWidth } from 'hooks';
 import { trendingPublications } from 'mock/data/testing/trendingPublications';
-import { TopCitedPublicationsClass } from './TopCitedPublications';
+import { default as TopCitedPublications } from './TopCitedPublications';
 import { transformTrendingPublicationsMetricsData } from 'actions/academicDataTransformers';
+import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+jest.mock('../../../hooks', () => ({
+    useWidth: jest.fn(() => 'xs'),
+    useRecordsSelector: jest.requireActual('../../../hooks').useRecordsSelector,
+}));
+function setup(testProps) {
     const props = {
         classes: {},
         theme: {},
@@ -11,51 +18,74 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(TopCitedPublicationsClass, props, isShallow);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <TopCitedPublications {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('Component TopCitedPublications', () => {
-    it('should render top cited publications', () => {
-        const wrapper = setup({
-            topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+    beforeEach(() => {
+        useWidth.mockImplementation(() => 'xs');
     });
 
-    it('should render tabs with xs width properly', () => {
-        const wrapper = setup({
+    it('should render top cited publications with default width xs', () => {
+        const { container } = setup({
             topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
-            width: 'xs',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render tabs larger than xs width properly', () => {
+        useWidth.mockImplementation(() => 'sm');
+        const { container } = setup({
+            topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
+            width: 'sm',
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render loading indicator', () => {
-        const wrapper = setup({ loadingTopCitedPublications: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ loadingTopCitedPublications: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render top cited publications module with not available message', () => {
         const testFn = jest.fn();
-        const wrapper = setup({
+        const { container } = setup({
             topCitedPublicationsList: [],
             loadingTopCitedPublications: false,
             actions: { searchTopCitedPublications: testFn },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(container).toMatchSnapshot();
     });
 
     it('should set state on tab change', () => {
-        const wrapper = setup({});
-        const test = 'Testing handleTabChange';
-        wrapper.instance().handleTabChange(null, test);
-        expect(wrapper.state().topCitedTab).toBe(test);
+        const { getByText, queryByText, getByRole } = setup({
+            topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
+        });
+        const title1 = 'Development and implementation of papillomavirus prophylactic vaccines';
+        const title2 = 'Prophylactic HPV vaccines: Underlying mechanisms';
+
+        expect(getByRole('tab', { selected: true })).toHaveTextContent('Trending');
+        expect(getByText(title1)).toBeInTheDocument();
+        expect(queryByText(title2)).not.toBeInTheDocument();
+
+        fireEvent.click(getByRole('tab', { name: 'WOS' }));
+
+        expect(getByRole('tab', { selected: true })).toHaveTextContent('WOS');
+        expect(queryByText(title1)).not.toBeInTheDocument();
+        expect(getByText(title2)).toBeInTheDocument();
     });
 
     it('should select first loaded tab as default if preferred has not loaded', () => {
-        const wrapper = setup({
-            topCitedPublicationsList: [{ key: 'test', order: 1 }],
+        const { getByRole } = setup({
+            topCitedPublicationsList: [{ key: 'scopus', values: [{ rek_title: 'pub', metricData: {} }], order: 1 }],
         });
-        expect(wrapper.state().topCitedTab).toBe('test');
+        expect(getByRole('tab', { selected: true })).toHaveTextContent('Scopus');
     });
 });

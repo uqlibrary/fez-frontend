@@ -114,6 +114,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                         <IconButton
                             onClick={handleDrawerToggle}
                             id={`adminRecordDrawerCloseBtn${variant}`}
+                            data-analyticsid={`btnAdminRecordDrawerCloseBtn${variant}`}
                             data-testid={`btnAdminRecordDrawerCloseBtn${variant}`}
                             aria-label="Close admin record drawer"
                             size="large"

@@ -25,6 +25,7 @@ exports[`Related publications Component  should not render data with empty looku
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card--content"
         data-testid="standard-card--content"
         id="standard-card--content"
       >
@@ -89,6 +90,7 @@ exports[`Related publications Component  should render component 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-title-content"
         data-testid="standard-card-title-content"
         id="standard-card-title-content"
       >
@@ -153,6 +155,7 @@ exports[`Related publications Component  should render with a publication title 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-a-test-title-content"
         data-testid="standard-card-a-test-title-content"
         id="standard-card-a-test-title-content"
       >
@@ -228,6 +231,7 @@ exports[`Related publications Component  should render without a child search ke
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-title-content"
         data-testid="standard-card-title-content"
         id="standard-card-title-content"
       >
@@ -292,6 +296,7 @@ exports[`Related publications Component  should render without a parent search k
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-title-content"
         data-testid="standard-card-title-content"
         id="standard-card-title-content"
       >

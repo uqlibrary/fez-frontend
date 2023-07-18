@@ -27,6 +27,7 @@ exports[`Component Links  Full mount render 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -77,6 +78,7 @@ exports[`Component Links  Full mount render 1`] = `
               <a
                 aria-label="Full text via Pubmed Central (open access)"
                 class="pubmedCentralLinkUrl makeStyles-externalLink-53 makeStyles-externalLink-55"
+                data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345678"
                 id="pubmed-central-link"
@@ -103,6 +105,7 @@ exports[`Component Links  Full mount render 1`] = `
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-45 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
           >
             <span
@@ -141,6 +144,7 @@ exports[`Component Links  Full mount render 1`] = `
                 <a
                   aria-label="Open this DOI in an new window"
                   class="citationDoiLink makeStyles-externalLink-53 makeStyles-externalLink-58"
+                  data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1093/hmg/ddw177"
                   id="citation-doi-link"
@@ -168,6 +172,7 @@ exports[`Component Links  Full mount render 1`] = `
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-45 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
           >
             <span
@@ -199,6 +204,7 @@ exports[`Component Links  Full mount render 1`] = `
             >
               <a
                 class="makeStyles-externalLink-53 makeStyles-externalLink-59"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
                 id="publication-0-link"
@@ -225,6 +231,7 @@ exports[`Component Links  Full mount render 1`] = `
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-45 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -259,6 +266,7 @@ exports[`Component Links  Full mount render 1`] = `
             >
               <a
                 class="makeStyles-externalLink-53 makeStyles-externalLink-60"
+                data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
                 id="publication-1-link"
@@ -285,6 +293,7 @@ exports[`Component Links  Full mount render 1`] = `
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-45 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
           >
             <span
@@ -340,6 +349,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -393,6 +403,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
                 <a
                   aria-label="Open this DOI in an new window"
                   class="citationDoiLink makeStyles-externalLink-27 makeStyles-externalLink-29"
+                  data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/12345"
                   id="citation-doi-link"
@@ -420,6 +431,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-19 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
           >
             <span
@@ -472,6 +484,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -522,6 +535,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
               <a
                 aria-label="Full text via Pubmed Central (open access)"
                 class="pubmedCentralLinkUrl makeStyles-externalLink-13 makeStyles-externalLink-15"
+                data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/12345"
                 id="pubmed-central-link"
@@ -548,6 +562,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-5 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
           >
             <span
@@ -603,6 +618,7 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -677,6 +693,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -726,6 +743,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             >
               <a
                 class="makeStyles-externalLink-84 makeStyles-externalLink-86"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
                 id="publication-0-link"
@@ -752,6 +770,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-76 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -786,6 +805,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             >
               <a
                 class="makeStyles-externalLink-84 makeStyles-externalLink-89"
+                data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
                 id="publication-1-link"
@@ -812,6 +832,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-76 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
           >
             <span
@@ -846,6 +867,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             >
               <a
                 class="makeStyles-externalLink-84 makeStyles-externalLink-90"
+                data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
                 id="publication-2-link"
@@ -872,6 +894,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-76 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
           >
             <span
@@ -927,6 +950,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -977,6 +1001,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               <a
                 aria-label="Full text via Pubmed Central (open access)"
                 class="pubmedCentralLinkUrl makeStyles-externalLink-117 makeStyles-externalLink-119"
+                data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                 id="pubmed-central-link"
@@ -1003,6 +1028,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-109 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
           >
             <span
@@ -1041,6 +1067,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                 <a
                   aria-label="Open this DOI in an new window"
                   class="citationDoiLink makeStyles-externalLink-117 makeStyles-externalLink-122"
+                  data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                   id="citation-doi-link"
@@ -1068,6 +1095,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-109 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
           >
             <span
@@ -1102,6 +1130,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             >
               <a
                 class="makeStyles-externalLink-117 makeStyles-externalLink-123"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
                 id="publication-0-link"
@@ -1128,6 +1157,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-109 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -1159,6 +1189,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             >
               <a
                 class="makeStyles-externalLink-117 makeStyles-externalLink-124"
+                data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
                 id="publication-1-link"
@@ -1185,6 +1216,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-109 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
           >
             <span
@@ -1216,6 +1248,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             >
               <a
                 class="makeStyles-externalLink-117 makeStyles-externalLink-125"
+                data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
                 id="publication-2-link"
@@ -1242,6 +1275,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-109 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
           >
             <span
@@ -1294,6 +1328,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -1344,6 +1379,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               <a
                 aria-label="Full text via Pubmed Central (open access)"
                 class="pubmedCentralLinkUrl makeStyles-externalLink-170 makeStyles-externalLink-172"
+                data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                 id="pubmed-central-link"
@@ -1370,6 +1406,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-162 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
           >
             <span
@@ -1408,6 +1445,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                 <a
                   aria-label="Open this DOI in an new window"
                   class="citationDoiLink makeStyles-externalLink-170 makeStyles-externalLink-175"
+                  data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                   id="citation-doi-link"
@@ -1435,6 +1473,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-162 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
           >
             <span
@@ -1466,6 +1505,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             >
               <a
                 class="makeStyles-externalLink-170 makeStyles-externalLink-176"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
                 id="publication-0-link"
@@ -1492,6 +1532,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-162 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -1523,6 +1564,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             >
               <a
                 class="makeStyles-externalLink-170 makeStyles-externalLink-177"
+                data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
                 id="publication-1-link"
@@ -1549,6 +1591,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-162 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
           >
             <span
@@ -1580,6 +1623,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             >
               <a
                 class="makeStyles-externalLink-170 makeStyles-externalLink-178"
+                data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
                 id="publication-2-link"
@@ -1606,6 +1650,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-162 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
           >
             <span
@@ -1658,6 +1703,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -1708,6 +1754,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               <a
                 aria-label="Full text via Pubmed Central (open access)"
                 class="pubmedCentralLinkUrl makeStyles-externalLink-135 makeStyles-externalLink-137"
+                data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                 id="pubmed-central-link"
@@ -1734,6 +1781,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-127 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
           >
             <span
@@ -1768,6 +1816,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             >
               <a
                 class="makeStyles-externalLink-135 makeStyles-externalLink-140"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
                 id="publication-0-link"
@@ -1794,6 +1843,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-127 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -1825,6 +1875,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             >
               <a
                 class="makeStyles-externalLink-135 makeStyles-externalLink-141"
+                data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
                 id="publication-1-link"
@@ -1851,6 +1902,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-127 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
           >
             <span
@@ -1882,6 +1934,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             >
               <a
                 class="makeStyles-externalLink-135 makeStyles-externalLink-142"
+                data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
                 id="publication-2-link"
@@ -1908,6 +1961,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-127 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
           >
             <span
@@ -1960,6 +2014,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -2010,6 +2065,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               <a
                 aria-label="Full text via Pubmed Central (open access)"
                 class="pubmedCentralLinkUrl makeStyles-externalLink-152 makeStyles-externalLink-154"
+                data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                 id="pubmed-central-link"
@@ -2036,6 +2092,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-144 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
           >
             <span
@@ -2074,6 +2131,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                 <a
                   aria-label="Open this DOI in an new window"
                   class="citationDoiLink makeStyles-externalLink-152 makeStyles-externalLink-157"
+                  data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                   id="citation-doi-link"
@@ -2101,6 +2159,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-144 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
           >
             <span
@@ -2132,6 +2191,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             >
               <a
                 class="makeStyles-externalLink-152 makeStyles-externalLink-158"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
                 id="publication-0-link"
@@ -2158,6 +2218,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-144 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -2189,6 +2250,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             >
               <a
                 class="makeStyles-externalLink-152 makeStyles-externalLink-159"
+                data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
                 id="publication-1-link"
@@ -2215,6 +2277,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-144 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
           >
             <span
@@ -2246,6 +2309,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             >
               <a
                 class="makeStyles-externalLink-152 makeStyles-externalLink-160"
+                data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
                 id="publication-2-link"
@@ -2272,6 +2336,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-144 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
           >
             <span
@@ -2324,6 +2389,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -2374,6 +2440,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               <a
                 aria-label="Full text via Pubmed Central (open access)"
                 class="pubmedCentralLinkUrl makeStyles-externalLink-188 makeStyles-externalLink-190"
+                data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                 id="pubmed-central-link"
@@ -2400,6 +2467,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-180 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
           >
             <span
@@ -2438,6 +2506,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
                 <a
                   aria-label="Open this DOI in an new window"
                   class="citationDoiLink makeStyles-externalLink-188 makeStyles-externalLink-193"
+                  data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                   id="citation-doi-link"
@@ -2465,6 +2534,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-180 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
           >
             <span
@@ -2496,6 +2566,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             >
               <a
                 class="makeStyles-externalLink-188 makeStyles-externalLink-194"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
                 id="publication-0-link"
@@ -2522,6 +2593,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-180 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -2553,6 +2625,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             >
               <a
                 class="makeStyles-externalLink-188 makeStyles-externalLink-195"
+                data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
                 id="publication-1-link"
@@ -2579,6 +2652,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-180 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
           >
             <span
@@ -2610,6 +2684,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             >
               <a
                 class="makeStyles-externalLink-188 makeStyles-externalLink-196"
+                data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
                 id="publication-2-link"
@@ -2636,6 +2711,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-180 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
           >
             <span
@@ -2688,6 +2764,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -2741,6 +2818,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                 <a
                   aria-label="Open this DOI in an new window"
                   class="citationDoiLink makeStyles-externalLink-100 makeStyles-externalLink-102"
+                  data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                   id="citation-doi-link"
@@ -2768,6 +2846,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-92 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
           >
             <span
@@ -2824,6 +2903,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             >
               <a
                 class="makeStyles-externalLink-100 makeStyles-externalLink-105"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
                 id="publication-0-link"
@@ -2850,6 +2930,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-92 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -2881,6 +2962,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             >
               <a
                 class="makeStyles-externalLink-100 makeStyles-externalLink-106"
+                data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
                 id="publication-1-link"
@@ -2907,6 +2989,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-92 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
           >
             <span
@@ -2938,6 +3021,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             >
               <a
                 class="makeStyles-externalLink-100 makeStyles-externalLink-107"
+                data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
                 id="publication-2-link"
@@ -2964,6 +3048,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-92 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
           >
             <span
@@ -3016,6 +3101,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -3065,6 +3151,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
             >
               <a
                 class="makeStyles-externalLink-221 makeStyles-externalLink-223"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
                 id="publication-0-link"
@@ -3091,6 +3178,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-213 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -3173,6 +3261,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -3222,6 +3311,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
             >
               <a
                 class="makeStyles-externalLink-235 makeStyles-externalLink-237"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
                 id="publication-0-link"
@@ -3248,6 +3338,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-227 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -3300,6 +3391,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -3349,6 +3441,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             >
               <a
                 class="makeStyles-externalLink-277 makeStyles-externalLink-279"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://google.com"
                 id="publication-0-link"
@@ -3375,6 +3468,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-269 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -3430,6 +3524,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -3479,6 +3574,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             >
               <a
                 class="makeStyles-externalLink-249 makeStyles-externalLink-251"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
                 id="publication-0-link"
@@ -3505,6 +3601,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-241 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -3560,6 +3657,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -3609,6 +3707,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             >
               <a
                 class="makeStyles-externalLink-263 makeStyles-externalLink-265"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
                 id="publication-0-link"
@@ -3635,6 +3734,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-255 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -3690,6 +3790,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -3739,6 +3840,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
             >
               <a
                 class="makeStyles-externalLink-70 makeStyles-externalLink-72"
+                data-analyticsid="google-scholar-link"
                 data-testid="google-scholar-link"
                 href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
                 id="google-scholar-link"
@@ -3765,6 +3867,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-62 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-title-description"
             data-testid="rek-title-description"
           >
             <span
@@ -3817,6 +3920,7 @@ exports[`Component Links  should use special default description if the link has
       </div>
       <div
         class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-links-content"
         data-testid="standard-card-links-content"
         id="standard-card-links-content"
       >
@@ -3866,6 +3970,7 @@ exports[`Component Links  should use special default description if the link has
             >
               <a
                 class="makeStyles-externalLink-206 makeStyles-externalLink-208"
+                data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
                 id="publication-0-link"
@@ -3892,6 +3997,7 @@ exports[`Component Links  should use special default description if the link has
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-198 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
           >
             <span
@@ -3923,6 +4029,7 @@ exports[`Component Links  should use special default description if the link has
             >
               <a
                 class="makeStyles-externalLink-206 makeStyles-externalLink-211"
+                data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="https://rdm.uq.edu.au/files/example123"
                 id="publication-1-link"
@@ -3949,6 +4056,7 @@ exports[`Component Links  should use special default description if the link has
           </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-198 css-2jh05v-MuiGrid2-root"
+            data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
           >
             <span

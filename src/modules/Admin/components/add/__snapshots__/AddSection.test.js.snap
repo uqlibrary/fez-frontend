@@ -240,6 +240,7 @@ exports[`AddSection component should render default view 1`] = `
                 >
                   <ForwardRef(Button)
                     color="secondary"
+                    data-analyticsid="cancel-work"
                     data-testid="cancel-work"
                     fullWidth={true}
                     id="cancel-work"
@@ -256,6 +257,7 @@ exports[`AddSection component should render default view 1`] = `
                 >
                   <ForwardRef(Button)
                     color="primary"
+                    data-analyticsid="submit-work"
                     data-testid="submit-work"
                     fullWidth={true}
                     id="submit-work"
@@ -535,6 +537,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                 >
                   <ForwardRef(Button)
                     color="secondary"
+                    data-analyticsid="cancel-work"
                     data-testid="cancel-work"
                     fullWidth={true}
                     id="cancel-work"
@@ -551,6 +554,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                 >
                   <ForwardRef(Button)
                     color="primary"
+                    data-analyticsid="submit-work"
                     data-testid="submit-work"
                     fullWidth={true}
                     id="submit-work"

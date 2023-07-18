@@ -140,6 +140,7 @@ const EditableFileName = ({
                             onClick={handleFileEditFilename}
                             size={'small'}
                             id={`${props.id}-edit`}
+                            data-analyticsid={`${props.id}-edit`}
                             data-testid={`${props.id}-edit`}
                         >
                             <EditIcon />
@@ -150,6 +151,7 @@ const EditableFileName = ({
                                 onClick={handleFileRestoreFilename}
                                 size={'small'}
                                 id={`${props.id}-reset`}
+                                data-analyticsid={`${props.id}-reset`}
                                 data-testid={`${props.id}-reset`}
                             >
                                 <ReplayIcon />
@@ -180,6 +182,7 @@ const EditableFileName = ({
                                             onClick={handleFileSaveFilename}
                                             size={'small'}
                                             id={`${props.id}-save`}
+                                            data-analyticsid={`${props.id}-save`}
                                             data-testid={`${props.id}-save`}
                                         >
                                             <CheckIcon />
@@ -189,6 +192,7 @@ const EditableFileName = ({
                                             onClick={handleFileCancelEdit}
                                             size={'small'}
                                             id={`${props.id}-cancel`}
+                                            data-analyticsid={`${props.id}-cancel`}
                                             data-testid={`${props.id}-cancel`}
                                         >
                                             <ClearIcon />

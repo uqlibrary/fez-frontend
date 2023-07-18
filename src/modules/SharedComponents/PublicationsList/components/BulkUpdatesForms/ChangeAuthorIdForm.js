@@ -134,6 +134,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                     <Button
                         aria-label={txt.changeAuthorIdForm.formLabels.cancelButtonLabel}
                         children={txt.changeAuthorIdForm.formLabels.cancelButtonLabel}
+                        data-analyticsid="change-author-id-cancel"
                         data-testid="change-author-id-cancel"
                         disabled={submitting}
                         fullWidth
@@ -147,6 +148,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                         aria-label={txt.changeAuthorIdForm.formLabels.submitButtonLabel}
                         children={txt.changeAuthorIdForm.formLabels.submitButtonLabel}
                         color="primary"
+                        data-analyticsid="change-author-id-submit"
                         data-testid="change-author-id-submit"
                         disabled={submitting || disableSubmit || submitSucceeded}
                         fullWidth

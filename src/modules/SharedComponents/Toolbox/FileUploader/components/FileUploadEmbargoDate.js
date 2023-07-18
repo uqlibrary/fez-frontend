@@ -28,6 +28,7 @@ export class FileUploadEmbargoDate extends PureComponent {
             classes: {
                 root: classes.input,
             },
+            'data-analyticsid': `${this.props.fileUploadEmbargoDateId}-input`,
             'data-testid': `${this.props.fileUploadEmbargoDateId}-input`,
         };
 

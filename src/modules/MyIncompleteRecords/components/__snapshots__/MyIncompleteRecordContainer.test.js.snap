@@ -10,6 +10,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-83 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
       >
@@ -22,6 +23,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
       <button
         aria-label="Click for more information"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
         data-testid="help-icon"
         id="help-icon"
@@ -158,6 +160,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                           <a
                             aria-label="Full citation in Google scholar will open in a new window"
                             class="googleCitationCount CitationCountView-citationCount-98 makeStyles-externalLink-100 makeStyles-externalLink-136"
+                            data-analyticsid="citation-count-link"
                             data-testid="citation-count-link"
                             href="https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello"
                             id="citation-count-link"
@@ -268,6 +271,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-type-&-collection-content"
                 data-testid="standard-card-type-&-collection-content"
                 id="standard-card-type-&-collection-content"
               >
@@ -354,6 +358,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   <button
                     aria-label="Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
                     id="help-icon"
@@ -382,6 +387,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-author/creator-research-statement-content"
                 data-testid="standard-card-author/creator-research-statement-content"
                 id="standard-card-author/creator-research-statement-content"
               >
@@ -444,6 +450,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                           aria-hidden="true"
                           aria-labelledby="rek-significance-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          data-analyticsid="rek-significance-input"
                           data-testid="rek-significance-input"
                           id="rek-significance-input"
                           name="significance"
@@ -498,6 +505,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     </span>
                     <div
                       class=""
+                      data-analyticsid="rek-creator-contribution-statement"
                       data-testid="rek-creator-contribution-statement"
                       id="rek-creator-contribution-statement"
                     />
@@ -549,6 +557,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   <button
                     aria-label="Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
                     id="help-icon"
@@ -577,6 +586,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-ntro-data-content"
                 data-testid="standard-card-ntro-data-content"
                 id="standard-card-ntro-data-content"
               >
@@ -630,6 +640,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                           aria-hidden="true"
                           aria-labelledby="rek-audience-size-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          data-analyticsid="rek-audience-size-input"
                           data-testid="rek-audience-size-input"
                           id="rek-audience-size-input"
                           name="fez_record_search_key_audience_size.rek_audience_size"
@@ -699,6 +710,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                           aria-hidden="true"
                           aria-labelledby="rek-quality-indicator-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          data-analyticsid="rek-quality-indicator-input"
                           data-testid="rek-quality-indicator-input"
                           id="rek-quality-indicator-input"
                           required=""
@@ -755,6 +767,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-grant-details-content"
                 data-testid="standard-card-grant-details-content"
                 id="standard-card-grant-details-content"
               >
@@ -788,6 +801,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             aria-label="Funder/Sponsor name"
                             autocomplete="off"
                             class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="rek-grant-agency-input"
                             data-testid="rek-grant-agency-input"
                             id="rek-grant-agency-input"
                             label="Funder/Sponsor name"
@@ -822,6 +836,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                             aria-invalid="false"
                             aria-label="Grant ID"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="rek-grant-id-input"
                             data-testid="rek-grant-id-input"
                             disabled=""
                             id="rek-grant-id-input"
@@ -891,6 +906,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     >
                       <button
                         class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                        data-analyticsid="rek-grant-add"
                         data-testid="rek-grant-add"
                         disabled=""
                         id="rek-grant-add"
@@ -933,6 +949,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   <button
                     aria-label="Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
                     id="help-icon"
@@ -961,6 +978,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-authors-content"
                 data-testid="standard-card-authors-content"
                 id="standard-card-authors-content"
               >
@@ -1099,6 +1117,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                       </ul>
                       <ul
                         class="MuiList-root ContributorList Connect(ContributorsEditor)-list-129 Connect(ContributorsEditor)-scroll-130 MuiList-padding css-h4y409-MuiList-root"
+                        data-analyticsid="rek-author-list"
                         data-testid="rek-author-list"
                         id="rek-author-list"
                       >
@@ -1164,6 +1183,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Move item down the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-0-move-down"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-0-move-down"
                                 disabled=""
@@ -1186,6 +1206,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-0-edit"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-0-edit"
                                 id="rek-author-list-row-edit-0"
@@ -1210,6 +1231,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-0-delete"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-0-delete"
                                 disabled=""
@@ -1295,6 +1317,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Move item up the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-1-move-up"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-move-up"
                                 disabled=""
@@ -1317,6 +1340,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Move item down the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-1-move-down"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-move-down"
                                 disabled=""
@@ -1339,6 +1363,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-1-edit"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-edit"
                                 disabled=""
@@ -1361,6 +1386,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-1-delete"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-delete"
                                 disabled=""
@@ -1446,6 +1472,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Move item up the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-2-move-up"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-move-up"
                                 disabled=""
@@ -1468,6 +1495,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Move item down the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-2-move-down"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-move-down"
                                 disabled=""
@@ -1490,6 +1518,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-2-edit"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-edit"
                                 id="rek-author-list-row-edit-2"
@@ -1514,6 +1543,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-2-delete"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-delete"
                                 disabled=""
@@ -1598,6 +1628,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Move item up the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-3-move-up"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-3-move-up"
                                 disabled=""
@@ -1620,6 +1651,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-3-edit"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-3-edit"
                                 id="rek-author-list-row-edit-3"
@@ -1644,6 +1676,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-3-delete"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-3-delete"
                                 disabled=""
@@ -1703,6 +1736,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-notes-content"
                 data-testid="standard-card-notes-content"
                 id="standard-card-notes-content"
               >
@@ -1727,6 +1761,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                       aria-invalid="false"
                       aria-label="Notes for this work"
                       class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
+                      data-analyticsid="comments-input"
                       data-testid="comments-input"
                       id="comments-input"
                       label="Notes for this work"
@@ -1799,6 +1834,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-4 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
       >
@@ -1811,6 +1847,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
       <button
         aria-label="Click for more information"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
         data-testid="help-icon"
         id="help-icon"
@@ -1947,6 +1984,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           <a
                             aria-label="Full citation in Google scholar will open in a new window"
                             class="googleCitationCount CitationCountView-citationCount-19 makeStyles-externalLink-21 makeStyles-externalLink-57"
+                            data-analyticsid="citation-count-link"
                             data-testid="citation-count-link"
                             href="https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello"
                             id="citation-count-link"
@@ -2057,6 +2095,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-type-&-collection-content"
                 data-testid="standard-card-type-&-collection-content"
                 id="standard-card-type-&-collection-content"
               >
@@ -2143,6 +2182,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <button
                     aria-label="Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
                     id="help-icon"
@@ -2171,6 +2211,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-author/creator-research-statement-content"
                 data-testid="standard-card-author/creator-research-statement-content"
                 id="standard-card-author/creator-research-statement-content"
               >
@@ -2233,6 +2274,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           aria-hidden="true"
                           aria-labelledby="rek-significance-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          data-analyticsid="rek-significance-input"
                           data-testid="rek-significance-input"
                           id="rek-significance-input"
                           name="significance"
@@ -2287,6 +2329,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                     </span>
                     <div
                       class=""
+                      data-analyticsid="rek-creator-contribution-statement"
                       data-testid="rek-creator-contribution-statement"
                       id="rek-creator-contribution-statement"
                     />
@@ -2338,6 +2381,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <button
                     aria-label="Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
                     id="help-icon"
@@ -2366,6 +2410,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-ntro-data-content"
                 data-testid="standard-card-ntro-data-content"
                 id="standard-card-ntro-data-content"
               >
@@ -2419,6 +2464,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           aria-hidden="true"
                           aria-labelledby="rek-audience-size-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          data-analyticsid="rek-audience-size-input"
                           data-testid="rek-audience-size-input"
                           id="rek-audience-size-input"
                           name="fez_record_search_key_audience_size.rek_audience_size"
@@ -2488,6 +2534,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           aria-hidden="true"
                           aria-labelledby="rek-quality-indicator-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          data-analyticsid="rek-quality-indicator-input"
                           data-testid="rek-quality-indicator-input"
                           id="rek-quality-indicator-input"
                           required=""
@@ -2544,6 +2591,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-grant-details-content"
                 data-testid="standard-card-grant-details-content"
                 id="standard-card-grant-details-content"
               >
@@ -2577,6 +2625,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             aria-label="Funder/Sponsor name"
                             autocomplete="off"
                             class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="rek-grant-agency-input"
                             data-testid="rek-grant-agency-input"
                             id="rek-grant-agency-input"
                             label="Funder/Sponsor name"
@@ -2611,6 +2660,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             aria-invalid="false"
                             aria-label="Grant ID"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="rek-grant-id-input"
                             data-testid="rek-grant-id-input"
                             disabled=""
                             id="rek-grant-id-input"
@@ -2680,6 +2730,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                     >
                       <button
                         class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                        data-analyticsid="rek-grant-add"
                         data-testid="rek-grant-add"
                         disabled=""
                         id="rek-grant-add"
@@ -2722,6 +2773,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <button
                     aria-label="Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
                     id="help-icon"
@@ -2750,6 +2802,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-authors-content"
                 data-testid="standard-card-authors-content"
                 id="standard-card-authors-content"
               >
@@ -2888,6 +2941,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </ul>
                       <ul
                         class="MuiList-root ContributorList Connect(ContributorsEditor)-list-50 Connect(ContributorsEditor)-scroll-51 MuiList-padding css-h4y409-MuiList-root"
+                        data-analyticsid="rek-author-list"
                         data-testid="rek-author-list"
                         id="rek-author-list"
                       >
@@ -2953,6 +3007,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Move item down the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-0-move-down"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-0-move-down"
                                 disabled=""
@@ -2975,6 +3030,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-0-edit"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-0-edit"
                                 id="rek-author-list-row-edit-0"
@@ -2999,6 +3055,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-0-delete"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-0-delete"
                                 disabled=""
@@ -3084,6 +3141,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Move item up the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-1-move-up"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-move-up"
                                 disabled=""
@@ -3106,6 +3164,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Move item down the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-1-move-down"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-move-down"
                                 disabled=""
@@ -3128,6 +3187,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-1-edit"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-edit"
                                 disabled=""
@@ -3150,6 +3210,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-1-delete"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-delete"
                                 disabled=""
@@ -3235,6 +3296,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Move item up the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-2-move-up"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-move-up"
                                 disabled=""
@@ -3257,6 +3319,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Move item down the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-2-move-down"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-move-down"
                                 disabled=""
@@ -3279,6 +3342,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-2-edit"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-edit"
                                 id="rek-author-list-row-edit-2"
@@ -3303,6 +3367,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-2-delete"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-delete"
                                 disabled=""
@@ -3387,6 +3452,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Move item up the order"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-3-move-up"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-3-move-up"
                                 disabled=""
@@ -3409,6 +3475,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-3-edit"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-3-edit"
                                 id="rek-author-list-row-edit-3"
@@ -3433,6 +3500,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="rek-author-list-row-3-delete"
                                 data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-3-delete"
                                 disabled=""
@@ -3492,6 +3560,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               </div>
               <div
                 class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-notes-content"
                 data-testid="standard-card-notes-content"
                 id="standard-card-notes-content"
               >
@@ -3516,6 +3585,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       aria-invalid="false"
                       aria-label="Notes for this work"
                       class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
+                      data-analyticsid="comments-input"
                       data-testid="comments-input"
                       id="comments-input"
                       label="Notes for this work"
