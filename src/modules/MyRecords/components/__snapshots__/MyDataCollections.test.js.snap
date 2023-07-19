@@ -1,858 +1,1475 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`myDatasets test renders active filters 1`] = `
-<StandardPage
-  title="My research data"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
+exports[`myDatasets test gets publications when user clicks back and state is not set 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        text={
-          <div>
-            We were unable to find any results. You may be able to
-             
-            <a
-              href="/data-collections/add"
-            >
-              add a missing dataset
-            </a>
-            .
-          </div>
-        }
-        title="No datasets found"
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-114 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <div>
-          We were unable to find any results. You may be able to
-           
-          <a
-            href="/data-collections/add"
+        My research data
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-113 css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-no-datasets-found"
+            id="standard-card-no-datasets-found"
           >
-            add a missing dataset
-          </a>
-          .
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-no-datasets-found-header"
+                  id="standard-card-no-datasets-found-header"
+                >
+                  No datasets found
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-no-datasets-found-content"
+              data-testid="standard-card-no-datasets-found-content"
+              id="standard-card-no-datasets-found-content"
+            >
+              <div>
+                We were unable to find any results. You may be able to
+                 
+                <a
+                  href="/data-collections/add"
+                >
+                  add a missing dataset
+                </a>
+                .
+              </div>
+            </div>
+          </div>
         </div>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`myDatasets test gets publications when user clicks back and state is set 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-105 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
+      >
+        My research data
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-104 css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-107 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-no-datasets-found"
+            id="standard-card-no-datasets-found"
+          >
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-112 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-no-datasets-found-header"
+                  id="standard-card-no-datasets-found-header"
+                >
+                  No datasets found
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-no-datasets-found-content"
+              data-testid="standard-card-no-datasets-found-content"
+              id="standard-card-no-datasets-found-content"
+            >
+              <div>
+                We were unable to find any results. You may be able to
+                 
+                <a
+                  href="/data-collections/add"
+                >
+                  add a missing dataset
+                </a>
+                .
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`myDatasets test renders active filters 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-96 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
+      >
+        My research data
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-95 css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-98 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-no-datasets-found"
+            id="standard-card-no-datasets-found"
+          >
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-103 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-no-datasets-found-header"
+                  id="standard-card-no-datasets-found-header"
+                >
+                  No datasets found
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-no-datasets-found-content"
+              data-testid="standard-card-no-datasets-found-content"
+              id="standard-card-no-datasets-found-content"
+            >
+              <div>
+                We were unable to find any results. You may be able to
+                 
+                <a
+                  href="/data-collections/add"
+                >
+                  add a missing dataset
+                </a>
+                .
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`myDatasets test renders list of publications no facets 1`] = `
-<StandardPage
-  title="My research data"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      md={9}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        noHeader={true}
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-17 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <span>
-          Displaying works 1 to 2 of 2 total works. 
-        </span>
-        <ForwardRef(Grid)
-          container={true}
-          spacing={2}
+        My research data
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-16 css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
         >
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-19 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card"
+            id="standard-card"
           >
-            <span>
-              Add to this list by 
-              <a
-                href="/data-collections/add"
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-content"
+              data-testid="standard-card-content"
+              id="standard-card-content"
+            >
+              <span>
+                Displaying works 1 to 2 of 2 total works. 
+              </span>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
-                adding a missing dataset
-              </a>
-              .
-            </span>
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <PublicationsListSorting
-              bulkExportSize={1000}
-              exportData={Object {}}
-              initPageLength={20}
-              onExportPublications={[Function]}
-              onPageSizeChanged={[Function]}
-              onSortByChanged={[Function]}
-              pageSize={20}
-              pagingData={
-                Object {
-                  "current_page": 1,
-                  "from": 1,
-                  "per_page": 20,
-                  "to": 2,
-                  "total": 2,
-                }
-              }
-              showDisplayAs={false}
-              sortBy="published_date"
-              sortDirection="Desc"
-              sortingData={
-                Object {
-                  "bulkExportConfirmation": Object {
-                    "confirmButtonLabel": "Close",
-                    "confirmationMessage": <span
-                      style={
-                        Object {
-                          "display": "block",
-                          "margin": "1em 0",
-                        }
-                      }
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <span>
+                    Add to this list by 
+                    <a
+                      href="/data-collections/add"
                     >
-                      Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
-                    </span>,
-                    "confirmationTitle": "Export queued successfully",
-                  },
-                  "displayRecordsAsLabel": "Display results",
-                  "exportOnlyLabel": "Export Only:",
-                  "pageSize": "Works per page",
-                  "recordsPerPage": Array [
-                    10,
-                    20,
-                    50,
-                    100,
-                  ],
-                  "sortBy": Array [
-                    Object {
-                      "label": "Published date",
-                      "value": "published_date",
-                    },
-                    Object {
-                      "label": "Search relevance",
-                      "value": "score",
-                    },
-                    Object {
-                      "label": "Title",
-                      "value": "title",
-                    },
-                    Object {
-                      "label": "Created date",
-                      "value": "created_date",
-                    },
-                    Object {
-                      "label": "Updated date",
-                      "value": "updated_date",
-                    },
-                    Object {
-                      "exclude": Array [
-                        "image-gallery",
-                      ],
-                      "label": "Altmetric score",
-                      "value": "altmetric_score",
-                    },
-                    Object {
-                      "exclude": Array [
-                        "image-gallery",
-                      ],
-                      "label": "Scopus citation count",
-                      "value": "scopus_citation_count",
-                    },
-                    Object {
-                      "exclude": Array [
-                        "image-gallery",
-                      ],
-                      "label": "Web of Science citation count",
-                      "value": "thomson_citation_count",
-                    },
-                  ],
-                  "sortDirection": Array [
-                    "Desc",
-                    "Asc",
-                  ],
-                  "sortDirectionLabel": "Sort order",
-                  "sortLabel": "Sort results by",
-                }
-              }
-              sortingDefaults={Object {}}
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(PublicationsListPaging)
-              disabled={false}
-              onPageChanged={[Function]}
-              pagingData={
-                Object {
-                  "current_page": 1,
-                  "from": 1,
-                  "per_page": 20,
-                  "to": 2,
-                  "total": 2,
-                }
-              }
-              pagingId="my-records-paging-top"
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ConfirmDialogBox)
-              hideCancelButton={true}
-              locale={
-                Object {
-                  "confirmButtonLabel": "Close",
-                  "confirmationMessage": <span
-                    style={
-                      Object {
-                        "display": "block",
-                        "margin": "1em 0",
-                      }
-                    }
+                      adding a missing dataset
+                    </a>
+                    .
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
                   >
-                    Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
-                  </span>,
-                  "confirmationTitle": "Export queued successfully",
-                }
-              }
-              onRef={[Function]}
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <Memo(PublicationsList)
-              publicationsList={
-                Array [
-                  1,
-                  2,
-                  3,
-                ]
-              }
-              showAdminActions={false}
-              showDefaultActions={true}
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(PublicationsListPaging)
-              disabled={false}
-              onPageChanged={[Function]}
-              pagingData={
-                Object {
-                  "current_page": 1,
-                  "from": 1,
-                  "per_page": 20,
-                  "to": 2,
-                  "total": 2,
-                }
-              }
-              pagingId="my-records-paging-bottom"
-            />
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="true"
+                        >
+                          Sort results by
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          data-testid="publication-list-sorting-sort-by"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-labelledby="sortBy"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            id="sortBy"
+                            role="button"
+                            tabindex="0"
+                          >
+                            Published date
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            tabindex="-1"
+                            value="published_date"
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="true"
+                        >
+                          Sort order
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          data-testid="publication-list-sorting-sort-order"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-labelledby="sortOrder"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            id="sortOrder"
+                            role="button"
+                            tabindex="0"
+                          >
+                            Desc
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            tabindex="-1"
+                            value="Desc"
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="true"
+                        >
+                          Works per page
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          data-testid="publication-list-sorting-page-size"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-labelledby="pageSize"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            id="pageSize"
+                            role="button"
+                            tabindex="0"
+                          >
+                            20
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            tabindex="-1"
+                            value="20"
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <div
+                    data-testid="my-records-paging-top"
+                    id="my-records-paging-top"
+                  />
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                />
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <div
+                    class="MuiBox-root css-0"
+                    data-testid="search-results-publications-list"
+                    id="search-results-publications-list"
+                  >
+                    <div
+                      class="publicationCitation"
+                    >
+                      <div
+                        data-testid="publication-citation-parent-UQ:1"
+                        id="publication-citation-parent-UQ:1"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                            >
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                                style="min-width: 1px;"
+                              >
+                                <h6
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-36 css-1uywuy6-MuiTypography-root"
+                                >
+                                  <a
+                                    href="/view/UQ:1"
+                                  >
+                                    1
+                                  </a>
+                                </h6>
+                              </div>
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-37 css-1idn90j-MuiGrid-root"
+                              >
+                                <div>
+                                  Citation display not available for 
+                                </div>
+                              </div>
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                              >
+                                <div
+                                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                                >
+                                  <div
+                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-38 css-1wrgmsj-MuiGrid-root"
+                                    style="flex-grow: 1;"
+                                  >
+                                    <div
+                                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                                    >
+                                      <div
+                                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                                      >
+                                        <a
+                                          aria-label="Full citation in Google scholar will open in a new window"
+                                          class="googleCitationCount CitationCountView-citationCount-46 makeStyles-externalLink-48 makeStyles-externalLink-50"
+                                          data-analyticsid="citation-count-link"
+                                          data-testid="citation-count-link"
+                                          href="https://scholar.google.com/scholar?q=intitle:1"
+                                          id="citation-count-link"
+                                          rel="noopener noreferrer"
+                                          tabindex="0"
+                                          target="_blank"
+                                          title="Full citation in Google scholar will open in a new window"
+                                        >
+                                          <span
+                                            class="fez-icon google large"
+                                          />
+                                        </a>
+                                        <span
+                                          class="noOaIcon"
+                                          data-testid="no-oa-icon"
+                                        />
+                                      </div>
+                                      <div
+                                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                      />
+                                      <div
+                                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-39 css-a5rdam-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                          />
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                          >
+                            <button
+                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                              data-testid="publication-action-UQ1-secondary"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Request Correction
+                              <span
+                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <hr
+                        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-35 css-9mgopn-MuiDivider-root"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <div
+                    data-testid="my-records-paging-bottom"
+                    id="my-records-paging-bottom"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`myDatasets test renders list of publications with facets 1`] = `
-<StandardPage
-  title="My research data"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      md={9}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        noHeader={true}
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-54 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <span>
-          Displaying works 1 to 2 of 2 total works. 
-        </span>
-        <ForwardRef(Grid)
-          container={true}
-          spacing={2}
+        My research data
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-53 css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
         >
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-56 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card"
+            id="standard-card"
           >
-            <span>
-              Add to this list by 
-              <a
-                href="/data-collections/add"
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-content"
+              data-testid="standard-card-content"
+              id="standard-card-content"
+            >
+              <span>
+                Displaying works 1 to 2 of 2 total works. 
+              </span>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
-                adding a missing dataset
-              </a>
-              .
-            </span>
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <PublicationsListSorting
-              bulkExportSize={1000}
-              exportData={Object {}}
-              initPageLength={20}
-              onExportPublications={[Function]}
-              onPageSizeChanged={[Function]}
-              onSortByChanged={[Function]}
-              pageSize={20}
-              pagingData={
-                Object {
-                  "current_page": 1,
-                  "from": 1,
-                  "per_page": 20,
-                  "to": 2,
-                  "total": 2,
-                }
-              }
-              showDisplayAs={false}
-              sortBy="published_date"
-              sortDirection="Desc"
-              sortingData={
-                Object {
-                  "bulkExportConfirmation": Object {
-                    "confirmButtonLabel": "Close",
-                    "confirmationMessage": <span
-                      style={
-                        Object {
-                          "display": "block",
-                          "margin": "1em 0",
-                        }
-                      }
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <span>
+                    Add to this list by 
+                    <a
+                      href="/data-collections/add"
                     >
-                      Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
-                    </span>,
-                    "confirmationTitle": "Export queued successfully",
-                  },
-                  "displayRecordsAsLabel": "Display results",
-                  "exportOnlyLabel": "Export Only:",
-                  "pageSize": "Works per page",
-                  "recordsPerPage": Array [
-                    10,
-                    20,
-                    50,
-                    100,
-                  ],
-                  "sortBy": Array [
-                    Object {
-                      "label": "Published date",
-                      "value": "published_date",
-                    },
-                    Object {
-                      "label": "Search relevance",
-                      "value": "score",
-                    },
-                    Object {
-                      "label": "Title",
-                      "value": "title",
-                    },
-                    Object {
-                      "label": "Created date",
-                      "value": "created_date",
-                    },
-                    Object {
-                      "label": "Updated date",
-                      "value": "updated_date",
-                    },
-                    Object {
-                      "exclude": Array [
-                        "image-gallery",
-                      ],
-                      "label": "Altmetric score",
-                      "value": "altmetric_score",
-                    },
-                    Object {
-                      "exclude": Array [
-                        "image-gallery",
-                      ],
-                      "label": "Scopus citation count",
-                      "value": "scopus_citation_count",
-                    },
-                    Object {
-                      "exclude": Array [
-                        "image-gallery",
-                      ],
-                      "label": "Web of Science citation count",
-                      "value": "thomson_citation_count",
-                    },
-                  ],
-                  "sortDirection": Array [
-                    "Desc",
-                    "Asc",
-                  ],
-                  "sortDirectionLabel": "Sort order",
-                  "sortLabel": "Sort results by",
-                }
-              }
-              sortingDefaults={Object {}}
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(PublicationsListPaging)
-              disabled={false}
-              onPageChanged={[Function]}
-              pagingData={
-                Object {
-                  "current_page": 1,
-                  "from": 1,
-                  "per_page": 20,
-                  "to": 2,
-                  "total": 2,
-                }
-              }
-              pagingId="my-records-paging-top"
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ConfirmDialogBox)
-              hideCancelButton={true}
-              locale={
-                Object {
-                  "confirmButtonLabel": "Close",
-                  "confirmationMessage": <span
-                    style={
-                      Object {
-                        "display": "block",
-                        "margin": "1em 0",
-                      }
-                    }
+                      adding a missing dataset
+                    </a>
+                    .
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
                   >
-                    Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
-                  </span>,
-                  "confirmationTitle": "Export queued successfully",
-                }
-              }
-              onRef={[Function]}
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="true"
+                        >
+                          Sort results by
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          data-testid="publication-list-sorting-sort-by"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-labelledby="sortBy"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            id="sortBy"
+                            role="button"
+                            tabindex="0"
+                          >
+                            Published date
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            tabindex="-1"
+                            value="published_date"
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="true"
+                        >
+                          Sort order
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          data-testid="publication-list-sorting-sort-order"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-labelledby="sortOrder"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            id="sortOrder"
+                            role="button"
+                            tabindex="0"
+                          >
+                            Desc
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            tabindex="-1"
+                            value="Desc"
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="true"
+                        >
+                          Works per page
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          data-testid="publication-list-sorting-page-size"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-labelledby="pageSize"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            id="pageSize"
+                            role="button"
+                            tabindex="0"
+                          >
+                            20
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            tabindex="-1"
+                            value="20"
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <div
+                    data-testid="my-records-paging-top"
+                    id="my-records-paging-top"
+                  />
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                />
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <div
+                    class="MuiBox-root css-0"
+                    data-testid="search-results-publications-list"
+                    id="search-results-publications-list"
+                  >
+                    <div
+                      class="publicationCitation"
+                    >
+                      <div
+                        data-testid="publication-citation-parent-UQ:1"
+                        id="publication-citation-parent-UQ:1"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                            >
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                                style="min-width: 1px;"
+                              >
+                                <h6
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-73 css-1uywuy6-MuiTypography-root"
+                                >
+                                  <a
+                                    href="/view/UQ:1"
+                                  >
+                                    1
+                                  </a>
+                                </h6>
+                              </div>
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-74 css-1idn90j-MuiGrid-root"
+                              >
+                                <div>
+                                  Citation display not available for 
+                                </div>
+                              </div>
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                              >
+                                <div
+                                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                                >
+                                  <div
+                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-75 css-1wrgmsj-MuiGrid-root"
+                                    style="flex-grow: 1;"
+                                  >
+                                    <div
+                                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                                    >
+                                      <div
+                                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                                      >
+                                        <a
+                                          aria-label="Full citation in Google scholar will open in a new window"
+                                          class="googleCitationCount CitationCountView-citationCount-83 makeStyles-externalLink-85 makeStyles-externalLink-87"
+                                          data-analyticsid="citation-count-link"
+                                          data-testid="citation-count-link"
+                                          href="https://scholar.google.com/scholar?q=intitle:1"
+                                          id="citation-count-link"
+                                          rel="noopener noreferrer"
+                                          tabindex="0"
+                                          target="_blank"
+                                          title="Full citation in Google scholar will open in a new window"
+                                        >
+                                          <span
+                                            class="fez-icon google large"
+                                          />
+                                        </a>
+                                        <span
+                                          class="noOaIcon"
+                                          data-testid="no-oa-icon"
+                                        />
+                                      </div>
+                                      <div
+                                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                      />
+                                      <div
+                                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-76 css-a5rdam-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                          />
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                          >
+                            <button
+                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                              data-testid="publication-action-UQ1-secondary"
+                              tabindex="0"
+                              type="button"
+                            >
+                              Request Correction
+                              <span
+                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <hr
+                        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-72 css-9mgopn-MuiDivider-root"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <div
+                    data-testid="my-records-paging-bottom"
+                    id="my-records-paging-bottom"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-17ss7la-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
-            <Memo(PublicationsList)
-              publicationsList={
-                Array [
-                  1,
-                  2,
-                  3,
-                ]
-              }
-              showAdminActions={false}
-              showDefaultActions={true}
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(PublicationsListPaging)
-              disabled={false}
-              onPageChanged={[Function]}
-              pagingData={
-                Object {
-                  "current_page": 1,
-                  "from": 1,
-                  "per_page": 20,
-                  "to": 2,
-                  "total": 2,
-                }
-              }
-              pagingId="my-records-paging-bottom"
-            />
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sx={
-        Object {
-          "display": Object {
-            "md": "block",
-            "xs": "none",
-          },
-        }
-      }
-    >
-      <WithStyles(StandardRighthandCard)
-        title="Refine results"
-      >
-        <Memo(FacetsFilter)
-          activeFacets={
-            Object {
-              "filters": Object {},
-              "ranges": Object {},
-            }
-          }
-          excludeFacetsList={
-            Array [
-              "Scopus document type",
-              "Subtype",
-              "Year published",
-              "Display type",
-            ]
-          }
-          facetsData={
-            Object {
-              "Display type": Object {
-                "buckets": Array [
-                  Object {
-                    "doc_count": 95,
-                    "key": 179,
-                  },
-                  Object {
-                    "doc_count": 34,
-                    "key": 130,
-                  },
-                  Object {
-                    "doc_count": 2,
-                    "key": 177,
-                  },
-                  Object {
-                    "doc_count": 2,
-                    "key": 183,
-                  },
-                  Object {
-                    "doc_count": 1,
-                    "key": 174,
-                  },
-                ],
-                "doc_count_error_upper_bound": 0,
-                "sum_other_doc_count": 3,
-              },
-              "Keywords": Object {
-                "buckets": Array [
-                  Object {
-                    "doc_count": 15,
-                    "key": "Brca1",
-                  },
-                  Object {
-                    "doc_count": 15,
-                    "key": "Oncology",
-                  },
-                  Object {
-                    "doc_count": 13,
-                    "key": "Breast cancer",
-                  },
-                  Object {
-                    "doc_count": 12,
-                    "key": "Genetics & Heredity",
-                  },
-                  Object {
-                    "doc_count": 10,
-                    "key": "Biochemistry & Molecular Biology",
-                  },
-                ],
-                "doc_count_error_upper_bound": 0,
-                "sum_other_doc_count": 641,
-              },
-            }
-          }
-          isMyDataSetPage={true}
-          lookupFacetsList={
-            Object {
-              "Collection": "Collection (lookup)",
-              "Subject": "Subject (lookup)",
-            }
-          }
-          onFacetsChanged={[Function]}
-          renameFacetsList={Object {}}
-          showOpenAccessFilter={true}
-        />
-      </WithStyles(StandardRighthandCard)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-90 css-1vd824g-MuiGrid-root"
+            >
+              <div
+                class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+              >
+                Refine results
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <hr
+                class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-92 css-9mgopn-MuiDivider-root"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="facetsFilter"
+                data-testid="facets-filter"
+                id="facets-filter"
+              >
+                <nav
+                  class="MuiList-root MuiList-padding MuiList-dense css-h4y409-MuiList-root"
+                >
+                  <div
+                    aria-expanded="false"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-93 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
+                    data-testid="clickable-facet-category-keywords"
+                    id="clickable-facet-category-keywords"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-94 css-fjqef3-MuiTypography-root"
+                        data-testid="facet-category-keywords"
+                        id="facet-category-keywords"
+                      >
+                        Keywords
+                      </p>
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="expand-more-facet-category-keywords"
+                      focusable="false"
+                      id="expand-more-facet-category-keywords"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </div>
+                  <div
+                    aria-expanded="false"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-93 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
+                    data-testid="clickable-facet-category-date-range"
+                    id="clickable-facet-category-date-range"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-94 css-fjqef3-MuiTypography-root"
+                        data-testid="facet-category-date-range"
+                        id="facet-category-date-range"
+                      >
+                        Published year range
+                      </p>
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="expand-more-facet-category-date-range"
+                      focusable="false"
+                      id="expand-more-facet-category-date-range"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </div>
+                  <div
+                    aria-expanded="false"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-93 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
+                    data-testid="clickable-facet-category-open-access"
+                    id="clickable-facet-category-open-access"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-94 css-fjqef3-MuiTypography-root"
+                        data-testid="facet-category-open-access"
+                        id="facet-category-open-access"
+                      >
+                        Open access status
+                      </p>
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="expand-more-facet-category-open-access"
+                      focusable="false"
+                      id="expand-more-facet-category-open-access"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
-exports[`myDatasets test renders loading screen while loading account data 1`] = `""`;
+exports[`myDatasets test renders loading screen while loading account data 1`] = `<div />`;
 
 exports[`myDatasets test renders loading screen while loading publications  1`] = `
-<StandardPage
-  title="My research data"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        >
+          <h2
+            class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+            data-analyticsid="page-title"
+            data-testid="page-title"
+            id="page-title"
+          >
+            My research data
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        />
+        <div
+          class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                style="padding: 8px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                  />
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                    style="text-align: center;"
+                  >
+                    <span
+                      aria-label="Loading"
+                      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                      role="progressbar"
+                      style="width: 18px; height: 18px;"
+                    >
+                      <svg
+                        class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                        viewBox="22 22 44 44"
+                      >
+                        <circle
+                          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                          cx="44"
+                          cy="44"
+                          fill="none"
+                          r="21"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                    style="text-align: center;"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                      style="font-size: 1.33rem;"
+                    >
+                      Searching for your datasets
+                    </span>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
     >
-      <WithStyles(InlineLoader)
-        message="Searching for your datasets"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+          data-analyticsid="page-title"
+          data-testid="page-title"
+          id="page-title"
+        >
+          My research data
+        </h2>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       />
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+      <div
+        class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              style="padding: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                />
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  style="text-align: center;"
+                >
+                  <span
+                    aria-label="Loading"
+                    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                    role="progressbar"
+                    style="width: 18px; height: 18px;"
+                  >
+                    <svg
+                      class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                      viewBox="22 22 44 44"
+                    >
+                      <circle
+                        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                        cx="44"
+                        cy="44"
+                        fill="none"
+                        r="21"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  style="text-align: center;"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                    style="font-size: 1.33rem;"
+                  >
+                    Searching for your datasets
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`myDatasets test renders loading screen while loading publications while filtering 1`] = `
-<StandardPage
-  title="My research data"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      md={9}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        noHeader={true}
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-5 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Grid)
-          container={true}
-          spacing={2}
+        My research data
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-4 css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <span>
-              Add to this list by 
-              <a
-                href="/data-collections/add"
-              >
-                adding a missing dataset
-              </a>
-              .
-            </span>
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <PublicationsListSorting
-              bulkExportSize={1000}
-              disabled={true}
-              exportData={Object {}}
-              initPageLength={20}
-              onExportPublications={[Function]}
-              onPageSizeChanged={[Function]}
-              onSortByChanged={[Function]}
-              pageSize={20}
-              pagingData={Object {}}
-              showDisplayAs={false}
-              sortBy="published_date"
-              sortDirection="Desc"
-              sortingData={
-                Object {
-                  "bulkExportConfirmation": Object {
-                    "confirmButtonLabel": "Close",
-                    "confirmationMessage": <span
-                      style={
-                        Object {
-                          "display": "block",
-                          "margin": "1em 0",
-                        }
-                      }
-                    >
-                      Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
-                    </span>,
-                    "confirmationTitle": "Export queued successfully",
-                  },
-                  "displayRecordsAsLabel": "Display results",
-                  "exportOnlyLabel": "Export Only:",
-                  "pageSize": "Works per page",
-                  "recordsPerPage": Array [
-                    10,
-                    20,
-                    50,
-                    100,
-                  ],
-                  "sortBy": Array [
-                    Object {
-                      "label": "Published date",
-                      "value": "published_date",
-                    },
-                    Object {
-                      "label": "Search relevance",
-                      "value": "score",
-                    },
-                    Object {
-                      "label": "Title",
-                      "value": "title",
-                    },
-                    Object {
-                      "label": "Created date",
-                      "value": "created_date",
-                    },
-                    Object {
-                      "label": "Updated date",
-                      "value": "updated_date",
-                    },
-                    Object {
-                      "exclude": Array [
-                        "image-gallery",
-                      ],
-                      "label": "Altmetric score",
-                      "value": "altmetric_score",
-                    },
-                    Object {
-                      "exclude": Array [
-                        "image-gallery",
-                      ],
-                      "label": "Scopus citation count",
-                      "value": "scopus_citation_count",
-                    },
-                    Object {
-                      "exclude": Array [
-                        "image-gallery",
-                      ],
-                      "label": "Web of Science citation count",
-                      "value": "thomson_citation_count",
-                    },
-                  ],
-                  "sortDirection": Array [
-                    "Desc",
-                    "Asc",
-                  ],
-                  "sortDirectionLabel": "Sort order",
-                  "sortLabel": "Sort results by",
-                }
-              }
-              sortingDefaults={Object {}}
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(PublicationsListPaging)
-              disabled={true}
-              loading={true}
-              onPageChanged={[Function]}
-              pagingData={Object {}}
-              pagingId="my-records-paging-top"
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(ConfirmDialogBox)
-              hideCancelButton={true}
-              locale={
-                Object {
-                  "confirmButtonLabel": "Close",
-                  "confirmationMessage": <span
-                    style={
-                      Object {
-                        "display": "block",
-                        "margin": "1em 0",
-                      }
-                    }
-                  >
-                    Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
-                  </span>,
-                  "confirmationTitle": "Export queued successfully",
-                }
-              }
-              onRef={[Function]}
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
+          <div
+            style="padding: 8px;"
           >
             <div
-              className="is-centered"
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
             >
-              <WithStyles(InlineLoader)
-                message="Retrieving your datasets"
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+              />
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                style="text-align: center;"
+              >
+                <span
+                  aria-label="Loading"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                  role="progressbar"
+                  style="width: 18px; height: 18px;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="21"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                style="text-align: center;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                  style="font-size: 1.33rem;"
+                >
+                  Searching for your datasets
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
               />
             </div>
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(PublicationsListPaging)
-              disabled={true}
-              loading={true}
-              onPageChanged={[Function]}
-              pagingData={Object {}}
-              pagingId="my-records-paging-bottom"
-            />
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`myDatasets test renders no results 1`] = `
-<StandardPage
-  title="My research data"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        text={
-          <div>
-            We were unable to find any results. You may be able to
-             
-            <a
-              href="/data-collections/add"
-            >
-              add a missing dataset
-            </a>
-            .
-          </div>
-        }
-        title="No datasets found"
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-8 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <div>
-          We were unable to find any results. You may be able to
-           
-          <a
-            href="/data-collections/add"
+        My research data
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-7 css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-10 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-no-datasets-found"
+            id="standard-card-no-datasets-found"
           >
-            add a missing dataset
-          </a>
-          .
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-15 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-no-datasets-found-header"
+                  id="standard-card-no-datasets-found-header"
+                >
+                  No datasets found
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-no-datasets-found-content"
+              data-testid="standard-card-no-datasets-found-content"
+              id="standard-card-no-datasets-found-content"
+            >
+              <div>
+                We were unable to find any results. You may be able to
+                 
+                <a
+                  href="/data-collections/add"
+                >
+                  add a missing dataset
+                </a>
+                .
+              </div>
+            </div>
+          </div>
         </div>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+      </div>
+    </div>
+  </div>
+</div>
 `;
