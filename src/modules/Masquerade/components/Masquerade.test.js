@@ -1,4 +1,6 @@
+import React from 'react';
 import Masquerade from './Masquerade';
+import { render, WithReduxStore, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -10,78 +12,64 @@ function setup(testProps = {}) {
         account: {},
         ...testProps,
     };
-    return getElement(Masquerade, props);
+    return render(
+        <WithReduxStore>
+            <Masquerade {...props} />
+        </WithReduxStore>,
+    );
 }
 
 beforeAll(() => {
     delete global.window.location;
-    global.window.location = { href: jest.fn(), assign: jest.fn() };
+    global.window.location = { href: '', replace: jest.fn(), assign: jest.fn() };
 });
 
 describe('Component Masquerade', () => {
+    it('Should render form as expected', () => {
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
+    });
+
+    it('Should render readonly description', () => {
+        const props = {
+            account: { canMasqueradeType: 'readonly' },
+        };
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should correctly set state on username change', () => {
-        const wrapper = setup();
+        const { getByLabelText } = setup();
 
-        wrapper.instance()._usernameChanged({
-            target: {
-                value: 'uqtest',
-            },
-        });
-
-        wrapper.update();
-        expect(wrapper.state('userName')).toEqual('uqtest');
+        fireEvent.change(getByLabelText(/Enter a UQ staff or student username/i), { target: { value: 'uqtest' } });
+        expect(getByLabelText(/Enter a UQ staff or student username/i).value).toEqual('uqtest');
     });
 
     it('should not masquerade if Esc key is pressed', () => {
-        const wrapper = setup();
-        wrapper.instance()._usernameChanged({
-            target: {
-                value: 'uqtest',
-            },
-        });
-        wrapper.update();
+        const { getByTestId, getByLabelText } = setup();
+        fireEvent.change(getByLabelText(/Enter a UQ staff or student username/i), { target: { value: 'uqtest' } });
+        fireEvent.keyPress(getByTestId('submit-masquerade'), { key: 'Escape', keyCode: 27 });
 
-        wrapper.instance()._masqueradeAs({
-            key: 'Esc',
-        });
-
-        expect(wrapper.state('loading')).toBeFalsy();
-    });
-
-    it('should not masquerade if Enter is pressed but username length is 0', () => {
-        const wrapper = setup();
-        wrapper.instance()._masqueradeAs({
-            key: 'Enter',
-        });
-        expect(wrapper.state('loading')).toBeFalsy();
+        expect(getByTestId('submit-masquerade')).toBeEnabled();
     });
 
     it('should masquerade if Enter is pressed and username is set', () => {
-        const wrapper = setup();
-        wrapper.instance()._usernameChanged({
-            target: {
-                value: 'uqtest',
-            },
-        });
-        wrapper.update();
+        const { getByTestId, getByLabelText } = setup();
+        fireEvent.change(getByLabelText(/Enter a UQ staff or student username/i), { target: { value: 'uqtest' } });
+        fireEvent.keyPress(getByTestId('submit-masquerade'), { key: 'Enter', keyCode: 13 });
 
-        wrapper.instance()._masqueradeAs({
-            key: 'Enter',
-        });
-        expect(wrapper.state('loading')).toBeTruthy();
+        expect(getByTestId('submit-masquerade')).toBeDisabled();
     });
 
     it('should not masquerade if Enter is pressed without entering username', () => {
-        const wrapper = setup();
-        wrapper.instance()._masqueradeAs({
-            key: 'Enter',
-        });
-        expect(wrapper.state('loading')).toBeFalsy();
+        const { getByTestId } = setup();
+        fireEvent.keyPress(getByTestId('submit-masquerade'), { key: 'Enter', keyCode: 13 });
+        expect(getByTestId('submit-masquerade')).toBeEnabled();
     });
 
     it('should not masquerade if button is pressed without entering username', () => {
-        const wrapper = setup();
-        wrapper.instance()._masqueradeAs({ type: 'Click' });
-        expect(wrapper.state('loading')).toBeFalsy();
+        const { getByTestId } = setup();
+        fireEvent.click(getByTestId('submit-masquerade'));
+        expect(getByTestId('submit-masquerade')).toBeEnabled();
     });
 });

@@ -69,11 +69,13 @@ export default class Masquerade extends PureComponent {
                                 variant="contained"
                                 id="submitMasquerade"
                                 data-analyticsid="submitMasquerade"
+                                data-testid="submit-masquerade"
                                 fullWidth
                                 color="primary"
                                 children={txt.labels.submit}
                                 disabled={this.state.loading}
                                 onClick={this._masqueradeAs}
+                                onKeyPress={this._masqueradeAs}
                             />
                         </Grid>
                     </Grid>
