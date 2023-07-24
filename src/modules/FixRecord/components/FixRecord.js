@@ -127,7 +127,7 @@ export default class FixRecord extends PureComponent {
     _setSuccessConfirmation = ref => {
         this.successConfirmationBox = ref;
     };
-
+    /* istanbul ignore next */
     _handleDefaultSubmit = event => {
         event && event.preventDefault();
     };
@@ -320,6 +320,7 @@ export default class FixRecord extends PureComponent {
                                         onClick={this.props.handleSubmit}
                                         disabled={this.props.submitting || this.props.disableSubmit}
                                         id="fixSubmit"
+                                        data-testid="fix-submit"
                                         data-analyticsid="fixSubmit"
                                     />
                                 </Grid>
