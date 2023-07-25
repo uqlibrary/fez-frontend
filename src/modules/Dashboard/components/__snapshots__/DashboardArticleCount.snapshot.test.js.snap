@@ -1,30 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Article Count test Render the authors article counts as expected for a UQ researcher) 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  direction="column"
->
-  <ForwardRef(Grid)
-    item={true}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
   >
-    313
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-  >
-    eSpace works from
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-  >
-    1975
-    <span>
-       to 
-    </span>
-    2018
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      313
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      eSpace works from
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      1975
+      <span>
+         to 
+      </span>
+      2018
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Dashboard Article Count test should have a style generator 1`] = `
@@ -57,8 +58,9 @@ Object {
 `;
 
 exports[`Dashboard Article Count test should not render anything if any data is missing 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  direction="column"
-/>
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+  />
+</div>
 `;

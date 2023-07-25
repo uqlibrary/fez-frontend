@@ -86,6 +86,7 @@ export const renderButton = args => {
             {isInternal && (
                 <a
                     id={item}
+                    data-testid={item}
                     tabIndex={0}
                     onClick={navHandler}
                     className={classes.researcherIDlink}

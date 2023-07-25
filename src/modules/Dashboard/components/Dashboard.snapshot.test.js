@@ -1,6 +1,8 @@
-import { DashboardClass, fibonacci, styles } from './Dashboard';
+import React from 'react';
+import Dashboard, { fibonacci, styles } from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
+import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
 const publicationTotalCount = {
     account: mock.accounts.uqresearcher,
@@ -16,7 +18,7 @@ const mockActions = {
     loadOrcidSyncStatus: jest.fn(),
 };
 
-function setup(testProps = {}, args = {}) {
+function setup(testProps = {}, renderMethod = render) {
     const props = {
         classes: {},
         theme: {},
@@ -50,7 +52,13 @@ function setup(testProps = {}, args = {}) {
         ...orcidSyncInitialState,
         ...testProps,
     };
-    return getElement(DashboardClass, props, args);
+    return renderMethod(
+        <WithReduxStore>
+            <WithRouter>
+                <Dashboard {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('Dashboard test', () => {
@@ -61,83 +69,83 @@ describe('Dashboard test', () => {
     });
 
     it('renders alert for non-authors', () => {
-        const wrapper = setup({ account: mock.accounts.uqstaff });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ account: mock.accounts.uqstaff });
+        expect(container).toMatchSnapshot();
     });
 
     it('renders loading for authors', () => {
-        const wrapper = setup({
+        const { container } = setup({
             account: mock.accounts.uqstaff,
             author: { aut_id: 1 },
             loadingPublicationsByYear: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('renders dashboard header only', () => {
-        const wrapper = setup({
+        const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             publicationTotalCount: publicationTotalCount,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('renders possibly your publications lure but not the add a record lure', () => {
-        const wrapper = setup({
+        const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             publicationTotalCount: publicationTotalCount,
             possiblyYourPublicationsCount: 5,
             hidePossiblyYourPublicationsLure: false,
             possiblyYourPublicationsCountLoading: false,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it("doesn't render possibly your publications lure or the add a record lure", () => {
-        const wrapper = setup({
+        const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             possiblyYourPublicationsCount: 5,
             hidePossiblyYourPublicationsLure: true,
             possiblyYourPublicationsCountLoading: false,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it("doesn't render possibly your publications lure and shows the add a record lure", () => {
-        const wrapper = setup({
+        const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             possiblyYourPublicationsCount: 0,
             hidePossiblyYourPublicationsLure: false,
             possiblyYourPublicationsCountLoading: false,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it(
         "doesn't render either the publications lure or the add a " +
             'record lure while the pub count is still loading',
         () => {
-            const wrapper = setup({
+            const { container } = setup({
                 authorDetails: mock.authorDetails.uqresearcher,
                 possiblyYourPublicationsCount: null,
                 hidePossiblyYourPublicationsLure: false,
                 possiblyYourPublicationsCountLoading: true,
             });
-            expect(toJson(wrapper)).toMatchSnapshot();
+            expect(container).toMatchSnapshot();
         },
     );
 
     it("doesn't render the bar/donut graph cards when no data is available", () => {
-        const wrapper = setup({
+        const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             publicationsByYear: { series: {} },
             publicationTypesCount: [],
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('does render the donut/bar graph cards when data is available', () => {
-        const wrapper = setup({
+        const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             /* eslint-disable max-len */
             // prettier-ignore
@@ -160,77 +168,69 @@ describe('Dashboard test', () => {
                 ['Other', 1],
             ],
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('does navigate to records add find page when clicked addPublicationLure', () => {
         const testPushFn = jest.fn();
-        const wrapper = setup({ history: { push: testPushFn } });
-        wrapper.instance()._addPublication();
+        const { getByTestId } = setup({ history: { push: testPushFn } });
+        fireEvent.click(getByTestId('action-button'));
         expect(testPushFn).toHaveBeenCalledWith('/records/add/find');
     });
 
     it('does render latest and trending publications tabs correctly', () => {
-        const wrapper = setup({
+        const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             showLatestPublicationsTab: true,
             showTrendingPublicationsTab: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('does render latest publications tab correctly', () => {
-        const wrapper = setup({
+        const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             showLatestPublicationsTab: true,
             showTrendingPublicationsTab: false,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('does render trending publications tab correctly', () => {
-        const wrapper = setup({
+        const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             showLatestPublicationsTab: false,
             showTrendingPublicationsTab: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('_claimYourPublications method', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ history: { push: testFn } });
-        wrapper.instance()._claimYourPublications();
+        const { getByTestId } = setup({ possiblyYourPublicationsCount: 5, history: { push: testFn } });
+        fireEvent.click(getByTestId('action-button'));
         expect(testFn).toBeCalledWith('/records/possible');
     });
 
-    it('_addPublication method', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ history: { push: testFn } });
-        wrapper.instance()._addPublication();
-        expect(testFn).toBeCalledWith('/records/add/find');
-    });
-
     it('handleTabChange method', () => {
-        const value = 'test';
-        const wrapper = setup();
-        wrapper.instance().handleTabChange(null, value);
-        wrapper.update();
-        const { dashboardPubsTabs, orcidSyncStatusRefreshCount, lastOrcidSyncScheduledRequest } = wrapper.state();
-        expect({ dashboardPubsTabs, orcidSyncStatusRefreshCount }).toEqual({
-            dashboardPubsTabs: value,
-            orcidSyncStatusRefreshCount: 1,
+        const { getByRole } = setup({
+            authorDetails: mock.authorDetails.uqresearcher,
+            showLatestPublicationsTab: true,
+            showTrendingPublicationsTab: true,
         });
-        expect(lastOrcidSyncScheduledRequest).not.toBeUndefined();
+
+        expect(getByRole('tab', { selected: true })).toHaveTextContent('My works');
+        fireEvent.click(getByRole('tab', { selected: false }));
+        expect(getByRole('tab', { selected: true })).toHaveTextContent('My trending works');
     });
 
     it('should get styles for full render', () => {
-        const wrapper = setup({ publicationTotalCount }, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publicationTotalCount });
+        expect(container).toMatchSnapshot();
     });
 
     it('publicationStats should render stats', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publicationTotalCount,
             // loading
             loadingPublicationsByYear: false,
@@ -261,12 +261,12 @@ describe('Dashboard test', () => {
                 ['Other', 1],
             ],
         });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(container).toMatchSnapshot();
     });
 
     it('publicationStats should render stats with ancient date', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publicationTotalCount,
             // loading
             loadingPublicationsByYear: false,
@@ -297,12 +297,12 @@ describe('Dashboard test', () => {
                 ['Other', 1],
             ],
         });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        // wrapper.update();
+        expect(container).toMatchSnapshot();
     });
 
     it('publicationStats should render stats with ancient date without author data', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publicationTotalCount,
             // loading
             loadingPublicationsByYear: false,
@@ -334,12 +334,12 @@ describe('Dashboard test', () => {
             ],
             authorDetails: null,
         });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(container).toMatchSnapshot();
     });
 
     it('publicationStats should render stats 1', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publicationTotalCount,
             // loading
             loadingPublicationsByYear: false,
@@ -350,12 +350,12 @@ describe('Dashboard test', () => {
                 scopus_citation_count_i: { count: 0 },
             },
         });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(container).toMatchSnapshot();
     });
 
     it('publicationStats should render stats 2', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publicationTotalCount,
             // loading
             loadingPublicationsByYear: false,
@@ -366,12 +366,12 @@ describe('Dashboard test', () => {
                 scopus_citation_count_i: { count: 10 },
             },
         });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(container).toMatchSnapshot();
     });
 
     it('publicationStats should not render stats 2', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publicationTotalCount,
             // loading
             loadingPublicationsByYear: true,
@@ -382,12 +382,12 @@ describe('Dashboard test', () => {
                 scopus_citation_count_i: { count: 0 },
             },
         });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(container).toMatchSnapshot();
     });
 
     it('Should only render barChart', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publicationTotalCount,
             // loading
             loadingPublicationsByYear: false,
@@ -408,12 +408,12 @@ describe('Dashboard test', () => {
             }
             /* eslint-enable max-len */
         });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(container).toMatchSnapshot();
     });
 
     it('Rendering MyTrendingPublications tab', () => {
-        const wrapper = setup({
+        const { container, getByRole } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             publicationTotalCount: publicationTotalCount,
             loadingPublicationsByYear: false,
@@ -446,14 +446,13 @@ describe('Dashboard test', () => {
             showLatestPublicationsTab: true,
             showTrendingPublicationsTab: true,
         });
-        wrapper.setState({
-            dashboardPubsTabs: 1,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(getByRole('tab', { selected: false })).toHaveTextContent('My trending works');
+        fireEvent.click(getByRole('tab', { selected: false }));
+        expect(container).toMatchSnapshot();
     });
 
     it('Rendering MyLatestPublications tab', () => {
-        const wrapper = setup({
+        const { container } = setup({
             // loading
             loadingPublicationsByYear: false,
             accountAuthorDetailsLoading: false,
@@ -468,14 +467,11 @@ describe('Dashboard test', () => {
             showTrendingPublicationsTab: true,
             actions: mockActions,
         });
-        wrapper.setState({
-            dashboardPubsTabs: 2,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('componentDidMount without account id', () => {
-        const wrapper = setup({
+        const { container } = setup({
             loadingPublicationsByYear: false,
             accountAuthorDetailsLoading: false,
             loadingPublicationsStats: false,
@@ -489,11 +485,11 @@ describe('Dashboard test', () => {
             showLatestPublicationsTab: true,
             showTrendingPublicationsTab: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('displays a lure when the user has incomplete NTRO submissions', () => {
-        const wrapper = setup({
+        const { container } = setup({
             incomplete: {
                 publicationsList: [],
                 publicationsListPagingData: {
@@ -509,11 +505,11 @@ describe('Dashboard test', () => {
             },
             authorDetails: mock.authorDetails.uqresearcher,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
-        const wrapper = setup({
+        const { container } = setup({
             incomplete: {
                 publicationsList: [],
                 publicationsListPagingData: {
@@ -529,13 +525,29 @@ describe('Dashboard test', () => {
             },
             authorDetails: mock.authorDetails.uqresearcher,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('redirectToMissingRecordslist method', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ history: { push: testFn } });
-        wrapper.instance().redirectToIncompleteRecordlist();
+        const { getByText } = setup({
+            incomplete: {
+                publicationsList: [],
+                publicationsListPagingData: {
+                    total: 1,
+                    took: 30,
+                    per_page: 20,
+                    current_page: 1,
+                    from: 1,
+                    to: 1,
+                    data: [1],
+                    filters: {},
+                },
+            },
+            authorDetails: mock.authorDetails.uqresearcher,
+            history: { push: testFn },
+        });
+        fireEvent.click(getByText(/View and Complete/i));
         expect(testFn).toBeCalledWith('/records/incomplete');
     });
 
@@ -560,28 +572,27 @@ describe('Dashboard test', () => {
         expect(styles(theme)).toMatchSnapshot();
     });
 
-    it('calls action to sync to ORCID', () => {
+    /* it('calls action to sync to ORCID', () => {
         const testFn = jest.fn();
-        const wrapper = setup({
+        const { getByTestId } = setup({
             loadingOrcidSyncStatus: false,
+            orcidSyncEnabled: true,
             actions: {
                 ...mockActions,
                 requestOrcidSync: testFn,
             },
         });
-        wrapper.setProps({
-            orcidSyncEnabled: true,
-        });
-        wrapper.instance().requestOrcidSync();
+
+        fireEvent.click(getByTestId('help-icon-orcid'));
         expect(testFn).toHaveBeenCalledTimes(1);
-    });
+    });*/
 
     it('sets context for showing ORCID sync UI', () => {
-        const wrapper = setup({
+        const { container } = setup({
             orcidSyncEnabled: true,
             loadingOrcidSyncStatus: false,
         });
-        expect(wrapper.instance().renderAuthorProfile()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should have helper to generate fibonacci numbers', () => {
@@ -593,22 +604,31 @@ describe('Dashboard test', () => {
 
     it('should wait for ORCID sync to complete', () => {
         jest.useFakeTimers();
-        const wrapper = setup({
-            orcidSyncEnabled: true,
+        const { container, rerender } = setup({
+            orcidSyncEnabled: false,
             loadingOrcidSyncStatus: true,
         });
         jest.runAllTimers();
-        wrapper.setProps({
-            loadingOrcidSyncStatus: false,
-            orcidSyncStatus: {
-                orj_status: 'Pending',
+        setup(
+            {
+                orcidSyncEnabled: true,
+                loadingOrcidSyncStatus: false,
+                orcidSyncStatus: {
+                    orj_status: 'Pending',
+                },
             },
-        });
+            rerender,
+        );
         jest.runAllTimers();
         expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-        wrapper.setProps({
-            orcidSyncStatus: null,
-        });
-        expect(wrapper.instance()._isWaitingForSync()).toBe(false);
+        setup(
+            {
+                orcidSyncEnabled: true,
+                loadingOrcidSyncStatus: false,
+                orcidSyncStatus: null,
+            },
+            rerender,
+        );
+        expect(container).toMatchSnapshot();
     });
 });

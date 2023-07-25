@@ -1,103 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  data-testid="orcid-help-panel"
-  spacing={4}
-  style={
-    Object {
-      "marginTop": "0",
-    }
-  }
->
-  <ForwardRef(Grid)
-    data-testid="orcid-help-panel-message"
-    item={true}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+    data-testid="orcid-help-panel"
+    style="margin-top: 0px;"
   >
-    <ForwardRef(Grid)
-      alignItems="flex-start"
-      container={true}
-      direction="row"
-      spacing={2}
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      data-testid="orcid-help-panel-message"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={2}
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-lndw90-MuiGrid-root"
       >
-        <Memo(ForwardRef(DoneIcon))
-          color="action"
-          style={
-            Object {
-              "color": "green",
-              "marginBottom": "-0.25em",
-              "position": "relative",
-            }
-          }
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-1o7apob-MuiGrid-root"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeMedium css-11pbyhm-MuiSvgIcon-root"
+            data-testid="DoneIcon"
+            focusable="false"
+            style="color: green; position: relative; margin-bottom: -0.25em;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+            />
+          </svg>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        >
+          Weekly automatic upload of your works to ORCID is activated.
+          test2
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-lndw90-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-1o7apob-MuiGrid-root"
+        >
+          <div />
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        >
+          test1
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      <button
+        aria-label="Upload works to ORCID"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1fu7jd5-MuiButtonBase-root-MuiButton-root"
+        data-analyticsid="orcid-upload-start-button"
+        data-testid="orcid-upload-start-button"
+        tabindex="0"
+        type="button"
+      >
+        Upload works to ORCID
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
         />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={true}
-      >
-        Weekly automatic upload of your works to ORCID is activated.
-        test2
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      alignItems="flex-start"
-      container={true}
-      direction="row"
-      spacing={2}
+      </button>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      style="padding-top: 12px;"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={2}
+      <button
+        aria-label="View works in ORCID"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-mrzqee-MuiButtonBase-root-MuiButton-root"
+        data-analyticsid="orcid-view-works-button"
+        data-testid="orcid-view-works-button"
+        tabindex="0"
+        type="button"
       >
-        <StatusIcon
-          size={24}
+        View works in ORCID
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
         />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={true}
-      >
-        test1
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-  >
-    <ForwardRef(Button)
-      aria-label="Upload works to ORCID"
-      color="primary"
-      data-analyticsid="orcid-upload-start-button"
-      data-testid="orcid-upload-start-button"
-      fullWidth={true}
-      variant="contained"
-    >
-      Upload works to ORCID
-    </ForwardRef(Button)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    style={
-      Object {
-        "paddingTop": 12,
-      }
-    }
-  >
-    <ForwardRef(Button)
-      aria-label="View works in ORCID"
-      color="secondary"
-      data-analyticsid="orcid-view-works-button"
-      data-testid="orcid-view-works-button"
-      fullWidth={true}
-      variant="contained"
-    >
-      View works in ORCID
-    </ForwardRef(Button)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+      </button>
+    </div>
+  </div>
+</div>
 `;

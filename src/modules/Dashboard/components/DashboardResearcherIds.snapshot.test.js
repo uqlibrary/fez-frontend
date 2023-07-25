@@ -2,25 +2,29 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { setupStoreForMount } from 'test.setup';
-import { render } from '@testing-library/react';
-import { DashboardResearcherIdsClass, styles } from './DashboardResearcherIds';
+import DashboardResearcherIds, { DashboardResearcherIdsClass, styles } from './DashboardResearcherIds';
 
-import { AllTheProviders } from 'test-utils';
+import { AllTheProviders, render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 
 import { currentAuthor } from 'mock/data';
 
 jest.mock('../../../context');
 import { OrcidSyncContext } from 'context';
 
-function setup(testProps, testArgs = {}) {
-    const args = { isShallow: false, ...testArgs };
+function setup(testProps) {
     // build full props list required by the component
     const props = {
         classes: {},
         theme: {},
         ...testProps,
     };
-    return getElement(DashboardResearcherIdsClass, props, args);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <DashboardResearcherIds {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('Dashboard Researcher IDs test', () => {
@@ -42,13 +46,12 @@ describe('Dashboard Researcher IDs test', () => {
     });
 
     it('Render the authors Researcher IDs as expected for a UQ researcher', () => {
-        const wrapper = setup(props);
-        wrapper.find('ContextConsumer').forEach(consumer => {
-            expect(toJson(consumer.dive())).toMatchSnapshot();
-        });
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
     });
 
     it('Testing clicking on ID internal links', () => {
+        const pushMock = jest.fn();
         const testValues = {
             ...props,
             values: {
@@ -56,36 +59,17 @@ describe('Dashboard Researcher IDs test', () => {
                 orcid: null,
             },
             authenticated: { researcher: false, scopus: false, google_scholar: false, orcid: false },
+            history: { push: pushMock },
         };
-        const wrapper = setup(testValues);
+        const { container, getByTestId } = setup(testValues);
 
-        const navigateToRoute = jest.spyOn(wrapper.find('DashboardResearcherIdsClass').instance(), 'navigateToRoute');
-        const button = wrapper.find('#orcid');
-        expect(button.length).toEqual(1);
-        button.forEach(button => {
-            button.simulate('click');
-            expect(navigateToRoute).toHaveBeenCalled();
-        });
-        button.forEach(button => {
-            button.simulate('keypress', { key: 'Enter' });
-            expect(navigateToRoute).toHaveBeenCalled();
-        });
-    });
+        expect(container).toMatchSnapshot();
 
-    it('Testing unauth internal links', () => {
-        const testValues = {
-            ...props,
-            values: {
-                ...props.values,
-                orcid: null,
-            },
-            authenticated: { researcher: false, scopus: false, google_scholar: false, orcid: false },
-        };
-        const wrapper = setup(testValues);
-        wrapper.find('ContextConsumer').forEach(consumer => {
-            expect(toJson(consumer.dive())).toMatchSnapshot();
-        });
-        expect(toJson(wrapper.find('a'))).toMatchSnapshot();
+        const link = getByTestId('orcid');
+        fireEvent.click(link);
+        expect(pushMock).toHaveBeenCalledTimes(1);
+        fireEvent.keyPress(link, { key: 'Enter', keyCode: 13 });
+        expect(pushMock).toHaveBeenCalledTimes(2);
     });
 
     it('Testing auth internal links', () => {
@@ -97,11 +81,8 @@ describe('Dashboard Researcher IDs test', () => {
             },
             authenticated: { researcher: true, scopus: true, google_scholar: true, orcid: true },
         };
-        const wrapper = setup(testValues);
-        wrapper.find('ContextConsumer').forEach(consumer => {
-            expect(toJson(consumer.dive())).toMatchSnapshot();
-        });
-        expect(toJson(wrapper.find('a'))).toMatchSnapshot();
+        const { container } = setup(testValues);
+        expect(container).toMatchSnapshot();
     });
 
     it('Testing orcid caption', () => {
@@ -109,10 +90,8 @@ describe('Dashboard Researcher IDs test', () => {
             ...props,
             authenticated: { researcher: true, scopus: true, google_scholar: true, orcid: true },
         };
-        const wrapper = setup(testValues);
-        wrapper.find('ContextConsumer').forEach(consumer => {
-            expect(toJson(consumer.dive())).toMatchSnapshot();
-        });
+        const { container } = setup(testValues);
+        expect(container).toMatchSnapshot();
     });
 
     it('should have a style generator', () => {
