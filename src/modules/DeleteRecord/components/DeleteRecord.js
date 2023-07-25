@@ -51,6 +51,7 @@ export default class DeleteRecord extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
+        /* istanbul ignore else */
         if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox &&
                 this.successConfirmationBox.showConfirmation &&
@@ -80,7 +81,7 @@ export default class DeleteRecord extends PureComponent {
     _cancel = () => {
         this.props.history.goBack();
     };
-
+    /* istanbul ignore next */
     _handleDefaultSubmit = event => {
         event && event.preventDefault();
     };
@@ -282,6 +283,7 @@ export default class DeleteRecord extends PureComponent {
                                     disabled={this.props.submitting}
                                     onClick={this._cancel}
                                     id="cancel-delete-record"
+                                    data-testid="cancel-delete-record"
                                     data-analyticsid="cancel-delete-record"
                                 />
                             </Grid>
@@ -295,7 +297,7 @@ export default class DeleteRecord extends PureComponent {
                                     disabled={this.props.submitting || this.props.disableSubmit}
                                     id="submit-delete-record"
                                     data-analyticsid="delete-admin"
-                                    data-testid="delete-admin"
+                                    data-testid="submit-delete-record"
                                 />
                             </Grid>
                         </Grid>

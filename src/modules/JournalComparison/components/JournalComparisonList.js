@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 
 import { JournalsListLegacy } from 'modules/SharedComponents/JournalsList';
-import { locale } from '../../../locale';
+import locale from 'locale/components';
 
 export const JournalComparisonList = ({ journals }) => {
     const txt = locale.components.journalComparison.journalComparisonList;

@@ -1,9 +1,11 @@
 import MyIncompleteRecord from './MyIncompleteRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
+import React from 'react';
+import { rtlRender } from 'test-utils';
 // import { pathConfig } from 'config';
 // import { act } from '@testing-library/react';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         autofill: jest.fn(),
         blur: jest.fn(),
@@ -23,35 +25,29 @@ function setup(testProps = {}, args = { isShallow: false }) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        submitFailed: false,
         valid: true,
         pure: true,
         pristine: true,
-        submitting: false,
         invalid: false,
-        submitSucceeded: false,
         submitAsSideEffect: false,
-
-        recordToFix: null,
-        isAuthorLinked: true,
+        form: 'form',
+        initialized: false,
+        submitFailed: false,
+        dirty: testProps.dirty || true,
+        submitting: testProps.submitting || false,
+        submitSucceeded: testProps.submitSucceeded || false,
+        recordToFix: testProps.recordToFix || null,
+        isAuthorLinked: testProps.isAuthorLinked || true,
         isNtro: true,
         ntroFieldProps: {},
         hasAnyFiles: true,
-        author: { aut_id: 410 },
-
         handleSubmit: jest.fn(),
-        actions: {},
-        history: { go: jest.fn(), push: jest.fn() },
-        match: {},
-        classes: {},
-
+        history: testProps.history || { go: jest.fn(), push: jest.fn() },
+        disableSubmit: testProps.disableSubmit || true,
         publicationToFixFileUploadingError: false,
         ...testProps,
     };
-    return getElement(MyIncompleteRecord, props, args);
+    return rtlRender(<MyIncompleteRecord {...props} />);
 }
 
 describe('Component MyIncompleteRecord', () => {

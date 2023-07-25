@@ -1,6 +1,5 @@
 import SbsSubmission from './SbsSubmission';
 import Immutable from 'immutable';
-import { default as formLocale } from 'locale/publicationForm';
 import React from 'react';
 import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 
