@@ -62,9 +62,8 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
-const maxLength = 5;
 const isEmpty = value => !value?.length;
-const getMaxLengthErrorMessage = validation.maxLengthWithWhitespace(maxLength);
+const getMaxLengthErrorMessage = validation.maxLengthWithWhitespace(255);
 const isValid = value => !isEmpty(value) && !getMaxLengthErrorMessage(value);
 
 export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
