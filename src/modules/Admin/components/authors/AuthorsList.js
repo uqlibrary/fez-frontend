@@ -22,6 +22,7 @@ import NonUqOrgAffiliationFormSection from 'modules/SharedComponents/Contributor
 import Typography from '@mui/material/Typography';
 import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { validation } from 'config';
 
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
@@ -60,6 +61,11 @@ NameAsPublished.propTypes = {
     icon: PropTypes.element,
     text: PropTypes.element,
 };
+
+const maxLength = 5;
+const isEmpty = value => !value?.length;
+const getMaxLengthErrorMessage = validation.maxLengthWithWhitespace(maxLength);
+const isValid = value => !isEmpty(value) && !getMaxLengthErrorMessage(value);
 
 export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
@@ -106,7 +112,6 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                 />
             ),
             editComponent: props => {
-                const { rowData: contributor } = props;
                 return (
                     <Grid container spacing={2}>
                         <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -118,7 +123,8 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                                 value={props.value || ''}
                                 onChange={e => props.onChange(e.target.value)}
                                 textFieldId={contributorEditorId}
-                                error={(contributor.nameAsPublished || '').length === 0}
+                                error={!isValid(props.rowData?.nameAsPublished)}
+                                errorText={getMaxLengthErrorMessage(props.rowData?.nameAsPublished)}
                                 label={nameAsPublishedLabel}
                                 placeholder={nameAsPublishedHint}
                                 required
@@ -128,9 +134,12 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                     </Grid>
                 );
             },
-            validate: rowData => rowData.nameAsPublished !== '',
+            validate: rowData => isValid(rowData.nameAsPublished),
         },
         {
+            cellStyle: () => ({
+                verticalAlign: 'top',
+            }),
             title: (
                 <Typography variant="caption" color="secondary">
                     {identifierColumn}

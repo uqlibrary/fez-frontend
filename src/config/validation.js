@@ -12,8 +12,8 @@ export const maxLength = max => value =>
     value && value.toString().replace(/\s/g, '').length > max
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
-export const maxLengthWithWhitespace = max => value =>
-    value?.plainText?.length > max || value?.length > max + 7
+export const maxLengthWithWhitespace = (max, rawValueLengthSeed = 0) => value =>
+    value?.plainText?.length > max || value?.length > max + rawValueLengthSeed
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
 export const maxLength9 = maxLength(9);
@@ -66,7 +66,7 @@ export const maxWords = max => value => {
 export const maxWords100 = maxWords(100);
 
 export const maxListEditorTextLength = max => value => {
-    return maxLengthWithWhitespace(max)(value?.plainText ? value.plainText : value);
+    return maxLengthWithWhitespace(max, 7)(value?.plainText ? value.plainText : value);
 };
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
