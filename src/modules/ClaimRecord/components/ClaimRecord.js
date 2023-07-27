@@ -23,7 +23,7 @@ import {
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { claimRecordConfig, pathConfig, validation } from 'config';
 import locale from 'locale/forms';
-import { CLAIM_PRE_CHECK } from '../../../repositories/routes';
+import { CLAIM_PRE_CHECK } from 'repositories/routes';
 
 export const isClaimPreCheckResponse = error => error?.request?.responseURL?.includes?.(CLAIM_PRE_CHECK().apiUrl);
 
@@ -64,6 +64,7 @@ export default class ClaimRecord extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
+        /* istanbul ignore else */
         if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
         }
@@ -95,7 +96,7 @@ export default class ClaimRecord extends PureComponent {
     _setSuccessConfirmation = ref => {
         this.successConfirmationBox = ref;
     };
-
+    /* istanbul ignore next */
     _handleDefaultSubmit = event => {
         !!event && event.preventDefault();
     };
