@@ -11,6 +11,7 @@ import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 import { default as globalLocale } from 'locale/global';
 import makeStyles from '@mui/styles/makeStyles';
+import { validation } from 'config';
 
 import {
     AFFILIATION_TYPE_NOT_UQ,
@@ -227,6 +228,10 @@ export const ContributorForm = ({
         );
     };
 
+    const isEmpty = value => !value?.length;
+    const getMaxLengthErrorMessage = validation.maxLengthWithWhitespace(255);
+    const isValid = value => !isEmpty(value.trim()) && !getMaxLengthErrorMessage(value.trim());
+
     return (
         <React.Fragment>
             {description}
@@ -258,8 +263,15 @@ export const ContributorForm = ({
                         autoComplete="off"
                         error={
                             !isContributorAssigned &&
-                            (contributor.nameAsPublished || '').trim().length === 0 &&
-                            (isNtro ? contributor.affiliation !== '' : !!required)
+                            (isNtro ? contributor.affiliation !== '' : !!required) &&
+                            !isValid(contributor.nameAsPublished)
+                        }
+                        errorText={
+                            !isContributorAssigned &&
+                            (isNtro ? contributor.affiliation !== '' : !!required) &&
+                            !isValid(contributor.nameAsPublished)
+                                ? getMaxLengthErrorMessage(contributor.nameAsPublished)
+                                : undefined
                         }
                     />
                 </Grid>
@@ -316,7 +328,7 @@ export const ContributorForm = ({
                         variant="contained"
                         fullWidth
                         color="primary"
-                        disabled={buttonDisabled}
+                        disabled={buttonDisabled || !isValid(contributor.nameAsPublished)}
                         onClick={_onSubmit}
                         id={`${contributorFormId}-add`}
                         data-analyticsid={`${contributorFormId}-add`}

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
 import { useTheme } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
-import { numberToWords } from 'config';
+import { numberToWords, validation } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
 import Grid from '@mui/material/Unstable_Grid2';
 import Edit from '@mui/icons-material/Edit';
@@ -91,6 +91,10 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
+const isEmpty = value => !value?.length;
+const getMaxLengthErrorMessage = validation.maxLengthWithWhitespace(255);
+const isValid = value => !isEmpty(value) && !getMaxLengthErrorMessage(value);
+
 export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
 
@@ -146,7 +150,6 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                 );
             },
             editComponent: props => {
-                const { rowData: contributor } = props;
                 return (
                     <Grid container spacing={2}>
                         <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -158,7 +161,8 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                                 value={props.value || ''}
                                 onChange={e => props.onChange(e.target.value)}
                                 textFieldId={contributorEditorId}
-                                error={(contributor.nameAsPublished || '').length === 0}
+                                error={!isValid(props.rowData?.nameAsPublished)}
+                                errorText={getMaxLengthErrorMessage(props.rowData?.nameAsPublished)}
                                 label={nameAsPublishedLabel}
                                 placeholder={nameAsPublishedHint}
                                 required
@@ -168,9 +172,12 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                     </Grid>
                 );
             },
-            validate: rowData => rowData.nameAsPublished !== '',
+            validate: rowData => isValid(rowData.nameAsPublished),
         },
         {
+            cellStyle: () => ({
+                verticalAlign: 'top',
+            }),
             title: (
                 <Typography variant="caption" color="secondary">
                     {identifierColumn}
