@@ -54,7 +54,7 @@ describe('AdvancedSearchRowInput', () => {
             inputField: {
                 type: 'TextField',
                 hint: 'This is hint for text input',
-                validation: ['minLength10'],
+                validation: ['minLength10Validator'],
                 id: 'rek-title',
             },
             searchField: 'rek_title',
@@ -95,7 +95,7 @@ describe('AdvancedSearchRowInput', () => {
             inputField: {
                 type: 'AuthorIdLookup',
                 hint: 'Add an author id',
-                validation: ['required', 'maxLength9'],
+                validation: ['required', 'spacelessMaxLength9Validator'],
                 id: 'rek-author-id',
             },
             label: 'Test user (uqtest)',
@@ -125,7 +125,7 @@ describe('AdvancedSearchRowInput', () => {
             inputField: {
                 type: 'AuthorIdLookup',
                 hint: 'Add an author id',
-                validation: ['required', 'maxLength9'],
+                validation: ['required', 'spacelessMaxLength9Validator'],
                 id: 'rek-author-id',
             },
             label: 'Test user (uqtest)',
@@ -149,7 +149,7 @@ describe('AdvancedSearchRowInput', () => {
         const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'ContributorIdLookup',
-                validation: ['required', 'maxLength9'],
+                validation: ['required', 'spacelessMaxLength9Validator'],
                 id: 'rek-contributor-id',
                 hint: 'Add an contributor id',
             },

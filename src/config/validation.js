@@ -7,26 +7,38 @@ import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
 
 import { isAdded } from 'helpers/datastreams';
 
+export const isEmpty = value => !value?.length;
+export const hasLengthGreaterThan = (value, maxlength) => !isEmpty(value) && value?.length > maxlength;
 // Max Length
-export const maxLength = max => value =>
-    value && value.toString().replace(/\s/g, '').length > max
+export const maxLengthValidator = max => value =>
+    hasLengthGreaterThan(value, max) ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
+export const spacelessMaxLengthValidator = max => value => {
+    return value && hasLengthGreaterThan(value.toString().replace(/\s/g, ''), max)
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
-export const maxLengthWithWhitespace = (max, rawValueLengthSeed = 0) => value =>
-    value?.plainText?.length > max || value?.length > max + rawValueLengthSeed
-        ? locale.validationErrors.maxLength.replace('[max]', max)
+};
+
+export const maxLength255Validator = maxLengthValidator(255);
+export const spacelessMaxLength9Validator = spacelessMaxLengthValidator(9);
+export const spacelessMaxLength10Validator = spacelessMaxLengthValidator(10);
+export const spacelessMaxLength11Validator = spacelessMaxLengthValidator(11);
+export const spacelessMaxLength12Validator = spacelessMaxLengthValidator(12);
+export const spacelessMaxLength20Validator = spacelessMaxLengthValidator(20);
+export const spacelessMaxLength30Validator = spacelessMaxLengthValidator(30);
+export const spacelessMaxLength50Validator = spacelessMaxLengthValidator(50);
+export const spacelessMaxLength255Validator = spacelessMaxLengthValidator(255);
+export const spacelessMaxLength500Validator = spacelessMaxLengthValidator(500);
+export const spacelessMaxLength800Validator = spacelessMaxLengthValidator(800);
+export const spacelessMaxLength1000Validator = spacelessMaxLengthValidator(1000);
+export const spacelessMaxLength2000Validator = spacelessMaxLengthValidator(2000); // URL's must be under 2000 characters
+
+// Min Length
+export const minLengthValidator = min => value =>
+    (value !== null || value !== undefined) && value.trim().length < min
+        ? locale.validationErrors.minLength.replace('[min]', min)
         : undefined;
-export const maxLength9 = maxLength(9);
-export const maxLength10 = maxLength(10);
-export const maxLength11 = maxLength(11);
-export const maxLength12 = maxLength(12);
-export const maxLength20 = maxLength(20);
-export const maxLength30 = maxLength(30);
-export const maxLength50 = maxLength(50);
-export const maxLength255 = maxLength(255);
-export const maxLength800 = maxLength(800);
-export const maxLength1000 = maxLength(1000);
-export const maxLength2000 = maxLength(2000); // URL's must be under 2000 characters
+export const minLength10Validator = minLengthValidator(10);
+export const minLength0Validator = minLengthValidator(0);
 
 export const isValidResearcherId = value => {
     const regexResearcherId = /^[A-Z]{1,3}-\d{4}-\d{4}$/g;
@@ -36,17 +48,6 @@ export const isValidResearcherId = value => {
         undefined
     );
 };
-
-// Min Lengt
-export const minLength = min => value =>
-    (value !== null || value !== undefined) && value.trim().length < min
-        ? locale.validationErrors.minLength.replace('[min]', min)
-        : undefined;
-export const minLength10 = minLength(10);
-export const minLength0 = minLength(0);
-
-// Public Search Validation rules
-export const maxLength500 = maxLength(500);
 
 // Max Words
 export const maxWords = max => value => {
@@ -65,9 +66,8 @@ export const maxWords = max => value => {
 
 export const maxWords100 = maxWords(100);
 
-export const maxListEditorTextLength = max => value => {
-    return maxLengthWithWhitespace(max, 7)(value?.plainText ? value.plainText : value);
-};
+export const maxListEditorTextLength = max => value =>
+    maxLengthValidator(max + (value?.plainText ? 0 : 7))(value?.plainText || value);
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
 export const maxListEditorTextLength2000 = maxListEditorTextLength(2000);
@@ -130,7 +130,9 @@ export const requiredList = value => {
 export const email = value =>
     !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = value =>
-    value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
+    value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value)
+        ? locale.validationErrors.url
+        : spacelessMaxLength2000Validator(value);
 export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
 export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
 export const forRequired = itemList =>

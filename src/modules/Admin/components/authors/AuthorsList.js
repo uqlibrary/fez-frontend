@@ -62,9 +62,7 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
-const isEmpty = value => !value?.length;
-const getMaxLengthErrorMessage = validation.maxLengthWithWhitespace(255);
-const isValid = value => !isEmpty(value) && !getMaxLengthErrorMessage(value);
+const isValid = value => !validation.isEmpty(value) && !validation.maxLength255Validator(value);
 
 export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
@@ -123,7 +121,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                                 onChange={e => props.onChange(e.target.value)}
                                 textFieldId={contributorEditorId}
                                 error={!isValid(props.rowData?.nameAsPublished)}
-                                errorText={getMaxLengthErrorMessage(props.rowData?.nameAsPublished)}
+                                errorText={validation.maxLength255Validator(props.rowData?.nameAsPublished)}
                                 label={nameAsPublishedLabel}
                                 placeholder={nameAsPublishedHint}
                                 required

@@ -228,9 +228,7 @@ export const ContributorForm = ({
         );
     };
 
-    const isEmpty = value => !value?.length;
-    const getMaxLengthErrorMessage = validation.maxLengthWithWhitespace(255);
-    const isValid = value => !isEmpty(value.trim()) && !getMaxLengthErrorMessage(value.trim());
+    const isValid = value => !validation.isEmpty(value.trim()) && !validation.maxLength255Validator(value.trim());
 
     return (
         <React.Fragment>
@@ -270,7 +268,7 @@ export const ContributorForm = ({
                             !isContributorAssigned &&
                             (isNtro ? contributor.affiliation !== '' : !!required) &&
                             !isValid(contributor.nameAsPublished)
-                                ? getMaxLengthErrorMessage(contributor.nameAsPublished)
+                                ? validation.maxLength255Validator(contributor.nameAsPublished)
                                 : undefined
                         }
                     />

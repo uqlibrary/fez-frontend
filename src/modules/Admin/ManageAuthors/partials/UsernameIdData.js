@@ -41,14 +41,14 @@ export const UsernameIdColumnData = () => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-staff-id"
                     name="aut_org_staff_id"
-                    validate={[validation.maxLength12]}
+                    validate={[validation.spacelessMaxLength12Validator]}
                 />
                 <Field
                     {...orgUsername}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-username"
                     name="aut_org_username"
-                    validate={[validation.maxLength20]}
+                    validate={[validation.spacelessMaxLength20Validator]}
                     InputProps={{
                         ...((!!autOrgUsername && {
                             endAdornment: (
@@ -90,21 +90,21 @@ export const UsernameIdColumnData = () => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-student-id"
                     name="aut_org_student_id"
-                    validate={[validation.maxLength11]}
+                    validate={[validation.spacelessMaxLength11Validator]}
                 />
                 <Field
                     {...studentUsername}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-student-username"
                     name="aut_student_username"
-                    validate={[validation.maxLength30]}
+                    validate={[validation.spacelessMaxLength30Validator]}
                 />
                 <Field
                     {...refNum}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-ref-num"
                     name="aut_ref_num"
-                    validate={[validation.maxLength50]}
+                    validate={[validation.spacelessMaxLength50Validator]}
                 />
             </Grid>
         </StandardCard>
