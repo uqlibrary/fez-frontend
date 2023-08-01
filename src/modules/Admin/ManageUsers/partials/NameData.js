@@ -44,7 +44,7 @@ export const NameData = () => {
                     name="usr_full_name"
                     required
                     autoFocus
-                    validate={[validation.required, validation.maxLength255]}
+                    validate={[validation.required, validation.spacelessMaxLength255Validator]}
                     {...fullName}
                 />
                 <Field
@@ -52,7 +52,7 @@ export const NameData = () => {
                     userFieldDataId="usr-email"
                     name="usr_email"
                     required
-                    validate={[validation.required, validation.email, validation.maxLength255]}
+                    validate={[validation.required, validation.email, validation.spacelessMaxLength255Validator]}
                     {...email}
                 />
                 <Field
@@ -60,7 +60,7 @@ export const NameData = () => {
                     userFieldDataId="usr-username"
                     name="usr_username"
                     required
-                    validate={[validation.required, validation.maxLength20]}
+                    validate={[validation.required, validation.spacelessMaxLength20Validator]}
                     {...username}
                 />
                 <Field
