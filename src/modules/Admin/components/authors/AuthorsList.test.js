@@ -184,6 +184,46 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
     });
 
+    it('should validate new contributor maxlength correctly', () => {
+        const { getByTestId, getByText } = setup();
+        expect(getByText('No records to display')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-add'));
+        expect(getByTestId('rek-author-add-save').closest('button')).toHaveAttribute('disabled');
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1' } });
+        expect(getByTestId('rek-author-add-save').closest('button')).not.toHaveAttribute('disabled');
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1'.repeat(256) } });
+        expect(getByTestId('rek-author-add-save').closest('button')).toHaveAttribute('disabled');
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1'.repeat(255) } });
+        expect(getByTestId('rek-author-add-save').closest('button')).not.toHaveAttribute('disabled');
+    });
+
+    it('should validate existing contributor maxlength correctly', () => {
+        const initialValue = 'test 1';
+        const { getByTestId } = setup({
+            list: [
+                {
+                    nameAsPublished: initialValue,
+                    uqIdentifier: '0',
+                    affiliation: '',
+                },
+            ],
+        });
+        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
+        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: initialValue } });
+        expect(getByTestId('rek-author-update-save').closest('button')).not.toHaveAttribute('disabled');
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1' } });
+        expect(getByTestId('rek-author-update-save').closest('button')).not.toHaveAttribute('disabled');
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1'.repeat(256) } });
+        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1'.repeat(255) } });
+        expect(getByTestId('rek-author-update-save').closest('button')).not.toHaveAttribute('disabled');
+    });
+
     it('should render a list and user should be able to edit', async () => {
         mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
             data: [

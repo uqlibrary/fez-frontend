@@ -30,14 +30,14 @@ export const NameData = () => {
                     authorFieldDataId="aut-display-name"
                     name="aut_display_name"
                     autoFocus
-                    validate={[validation.maxLength255]}
+                    validate={[validation.spacelessMaxLength255Validator]}
                 />
                 <Field
                     {...title}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-title"
                     name="aut_title"
-                    validate={[validation.maxLength255]}
+                    validate={[validation.spacelessMaxLength255Validator]}
                 />
                 <Field
                     {...firstName}
@@ -45,14 +45,14 @@ export const NameData = () => {
                     authorFieldDataId="aut-fname"
                     name="aut_fname"
                     required
-                    validate={[validation.required, validation.maxLength255]}
+                    validate={[validation.required, validation.spacelessMaxLength255Validator]}
                 />
                 <Field
                     {...middleName}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-mname"
                     name="aut_mname"
-                    validate={[validation.maxLength255]}
+                    validate={[validation.spacelessMaxLength255Validator]}
                 />
                 <Field
                     {...lastName}
@@ -60,21 +60,21 @@ export const NameData = () => {
                     name="aut_lname"
                     authorFieldDataId="aut-lname"
                     required
-                    validate={[validation.required, validation.maxLength255]}
+                    validate={[validation.required, validation.spacelessMaxLength255Validator]}
                 />
                 <Field
                     {...position}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-position"
                     name="aut_position"
-                    validate={[validation.maxLength255]}
+                    validate={[validation.spacelessMaxLength255Validator]}
                 />
                 <Field
                     {...email}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-email"
                     name="aut_email"
-                    {...(!!autEmail ? { validate: [validation.email, validation.maxLength255] } : {})}
+                    {...(!!autEmail ? { validate: [validation.email, validation.spacelessMaxLength255Validator] } : {})}
                 />
             </Grid>
         </StandardCard>

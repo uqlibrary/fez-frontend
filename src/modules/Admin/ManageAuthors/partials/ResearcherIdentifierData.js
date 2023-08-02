@@ -67,7 +67,7 @@ export const ResearcherIdentifierData = () => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-scopus-id"
                     name="aut_scopus_id"
-                    validate={[validation.maxLength255]}
+                    validate={[validation.spacelessMaxLength255Validator]}
                     {...scopusId}
                     InputProps={{
                         ...((!!autScopusId && {
@@ -116,7 +116,7 @@ export const ResearcherIdentifierData = () => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-people-australia-id"
                     name="aut_people_australia_id"
-                    validate={[validation.maxLength255]}
+                    validate={[validation.spacelessMaxLength255Validator]}
                     {...peopleAustraliaId}
                 />
                 <Field
