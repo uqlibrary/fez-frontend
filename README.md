@@ -169,6 +169,14 @@ To keep initial load to a minimum, the following optimisations have been added t
   - publicationForm.js locale is loaded only when PublicationForm component is loaded
   - Other locale files are not too big, all bundled into one for now
 
+#### Reusable WebComponents
+
+eSpace currently takes only Alerts from Reusable - at some point in the future we may upgrade to use the standard uq header.
+
+Staging branch calls Reusable staging branch - all other branches call production Reusable, by default.
+
+To use local reusable in your local dev, swap the value of reusablejs in webpack.config.js (and restart your npm sun start:mock)
+
 ### Webpack
 
 #### version: 5
