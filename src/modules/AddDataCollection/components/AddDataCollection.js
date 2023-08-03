@@ -69,6 +69,7 @@ export default class AddDataCollection extends Component {
     };
 
     componentDidUpdate(prevProps) {
+        /* istanbul ignore else */
         if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.confirmationBox.showConfirmation();
         }
@@ -117,6 +118,7 @@ export default class AddDataCollection extends Component {
                 errorAlert: { ...formLocale.errorAlert },
             },
         });
+
         const saveConfirmationLocale = { ...locale.pages.addDataset.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <Grid container spacing={3}>
