@@ -1,125 +1,151 @@
+import React from 'react';
 import NewRecord from './NewRecord';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor } from 'test-utils';
+import * as RecordActions from 'actions/records';
+import { NEW_RECORD_API } from 'repositories/routes';
 
-function setup(testProps = {}, args = {}) {
+function setup(testProps = {}) {
     const props = {
         history: {},
         actions: {},
         ...testProps,
     };
-    return getElement(NewRecord, props, args);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <NewRecord {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('Add new record', () => {
+    beforeEach(() => {
+        mockActionsStore = setupStoreForActions();
+        mockApi = setupMockAdapter();
+    });
+
+    afterEach(() => {
+        mockApi.reset();
+    });
+
     it('should not render publication form if author is not loaded ', () => {
-        const wrapper = setup({ author: null });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ author: null });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render stepper and a publication form', () => {
-        const wrapper = setup({ history: {}, author: { aut_display_name: 'Fred', aut_id: 44 } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ author: { aut_display_name: 'Fred', aut_id: 44 } });
+        expect(container).toMatchSnapshot();
     });
 
-    it('should show confirmation box', () => {
-        const wrapper = setup({ history: {} });
-        const showConfirmation = jest.fn();
-        wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmation,
-        };
+    it('should show confirmation box and navigate to the correct route on button clicks', async () => {
+        const requestCreateNewRecord = jest.spyOn(RecordActions, 'createNewRecord');
+        const clearNewRecordFn = jest.fn();
+        const pushFn = jest.fn();
+        mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
+            data: '',
+        });
+        const { getByTestId, getByRole, getByText } = setup({
+            author: { aut_display_name: 'Fred', aut_id: 44 },
+            actions: { clearNewRecord: clearNewRecordFn },
+            history: { push: pushFn },
+        });
 
-        wrapper.instance()._recordSaved();
-        expect(showConfirmation).toBeCalled();
+        // interact with the form
+        fireEvent.mouseDown(getByTestId('rek-display-type-select'));
+        fireEvent.click(getByText(/Working paper/i));
+        // required fields
+        fireEvent.change(getByTestId('rek-title-input'), { target: { value: 'title' } });
+        fireEvent.change(getByTestId('rek-date-day-input'), { target: { value: '1' } });
+        fireEvent.change(getByTestId('rek-date-month-input'), { target: { value: 'May' } });
+        fireEvent.change(getByTestId('rek-date-year-input'), { target: { value: '1911' } });
+        fireEvent.change(getByTestId('authors-input'), { target: { value: 'author' } });
+        fireEvent.click(getByRole('button', { name: 'Add author' }));
+        fireEvent.click(getByRole('listitem', { name: 'Select this author (author) to assign it as you' }));
+
+        fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
+
+        expect(requestCreateNewRecord).toBeCalledWith({
+            authors: [
+                {
+                    affiliation: '',
+                    aut_title: '',
+                    authorId: null,
+                    creatorRole: '',
+                    disabled: false,
+                    nameAsPublished: 'author',
+                    orgaff: '',
+                    orgtype: '',
+                    required: false,
+                    selected: true,
+                    uqIdentifier: '',
+                    uqUsername: '',
+                },
+            ],
+            languages: ['eng'],
+            rek_date: '1911-01-01',
+            rek_display_type: 183,
+            rek_title: 'title',
+        });
+        await waitFor(() => getByTestId('confirm-dialog-box'));
+
+        fireEvent.click(getByRole('button', { name: 'Go to my works' }));
+        expect(clearNewRecordFn).toBeCalledTimes(1);
+        expect(pushFn).toHaveBeenNthCalledWith(1, '/records/mine');
+
+        fireEvent.click(getByRole('button', { name: 'Add another missing work' }));
+        expect(clearNewRecordFn).toBeCalledTimes(2);
+        expect(pushFn).toHaveBeenNthCalledWith(2, '/records/add/find');
     });
 
-    it('should navigate to find publication', () => {
-        const navigateToRecordSearch = jest.fn();
-        const history = {
-            push: navigateToRecordSearch,
-        };
-        const wrapper = setup({ history: history, actions: { clearNewRecord: jest.fn() } });
-        wrapper.instance()._restartWorkflow();
-        expect(navigateToRecordSearch).toBeCalled();
+    it('should show and navigate to fix record on button click and display file upload error', async () => {
+        const clearNewRecordFn = jest.fn();
+        const pushFn = jest.fn();
+        mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
+            data: '',
+        });
+        const { getByTestId, getByRole, getByText } = setup({
+            author: { aut_id: 44 }, // no display name
+            account: { class: ['IS_UQ_STUDENT_PLACEMENT', 'IS_CURRENT'] }, // hdr student
+            actions: { clearNewRecord: clearNewRecordFn },
+            history: { push: pushFn },
+            newRecord: { rek_pid: 'UQ:1' },
+            newRecordFileUploadingOrIssueError: true,
+        });
+
+        // interact with the form
+        fireEvent.mouseDown(getByTestId('rek-display-type-select'));
+        fireEvent.click(getByText(/Working paper/i));
+        // required fields
+        fireEvent.change(getByTestId('rek-title-input'), { target: { value: 'title' } });
+        fireEvent.change(getByTestId('rek-date-day-input'), { target: { value: '1' } });
+        fireEvent.change(getByTestId('rek-date-month-input'), { target: { value: 'May' } });
+        fireEvent.change(getByTestId('rek-date-year-input'), { target: { value: '1911' } });
+        fireEvent.change(getByTestId('authors-input'), { target: { value: 'author' } });
+        fireEvent.click(getByRole('button', { name: 'Add author' }));
+        fireEvent.click(getByRole('listitem', { name: 'Select this author (author) to assign it as you' }));
+
+        // submit to trigger confirmation box
+        fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
+
+        await waitFor(() => getByTestId('confirm-dialog-box'));
+        expect(getByText(/File upload and\/or notes post failed/i)).toBeInTheDocument();
+
+        fireEvent.click(getByRole('button', { name: 'Fix work' }));
+        expect(clearNewRecordFn).toBeCalledTimes(1);
+        expect(pushFn).toBeCalledWith('/records/UQ:1/fix');
     });
 
-    it('should navigate to my research', () => {
-        const navigateToMyResearch = jest.fn();
-        const history = {
-            push: navigateToMyResearch,
-        };
-        const wrapper = setup({ history: history, actions: { clearNewRecord: jest.fn() } });
-        wrapper.instance()._navigateToMyResearch();
-        expect(navigateToMyResearch).toBeCalled();
-    });
-
-    it('should restart workflow', () => {
+    it('should restart workflow', async () => {
         const navigateToSearch = jest.fn();
-        const history = {
-            push: navigateToSearch,
-        };
-
-        const wrapper = setup({ history: history, actions: { clearNewRecord: jest.fn() } });
-        wrapper.instance()._restartWorkflow();
-
-        expect(navigateToSearch).toBeCalled();
-    });
-
-    it('should render the confirm dialog with an alert for failed file upload', () => {
-        const wrapper = setup(
-            {
-                author: { aut_id: 12345, aut_display_name: 'Test' },
-                history: {},
-                newRecordFileUploadingError: true,
-                rawSearchQuery: 'This is a test',
-            },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper.find('WithStyles(ConfirmDialogBox)'))).toMatchSnapshot();
-    });
-
-    it('should render the confirm dialog without an alert for a succcessful file upload', () => {
-        const wrapper = setup({
-            author: { aut_id: 12345, aut_display_name: 'Test' },
-            history: {},
-            newRecordFileUploadingError: false,
-            rawSearchQuery: 'This is a test',
-        });
-        expect(toJson(wrapper.find('WithStyles(ConfirmDialogBox)'))).toMatchSnapshot();
-    });
-
-    it('should navigate to fix record', () => {
-        const navigateToFixRecord = jest.fn();
-        const history = {
-            push: navigateToFixRecord,
-        };
-        const wrapper = setup({ history: history, actions: { clearNewRecord: jest.fn() } });
-        wrapper.instance()._navigateToFixRecord();
-        expect(navigateToFixRecord).toBeCalled();
-    });
-
-    it('should render alert about file uploading or issue error', () => {
-        const wrapper = setup({
-            author: { aut_id: 1 },
-            newRecordFileUploadingOrIssueError: true,
-            newRecord: {
-                rek_pid: 'UQ:111111',
-            },
+        const { getByRole } = setup({
+            author: { aut_display_name: 'Fred', aut_id: 44 },
+            history: { push: navigateToSearch },
+            actions: { clearNewRecord: jest.fn() },
         });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render thesis as alert if HDR student', () => {
-        const wrapper = setup({
-            author: { aut_id: 44, aut_display_name: 'Test' },
-            newRecordFileUploadingOrIssueError: true,
-            newRecord: {
-                rek_pid: 'UQ:111111',
-            },
-            account: {
-                class: ['IS_UQ_STUDENT_PLACEMENT', 'IS_CURRENT'],
-            },
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        fireEvent.click(getByRole('button', { name: 'Abandon and search again' }));
+        expect(navigateToSearch).toBeCalledWith('/records/add/find');
     });
 });
