@@ -121,7 +121,7 @@ export const viewRecordsConfig = {
     files: {
         blacklist: {
             namePrefixRegex: '^(FezACML|stream|web_|thumbnail_|preview_|presmd)',
-            nameSuffixRegex: '(_t\\.|_compressed\\.)',
+            nameSuffixRegex: '(_t\\.)',
             collections: ['UQ:413806', 'UQ:357493', 'UQ:211157', 'UQ:342107'],
         },
         thumbnailFileName: fileName => [
