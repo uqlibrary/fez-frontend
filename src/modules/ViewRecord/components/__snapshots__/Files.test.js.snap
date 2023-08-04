@@ -3758,7 +3758,7 @@ exports[`Files Component  should render files based on security policy correctly
                       <p
                         class="MuiTypography-root MuiTypography-body2 makeStyles-filename-541 makeStyles-filenameParent-540 css-1omq3q2-MuiTypography-root"
                       >
-                        test.pdf
+                        test_compressed.pdf
                       </p>
                     </div>
                     <div
