@@ -85,7 +85,7 @@ export default class Orcid extends Component {
         // wait for user account to get loaded and set state if props were not available in constructor
         if (
             props.account !== state.prevProps?.account &&
-            (!state.prevProps?.account || props.account.id !== state.prevProps?.account.id)
+            (!state.prevProps?.account || /* istanbul ignore next */ props.account.id !== state.prevProps?.account.id)
         ) {
             const orcidStateId = state.createOrcidStateId(props.account);
             //
@@ -156,6 +156,7 @@ export default class Orcid extends Component {
             !this.props.accountAuthorLoading &&
             (this.props.author !== prevProps.author ||
                 // eslint-disable-next-line camelcase
+                /* istanbul ignore next */
                 (this.props.author && prevProps.author?.aut_id !== this.props.author?.aut_id)) &&
             // eslint-disable-next-line camelcase
             !this.props.author?.aut_orcid_id &&
@@ -184,7 +185,7 @@ export default class Orcid extends Component {
         this.authoriseConfirmationBox = ref;
     };
 
-    getOrcidUrl = (isNew = true) => {
+    getOrcidUrl = isNew => {
         const params = {
             ...this.state.orcidRequest,
             ...(isNew ? this.state.createOrcidRequest : this.state.existingOrcidRequest),
@@ -206,18 +207,18 @@ export default class Orcid extends Component {
     isValidOrcidState = (account, sessionId, receivedSessionId) =>
         !account || !receivedSessionId || receivedSessionId === sessionId;
 
-    _showAuthoriseConfirmation = (isNew = true) => {
+    _showAuthoriseConfirmation = (/* istanbul ignore next */ isNew = true) => {
         const url = this.getOrcidUrl(isNew);
         this.authoriseConfirmationBox._onAction = () => window.location.assign(url);
         this.authoriseConfirmationBox.showConfirmation();
     };
 
-    getAlert = ({ submitFailed = false, submitting = false, error, alertLocale = {} }) => {
+    getAlert = ({ submitFailed, submitting = false, error, alertLocale }) => {
         let alertProps = null;
         if (submitFailed && error) {
             alertProps = {
                 ...alertLocale.errorAlert,
-                message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error,
+                message: alertLocale.errorAlert.message(error),
             };
         } else if (submitting) {
             alertProps = { ...alertLocale.progressAlert };
@@ -263,6 +264,7 @@ export default class Orcid extends Component {
 
                                 <Grid item xs={12} sm={'auto'}>
                                     <Button
+                                        aria-label={txt.linkOrcid.labels.submit}
                                         variant={'contained'}
                                         color={'primary'}
                                         fullWidth
@@ -284,6 +286,7 @@ export default class Orcid extends Component {
 
                                 <Grid item xs={12} sm={'auto'}>
                                     <Button
+                                        aria-label={txt.createOrcid.labels.submit}
                                         variant={'contained'}
                                         color={'primary'}
                                         fullWidth

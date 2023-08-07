@@ -1,434 +1,177 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component Orcid  should display error if ORCID url redirect STATE response is invalid 1`] = `
-<StandardPage
-  title="Link ORCID ID to UQ eSpace"
->
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "OK",
-        "confirmationMessage": <div>
-          <p>
-            In order to proceed you will now be directed to ORCID.org website.
-          </p>
-          <p>
-            You will be redirected back after you have granted UQ access.
-          </p>
-        </div>,
-        "confirmationTitle": "ORCID Grant Access",
-      }
-    }
-    onRef={[Function]}
-  />
-  <ForwardRef(Grid)
-    container={true}
-    spacing={3}
+exports[`Component Orcid  should render if account doesnt have first name and last name 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <Alert
-        alertId="alert-error"
-        allowDismiss={false}
-        customIcon={null}
-        customType={null}
-        disableAlertClick={false}
-        dismissTitle="Click to dismiss this alert"
-        message="Error has occurred during request and request cannot be processed. Invalid authorisation state response from ORCID.  Please contact eSpace administrators or try again later."
-        orcidStateError="Invalid authorisation state response from ORCID. "
-        showLoader={false}
-        title="Error"
-        type="error_outline"
-        wiggle={null}
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
-    >
-      <StandardCard
-        title="I already have an ORCID iD"
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Typography)
-          component="span"
-          gutterBottom={true}
-        >
-          This option enables you to link your existing ORCID iD to UQ.
-        </ForwardRef(Typography)>
-        <ForwardRef(Grid)
-          container={true}
-          spacing={2}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-            xs={true}
-          />
-          <ForwardRef(Grid)
-            item={true}
-            sm="auto"
-            xs={12}
-          >
-            <ForwardRef(Button)
-              color="primary"
-              disabled={false}
-              fullWidth={true}
-              onClick={[Function]}
-              variant="contained"
-            >
-              Link your existing ORCID iD
-            </ForwardRef(Button)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
-    >
-      <StandardCard
-        title="I need an ORCID iD"
-      >
-        <ForwardRef(Typography)
-          component="span"
-          gutterBottom={true}
-        >
-          <p>
-            This option enables you to create a new ORCID iD and link it with UQ.
-          </p>
-          <p>
-            Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
-          </p>
-        </ForwardRef(Typography)>
-        <ForwardRef(Grid)
-          container={true}
-          spacing={2}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-            xs={true}
-          />
-          <ForwardRef(Grid)
-            item={true}
-            sm="auto"
-            xs={12}
-          >
-            <ForwardRef(Button)
-              color="primary"
-              disabled={false}
-              fullWidth={true}
-              onClick={[Function]}
-              variant="contained"
-            >
-              Create a new ORCID iD
-            </ForwardRef(Button)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
-`;
-
-exports[`Component Orcid  should display error if author update failed 1`] = `
-<StandardPage
-  title="Link ORCID ID to UQ eSpace"
->
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "OK",
-        "confirmationMessage": <div>
-          <p>
-            In order to proceed you will now be directed to ORCID.org website.
-          </p>
-          <p>
-            You will be redirected back after you have granted UQ access.
-          </p>
-        </div>,
-        "confirmationTitle": "ORCID Grant Access",
-      }
-    }
-    onRef={[Function]}
-  />
-  <ForwardRef(Grid)
-    container={true}
-    spacing={3}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
-    >
-      <Alert
-        alertId="alert-error"
-        allowDismiss={false}
-        customIcon={null}
-        customType={null}
-        disableAlertClick={false}
-        dismissTitle="Click to dismiss this alert"
-        message="Error has occurred during request and request cannot be processed. API IS NOT AVAILABLE Please contact eSpace administrators or try again later."
-        orcidStateError="Invalid authorisation state response from ORCID. "
-        showLoader={false}
-        title="Error"
-        type="error_outline"
-        wiggle={null}
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
-    >
-      <StandardCard
-        title="I already have an ORCID iD"
-      >
-        <ForwardRef(Typography)
-          component="span"
-          gutterBottom={true}
-        >
-          This option enables you to link your existing ORCID iD to UQ.
-        </ForwardRef(Typography)>
-        <ForwardRef(Grid)
-          container={true}
-          spacing={2}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-            xs={true}
-          />
-          <ForwardRef(Grid)
-            item={true}
-            sm="auto"
-            xs={12}
-          >
-            <ForwardRef(Button)
-              color="primary"
-              disabled={false}
-              fullWidth={true}
-              onClick={[Function]}
-              variant="contained"
-            >
-              Link your existing ORCID iD
-            </ForwardRef(Button)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
-    >
-      <StandardCard
-        title="I need an ORCID iD"
-      >
-        <ForwardRef(Typography)
-          component="span"
-          gutterBottom={true}
-        >
-          <p>
-            This option enables you to create a new ORCID iD and link it with UQ.
-          </p>
-          <p>
-            Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
-          </p>
-        </ForwardRef(Typography)>
-        <ForwardRef(Grid)
-          container={true}
-          spacing={2}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-            xs={true}
-          />
-          <ForwardRef(Grid)
-            item={true}
-            sm="auto"
-            xs={12}
-          >
-            <ForwardRef(Button)
-              color="primary"
-              disabled={false}
-              fullWidth={true}
-              onClick={[Function]}
-              variant="contained"
-            >
-              Create a new ORCID iD
-            </ForwardRef(Button)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
-`;
-
-exports[`Component Orcid  should render form uf account/author is set 1`] = `
-<StandardPage
-  title="Link ORCID ID to UQ eSpace"
->
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "Cancel",
-        "confirmButtonLabel": "OK",
-        "confirmationMessage": <div>
-          <p>
-            In order to proceed you will now be directed to ORCID.org website.
-          </p>
-          <p>
-            You will be redirected back after you have granted UQ access.
-          </p>
-        </div>,
-        "confirmationTitle": "ORCID Grant Access",
-      }
-    }
-    onRef={[Function]}
-  />
-  <ForwardRef(Grid)
-    container={true}
-    spacing={3}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+        Link ORCID ID to UQ eSpace
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
     >
-      <StandardCard
-        title="I already have an ORCID iD"
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
       >
-        <ForwardRef(Typography)
-          component="span"
-          gutterBottom={true}
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        />
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
-          This option enables you to link your existing ORCID iD to UQ.
-        </ForwardRef(Typography)>
-        <ForwardRef(Grid)
-          container={true}
-          spacing={2}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-            xs={true}
-          />
-          <ForwardRef(Grid)
-            item={true}
-            sm="auto"
-            xs={12}
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-i-already-have-an-orcid-id"
+            id="standard-card-i-already-have-an-orcid-id"
           >
-            <ForwardRef(Button)
-              color="primary"
-              disabled={false}
-              fullWidth={true}
-              onClick={[Function]}
-              variant="contained"
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
             >
-              Link your existing ORCID iD
-            </ForwardRef(Button)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
-    >
-      <StandardCard
-        title="I need an ORCID iD"
-      >
-        <ForwardRef(Typography)
-          component="span"
-          gutterBottom={true}
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-i-already-have-an-orcid-id-header"
+                  id="standard-card-i-already-have-an-orcid-id-header"
+                >
+                  I already have an ORCID iD
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-i-already-have-an-orcid-id-content"
+              data-testid="standard-card-i-already-have-an-orcid-id-content"
+              id="standard-card-i-already-have-an-orcid-id-content"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-i0iyry-MuiTypography-root"
+              >
+                This option enables you to link your existing ORCID iD to UQ.
+              </span>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                />
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                >
+                  <button
+                    aria-label="Link your existing ORCID iD"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Link your existing ORCID iD
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
-          <p>
-            This option enables you to create a new ORCID iD and link it with UQ.
-          </p>
-          <p>
-            Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
-          </p>
-        </ForwardRef(Typography)>
-        <ForwardRef(Grid)
-          container={true}
-          spacing={2}
-        >
-          <ForwardRef(Grid)
-            item={true}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-            xs={true}
-          />
-          <ForwardRef(Grid)
-            item={true}
-            sm="auto"
-            xs={12}
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-i-need-an-orcid-id"
+            id="standard-card-i-need-an-orcid-id"
           >
-            <ForwardRef(Button)
-              color="primary"
-              disabled={false}
-              fullWidth={true}
-              onClick={[Function]}
-              variant="contained"
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
             >
-              Create a new ORCID iD
-            </ForwardRef(Button)>
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-i-need-an-orcid-id-header"
+                  id="standard-card-i-need-an-orcid-id-header"
+                >
+                  I need an ORCID iD
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-i-need-an-orcid-id-content"
+              data-testid="standard-card-i-need-an-orcid-id-content"
+              id="standard-card-i-need-an-orcid-id-content"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-i0iyry-MuiTypography-root"
+              >
+                <p>
+                  This option enables you to create a new ORCID iD and link it with UQ.
+                </p>
+                <p>
+                  Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
+                </p>
+              </span>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                />
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                >
+                  <button
+                    aria-label="Create a new ORCID iD"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Create a new ORCID iD
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
-exports[`Component Orcid  should render nothing if account is set, but author is null 1`] = `<div />`;
+exports[`Component Orcid  should render nothing if account is set, but author is null 1`] = `
+<div>
+  <div />
+</div>
+`;
 
-exports[`Component Orcid  should render nothing if account/author is not loaded 1`] = `<div />`;
+exports[`Component Orcid  should render nothing if account is set, but author is null 2`] = `
+<div>
+  <div />
+</div>
+`;
+
+exports[`Component Orcid  should render nothing if account/author is not loaded 1`] = `
+<div>
+  <div />
+</div>
+`;

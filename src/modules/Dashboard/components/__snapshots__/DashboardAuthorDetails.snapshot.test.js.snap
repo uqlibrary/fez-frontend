@@ -1,55 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={1}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
   >
-    <ForwardRef(Typography)
-      variant="h6"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-       
-       
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Typography)
-      component="span"
-      key="0"
-      variant="caption"
+      <h6
+        class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      >
+        
+         
+        
+         
+        
+      </h6>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-      <b>
-        Affiliate Professor
-      </b>
-      , Institute for Molecular Bioscience
-    </ForwardRef(Typography)>
-    <ForwardRef(Typography)
-      component="span"
-      key="2"
-      variant="caption"
-    >
-      <b>
-        Affiliate Professorial Res Fellow
-      </b>
-      , School of Chemistry and Molecular Biosciences
-    </ForwardRef(Typography)>
-    <ForwardRef(Typography)
-      component="span"
-      key="3"
-      variant="caption"
-    >
-      <b>
-        ARC Australian Laureate Fellow
-      </b>
-      , The University of Queensland Diamantina Institute
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+      <span
+        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      >
+        <b>
+          Affiliate Professor
+        </b>
+        , Institute for Molecular Bioscience
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      >
+        <b>
+          Affiliate Professorial Res Fellow
+        </b>
+        , School of Chemistry and Molecular Biosciences
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      >
+        <b>
+          ARC Australian Laureate Fellow
+        </b>
+        , The University of Queensland Diamantina Institute
+      </span>
+    </div>
+  </div>
+</div>
 `;
