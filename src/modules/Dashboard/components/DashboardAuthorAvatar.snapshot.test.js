@@ -1,5 +1,7 @@
+import React from 'react';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 import { authorDetails } from 'mock/data';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     // build full props list required by the component
@@ -7,12 +9,12 @@ function setup(testProps = {}) {
         ...testProps,
         values: authorDetails.uqresearcher,
     };
-    return getElement(DashboardAuthorAvatar, props);
+    return rtlRender(<DashboardAuthorAvatar {...props} />);
 }
 
 describe('Dashboard Author Details test', () => {
     it('Render the authors details as expected for a UQ researcher)', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 });

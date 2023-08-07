@@ -13,6 +13,12 @@ context('Dashboard', () => {
             cy.get('[data-testid=standard-card-espace-works-per-year]').should('exist');
             cy.get('[data-testid=standard-card-work-types-overview-content]').should('exist');
         });
+
+        it('should display orcid sync drawer', () => {
+            cy.get('[data-testid=help-icon-orcid]').click();
+            cy.get('[data-testid=orcid-upload-start-button]').click(); // close the drawer when done
+            cy.get('[data-testid=orcid-upload-start-button]').should('not.exist');
+        });
     });
 
     context('mobile', () => {

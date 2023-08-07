@@ -1,10 +1,53 @@
 import * as validation from './validation';
 import { locale } from 'locale';
-import { APP_URL } from 'config';
+import { APP_URL, viewRecordsConfig } from 'config';
 import Immutable from 'immutable';
 import { MEDIATED_ACCESS_ID } from 'config/general';
+import { isFileValid } from './validation';
+import { STATE_DELETED } from './viewRecord';
 
 describe('Validation method', () => {
+    it('isFileValid should validate filename', () => {
+        let validator = isFileValid(viewRecordsConfig);
+        expect(validator({ dsi_dsid: 'test.pdf' })).toBeTruthy();
+        expect(validator({ dsi_dsid: 'test_compressed.pdf' })).toBeTruthy();
+        expect(validator({ dsi_dsid: 'FezACML_test_compressed.xml' })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'stream_test_compressed.flv' })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'web_test_compressed.jpg' })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'preview_test_compressed.jpg' })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'presmd_test_compressed.xml' })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'test_compressed_t.jpg' })).toBeFalsy();
+
+        expect(validator({ dsi_dsid: 'test.pdf', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'test_compressed.pdf', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'FezACML_test_compressed.xml', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'stream_test_compressed.flv', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'web_test_compressed.jpg', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'preview_test_compressed.jpg', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'presmd_test_compressed.xml', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'test_compressed_t.jpg', dsi_state: STATE_DELETED })).toBeFalsy();
+
+        validator = isFileValid(viewRecordsConfig, true);
+        expect(validator({ dsi_dsid: 'test.pdf', dsi_state: STATE_DELETED })).toBeTruthy();
+        expect(validator({ dsi_dsid: 'test_compressed.pdf', dsi_state: STATE_DELETED })).toBeTruthy();
+        expect(validator({ dsi_dsid: 'FezACML_test_compressed.xml', dsi_state: STATE_DELETED })).toBeTruthy();
+        expect(validator({ dsi_dsid: 'stream_test_compressed.flv', dsi_state: STATE_DELETED })).toBeTruthy();
+        expect(validator({ dsi_dsid: 'web_test_compressed.jpg', dsi_state: STATE_DELETED })).toBeTruthy();
+        expect(validator({ dsi_dsid: 'preview_test_compressed.jpg', dsi_state: STATE_DELETED })).toBeTruthy();
+        expect(validator({ dsi_dsid: 'presmd_test_compressed.xml', dsi_state: STATE_DELETED })).toBeTruthy();
+        expect(validator({ dsi_dsid: 'test_compressed_t.jpg', dsi_state: STATE_DELETED })).toBeTruthy();
+
+        validator = isFileValid(viewRecordsConfig, true, true);
+        expect(validator({ dsi_dsid: 'test.pdf', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'test_compressed.pdf', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'FezACML_test_compressed.xml', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'stream_test_compressed.flv', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'web_test_compressed.jpg', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'preview_test_compressed.jpg', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'presmd_test_compressed.jpg', dsi_state: STATE_DELETED })).toBeFalsy();
+        expect(validator({ dsi_dsid: 'test_compressed_t.jpg', dsi_state: STATE_DELETED })).toBeFalsy();
+    });
+
     it('should validate required', () => {
         const testFailValue = validation.required(null);
         expect(testFailValue).toEqual(locale.validationErrors.required);

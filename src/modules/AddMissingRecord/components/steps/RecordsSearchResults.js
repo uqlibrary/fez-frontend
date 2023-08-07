@@ -36,6 +36,7 @@ export default class RecordsSearchResults extends PureComponent {
     };
 
     componentDidUpdate() {
+        /* istanbul ignore else */
         if (this.showNewRecordButton && this.props.publicationsList.length === 0) {
             this.showNewRecordButton.focus();
         }

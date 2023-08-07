@@ -1,18 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
-<ForwardRef(Avatar)
-  aria-label="Photograph of  Professor undefined undefined"
-  src="https://its-ss-academicportal.s3.amazonaws.com/prod/uqresearchers/photo/thumbnail_14.jpg"
-  style={
-    Object {
-      "backgroundColor": "rgba(0,0,0,0.3)",
-      "backgroundSize": "cover, cover",
-      "height": 125,
-      "margin": 8,
-      "width": 125,
-    }
-  }
-  title="Professor undefined undefined"
-/>
+<div>
+  <div
+    aria-label="Photograph of  Professor undefined undefined"
+    class="MuiAvatar-root MuiAvatar-circular css-1wlk0hk-MuiAvatar-root"
+    style="background-size: cover, cover; background-color: rgba(0, 0, 0, 0.3); width: 125px; height: 125px; margin: 8px;"
+    title="Professor undefined undefined"
+  >
+    <img
+      class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+      src="https://its-ss-academicportal.s3.amazonaws.com/prod/uqresearchers/photo/thumbnail_14.jpg"
+    />
+  </div>
+</div>
 `;

@@ -61,7 +61,7 @@ describe('AttachedFiles component', () => {
         expect(queryByText('FezACML_UQ_252236.xml')).not.toBeInTheDocument();
         expect(queryByText('FezACML_UQ_eSpace_My_Research_091119.pdf.xml')).not.toBeInTheDocument();
         expect(queryByText('FezACML_UQ_eSpace_My_Research_091119_old.pdf.xml')).not.toBeInTheDocument();
-        expect(queryByText('presmd_MyUQeSpaceResearcherGuidelines.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_MyUQeSpaceResearcherGuidelines_compressed.xml')).not.toBeInTheDocument();
         expect(queryByText('presmd_MyUQeSpace_Researcher_Guidelines_current.xml')).not.toBeInTheDocument();
         expect(queryByText('presmd_My_UQ_eSpace_researcher_guidelines.xml')).not.toBeInTheDocument();
         expect(queryByText('presmd_My_UQ_eSpace_researcher_guidelines_2012.xml')).not.toBeInTheDocument();
@@ -96,7 +96,7 @@ describe('AttachedFiles component', () => {
         expect(getByText('FezACML_UQ_252236.xml')).toBeInTheDocument();
         expect(getByText('FezACML_UQ_eSpace_My_Research_091119.pdf.xml')).toBeInTheDocument();
         expect(getByText('FezACML_UQ_eSpace_My_Research_091119_old.pdf.xml')).toBeInTheDocument();
-        expect(getByText('presmd_MyUQeSpaceResearcherGuidelines.xml')).toBeInTheDocument();
+        expect(getByText('presmd_MyUQeSpaceResearcherGuidelines_compressed.xml')).toBeInTheDocument();
         expect(getByText('presmd_MyUQeSpace_Researcher_Guidelines_current.xml')).toBeInTheDocument();
         expect(getByText('presmd_My_UQ_eSpace_researcher_guidelines.xml')).toBeInTheDocument();
         expect(getByText('presmd_My_UQ_eSpace_researcher_guidelines_2012.xml')).toBeInTheDocument();

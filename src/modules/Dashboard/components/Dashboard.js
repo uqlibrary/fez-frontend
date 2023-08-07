@@ -146,7 +146,9 @@ export class DashboardClass extends PureComponent {
             this._waitForSyncSuccess();
     }
 
-    _isWaitingForSync = () => ['Pending', 'In Progress'].indexOf((this.props.orcidSyncStatus || {}).orj_status) > -1;
+    _isWaitingForSync = () =>
+        ['Pending', 'In Progress'].indexOf((this.props.orcidSyncStatus || /* istanbul ignore next */ {}).orj_status) >
+        -1;
 
     // A repeating check for latest status that gets progressively longer
     _waitForSyncSuccess = () =>

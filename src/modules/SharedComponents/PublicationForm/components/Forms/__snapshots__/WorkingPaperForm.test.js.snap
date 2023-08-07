@@ -76,6 +76,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
             placeholder="Title of paper"
             required={true}
             rows={3}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -238,6 +239,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
             name="fez_record_search_key_total_pages.rek_total_pages"
             normalize={[Function]}
             placeholder="Enter total number of pages in the paper."
+            textFieldId="rek-total-pages"
             type="text"
           />
         </ForwardRef(Grid)>
@@ -385,6 +387,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
             name="rek_description"
             placeholder="Provide an abstract or summary of the work."
             rows={3}
+            textFieldId="rek-description"
             type="text"
           />
         </ForwardRef(Grid)>
@@ -583,6 +586,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
             name="comments"
             placeholder="Add any additional information here"
             rows={1}
+            textFieldId="comments"
             type="text"
           />
         </ForwardRef(Grid)>
@@ -647,6 +651,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
             label="Link"
             name="rek_link"
             placeholder="Type URL for this work"
+            textFieldId="rek-link"
             type="text"
             validate={
               Array [

@@ -1,8 +1,26 @@
+import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
 import Immutable from 'immutable';
-import { default as formLocale } from 'locale/publicationForm';
+import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
-function setup(testProps) {
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+            />
+        );
+    },
+}));
+
+function setup(testProps = {}, renderMethod = render) {
     const props = {
         autofill: jest.fn(),
         blur: jest.fn(),
@@ -44,106 +62,83 @@ function setup(testProps) {
         ...testProps,
     };
 
-    return getElement(AddDataCollection, props);
+    return renderMethod(
+        <WithReduxStore>
+            <WithRouter>
+                <AddDataCollection {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('AddDataCollection test', () => {
     it('should render data set form', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(28);
-        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
+        const { container, getByRole } = setup();
+        expect(container).toMatchSnapshot();
+        expect(container.getElementsByTagName('field').length).toEqual(28);
+        expect(getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
+        expect(getByRole('button', { name: 'Submit for approval' })).toBeInTheDocument();
     });
 
     it('should render component with all fields disabled', () => {
-        const wrapper = setup({ submitting: true });
-        wrapper.find('Field').forEach(field => {
-            expect(field.props().disabled).toEqual(true);
-        });
+        const { container } = setup({ submitting: true });
+        expect(container.querySelectorAll('field[disabled=true]').length).toEqual(28);
     });
 
     it('should disable submit button if invalid form data before submit', () => {
-        const wrapper = setup({ disableSubmit: true });
-        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
-
-        wrapper.find('ForwardRef(Button)').forEach(field => {
-            if (field.props().label === formLocale.addDataset.submit) {
-                expect(field.props().disabled).toEqual(true);
-            }
-        });
+        const { getByRole } = setup({ disableSubmit: true });
+        expect(getByRole('button', { name: 'Submit for approval' })).toBeDisabled();
     });
 
     it('should not disable submit button if form submit has failed', () => {
-        const wrapper = setup({ submitFailed: true });
-        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
-
-        wrapper.find('ForwardRef(Button)').forEach(field => {
-            if (field.props().label === formLocale.addDataset.submit) {
-                expect(field.props().disabled).toEqual(false);
-            }
-        });
+        const { getByRole } = setup({ submitFailed: true });
+        expect(getByRole('button', { name: 'Submit for approval' })).not.toBeDisabled();
     });
 
     it('should redirect to cancel page', () => {
         const { location } = window;
         delete window.location;
         window.location = { reload: jest.fn() };
-        setup({})
-            .instance()
-            ._restartWorkflow();
+        const { getByRole } = setup();
+        fireEvent.click(getByRole('button', { name: 'Cancel' }));
         expect(window.location.reload).toHaveBeenCalled();
         window.location = location;
     });
 
-    it('should navigate to my datasets url', () => {
+    it('should navigate to my datasets url', async () => {
         const clearNewRecordFn = jest.fn();
         const pushFn = jest.fn();
-        const wrapper = setup({
-            actions: {
-                clearNewRecord: clearNewRecordFn,
-            },
-            history: {
-                push: pushFn,
-            },
+        const { getByTestId, rerender } = setup({
+            submitSucceeded: false,
         });
 
-        wrapper.instance()._navigateToMyDatasets();
+        setup(
+            {
+                submitSucceeded: true,
+                actions: {
+                    clearNewRecord: clearNewRecordFn,
+                },
+                history: {
+                    push: pushFn,
+                },
+            },
+            rerender,
+        );
+
+        fireEvent.click(getByTestId('confirm-dialog-box'));
 
         expect(clearNewRecordFn).toHaveBeenCalled();
         expect(pushFn).toHaveBeenCalledWith('/data-collections/mine');
     });
 
-    it('should show confirmation on form submitted', () => {
-        const showConfirmationFn = jest.fn();
-        const wrapper = setup({});
-        wrapper.instance().confirmationBox = { showConfirmation: showConfirmationFn };
-        wrapper.setProps({
-            submitSucceeded: true,
-        });
-        expect(showConfirmationFn).toHaveBeenCalled();
-
-        showConfirmationFn.mockClear();
-        wrapper.setProps({
-            submitSucceeded: true,
-        });
-        expect(showConfirmationFn).not.toBeCalled();
-    });
-
-    it('should set confirmation box ref', () => {
-        const wrapper = setup({});
-        wrapper.instance()._handleRef({ ref: 'test' });
-        expect(wrapper.instance().confirmationBox).toEqual({ ref: 'test' });
-    });
-
     it('should get save confirmation locale correctly', () => {
-        const wrapper = setup({
-            newRecordFileUploadingOrIssueError: true,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container, rerender } = setup();
+        setup({ newRecordFileUploadingOrIssueError: true, submitSucceeded: true }, rerender);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with an invalid collection date range', () => {
-        const wrapper = setup({
+        const { container } = setup({
             initialValues: {
                 fez_record_search_key_start_date: {
                     rek_start_date: '2018-06-30',
@@ -153,11 +148,12 @@ describe('AddDataCollection test', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        // hasError Date range is not valid
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with a valid collection date range', () => {
-        const wrapper = setup({
+        const { container } = setup({
             initialValues: {
                 fez_record_search_key_start_date: {
                     rek_start_date: '2018-06-30',
@@ -167,14 +163,14 @@ describe('AddDataCollection test', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should not generate an error when licence locale is missing', () => {
         // licence text not supplied
-        expect(toJson(licenseText())).toMatchSnapshot();
+        expect(licenseText()).toMatchSnapshot();
 
         // licence text lacks required internal structure
-        expect(toJson(licenseText(['something']))).toMatchSnapshot();
+        expect(licenseText(['something'])).toMatchSnapshot();
     });
 });

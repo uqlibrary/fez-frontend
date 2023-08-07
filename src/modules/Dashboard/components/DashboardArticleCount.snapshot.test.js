@@ -1,5 +1,7 @@
+import React from 'react';
 import { DashboardArticleCount, styles } from './DashboardArticleCount';
 import { currentAuthorStats, authorDetails } from 'mock/data';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     // build full props list required by the component
@@ -7,7 +9,7 @@ function setup(testProps = {}) {
         classes: {},
         ...testProps,
     };
-    return getElement(DashboardArticleCount, props);
+    return rtlRender(<DashboardArticleCount {...props} />);
 }
 
 describe('Dashboard Article Count test', () => {
@@ -15,20 +17,20 @@ describe('Dashboard Article Count test', () => {
         const articleCount = currentAuthorStats.total;
         const articleFirstYear = authorDetails.uqresearcher.espace.first_year;
         const articleLastYear = authorDetails.uqresearcher.espace.last_year;
-        const wrapper = setup({
+        const { container } = setup({
             articleCount,
             articleFirstYear,
             articleLastYear,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should not render anything if any data is missing', () => {
         const articleCount = currentAuthorStats.total;
-        const wrapper = setup({
+        const { container } = setup({
             articleCount,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should have a style generator', () => {
