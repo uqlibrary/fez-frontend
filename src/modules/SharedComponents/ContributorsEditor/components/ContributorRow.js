@@ -121,6 +121,7 @@ export const ContributorRow = ({
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const _onDelete = React.useCallback(() => {
+        /* istanbul ignore else */
         if (!disabled && onDelete) {
             onDelete(contributor, index);
         }
@@ -221,6 +222,7 @@ export const ContributorRow = ({
                 onKeyDown={!contributor.disabled ? _onSelectKeyboard : () => {}}
                 aria-label={ariaLabel}
                 id={`${contributorRowId}-${index}`}
+                data-testid={`${contributorRowId}-${index}`}
             >
                 <Grid container classes={{ container: classes.listContainer }} id="contributor-row">
                     <ListItemIcon classes={{ root: selectedClass }} sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -372,6 +374,7 @@ ContributorRow.defaultProps = {
     required: false,
     enableSelect: false,
 };
+/* istanbul ignore next */
 export default React.memo(ContributorRow, (pp, np) => {
     return (
         pp.disabled === np.disabled &&

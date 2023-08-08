@@ -1,5 +1,7 @@
+import React from 'react';
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ } from 'config/general';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -15,22 +17,22 @@ function setup(testProps = {}) {
         },
         ...testProps,
     };
-    return getElement(OrgAffiliationTypeSelector, props);
+    return rtlRender(<OrgAffiliationTypeSelector {...props} />);
 }
 
 describe('OrgAffiliationTypeSelector tests ', () => {
     it('should render component with default values', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with UQ selected', () => {
-        const wrapper = setup({ affiliation: AFFILIATION_TYPE_UQ });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ affiliation: AFFILIATION_TYPE_UQ });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with Not UQ selected', () => {
-        const wrapper = setup({ affiliation: AFFILIATION_TYPE_NOT_UQ });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ affiliation: AFFILIATION_TYPE_NOT_UQ });
+        expect(container).toMatchSnapshot();
     });
 });

@@ -1,4 +1,6 @@
+import React from 'react';
 import AuthorLinkingField from './AuthorLinkingField';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -7,12 +9,12 @@ function setup(testProps = {}) {
         },
         ...testProps,
     };
-    return getElement(AuthorLinkingField, props);
+    return rtlRender(<AuthorLinkingField {...props} />);
 }
 
 describe('Component AuthorLinkingField', () => {
     it('should render as expected', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 });

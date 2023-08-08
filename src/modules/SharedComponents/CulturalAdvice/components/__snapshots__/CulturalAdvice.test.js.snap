@@ -1,19 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component CulturalAdvice should render component 1`] = `
-<StandardCard
-  primaryHeader={true}
-  title="Cultural advice"
->
-  <ForwardRef(Typography)
-    variant="body2"
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+    data-testid="standard-card-cultural-advice"
+    id="standard-card-cultural-advice"
   >
-    <span>
-      Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
-      <br />
-      <br />
-      Some material may contain language, terms, or descriptions that reflect the authors’ views, or those of the period in which the item was written or recorded but may be considered inappropriate today. These views are not necessarily the views of The University of Queensland. While the information may not reflect current understandings, it is provided in an historical context.
-    </span>
-  </ForwardRef(Typography)>
-</StandardCard>
+    <div
+      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-3 css-185gdzj-MuiCardHeader-root"
+    >
+      <div
+        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+      >
+        <h3
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+          data-testid="standard-card-cultural-advice-header"
+          id="standard-card-cultural-advice-header"
+        >
+          Cultural advice
+        </h3>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-cultural-advice-content"
+      data-testid="standard-card-cultural-advice-content"
+      id="standard-card-cultural-advice-content"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+      >
+        <span>
+          Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
+          <br />
+          <br />
+          Some material may contain language, terms, or descriptions that reflect the authors’ views, or those of the period in which the item was written or recorded but may be considered inappropriate today. These views are not necessarily the views of The University of Queensland. While the information may not reflect current understandings, it is provided in an historical context.
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
 `;

@@ -1,619 +1,486 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
-      }
-    }
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
+<div>
   <br />
   Step 2 - Select your name from the list below
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": "header",
-      }
-    }
+  <li
+    class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
-    <ForwardRef(ListItemIcon)
-      sx={
-        Object {
-          "display": Object {
-            "sm": "block",
-            "xs": "none",
-          },
-        }
-      }
+    <div
+      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
     >
-      <Memo(ForwardRef(PeopleIcon)) />
-    </ForwardRef(ListItemIcon)>
-    <ForwardRef(Grid)
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-    >
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={5}
-        xs={10}
+      <div
+        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
       >
-        <ForwardRef(ListItemText)
-          secondary="Name as published"
-          secondaryTypographyProps={
-            Object {
-              "variant": "caption",
-            }
-          }
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm={4}
-        xs={12}
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="PeopleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
-        <ForwardRef(ListItemText)
-          secondary="UQ identifier / Organisation"
-          secondaryTypographyProps={
-            Object {
-              "variant": "caption",
-            }
-          }
-          sx={
-            Object {
-              "display": Object {
-                "sm": "block",
-                "xs": "none",
-              },
-            }
-          }
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={4}
-        sm={5}
-        xs={12}
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(ListItemSecondaryAction)
-      classes={
-        Object {
-          "root": undefined,
-        }
-      }
-    >
-      <ForwardRef(ListItemText)
-        classes={
-          Object {
-            "secondary": "right paddingRight40",
-          }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
-          }
-        }
-      />
-    </ForwardRef(ListItemSecondaryAction)>
-    <ForwardRef(ListItemSecondaryAction)>
-      <ForwardRef(Tooltip)
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove all records"
-      >
-        <span>
-          <ForwardRef(IconButton)
-            aria-label="Remove all records"
-            disabled={false}
-            onClick={[Function]}
-            size="large"
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
+        >
+          <div
+            class="MuiListItemText-root css-tlelie-MuiListItemText-root"
           >
-            <Memo(ForwardRef(DeleteForeverIcon)) />
-          </ForwardRef(IconButton)>
-        </span>
-      </ForwardRef(Tooltip)>
-    </ForwardRef(ListItemSecondaryAction)>
-  </ForwardRef(ListItem)>
-</Fragment>
+            <span
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            >
+              Name as published
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+        >
+          <div
+            class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            >
+              UQ identifier / Organisation
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+      >
+        <div
+          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+          >
+            Reorder records
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+    >
+      <span
+        aria-label="Remove all records"
+        class=""
+        data-mui-internal-clone-element="true"
+      >
+        <button
+          aria-label="Remove all records"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="DeleteForeverIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </span>
+    </div>
+  </li>
+</div>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
-      }
-    }
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": "header",
-      }
-    }
+<div>
+  <li
+    class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
-    <ForwardRef(ListItemIcon)
-      sx={
-        Object {
-          "display": Object {
-            "sm": "block",
-            "xs": "none",
-          },
-        }
-      }
+    <div
+      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
     >
-      <Memo(ForwardRef(PeopleIcon)) />
-    </ForwardRef(ListItemIcon)>
-    <ForwardRef(Grid)
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-    >
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={5}
-        xs={10}
+      <div
+        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
       >
-        <ForwardRef(ListItemText)
-          secondary="Name as published"
-          secondaryTypographyProps={
-            Object {
-              "variant": "caption",
-            }
-          }
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={4}
-        sm={5}
-        xs={12}
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(ListItemSecondaryAction)
-      classes={
-        Object {
-          "root": undefined,
-        }
-      }
-    >
-      <ForwardRef(ListItemText)
-        classes={
-          Object {
-            "secondary": "right paddingRight40",
-          }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
-          }
-        }
-      />
-    </ForwardRef(ListItemSecondaryAction)>
-    <ForwardRef(ListItemSecondaryAction)>
-      <ForwardRef(Tooltip)
-        disableFocusListener={true}
-        disableHoverListener={true}
-        disableTouchListener={true}
-        title="Remove all records"
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="PeopleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
-        <span>
-          <ForwardRef(IconButton)
-            aria-label="Remove all records"
-            disabled={true}
-            onClick={[Function]}
-            size="large"
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
+        >
+          <div
+            class="MuiListItemText-root css-tlelie-MuiListItemText-root"
           >
-            <Memo(ForwardRef(DeleteForeverIcon)) />
-          </ForwardRef(IconButton)>
-        </span>
-      </ForwardRef(Tooltip)>
-    </ForwardRef(ListItemSecondaryAction)>
-  </ForwardRef(ListItem)>
-</Fragment>
+            <span
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            >
+              Name as published
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+      >
+        <div
+          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+          >
+            Reorder records
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+    >
+      <span
+        aria-label="Remove all records"
+        class=""
+        data-mui-internal-clone-element="true"
+      >
+        <button
+          aria-label="Remove all records"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="DeleteForeverIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+            />
+          </svg>
+        </button>
+      </span>
+    </div>
+  </li>
+</div>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
-      }
-    }
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": "header",
-      }
-    }
+<div>
+  <li
+    class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
-    <ForwardRef(ListItemIcon)
-      sx={
-        Object {
-          "display": Object {
-            "sm": "block",
-            "xs": "none",
-          },
-        }
-      }
+    <div
+      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
     >
-      <Memo(ForwardRef(PeopleIcon)) />
-    </ForwardRef(ListItemIcon)>
-    <ForwardRef(Grid)
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-    >
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={5}
-        xs={10}
+      <div
+        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
       >
-        <ForwardRef(ListItemText)
-          secondary="Name as published"
-          secondaryTypographyProps={
-            Object {
-              "variant": "caption",
-            }
-          }
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={4}
-        sm={5}
-        xs={12}
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(ListItemSecondaryAction)
-      classes={
-        Object {
-          "root": undefined,
-        }
-      }
-    >
-      <ForwardRef(ListItemText)
-        classes={
-          Object {
-            "secondary": "right paddingRight40",
-          }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
-          }
-        }
-      />
-    </ForwardRef(ListItemSecondaryAction)>
-    <ForwardRef(ListItemSecondaryAction)>
-      <ForwardRef(Tooltip)
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove all records"
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="PeopleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
-        <span>
-          <ForwardRef(IconButton)
-            aria-label="Remove all records"
-            disabled={false}
-            onClick={[Function]}
-            size="large"
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
+        >
+          <div
+            class="MuiListItemText-root css-tlelie-MuiListItemText-root"
           >
-            <Memo(ForwardRef(DeleteForeverIcon)) />
-          </ForwardRef(IconButton)>
-        </span>
-      </ForwardRef(Tooltip)>
-    </ForwardRef(ListItemSecondaryAction)>
-  </ForwardRef(ListItem)>
-</Fragment>
+            <span
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            >
+              Name as published
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+      >
+        <div
+          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+          >
+            Reorder records
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+    >
+      <span
+        aria-label="Remove all records"
+        class=""
+        data-mui-internal-clone-element="true"
+      >
+        <button
+          aria-label="Remove all records"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="DeleteForeverIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </span>
+    </div>
+  </li>
+</div>
 `;
 
 exports[`Component ContributorRowHeader header for creator role 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
-      }
-    }
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": "header",
-      }
-    }
+<div>
+  <li
+    class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
-    <ForwardRef(ListItemIcon)
-      sx={
-        Object {
-          "display": Object {
-            "sm": "block",
-            "xs": "none",
-          },
-        }
-      }
+    <div
+      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
     >
-      <Memo(ForwardRef(PeopleIcon)) />
-    </ForwardRef(ListItemIcon)>
-    <ForwardRef(Grid)
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-    >
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={5}
-        xs={10}
+      <div
+        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
       >
-        <ForwardRef(ListItemText)
-          secondary="Name as published"
-          secondaryTypographyProps={
-            Object {
-              "variant": "caption",
-            }
-          }
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={4}
-        sm={5}
-        xs={12}
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="PeopleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
-        <ForwardRef(ListItemText)
-          secondary="Role"
-          secondaryTypographyProps={
-            Object {
-              "variant": "caption",
-            }
-          }
-          sx={
-            Object {
-              "display": Object {
-                "sm": "block",
-                "xs": "none",
-              },
-            }
-          }
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-    <ForwardRef(ListItemSecondaryAction)
-      classes={
-        Object {
-          "root": undefined,
-        }
-      }
-    >
-      <ForwardRef(ListItemText)
-        classes={
-          Object {
-            "secondary": "right paddingRight40",
-          }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
-          }
-        }
-      />
-    </ForwardRef(ListItemSecondaryAction)>
-    <ForwardRef(ListItemSecondaryAction)>
-      <ForwardRef(Tooltip)
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove all records"
-      >
-        <span>
-          <ForwardRef(IconButton)
-            aria-label="Remove all records"
-            disabled={false}
-            onClick={[Function]}
-            size="large"
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
+        >
+          <div
+            class="MuiListItemText-root css-tlelie-MuiListItemText-root"
           >
-            <Memo(ForwardRef(DeleteForeverIcon)) />
-          </ForwardRef(IconButton)>
-        </span>
-      </ForwardRef(Tooltip)>
-    </ForwardRef(ListItemSecondaryAction)>
-  </ForwardRef(ListItem)>
-</Fragment>
+            <span
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            >
+              Name as published
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
+        >
+          <div
+            class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            >
+              Role
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+      >
+        <div
+          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+          >
+            Reorder records
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+    >
+      <span
+        aria-label="Remove all records"
+        class=""
+        data-mui-internal-clone-element="true"
+      >
+        <button
+          aria-label="Remove all records"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="DeleteForeverIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </span>
+    </div>
+  </li>
+</div>
 `;
 
 exports[`Component ContributorRowHeader should display infinite class 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
-      }
-    }
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
+<div>
+  <li
+    class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
-    <ForwardRef(ListItemIcon)
-      sx={
-        Object {
-          "display": Object {
-            "sm": "block",
-            "xs": "none",
-          },
-        }
-      }
+    <div
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
     >
-      <Memo(ForwardRef(PeopleIcon)) />
-    </ForwardRef(ListItemIcon)>
-    <ForwardRef(Grid)
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-    >
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={5}
-        xs={10}
+      <div
+        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
       >
-        <ForwardRef(ListItemText)
-          secondary="Name as published"
-          secondaryTypographyProps={
-            Object {
-              "variant": "caption",
-            }
-          }
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={4}
-        sm={5}
-        xs={12}
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(ListItemSecondaryAction)
-      classes={
-        Object {
-          "root": undefined,
-        }
-      }
-    >
-      <ForwardRef(ListItemText)
-        classes={
-          Object {
-            "secondary": "undefined test-class-1",
-          }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
-          }
-        }
-      />
-    </ForwardRef(ListItemSecondaryAction)>
-    <ForwardRef(ListItemSecondaryAction)>
-      <ForwardRef(Tooltip)
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove all records"
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="PeopleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
-        <span>
-          <ForwardRef(IconButton)
-            aria-label="Remove all records"
-            disabled={false}
-            onClick={[Function]}
-            size="large"
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
+        >
+          <div
+            class="MuiListItemText-root css-tlelie-MuiListItemText-root"
           >
-            <Memo(ForwardRef(DeleteForeverIcon)) />
-          </ForwardRef(IconButton)>
-        </span>
-      </ForwardRef(Tooltip)>
-    </ForwardRef(ListItemSecondaryAction)>
-  </ForwardRef(ListItem)>
-</Fragment>
+            <span
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            >
+              Name as published
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+      >
+        <div
+          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary undefined test-class-1 css-1vklb8l-MuiTypography-root"
+          >
+            Reorder records
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+    >
+      <span
+        aria-label="Remove all records"
+        class=""
+        data-mui-internal-clone-element="true"
+      >
+        <button
+          aria-label="Remove all records"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="DeleteForeverIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </span>
+    </div>
+  </li>
+</div>
 `;
 
 exports[`Component ContributorRowHeader should have a proper style generator 1`] = `
@@ -638,116 +505,187 @@ Object {
 `;
 
 exports[`Component ContributorRowHeader should use extra padding if row is editable 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
-      }
-    }
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
+<div>
+  <li
+    class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
-    <ForwardRef(ListItemIcon)
-      sx={
-        Object {
-          "display": Object {
-            "sm": "block",
-            "xs": "none",
-          },
-        }
-      }
+    <div
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
     >
-      <Memo(ForwardRef(PeopleIcon)) />
-    </ForwardRef(ListItemIcon)>
-    <ForwardRef(Grid)
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-    >
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={5}
-        xs={10}
+      <div
+        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
       >
-        <ForwardRef(ListItemText)
-          secondary="Name as published"
-          secondaryTypographyProps={
-            Object {
-              "variant": "caption",
-            }
-          }
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={4}
-        sm={5}
-        xs={12}
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(ListItemSecondaryAction)
-      classes={
-        Object {
-          "root": undefined,
-        }
-      }
-    >
-      <ForwardRef(ListItemText)
-        classes={
-          Object {
-            "secondary": "undefined test-class-1",
-          }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
-          }
-        }
-      />
-    </ForwardRef(ListItemSecondaryAction)>
-    <ForwardRef(ListItemSecondaryAction)>
-      <ForwardRef(Tooltip)
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove all records"
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="PeopleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
-        <span>
-          <ForwardRef(IconButton)
-            aria-label="Remove all records"
-            disabled={false}
-            onClick={[Function]}
-            size="large"
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
+        >
+          <div
+            class="MuiListItemText-root css-tlelie-MuiListItemText-root"
           >
-            <Memo(ForwardRef(DeleteForeverIcon)) />
-          </ForwardRef(IconButton)>
-        </span>
-      </ForwardRef(Tooltip)>
-    </ForwardRef(ListItemSecondaryAction)>
-  </ForwardRef(ListItem)>
-</Fragment>
+            <span
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            >
+              Name as published
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+      >
+        <div
+          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary undefined test-class-1 css-1vklb8l-MuiTypography-root"
+          >
+            Reorder records
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+    >
+      <span
+        aria-label="Remove all records"
+        class=""
+        data-mui-internal-clone-element="true"
+      >
+        <button
+          aria-label="Remove all records"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="DeleteForeverIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </span>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
+<div
+  aria-hidden="true"
+>
+  <li
+    class="MuiListItem-container css-oyakqy-MuiListItem-container"
+  >
+    <div
+      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+    >
+      <div
+        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="PeopleIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
+        >
+          <div
+            class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            >
+              Name as published
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+      >
+        <div
+          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+          >
+            Reorder records
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+    >
+      <span
+        aria-label="Remove all records"
+        class=""
+        data-mui-internal-clone-element="true"
+      >
+        <button
+          aria-label="Remove all records"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="DeleteForeverIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </span>
+    </div>
+  </li>
+</div>
 `;

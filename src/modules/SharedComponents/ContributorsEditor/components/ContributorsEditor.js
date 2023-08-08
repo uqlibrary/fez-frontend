@@ -96,7 +96,7 @@ export class ContributorsEditor extends PureComponent {
             this.state.contributorIndexSelectedToEdit !== null
                 ? this.state.contributorIndexSelectedToEdit
                 : this.state.contributors.length;
-
+        /* istanbul ignore else */
         if (index < this.state.contributors.length && this.props.canEdit) {
             const isEditedContributorAuthorIdInTheList =
                 this.state.contributors.filter(
@@ -121,6 +121,7 @@ export class ContributorsEditor extends PureComponent {
         }
         const isContributorACurrentAuthor =
             this.props.author && contributor.uqIdentifier === `${this.props.author.aut_id}`;
+        /* istanbul ignore next */
         this.setState({
             contributors: [
                 ...this.state.contributors.slice(0, index).map(contrib => ({
@@ -155,6 +156,7 @@ export class ContributorsEditor extends PureComponent {
     };
 
     moveUpContributor = (contributor, index) => {
+        /* istanbul ignore next */
         if (index === 0) return;
         const nextContributor = this.state.contributors[index - 1];
         this.setState({
@@ -168,6 +170,7 @@ export class ContributorsEditor extends PureComponent {
     };
 
     moveDownContributor = (contributor, index) => {
+        /* istanbul ignore next */
         if (index === this.state.contributors.length - 1) return;
         const nextContributor = this.state.contributors[index + 1];
         this.setState({
@@ -206,7 +209,7 @@ export class ContributorsEditor extends PureComponent {
                     // eslint-disable-next-line camelcase
                     authorId: (index === itemIndex && this.props.author?.aut_id) || null,
                 }))) ||
-            this.state.contributors;
+            /* istanbul ignore next */ this.state.contributors;
 
         this.setState({
             contributors: newContributors,

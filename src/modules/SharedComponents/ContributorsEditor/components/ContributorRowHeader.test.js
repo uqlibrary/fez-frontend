@@ -1,3 +1,5 @@
+import React from 'react';
+import { rtlRender, fireEvent, waitFor } from 'test-utils';
 import { ContributorRowHeader, styles } from './ContributorRowHeader';
 
 function setup(testProps = {}) {
@@ -18,72 +20,55 @@ function setup(testProps = {}) {
         },
         ...testProps,
     };
-    return getElement(ContributorRowHeader, props);
+    return rtlRender(<ContributorRowHeader {...props} />);
 }
 
 describe('Component ContributorRowHeader', () => {
     it('header for contributor editor control with name and delete all button only', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('header for contributor editor control with all options', () => {
-        const wrapper = setup({ showIdentifierLookup: true, showContributorAssignment: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ showIdentifierLookup: true, showContributorAssignment: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('header for creator role', () => {
-        const wrapper = setup({ showRoleInput: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ showRoleInput: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('header for contributor editor control with delete all disabled', () => {
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
     });
 
-    it('should call shouldComponentUpdate when something changes', () => {
-        const testFunction = jest.fn();
-        const wrapper = setup({ showContributorAssignment: false });
-        wrapper.setProps({ showContributorAssignment: true });
-        wrapper.instance().shouldComponentUpdate = testFunction;
-        expect(testFunction).toHaveBeenCalled;
-    });
+    it('triggers the confirmation box', async () => {
+        const { getByRole, getByTestId, container } = setup();
 
-    it('triggers the confirmation box', () => {
-        const testFunction = jest.fn();
-        const wrapper = setup();
-        wrapper.instance().confirmationBox = { showConfirmation: testFunction };
-        wrapper.instance()._showConfirmation();
-        expect(testFunction).toHaveBeenCalled;
-    });
-
-    it('set confirmation box ref', () => {
-        const wrapper = setup();
-        wrapper
-            .find('WithStyles(ConfirmDialogBox)')
-            .props()
-            .onRef('testRef');
-        expect(wrapper.instance().confirmationBox).toBe('testRef');
+        fireEvent.click(getByRole('button', { name: 'Remove all records' }));
+        await waitFor(() => getByTestId('confirm-dialog-box'));
+        expect(container).toMatchSnapshot();
     });
 
     it('should display infinite class', () => {
-        const wrapper = setup({
+        const { container } = setup({
             isInfinite: true,
             classes: {
                 infinitePaddingRight: 'test-class-1',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
     it('should use extra padding if row is editable', () => {
-        const wrapper = setup({
+        const { container } = setup({
             canEdit: true,
             classes: {
                 paddingRightEdit: 'test-class-1',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should have a proper style generator', () => {

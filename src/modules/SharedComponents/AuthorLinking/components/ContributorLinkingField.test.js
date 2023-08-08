@@ -1,4 +1,6 @@
+import React from 'react';
 import ContributorLinkingField from './ContributorLinkingField';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -7,7 +9,7 @@ function setup(testProps = {}) {
         },
         ...testProps,
     };
-    return getElement(ContributorLinkingField, props);
+    return rtlRender(<ContributorLinkingField {...props} />);
 }
 
 describe('Component ContributorLinkingField', () => {

@@ -1,16 +1,18 @@
+import React from 'react';
 import ContributorsEditorField from './ContributorsEditorField';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(ContributorsEditorField, props);
+    return rtlRender(<ContributorsEditorField {...props} />);
 }
 
 describe('ContributorsEditorField', () => {
     it('should render default component', () => {
-        const wrapper = setup({ input: { onChange: jest.fn() } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ input: { onChange: jest.fn() } });
+        expect(container).toMatchSnapshot();
     });
 });
