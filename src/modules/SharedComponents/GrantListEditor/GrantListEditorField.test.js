@@ -1,16 +1,18 @@
+import React from 'react';
 import GrantListEditorField from './GrantListEditorField';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(GrantListEditorField, props);
+    return rtlRender(<GrantListEditorField {...props} />);
 }
 
 describe('GrantListEditorField', () => {
     it('should render default component', () => {
-        const wrapper = setup({ input: { onChange: jest.fn() } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ input: { onChange: jest.fn() } });
+        expect(container).toMatchSnapshot();
     });
 });

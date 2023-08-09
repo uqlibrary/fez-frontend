@@ -1,6 +1,6 @@
 import React from 'react';
 import MyRecords from './MyRecords';
-import { pathConfig, general } from 'config';
+import { pathConfig } from 'config';
 import { locale } from 'locale';
 import { render, WithRouter, WithReduxStore, fireEvent, within } from 'test-utils';
 import { userIsAdmin } from 'hooks';

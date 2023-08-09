@@ -1,185 +1,122 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component OfflineSnackbar renderMessage returns expected message 1`] = `
-<ForwardRef(Grid)
-  alignContent="center"
-  alignItems="center"
-  container={true}
-  justifyContent="center"
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={true}
-  />
-  <ForwardRef(Grid)
-    item={true}
-    style={
-      Object {
-        "marginRight": 24,
-      }
-    }
-  >
-    icon
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-  >
-    message
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={true}
-  />
-</ForwardRef(Grid)>
-`;
-
 exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
-<div
-  className="offlineSnackbar"
->
-  <ForwardRef(Snackbar)
-    anchorOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "bottom",
-      }
-    }
-    autoHideDuration={5000}
-    message={
-      <ForwardRef(Grid)
-        alignContent="center"
-        alignItems="center"
-        container={true}
-        justifyContent="center"
+<div>
+  <div
+    class="offlineSnackbar"
+  >
+    <div
+      class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomLeft css-cpgvjg-MuiSnackbar-root"
+      role="presentation"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation6 MuiSnackbarContent-root css-o3qg8z-MuiPaper-root-MuiSnackbarContent-root"
+        direction="up"
+        role="alert"
+        style="opacity: 0; transform: scale(0.75, 0.5625); transition: opacity 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 130ms cubic-bezier(0.4, 0, 0.2, 1) 65ms;"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
-        />
-        <ForwardRef(Grid)
-          item={true}
-          style={
-            Object {
-              "marginRight": 24,
-            }
-          }
+        <div
+          class="MuiSnackbarContent-message css-1exqwzz-MuiSnackbarContent-message"
         >
-          <Memo />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-        >
-          Your connection is back online
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
-        />
-      </ForwardRef(Grid)>
-    }
-    onClose={[Function]}
-    open={true}
-  />
+          <div
+            class="MuiGrid-root MuiGrid-container css-1ensoyp-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              style="margin-right: 24px;"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="LinkIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              Your connection is back online
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
-<div
-  className="offlineSnackbar"
->
-  <ForwardRef(Snackbar)
-    anchorOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "bottom",
-      }
-    }
-    autoHideDuration={5000}
-    message={
-      <ForwardRef(Grid)
-        alignContent="center"
-        alignItems="center"
-        container={true}
-        justifyContent="center"
-      >
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
-        />
-        <ForwardRef(Grid)
-          item={true}
-          style={
-            Object {
-              "marginRight": 24,
-            }
-          }
-        >
-          <Memo />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-        >
-          Your connection is back online
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
-        />
-      </ForwardRef(Grid)>
-    }
-    onClose={[Function]}
-    open={false}
+<div>
+  <div
+    class="offlineSnackbar"
   />
 </div>
 `;
 
 exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
-<div
-  className="offlineSnackbar"
->
-  <ForwardRef(Snackbar)
-    anchorOrigin={
-      Object {
-        "horizontal": "left",
-        "vertical": "bottom",
-      }
-    }
-    autoHideDuration={null}
-    message={
-      <ForwardRef(Grid)
-        alignContent="center"
-        alignItems="center"
-        container={true}
-        justifyContent="center"
+<div>
+  <div
+    class="offlineSnackbar"
+  >
+    <div
+      class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomLeft css-cpgvjg-MuiSnackbar-root"
+      role="presentation"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation6 MuiSnackbarContent-root css-o3qg8z-MuiPaper-root-MuiSnackbarContent-root"
+        direction="up"
+        role="alert"
+        style="opacity: 1; transform: scale(1, 1); transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
-        />
-        <ForwardRef(Grid)
-          item={true}
-          style={
-            Object {
-              "marginRight": 24,
-            }
-          }
+        <div
+          class="MuiSnackbarContent-message css-1exqwzz-MuiSnackbarContent-message"
         >
-          <Memo />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-        >
-          Your connection is offline
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
-        />
-      </ForwardRef(Grid)>
-    }
-    onClose={[Function]}
-    open={true}
-  />
+          <div
+            class="MuiGrid-root MuiGrid-container css-1ensoyp-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              style="margin-right: 24px;"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="LinkOffIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17 7h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.43-.98 2.63-2.31 2.98l1.46 1.46C20.88 15.61 22 13.95 22 12c0-2.76-2.24-5-5-5zm-1 4h-2.19l2 2H16zM2 4.27l3.11 3.11C3.29 8.12 2 9.91 2 12c0 2.76 2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1 0-1.59 1.21-2.9 2.76-3.07L8.73 11H8v2h2.73L13 15.27V17h1.73l4.01 4L20 19.74 3.27 3 2 4.27z"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              Your connection is offline
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

@@ -1,13 +1,19 @@
 import React from 'react';
 import ContributorsEditorField from './ContributorsEditorField';
-import { rtlRender } from 'test-utils';
+import { render, WithRouter, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return rtlRender(<ContributorsEditorField {...props} />);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <ContributorsEditorField {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('ContributorsEditorField', () => {
