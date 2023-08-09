@@ -598,8 +598,10 @@ export default {
                     <div>
                         <p>The work you are attempting to access does not appear in our system.</p>
                         <p>
-                            If you believe this is in error, please
-                            <a href="mailto:espace@library.uq.edu.au"> contact the eSpace team.</a>
+                            If you believe this is in error, please{' '}
+                            <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us">
+                                contact the eSpace team.
+                            </a>
                         </p>
                     </div>
                 ),
