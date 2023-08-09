@@ -1,15 +1,23 @@
+import React from 'react';
 import IndexComponent from './Index';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
-    return getElement(IndexComponent, props, args);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <IndexComponent {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('Index page', () => {
     it('should render placeholders', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 });
