@@ -1,41 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CitationView test  should render component with correct props 1`] = `
-<span
-  className="citationClassName"
->
-   
-  Some text
-  :
-</span>
+<div>
+  <span
+    class="citationClassName"
+  >
+     
+    Some text
+    :
+  </span>
+</div>
 `;
 
 exports[`CitationView test  should render component with correct suffix 1`] = `
-<span
-  className="citationClassName"
->
-   
-  Some text.
-</span>
+<div>
+  <span
+    class="citationClassName"
+  >
+     
+    Some text.
+    
+  </span>
+</div>
 `;
 
 exports[`CitationView test  should render component with empty span 1`] = `
-<span
-  className=" empty"
-/>
+<div>
+  <span
+    class=" empty"
+  />
+</div>
 `;
 
 exports[`CitationView test  should render component with no className 1`] = `
-<span
-  className=""
->
-   
-  Some text.
-</span>
+<div>
+  <span
+    class=""
+  >
+     
+    Some text.
+    
+  </span>
+</div>
 `;
 
 exports[`CitationView test  should render component with no prefix or suffix 1`] = `
-<span
-  className="citationClassName empty"
-/>
+<div>
+  <span
+    class="citationClassName empty"
+  />
+</div>
 `;

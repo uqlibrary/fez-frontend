@@ -1,45 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UnpublishedBufferCitationView test button click sets value should render empty component with no date 1`] = `
-<ForwardRef(Grid)
-  alignItems="center"
-  container={true}
->
-  <ForwardRef(Grid)
-    item={true}
-    style={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-    xs="auto"
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
   >
-    <ForwardRef(Typography)
-      variant="caption"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+      style="flex-grow: 1;"
     >
-      <i>
-        <CitationView
-          prefix=" "
-          suffix=", "
+      <span
+        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      >
+        <i>
+          <span
+            class=" empty"
+          />
+        </i>
+        <span
+          class="citationDate empty"
         />
-      </i>
-      <DateCitationView
-        className="citationDate"
-        forceSpecifiedFormat={true}
-        format="DD/MM/YYYY"
-        isLocalised={true}
-        prefix="Created "
-        suffix=", "
-      />
-      <DateCitationView
-        className="citationDate"
-        forceSpecifiedFormat={true}
-        format="DD/MM/YYYY"
-        isLocalised={true}
-        prefix="Updated "
-        suffix="."
-      />
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+        <span
+          class="citationDate empty"
+        />
+      </span>
+    </div>
+  </div>
+</div>
 `;

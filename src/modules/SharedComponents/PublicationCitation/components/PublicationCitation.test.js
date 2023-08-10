@@ -1,44 +1,52 @@
+import React from 'react';
 import { PublicationCitation, styles } from './PublicationCitation';
 import { mockRecordToFix, journalArticle } from 'mock/data/testing/records';
+import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         classes: {},
         publication: mockRecordToFix,
         history: { push: jest.fn() },
-        actions: {
+        actions: testProps.actions || {
             setRecordToView: jest.fn(),
         },
         hideLinks: false,
         citationStyle: 'header',
         ...testProps,
     };
-    return getElement(PublicationCitation, props);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <PublicationCitation {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('PublicationCitation ', () => {
     it('should render component with default item', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with default item with image support', () => {
-        const wrapper = setup({
+        const { container } = setup({
             showImageThumbnails: true,
             publication: { ...journalArticle, rek_display_type_lookup: 'Image' },
             security: { isAdmin: true, isAuthor: true },
         });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with default item without image, if not set to show thumbs', () => {
-        const wrapper = setup({ publication: { ...journalArticle, rek_display_type_lookup: 'Image' } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: { ...journalArticle, rek_display_type_lookup: 'Image' } });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with default item with image support, if item not in the whitelist but has an advisory', () => {
-        const wrapper = setup({
+        const { container } = setup({
             showImageThumbnails: true,
             publication: {
                 ...journalArticle,
@@ -47,15 +55,15 @@ describe('PublicationCitation ', () => {
             },
             security: { isAdmin: false, isAuthor: false },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component without image if whitelisted, but no datastream', () => {
-        const wrapper = setup({
+        const { container } = setup({
             showImageThumbnails: true,
             publication: { ...journalArticle, rek_display_type_lookup: 'Image', fez_datastream_info: [] },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should have a proper style generator', () => {
@@ -75,35 +83,28 @@ describe('PublicationCitation ', () => {
     });
 
     it('should render component with default item without links to title and doi', () => {
-        const wrapper = setup({ hideLinks: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ hideLinks: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with default list hiding the difference count', () => {
-        const wrapper = setup({ hideCountDiff: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ hideCountDiff: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with default list hiding the total count', () => {
-        const wrapper = setup({ hideCountTotal: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ hideCountTotal: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with default actions', () => {
-        const wrapper = setup({ showDefaultActions: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ showDefaultActions: true });
+        expect(container).toMatchSnapshot();
     });
 
-    it('should render primary action button', () => {
-        const wrapper = setup();
-        expect(wrapper.instance().renderActions([])).toBe(null);
-        expect(
-            wrapper.instance().renderActions([
-                {
-                    primary: true,
-                },
-            ]),
-        ).toMatchSnapshot();
+    it('should render component with empty custom actions', () => {
+        const { container } = setup({ customActions: [] });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with custom actions', () => {
@@ -121,14 +122,14 @@ describe('PublicationCitation ', () => {
                 handleAction: jest.fn(),
             },
         ];
-        const wrapper = setup({
+        const { getAllByRole } = setup({
             showDefaultActions: false,
             customActions: customActions,
         });
 
-        wrapper.find('WithStyles(Button).publicationAction').forEach((button, index) => {
-            expect(button.getElement().props.children).toEqual([customActions[index].label, false]);
-            button.getElement().props.onClick();
+        getAllByRole('button').forEach((button, index) => {
+            expect(button).toHaveTextContent(customActions[index].label);
+            fireEvent.click(button);
             expect(customActions[index].handleAction).toBeCalled();
         });
     });
@@ -149,12 +150,12 @@ describe('PublicationCitation ', () => {
                 handleAction: jest.fn(),
             },
         ];
-        const wrapper = setup({
+        const { container } = setup({
             showDefaultActions: false,
             customActions: customActions,
             publicationsLoading: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render button disabled on action buttons for publication without any authors metadata from crossref', () => {
@@ -173,7 +174,7 @@ describe('PublicationCitation ', () => {
                 handleAction: jest.fn(),
             },
         ];
-        const wrapper = setup({
+        const { container } = setup({
             showDefaultActions: false,
             customActions: customActions,
             publicationsLoading: true,
@@ -198,62 +199,33 @@ describe('PublicationCitation ', () => {
                 fez_record_search_key_volume_number: { rek_volume_number: '66' },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with publication from multiple sources', () => {
         const publicationWithSources = { ...mockRecordToFix, sources: [{ source: 'espace', id: 'UQ:224457' }] };
-        const wrapper = setup({ publication: publicationWithSources, showSources: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: publicationWithSources, showSources: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component without a title', () => {
         const publicationWithSources = { ...mockRecordToFix, sources: [{ source: 'espace', id: 'UQ:224457' }] };
-        const wrapper = setup({ publication: publicationWithSources, showSources: true, hideTitle: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: publicationWithSources, showSources: true, hideTitle: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should handle default actions', () => {
-        const wrapper = setup({
+        const pushFn = jest.fn();
+        const { getByRole } = setup({
             showDefaultActions: true,
+            history: { push: pushFn },
         });
-        const test = jest.spyOn(wrapper.instance(), '_handleDefaultActions');
 
-        wrapper.find('ForwardRef(Button).publicationAction').forEach((button, index) => {
-            expect(button.getElement().props.children).toEqual(
-                // wrapper.instance().defaultActions[index].label
-                [wrapper.instance().defaultActions[index].label, false],
-            );
-
-            const actionKey = wrapper.instance().defaultActions[index].key;
-            button.getElement().props.onClick();
-            expect(test).toBeCalledWith(actionKey);
-
-            switch (actionKey) {
-                case 'fixRecord':
-                    expect(wrapper.instance().props.history.push).toHaveBeenCalled();
-                    break;
-
-                case 'shareRecord':
-                    // TODO
-                    console.log('Test missing');
-                    break;
-
-                case 'NAN':
-                    // TODO
-                    console.log('Test missing');
-                    break;
-
-                default:
-                    console.log('Unsupported default action');
-                    break;
-            }
-        });
-        wrapper.instance()._handleDefaultActions('shareRecord');
-        wrapper.instance()._handleDefaultActions('');
+        fireEvent.click(getByRole('button', { name: 'Request Correction' }));
+        expect(pushFn).toBeCalledWith('/records/UQ:41878/fix');
     });
 
-    it('should handle custom actions', () => {
+    it('should render primary action button', () => {
         const handleAction = jest.fn();
         const customActions = [
             {
@@ -261,28 +233,16 @@ describe('PublicationCitation ', () => {
                 primary: true,
                 handleAction,
             },
-            {
-                label: 'Not mine',
-                handleAction,
-            },
-            {
-                label: 'View stats',
-                handleAction,
-            },
         ];
-        const wrapper = setup({
+        const { container } = setup({
             showDefaultActions: false,
             customActions: customActions,
         });
 
-        wrapper.find('ForwardRef(Button).publicationAction').forEach(button => {
-            button.simulate('click');
-        });
-
-        expect(handleAction).toHaveBeenCalledTimes(3);
+        expect(container).toMatchSnapshot();
     });
 
-    it('should render publication with citation metric', () => {
+    it('should render publication citation metric with count', () => {
         const publicationWithMetricData = {
             ...mockRecordToFix,
             metricData: {
@@ -292,34 +252,46 @@ describe('PublicationCitation ', () => {
                 source: 'altmetric',
             },
         };
-        const wrapper = setup({
+        const { container } = setup({
             publication: publicationWithMetricData,
             showMetrics: true,
             showSourceCountIcon: true,
         });
-        expect(toJson(wrapper.find('.citationMetrics ExternalLink'))).toMatchSnapshot();
 
-        // Display count without icon
-        wrapper.setProps({
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render publication citation metric without count', () => {
+        const publicationWithMetricData = {
+            ...mockRecordToFix,
+            metricData: {
+                count: 23,
+                difference: 5,
+                citation_url: 'http://www.test.com',
+                source: 'altmetric',
+            },
+        };
+        const { container } = setup({
+            publication: publicationWithMetricData,
+            showMetrics: true,
             showSourceCountIcon: false,
         });
-        expect(toJson(wrapper.find('.citationMetrics WithStyles(Typography).count'))).toMatchSnapshot();
+
+        expect(container).toMatchSnapshot();
     });
 
     it('should render publication with unpublished buffer', () => {
-        const wrapper = setup({ publication: mockRecordToFix, showUnpublishedBufferFields: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should return message indicating unavailability of citation display', () => {
-        const wrapper = setup();
-        expect(wrapper.instance().renderCitation(null)).toMatchSnapshot();
+        const { container } = setup({ publication: mockRecordToFix, showUnpublishedBufferFields: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should set referral URL for admin edit links with or without url fragments', () => {
+        const openFn = jest.spyOn(window, 'open');
+        openFn.mockImplementation(jest.fn());
+
         const expectedRefUrl =
-            '/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc';
-        const wrapper = setup({
+            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:41878?navigatedFrom=%2Frecords%2Fsearch%3FsearchQueryParams%255Ball%255D%3D%26page%3D1%26pageSize%3D20%26sortBy%3Dscore%26sortDirection%3DDesc';
+        const { getByTestId, getByRole } = setup({
             showAdminActions: true,
             hideCitationCounts: true,
             location: {
@@ -328,22 +300,32 @@ describe('PublicationCitation ', () => {
                 pathname: '/espace/feature-example/', // hosted feature branch
             },
         });
-        expect(wrapper.find('Memo(AdminActions)').props().navigatedFrom).toBe(expectedRefUrl);
 
-        const wrapper2 = setup({
+        fireEvent.click(getByTestId('admin-actions-button'));
+        fireEvent.click(getByRole('menuitem', { name: 'Edit selected record' }));
+
+        expect(openFn).toBeCalledWith(expectedRefUrl, '_self', null);
+    });
+
+    it('should set referral URL for admin edit links without url fragments', () => {
+        const openFn = jest.spyOn(window, 'open');
+        openFn.mockImplementation(jest.fn());
+
+        const expectedRefUrl =
+            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:41878?navigatedFrom=%2Frecords%2Fsearch%3FsearchQueryParams%255Ball%255D%3D%26page%3D1%26pageSize%3D20%26sortBy%3Dscore%26sortDirection%3DDesc';
+        const { getByTestId, getByRole } = setup({
             showAdminActions: true,
             hideCitationCounts: true,
             location: {
-                hash: '',
-                pathname: '/records/search',
-                search: '?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
-            },
-            publication: {
-                ...mockRecordToFix,
-                rek_object_type_lookup: 'Record',
+                search: '',
+                pathname: '/espace/feature-example/', // hosted feature branch
             },
         });
-        expect(wrapper2.find('Memo(AdminActions)').props().navigatedFrom).toBe(expectedRefUrl);
+
+        fireEvent.click(getByTestId('admin-actions-button'));
+        fireEvent.click(getByRole('menuitem', { name: 'Edit selected record' }));
+
+        expect(openFn).toBeCalledWith(expectedRefUrl, '_self', null);
     });
 
     it('should render component with content indicators', () => {
@@ -366,17 +348,27 @@ describe('PublicationCitation ', () => {
                 },
             ],
         };
-        const wrapper = setup({
+        const { container } = setup({
             publication: {
                 ...publicationWithContentIndicators,
                 rek_object_type_lookup: 'Record',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with default list hiding the citation text', () => {
-        const wrapper = setup({ hideCitationText: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ hideCitationText: true });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render component with citation unavailable message on non support publication type', () => {
+        const { container } = setup({ publication: { ...journalArticle, rek_display_type: 111 } });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render component with citation unavailable message when theres no publication type id', () => {
+        const { container } = setup({ publication: { ...journalArticle, rek_display_type: null } });
+        expect(container).toMatchSnapshot();
     });
 });

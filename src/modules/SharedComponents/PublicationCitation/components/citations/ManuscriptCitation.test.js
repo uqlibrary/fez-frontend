@@ -1,22 +1,24 @@
+import React from 'react';
 import ManuscriptCitation from './ManuscriptCitation';
 import { manuscript } from 'mock/data/testing/records';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(ManuscriptCitation, props, args);
+    return rtlRender(<ManuscriptCitation {...props} />);
 }
 
 describe('ManuscriptCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: manuscript });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: manuscript });
+        expect(container).toMatchSnapshot();
     });
 });

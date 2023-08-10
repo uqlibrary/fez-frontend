@@ -1,7 +1,9 @@
+import React from 'react';
 import { AuthorsCitationView, styles } from './AuthorsCitationView';
 import { pathConfig } from 'config/pathConfig';
+import { render, WithRouter } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         publication: testProps.publication || {}, // : PropTypes.object.isRequired,
@@ -11,14 +13,17 @@ function setup(testProps = {}, args = { isShallow: false }) {
         showLink: testProps.showLink || false,
         ...testProps,
     };
-    return getElement(AuthorsCitationView, props, args);
+    return render(
+        <WithRouter>
+            <AuthorsCitationView {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('AuthorsCitationView', () => {
     it('should render component with no authors', () => {
-        const wrapper = setup();
-        expect(wrapper.find('.empty').length).toEqual(1);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should have helper to generated styles', () => {
@@ -33,9 +38,8 @@ describe('AuthorsCitationView', () => {
     });
 
     it('should set class on component with no authors', () => {
-        const wrapper = setup({ className: 'myClass' });
-        expect(wrapper.find('.myClass.empty').length).toEqual(1);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ className: 'myClass' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with 1 author', () => {
@@ -49,8 +53,8 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with 2 authors', () => {
@@ -70,8 +74,8 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with 2 authors for publication view page', () => {
@@ -103,8 +107,8 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject, showLink: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject, showLink: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with 2 authors for publication view page if author ids not supplied', () => {
@@ -124,8 +128,8 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject, showLink: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject, showLink: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with 3 authors for publication view page', () => {
@@ -168,8 +172,8 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject, showLink: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject, showLink: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with 3 authors', () => {
@@ -195,8 +199,8 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with 3 authors with prefix/suffix', () => {
@@ -222,8 +226,8 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with 10 authors and show more link', () => {
@@ -303,24 +307,17 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup(
-            {
-                publication: testObject,
-                prefix: 'Authored by: ',
-                suffix: ' people.',
-            },
-            { isShallow: true },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().authors.length).toEqual(12);
-        expect(wrapper.find('.citationAuthor').length).toEqual(12);
+        const { container } = setup({
+            publication: testObject,
+            prefix: 'Authored by: ',
+            suffix: ' people.',
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should not fail with missing data', () => {
-        const wrapper = setup({ prefix: 'Authored by: ', suffix: ' people.' }, true);
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().authors.length).toEqual(0);
-        expect(wrapper.find('.citationAuthor').length).toEqual(0);
+        const { container } = setup({ prefix: 'Authored by: ', suffix: ' people.' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with exactly 10 authors', () => {
@@ -388,10 +385,8 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.' }, true);
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().authors.length).toEqual(10);
-        expect(wrapper.find('.citationAuthor').length).toEqual(10);
+        const { container } = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render a list with ellipsis when elasticsearch cant supply all authors', () => {
@@ -473,17 +468,12 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup(
-            {
-                publication: testObject,
-                maxAuthorDisplayNumber: 3,
-                citationStyle: 'list',
-            },
-            { isShallow: true },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(3);
+        const { container } = setup({
+            publication: testObject,
+            maxAuthorDisplayNumber: 3,
+            citationStyle: 'list',
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render a header correctly when too many authors are provided', () => {
@@ -565,17 +555,12 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup(
-            {
-                publication: testObject,
-                maxAuthorDisplayNumber: 2,
-                citationStyle: 'header',
-            },
-            { isShallow: true },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(3);
+        const { container } = setup({
+            publication: testObject,
+            maxAuthorDisplayNumber: 2,
+            citationStyle: 'header',
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render a header correctly when all authors are provided', () => {
@@ -633,16 +618,11 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup(
-            {
-                publication: testObject,
-                citationStyle: 'header',
-            },
-            { isShallow: true },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(4);
+        const { container } = setup({
+            publication: testObject,
+            citationStyle: 'header',
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with 3 authors with prefix/suffix without changing original data structure', () => {
@@ -669,8 +649,8 @@ describe('AuthorsCitationView', () => {
             ],
         };
 
-        const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.' });
+        expect(container).toMatchSnapshot();
         expect(testObject).toEqual({
             fez_record_search_key_author: [
                 {
@@ -717,7 +697,7 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const wrapper = setup({
+        const { getByRole, container } = setup({
             publication: testObject,
             getLink: pathConfig.list.contributor,
             searchKey: {
@@ -732,8 +712,11 @@ describe('AuthorsCitationView', () => {
             },
             showLink: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find({ 'data-testid': 'rek-contributor-0-link' }).length).toEqual(3);
-        expect(wrapper.find('a').prop('href')).toContain('rek_contributor_id%5D%5Blabel%5D=74066+(Fitzgerald%2C+Lisa)');
+        expect(container).toMatchSnapshot();
+
+        expect(getByRole('link', { name: 'Fitzgerald, Lisa' })).toBeInTheDocument(); // ('rek-contributor-0-link')).toBeInTheDocument();
+        expect(getByRole('link', { name: 'Fitzgerald, Lisa' }).href).toContain(
+            'rek_contributor_id%5D%5Blabel%5D=74066+(Fitzgerald%2C+Lisa)',
+        );
     });
 });

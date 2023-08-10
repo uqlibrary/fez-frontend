@@ -1,22 +1,24 @@
+import React from 'react';
 import CreativeWorkCitation from './CreativeWorkCitation';
 import { creativeWork } from 'mock/data/testing/records';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(CreativeWorkCitation, props, args);
+    return rtlRender(<CreativeWorkCitation {...props} />);
 }
 
 describe('CreativeWorkCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: creativeWork });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: creativeWork });
+        expect(container).toMatchSnapshot();
     });
 });

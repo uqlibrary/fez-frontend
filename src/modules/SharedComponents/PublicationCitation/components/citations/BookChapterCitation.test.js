@@ -1,22 +1,28 @@
+import React from 'react';
 import BookChapterCitation from './BookChapterCitation';
 import { bookChapter } from 'mock/data/testing/records';
+import { render, WithRouter } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(BookChapterCitation, props, args);
+    return render(
+        <WithRouter>
+            <BookChapterCitation {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('BookChapterCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: bookChapter });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: bookChapter });
+        expect(container).toMatchSnapshot();
     });
 });
