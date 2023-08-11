@@ -194,7 +194,7 @@ exports[`Component Links  Full mount render 1`] = `
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -465,7 +465,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -1227,7 +1227,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -1286,7 +1286,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -1345,7 +1345,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -1549,7 +1549,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -1608,7 +1608,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -1667,7 +1667,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -1726,7 +1726,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -1925,7 +1925,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -1984,7 +1984,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -2043,7 +2043,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -2247,7 +2247,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -2306,7 +2306,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -2365,7 +2365,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -2424,7 +2424,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -2628,7 +2628,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -2687,7 +2687,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -2746,7 +2746,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -2805,7 +2805,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -3008,7 +3008,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -3067,7 +3067,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -3126,7 +3126,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -3400,7 +3400,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -3947,7 +3947,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -4077,7 +4077,7 @@ exports[`Component Links  should use special default description if the link has
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>
@@ -4136,7 +4136,7 @@ exports[`Component Links  should use special default description if the link has
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-na-oa-icon"
+              data-testid="open-access-oa-n/a-icon"
             />
           </div>
         </div>

@@ -5,7 +5,7 @@ import { recordLinks } from 'mock/data/testing/records';
 import { openAccessConfig } from 'config';
 import { calculateOpenAccess } from 'middleware/publicationEnhancer';
 import { renderWithRouter } from 'test-utils';
-import { getTestId } from '../../SharedComponents/Partials/OpenAccessIcon';
+import { getIconTestId } from '../../SharedComponents/Partials/OpenAccessIcon';
 
 function setup(testProps = {}) {
     const props = {
@@ -171,7 +171,7 @@ describe('Component Links ', () => {
             publication: getPublication(365, openAccessConfig.OPEN_ACCESS_ID_DOI),
         });
         expect(container).toMatchSnapshot();
-        expect(getAllByTestId(getTestId('embargoed-oa')).length).toEqual(1);
+        expect(getAllByTestId(getIconTestId('embargoed-oa')).length).toEqual(1);
     });
 
     it('should render 3 not OA links and DOI and PMC links with OA for OPEN_ACCESS_ID_DOI', () => {
@@ -187,8 +187,8 @@ describe('Component Links ', () => {
 
         const { container, getAllByTestId } = setup({ publication: pmcProps });
         expect(container).toMatchSnapshot();
-        expect(getAllByTestId(getTestId('na-oa')).length).toEqual(3);
-        expect(getAllByTestId(getTestId('oa')).length).toEqual(2);
+        expect(getAllByTestId(getIconTestId('oa-n/a')).length).toEqual(3);
+        expect(getAllByTestId(getIconTestId('oa')).length).toEqual(2);
     });
 
     it('should render 3 not OA links and PMC link with OA for OPEN_ACCESS_ID_PMC', () => {
@@ -204,8 +204,8 @@ describe('Component Links ', () => {
 
         const { container, getAllByTestId } = setup({ publication: pmcProps });
         expect(container).toMatchSnapshot();
-        expect(getAllByTestId(getTestId('na-oa')).length).toEqual(3);
-        expect(getAllByTestId(getTestId('oa')).length).toEqual(1);
+        expect(getAllByTestId(getIconTestId('oa-n/a')).length).toEqual(3);
+        expect(getAllByTestId(getIconTestId('oa')).length).toEqual(1);
     });
 
     it('should render 3 not OA links and PMC with OA and DOI link no OA for OPEN_ACCESS_ID_PMC', () => {
@@ -227,8 +227,8 @@ describe('Component Links ', () => {
 
         const { container, getAllByTestId } = setup({ publication: pmcProps });
         expect(container).toMatchSnapshot();
-        expect(getAllByTestId(getTestId('na-oa')).length).toEqual(4);
-        expect(getAllByTestId(getTestId('oa')).length).toEqual(1);
+        expect(getAllByTestId(getIconTestId('oa-n/a')).length).toEqual(4);
+        expect(getAllByTestId(getIconTestId('oa')).length).toEqual(1);
     });
 
     // prettier-ignore
@@ -252,8 +252,8 @@ describe('Component Links ', () => {
         const { container, queryAllByTestId } = setup({ publication: pmcProps });
         expect(container)
             .toMatchSnapshot();
-        expect(queryAllByTestId(getTestId('na-oa')).length).toEqual(4);
-        expect(queryAllByTestId(getTestId('oa')).length).toEqual(1);
+        expect(queryAllByTestId(getIconTestId('oa-n/a')).length).toEqual(4);
+        expect(queryAllByTestId(getIconTestId('oa')).length).toEqual(1);
     });
 
     it('should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRINT', () => {

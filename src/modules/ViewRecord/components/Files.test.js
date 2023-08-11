@@ -37,7 +37,6 @@ function setup(testProps) {
         author: testProps.author || mock.currentAuthor.uqresearcher.data,
         ...testProps,
     };
-    // return getElement(FilesClass, props, { isShallow: true, ...args });
     return renderWithRouter(<Files {...props} />);
 }
 

@@ -129,8 +129,6 @@ const FileName = ({
                             className={classes.filename}
                             data-testid={getPreviewLinkTestId(id)}
                             id={getPreviewLinkTestId(id)}
-                            // id={`${id}-preview`}
-                            // data-testid={`${id}-preview`}
                         >
                             {fileName}
                         </a>

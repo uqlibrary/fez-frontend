@@ -2218,7 +2218,7 @@ exports[`Journal Name Component test  should render closed access 1`] = `
             >
               <span
                 className="noOaIcon"
-                data-testid="open-access-na-oa-icon"
+                data-testid="open-access-oa-n/a-icon"
               />
             </OpenAccessIcon>
           </LocalizationProvider>
@@ -7590,7 +7590,7 @@ exports[`Journal Name Component test  should render no icon 1`] = `
             >
               <span
                 className="noOaIcon"
-                data-testid="open-access-na-oa-icon"
+                data-testid="open-access-oa-n/a-icon"
               />
             </OpenAccessIcon>
           </LocalizationProvider>
