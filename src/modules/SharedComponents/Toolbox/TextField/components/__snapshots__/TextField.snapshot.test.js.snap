@@ -1,121 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
-<Fragment>
-  <ForwardRef(TextField)
-    FormHelperTextProps={
-      Object {
-        "data-testid": "test-helper-text",
-      }
-    }
-    InputLabelProps={
-      Object {
-        "data-testid": "test-label",
-        "hidden": false,
-        "htmlFor": "test-input",
-        "id": "test-label",
-        "shrink": undefined,
-      }
-    }
-    ariaLabelledby="fake-id"
+<div>
+  <div
+    arialabelledby="fake-id"
+    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
     data-testid="test"
-    floatingLabelText="This is a test textfield component"
-    fullWidth={true}
-    id="test"
-    inputProps={
-      Object {
-        "aria-label": undefined,
-        "aria-labelledby": "fake-id",
-        "data-analyticsid": "test-input",
-        "data-testid": "test-input",
-        "id": "test-input",
-        "label": undefined,
-      }
-    }
-    name="testField"
-    type="text"
-    variant="standard"
-  />
-</Fragment>
+    floatinglabeltext="This is a test textfield component"
+  >
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+    >
+      <input
+        aria-invalid="false"
+        aria-labelledby="fake-id"
+        class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+        data-analyticsid="test-input"
+        data-testid="test-input"
+        id="test-input"
+        name="testField"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`TextFieldWrapper snapshots tests renders TextField component appending a class 1`] = `
-<Fragment>
-  <ForwardRef(TextField)
-    FormHelperTextProps={
-      Object {
-        "data-testid": "test-helper-text",
-      }
-    }
-    InputLabelProps={
-      Object {
-        "data-testid": "test-label",
-        "hidden": false,
-        "htmlFor": "test-input",
-        "id": "test-label",
-        "shrink": undefined,
-      }
-    }
-    ariaLabelledby="fake-id"
-    className="requiredField"
+<div>
+  <div
+    arialabelledby="fake-id"
+    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root requiredField css-wb57ya-MuiFormControl-root-MuiTextField-root"
     data-testid="test"
-    floatingLabelText="This is a test textfield component"
-    fullWidth={true}
-    id="test"
-    inputProps={
-      Object {
-        "aria-label": undefined,
-        "aria-labelledby": "fake-id",
-        "data-analyticsid": "test-input",
-        "data-testid": "test-input",
-        "id": "test-input",
-        "label": undefined,
-      }
-    }
-    name="testField"
-    type="text"
-    variant="standard"
-  />
-</Fragment>
+    floatinglabeltext="This is a test textfield component"
+  >
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+    >
+      <input
+        aria-invalid="false"
+        aria-labelledby="fake-id"
+        class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+        data-analyticsid="test-input"
+        data-testid="test-input"
+        id="test-input"
+        name="testField"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`TextFieldWrapper snapshots tests renders TextField component with shrink:true 1`] = `
-<Fragment>
-  <ForwardRef(TextField)
-    FormHelperTextProps={
-      Object {
-        "data-testid": "test-helper-text",
-      }
-    }
-    InputLabelProps={
-      Object {
-        "data-testid": "test-label",
-        "hidden": false,
-        "htmlFor": "test-input",
-        "id": "test-label",
-        "shrink": true,
-      }
-    }
-    ariaLabelledby="fake-id"
+<div>
+  <div
+    arialabelledby="fake-id"
+    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
     data-testid="test"
-    floatingLabelText="This is a test textfield component"
-    floatinglabelfixed={true}
-    fullWidth={true}
-    id="test"
-    inputProps={
-      Object {
-        "aria-label": "test",
-        "aria-labelledby": "fake-id",
-        "data-analyticsid": "test-input",
-        "data-testid": "test-input",
-        "id": "test-input",
-        "label": "test",
-      }
-    }
-    label="test"
-    name="testField"
-    type="text"
-    variant="standard"
-  />
-</Fragment>
+    floatinglabelfixed="true"
+    floatinglabeltext="This is a test textfield component"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="test-label"
+      for="test-input"
+      id="test-label"
+    >
+      test
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+    >
+      <input
+        aria-invalid="false"
+        aria-label="test"
+        aria-labelledby="fake-id"
+        class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+        data-analyticsid="test-input"
+        data-testid="test-input"
+        id="test-input"
+        label="test"
+        name="testField"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
 `;

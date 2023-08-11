@@ -1,3 +1,4 @@
+import React from 'react';
 import NtroFields from './NtroFields';
 
 function setup(testProps, isShallow = true) {

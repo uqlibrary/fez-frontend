@@ -1,23 +1,28 @@
+import React from 'react';
 import { StandardRighthandCard } from './StandardRighthandCard';
+import { render, WithReduxStore } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     // build full props list required by the component
     const props = {
         classes: {},
         ...testProps,
     };
-    return getElement(StandardRighthandCard, props, isShallow);
+    return render(
+        <WithReduxStore>
+            <StandardRighthandCard {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('Snapshot tests for StandardRighthandCard component', () => {
     it('renders with title and no help icon', () => {
-        const wrapper = setup({ title: 'card title' });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup({ title: 'card title' });
+        expect(container).toMatchSnapshot();
     });
 
     it('renders with title and help button', () => {
-        const wrapper = setup({
+        const { container } = setup({
             title: 'Title',
             help: {
                 title: 'Help text',
@@ -25,12 +30,11 @@ describe('Snapshot tests for StandardRighthandCard component', () => {
                 buttonLabel: 'OK',
             },
         });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('renders with title and help button and some content', () => {
-        const wrapper = setup({
+        const { container } = setup({
             title: 'Title',
             help: {
                 title: 'Help text',
@@ -39,12 +43,11 @@ describe('Snapshot tests for StandardRighthandCard component', () => {
             },
             children: 'Some content',
         });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('renders with title, help button, testid and some content', () => {
-        const wrapper = setup({
+        const { container } = setup({
             title: 'Title',
             testId: 'testid',
             help: {
@@ -54,7 +57,6 @@ describe('Snapshot tests for StandardRighthandCard component', () => {
             },
             children: 'Some content',
         });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

@@ -1,103 +1,840 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Add record stepper tests should properly detect if component needs update 1`] = `
+<div>
+  <div
+    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+  >
+    <div
+      class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            data-testid="CheckCircleIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-2 17l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L19 8l-9 9z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 1
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              2
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 2
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              3
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 3
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Add record stepper tests should properly detect if component needs update 2`] = `
+<div>
+  <div
+    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+  >
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              1
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 1
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              2
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 2
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              3
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 3
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Add record stepper tests should properly detect if component needs update 3`] = `
+<div>
+  <div
+    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+  >
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              1
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 1
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              2
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 2
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Add record stepper tests should render steps with specific active step 1`] = `
-<ForwardRef(Stepper)
-  activeStep={0}
->
-  <ForwardRef(Step)
-    key="stepper_0"
+<div>
+  <div
+    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
   >
-    <ForwardRef(StepLabel)>
-      <span>
-        Step 1
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              1
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 1
+            </span>
+          </span>
+        </span>
       </span>
-    </ForwardRef(StepLabel)>
-  </ForwardRef(Step)>
-  <ForwardRef(Step)
-    key="stepper_1"
-  >
-    <ForwardRef(StepLabel)>
-      <span>
-        Step 2
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              2
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 2
+            </span>
+          </span>
+        </span>
       </span>
-    </ForwardRef(StepLabel)>
-  </ForwardRef(Step)>
-  <ForwardRef(Step)
-    key="stepper_2"
-  >
-    <ForwardRef(StepLabel)>
-      <span>
-        Step 3
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              3
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 3
+            </span>
+          </span>
+        </span>
       </span>
-    </ForwardRef(StepLabel)>
-  </ForwardRef(Step)>
-</ForwardRef(Stepper)>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Add record stepper tests should render steps with specific active step 2`] = `
-<ForwardRef(Stepper)
-  activeStep={1}
->
-  <ForwardRef(Step)
-    key="stepper_0"
+<div>
+  <div
+    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
   >
-    <ForwardRef(StepLabel)>
-      <span>
-        Step 1
+    <div
+      class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            data-testid="CheckCircleIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-2 17l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L19 8l-9 9z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 1
+            </span>
+          </span>
+        </span>
       </span>
-    </ForwardRef(StepLabel)>
-  </ForwardRef(Step)>
-  <ForwardRef(Step)
-    key="stepper_1"
-  >
-    <ForwardRef(StepLabel)>
-      <span>
-        Step 2
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              2
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 2
+            </span>
+          </span>
+        </span>
       </span>
-    </ForwardRef(StepLabel)>
-  </ForwardRef(Step)>
-  <ForwardRef(Step)
-    key="stepper_2"
-  >
-    <ForwardRef(StepLabel)>
-      <span>
-        Step 3
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              3
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 3
+            </span>
+          </span>
+        </span>
       </span>
-    </ForwardRef(StepLabel)>
-  </ForwardRef(Step)>
-</ForwardRef(Stepper)>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Add record stepper tests should render steps with specific active step 3`] = `
-<ForwardRef(Stepper)
-  activeStep={2}
->
-  <ForwardRef(Step)
-    key="stepper_0"
+<div>
+  <div
+    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
   >
-    <ForwardRef(StepLabel)>
-      <span>
-        Step 1
+    <div
+      class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            data-testid="CheckCircleIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-2 17l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L19 8l-9 9z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 1
+            </span>
+          </span>
+        </span>
       </span>
-    </ForwardRef(StepLabel)>
-  </ForwardRef(Step)>
-  <ForwardRef(Step)
-    key="stepper_1"
-  >
-    <ForwardRef(StepLabel)>
-      <span>
-        Step 2
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-completed css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            data-testid="CheckCircleIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-2 17l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L19 8l-9 9z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 2
+            </span>
+          </span>
+        </span>
       </span>
-    </ForwardRef(StepLabel)>
-  </ForwardRef(Step)>
-  <ForwardRef(Step)
-    key="stepper_2"
-  >
-    <ForwardRef(StepLabel)>
-      <span>
-        Step 3
+    </div>
+    <div
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-j5w0w9-MuiStepConnector-root"
+    >
+      <span
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+      />
+    </div>
+    <div
+      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+    >
+      <span
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+      >
+        <span
+          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+            <text
+              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              dominant-baseline="central"
+              text-anchor="middle"
+              x="12"
+              y="12"
+            >
+              3
+            </text>
+          </svg>
+        </span>
+        <span
+          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+        >
+          <span
+            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+          >
+            <span>
+              Step 3
+            </span>
+          </span>
+        </span>
       </span>
-    </ForwardRef(StepLabel)>
-  </ForwardRef(Step)>
-</ForwardRef(Stepper)>
+    </div>
+  </div>
+</div>
 `;

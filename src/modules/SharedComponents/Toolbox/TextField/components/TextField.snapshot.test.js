@@ -1,10 +1,12 @@
+import React from 'react';
 import { TextFieldWrapper } from './TextField';
 import filterProps from '../../helpers/_filterProps';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = { ...testProps };
     const consolidatedProps = filterProps(props, TextFieldWrapper.propTypes);
-    return getElement(TextFieldWrapper, { ...consolidatedProps, textFieldId: 'test' }, isShallow);
+    return rtlRender(<TextFieldWrapper {...consolidatedProps} textFieldId="test" />);
 }
 
 describe('TextFieldWrapper snapshots tests', () => {
@@ -17,24 +19,24 @@ describe('TextFieldWrapper snapshots tests', () => {
     };
 
     it('renders TextField component', () => {
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(testProps);
+        expect(container).toMatchSnapshot();
     });
 
     it('renders TextField component appending a class', () => {
-        const wrapper = setup({
+        const { container } = setup({
             ...testProps,
             className: 'requiredField',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('renders TextField component with shrink:true', () => {
-        const wrapper = setup({
+        const { container } = setup({
             ...testProps,
-            floatinglabelfixed: true,
+            floatinglabelfixed: 'true',
             label: 'test',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

@@ -1,12 +1,14 @@
+import React from 'react';
 import { CustomStepper } from './Stepper';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps, renderMethod = rtlRender) {
     const props = {
         classes: {},
         steps: [],
         ...testProps,
     };
-    return getElement(CustomStepper, props, isShallow);
+    return renderMethod(<CustomStepper {...props} />);
 }
 
 describe('Add record stepper tests', () => {
@@ -14,14 +16,14 @@ describe('Add record stepper tests', () => {
 
     it('should render steps with specific active step', () => {
         let values;
-        let wrapper;
         for (let step = 0; step < steps.length; step++) {
             values = {
                 activeStep: step,
                 steps,
             };
-            wrapper = setup(values);
-            expect(toJson(wrapper)).toMatchSnapshot();
+
+            const { container } = setup(values);
+            expect(container).toMatchSnapshot();
         }
     });
 
@@ -30,10 +32,12 @@ describe('Add record stepper tests', () => {
             activeStep: 0,
             steps,
         };
-        const wrapper = setup(values);
-        const shouldUpdate = wrapper.instance().shouldComponentUpdate({ ...values, activeStep: 1 });
-        expect(shouldUpdate).toBe(true);
-        const shouldUpdate2 = wrapper.instance().shouldComponentUpdate({ ...values, activeStep: 0 });
-        expect(shouldUpdate2).toBe(false);
+        const { container, rerender } = setup(values);
+        setup({ ...values, activeStep: 1 }, rerender);
+        expect(container).toMatchSnapshot();
+        setup({ ...values, activeStep: 0 }, rerender);
+        expect(container).toMatchSnapshot();
+        setup({ steps: [{ label: 'Step 1' }, { label: 'Step 2' }], activeStep: 0 }, rerender);
+        expect(container).toMatchSnapshot();
     });
 });
