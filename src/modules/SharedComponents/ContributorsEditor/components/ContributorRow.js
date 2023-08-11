@@ -253,6 +253,7 @@ export const ContributorRow = ({
                             >
                                 <IconButton
                                     id={`${contributorRowId}-move-up-${index}`}
+                                    data-analyticsid={`${contributorRowId}-${index}-move-up`}
                                     data-testid={`${contributorRowId}-${index}-move-up`}
                                     onClick={_onMoveUp}
                                     disabled={disabled || hideReorder}
@@ -272,6 +273,7 @@ export const ContributorRow = ({
                             >
                                 <IconButton
                                     id={`${contributorRowId}-move-down-${index}`}
+                                    data-analyticsid={`${contributorRowId}-${index}-move-down`}
                                     data-testid={`${contributorRowId}-${index}-move-down`}
                                     onClick={_onMoveDown}
                                     disabled={disabled || hideReorder}
@@ -294,6 +296,7 @@ export const ContributorRow = ({
                                     onClick={_handleEdit}
                                     disabled={disabled || !!contributor.disabled}
                                     id={`${contributorRowId}-edit-${index}`}
+                                    data-analyticsid={`${contributorRowId}-${index}-edit`}
                                     data-testid={`${contributorRowId}-${index}-edit`}
                                     size="large"
                                 >
@@ -312,6 +315,7 @@ export const ContributorRow = ({
                                 onClick={showConfirmation}
                                 disabled={disabled || hideDelete}
                                 id={`${contributorRowId}-delete-${index}`}
+                                data-analyticsid={`${contributorRowId}-${index}-delete`}
                                 data-testid={`${contributorRowId}-${index}-delete`}
                                 size="large"
                             >

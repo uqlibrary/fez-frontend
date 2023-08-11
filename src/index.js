@@ -55,15 +55,13 @@ if (process.env.ENABLE_LOG) {
 
 const render = () => {
     ReactDOM.render(
-        <Provider store={store}>
-            <AppErrorBoundary>
-                <Provider store={store}>
-                    <LocalizationProvider dateAdapter={MomentUtils}>
-                        <Root history={reduxHistory} />
-                    </LocalizationProvider>
-                </Provider>
-            </AppErrorBoundary>
-        </Provider>,
+        <AppErrorBoundary>
+            <Provider store={store}>
+                <LocalizationProvider dateAdapter={MomentUtils}>
+                    <Root history={reduxHistory} />
+                </LocalizationProvider>
+            </Provider>
+        </AppErrorBoundary>,
         document.getElementById('react-root'),
     );
 };

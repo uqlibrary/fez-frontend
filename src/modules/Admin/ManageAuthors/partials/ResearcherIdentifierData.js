@@ -67,7 +67,7 @@ export const ResearcherIdentifierData = () => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-scopus-id"
                     name="aut_scopus_id"
-                    validate={[validation.maxLength255]}
+                    validate={[validation.spacelessMaxLength255Validator]}
                     {...scopusId}
                     InputProps={{
                         ...((!!autScopusId && {
@@ -79,6 +79,7 @@ export const ResearcherIdentifierData = () => {
                                                 aria-label={isScopusIdAuthenticated.label}
                                                 onClick={handleIsScopusIDAuthenticated}
                                                 id="aut-is-scopus-id-authenticated"
+                                                data-analyticsid="aut-is-scopus-id-authenticated"
                                                 data-testid="aut-is-scopus-id-authenticated"
                                                 size="large"
                                             >
@@ -115,7 +116,7 @@ export const ResearcherIdentifierData = () => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-people-australia-id"
                     name="aut_people_australia_id"
-                    validate={[validation.maxLength255]}
+                    validate={[validation.spacelessMaxLength255Validator]}
                     {...peopleAustraliaId}
                 />
                 <Field
@@ -150,6 +151,7 @@ export const ResearcherIdentifierData = () => {
                                                       aria-label={isOrcidSyncEnabled.label}
                                                       onClick={handleIsOrcidSyncEnabled}
                                                       id="aut-is-orcid-sync-enabled"
+                                                      data-analyticsid="aut-is-orcid-sync-enabled"
                                                       data-testid="aut-is-orcid-sync-enabled"
                                                       size="large"
                                                   >

@@ -47,7 +47,7 @@ export class CitationCounts extends PureComponent {
                                 count={counts.wos}
                                 link={sources.wos.externalUrl.replace(
                                     '[id]',
-                                    publication.fez_record_search_key_isi_loc.rek_isi_loc,
+                                    encodeURIComponent(publication.fez_record_search_key_isi_loc.rek_isi_loc),
                                 )}
                                 title={this.getTitle(sources.wos.title)}
                             />
@@ -59,7 +59,7 @@ export class CitationCounts extends PureComponent {
                                 count={counts.scopus}
                                 link={sources.scopus.externalUrl.replace(
                                     '[id]',
-                                    publication.fez_record_search_key_scopus_id.rek_scopus_id,
+                                    encodeURIComponent(publication.fez_record_search_key_scopus_id.rek_scopus_id),
                                 )}
                                 title={this.getTitle(sources.scopus.title)}
                             />

@@ -11,8 +11,18 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
     xs={6}
   >
     <ForwardRef(TextField)
+      InputLabelProps={
+        Object {
+          "data-testid": "org-affiliation-name-label",
+        }
+      }
       fullWidth={true}
       id="org-affiliation-name"
+      inputProps={
+        Object {
+          "data-testid": "org-affiliation-name",
+        }
+      }
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
@@ -31,6 +41,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
       variant="standard"
     >
       <ForwardRef(InputLabel)
+        data-testid="org-affiliation-type-label"
         id="org-affiliation-type-label"
       >
         Organisation type
@@ -38,6 +49,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
       <ForwardRef(Select)
         SelectDisplayProps={
           Object {
+            "data-testid": "org-affiliation-type",
             "id": "org-affiliation-type",
           }
         }
@@ -117,8 +129,18 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
     xs={6}
   >
     <ForwardRef(TextField)
+      InputLabelProps={
+        Object {
+          "data-testid": "org-affiliation-name-label",
+        }
+      }
       fullWidth={true}
       id="org-affiliation-name"
+      inputProps={
+        Object {
+          "data-testid": "org-affiliation-name",
+        }
+      }
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
@@ -137,6 +159,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
       variant="standard"
     >
       <ForwardRef(InputLabel)
+        data-testid="org-affiliation-type-label"
         id="org-affiliation-type-label"
       >
         Organisation type
@@ -144,6 +167,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
       <ForwardRef(Select)
         SelectDisplayProps={
           Object {
+            "data-testid": "org-affiliation-type",
             "id": "org-affiliation-type",
           }
         }
@@ -223,8 +247,18 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
     xs={6}
   >
     <ForwardRef(TextField)
+      InputLabelProps={
+        Object {
+          "data-testid": "org-affiliation-name-label",
+        }
+      }
       fullWidth={true}
       id="org-affiliation-name"
+      inputProps={
+        Object {
+          "data-testid": "org-affiliation-name",
+        }
+      }
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
@@ -243,6 +277,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       variant="standard"
     >
       <ForwardRef(InputLabel)
+        data-testid="org-affiliation-type-label"
         id="org-affiliation-type-label"
       >
         Organisation type
@@ -250,6 +285,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       <ForwardRef(Select)
         SelectDisplayProps={
           Object {
+            "data-testid": "org-affiliation-type",
             "id": "org-affiliation-type",
           }
         }
@@ -329,8 +365,18 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
     xs={6}
   >
     <ForwardRef(TextField)
+      InputLabelProps={
+        Object {
+          "data-testid": "org-affiliation-name-label",
+        }
+      }
       fullWidth={true}
       id="org-affiliation-name"
+      inputProps={
+        Object {
+          "data-testid": "org-affiliation-name",
+        }
+      }
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
@@ -349,6 +395,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       variant="standard"
     >
       <ForwardRef(InputLabel)
+        data-testid="org-affiliation-type-label"
         id="org-affiliation-type-label"
       >
         Organisation type
@@ -356,6 +403,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       <ForwardRef(Select)
         SelectDisplayProps={
           Object {
+            "data-testid": "org-affiliation-type",
             "id": "org-affiliation-type",
           }
         }
@@ -435,8 +483,18 @@ exports[`NonUqOrgAffiliationFormSection tests  should render full width input fi
     xs={12}
   >
     <ForwardRef(TextField)
+      InputLabelProps={
+        Object {
+          "data-testid": "org-affiliation-name-label",
+        }
+      }
       fullWidth={true}
       id="org-affiliation-name"
+      inputProps={
+        Object {
+          "data-testid": "org-affiliation-name",
+        }
+      }
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
@@ -455,6 +513,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render full width input fi
       variant="standard"
     >
       <ForwardRef(InputLabel)
+        data-testid="org-affiliation-type-label"
         id="org-affiliation-type-label"
       >
         Organisation type
@@ -462,6 +521,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render full width input fi
       <ForwardRef(Select)
         SelectDisplayProps={
           Object {
+            "data-testid": "org-affiliation-type",
             "id": "org-affiliation-type",
           }
         }

@@ -84,6 +84,7 @@ export const DateRangeField = ({
                             onChange={handleFromDateChange}
                             disableToolbar
                             inputFormat={format}
+                            inputProps={{ 'data-testid': `${id}-from-date` }}
                             disableFuture={disableFuture}
                             disabled={disabled}
                             renderInput={params => (
@@ -114,6 +115,7 @@ export const DateRangeField = ({
                             onChange={handleToDateChange}
                             disableToolbar
                             inputFormat={format}
+                            inputProps={{ 'data-testid': `${id}-to-date` }}
                             disableFuture={disableFuture}
                             disabled={disabled}
                             renderInput={params => (

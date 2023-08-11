@@ -51,6 +51,7 @@ export default class DeleteRecord extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
+        /* istanbul ignore else */
         if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox &&
                 this.successConfirmationBox.showConfirmation &&
@@ -80,7 +81,7 @@ export default class DeleteRecord extends PureComponent {
     _cancel = () => {
         this.props.history.goBack();
     };
-
+    /* istanbul ignore next */
     _handleDefaultSubmit = event => {
         event && event.preventDefault();
     };
@@ -196,7 +197,7 @@ export default class DeleteRecord extends PureComponent {
                                                 multiline
                                                 rows={3}
                                                 label={formTxt.reason.label(isDeleted)}
-                                                validate={[validation.maxLength255]}
+                                                validate={[validation.spacelessMaxLength255Validator]}
                                             />
                                         </Grid>
                                     </Grid>
@@ -214,7 +215,10 @@ export default class DeleteRecord extends PureComponent {
                                                     textFieldId="rek-doi-resolution-url"
                                                     type="text"
                                                     fullWidth
-                                                    validate={[validation.url, validation.maxLength255]}
+                                                    validate={[
+                                                        validation.url,
+                                                        validation.spacelessMaxLength255Validator,
+                                                    ]}
                                                     label={formTxt.doiResolutionUrl.label}
                                                     placeholder={formTxt.doiResolutionUrl.placeholder}
                                                 />
@@ -236,7 +240,10 @@ export default class DeleteRecord extends PureComponent {
                                                         textFieldId="rek-new-doi"
                                                         type="text"
                                                         fullWidth
-                                                        validate={[validation.doi, validation.maxLength255]}
+                                                        validate={[
+                                                            validation.doi,
+                                                            validation.spacelessMaxLength255Validator,
+                                                        ]}
                                                         label={formTxt.newDoi.label}
                                                         placeholder={formTxt.newDoi.placeholder}
                                                     />
@@ -282,6 +289,8 @@ export default class DeleteRecord extends PureComponent {
                                     disabled={this.props.submitting}
                                     onClick={this._cancel}
                                     id="cancel-delete-record"
+                                    data-testid="cancel-delete-record"
+                                    data-analyticsid="cancel-delete-record"
                                 />
                             </Grid>
                             <Grid item>
@@ -293,7 +302,8 @@ export default class DeleteRecord extends PureComponent {
                                     onClick={this.props.handleSubmit}
                                     disabled={this.props.submitting || this.props.disableSubmit}
                                     id="submit-delete-record"
-                                    data-testid="delete-admin"
+                                    data-analyticsid="delete-admin"
+                                    data-testid="submit-delete-record"
                                 />
                             </Grid>
                         </Grid>

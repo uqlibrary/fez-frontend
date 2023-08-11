@@ -121,6 +121,9 @@ export const AutoCompleteAsynchronousField = ({
                         error={error}
                         placeholder={placeholder}
                         helperText={(error && errorText) || ''}
+                        FormHelperTextProps={{
+                            'data-testid': `${autoCompleteAsynchronousFieldId}-helper-text`,
+                        }}
                         fullWidth
                         label={!hideLabel && floatingLabelText}
                         InputProps={{
@@ -128,7 +131,12 @@ export const AutoCompleteAsynchronousField = ({
                             endAdornment: (
                                 <React.Fragment>
                                     {loading ? (
-                                        <CircularProgress color="inherit" size={20} id="loading-suggestions" />
+                                        <CircularProgress
+                                            color="inherit"
+                                            size={20}
+                                            id="loading-suggestions"
+                                            data-testid="loading-suggestions"
+                                        />
                                     ) : null}
                                     {params.InputProps.endAdornment}
                                 </React.Fragment>
@@ -136,7 +144,7 @@ export const AutoCompleteAsynchronousField = ({
                         }}
                         inputProps={{
                             ...params.inputProps,
-                            id: `${autoCompleteAsynchronousFieldId}-input`,
+                            'data-analyticsid': `${autoCompleteAsynchronousFieldId}-input`,
                             'data-testid': `${autoCompleteAsynchronousFieldId}-input`,
                         }}
                         value={inputValue}
@@ -146,6 +154,7 @@ export const AutoCompleteAsynchronousField = ({
                 )}
                 ListboxProps={{
                     id: `${autoCompleteAsynchronousFieldId}-options`,
+                    'data-analyticsid': `${autoCompleteAsynchronousFieldId}-options`,
                     'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
                 }}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}

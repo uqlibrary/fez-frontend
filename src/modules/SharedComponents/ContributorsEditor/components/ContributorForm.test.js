@@ -40,6 +40,19 @@ describe('Component ContributorForm', () => {
         expect(getByTestId('rek-contributor-add').disabled).toBeTruthy();
     });
 
+    it('should validate new contributor maxlength correctly', () => {
+        const { getByTestId } = setup();
+
+        fireEvent.click(getByTestId('rek-contributor-add'));
+        expect(getByTestId('rek-contributor-add').disabled).toBeTruthy();
+        fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: '1' } });
+        expect(getByTestId('rek-contributor-add').disabled).toBeFalsy();
+        fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: '1'.repeat(255) } });
+        expect(getByTestId('rek-contributor-add').disabled).toBeFalsy();
+        fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: '1'.repeat(256) } });
+        expect(getByTestId('rek-contributor-add').disabled).toBeTruthy();
+    });
+
     it('should render display name field and identifier field', () => {
         const { getByTestId } = setup({ showIdentifierLookup: true });
         expect(getByTestId('rek-contributor-input')).toBeInTheDocument();

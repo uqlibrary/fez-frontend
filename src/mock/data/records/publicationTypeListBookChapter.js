@@ -349,7 +349,7 @@ const publicationTypeListBookChapter = {
                     "sc_3m": 0,
                     "sc_6m": 0,
                     "sc_1y": 0,
-                    "sc_citation_url": "http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-85065401638"
+                    "sc_citation_url": "https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-85065401638"
                 }
             },
             "fez_record_search_key_security_policy": [1],

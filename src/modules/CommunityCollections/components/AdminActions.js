@@ -79,6 +79,7 @@ export const AdminActions = ({
         <React.Fragment>
             <IconButton
                 id={`admin-actions-button-${record}`}
+                data-analyticsid={`admin-actions-button-${record}`}
                 data-testid={`admin-actions-button-${record}`}
                 aria-label="More"
                 aria-haspopup="true"

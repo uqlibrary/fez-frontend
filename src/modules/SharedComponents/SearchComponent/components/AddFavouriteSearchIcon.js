@@ -78,6 +78,7 @@ export const AddFavouriteSearchIcon = () => {
                         <IconButton
                             onClick={showConfirmation}
                             id="favourite-search-save"
+                            data-analyticsid="favourite-search-save"
                             data-testid="favourite-search-save"
                             size="large"
                         >
@@ -91,6 +92,7 @@ export const AddFavouriteSearchIcon = () => {
                     <span>
                         <IconButton
                             id="favourite-search-saved"
+                            data-analyticsid="favourite-search-saved"
                             data-testid="favourite-search-saved"
                             disabled
                             size="large"

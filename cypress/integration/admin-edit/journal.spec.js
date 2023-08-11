@@ -52,7 +52,7 @@ context('Journal admin edit', () => {
                 .as('issnBlock');
 
             const issn = record.fez_record_search_key_issn[0].rek_issn;
-            const sherpaLink = `http://www.sherpa.ac.uk/romeo/search.php?issn=${issn}`;
+            const sherpaLink = `https://www.sherpa.ac.uk/romeo/search.php?issn=${issn}`;
 
             cy.get('#rek-issn-list-row-0').within(row => {
                 cy.wrap(row)

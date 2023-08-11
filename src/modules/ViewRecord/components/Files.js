@@ -264,30 +264,24 @@ export class FilesClass extends Component {
         });
     };
 
-    showPreview = ({ checksums = {}, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl }) => {
-        if (securityStatus) {
-            this.setState({
-                preview: {
-                    checksums,
-                    fileName,
-                    imageError: false,
-                    mediaUrl,
-                    mimeType,
-                    previewMediaUrl,
-                    securityStatus,
-                    videoLoading: true,
-                    webMediaUrl,
-                },
-            });
-        }
+    showPreview = ({ checksums, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl }) => {
+        this.setState({
+            preview: {
+                checksums,
+                fileName,
+                imageError: false,
+                mediaUrl,
+                mimeType,
+                previewMediaUrl,
+                securityStatus,
+                videoLoading: true,
+                webMediaUrl,
+            },
+        });
     };
 
     getUrl = (pid, fileName, checksum = '') => {
         return pid && fileName && pathConfig.file.url(pid, fileName, checksum);
-    };
-
-    searchByKey = (list, key, value) => {
-        return list && list.filter(item => item[key] === value)[0];
     };
 
     isFileValid = dataStream => {
@@ -367,6 +361,10 @@ export class FilesClass extends Component {
                       const previewFileName = checkForPreview(fileName, dataStreams);
                       const webFileName = checkForWeb(fileName, dataStreams);
                       const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
+                      /**
+                       *  datastreams are being filtered by this.isFileValid which calls getSecurityAccess,
+                       *  securityAccess will always be true
+                       */
                       const securityAccess = getSecurityAccess(dataStream, componentProps);
                       const checksums = this.getChecksums(
                           dataStream,
@@ -535,6 +533,7 @@ export class FilesClass extends Component {
                                     xs={2}
                                     sm={1}
                                     className={this.props.classes.thumbIconCentered}
+                                    data-analyticsid={`dsi-mimetype-${index}`}
                                     data-testid={`dsi-mimetype-${index}`}
                                 >
                                     {item.icon}
@@ -544,6 +543,7 @@ export class FilesClass extends Component {
                                     xs={8}
                                     sm={4}
                                     className={this.props.classes.dataWrapper}
+                                    data-analyticsid={`dsi-dsid-${index}`}
                                     data-testid={`dsi-dsid-${index}`}
                                 >
                                     <FileName
@@ -586,6 +586,7 @@ export class FilesClass extends Component {
                                     item
                                     sm
                                     style={{ textAlign: 'right' }}
+                                    data-analyticsid={`rek-oa-status-${index}`}
                                     data-testid={`rek-oa-status-${index}`}
                                     sx={{ display: { xs: 'none', sm: 'block' } }}
                                 >

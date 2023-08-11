@@ -132,6 +132,7 @@ const BulkExport = ({
             <Button
                 children={format.label}
                 className={`${classes.exportButton} ${statusClass}`}
+                data-analyticsid={id}
                 data-testid={id}
                 disabled={['success', 'loading'].includes(statusClass)}
                 endIcon={statusIcon}
@@ -180,6 +181,7 @@ const BulkExport = ({
                 children={buttonText}
                 disabled={open || disabled}
                 onClick={openDialog}
+                data-analyticsid="bulk-export-open"
                 data-testid="bulk-export-open"
                 id="bulk-export-open"
                 color={'default'}

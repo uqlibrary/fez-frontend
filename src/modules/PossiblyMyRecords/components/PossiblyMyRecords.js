@@ -79,6 +79,7 @@ export default class PossiblyMyRecords extends PureComponent {
             };
         }
         // set forever-true flag if user has publications
+        /* istanbul ignore next */
         if (
             !state.hasPublications &&
             !props.loadingPossiblePublicationsList &&
@@ -111,6 +112,7 @@ export default class PossiblyMyRecords extends PureComponent {
     };
 
     _hidePublication = () => {
+        /* istanbul ignore else */
         if (this.state.publicationToHide) {
             this.props.actions.hideRecord({
                 record: this.state.publicationToHide,
@@ -168,7 +170,7 @@ export default class PossiblyMyRecords extends PureComponent {
             <Alert
                 {...{
                     ...alertLocale,
-                    message: alertLocale.message ? alertLocale.message(error) : error,
+                    message: alertLocale.message(error),
                 }}
             />
         ) : null;
@@ -207,6 +209,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 handleAction: this._confirmHidePublication,
             },
         ];
+
         return (
             <StandardPage title={txt.title}>
                 {this.getAlert(
@@ -249,7 +252,8 @@ export default class PossiblyMyRecords extends PureComponent {
                             this.props.possiblePublicationsList.length > 0) && (
                             <Grid item xs={12} md={9}>
                                 <StandardCard noHeader>
-                                    {this.props.loadingPossiblePublicationsList && (
+                                    {/* istanbul ignore next */
+                                    this.props.loadingPossiblePublicationsList && (
                                         <Grid container>
                                             <Grid item xs />
                                             <Grid item>

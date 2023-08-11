@@ -88,6 +88,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -108,6 +109,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin-top"
                 data-testid="publish-admin-top"
                 disabled={true}
                 fullWidth={true}
@@ -124,6 +126,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 disabled={true}
                 fullWidth={true}
@@ -192,6 +195,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
@@ -279,6 +283,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -299,6 +304,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin"
                 data-testid="publish-admin"
                 disabled={true}
                 fullWidth={true}
@@ -315,6 +321,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 disabled={true}
                 fullWidth={true}
@@ -474,6 +481,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -494,6 +502,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin-top"
                 data-testid="publish-admin-top"
                 fullWidth={true}
                 id="admin-work-publish-top"
@@ -509,6 +518,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
@@ -576,6 +586,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
@@ -662,6 +673,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -682,6 +694,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin"
                 data-testid="publish-admin"
                 fullWidth={true}
                 id="admin-work-publish"
@@ -697,6 +710,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
@@ -828,6 +842,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -848,6 +863,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin-top"
                 data-testid="publish-admin-top"
                 fullWidth={true}
                 id="admin-work-publish-top"
@@ -863,6 +879,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
@@ -930,6 +947,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
@@ -1016,6 +1034,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -1036,6 +1055,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin"
                 data-testid="publish-admin"
                 fullWidth={true}
                 id="admin-work-publish"
@@ -1051,6 +1071,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
@@ -1182,6 +1203,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -1202,6 +1224,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin-top"
                 data-testid="publish-admin-top"
                 fullWidth={true}
                 id="admin-work-publish-top"
@@ -1217,6 +1240,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
@@ -1284,6 +1308,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
@@ -1370,6 +1395,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -1390,6 +1416,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin"
                 data-testid="publish-admin"
                 fullWidth={true}
                 id="admin-work-publish"
@@ -1405,6 +1432,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
@@ -1536,6 +1564,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -1556,6 +1585,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin-top"
                 data-testid="publish-admin-top"
                 fullWidth={true}
                 id="admin-work-publish-top"
@@ -1571,6 +1601,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
@@ -1638,6 +1669,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
@@ -1724,6 +1756,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -1744,6 +1777,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin"
                 data-testid="publish-admin"
                 fullWidth={true}
                 id="admin-work-publish"
@@ -1759,6 +1793,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
@@ -1902,6 +1937,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -1922,6 +1958,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin-top"
                 data-testid="publish-admin-top"
                 fullWidth={true}
                 id="admin-work-publish-top"
@@ -1937,6 +1974,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
@@ -2041,6 +2079,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -2061,6 +2100,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin"
                 data-testid="publish-admin"
                 fullWidth={true}
                 id="admin-work-publish"
@@ -2076,6 +2116,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
@@ -2209,6 +2250,7 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -2229,6 +2271,7 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin-top"
                 data-testid="publish-admin-top"
                 fullWidth={true}
                 id="admin-work-publish-top"
@@ -2244,6 +2287,7 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
@@ -2386,6 +2430,7 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -2406,6 +2451,7 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin"
                 data-testid="publish-admin"
                 fullWidth={true}
                 id="admin-work-publish"
@@ -2421,6 +2467,7 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
@@ -2552,6 +2599,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -2572,6 +2620,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin-top"
                 data-testid="publish-admin-top"
                 fullWidth={true}
                 id="admin-work-publish-top"
@@ -2587,6 +2636,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
@@ -2654,12 +2704,14 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
               value="bibliographic"
             />
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="security-tab"
               data-testid="security-tab"
               key="security"
               label="Security"
@@ -2721,6 +2773,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -2741,6 +2794,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin"
                 data-testid="publish-admin"
                 fullWidth={true}
                 id="admin-work-publish"
@@ -2756,6 +2810,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
@@ -2887,6 +2942,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -2907,6 +2963,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
@@ -2953,18 +3010,21 @@ exports[`AdminInterface component should render in create mode 1`] = `
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
               value="bibliographic"
             />
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="files-tab"
               data-testid="files-tab"
               key="files"
               label="Files"
               value="files"
             />
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="security-tab"
               data-testid="security-tab"
               key="security"
               label="Security"
@@ -3026,6 +3086,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -3046,6 +3107,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
@@ -3157,6 +3219,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -3177,6 +3240,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="unpublish-admin-top"
                 data-testid="unpublish-admin-top"
                 disabled={true}
                 fullWidth={true}
@@ -3193,6 +3257,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 disabled={true}
                 fullWidth={true}
@@ -3261,18 +3326,21 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
               value="bibliographic"
             />
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="files-tab"
               data-testid="files-tab"
               key="files"
               label="Files"
               value="files"
             />
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="security-tab"
               data-testid="security-tab"
               key="security"
               label="Security"
@@ -3335,6 +3403,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -3355,6 +3424,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="unpublish-admin"
                 data-testid="unpublish-admin"
                 disabled={true}
                 fullWidth={true}
@@ -3371,6 +3441,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 disabled={true}
                 fullWidth={true}
@@ -3504,6 +3575,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -3524,6 +3596,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin-top"
                 data-testid="publish-admin-top"
                 disabled={false}
                 fullWidth={true}
@@ -3540,6 +3613,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 disabled={false}
                 fullWidth={true}
@@ -3608,18 +3682,21 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
               value="bibliographic"
             />
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="files-tab"
               data-testid="files-tab"
               key="files"
               label="Files"
               value="files"
             />
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="security-tab"
               data-testid="security-tab"
               key="security"
               label="Security"
@@ -3682,6 +3759,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -3702,6 +3780,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="publish-admin"
                 data-testid="publish-admin"
                 disabled={false}
                 fullWidth={true}
@@ -3718,6 +3797,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 disabled={false}
                 fullWidth={true}
@@ -3850,6 +3930,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel-top"
                 fullWidth={true}
                 id="admin-work-cancel-top"
                 onClick={[Function]}
@@ -3870,6 +3951,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin-top"
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
@@ -3915,6 +3997,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             value="bibliographic"
           >
             <WithStyles(ForwardRef(Tab))
+              data-analyticsid="bibliographic-tab"
               data-testid="bibliographic-tab"
               key="bibliographic"
               label="Bibliographic"
@@ -3976,6 +4059,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             >
               <ForwardRef(Button)
                 color="secondary"
+                data-analyticsid="admin-work-cancel"
                 fullWidth={true}
                 id="admin-work-cancel"
                 onClick={[Function]}
@@ -3996,6 +4080,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             >
               <ForwardRef(Button)
                 color="primary"
+                data-analyticsid="submit-admin"
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"

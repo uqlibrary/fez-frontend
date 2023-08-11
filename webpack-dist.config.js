@@ -32,10 +32,10 @@ const options = {
 };
 
 // get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship)
-const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
+const branchType = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
 
 // get configuration for the branch
-const config = require('./config').default[branch] || require('./config').default.development;
+const config = require('./config').default[branchType] || require('./config').default.development;
 
 // local port to serve production build
 const port = 9000;
@@ -45,7 +45,7 @@ const useMock = (process && process.env && !!process.env.USE_MOCK) || false;
 
 // config for development deployment
 if (config.environment === 'development') {
-    config.basePath += branch + '/';
+    config.basePath += branchType + '/';
 }
 
 /**
@@ -111,6 +111,7 @@ const webpackConfig = {
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
+            reusablejs: config.reusablejs,
             title: config.title,
             gtm: config.gtm,
             inject: true,

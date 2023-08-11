@@ -161,7 +161,12 @@ export const AuthorLinking = ({
             let j = 0;
             for (let i = 0; i < authors.length; i += itemsPerRow) {
                 rows.push(
-                    <Grid container key={i} id={`${authorLinkingId}-row-${j}`}>
+                    <Grid
+                        container
+                        key={i}
+                        id={`${authorLinkingId}-row-${j}`}
+                        data-testid={`${authorLinkingId}-row-${j}`}
+                    >
                         {authors.slice(i, i + itemsPerRow)}
                     </Grid>,
                 );
@@ -232,6 +237,7 @@ export const AuthorLinking = ({
                             id="authorAcceptDeclaration"
                             inputProps={{
                                 id: 'author-accept-declaration-input',
+                                'data-analyticsid': 'author-accept-declaration-input',
                                 'data-testid': 'author-accept-declaration-input',
                             }}
                         />

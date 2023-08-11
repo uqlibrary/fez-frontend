@@ -134,7 +134,7 @@ export const AdvancedSearchComponent = ({
     const alreadyAddedFields = fieldRows.map(item => item.searchField);
 
     return (
-        <form id="advancedSearchForm" onSubmit={_handleAdvancedSearch}>
+        <form id="advancedSearchForm" data-testid="advanced-search-form" onSubmit={_handleAdvancedSearch}>
             <Grid container spacing={0}>
                 <Grid container spacing={5} alignItems={'center'}>
                     <Grid item style={{ flexGrow: 1, width: 1 }}>
@@ -146,6 +146,8 @@ export const AdvancedSearchComponent = ({
                             onClick={_toggleMinimise}
                             tooltip={isMinimised ? txt.advancedSearch.tooltip.show : txt.advancedSearch.tooltip.hide}
                             id={!isMinimised ? 'minimize-advanced-search' : 'maximize-advanced-search'}
+                            data-testid={!isMinimised ? 'minimize-advanced-search' : 'maximize-advanced-search'}
+                            data-analyticsid={!isMinimised ? 'minimize-advanced-search' : 'maximize-advanced-search'}
                             size="large"
                         >
                             {!isMinimised ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
@@ -228,6 +230,8 @@ export const AdvancedSearchComponent = ({
                                                 <Checkbox
                                                     id="advanced-search-open-access"
                                                     inputProps={{
+                                                        'data-analyticsid': 'advanced-search-open-access',
+                                                        'data-testid': 'advanced-search-open-access',
                                                         'aria-label': txt.advancedSearch.openAccess.ariaLabel,
                                                     }}
                                                     checked={isOpenAccess}
@@ -251,6 +255,7 @@ export const AdvancedSearchComponent = ({
                                     disabled={!canAddAnotherField}
                                     onClick={_addAdvancedSearchRow}
                                     id="add-another-search-row"
+                                    data-analyticsid="advanced-search-row-add"
                                     data-testid="advanced-search-row-add"
                                     fullWidth
                                 />
@@ -258,6 +263,7 @@ export const AdvancedSearchComponent = ({
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     id="reset-advanced-search"
+                                    data-analyticsid="advanced-search-reset"
                                     data-testid="advanced-search-reset"
                                     variant={'contained'}
                                     children={txt.advancedSearch.reset.title}
@@ -270,6 +276,7 @@ export const AdvancedSearchComponent = ({
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     id="toggle-to-simple-search-mode"
+                                    data-analyticsid="toggle-to-simple-search"
                                     data-testid="toggle-to-simple-search"
                                     children={txt.advancedSearch.simpleSearch.title}
                                     aria-label={txt.advancedSearch.simpleSearch.aria}
@@ -293,6 +300,7 @@ export const AdvancedSearchComponent = ({
                                     onClick={_handleAdvancedSearch}
                                     disabled={!haveAllAdvancedSearchFieldsValidated(fieldRows)}
                                     id="advanced-search"
+                                    data-analyticsid="advanced-search"
                                     data-testid="advanced-search"
                                 />
                             </Grid>

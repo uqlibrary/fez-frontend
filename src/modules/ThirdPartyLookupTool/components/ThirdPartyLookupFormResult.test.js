@@ -1,6 +1,8 @@
+import React from 'react';
+import { rtlRender, fireEvent } from 'test-utils';
 import { ThirdPartyLookupFormResult } from './ThirdPartyLookupFormResult';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         lookupResults: testProps.lookupResults || [{ IS_INTERNATIONAL_COLLAB: '0' }],
         primaryValue: testProps.primaryValue || 'dummy UT',
@@ -26,28 +28,24 @@ function setup(testProps, isShallow = true) {
             clearButtonLabel: 'New Test Search',
         },
     };
-    return getElement(ThirdPartyLookupFormResult, props, isShallow);
+    return rtlRender(<ThirdPartyLookupFormResult {...props} />);
 }
 
 describe('Component ThirdPartyLookupFormResult', () => {
     it('renders api data', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should clear results via clear button', () => {
         const mockCallback = jest.fn();
 
-        const testProps = {
+        const { getByRole } = setup({
             actions: {
                 clearThirdPartyLookup: mockCallback,
             },
-        };
-        const wrapper = setup({ ...testProps });
-
-        const button = wrapper.find('ForwardRef(Button)');
-        expect(button.length).toEqual(1);
-        button.simulate('click');
+        });
+        fireEvent.click(getByRole('button', { name: /New Test Search/i }));
 
         expect(mockCallback).toHaveBeenCalledTimes(1);
     });
@@ -55,15 +53,9 @@ describe('Component ThirdPartyLookupFormResult', () => {
     // test just for coverage of the 'else' of a function existance check of fn clearThirdPartyLookup
     it('should have coverage when the clear function is not setup', () => {
         const mockCallback = jest.fn();
+        const { getByRole } = setup({ actions: {} });
 
-        const testProps = {
-            actions: {},
-        };
-        const wrapper = setup({ ...testProps });
-
-        const button = wrapper.find('ForwardRef(Button)');
-        expect(button.length).toEqual(1);
-        button.simulate('click');
+        fireEvent.click(getByRole('button', { name: /New Test Search/i }));
 
         expect(mockCallback).not.toBeCalled();
     });
@@ -78,8 +70,8 @@ describe('Component ThirdPartyLookupFormResult', () => {
                 reportSecondaryFieldInOutput: true, // <---- value defines point of test
             },
         };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(testProps);
+        expect(container).toMatchSnapshot();
     });
 
     it('renders api data when no second field provided', () => {
@@ -90,8 +82,8 @@ describe('Component ThirdPartyLookupFormResult', () => {
                 primaryFieldHeading: 'pf heading 9',
             },
         };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(testProps);
+        expect(container).toMatchSnapshot();
     });
 
     it('should not display the secondary field if reportInOutput is not specifically turned on', () => {
@@ -103,30 +95,22 @@ describe('Component ThirdPartyLookupFormResult', () => {
                 secondaryFieldHeading: 'SF 8',
             },
         };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(testProps);
+        expect(container).toMatchSnapshot();
     });
 
     it('should use defaults when locale values are not provided', () => {
-        const testProps = { locale: {} };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ locale: {} });
+        expect(container).toMatchSnapshot();
     });
 
     it('should display a blank when the response is blank', () => {
-        const testProps = {
-            lookupResults: [],
-            locale: {},
-        };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ lookupResults: [], locale: {} });
+        expect(container).toMatchSnapshot();
     });
 
     it('should show locale-defined message when no results', () => {
-        const testProps = {
-            lookupResults: [],
-        };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ lookupResults: [] });
+        expect(container).toMatchSnapshot();
     });
 });

@@ -70,6 +70,7 @@ export default class RichEditor extends PureComponent {
     };
 
     onContentDom = e => {
+        e.editor.document.getBody().setAttribute('data-analyticsid', `${this.props.richEditorId}-input`);
         e.editor.document.getBody().setAttribute('data-testid', `${this.props.richEditorId}-input`);
     };
 
@@ -130,6 +131,7 @@ export default class RichEditor extends PureComponent {
                 <div
                     className={this.props.className}
                     id={this.props.richEditorId}
+                    data-analyticsid={this.props.richEditorId}
                     data-testid={this.props.richEditorId}
                     ref={this.props.inputRef}
                 />
@@ -148,8 +150,6 @@ export default class RichEditor extends PureComponent {
                 )}
                 {this.props.maxValue && (
                     <Typography
-                        color="error"
-                        variant="caption"
                         component={'span'}
                         style={{
                             display: 'inline-block',

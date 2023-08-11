@@ -311,6 +311,7 @@ export const Alert = ({
                 alignItems="flex-start"
                 alignContent="center"
                 id={alertId}
+                data-analyticsid={alertId}
                 data-testid={alertId}
                 classes={{ root: classes.root }}
             >
@@ -323,7 +324,13 @@ export const Alert = ({
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
                             {showLoader ? (
-                                <CircularProgress id="spinner" className="spinner" size={38} thickness={3} />
+                                <CircularProgress
+                                    id="spinner"
+                                    data-testid="spinner"
+                                    className="spinner"
+                                    size={38}
+                                    thickness={3}
+                                />
                             ) : (
                                 renderIcon(type)
                             )}
@@ -345,6 +352,7 @@ export const Alert = ({
                                     title={dismissTitle}
                                     aria-label={dismissTitle}
                                     id="dismiss-mobile"
+                                    data-analyticsid="dismiss-mobile"
                                     data-testid="dismiss-mobile"
                                     size="large"
                                 >
@@ -363,6 +371,7 @@ export const Alert = ({
                             fullWidth
                             className="action alert-button"
                             id="action-button"
+                            data-analyticsid="action-button"
                             data-testid="action-button"
                             disabled={showLoader}
                         />
@@ -375,6 +384,7 @@ export const Alert = ({
                             title={dismissTitle}
                             aria-label={dismissTitle}
                             id="dismiss"
+                            data-analyticsid="dismiss"
                             data-testid="dismiss"
                             size="large"
                         >

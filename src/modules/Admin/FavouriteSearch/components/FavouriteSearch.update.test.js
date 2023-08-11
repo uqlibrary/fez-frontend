@@ -54,14 +54,14 @@ describe('FavouriteSearch', () => {
     });
 
     it('should handle row update', async () => {
-        const { getByText, getByTestId, getAllByTestId } = setup({});
+        const { getByText, getByTestId } = setup({});
         const updateFavouriteSearchListItemFn = jest.spyOn(FavouriteSearchActions, 'updateFavouriteSearchListItem');
 
         await waitFor(() => getByText('Favourite searches'));
-        fireEvent.click(getAllByTestId('favourite-search-list-item-edit')[0]);
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
         expect(updateFavouriteSearchListItemFn).toBeCalled();
     });

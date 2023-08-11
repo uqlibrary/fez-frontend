@@ -97,6 +97,7 @@ export class AuthorItem extends PureComponent {
                         </Typography>
                     }
                     id={`${this.props.authorItemId}`}
+                    data-analyticsid={`${this.props.authorItemId}`}
                     data-testid={`${this.props.authorItemId}`}
                 />
                 <Typography

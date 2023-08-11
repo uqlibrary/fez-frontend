@@ -126,8 +126,8 @@ describe('NewListEditor component', () => {
         });
 
         fireEvent.click(getByTestId('keywords-list-row-1-delete')); // two
-        waitFor(() => getByTestId('confirm-action'));
-        fireEvent.click(getByTestId('confirm-action'));
+        waitFor(() => getByTestId('confirm-keywords-list-row-1-delete'));
+        fireEvent.click(getByTestId('confirm-keywords-list-row-1-delete'));
 
         expect(getByTestId('keywords-list-row-1')).toHaveTextContent('three');
     });
@@ -141,8 +141,8 @@ describe('NewListEditor component', () => {
         });
 
         fireEvent.click(getByTestId('delete-all-keywords'));
-        waitFor(() => getByTestId('confirm-action'));
-        fireEvent.click(getByTestId('confirm-action'));
+        waitFor(() => getByTestId('confirm-keywords-delete-all'));
+        fireEvent.click(getByTestId('confirm-keywords-delete-all'));
 
         expect(queryByTestId('keywords-list-row-0')).not.toBeInTheDocument();
     });

@@ -11,6 +11,7 @@ import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 import { default as globalLocale } from 'locale/global';
 import makeStyles from '@mui/styles/makeStyles';
+import { validation } from 'config';
 
 import {
     AFFILIATION_TYPE_NOT_UQ,
@@ -227,6 +228,8 @@ export const ContributorForm = ({
         );
     };
 
+    const isValid = value => !validation.isEmpty(value.trim()) && !validation.maxLength255Validator(value.trim());
+
     return (
         <React.Fragment>
             {description}
@@ -258,8 +261,15 @@ export const ContributorForm = ({
                         autoComplete="off"
                         error={
                             !isContributorAssigned &&
-                            (contributor.nameAsPublished || '').trim().length === 0 &&
-                            (isNtro ? contributor.affiliation !== '' : !!required)
+                            (isNtro ? contributor.affiliation !== '' : !!required) &&
+                            !isValid(contributor.nameAsPublished)
+                        }
+                        errorText={
+                            !isContributorAssigned &&
+                            (isNtro ? contributor.affiliation !== '' : !!required) &&
+                            !isValid(contributor.nameAsPublished)
+                                ? validation.maxLength255Validator(contributor.nameAsPublished)
+                                : undefined
                         }
                     />
                 </Grid>
@@ -316,9 +326,10 @@ export const ContributorForm = ({
                         variant="contained"
                         fullWidth
                         color="primary"
-                        disabled={buttonDisabled}
+                        disabled={buttonDisabled || !isValid(contributor.nameAsPublished)}
                         onClick={_onSubmit}
                         id={`${contributorFormId}-add`}
+                        data-analyticsid={`${contributorFormId}-add`}
                         data-testid={`${contributorFormId}-add`}
                         className={classes.contributorFormButton}
                     >
@@ -334,6 +345,7 @@ export const ContributorForm = ({
                             disabled={!contributor.nameAsPublished}
                             onClick={_onCancel}
                             id={`${contributorFormId}-cancel`}
+                            data-analyticsid={`${contributorFormId}-cancel`}
                             data-testid={`${contributorFormId}-cancel`}
                             className={classes.contributorFormButton}
                         >

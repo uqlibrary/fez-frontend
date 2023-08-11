@@ -114,6 +114,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                         <IconButton
                             onClick={handleDrawerToggle}
                             id={`adminRecordDrawerCloseBtn${variant}`}
+                            data-analyticsid={`btnAdminRecordDrawerCloseBtn${variant}`}
                             data-testid={`btnAdminRecordDrawerCloseBtn${variant}`}
                             aria-label="Close admin record drawer"
                             size="large"
@@ -180,6 +181,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
             </Drawer>
             <Snackbar
                 id="copied-text-snackbar"
+                data-testid="copied-text-snackbar"
                 anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'center',

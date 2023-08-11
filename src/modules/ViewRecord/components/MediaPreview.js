@@ -35,12 +35,14 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
     }, [webMediaUrl]);
 
     return (
-        <div className={classes.containerPadding} id={id}>
+        <div className={classes.containerPadding} id={id} data-testid={id}>
             <Grid container spacing={2} padding={0} justifyContent="flex-end" direction="row">
                 {mediaUrl && (
                     <Grid item xs={12} sm="auto">
                         <Button
                             id="open-original-file"
+                            data-analyticsid="open-original-file"
+                            data-testid="open-original-file"
                             variant="contained"
                             onClick={openFileInNewWindow}
                             color="primary"
@@ -55,6 +57,8 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                     <Grid item xs={12} sm="auto">
                         <Button
                             id="open-web-file"
+                            data-analyticsid="open-web-file"
+                            data-testid="open-web-file"
                             variant="contained"
                             onClick={openWebFileInNewWindow}
                             color="primary"
@@ -174,6 +178,8 @@ export const MediaPreview = ({ ...props }) => {
                     <Grid item xs="auto">
                         <img
                             id="image-preview"
+                            data-analyticsid="image-preview"
+                            data-testid="image-preview"
                             src={previewMediaUrl}
                             alt={mediaUrl}
                             onLoad={MediaPreviewUtils.scrollToPreview(mediaPreviewRef)}

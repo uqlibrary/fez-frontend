@@ -1370,7 +1370,7 @@ export default {
             'tc_3m': 1,
             'tc_6m': 1,
             'tc_1y': 1,
-            'tc_citation_url': 'http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/gateway.isiknowledge.com\/gateway\/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&SrcAuth=uqueensland&KeyUT=000722237500002',
+            'tc_citation_url': 'https:\/\/go.openathens.net\/redirector\/uq.edu.au?url=https%3A%2F%2Fgateway.isiknowledge.com%2Fgateway%2FGateway.cgi%3FGWVersion%3D2%26SrcApp%3Dresolve1%26DestLinkType%3DCitingArticles%26DestApp%3DWOS_CPL%26SrcAuth%3Duqueensland%26KeyUT%3D000722237500002',
         },
     },
     'fez_record_search_key_ismemberof': [
@@ -1604,7 +1604,7 @@ export default {
             'sc_3m': 2,
             'sc_6m': 2,
             'sc_1y': 2,
-            'sc_citation_url': 'http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/www.scopus.com\/results\/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-85119400621',
+            'sc_citation_url': 'https:\/\/go.openathens.net\/redirector\/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Fresults%2Fcitedbyresults.url%3Fsort%3Dplf-f%26src%3Ds%26sot%3Dcite%26sdt%3Da%26cite%3D2-s2.0-85119400621',
         },
     },
     'fez_record_search_key_security_policy': [

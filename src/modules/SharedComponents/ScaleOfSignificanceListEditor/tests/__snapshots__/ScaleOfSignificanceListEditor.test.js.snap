@@ -10,6 +10,7 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -317,6 +318,7 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -624,6 +626,7 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -931,6 +934,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -980,6 +984,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1044,6 +1049,7 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 1`] =
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1093,6 +1099,7 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 2`] =
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1157,6 +1164,7 @@ exports[`ScaleOfSignificanceListEditor tests should move down an item 1`] = `
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1275,6 +1283,7 @@ exports[`ScaleOfSignificanceListEditor tests should move up an item 1`] = `
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1393,6 +1402,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1442,6 +1452,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1491,6 +1502,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1540,6 +1552,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1631,6 +1644,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1722,6 +1736,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an entry with selecte
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"
@@ -1813,6 +1828,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an item with selected
     justifyContent="flex-end"
   >
     <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
       data-testid="rek-significance-showhidebutton"
       onClick={[Function]}
       size="small"

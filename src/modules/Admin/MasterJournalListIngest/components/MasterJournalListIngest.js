@@ -85,6 +85,7 @@ const MasterJournalListIngest = ({ error, handleSubmit, history, submitSucceeded
                         <Button
                             aria-label={txt.formLabels.cancelButtonLabel}
                             children={txt.formLabels.cancelButtonLabel}
+                            data-analyticsid="master-journal-list-ingest-cancel"
                             data-testid="master-journal-list-ingest-cancel"
                             disabled={submitting}
                             fullWidth
@@ -99,6 +100,7 @@ const MasterJournalListIngest = ({ error, handleSubmit, history, submitSucceeded
                             aria-label={txt.formLabels.submitButtonLabel}
                             children={txt.formLabels.submitButtonLabel}
                             color="primary"
+                            data-analyticsid="master-journal-list-ingest-submit"
                             data-testid="master-journal-list-ingest-submit"
                             disabled={submitting || submitSucceeded || disableSubmit}
                             fullWidth

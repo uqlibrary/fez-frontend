@@ -1,7 +1,7 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes, getFilenameId } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
-import { rtlRender, fireEvent, waitFor, act, createMatchMedia } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, act, createMatchMedia, within } from 'test-utils';
 import { openAccessConfig } from 'config';
 import * as fileUploadLocale from '../FileUploader/locale';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
@@ -148,7 +148,7 @@ describe('AttachedFiles component', () => {
         expect(queryByText('FezACML_UQ_252236.xml')).not.toBeInTheDocument();
         expect(queryByText('FezACML_UQ_eSpace_My_Research_091119.pdf.xml')).not.toBeInTheDocument();
         expect(queryByText('FezACML_UQ_eSpace_My_Research_091119_old.pdf.xml')).not.toBeInTheDocument();
-        expect(queryByText('presmd_MyUQeSpaceResearcherGuidelines.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_MyUQeSpaceResearcherGuidelines_compressed.xml')).not.toBeInTheDocument();
         expect(queryByText('presmd_MyUQeSpace_Researcher_Guidelines_current.xml')).not.toBeInTheDocument();
         expect(queryByText('presmd_My_UQ_eSpace_researcher_guidelines.xml')).not.toBeInTheDocument();
         expect(queryByText('presmd_My_UQ_eSpace_researcher_guidelines_2012.xml')).not.toBeInTheDocument();
@@ -183,7 +183,7 @@ describe('AttachedFiles component', () => {
         expect(getByText('FezACML_UQ_252236.xml')).toBeInTheDocument();
         expect(getByText('FezACML_UQ_eSpace_My_Research_091119.pdf.xml')).toBeInTheDocument();
         expect(getByText('FezACML_UQ_eSpace_My_Research_091119_old.pdf.xml')).toBeInTheDocument();
-        expect(getByText('presmd_MyUQeSpaceResearcherGuidelines.xml')).toBeInTheDocument();
+        expect(getByText('presmd_MyUQeSpaceResearcherGuidelines_compressed.xml')).toBeInTheDocument();
         expect(getByText('presmd_MyUQeSpace_Researcher_Guidelines_current.xml')).toBeInTheDocument();
         expect(getByText('presmd_My_UQ_eSpace_researcher_guidelines.xml')).toBeInTheDocument();
         expect(getByText('presmd_My_UQ_eSpace_researcher_guidelines_2012.xml')).toBeInTheDocument();
@@ -484,23 +484,14 @@ describe('AttachedFiles component', () => {
             getByText('Please RIGHT CLICK then select link SAVE AS option to save and play video files'),
         ).toBeInTheDocument();
 
-        act(() => {
-            // fireEvent.click(getByTitle('Click to open a preview of http://localhost/view/UQ:252236/test.mp4'));
-            fireEvent.click(getByTestId('preview-link-test.mp4'));
-        });
-        let previewEl = await waitFor(() => expect(getByTestId('media-preview')).toBeInTheDocument());
-        act(() => {
-            fireEvent.click(getByTestId('close-preview', previewEl));
-        });
+        // fireEvent.click(getByTitle('Click to open a preview of http://localhost/view/UQ:252236/test.mp4'));
+        fireEvent.click(getByTestId('preview-link-test.mp4'));
+
+        fireEvent.click(within(getByTestId('media-preview')).getByRole('button', { name: 'Close' }));
         await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
 
-        act(() => {
-            fireEvent.click(getByTestId('file-name-1-preview'));
-        });
-        previewEl = await waitFor(() => expect(getByTestId('media-preview')).toBeInTheDocument());
-        act(() => {
-            fireEvent.click(getByTestId('close-preview', previewEl));
-        });
+        fireEvent.click(getByTestId('file-name-1-preview'));
+        fireEvent.click(within(getByTestId('media-preview')).getByRole('button', { name: 'Close' }));
         await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
 
         done();

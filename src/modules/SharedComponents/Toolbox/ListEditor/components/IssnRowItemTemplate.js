@@ -94,7 +94,7 @@ export const getSherpaLink = sherpaEntry => {
 export const getUlrichsLink = ulrichsEntry =>
     (!!ulrichsEntry &&
         !!ulrichsEntry.ulr_title_id &&
-        globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichsEntry.ulr_title_id)) ||
+        globalLocale.global.ulrichsLink.externalUrl.replace('[id]', encodeURIComponent(ulrichsEntry.ulr_title_id))) ||
     '';
 
 export const mapStateToProps = (state, props) => {

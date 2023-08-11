@@ -77,6 +77,7 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                     <Button
                         aria-label={txt.changeDisplayTypeForm.formLabels.cancelButtonLabel}
                         children={txt.changeDisplayTypeForm.formLabels.cancelButtonLabel}
+                        data-analyticsid="change-display-type-cancel"
                         data-testid="change-display-type-cancel"
                         disabled={submitting}
                         fullWidth
@@ -90,6 +91,7 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                         aria-label={txt.changeDisplayTypeForm.formLabels.submitButtonLabel}
                         children={txt.changeDisplayTypeForm.formLabels.submitButtonLabel}
                         color="primary"
+                        data-analyticsid="change-display-type-submit"
                         data-testid="change-display-type-submit"
                         disabled={submitting || disableSubmit || submitSucceeded}
                         fullWidth

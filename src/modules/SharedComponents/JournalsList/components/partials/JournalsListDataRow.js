@@ -83,6 +83,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                 <Checkbox
                                     size="small"
                                     id={`journal-list-data-col-1-checkbox-${index}`}
+                                    data-analyticsid={`journal-list-data-col-1-checkbox-${index}`}
                                     data-testid={`journal-list-data-col-1-checkbox-${index}`}
                                     value={row.jnl_jid}
                                     onChange={onChange}
@@ -98,6 +99,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                 size="small"
                                 onClick={() => setOpen(!open)}
                                 id={`journal-list-expander-btn-${index}`}
+                                data-analyticsid={`journal-list-expander-btn-${index}`}
                                 data-testid={`journal-list-expander-btn-${index}`}
                             >
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}

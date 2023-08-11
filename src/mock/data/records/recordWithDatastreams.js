@@ -42,7 +42,7 @@ const recordWithDatastreams = {
         "My_UQ_eSpace_UPO_guidelines.pdf",
         "My_UQ_eSpace_UPO_guidelines_2013.pdf",
         "My_UQ_eSpace_UPO_guidelines_2016.pdf",
-        "presmd_MyUQeSpaceResearcherGuidelines.xml",
+        "presmd_MyUQeSpaceResearcherGuidelines_compressed.xml",
         "presmd_MyUQeSpace_Researcher_Guidelines.xml",
         "presmd_MyUQeSpace_Researcher_Guidelines_current.xml",
         "presmd_My_UQ_eSpace_researcher_guidelines.xml",
@@ -222,7 +222,7 @@ const recordWithDatastreams = {
         {
             "dsi_id": 9,
             "dsi_pid": "UQ:252236",
-            "dsi_dsid": "MyUQeSpaceResearcherGuidelines.pdf",
+            "dsi_dsid": "MyUQeSpaceResearcherGuidelines_compressed.pdf",
             "dsi_embargo_date": null,
             "dsi_open_access": null,
             "dsi_label": "Full text (open access)",
@@ -348,7 +348,7 @@ const recordWithDatastreams = {
         {
             "dsi_id": 18,
             "dsi_pid": "UQ:252236",
-            "dsi_dsid": "presmd_MyUQeSpaceResearcherGuidelines.xml",
+            "dsi_dsid": "presmd_MyUQeSpaceResearcherGuidelines_compressed.xml",
             "dsi_embargo_date": null,
             "dsi_open_access": null,
             "dsi_label": "",

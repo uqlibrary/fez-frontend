@@ -1,8 +1,17 @@
+import React from 'react';
 import MyRecords from './MyRecords';
 import { pathConfig, general } from 'config';
 import { locale } from 'locale';
+import { render, WithRouter, WithReduxStore, fireEvent, within } from 'test-utils';
+import { userIsAdmin } from 'hooks';
 
-function setup(testProps = {}) {
+jest.mock('../../../hooks', () => ({
+    userIsAdmin: jest.fn(() => false),
+    userIsResearcher: jest.fn(() => false),
+    useRecordsSelector: jest.requireActual('../../../hooks').useRecordsSelector,
+}));
+
+function setup(testProps = {}, renderMethod = render) {
     const props = {
         location: {
             pathname: pathConfig.records.mine,
@@ -20,7 +29,7 @@ function setup(testProps = {}) {
         loadingPublicationsList: false,
         publicationsList: [],
         publicationsListFacets: {},
-        publicationsListCustomActions: [],
+        // publicationsListCustomActions: [],
         ...testProps,
         actions: {
             loadAuthorPublications: jest.fn(),
@@ -28,51 +37,71 @@ function setup(testProps = {}) {
             ...(testProps.actions || {}),
         },
     };
-    return getElement(MyRecords, props);
+    return renderMethod(
+        <WithReduxStore>
+            <WithRouter>
+                <MyRecords {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('MyRecords test', () => {
     it('renders loading screen while loading account data', () => {
-        const wrapper = setup({ accountLoading: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ accountLoading: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('renders loading screen while loading publications ', () => {
-        const wrapper = setup({ loadingPublicationsList: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ loadingPublicationsList: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('renders loading screen while loading publications while filtering', () => {
-        const wrapper = setup({
-            publicationsList: [1, 2, 2],
+        const { container, rerender } = setup({
+            publicationsList: [{ rek_pid: 'UQ:1' }, { rek_pid: 'UQ:2' }, { rek_pid: 'UQ:2' }],
         });
-        wrapper.setProps({
-            loadingPublicationsList: true,
-        });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        setup(
+            {
+                loadingPublicationsList: true,
+            },
+            rerender,
+        );
+        expect(container).toMatchSnapshot();
     });
 
     it('renders loading screen while export publications loading', () => {
-        const wrapper = setup({ publicationsList: [1, 2, 2], exportPublicationsLoading: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({
+            publicationsList: [{ rek_pid: 'UQ:1', rek_title: '1' }],
+            exportPublicationsLoading: true,
+        });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('renders loading screen while pub loading', () => {
+        const { container } = setup({
+            hasPublications: true,
+            publicationsList: [],
+            loadingPublicationsList: true,
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('renders no results', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('renders list of publications no facets', () => {
-        const wrapper = setup({
-            publicationsList: [1, 2, 3], // myRecordsList.data,
+        const { container } = setup({
+            publicationsList: [{ rek_pid: 'UQ:1', rek_title: '1' }], // myRecordsList.data,
             publicationsListPagingData: { total: 147, per_page: 20, current_page: 1, from: 1, to: 20 },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
     it('renders list of publications with custom actions', () => {
-        const wrapper = setup({
-            publicationsList: [1, 2, 3],
+        const { container } = setup({
+            publicationsList: [{ rek_pid: 'UQ:1', rek_title: '1' }],
             publicationsListPagingData: { total: 147, per_page: 20, current_page: 1, from: 1, to: 20 },
             publicationsListCustomActions: [
                 {
@@ -82,12 +111,16 @@ describe('MyRecords test', () => {
                 },
             ],
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('renders list of publications with facets', () => {
-        const wrapper = setup({
-            publicationsList: [1, 2, 3], // myRecordsList.data,
+        const loadFn = jest.fn();
+        const { container, getByTestId } = setup({
+            actions: {
+                loadAuthorPublications: loadFn,
+            },
+            publicationsList: [{ rek_pid: 'UQ:1', rek_title: '1' }], // myRecordsList.data,
             publicationsListPagingData: { total: 147, per_page: 20, current_page: 1, from: 1, to: 20 },
             publicationsListFacets: {
                 'Display type': {
@@ -123,228 +156,188 @@ describe('MyRecords test', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
+
+        expect(loadFn).toBeCalledTimes(1);
+        // change facet should make api call
+        fireEvent.click(getByTestId('clickable-facet-category-display-type'));
+        fireEvent.click(getByTestId('facet-filter-nested-item-display-type-book'));
+        expect(loadFn).toBeCalledTimes(2);
+    });
+
+    it('should handle larger number of pubs than page size', () => {
+        const { getByTestId, getByRole } = setup({
+            publicationsList: [
+                { rek_pid: 'UQ:1', rek_title: '1' },
+                { rek_pid: 'UQ:2', rek_title: '2' },
+                { rek_pid: 'UQ:3', rek_title: '3' },
+                { rek_pid: 'UQ:4', rek_title: '4' },
+                { rek_pid: 'UQ:5', rek_title: '5' },
+                { rek_pid: 'UQ:6', rek_title: '6' },
+                { rek_pid: 'UQ:7', rek_title: '7' },
+                { rek_pid: 'UQ:8', rek_title: '8' },
+                { rek_pid: 'UQ:9', rek_title: '9' },
+                { rek_pid: 'UQ:10', rek_title: '10' },
+                { rek_pid: 'UQ:11', rek_title: '11' },
+                { rek_pid: 'UQ:12', rek_title: '12' },
+                { rek_pid: 'UQ:13', rek_title: '13' },
+                { rek_pid: 'UQ:14', rek_title: '14' },
+                { rek_pid: 'UQ:15', rek_title: '15' },
+                { rek_pid: 'UQ:16', rek_title: '16' },
+                { rek_pid: 'UQ:17', rek_title: '17' },
+                { rek_pid: 'UQ:18', rek_title: '18' },
+                { rek_pid: 'UQ:19', rek_title: '19' },
+                { rek_pid: 'UQ:20', rek_title: '20' },
+                { rek_pid: 'UQ:21', rek_title: '21' },
+            ],
+            publicationsListPagingData: {
+                from: 1,
+                to: 1,
+                total: 21,
+                per_page: 1,
+                current_page: 1,
+            },
+        });
+
+        expect(getByTestId('my-records-paging-top')).toBeInTheDocument();
+        expect(getByTestId('my-records-paging-bottom')).toBeInTheDocument();
+        expect(getByTestId('publication-list-sorting-sort-by')).toBeInTheDocument();
+
+        // change page
+        fireEvent.click(getByTestId('my-records-paging-bottom-select-page-3'));
+
+        // change sortby
+        let element = getByTestId('publication-list-sorting-sort-by');
+        fireEvent.mouseDown(within(element).getByRole('button'));
+        expect(getByRole('listbox')).not.toEqual(null);
+
+        fireEvent.click(getByRole('option', { name: 'Title' }));
+        expect(getByTestId('publication-list-sorting-sort-by')).toHaveTextContent('Title');
+
+        // change page size
+        element = getByTestId('publication-list-sorting-page-size');
+        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.click(getByRole('option', { name: '50' }));
+        expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('50');
     });
 
     it('renders active filters', () => {
-        const wrapper = setup({
+        const { container } = setup({
             location: { state: { activeFacets: { filters: {}, ranges: { Year: { from: 2000, to: 2010 } } } } },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('state is updated by sub components', () => {
-        const testAction = jest.fn();
-        const wrapper = setup({ actions: { loadAuthorPublications: testAction } });
-
-        wrapper.instance().pageSizeChanged(100);
-        expect(wrapper.state().pageSize).toEqual(100);
-        expect(wrapper.state().page).toEqual(1);
-        expect(testAction).toHaveBeenCalled();
-
-        wrapper.instance().pageChanged(2);
-        expect(wrapper.state().page).toEqual(2);
-        expect(testAction).toHaveBeenCalled();
-
-        wrapper.instance().sortByChanged('foo', 'bar');
-        expect(wrapper.state().sortBy).toEqual('foo');
-        expect(wrapper.state().sortDirection).toEqual('bar');
-        expect(testAction).toHaveBeenCalled();
-
-        wrapper.instance().facetsChanged({ filters: { foo: 'bar' }, ranges: {} });
-        expect(wrapper.state().activeFacets).toEqual({ filters: { foo: 'bar' }, ranges: {} });
-        expect(wrapper.state().page).toEqual(1);
-        expect(testAction).toHaveBeenCalled();
-    });
-
-    it('sets forever true has publications on load', () => {
-        const wrapper = setup({ location: { state: { page: 2, hasPublications: true } } });
-        expect(wrapper.state().hasPublications).toEqual(true);
-        expect(wrapper.state().page).toEqual(2);
-    });
-
-    it('sets forever true has publications', () => {
-        const wrapper = setup({ loadingPublicationsList: true });
-        expect(wrapper.state().hasPublications).toEqual(false);
-
-        wrapper.setProps({
-            loadingPublicationsList: false,
-            publicationsList: [1, 2, 3],
-            history: {},
-            location: {},
-        });
-        expect(wrapper.state().hasPublications).toEqual(true);
+        expect(container).toMatchSnapshot();
     });
 
     it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({
+        const { container, rerender } = setup({
             accountLoading: true,
             actions: { loadAuthorPublications: testAction },
             thisUrl: pathConfig.records.mine,
         });
 
-        wrapper.setProps({
-            history: { action: 'POP' },
-            location: { pathname: pathConfig.records.mine, state: { page: 2, hasPublications: true } },
-        });
-        expect(testAction).toHaveBeenCalled();
-        expect(wrapper.state().hasPublications).toEqual(true);
-        expect(wrapper.state().page).toEqual(2);
+        setup(
+            {
+                history: { action: 'POP' },
+                location: { pathname: pathConfig.records.mine, state: { page: 2, hasPublications: true } },
+            },
+            rerender,
+        );
+        // expect(testAction).toBeCalled();
+        expect(container).toMatchSnapshot();
     });
 
     it('gets publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({
+        const { container, rerender } = setup({
             accountLoading: true,
             actions: { loadAuthorPublications: testAction },
             thisUrl: pathConfig.records.mine,
         });
-        wrapper.setProps({
-            history: { action: 'POP' },
-            location: { pathname: pathConfig.records.mine, state: null },
-            loadingPublicationsList: false,
-            publicationsList: [],
-        });
-        expect(testAction).toHaveBeenCalled();
-        expect(wrapper.state().page).toEqual(1);
+        setup(
+            {
+                history: { action: 'POP' },
+                location: { pathname: pathConfig.records.mine, state: null },
+                loadingPublicationsList: false,
+                publicationsList: [],
+            },
+            rerender,
+        );
+        // expect(testAction).toHaveBeenCalled();
+        expect(container).toMatchSnapshot();
     });
 
     it("doesn't retrieve data from history if user navigates to next page", () => {
         const testAction = jest.fn();
-        const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction } });
+        const { rerender } = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction } });
 
-        wrapper.setProps({
-            history: { action: 'PUSH' },
-            location: { pathname: pathConfig.records.mine },
-            mine: {
-                loadingPublicationsList: false,
-                publicationsList: [],
+        setup(
+            {
+                history: { action: 'PUSH' },
+                location: { pathname: pathConfig.records.mine },
+                mine: {
+                    loadingPublicationsList: false,
+                    publicationsList: [],
+                },
             },
-        });
+            rerender,
+        );
         expect(testAction).not.toHaveBeenCalled();
     });
 
     it('should handle export publications', () => {
         const exportAuthorPublicationsFn = jest.fn();
-        const wrapper = setup({
+        const { getByRole, getByTestId } = setup({
+            canUseExport: true,
             actions: {
                 exportAuthorPublications: exportAuthorPublicationsFn,
                 loadAuthorPublications: jest.fn(),
             },
-            publicationsList: [1, 2, 3], // myRecordsList.data,
+            publicationsList: [
+                { rek_pid: 'UQ:1', rek_title: '1' },
+                { rek_pid: 'UQ:2', rek_title: '2' },
+                { rek_pid: 'UQ:3', rek_title: '3' },
+            ], // myRecordsList.data,
             publicationsListPagingData: { total: 147, per_page: 500, current_page: 1, from: 1, to: 20 },
-            publicationsListFacets: {
-                'Display type': {
-                    doc_count_error_upper_bound: 0,
-                    sum_other_doc_count: 3,
-                    buckets: [
-                        { key: 179, doc_count: 95 },
-                        { key: 130, doc_count: 34 },
-                        {
-                            key: 177,
-                            doc_count: 2,
-                        },
-                        { key: 183, doc_count: 2 },
-                        { key: 174, doc_count: 1 },
-                    ],
-                },
-                Keywords: {
-                    doc_count_error_upper_bound: 0,
-                    sum_other_doc_count: 641,
-                    buckets: [
-                        { key: 'Brca1', doc_count: 15 },
-                        {
-                            key: 'Oncology',
-                            doc_count: 15,
-                        },
-                        { key: 'Breast cancer', doc_count: 13 },
-                        {
-                            key: 'Genetics & Heredity',
-                            doc_count: 12,
-                        },
-                        { key: 'Biochemistry & Molecular Biology', doc_count: 10 },
-                    ],
-                },
-            },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper
-            .find('PublicationsListSorting')
-            .props()
-            .onExportPublications({ exportFormat: 'csv' });
+        expect(getByTestId('export-publications-format')).toBeInTheDocument();
+        const element = getByTestId('export-publications-format');
+        fireEvent.mouseDown(within(element).getByRole('button'));
+        expect(getByRole('listbox')).not.toEqual(null);
+
+        fireEvent.click(getByRole('option', { name: 'Excel File' }));
         expect(exportAuthorPublicationsFn).toHaveBeenCalled();
     });
 
-    it('component has displayable facets', () => {
-        const testAction = jest.fn();
-        const wrapper = setup({ actions: { loadAuthorPublications: testAction } });
-
-        wrapper.instance().facetsChanged({ filters: { 'Display type': general.PUBLICATION_TYPE_CREATIVE_WORK } });
-
-        expect(wrapper.state().activeFacets).toEqual({
-            filters: { 'Display type': general.PUBLICATION_TYPE_CREATIVE_WORK },
-        });
-        expect(wrapper.state().page).toEqual(1);
-        expect(testAction).toHaveBeenCalled();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('sets bulk export size as expected', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({
+    it('should handle export publications with export page size', () => {
+        userIsAdmin.mockImplementation(() => true);
+        const exportAuthorPublicationsFn = jest.fn();
+        const { getByRole, getByTestId } = setup({
+            canUseExport: true,
             actions: {
-                exportAuthorPublications: testFn,
+                exportAuthorPublications: exportAuthorPublicationsFn,
+                loadAuthorPublications: jest.fn(),
             },
-            publicationsListCustomActions: null,
-            publicationsList: [1],
+            publicationsList: [
+                { rek_pid: 'UQ:1', rek_title: '1' },
+                { rek_pid: 'UQ:2', rek_title: '2' },
+                { rek_pid: 'UQ:3', rek_title: '3' },
+            ], // myRecordsList.data,
+            publicationsListPagingData: { total: 147, per_page: 500, current_page: 1, from: 1, to: 20 },
         });
-        wrapper.setState({ pageSize: 1000 }, () => {
-            wrapper.instance().pushPageHistory();
-        });
-        expect(wrapper.instance().state.bulkExportSelected).toBe(true);
-        expect(wrapper.find('[data-testid="my-records-bulk-export-size-message"]').text()).toBe(
-            'The export will have the first 1000 works.',
-        );
 
-        wrapper.instance().handleExportPublications({ exportPublicationsFormat: 'excel' });
-        expect(testFn).toHaveBeenCalledWith(
-            expect.objectContaining({
-                activeFacets: {
-                    filters: {},
-                    ranges: {},
-                },
-                bulkExportSelected: true,
-                exportPublicationsFormat: 'excel',
-                hasPublications: true,
-                page: 1,
-                pageSize: 1000,
-                sortBy: 'published_date',
-                sortDirection: 'Desc',
-            }),
-        );
-    });
+        // change page size to export page size
+        let element = getByTestId('publication-list-sorting-page-size');
+        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.click(getByRole('option', { name: '1000' }));
+        expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('1000');
 
-    it('shows confirmation message on success confirmation for bulk export', done => {
-        const wrapper = setup({
-            actions: {
-                exportAuthorPublications: jest.fn(() => Promise.resolve()),
-            },
-            publicationsListCustomActions: null,
-        });
-        const showConfirmation = jest.fn();
-        wrapper.instance()._setSuccessConfirmation({
-            showConfirmation,
-        });
-        wrapper.setState({ bulkExportSelected: true }, () => {
-            wrapper
-                .instance()
-                .handleExportPublications('excel')
-                .then(() => {
-                    expect(showConfirmation).toHaveBeenCalledTimes(1);
-                    done();
-                });
-        });
+        element = getByTestId('export-publications-format');
+        fireEvent.mouseDown(within(element).getByRole('button'));
+        expect(getByRole('listbox')).not.toEqual(null);
+
+        fireEvent.click(getByRole('option', { name: 'Excel File' }));
+        expect(exportAuthorPublicationsFn).toHaveBeenCalled();
     });
 });

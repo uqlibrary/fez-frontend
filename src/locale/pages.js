@@ -723,16 +723,16 @@ export default {
             },
             description: {
                 readonly: (
-                    <p>
+                    <>
                         <strong>NOTE:</strong> As a read-only masquerader, you can view all parts of the profile, but
                         you are not able to make any changes to the account.
-                    </p>
+                    </>
                 ),
                 full: (
-                    <p>
+                    <>
                         <strong>WARNING!!</strong> When masquerading as a user, you will effectively become that user,
                         and changes you make will apply to the account!
-                    </p>
+                    </>
                 ),
             },
             labels: {

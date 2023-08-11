@@ -3288,6 +3288,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                       <a
                         aria-label="Open this DOI in an new window"
                         className="citationDoiLink makeStyles-externalLink-2 makeStyles-externalLink-4"
+                        data-analyticsid="citation-doi-link"
                         data-testid="citation-doi-link"
                         href="https://doi.org/10.1111/dar.12222"
                         id="citation-doi-link"

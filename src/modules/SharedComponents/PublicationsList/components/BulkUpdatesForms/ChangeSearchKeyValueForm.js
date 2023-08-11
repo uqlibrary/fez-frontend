@@ -82,6 +82,7 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                     <Button
                         aria-label={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
                         children={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
+                        data-analyticsid="change-search-key-value-cancel"
                         data-testid="change-search-key-value-cancel"
                         disabled={submitting}
                         fullWidth
@@ -95,6 +96,7 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                         aria-label={txt.changeSearchKeyValueForm.formLabels.submitButtonLabel}
                         children={txt.changeSearchKeyValueForm.formLabels.submitButtonLabel}
                         color="primary"
+                        data-analyticsid="change-search-key-value-submit"
                         data-testid="change-search-key-value-submit"
                         disabled={submitting || disableSubmit || submitSucceeded}
                         fullWidth

@@ -1,8 +1,6 @@
 # Fez frontend
 
 [![AWS Codebuild Status for uqlibrary/fez-frontend](https://codebuild.ap-southeast-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoidS80NCs2UmNpVHdKc3Q2RVpoK2w0NlZ0d1ZlRGMrZDFUNDZFUTZZUEdrQ0NTY1N4RGdHNEtDaUxZY3RsdVlWTEJQZUFQaWh5LzBDUDNBU3VicXNFaC84PSIsIml2UGFyYW1ldGVyU3BlYyI6IkdKeUVUVVpubk56NDBjVHEiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend-master/view?region=ap-southeast-2)
-[![Dependency Status](https://david-dm.org/uqlibrary/fez-frontend.svg)](https://david-dm.org/uqlibrary/fez-frontend)
-[![Dev Dependency Status](https://david-dm.org/uqlibrary/fez-frontend/dev-status.svg)](https://david-dm.org/uqlibrary/fez-frontend)
 
 Fez frontend is a web interface application for digital repository.
 [Staging/Production release notes](https://libnet.library.uq.edu.au/display/LIB/eSpace+UI+Release+Notes)
@@ -170,6 +168,14 @@ To keep initial load to a minimum, the following optimisations have been added t
 - Locale package is split into smaller chunks to avoid loading it all at once:
   - publicationForm.js locale is loaded only when PublicationForm component is loaded
   - Other locale files are not too big, all bundled into one for now
+
+#### Reusable WebComponents
+
+eSpace currently takes only Alerts from Reusable - at some point in the future we may upgrade to use the standard uq header.
+
+Staging branch calls Reusable staging branch - all other branches call production Reusable, by default.
+
+To use local reusable in your local dev, swap the value of reusablejs in webpack.config.js (and restart your npm sun start:mock)
 
 ### Webpack
 

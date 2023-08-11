@@ -35,6 +35,7 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
                                 <span
                                     className={classes.separator}
                                     id={`separator-${index}`}
+                                    data-testid={`separator-${index}`}
                                     key={`separator-${index}`}
                                 >
                                     {keywords[index + 1].type.toLowerCase() === 'keyword' ? 'AND' : 'OR'}

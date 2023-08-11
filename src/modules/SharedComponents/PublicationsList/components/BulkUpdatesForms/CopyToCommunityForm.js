@@ -108,6 +108,7 @@ export const CopyToCommunityForm = ({
                     <Button
                         aria-label={txt.copyToCommunity.formLabels.cancelButtonLabel}
                         children={txt.copyToCommunity.formLabels.cancelButtonLabel}
+                        data-analyticsid={`${idText}-community-cancel`}
                         data-testid={`${idText}-community-cancel`}
                         disabled={submitting}
                         fullWidth
@@ -121,6 +122,7 @@ export const CopyToCommunityForm = ({
                         aria-label={txt.copyToCommunity.formLabels.submitButtonLabel}
                         children={txt.copyToCommunity.formLabels.submitButtonLabel}
                         color="primary"
+                        data-analyticsid={`${idText}-community-submit`}
                         data-testid={`${idText}-community-submit`}
                         disabled={
                             submitting ||

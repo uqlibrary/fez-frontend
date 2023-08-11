@@ -25,13 +25,6 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
 
-const { configure } = domTestingLib;
-
-configure(config => ({
-    ...config,
-    testIdAttribute: 'id',
-}));
-
 export const AllTheProviders = props => {
     return (
         <MuiThemeProvider theme={mui1theme}>

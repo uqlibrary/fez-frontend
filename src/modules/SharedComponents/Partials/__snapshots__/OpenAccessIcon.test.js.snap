@@ -790,6 +790,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                   aria-labelledby={null}
                   className="makeStyles-svg-1 makeStyles-svg-3"
                   data-mui-internal-clone-element={true}
+                  data-testid="open-access-oa-icon"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   onMouseLeave={[Function]}
@@ -802,7 +803,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                     aria-labelledby={null}
                     className="makeStyles-svg-1 makeStyles-svg-3"
                     data-mui-internal-clone-element={true}
-                    data-testid="LockOpenIcon"
+                    data-testid="open-access-oa-icon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -817,7 +818,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                       as="svg"
                       className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-3"
                       data-mui-internal-clone-element={true}
-                      data-testid="LockOpenIcon"
+                      data-testid="open-access-oa-icon"
                       focusable="false"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -836,7 +837,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                           "color": "inherit",
                           "component": "svg",
                           "data-mui-internal-clone-element": true,
-                          "data-testid": "LockOpenIcon",
+                          "data-testid": "open-access-oa-icon",
                           "fontSize": "medium",
                           "inheritViewBox": false,
                           "instanceFontSize": undefined,
@@ -964,7 +965,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                         aria-labelledby={null}
                         className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-3 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element={true}
-                        data-testid="LockOpenIcon"
+                        data-testid="open-access-oa-icon"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -988,7 +989,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                       aria-label="Open Access - undefined - Free to read"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-3 css-i4bv87-MuiSvgIcon-root"
                       data-mui-internal-clone-element="true"
-                      data-testid="LockOpenIcon"
+                      data-testid="open-access-oa-icon"
                       focusable="false"
                       viewBox="0 0 24 24"
                     >
@@ -1055,6 +1056,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                       "arrow": false,
                       "children": <Memo
                         className="makeStyles-svg-1 makeStyles-svg-3"
+                        data-testid="open-access-oa-icon"
                       />,
                       "disableInteractive": false,
                       "isRtl": false,
@@ -1199,7 +1201,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                         aria-label="Open Access - undefined - Free to read"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-3 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element="true"
-                        data-testid="LockOpenIcon"
+                        data-testid="open-access-oa-icon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
@@ -1244,7 +1246,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                           aria-label="Open Access - undefined - Free to read"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-3 css-i4bv87-MuiSvgIcon-root"
                           data-mui-internal-clone-element="true"
-                          data-testid="LockOpenIcon"
+                          data-testid="open-access-oa-icon"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -1402,7 +1404,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                             aria-label="Open Access - undefined - Free to read"
                             class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-3 css-i4bv87-MuiSvgIcon-root"
                             data-mui-internal-clone-element="true"
-                            data-testid="LockOpenIcon"
+                            data-testid="open-access-oa-icon"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >
@@ -2216,6 +2218,7 @@ exports[`Journal Name Component test  should render closed access 1`] = `
             >
               <span
                 className="noOaIcon"
+                data-testid="open-access-na-oa-icon"
               />
             </OpenAccessIcon>
           </LocalizationProvider>
@@ -3011,6 +3014,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                   aria-labelledby={null}
                   className="makeStyles-svg-1 makeStyles-svg-5"
                   data-mui-internal-clone-element={true}
+                  data-testid="open-access-embargoed-oa-icon"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   onMouseLeave={[Function]}
@@ -3023,7 +3027,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                     aria-labelledby={null}
                     className="makeStyles-svg-1 makeStyles-svg-5"
                     data-mui-internal-clone-element={true}
-                    data-testid="LockClockIcon"
+                    data-testid="open-access-embargoed-oa-icon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -3038,7 +3042,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                       as="svg"
                       className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-5"
                       data-mui-internal-clone-element={true}
-                      data-testid="LockClockIcon"
+                      data-testid="open-access-embargoed-oa-icon"
                       focusable="false"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -3057,7 +3061,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                           "color": "inherit",
                           "component": "svg",
                           "data-mui-internal-clone-element": true,
-                          "data-testid": "LockClockIcon",
+                          "data-testid": "open-access-embargoed-oa-icon",
                           "fontSize": "medium",
                           "inheritViewBox": false,
                           "instanceFontSize": undefined,
@@ -3199,7 +3203,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                         aria-labelledby={null}
                         className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-5 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element={true}
-                        data-testid="LockClockIcon"
+                        data-testid="open-access-embargoed-oa-icon"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -3223,7 +3227,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                       aria-label="Link (no DOI) - Open access after 2019-01-01"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-5 css-i4bv87-MuiSvgIcon-root"
                       data-mui-internal-clone-element="true"
-                      data-testid="LockClockIcon"
+                      data-testid="open-access-embargoed-oa-icon"
                       focusable="false"
                       viewBox="0 0 24 24"
                     >
@@ -3290,6 +3294,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                       "arrow": false,
                       "children": <Memo
                         className="makeStyles-svg-1 makeStyles-svg-5"
+                        data-testid="open-access-embargoed-oa-icon"
                       />,
                       "disableInteractive": false,
                       "isRtl": false,
@@ -3448,7 +3453,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                         aria-label="Link (no DOI) - Open access after 2019-01-01"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-5 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element="true"
-                        data-testid="LockClockIcon"
+                        data-testid="open-access-embargoed-oa-icon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
@@ -3493,7 +3498,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                           aria-label="Link (no DOI) - Open access after 2019-01-01"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-5 css-i4bv87-MuiSvgIcon-root"
                           data-mui-internal-clone-element="true"
-                          data-testid="LockClockIcon"
+                          data-testid="open-access-embargoed-oa-icon"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -3665,7 +3670,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                             aria-label="Link (no DOI) - Open access after 2019-01-01"
                             class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-5 css-i4bv87-MuiSvgIcon-root"
                             data-mui-internal-clone-element="true"
-                            data-testid="LockClockIcon"
+                            data-testid="open-access-embargoed-oa-icon"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >
@@ -4512,6 +4517,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                   aria-labelledby={null}
                   className="makeStyles-svg-1 makeStyles-svg-7"
                   data-mui-internal-clone-element={true}
+                  data-testid="open-access-embargoed-oa-icon"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   onMouseLeave={[Function]}
@@ -4524,7 +4530,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                     aria-labelledby={null}
                     className="makeStyles-svg-1 makeStyles-svg-7"
                     data-mui-internal-clone-element={true}
-                    data-testid="LockClockIcon"
+                    data-testid="open-access-embargoed-oa-icon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -4539,7 +4545,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                       as="svg"
                       className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-7"
                       data-mui-internal-clone-element={true}
-                      data-testid="LockClockIcon"
+                      data-testid="open-access-embargoed-oa-icon"
                       focusable="false"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -4558,7 +4564,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                           "color": "inherit",
                           "component": "svg",
                           "data-mui-internal-clone-element": true,
-                          "data-testid": "LockClockIcon",
+                          "data-testid": "open-access-embargoed-oa-icon",
                           "fontSize": "medium",
                           "inheritViewBox": false,
                           "instanceFontSize": undefined,
@@ -4714,7 +4720,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                         aria-labelledby={null}
                         className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-7 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element={true}
-                        data-testid="LockClockIcon"
+                        data-testid="open-access-embargoed-oa-icon"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -4738,7 +4744,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                       aria-label="Link (no DOI) - Open access after 2019-01-01"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-7 css-i4bv87-MuiSvgIcon-root"
                       data-mui-internal-clone-element="true"
-                      data-testid="LockClockIcon"
+                      data-testid="open-access-embargoed-oa-icon"
                       focusable="false"
                       viewBox="0 0 24 24"
                     >
@@ -4805,6 +4811,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                       "arrow": false,
                       "children": <Memo
                         className="makeStyles-svg-1 makeStyles-svg-7"
+                        data-testid="open-access-embargoed-oa-icon"
                       />,
                       "disableInteractive": false,
                       "isRtl": false,
@@ -4977,7 +4984,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                         aria-label="Link (no DOI) - Open access after 2019-01-01"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-7 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element="true"
-                        data-testid="LockClockIcon"
+                        data-testid="open-access-embargoed-oa-icon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
@@ -5022,7 +5029,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                           aria-label="Link (no DOI) - Open access after 2019-01-01"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-7 css-i4bv87-MuiSvgIcon-root"
                           data-mui-internal-clone-element="true"
-                          data-testid="LockClockIcon"
+                          data-testid="open-access-embargoed-oa-icon"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -5208,7 +5215,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                             aria-label="Link (no DOI) - Open access after 2019-01-01"
                             class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-7 css-i4bv87-MuiSvgIcon-root"
                             data-mui-internal-clone-element="true"
-                            data-testid="LockClockIcon"
+                            data-testid="open-access-embargoed-oa-icon"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >
@@ -6050,6 +6057,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                   aria-labelledby={null}
                   className="makeStyles-svg-1 makeStyles-svg-8"
                   data-mui-internal-clone-element={true}
+                  data-testid="open-access-no-oa-icon"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   onMouseLeave={[Function]}
@@ -6062,7 +6070,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                     aria-labelledby={null}
                     className="makeStyles-svg-1 makeStyles-svg-8"
                     data-mui-internal-clone-element={true}
-                    data-testid="LockIcon"
+                    data-testid="open-access-no-oa-icon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -6077,7 +6085,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                       as="svg"
                       className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-8"
                       data-mui-internal-clone-element={true}
-                      data-testid="LockIcon"
+                      data-testid="open-access-no-oa-icon"
                       focusable="false"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -6096,7 +6104,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                           "color": "inherit",
                           "component": "svg",
                           "data-mui-internal-clone-element": true,
-                          "data-testid": "LockIcon",
+                          "data-testid": "open-access-no-oa-icon",
                           "fontSize": "medium",
                           "inheritViewBox": false,
                           "instanceFontSize": undefined,
@@ -6259,7 +6267,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                         aria-labelledby={null}
                         className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-8 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element={true}
-                        data-testid="LockIcon"
+                        data-testid="open-access-no-oa-icon"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -6283,7 +6291,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                       aria-label="You do not have access to this file"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-8 css-i4bv87-MuiSvgIcon-root"
                       data-mui-internal-clone-element="true"
-                      data-testid="LockIcon"
+                      data-testid="open-access-no-oa-icon"
                       focusable="false"
                       viewBox="0 0 24 24"
                     >
@@ -6350,6 +6358,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                       "arrow": false,
                       "children": <Memo
                         className="makeStyles-svg-1 makeStyles-svg-8"
+                        data-testid="open-access-no-oa-icon"
                       />,
                       "disableInteractive": false,
                       "isRtl": false,
@@ -6529,7 +6538,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                         aria-label="You do not have access to this file"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-8 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element="true"
-                        data-testid="LockIcon"
+                        data-testid="open-access-no-oa-icon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
@@ -6574,7 +6583,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                           aria-label="You do not have access to this file"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-8 css-i4bv87-MuiSvgIcon-root"
                           data-mui-internal-clone-element="true"
-                          data-testid="LockIcon"
+                          data-testid="open-access-no-oa-icon"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -6767,7 +6776,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                             aria-label="You do not have access to this file"
                             class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-8 css-i4bv87-MuiSvgIcon-root"
                             data-mui-internal-clone-element="true"
-                            data-testid="LockIcon"
+                            data-testid="open-access-no-oa-icon"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >
@@ -7581,6 +7590,7 @@ exports[`Journal Name Component test  should render no icon 1`] = `
             >
               <span
                 className="noOaIcon"
+                data-testid="open-access-na-oa-icon"
               />
             </OpenAccessIcon>
           </LocalizationProvider>
@@ -8376,6 +8386,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                   aria-labelledby={null}
                   className="makeStyles-svg-1 makeStyles-svg-2"
                   data-mui-internal-clone-element={true}
+                  data-testid="open-access-oa-icon"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   onMouseLeave={[Function]}
@@ -8388,7 +8399,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                     aria-labelledby={null}
                     className="makeStyles-svg-1 makeStyles-svg-2"
                     data-mui-internal-clone-element={true}
-                    data-testid="LockOpenIcon"
+                    data-testid="open-access-oa-icon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -8403,7 +8414,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                       as="svg"
                       className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2"
                       data-mui-internal-clone-element={true}
-                      data-testid="LockOpenIcon"
+                      data-testid="open-access-oa-icon"
                       focusable="false"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -8422,7 +8433,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                           "color": "inherit",
                           "component": "svg",
                           "data-mui-internal-clone-element": true,
-                          "data-testid": "LockOpenIcon",
+                          "data-testid": "open-access-oa-icon",
                           "fontSize": "medium",
                           "inheritViewBox": false,
                           "instanceFontSize": undefined,
@@ -8543,7 +8554,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                         aria-labelledby={null}
                         className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element={true}
-                        data-testid="LockOpenIcon"
+                        data-testid="open-access-oa-icon"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -8567,7 +8578,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                       aria-label="Open Access - undefined - Free to read"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2 css-i4bv87-MuiSvgIcon-root"
                       data-mui-internal-clone-element="true"
-                      data-testid="LockOpenIcon"
+                      data-testid="open-access-oa-icon"
                       focusable="false"
                       viewBox="0 0 24 24"
                     >
@@ -8634,6 +8645,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                       "arrow": false,
                       "children": <Memo
                         className="makeStyles-svg-1 makeStyles-svg-2"
+                        data-testid="open-access-oa-icon"
                       />,
                       "disableInteractive": false,
                       "isRtl": false,
@@ -8771,7 +8783,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                         aria-label="Open Access - undefined - Free to read"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element="true"
-                        data-testid="LockOpenIcon"
+                        data-testid="open-access-oa-icon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
@@ -8816,7 +8828,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                           aria-label="Open Access - undefined - Free to read"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2 css-i4bv87-MuiSvgIcon-root"
                           data-mui-internal-clone-element="true"
-                          data-testid="LockOpenIcon"
+                          data-testid="open-access-oa-icon"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -8967,7 +8979,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                             aria-label="Open Access - undefined - Free to read"
                             class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2 css-i4bv87-MuiSvgIcon-root"
                             data-mui-internal-clone-element="true"
-                            data-testid="LockOpenIcon"
+                            data-testid="open-access-oa-icon"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >
@@ -9809,6 +9821,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                   aria-labelledby={null}
                   className="makeStyles-svg-1 makeStyles-svg-4"
                   data-mui-internal-clone-element={true}
+                  data-testid="open-access-oa-icon"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   onMouseLeave={[Function]}
@@ -9821,7 +9834,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                     aria-labelledby={null}
                     className="makeStyles-svg-1 makeStyles-svg-4"
                     data-mui-internal-clone-element={true}
-                    data-testid="LockOpenIcon"
+                    data-testid="open-access-oa-icon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -9836,7 +9849,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                       as="svg"
                       className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-4"
                       data-mui-internal-clone-element={true}
-                      data-testid="LockOpenIcon"
+                      data-testid="open-access-oa-icon"
                       focusable="false"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -9855,7 +9868,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                           "color": "inherit",
                           "component": "svg",
                           "data-mui-internal-clone-element": true,
-                          "data-testid": "LockOpenIcon",
+                          "data-testid": "open-access-oa-icon",
                           "fontSize": "medium",
                           "inheritViewBox": false,
                           "instanceFontSize": undefined,
@@ -9990,7 +10003,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                         aria-labelledby={null}
                         className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-4 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element={true}
-                        data-testid="LockOpenIcon"
+                        data-testid="open-access-oa-icon"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -10014,7 +10027,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                       aria-label="Open Access - Free to read"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-4 css-i4bv87-MuiSvgIcon-root"
                       data-mui-internal-clone-element="true"
-                      data-testid="LockOpenIcon"
+                      data-testid="open-access-oa-icon"
                       focusable="false"
                       viewBox="0 0 24 24"
                     >
@@ -10081,6 +10094,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                       "arrow": false,
                       "children": <Memo
                         className="makeStyles-svg-1 makeStyles-svg-4"
+                        data-testid="open-access-oa-icon"
                       />,
                       "disableInteractive": false,
                       "isRtl": false,
@@ -10232,7 +10246,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                         aria-label="Open Access - Free to read"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-4 css-i4bv87-MuiSvgIcon-root"
                         data-mui-internal-clone-element="true"
-                        data-testid="LockOpenIcon"
+                        data-testid="open-access-oa-icon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
@@ -10277,7 +10291,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                           aria-label="Open Access - Free to read"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-4 css-i4bv87-MuiSvgIcon-root"
                           data-mui-internal-clone-element="true"
-                          data-testid="LockOpenIcon"
+                          data-testid="open-access-oa-icon"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -10442,7 +10456,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                             aria-label="Open Access - Free to read"
                             class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-4 css-i4bv87-MuiSvgIcon-root"
                             data-mui-internal-clone-element="true"
-                            data-testid="LockOpenIcon"
+                            data-testid="open-access-oa-icon"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >

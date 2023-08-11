@@ -1,13 +1,15 @@
 import React from 'react';
 import mockData from 'mock/data/testing/journals/journals';
 import { FavouriteJournalsList } from './FavouriteJournalsList';
-import { rtlRender } from '../../../../utils/test-utils';
-import { PublicationsListPaging, PublicationsListSorting } from '../../SharedComponents/PublicationsList';
-import { JournalsListLegacy } from '../../SharedComponents/JournalsList';
-import { locale } from '../../../locale';
+import { render, WithReduxStore } from 'test-utils';
+import locale from 'locale/components';
 
 function setup(testProps = {}) {
-    return rtlRender(<FavouriteJournalsList {...testProps} />);
+    return render(
+        <WithReduxStore>
+            <FavouriteJournalsList {...testProps} />
+        </WithReduxStore>,
+    );
 }
 
 describe('FavouriteJournalsList', () => {
@@ -42,15 +44,16 @@ describe('FavouriteJournalsList', () => {
         expect(queryByTestId('favourite-journals-list-error')).toBeInTheDocument();
     });
     it('should render when there are fav journals', () => {
-        const wrapper = getElement(FavouriteJournalsList, {
+        const { getByTestId } = setup({
             loaded: true,
             journalsList: { total: mockData.length, data: mockData },
         });
-        expect(wrapper.find(PublicationsListSorting).length).toBe(1);
-        expect(wrapper.find(JournalsListLegacy).length).toBe(1);
+
+        expect(getByTestId('publication-list-sorting-sort-by')).toBeInTheDocument();
+        expect(getByTestId('journal-list')).toBeInTheDocument();
     });
     it('should render when there are fav journals with pagination', () => {
-        const wrapper = getElement(FavouriteJournalsList, {
+        const { getByTestId } = setup({
             loaded: true,
             journalsList: { total: mockData.length, data: mockData },
             journalSearchQueryParams: {
@@ -58,8 +61,10 @@ describe('FavouriteJournalsList', () => {
                 sortDirection: 'Asc',
             },
         });
-        expect(wrapper.find(PublicationsListSorting).length).toBe(1);
-        expect(wrapper.find(JournalsListLegacy).length).toBe(1);
-        expect(wrapper.find(PublicationsListPaging).length).toBe(2);
+
+        expect(getByTestId('search-journals-paging-top')).toBeInTheDocument();
+        expect(getByTestId('search-journals-paging-bottom')).toBeInTheDocument();
+        expect(getByTestId('publication-list-sorting-sort-by')).toBeInTheDocument();
+        expect(getByTestId('journal-list')).toBeInTheDocument();
     });
 });

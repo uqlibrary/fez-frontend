@@ -108,6 +108,7 @@ export const AddSection = ({
                                         <Grid item xs={12} sm={'auto'}>
                                             <Button
                                                 id="cancel-work"
+                                                data-analyticsid="cancel-work"
                                                 data-testid="cancel-work"
                                                 variant="contained"
                                                 color="secondary"
@@ -119,6 +120,7 @@ export const AddSection = ({
                                         <Grid item xs={12} sm={'auto'}>
                                             <Button
                                                 id="submit-work"
+                                                data-analyticsid="submit-work"
                                                 data-testid="submit-work"
                                                 variant="contained"
                                                 color="primary"

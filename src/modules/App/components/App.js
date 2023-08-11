@@ -339,6 +339,7 @@ export class AppClass extends PureComponent {
                                             style={{ marginLeft: '-12px', marginRight: '12px' }}
                                             onClick={this.toggleDrawer}
                                             id={'main-menu-button'}
+                                            data-analyticsid={'main-menu-button'}
                                             size="large"
                                         >
                                             <Menu style={{ color: 'white' }} />

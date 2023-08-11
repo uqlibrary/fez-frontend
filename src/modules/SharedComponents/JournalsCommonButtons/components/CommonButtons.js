@@ -34,6 +34,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
                     aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
                     onClick={handleFavouriteJournalsClick}
                     id="journal-search-favourite-journals-button"
+                    data-analyticsid="journal-search-favourite-journals-button"
                     data-testid="journal-search-favourite-journals-button"
                     fullWidth
                 />
@@ -42,6 +43,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
                 <Grid item xs={12} sm={6} md={3} className={classes.buttonContainer}>
                     <Button
                         id="journal-search-browse-all-button"
+                        data-analyticsid="journal-search-browse-all-button"
                         data-testid="journal-search-browse-all-button"
                         children={txt.journalSearchInterface.buttons.browseAllJournals.title}
                         aria-label={txt.journalSearchInterface.buttons.browseAllJournals.aria}

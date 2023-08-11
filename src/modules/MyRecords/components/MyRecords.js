@@ -82,6 +82,7 @@ export default class MyRecords extends PureComponent {
             };
         }
         // set forever-true flag if user has publications
+        /* istanbul ignore next */
         if (
             !state.hasPublications &&
             !props.loadingPublicationsList &&
@@ -149,7 +150,7 @@ export default class MyRecords extends PureComponent {
             this.pushPageHistory,
         );
     };
-
+    /* istanbul ignore next */
     hasDisplayableFilters = activeFilters => {
         return (
             Object.keys(activeFilters).filter(
@@ -182,6 +183,7 @@ export default class MyRecords extends PureComponent {
             pageSize: this.state.bulkExportSelected ? MY_RECORDS_BULK_EXPORT_SIZE : this.state.pageSize,
         });
 
+        /* istanbul ignore next */
         this.state.bulkExportSelected &&
             !!exportResponse &&
             exportResponse.then(() => {

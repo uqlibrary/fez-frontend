@@ -33,7 +33,9 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
         <React.Fragment>
             <InputBase
                 id={columnDataId}
-                data-testid={columnDataId}
+                inputProps={{
+                    'data-testid': columnDataId,
+                }}
                 className={classes.columnData}
                 value={!!data ? data : ''}
                 readOnly
@@ -47,6 +49,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                                           aria-label="Copy to clipboard"
                                           onClick={handleCopy}
                                           id={`${columnDataId}-copy-text`}
+                                          data-analyticsid={`${columnDataId}-copy-text`}
                                           data-testid={`${columnDataId}-copy-text`}
                                           size="small"
                                       >

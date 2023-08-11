@@ -103,12 +103,17 @@ export const AutoCompleteSelectField = ({
                     inputProps={{
                         ...params.inputProps,
                         id: `${autoCompleteSelectFieldId}-input`,
+                        'data-analyticsid': `${autoCompleteSelectFieldId}-input`,
                         'data-testid': `${autoCompleteSelectFieldId}-input`,
+                    }}
+                    InputLabelProps={{
+                        'data-testid': `${autoCompleteSelectFieldId}-label`,
                     }}
                 />
             )}
             ListboxProps={{
                 id: `${autoCompleteSelectFieldId}-options`,
+                'data-analyticsid': `${autoCompleteSelectFieldId}-options`,
                 'data-testid': `${autoCompleteSelectFieldId}-options`,
             }}
             {...((!!allowFreeText && { freeSolo: true }) || {})}

@@ -812,6 +812,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                     onTouchStart={[Function]}
                   >
                     <ForwardRef(IconButton)
+                      data-analyticsid="undefined-delete"
                       data-testid="undefined-delete"
                       onClick={[MockFunction]}
                       size="large"
@@ -819,6 +820,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                       <MuiIconButtonRoot
                         centerRipple={true}
                         className="MuiIconButton-root MuiIconButton-sizeLarge"
+                        data-analyticsid="undefined-delete"
                         data-testid="undefined-delete"
                         disabled={false}
                         focusRipple={true}
@@ -827,6 +829,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                           Object {
                             "children": <Memo />,
                             "color": "default",
+                            "data-analyticsid": "undefined-delete",
                             "data-testid": "undefined-delete",
                             "disableFocusRipple": false,
                             "disabled": false,
@@ -1096,6 +1099,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                         <ForwardRef(ButtonBase)
                           centerRipple={true}
                           className="MuiIconButton-root MuiIconButton-sizeLarge css-15a015l-MuiIconButton-root"
+                          data-analyticsid="undefined-delete"
                           data-testid="undefined-delete"
                           disabled={false}
                           focusRipple={true}
@@ -1104,6 +1108,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                           <MuiButtonBaseRoot
                             as="button"
                             className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15a015l-MuiIconButton-root"
+                            data-analyticsid="undefined-delete"
                             data-testid="undefined-delete"
                             disabled={false}
                             onBlur={[Function]}
@@ -1125,6 +1130,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                                 "children": <Memo />,
                                 "className": "MuiIconButton-root MuiIconButton-sizeLarge css-15a015l-MuiIconButton-root",
                                 "component": "button",
+                                "data-analyticsid": "undefined-delete",
                                 "data-testid": "undefined-delete",
                                 "disableRipple": false,
                                 "disableTouchRipple": false,
@@ -1397,6 +1403,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                             />
                             <button
                               className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-mf1cb5-MuiButtonBase-root-MuiIconButton-root"
+                              data-analyticsid="undefined-delete"
                               data-testid="undefined-delete"
                               disabled={false}
                               onBlur={[Function]}
@@ -2001,6 +2008,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                       >
                         <button
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-mf1cb5-MuiButtonBase-root-MuiIconButton-root"
+                          data-analyticsid="undefined-delete"
                           data-testid="undefined-delete"
                           tabindex="0"
                           type="button"
@@ -2061,6 +2069,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                         "arrow": false,
                         "children": <span>
                           <ForwardRef(IconButton)
+                            data-analyticsid="undefined-delete"
                             data-testid="undefined-delete"
                             onClick={[MockFunction]}
                             size="large"
@@ -2363,6 +2372,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                         >
                           <button
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-mf1cb5-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="undefined-delete"
                             data-testid="undefined-delete"
                             tabindex="0"
                             type="button"
@@ -2422,6 +2432,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                           >
                             <button
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-mf1cb5-MuiButtonBase-root-MuiIconButton-root"
+                              data-analyticsid="undefined-delete"
                               data-testid="undefined-delete"
                               tabindex="0"
                               type="button"
@@ -2744,6 +2755,7 @@ exports[`Component FileUploadRowStatus should mount the containers 1`] = `
                             >
                               <button
                                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-mf1cb5-MuiButtonBase-root-MuiIconButton-root"
+                                data-analyticsid="undefined-delete"
                                 data-testid="undefined-delete"
                                 tabindex="0"
                                 type="button"
@@ -2838,6 +2850,7 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
   >
     <span>
       <ForwardRef(IconButton)
+        data-analyticsid="undefined-delete"
         data-testid="undefined-delete"
         onClick={[MockFunction]}
         size="large"
@@ -2856,6 +2869,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
   >
     <span>
       <ForwardRef(IconButton)
+        data-analyticsid="undefined-delete"
         data-testid="undefined-delete"
         disabled={true}
         onClick={[MockFunction]}
@@ -2900,6 +2914,7 @@ exports[`Component FileUploadRowStatus should render if file uploaded successful
   >
     <span>
       <ForwardRef(IconButton)
+        data-analyticsid="undefined-delete"
         data-testid="undefined-delete"
         onClick={[MockFunction]}
         size="large"

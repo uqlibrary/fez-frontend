@@ -1,8 +1,10 @@
+import React from 'react';
 import MyIncompleteRecordForm, { onSubmit, validate } from './MyIncompleteRecordForm';
 import { incompleteNTRORecordUQ352045 } from 'mock/data/records';
 import { Map } from 'immutable';
 import { SubmissionError } from 'redux-form';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 
 jest.mock('actions', () => ({
     updateIncompleteRecord: data =>
@@ -14,12 +16,18 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(MyIncompleteRecordForm, props);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <MyIncompleteRecordForm {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('MyIncompleteRecordForm', () => {
     it('should mount the component with redux-form', () => {
-        const wrapper = setup({
+        const { container } = setup({
             recordToFix: incompleteNTRORecordUQ352045,
             author: { aut_id: 411 },
             isNtro: true,
@@ -40,7 +48,7 @@ describe('MyIncompleteRecordForm', () => {
             },
         });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should resolve onSubmit()', () => {

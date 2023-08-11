@@ -1,40 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GeoCoordinatesField component should render default view 1`] = `
-<Memo(PublicationMap)
-  coordinates=""
-  country="AU"
-  input={
-    Object {
-      "onChange": [MockFunction],
-    }
-  }
-  onChange={[MockFunction]}
-/>
+<div>
+  <div>
+    <div
+      id="mock-google-maps"
+    />
+    <div
+      id="mock-drawing-manager"
+    />
+    <div
+      id="mock-search-box"
+    />
+  </div>
+</div>
 `;
 
-exports[`GeoCoordinatesField component should render default view for AU 1`] = `
-<Memo(PublicationMap)
-  coordinates=""
-  country="AU"
-  input={
-    Object {
-      "onChange": [MockFunction],
-    }
-  }
-  onChange={[MockFunction]}
-/>
+exports[`GeoCoordinatesField component should render default view with readOnly 1`] = `
+<div>
+  <div>
+    <div
+      id="mock-google-maps"
+    />
+  </div>
+</div>
 `;
 
-exports[`GeoCoordinatesField component should render default view for CN 1`] = `
-<Memo(PublicationMap)
-  coordinates=""
-  country="CN"
-  input={
-    Object {
-      "onChange": [MockFunction],
-    }
-  }
-  onChange={[MockFunction]}
-/>
+exports[`GeoCoordinatesField component should render with given coordinates 1`] = `
+<div>
+  <div>
+    <div
+      id="mock-google-maps"
+    />
+    <div
+      id="mock-drawing-manager"
+    />
+    <div
+      id="mock-search-box"
+    />
+  </div>
+</div>
 `;

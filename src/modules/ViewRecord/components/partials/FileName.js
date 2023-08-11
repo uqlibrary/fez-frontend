@@ -129,6 +129,8 @@ const FileName = ({
                             className={classes.filename}
                             data-testid={getPreviewLinkTestId(id)}
                             id={getPreviewLinkTestId(id)}
+                            // id={`${id}-preview`}
+                            // data-testid={`${id}-preview`}
                         >
                             {fileName}
                         </a>
@@ -158,6 +160,7 @@ const FileName = ({
                                     aria-label={txt.downloadButtonLabel}
                                     onClick={showConfirmation}
                                     id={`${id}-download-button`}
+                                    data-analyticsid={`${id}-download-button`}
                                     data-testid={`${id}-download-button`}
                                     size="large"
                                 >

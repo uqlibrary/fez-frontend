@@ -245,6 +245,7 @@ export const AdminInterface = ({
             <Grid item xs={12} sm={2}>
                 <Button
                     id={`admin-work-cancel${placement}`}
+                    data-analyticsid={`admin-work-cancel${placement}`}
                     style={{ whiteSpace: 'nowrap' }}
                     variant="contained"
                     color="secondary"
@@ -261,6 +262,7 @@ export const AdminInterface = ({
                     <Grid item xs={12} sm={3}>
                         <Button
                             id={`admin-work-retract${placement}`}
+                            data-analyticsid={`retract-admin${placement}`}
                             data-testid={`retract-admin${placement}`}
                             disabled={!!submitting || !!disableSubmit}
                             variant="contained"
@@ -275,6 +277,7 @@ export const AdminInterface = ({
                 <Grid item xs={12} sm={3}>
                     <Button
                         id={`admin-work-publish${placement}`}
+                        data-analyticsid={`publish-admin${placement}`}
                         data-testid={`publish-admin${placement}`}
                         disabled={
                             !!submitting ||
@@ -293,6 +296,7 @@ export const AdminInterface = ({
                 <Grid item xs={12} sm={3}>
                     <Button
                         id={`admin-work-unpublish${placement}`}
+                        data-analyticsid={`unpublish-admin${placement}`}
                         data-testid={`unpublish-admin${placement}`}
                         disabled={
                             !!submitting ||
@@ -310,6 +314,7 @@ export const AdminInterface = ({
             <Grid item xs={12} sm>
                 <Button
                     id={`admin-work-submit${placement}`}
+                    data-analyticsid={`submit-admin${placement}`}
                     data-testid={`submit-admin${placement}`}
                     style={{ whiteSpace: 'nowrap' }}
                     disabled={
@@ -398,6 +403,7 @@ export const AdminInterface = ({
                                         <AdminTab
                                             key={tab}
                                             value={tab}
+                                            data-analyticsid={`${tab}-tab`}
                                             data-testid={`${tab}-tab`}
                                             label={
                                                 !!tabs[tab].numberOfErrors ? (

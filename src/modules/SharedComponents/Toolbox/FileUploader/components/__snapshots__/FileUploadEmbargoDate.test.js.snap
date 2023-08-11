@@ -10,6 +10,7 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
         "classes": Object {
           "root": "",
         },
+        "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
       }
@@ -33,6 +34,7 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
         "classes": Object {
           "root": "",
         },
+        "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
       }
@@ -57,6 +59,7 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
         "classes": Object {
           "root": "",
         },
+        "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
       }
@@ -92,6 +95,7 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
         "classes": Object {
           "root": "",
         },
+        "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
       }
@@ -115,6 +119,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
         "classes": Object {
           "root": "",
         },
+        "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
       }
@@ -138,6 +143,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
         "classes": Object {
           "root": "",
         },
+        "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
       }

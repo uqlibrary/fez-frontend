@@ -1,6 +1,6 @@
 import React from 'react';
 import AutoCompleteMultiSelectField from './AutoCompleteMultiSelectField';
-import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
+import { rtlRender, fireEvent, waitFor } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -47,30 +47,28 @@ describe('AutoCompleteMultiSelectField component', () => {
     });
 
     it('should render component and select options', async () => {
-        const { getByTestId } = setup({
+        const { getByTestId, getAllByRole } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
         });
 
         fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         let suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
-        act(() => {
-            fireEvent.click(getByTestId('test-autocomplete-option-0', suggestions));
-        });
+        let options = getAllByRole('option', suggestions);
+        fireEvent.click(options[0]);
 
         fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
-        act(() => {
-            fireEvent.click(getByTestId('test-autocomplete-option-1', suggestions));
-        });
+        options = getAllByRole('option', suggestions);
+        fireEvent.click(options[1]);
 
         expect(getByTestId('test-autocomplete-0')).toHaveTextContent('apple');
         expect(getByTestId('test-autocomplete-1')).toHaveTextContent('apple juice');
     });
 
     it('should render component and select options when the options are objects', async () => {
-        const { getByTestId } = setup({
+        const { getByTestId, getAllByRole } = setup({
             itemsList: [
                 { rek_title: 'apple' },
                 { rek_title: 'orange' },
@@ -84,16 +82,14 @@ describe('AutoCompleteMultiSelectField component', () => {
         fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         let suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
-        act(() => {
-            fireEvent.click(getByTestId('test-autocomplete-option-0', suggestions));
-        });
+        let options = getAllByRole('option', suggestions);
+        fireEvent.click(options[0]);
 
         fireEvent.click(getByTestId('test-autocomplete-input'));
         fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
         suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
-        act(() => {
-            fireEvent.click(getByTestId('test-autocomplete-option-1', suggestions));
-        });
+        options = getAllByRole('option', suggestions);
+        fireEvent.click(options[1]);
 
         expect(getByTestId('test-autocomplete-0')).toHaveTextContent('apple');
         expect(getByTestId('test-autocomplete-1')).toHaveTextContent('apple juice');
@@ -101,7 +97,7 @@ describe('AutoCompleteMultiSelectField component', () => {
 
     it('should render give option template for options', async () => {
         // eslint-disable-next-line react/prop-types
-        const OptionTemplate = ({ option }) => <div id="option-template">{option}</div>;
+        const OptionTemplate = ({ option }) => <div data-testid="option-template">{option}</div>;
         const { getByTestId, getAllByTestId } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
             OptionTemplate,
