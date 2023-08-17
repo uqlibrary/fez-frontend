@@ -1,4 +1,6 @@
+import React from 'react';
 import AttributionIncompleteField from './AttributionIncompleteField';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps) {
     const props = {
@@ -9,12 +11,12 @@ function setup(testProps) {
         ...testProps,
     };
 
-    return getElement(AttributionIncompleteField, props);
+    return rtlRender(<AttributionIncompleteField {...props} />);
 }
 
 describe('Component AttributionIncompleteField', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 });

@@ -1,13 +1,15 @@
+import React from 'react';
 import AuthorsPublicationTypesCountChart from './AuthorsPublicationTypesCountChart';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = { ...testProps };
-    return getElement(AuthorsPublicationTypesCountChart, props);
+    return rtlRender(<AuthorsPublicationTypesCountChart {...props} />);
 }
 
 describe('AuthorsPublicationTypesCountChart ', () => {
     it('should render empty chart component', () => {
-        const app = setup({ series: [] });
-        expect(toJson(app)).toMatchSnapshot();
+        const { container } = setup({ series: [] });
+        expect(container).toMatchSnapshot();
     });
 });

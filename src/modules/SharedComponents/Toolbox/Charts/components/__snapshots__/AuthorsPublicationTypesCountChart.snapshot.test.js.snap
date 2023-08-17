@@ -1,69 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AuthorsPublicationTypesCountChart  should render empty chart component 1`] = `
-<Chart
-  chartOptions={
-    Object {
-      "chart": Object {
-        "height": 320,
-        "plotBorderWidth": 0,
-        "plotShadow": false,
-        "spacingBottom": 10,
-        "type": "pie",
-      },
-      "credits": Object {
-        "enabled": false,
-      },
-      "legend": Object {
-        "align": "center",
-        "floating": true,
-        "itemStyle": Object {
-          "width": 110,
-        },
-        "layout": "vertical",
-        "symbolRadius": 0,
-        "y": -110,
-      },
-      "plotOptions": Object {
-        "pie": Object {
-          "borderColor": "none",
-          "center": Array [
-            "50%",
-            "50%",
-          ],
-          "dataLabels": Object {
-            "allowOverlap": false,
-            "className": "pieLabels ",
-            "distance": 10,
-            "enabled": true,
-            "format": "{y}",
-            "padding": 2,
-            "softConnector": true,
-            "style": Object {
-              "color": "#FFFFFF",
-              "textOutline": "none",
-            },
-            "useHTML": false,
-          },
-          "innerSize": "65%",
-          "shadow": false,
-          "showInLegend": true,
-          "size": "90%",
-          "startAngle": 45,
-        },
-      },
-      "series": Array [],
-      "subtitle": Object {
-        "text": "",
-      },
-      "title": Object {
-        "text": "",
-      },
-      "tooltip": Object {
-        "enabled": false,
-      },
-    }
-  }
-  className=" authors-publication-types-count-chart"
-/>
+<div>
+  <div
+    class=" authors-publication-types-count-chart"
+  />
+</div>
 `;

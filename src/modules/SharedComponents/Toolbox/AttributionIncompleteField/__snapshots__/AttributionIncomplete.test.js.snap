@@ -31,107 +31,100 @@ Object {
 `;
 
 exports[`Component AttributionIncomplete should render checked if record is checked 1`] = `
-<Fragment>
+<div>
   <div>
-    <ForwardRef(Typography)
-      variant="caption"
+    <span
+      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
     >
       Test detail
-    </ForwardRef(Typography)>
+    </span>
   </div>
-  <ForwardRef(FormControlLabel)
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
-    control={
-      <ForwardRef(Checkbox)
-        checked={true}
-        classes={
-          Object {
-            "checked": undefined,
-            "root": undefined,
-          }
-        }
-        inputProps={
-          Object {
-            "data-analyticsid": "attributionIncomplete-input",
-            "data-testid": "attributionIncomplete-input",
-            "id": "attributionIncomplete-input",
-          }
-        }
-        onChange={[Function]}
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input css-1m9pwf3"
+        data-analyticsid="attributionIncomplete-input"
+        data-indeterminate="false"
+        data-testid="attributionIncomplete-input"
+        id="attributionIncomplete-input"
+        type="checkbox"
       />
-    }
-    disabled={false}
-    label={
-      <ForwardRef(Typography)
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-        component="div"
-        data-testid="attributionIncomplete-label"
-        id="attributionIncomplete-label"
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        data-testid="CheckBoxIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
-        Test statement
-      </ForwardRef(Typography)>
-    }
-  />
-</Fragment>
+        <path
+          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+        />
+      </svg>
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </span>
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+      data-testid="attributionIncomplete-label"
+      id="attributionIncomplete-label"
+    >
+      Test statement
+    </div>
+  </label>
+</div>
 `;
 
 exports[`Component AttributionIncomplete should render default view 1`] = `
-<Fragment>
+<div>
   <div>
-    <ForwardRef(Typography)
-      variant="caption"
+    <span
+      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
     >
       Test detail
-    </ForwardRef(Typography)>
+    </span>
   </div>
-  <ForwardRef(FormControlLabel)
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
-    control={
-      <ForwardRef(Checkbox)
-        checked={false}
-        classes={
-          Object {
-            "checked": undefined,
-            "root": undefined,
-          }
-        }
-        inputProps={
-          Object {
-            "data-analyticsid": "attributionIncomplete-input",
-            "data-testid": "attributionIncomplete-input",
-            "id": "attributionIncomplete-input",
-          }
-        }
-        onChange={[Function]}
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-1m9pwf3"
+        data-analyticsid="attributionIncomplete-input"
+        data-indeterminate="false"
+        data-testid="attributionIncomplete-input"
+        id="attributionIncomplete-input"
+        type="checkbox"
       />
-    }
-    disabled={false}
-    label={
-      <ForwardRef(Typography)
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-        component="div"
-        data-testid="attributionIncomplete-label"
-        id="attributionIncomplete-label"
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        data-testid="CheckBoxOutlineBlankIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
-        Test statement
-      </ForwardRef(Typography)>
-    }
-  />
-</Fragment>
+        <path
+          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+        />
+      </svg>
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </span>
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+      data-testid="attributionIncomplete-label"
+      id="attributionIncomplete-label"
+    >
+      Test statement
+    </div>
+  </label>
+</div>
 `;

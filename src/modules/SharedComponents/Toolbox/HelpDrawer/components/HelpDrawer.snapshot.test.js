@@ -1,6 +1,7 @@
 import React from 'react';
 import { HelpDrawer } from './HelpDrawer';
 import HelpDrawerWithStyles from './HelpDrawer';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -13,18 +14,24 @@ function setup(testProps = {}) {
         buttonLabel: 'Test OK',
         ...testProps,
     };
-    return getElement(HelpDrawer, props);
+    return rtlRender(<HelpDrawer {...props} />);
 }
 
 describe('HelpDrawer snapshots tests', () => {
     it('renders menu', () => {
         const hdText = 'Integer mattis rutrum velit nec posuere. Quisque rhoncus quam elit.';
-        const wrapper = setup({ title: 'HelpDrawer Title', text: hdText, open: true, buttonLabel: 'Close' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { baseElement } = setup({
+            title: 'HelpDrawer Title',
+            text: hdText,
+            open: true,
+            buttonLabel: 'Close',
+        });
+
+        expect(baseElement).toMatchSnapshot();
     });
 
     it('renders text as react children', () => {
-        const wrapper = setup({
+        const { baseElement } = setup({
             title: 'HelpDrawer title',
             text: (
                 <p>
@@ -32,28 +39,21 @@ describe('HelpDrawer snapshots tests', () => {
                 </p>
             ),
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(baseElement).toMatchSnapshot();
     });
 
     it('renders text as react element', () => {
-        const wrapper = setup({
+        const { baseElement } = setup({
             title: 'HelpDrawer title',
             text: <span>Test text</span>,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(baseElement).toMatchSnapshot();
     });
 
     it('should render with styles', () => {
-        const wrapper = getElement(
-            HelpDrawerWithStyles,
-            {
-                open: true,
-                title: 'Test title',
-                text: 'Test text',
-                hide: jest.fn(),
-            },
-            { isShallow: false },
+        const { baseElement } = rtlRender(
+            <HelpDrawerWithStyles open title={'Test title'} text={'Test text'} hide={jest.fn()} />,
         );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(baseElement).toMatchSnapshot();
     });
 });

@@ -1,14 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component AttributionIncompleteField should render default view 1`] = `
-<WithStyles(AttributionIncomplete)
-  input={
-    Object {
-      "onChange": [MockFunction],
-      "value": true,
-    }
-  }
-  isAttributionIncomplete={true}
-  onChange={[MockFunction]}
-/>
+<div>
+  <div>
+    <span
+      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+    />
+  </div>
+  <label
+    class="MuiFormControlLabel-root AttributionIncomplete-root-1 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary Mui-checked MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input css-1m9pwf3"
+        data-analyticsid="attributionIncomplete-input"
+        data-indeterminate="false"
+        data-testid="attributionIncomplete-input"
+        id="attributionIncomplete-input"
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        data-testid="CheckBoxIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+        />
+      </svg>
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </span>
+    <div
+      class="MuiTypography-root AttributionIncomplete-label-2 MuiTypography-body1 css-u1nwny-MuiTypography-root"
+      data-testid="attributionIncomplete-label"
+      id="attributionIncomplete-label"
+    />
+  </label>
+</div>
 `;
