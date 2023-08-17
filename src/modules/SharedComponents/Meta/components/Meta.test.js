@@ -2,29 +2,6 @@ import * as records from 'mock/data/testing/records';
 import Meta from './Meta';
 import { pathConfig } from 'config';
 
-/*
-jest.mock('react-helmet-async', () => {
-    const React = require('react');
-    const plugin = jest.requireActual('react-helmet-async');
-    const mockHelmet = ({ children, ...props }) => {
-        console.log(props);
-        return React.createElement(
-            'div',
-            {
-                ...props,
-                // link: JSON.stringify(props.link),
-                // meta: JSON.stringify(props.meta),
-                className: 'mock-helmet',
-            },
-            children,
-        );
-    };
-    return {
-        ...plugin,
-        Helmet: jest.fn().mockImplementation(mockHelmet),
-    };
-});*/
-
 function setup(testProps = {}) {
     const props = {
         routesConfig: [

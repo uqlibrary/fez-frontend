@@ -1,14 +1,15 @@
+import React from 'react';
 import ContentLoader from './ContentLoader';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps) {
     const props = { ...testProps };
-    return getElement(ContentLoader, props);
+    return rtlRender(<ContentLoader {...props} />);
 }
 
 describe('ContentLoader snapshots tests', () => {
     it('renders loader', () => {
-        const wrapper = setup({ message: 'Waiting to load...' });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup({ message: 'Waiting to load...' });
+        expect(container).toMatchSnapshot();
     });
 });

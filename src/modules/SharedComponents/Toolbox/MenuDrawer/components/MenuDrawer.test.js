@@ -1,4 +1,6 @@
+import React from 'react';
 import { MenuDrawer } from './MenuDrawer';
+import { render, WithRouter, fireEvent } from 'test-utils';
 
 const defaultMenuItems = [
     {
@@ -10,7 +12,7 @@ const defaultMenuItems = [
         divider: true,
     },
     {
-        linkTo: '/xyz',
+        linkTo: 'https://www.example.com',
         primaryText: 'Primary text 1',
         secondaryText: 'secondary text 1',
     },
@@ -22,7 +24,7 @@ const defaultLocale = {
     closeMenuLabel: 'Close menu',
 };
 
-function setup(testProps = {}) {
+function setup(testProps = {}, renderMethod = render) {
     const props = {
         ...testProps,
         classes: {},
@@ -36,80 +38,54 @@ function setup(testProps = {}) {
         drawerOpen: testProps.drawerOpen || false,
         docked: testProps.docked || false,
     };
-    return getElement(MenuDrawer, props);
+    return renderMethod(
+        <WithRouter>
+            <MenuDrawer {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Component MenuDrawer', () => {
     it('should render empty drawer', () => {
-        const wrapper = setup();
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { baseElement } = setup();
+        expect(baseElement).toMatchSnapshot();
     });
 
     it('should render opened drawer with menus, divider', () => {
-        const wrapper = setup({ drawerOpen: true });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { baseElement } = setup({ drawerOpen: true });
+        expect(baseElement).toMatchSnapshot();
     });
 
     it('should render opened drawer with menus, divider and skip nav button', () => {
-        const wrapper = setup({ drawerOpen: true, docked: true });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
-    });
-
-    it('should render opened drawer with menus, divider and skip nav button', () => {
-        const wrapper = setup({ drawerOpen: true, docked: true });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
-    });
-
-    it('should render CRICOS footer', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({ drawerOpen: true, docked: true, history: { push: testMethod } });
-        expect(toJson(wrapper.find('.mainMenuFooter'))).toMatchSnapshot();
+        const { baseElement } = setup({ drawerOpen: true, docked: true });
+        expect(baseElement).toMatchSnapshot();
     });
 
     it('should call the lifecycle method of the component if props change', () => {
-        const wrapper = setup({ drawerOpen: true, docked: true });
-        const test = jest.spyOn(wrapper.instance(), 'shouldComponentUpdate');
-        wrapper.setProps({ docked: false });
-        expect(test).toBeCalled();
+        const { rerender, queryByRole } = setup({ drawerOpen: true, docked: true });
+        expect(queryByRole('button', { name: 'Skip navigation' })).toBeInTheDocument();
+        setup({ drawerOpen: true, docked: false }, rerender);
+        expect(queryByRole('button', { name: 'Skip navigation' })).not.toBeInTheDocument();
     });
 
     it('should have working method for navigating to links', () => {
-        const wrapper1 = setup();
-        const test1 = jest.spyOn(wrapper1.instance().props, 'onToggleDrawer');
-        wrapper1.instance().navigateToLink(null, undefined);
-        expect(test1).toBeCalled();
-
-        const test2 = jest.fn();
-        const wrapper2 = setup({ docked: true, history: { push: test2 } });
-
-        wrapper2.instance().navigateToLink('/', '');
-        expect(test2).toBeCalledWith('/');
-
         global.open = jest.fn();
-        wrapper2.instance().navigateToLink('https://www.example.com', '');
-        expect(global.open).toBeCalledWith('https://www.example.com', '');
+        const toggleFn = jest.fn();
+        const pushFn = jest.fn();
+        const { getByRole } = setup({ drawerOpen: true, onToggleDrawer: toggleFn, history: { push: pushFn } });
+        fireEvent.click(getByRole('button', { name: 'Close menu' }));
+        expect(toggleFn).toBeCalled();
+
+        fireEvent.click(getByRole('button', { name: /Primary text 0/i }));
+        expect(pushFn).toBeCalledWith('/');
+
+        fireEvent.click(getByRole('button', { name: /Primary text 1/i }));
+        expect(global.open).toBeCalledWith('https://www.example.com', '_blank');
     });
 
     it('should have working method for skipping menu items', () => {
-        const wrapper = setup();
-        const test = jest.spyOn(wrapper.instance(), 'focusOnElementId');
-        wrapper.instance().skipMenuItems();
-        expect(test).toBeCalledWith('afterMenuDrawer');
-    });
-
-    it('should have working method for focusing on given element ID', () => {
-        let test = false;
-        const dummyElement = document.createElement('div');
-        dummyElement.focus = () => {
-            test = true;
-        };
-        document.getElementById = jasmine.createSpy('HTML Element').and.returnValue(dummyElement);
-        const wrapper = setup();
-        wrapper.instance().focusOnElementId('anything');
-        expect(test).toBe(true);
+        const { queryByRole, getByTestId } = setup({ drawerOpen: true, docked: true });
+        fireEvent.click(queryByRole('button', { name: 'Skip navigation' }));
+        expect(getByTestId('after-menu-drawer')).toHaveFocus();
     });
 });

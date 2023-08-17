@@ -1,89 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component AppLoader should render as expected 1`] = `
-<ForwardRef(Grid)
-  alignItems="center"
-  className={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "red",
-      "display": "flex",
-      "height": "100%",
-      "justifyContent": "center",
-      "textAlign": "center !important",
-      "width": "100%",
-    }
-  }
-  container={true}
-  direction="column"
-  justifyContent="center"
-  spacing={0}
->
-  <ForwardRef(Grid)
-    className={
-      Object {
-        "margin": "16px 0",
-      }
-    }
-    item={true}
-  >
-    <ForwardRef(CircularProgress)
-      className={
-        Object {
-          "color": "white",
-          "fontWeight": 200,
-        }
-      }
-      size={80}
-      thickness={1}
-    />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    className={
-      Object {
-        "margin": "16px 0",
-      }
-    }
-    item={true}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column display alignItems justifyContent backgroundColor width height textAlign css-1ewlecp-MuiGrid-root"
   >
     <div
-      alt="Fez logo"
-      className="http://image/image.svg undefined"
-    />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    className={
-      Object {
-        "margin": "16px 0",
-      }
-    }
-    item={true}
-  >
-    <ForwardRef(Typography)
-      className={
-        Object {
-          "color": "white",
-          "fontWeight": 200,
-        }
-      }
-      variant="h6"
+      class="MuiGrid-root MuiGrid-item margin css-13i4rnv-MuiGrid-root"
     >
-      Fez frontend
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+      <span
+        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary color fontWeight css-u4ps4u-MuiCircularProgress-root"
+        role="progressbar"
+        style="width: 80px; height: 80px;"
+      >
+        <svg
+          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="21.5"
+            stroke-width="1"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item margin css-13i4rnv-MuiGrid-root"
+    >
+      <div
+        alt="Fez logo"
+        class="http://image/image.svg undefined"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item margin css-13i4rnv-MuiGrid-root"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-h6 color fontWeight css-1uywuy6-MuiTypography-root"
+      >
+        Fez frontend
+      </h6>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Component AppLoader should render with styles 1`] = `
-<AppLoader
-  classes={
-    Object {
-      "appLoader": "AppLoader-appLoader-1",
-      "logo": "AppLoader-logo-4",
-      "spaceBetween": "AppLoader-spaceBetween-3",
-      "white": "AppLoader-white-2",
-    }
-  }
-  title="Test loader"
-/>
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column AppLoader-appLoader-1 css-1ewlecp-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item AppLoader-spaceBetween-3 css-13i4rnv-MuiGrid-root"
+    >
+      <span
+        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary AppLoader-white-2 css-u4ps4u-MuiCircularProgress-root"
+        role="progressbar"
+        style="width: 80px; height: 80px;"
+      >
+        <svg
+          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="21.5"
+            stroke-width="1"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item AppLoader-spaceBetween-3 css-13i4rnv-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item AppLoader-spaceBetween-3 css-13i4rnv-MuiGrid-root"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-h6 AppLoader-white-2 css-1uywuy6-MuiTypography-root"
+      >
+        Test loader
+      </h6>
+    </div>
+  </div>
+</div>
 `;
