@@ -126,7 +126,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
       },
       Object {
         "dsi_copyright": null,
-        "dsi_dsid": "MyUQeSpaceResearcherGuidelines.pdf",
+        "dsi_dsid": "MyUQeSpaceResearcherGuidelines_compressed.pdf",
         "dsi_embargo_date": null,
         "dsi_id": 9,
         "dsi_label": "Full text (open access)",
@@ -252,7 +252,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
       },
       Object {
         "dsi_copyright": null,
-        "dsi_dsid": "presmd_MyUQeSpaceResearcherGuidelines.xml",
+        "dsi_dsid": "presmd_MyUQeSpaceResearcherGuidelines_compressed.xml",
         "dsi_embargo_date": null,
         "dsi_id": 18,
         "dsi_label": "",

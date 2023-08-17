@@ -815,7 +815,7 @@ describe('Files Component ', () => {
             fez_datastream_info: [
                 {
                     dsi_pid: 'UQ:185044',
-                    dsi_dsid: 'test.pdf',
+                    dsi_dsid: 'test_compressed.pdf',
                     dsi_open_access: 1,
                     dsi_mimetype: 'application/pdf',
                     dsi_state: 'A',
@@ -826,7 +826,7 @@ describe('Files Component ', () => {
                 },
                 {
                     dsi_pid: 'UQ:185044',
-                    dsi_dsid: 'thumbnail_test_t.jpg',
+                    dsi_dsid: 'test_compressed_t.jpg',
                     dsi_open_access: 1,
                     dsi_mimetype: 'image/jpeg',
                     dsi_state: 'A',
