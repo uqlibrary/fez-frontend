@@ -1,5 +1,6 @@
+import React from 'react';
 import { FileUploadRowStatus, mapStateToProps } from './FileUploadRowStatus';
-import FileUploadRowStatusContainer from './FileUploadRowStatus';
+import { render, WithReduxStore } from 'test-utils';
 
 const getProps = (testProps = {}) => ({
     progress: 0,
@@ -9,49 +10,48 @@ const getProps = (testProps = {}) => ({
 });
 
 function setup(testProps = {}) {
-    return getElement(FileUploadRowStatus, getProps(testProps));
+    return render(
+        <WithReduxStore>
+            <FileUploadRowStatus {...getProps(testProps)} />
+        </WithReduxStore>,
+    );
 }
 
 describe('Component FileUploadRowStatus', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render circular progress if upload is in progress', () => {
-        const wrapper = setup({
+        const { container } = setup({
             progress: 50,
             isUploadInProgress: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render done icon if upload is finished', () => {
-        const wrapper = setup({
+        const { container } = setup({
             progress: 100,
             isUploadInProgress: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render for edge browser if file is being uploaded but no progress data', () => {
-        const wrapper = setup({ progress: 0, isUploadInProgress: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ progress: 0, isUploadInProgress: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render if file uploaded successfully but later other file failed', () => {
-        const wrapper = setup({ progress: 100, isUploadInProgress: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should mount the containers', () => {
-        const wrapper = getElement(FileUploadRowStatusContainer, getProps(), { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ progress: 100, isUploadInProgress: false });
+        expect(container).toMatchSnapshot();
     });
 
     it('should map state to props as expected', () => {
@@ -67,5 +67,17 @@ describe('Component FileUploadRowStatus', () => {
             isUploadInProgress: true,
         };
         expect(test).toMatchObject(result);
+
+        const test2 = mapStateToProps(
+            {
+                get: jest.fn(() => null),
+            },
+            { name: 'propName' },
+        );
+        const result2 = {
+            progress: 0,
+            isUploadInProgress: false,
+        };
+        expect(test2).toMatchObject(result2);
     });
 });

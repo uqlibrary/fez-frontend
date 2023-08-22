@@ -1,4 +1,6 @@
+import React from 'react';
 import InheritedSecurityDetails from './InheritedSecurityDetails';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -7,20 +9,20 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(InheritedSecurityDetails, props);
+    return rtlRender(<InheritedSecurityDetails {...props} />);
 }
 
 describe('InheritedSecurityDetails component', () => {
     it('should render properly', () => {
-        const wrapper = setup({
+        const { container } = setup({
             title: 'Inherited security policy details',
             parentKey: 'rek_security_policy',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render collections correctly', () => {
-        const wrapper = setup({
+        const { container } = setup({
             collections: [
                 {
                     parent: {
@@ -42,11 +44,11 @@ describe('InheritedSecurityDetails component', () => {
             title: 'Inherited security policy details',
             parentKey: 'rek_security_policy',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render collections for datastreams correctly', () => {
-        const wrapper = setup({
+        const { container } = setup({
             collections: [
                 {
                     parent: {
@@ -68,11 +70,11 @@ describe('InheritedSecurityDetails component', () => {
             title: 'Inherited datastream security policy details',
             parentKey: 'rek_datastream_policy',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render collections for record correctly with empty policy description', () => {
-        const wrapper = setup({
+        const { container } = setup({
             collections: [
                 {
                     rek_ismemberof: 'UQ:11111',
@@ -86,11 +88,11 @@ describe('InheritedSecurityDetails component', () => {
             title: 'Inherited security policy details',
             parentKey: 'rek_security_policy',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render collections for datastreams correctly with empty policy description', () => {
-        const wrapper = setup({
+        const { container } = setup({
             collections: [
                 {
                     rek_ismemberof: 'UQ:11111',
@@ -104,6 +106,6 @@ describe('InheritedSecurityDetails component', () => {
             title: 'Inherited datastream security policy details',
             parentKey: 'rek_datastream_policy',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

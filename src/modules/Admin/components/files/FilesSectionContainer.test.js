@@ -11,13 +11,13 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(FilesSectionContainer, props, args);
+    return renderComponent(FilesSectionContainer, props, args);
 }
 
 describe('FilesSectionContainer component', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should map state to props', () => {

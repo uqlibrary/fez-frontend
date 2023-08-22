@@ -1,4 +1,6 @@
+import React from 'react';
 import { PolicyDropdown } from './PolicyDropdown';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -6,21 +8,21 @@ function setup(testProps = {}) {
         policyDropdownId: 'test-policy',
         ...testProps,
     };
-    return getElement(PolicyDropdown, props);
+    return rtlRender(<PolicyDropdown {...props} />);
 }
 
 describe('PolicyDropdown component', () => {
     it('should render properly', () => {
-        const wrapper = setup({
+        const { container } = setup({
             displayPrompt: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should hide policies that the user cant select', () => {
-        const wrapper = setup({
+        const { container } = setup({
             inheritedSecurity: 2,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

@@ -1,192 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AdminCard component should render StyledCard with same props 1`] = `
-<WithStyles(Cards)
-  test1="test1value"
-  test2="test2value"
-/>
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container Cards-card-1 AdminCard css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          >
+            <hr
+              class="Cards-divider-4"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto Cards-titlePortion-2 css-1wrgmsj-MuiGrid-root"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-body1 Cards-title-3 css-14y2kic-MuiTypography-root"
+            >
+               
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+  </div>
+</div>
 `;
 
 exports[`Cards component renders with custom colours and full height 1`] = `
-<ForwardRef(Grid)
-  className="undefined AdminCard"
-  container={true}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container undefined AdminCard css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        spacing={1}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
         >
-          <hr />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs="auto"
-        >
-          <ForwardRef(Typography)
-            color="primary"
-            component="h4"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
-             
-            card title
-          </ForwardRef(Typography)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  />
-</ForwardRef(Grid)>
+            <hr />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-body1 css-14y2kic-MuiTypography-root"
+            >
+               
+              card title
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+  </div>
+</div>
 `;
 
 exports[`Cards component renders with square top and accent header 1`] = `
-<ForwardRef(Grid)
-  className="undefined AdminCard"
-  container={true}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container undefined AdminCard css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        spacing={1}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
         >
-          <hr />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs="auto"
-        >
-          <ForwardRef(Typography)
-            color="primary"
-            component="h4"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
-             
-            card title
-          </ForwardRef(Typography)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  />
-</ForwardRef(Grid)>
+            <hr />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-body1 css-14y2kic-MuiTypography-root"
+            >
+               
+              card title
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+  </div>
+</div>
 `;
 
 exports[`Cards component renders with title and help button 1`] = `
-<ForwardRef(Grid)
-  className="testClass AdminCard"
-  container={true}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container testClass AdminCard css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        spacing={1}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
         >
-          <hr />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs="auto"
-        >
-          <ForwardRef(Typography)
-            color="primary"
-            component="h4"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
-             
-            card title
-          </ForwardRef(Typography)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  />
-</ForwardRef(Grid)>
+            <hr />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-body1 css-14y2kic-MuiTypography-root"
+            >
+               
+              card title
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+  </div>
+</div>
 `;
 
 exports[`Cards component renders with title and no help icon 1`] = `
-<ForwardRef(Grid)
-  className="testClass AdminCard"
-  container={true}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container testClass AdminCard css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        spacing={1}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={true}
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
         >
-          <hr />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs="auto"
-        >
-          <ForwardRef(Typography)
-            color="primary"
-            component="h4"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
-             
-            card title
-          </ForwardRef(Typography)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  />
-</ForwardRef(Grid)>
+            <hr />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-body1 css-14y2kic-MuiTypography-root"
+            >
+               
+              card title
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+  </div>
+</div>
 `;

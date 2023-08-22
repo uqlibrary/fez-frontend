@@ -1,24 +1,43 @@
+import React from 'react';
 import { AddSection } from './AddSection';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+            />
+        );
+    },
+}));
+
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(AddSection, props, args);
+    return rtlRender(<AddSection {...props} />);
 }
 
 describe('AddSection component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with subtypes', () => {
-        const wrapper = setup({
+        const { container } = setup({
             hasDefaultDocTypeSubType: true,
         });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

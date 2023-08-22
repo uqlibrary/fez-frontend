@@ -1,21 +1,21 @@
 import AddSectionContainer, { mapStateToProps } from './AddSectionContainer';
 import Immutable from 'immutable';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}, args = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(AddSectionContainer, props, args);
+    return renderComponent(AddSectionContainer, props, args);
 }
 
 describe('AddSectionContainer component', () => {
     it('should render default view', () => {
-        const wrapper = setup(
+        const render = setup(
             {},
             { isShallow: true, requiresStore: true, store: global.setupStoreForMount(Immutable.Map({})).store },
         );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should map state to props when empty objects are passed in', () => {

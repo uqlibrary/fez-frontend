@@ -1,4 +1,6 @@
+import React from 'react';
 import TabContainer from './TabContainer';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -9,22 +11,22 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(TabContainer, props);
+    return rtlRender(<TabContainer {...props} />);
 }
 
 describe('TabContainer component', () => {
     it('should render default view', () => {
-        const wrapper = setup();
+        const { container } = setup();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render null', () => {
-        const wrapper = setup({
+        const { container } = setup({
             tabbed: true,
             value: 'ping',
             currentTab: 'pong',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

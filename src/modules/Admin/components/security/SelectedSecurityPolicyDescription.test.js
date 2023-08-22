@@ -1,18 +1,20 @@
+import React from 'react';
 import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescription';
+import { rtlRender } from 'test-utils';
 
 const setup = testProps => {
     const props = {
         title: 'test',
         ...testProps,
     };
-    return getElement(SelectedSecurityPolicyDescription, props);
+    return rtlRender(<SelectedSecurityPolicyDescription {...props} />);
 };
 
 describe('SelectedSecurityPolicyDescription component', () => {
     it('should render properly', () => {
-        const wrapper = setup({
+        const { container } = setup({
             selectedPolicyKey: 2,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

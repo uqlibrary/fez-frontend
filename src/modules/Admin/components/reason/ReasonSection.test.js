@@ -8,7 +8,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(ReasonSection, props, args);
+    return renderComponent(ReasonSection, props, args);
 }
 
 describe('ReasonSection component', () => {
@@ -28,8 +28,8 @@ describe('ReasonSection component', () => {
             },
         }));
 
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -48,7 +48,7 @@ describe('ReasonSection component', () => {
             },
         }));
 
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

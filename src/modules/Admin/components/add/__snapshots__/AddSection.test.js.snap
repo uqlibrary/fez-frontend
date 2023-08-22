@@ -1,574 +1,293 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddSection component should render default view 1`] = `
-<form>
-  <StandardPage
-    title="Add a new work"
-  >
-    <ForwardRef(Grid)
-      container={true}
-      spacing={3}
+<div>
+  <form>
+    <div
+      class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={12}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
-        <StandardCard
-          title="Identify your new work"
+        <h2
+          class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+          data-analyticsid="page-title"
+          data-testid="page-title"
+          id="page-title"
         >
-          <ForwardRef(Grid)
-            container={true}
-            spacing={3}
+          Add a new work
+        </h2>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
-            <ForwardRef(Grid)
-              item={true}
-              xs={12}
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-4 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-identify-your-new-work"
+              id="standard-card-identify-your-new-work"
             >
-              <Field
-                collectionFieldId="rek-ismemberof"
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.memo),
-                    "WrappedComponent": Object {
-                      "$$typeof": Symbol(react.memo),
-                      "compare": null,
-                      "type": [Function],
-                    },
-                    "compare": null,
-                    "type": [Function],
-                  }
-                }
-                disabled={false}
-                floatingLabelText="Member of collections"
-                fullWidth={true}
-                hintText="Begin typing to select and add work to a list of collection(s)"
-                name="adminSection.collections"
-                required={true}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </ForwardRef(Grid)>
-            <ForwardRef(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                label="Work type"
-                name="rek_display_type"
-                placeholder="Select a Work type from the dropdown list"
-                required={true}
-                selectFieldId="rek-display-type"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <ForwardRef(MenuItem)
-                  key="0"
-                  value={130}
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
-                  Conference Paper
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="1"
-                  value={174}
-                >
-                  Book
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="2"
-                  value={177}
-                >
-                  Book Chapter
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="3"
-                  value={179}
-                >
-                  Journal Article
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="4"
-                  value={181}
-                >
-                  Department Technical Report
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="5"
-                  value={183}
-                >
-                  Working Paper
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="6"
-                  value={185}
-                >
-                  Patent
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="7"
-                  value={187}
-                >
-                  Thesis
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="8"
-                  value={189}
-                >
-                  Seminar Paper
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="9"
-                  value={191}
-                >
-                  Newspaper Article
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="10"
-                  value={197}
-                >
-                  Conference Proceedings
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="11"
-                  value={202}
-                >
-                  Generic Document
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="12"
-                  value={204}
-                >
-                  Preprint
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="13"
-                  value={228}
-                >
-                  Digilib Image
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="14"
-                  value={238}
-                >
-                  Image
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="15"
-                  value={263}
-                >
-                  Audio Document
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="16"
-                  value={275}
-                >
-                  Research Report
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="17"
-                  value={294}
-                >
-                  Journal
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="18"
-                  value={310}
-                >
-                  Video Document
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="19"
-                  value={313}
-                >
-                  Creative Work
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="20"
-                  value={316}
-                >
-                  Design
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="21"
-                  value={371}
-                >
-                  Data Collection
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="22"
-                  value={374}
-                >
-                  Manuscript
-                </ForwardRef(MenuItem)>
-              </Field>
-            </ForwardRef(Grid)>
-            <ForwardRef(Grid)
-              item={true}
-              xs={12}
-            />
-            <ForwardRef(Grid)
-              item={true}
-              xs={12}
-            >
-              <ForwardRef(Grid)
-                container={true}
-                spacing={1}
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-9 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-identify-your-new-work-header"
+                    id="standard-card-identify-your-new-work-header"
+                  >
+                    Identify your new work
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-identify-your-new-work-content"
+                data-testid="standard-card-identify-your-new-work-content"
+                id="standard-card-identify-your-new-work-content"
               >
-                <ForwardRef(Grid)
-                  item={true}
-                  sx={
-                    Object {
-                      "display": Object {
-                        "sm": "block",
-                        "xs": "none",
-                      },
-                    }
-                  }
-                  xs={true}
-                />
-                <ForwardRef(Grid)
-                  item={true}
-                  sm="auto"
-                  xs={12}
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
                 >
-                  <ForwardRef(Button)
-                    color="secondary"
-                    data-analyticsid="cancel-work"
-                    data-testid="cancel-work"
-                    fullWidth={true}
-                    id="cancel-work"
-                    onClick={[Function]}
-                    variant="contained"
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    Cancel
-                  </ForwardRef(Button)>
-                </ForwardRef(Grid)>
-                <ForwardRef(Grid)
-                  item={true}
-                  sm="auto"
-                  xs={12}
-                >
-                  <ForwardRef(Button)
-                    color="primary"
-                    data-analyticsid="submit-work"
-                    data-testid="submit-work"
-                    fullWidth={true}
-                    id="submit-work"
-                    variant="contained"
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="Member of collections"
+                      name="adminSection.collections"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    Create work
-                  </ForwardRef(Button)>
-                </ForwardRef(Grid)>
-              </ForwardRef(Grid)>
-            </ForwardRef(Grid)>
-          </ForwardRef(Grid)>
-        </StandardCard>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </StandardPage>
-</form>
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="Work type"
+                      name="rek_display_type"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  />
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                      />
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                          data-analyticsid="cancel-work"
+                          data-testid="cancel-work"
+                          id="cancel-work"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Cancel
+                          <span
+                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                          data-analyticsid="submit-work"
+                          data-testid="submit-work"
+                          id="submit-work"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Create work
+                          <span
+                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
 `;
 
 exports[`AddSection component should render with subtypes 1`] = `
-<form>
-  <StandardPage
-    title="Add a new work"
-  >
-    <ForwardRef(Grid)
-      container={true}
-      spacing={3}
+<div>
+  <form>
+    <div
+      class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={12}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
-        <StandardCard
-          title="Identify your new work"
+        <h2
+          class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-11 css-14y2kic-MuiTypography-root"
+          data-analyticsid="page-title"
+          data-testid="page-title"
+          id="page-title"
         >
-          <ForwardRef(Grid)
-            container={true}
-            spacing={3}
+          Add a new work
+        </h2>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-item Page-layoutCard-10 css-13i4rnv-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
-            <ForwardRef(Grid)
-              item={true}
-              xs={12}
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-13 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-identify-your-new-work"
+              id="standard-card-identify-your-new-work"
             >
-              <Field
-                collectionFieldId="rek-ismemberof"
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.memo),
-                    "WrappedComponent": Object {
-                      "$$typeof": Symbol(react.memo),
-                      "compare": null,
-                      "type": [Function],
-                    },
-                    "compare": null,
-                    "type": [Function],
-                  }
-                }
-                disabled={false}
-                floatingLabelText="Member of collections"
-                fullWidth={true}
-                hintText="Begin typing to select and add work to a list of collection(s)"
-                name="adminSection.collections"
-                required={true}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </ForwardRef(Grid)>
-            <ForwardRef(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                label="Work type"
-                name="rek_display_type"
-                placeholder="Select a Work type from the dropdown list"
-                required={true}
-                selectFieldId="rek-display-type"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <ForwardRef(MenuItem)
-                  key="0"
-                  value={130}
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
-                  Conference Paper
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="1"
-                  value={174}
-                >
-                  Book
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="2"
-                  value={177}
-                >
-                  Book Chapter
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="3"
-                  value={179}
-                >
-                  Journal Article
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="4"
-                  value={181}
-                >
-                  Department Technical Report
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="5"
-                  value={183}
-                >
-                  Working Paper
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="6"
-                  value={185}
-                >
-                  Patent
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="7"
-                  value={187}
-                >
-                  Thesis
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="8"
-                  value={189}
-                >
-                  Seminar Paper
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="9"
-                  value={191}
-                >
-                  Newspaper Article
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="10"
-                  value={197}
-                >
-                  Conference Proceedings
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="11"
-                  value={202}
-                >
-                  Generic Document
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="12"
-                  value={204}
-                >
-                  Preprint
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="13"
-                  value={228}
-                >
-                  Digilib Image
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="14"
-                  value={238}
-                >
-                  Image
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="15"
-                  value={263}
-                >
-                  Audio Document
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="16"
-                  value={275}
-                >
-                  Research Report
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="17"
-                  value={294}
-                >
-                  Journal
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="18"
-                  value={310}
-                >
-                  Video Document
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="19"
-                  value={313}
-                >
-                  Creative Work
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="20"
-                  value={316}
-                >
-                  Design
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="21"
-                  value={371}
-                >
-                  Data Collection
-                </ForwardRef(MenuItem)>
-                <ForwardRef(MenuItem)
-                  key="22"
-                  value={374}
-                >
-                  Manuscript
-                </ForwardRef(MenuItem)>
-              </Field>
-            </ForwardRef(Grid)>
-            <ForwardRef(Grid)
-              item={true}
-              xs={12}
-            >
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
-              >
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  id="rek-subtype"
-                  label="Work subtype"
-                  name="adminSection.rek_subtype"
-                  placeholder="Select a work subtype from the dropdown list"
-                  required={true}
-                  selectFieldId="rek-subtype"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-            </ForwardRef(Grid)>
-            <ForwardRef(Grid)
-              item={true}
-              xs={12}
-            >
-              <ForwardRef(Grid)
-                container={true}
-                spacing={1}
-              >
-                <ForwardRef(Grid)
-                  item={true}
-                  sx={
-                    Object {
-                      "display": Object {
-                        "sm": "block",
-                        "xs": "none",
-                      },
-                    }
-                  }
-                  xs={true}
-                />
-                <ForwardRef(Grid)
-                  item={true}
-                  sm="auto"
-                  xs={12}
-                >
-                  <ForwardRef(Button)
-                    color="secondary"
-                    data-analyticsid="cancel-work"
-                    data-testid="cancel-work"
-                    fullWidth={true}
-                    id="cancel-work"
-                    onClick={[Function]}
-                    variant="contained"
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-18 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-identify-your-new-work-header"
+                    id="standard-card-identify-your-new-work-header"
                   >
-                    Cancel
-                  </ForwardRef(Button)>
-                </ForwardRef(Grid)>
-                <ForwardRef(Grid)
-                  item={true}
-                  sm="auto"
-                  xs={12}
+                    Identify your new work
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-identify-your-new-work-content"
+                data-testid="standard-card-identify-your-new-work-content"
+                id="standard-card-identify-your-new-work-content"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
                 >
-                  <ForwardRef(Button)
-                    color="primary"
-                    data-analyticsid="submit-work"
-                    data-testid="submit-work"
-                    fullWidth={true}
-                    id="submit-work"
-                    variant="contained"
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    Create work
-                  </ForwardRef(Button)>
-                </ForwardRef(Grid)>
-              </ForwardRef(Grid)>
-            </ForwardRef(Grid)>
-          </ForwardRef(Grid)>
-        </StandardCard>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </StandardPage>
-</form>
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="Member of collections"
+                      name="adminSection.collections"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="Work type"
+                      name="rek_display_type"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    >
+                      <field
+                        disabled="false"
+                        is="mock"
+                        label="Work subtype"
+                        name="adminSection.rek_subtype"
+                        required="true"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                      />
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                          data-analyticsid="cancel-work"
+                          data-testid="cancel-work"
+                          id="cancel-work"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Cancel
+                          <span
+                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                          data-analyticsid="submit-work"
+                          data-testid="submit-work"
+                          id="submit-work"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Create work
+                          <span
+                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
 `;
