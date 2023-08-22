@@ -1,40 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FreeTextListEditor component should render default view 1`] = `
-<ListEditor
-  canEdit={false}
-  distinctOnly={false}
-  formComponent={
-    Object {
-      "$$typeof": Symbol(react.memo),
-      "compare": null,
-      "type": [Function],
-    }
-  }
-  getItemSelectedToEdit={[Function]}
-  hideReorder={false}
-  inputNormalizer={[Function]}
-  listEditorId="free-text-list-editor"
-  locale={
-    Object {
-      "form": Object {
-        "locale": Object {
-          "inputFieldLabel": "NoLabel",
-        },
-      },
-    }
-  }
-  maxCount={0}
-  required={false}
-  rowItemTemplate={[Function]}
-  scrollList={false}
-  scrollListHeight={250}
-  searchKey={
-    Object {
-      "order": "rek_order",
-      "value": "rek_value",
-    }
-  }
-  transformFunction={[Function]}
-/>
+<div>
+  <div
+    class="undefined"
+    id="free-text-list-editor-list-editor"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-hckusd-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="free-text-list-editor-input"
+            id="free-text-list-editor-input-label"
+          >
+            NoLabel
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="free-text-list-editor-input"
+              data-testid="free-text-list-editor-input"
+              id="free-text-list-editor-input"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="free-text-list-editor-add"
+          data-testid="free-text-list-editor-add"
+          disabled=""
+          id="free-text-list-editor-add"
+          tabindex="-1"
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      data-testid="free-text-list-editor-list"
+      id="free-text-list-editor-list"
+    />
+    <p
+      class="MuiFormHelperText-root css-1d7hrfi-MuiFormHelperText-root"
+    />
+  </div>
+</div>
 `;

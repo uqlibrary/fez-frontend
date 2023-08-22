@@ -1,16 +1,18 @@
+import React from 'react';
 import { LinkInfoTemplate } from './LinkInfoTemplate';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         item: {},
         ...testProps,
     };
-    return getElement(LinkInfoTemplate, props, args);
+    return rtlRender(<LinkInfoTemplate {...props} />);
 }
 
 describe('LinkInfoTemplate component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 });

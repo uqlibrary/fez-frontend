@@ -1,40 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LinkInfoListEditor component should render default view 1`] = `
-<ListEditor
-  canEdit={false}
-  distinctOnly={false}
-  formComponent={
-    Object {
-      "$$typeof": Symbol(react.memo),
-      "compare": null,
-      "type": [Function],
-    }
-  }
-  getItemSelectedToEdit={[Function]}
-  hideReorder={false}
-  inputNormalizer={[Function]}
-  listEditorId="link-info-list-editor"
-  locale={
-    Object {
-      "form": Object {
-        "locale": Object {
-          "inputFieldLabel": "NoLabel",
-        },
-      },
-    }
-  }
-  maxCount={0}
-  required={false}
-  rowItemTemplate={[Function]}
-  scrollList={false}
-  scrollListHeight={250}
-  searchKey={
-    Object {
-      "order": "rek_order",
-      "value": "rek_value",
-    }
-  }
-  transformFunction={[Function]}
-/>
+<div>
+  <div
+    class="undefined"
+    id="link-info-list-editor-list-editor"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-hckusd-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-r0f0k3-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="rek-link"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="rek-link-input"
+              data-testid="rek-link-input"
+              id="rek-link-input"
+              name="link"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-r0f0k3-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="rek-link-description"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="rek-link-description-input"
+              data-testid="rek-link-description-input"
+              id="rek-link-description-input"
+              name="description"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2 css-12xeub0-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-link-add"
+          data-testid="rek-link-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      data-testid="link-info-list-editor-list"
+      id="link-info-list-editor-list"
+    />
+    <p
+      class="MuiFormHelperText-root css-1d7hrfi-MuiFormHelperText-root"
+    />
+  </div>
+</div>
 `;
