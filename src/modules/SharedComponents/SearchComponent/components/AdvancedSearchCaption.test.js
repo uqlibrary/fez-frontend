@@ -67,6 +67,8 @@ describe('Component AdvancedSearchCaption', () => {
             isOpenAccess: true,
         });
 
+        expect(getByTestId('advanced-search-caption-container')).toHaveStyle('word-break: break-all');
+
         expect(getByTestId('all-caption-title')).toHaveTextContent('Any field');
         expect(getByTestId('all-caption-combiner')).toHaveTextContent('contains');
         expect(getByTestId('all-caption-value')).toHaveTextContent('anything');
@@ -111,6 +113,8 @@ describe('Component AdvancedSearchCaption', () => {
             yearFilter: {},
             isOpenAccess: false,
         });
+
+        expect(getByTestId('advanced-search-caption-container')).toHaveStyle('word-break: break-all');
 
         expect(getByTestId('rek-genre-type-caption-title')).toHaveTextContent('Thesis type');
         expect(getByTestId('rek-genre-type-caption-combiner')).toHaveTextContent('is one of');
