@@ -31,6 +31,9 @@ const useStyles = makeStyles(
             fontWeight: 'bold',
             marginLeft: 2,
         },
+        captions: {
+            wordBreak: 'break-all',
+        },
     }),
     { withTheme: true },
 );
@@ -158,7 +161,9 @@ export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenA
     const captions = renderCaptions(captionData);
     return (
         <div data-testid="advanced-search-caption">
-            {captions}
+            <span data-testid="advanced-search-caption-container" className={classes.captions}>
+                {captions}
+            </span>
             {!!isUserAdmin && captions.length > 0 && <AddFavouriteSearchIcon />}
         </div>
     );
