@@ -88,6 +88,17 @@ describe('ContentIndicatorsField component', () => {
         expect(getContentIndicatorsItemsList(contentIndicators(), input)).toEqual(expected);
     });
 
+    it('should handle empty props', () => {
+        const expected = CONTENT_INDICATORS.map(item => ({
+            ...item,
+            disabled: false,
+        }));
+        expected[1].disabled = false;
+        expected[2].disabled = false;
+
+        expect(getContentIndicatorsItemsList(contentIndicators())).toEqual(expected);
+    });
+
     it('should mark dropdown as disabled when all indicators have been selected', () => {
         const { container } = setup({
             meta: {
