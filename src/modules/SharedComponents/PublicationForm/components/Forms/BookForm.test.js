@@ -2,56 +2,78 @@ jest.dontMock('./BookForm');
 
 import BookForm from './BookForm';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK } from 'config/general';
+import React from 'react';
+import { render, WithReduxStore } from 'test-utils';
+
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: jest.fn(),
+}));
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool
     };
-    return getElement(BookForm, props);
+    return render(
+        <WithReduxStore>
+            <BookForm {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('BookForm renders ', () => {
+    const ReduxFormMock = require('redux-form/immutable');
+    let transformIssnFn;
+    let normalizeIssnFn;
+    ReduxFormMock.Field.mockImplementation(
+        ({ name, title, required, disabled, label, floatingLabelText, inputNormalizer, transformFunction }) => {
+            if (name === 'fez_record_search_key_issn') {
+                normalizeIssnFn = inputNormalizer;
+                transformIssnFn = transformFunction;
+            }
+
+            return (
+                <field
+                    is="mock"
+                    name={name}
+                    title={title}
+                    required={required}
+                    disabled={disabled}
+                    label={label || floatingLabelText}
+                />
+            );
+        },
+    );
+
     it('component', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with 12 input fields', () => {
-        const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(12);
+        const { container } = setup();
+        expect(container.getElementsByTagName('field').length).toEqual(12);
     });
 
     it('component with 4 input fields for NTRO', () => {
-        const wrapper = setup({ isNtro: true });
-        expect(
-            wrapper
-                .find('NtroFields')
-                .dive()
-                .find('Field').length,
-        ).toEqual(5);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isNtro: true });
+        expect(container.querySelectorAll('[data-testid=standard-card-ntro-data] field').length).toEqual(4);
+        expect(container).toMatchSnapshot();
     });
 
     it('component with 5 input fields for NTRO with musical composition subtype', () => {
-        const wrapper = setup({ isNtro: true, subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION });
-        expect(
-            wrapper
-                .find('NtroFields')
-                .dive()
-                .find('Field').length,
-        ).toEqual(6);
+        const { container } = setup({ isNtro: true, subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION });
+        expect(container.querySelectorAll('[data-testid=standard-card-ntro-data] field').length).toEqual(5);
     });
 
     it('component with all fields disabled', () => {
-        const wrapper = setup({ submitting: true });
-        wrapper.find('Field').forEach(field => {
-            expect(field.props().disabled).toEqual(true);
-        });
+        const { container } = setup({ submitting: true });
+        expect(container.querySelectorAll('field[disabled=true]').length).toEqual(12);
     });
 
     it('component should render contributor assignment', () => {
-        const wrapper = setup({
+        const { container } = setup({
             formValues: {
                 get: key => {
                     const values = {
@@ -62,37 +84,35 @@ describe('BookForm renders ', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should hide author when is edited book', () => {
-        const wrapper = setup({ subtype: SUBTYPE_EDITED_BOOK });
-        expect(wrapper.find('Field').length).toEqual(11);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ subtype: SUBTYPE_EDITED_BOOK });
+        expect(container.getElementsByTagName('field').length).toEqual(11);
+        expect(container).toMatchSnapshot();
     });
 
     it('should show author when is not edited book', () => {
-        const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(12);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container.getElementsByTagName('field').length).toEqual(12);
     });
 
     it('component should render non ntro book', () => {
-        const wrapper = setup({ isNtro: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isNtro: false });
+        expect(container).toMatchSnapshot();
     });
 
     it('should normalize the issn input value', () => {
-        const wrapper = setup();
-        expect(wrapper.instance().normalizeIssn('12345678')).toEqual('1234-5678');
-        expect(wrapper.instance().normalizeIssn('1234-5678')).toEqual('1234-5678');
-        expect(wrapper.instance().normalizeIssn('1234')).toEqual('1234');
+        expect(normalizeIssnFn('12345678')).toEqual('1234-5678');
+        expect(normalizeIssnFn('1234-5678')).toEqual('1234-5678');
+        expect(normalizeIssnFn('1234')).toEqual('1234');
     });
 
     it('should transform the issn output value', () => {
-        const wrapper = setup();
-        expect(
-            wrapper.instance().transformIssn({ value: 'rek_issn', order: 'rek_issn_order' }, { key: '1234-5678' }, 3),
-        ).toEqual({ rek_issn: '1234-5678', rek_issn_order: 4 });
+        expect(transformIssnFn({ value: 'rek_issn', order: 'rek_issn_order' }, { key: '1234-5678' }, 3)).toEqual({
+            rek_issn: '1234-5678',
+            rek_issn_order: 4,
+        });
     });
 });

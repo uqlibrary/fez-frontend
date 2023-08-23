@@ -73,182 +73,154 @@ exports[`Component PublicationForm should render properly with non-matching doct
               >
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="fav_0"
                   value={130}
                 >
                   Conference Paper
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="fav_1"
                   value={174}
                 >
                   Book
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="fav_2"
                   value={177}
                 >
                   Book Chapter
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="fav_3"
                   value={179}
                 >
                   Journal Article
                 </ForwardRef(MenuItem)>
-                <ForwardRef(Divider)
-                  key="div_0"
-                />
+                <ForwardRef(Divider) />
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="0"
                   value={130}
                 >
                   Conference Paper
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="1"
                   value={174}
                 >
                   Book
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="2"
                   value={177}
                 >
                   Book Chapter
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="3"
                   value={179}
                 >
                   Journal Article
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="4"
                   value={181}
                 >
                   Department Technical Report
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="5"
                   value={183}
                 >
                   Working Paper
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="6"
                   value={185}
                 >
                   Patent
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="7"
                   value={187}
                 >
                   Thesis
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="8"
                   value={189}
                 >
                   Seminar Paper
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="9"
                   value={191}
                 >
                   Newspaper Article
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="10"
                   value={197}
                 >
                   Conference Proceedings
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="11"
                   value={202}
                 >
                   Generic Document
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="12"
                   value={204}
                 >
                   Preprint
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="13"
                   value={238}
                 >
                   Image
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="14"
                   value={263}
                 >
                   Audio Document
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="15"
                   value={275}
                 >
                   Research Report
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="16"
                   value={310}
                 >
                   Video Document
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="17"
                   value={313}
                 >
                   Creative Work
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
                   disabled={false}
-                  key="18"
                   value={316}
                 >
                   Design
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
-                  key="ntro-0"
                   value={1}
                 >
                   test1Name
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
-                  key="ntro-1"
                   value={2}
                 >
                   test2Name
                 </ForwardRef(MenuItem)>
                 <ForwardRef(MenuItem)
-                  key="ntro-2"
                   value={3}
                 >
                   3

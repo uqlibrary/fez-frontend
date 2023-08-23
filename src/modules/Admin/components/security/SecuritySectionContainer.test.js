@@ -16,7 +16,7 @@ jest.mock('../../../../context');
 import { useRecordContext, useFormValuesContext } from 'context';
 import { render, WithReduxStore } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         disabled: false,
         isSuperAdmin: true,
