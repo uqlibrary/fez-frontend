@@ -1,8 +1,10 @@
+import React from 'react';
 import SelectField from './SelectField';
-
 import filterProps from '../../helpers/_filterProps';
+import { rtlRender, fireEvent } from 'test-utils';
+import MenuItem from '@mui/material/MenuItem';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         name: 'selectfield',
         type: 'text',
@@ -12,7 +14,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
     const consolidatedProps = filterProps(props, SelectField.propTypes);
-    return getElement(SelectField, { ...consolidatedProps, ...props }, isShallow);
+    return rtlRender(<SelectField {...consolidatedProps} {...props} />);
 }
 
 describe('SelectfieldWrapper snapshots tests', () => {
@@ -24,9 +26,8 @@ describe('SelectfieldWrapper snapshots tests', () => {
             floatingLabelText: 'This is a test selectfield component',
         };
 
-        const wrapper = setup(props);
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
     });
 
     it('renders an error', () => {
@@ -36,32 +37,34 @@ describe('SelectfieldWrapper snapshots tests', () => {
             errorText: 'Something bad happened',
         };
 
-        const wrapper = setup(props);
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
     });
 
     it('should call onChange', () => {
         const onChangeFn = jest.fn();
         const onBlurFn = jest.fn();
-        const wrapper = setup({
+        const { getByRole, getByTestId } = setup({
             input: {
                 onChange: onChangeFn,
                 onBlur: onBlurFn,
-                value: 'testing',
+                value: 'test1',
             },
+            children: [
+                <MenuItem value={'test1'} key={0}>
+                    test1
+                </MenuItem>,
+                <MenuItem value={'test2'} key={1}>
+                    test2
+                </MenuItem>,
+            ],
         });
 
-        wrapper
-            .find('ForwardRef(Select)')
-            .props()
-            .onChange({ target: { value: 'test' } });
-        expect(onChangeFn).toHaveBeenCalledWith('test');
+        fireEvent.mouseDown(getByTestId('test-select'));
+        fireEvent.click(getByRole('option', { name: 'test2' }));
+        expect(onChangeFn).toHaveBeenCalledWith('test2');
 
-        wrapper
-            .find('ForwardRef(Select)')
-            .props()
-            .onBlur();
-        expect(onBlurFn).toHaveBeenCalledWith('testing');
+        fireEvent.blur(getByTestId('test-select'));
+        expect(onBlurFn).toHaveBeenCalledWith('test1');
     });
 });

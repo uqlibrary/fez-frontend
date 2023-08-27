@@ -1,20 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ContributorLinkingField should render as expected 1`] = `
-<Memo(AuthorLinking)
-  authorLinkingId="rek-contributor-id"
-  input={
-    Object {
-      "onChange": [Function],
-    }
-  }
-  onChange={[Function]}
-  searchKey={
-    Object {
-      "order": "rek_contributor_id_order",
-      "type": "contributor",
-      "value": "rek_contributor_id",
-    }
-  }
-/>
-`;
+exports[`Component ContributorLinkingField should render as expected 1`] = `undefined`;

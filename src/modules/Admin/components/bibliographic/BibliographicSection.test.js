@@ -8,7 +8,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(BibliographicSection, props, args);
+    return renderComponent(BibliographicSection, props, args);
 }
 
 describe('BibliographicSection component', () => {
@@ -36,8 +36,8 @@ describe('BibliographicSection component', () => {
             },
         }));
 
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -65,8 +65,8 @@ describe('BibliographicSection component', () => {
             },
         }));
 
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render design form fields', () => {
@@ -88,7 +88,7 @@ describe('BibliographicSection component', () => {
             },
         }));
 
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

@@ -1,14 +1,16 @@
+import React from 'react';
 import NotesSection from './NotesSection';
+import { rtlRender } from 'test-utils';
 
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(NotesSection, props, args);
+    return renderComponent(NotesSection, props);
 }
 
 describe('NotesSection component', () => {
@@ -28,8 +30,8 @@ describe('NotesSection component', () => {
             },
         }));
 
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -48,7 +50,7 @@ describe('NotesSection component', () => {
             },
         }));
 
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

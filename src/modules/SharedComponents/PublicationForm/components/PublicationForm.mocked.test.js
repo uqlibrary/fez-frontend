@@ -46,12 +46,12 @@ function setup(testProps = {}) {
         valid: true,
         ...testProps,
     };
-    return getElement(PublicationForm, props);
+    return renderComponent(PublicationForm, props);
 }
 
 describe('Component PublicationForm', () => {
     it('should render properly with non-matching doctype data arrays', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

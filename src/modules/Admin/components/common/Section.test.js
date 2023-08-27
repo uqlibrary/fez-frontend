@@ -5,21 +5,21 @@ const setup = (testProps = {}, args = { isShallow: true }) => {
         ...testProps,
     };
 
-    return getElement(Section, props, args);
+    return renderComponent(Section, props, args);
 };
 
 describe('Section component', () => {
     it('should render default view', () => {
-        const wrapper = setup({
+        const render = setup({
             disabled: false,
             cards: [{ title: 'Title' }],
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        const wrapper2 = setup({
+        expect(render.getRenderOutput()).toMatchSnapshot();
+        const render2 = setup({
             disabled: false,
             cards: [{}],
         });
-        expect(toJson(wrapper2)).toMatchSnapshot();
+        expect(render2.getRenderOutput()).toMatchSnapshot();
     });
 });
 
@@ -30,8 +30,8 @@ describe('GroupsWithinCard component', () => {
             groups: [['test']],
         };
         const args = { isShallow: true };
-        const wrapper = getElement(GroupsWithinCard, props, args);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = renderComponent(GroupsWithinCard, props, args);
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });
 
@@ -41,7 +41,7 @@ describe('GroupsWithoutCard component', () => {
             groups: [['test']],
         };
         const args = { isShallow: true };
-        const wrapper = getElement(GroupsWithoutCard, props, args);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = renderComponent(GroupsWithoutCard, props, args);
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

@@ -1,442 +1,321 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InheritedSecurityDetails component should render collections correctly 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  style={
-    Object {
-      "backgroundColor": "rgba(0,0,0,0.05)",
-      "padding": 24,
-    }
-  }
-  xs={12}
->
-  <ForwardRef(Typography)
-    style={
-      Object {
-        "marginTop": -8,
-      }
-    }
-    variant="h6"
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    Inherited security policy details
-  </ForwardRef(Typography)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={1}
-    style={
-      Object {
-        "marginTop": 8,
-      }
-    }
-  >
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-      xs={12}
+    <h6
+      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      style="margin-top: -8px;"
     >
-      <ForwardRef(Typography)
-        variant="subtitle1"
-      >
-        UQ:11111
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={7}
-      xs={12}
+      Inherited security policy details
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      style="margin-top: 8px;"
     >
-      <ForwardRef(Typography)
-        variant="subtitle2"
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
       >
-        Test collection
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="body2"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+        >
+          UQ:11111
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
       >
-        <Memo(PolicyDescription)
-          selectedPolicyKey={2}
-        />
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="subtitle1"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+        >
+          Test collection
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
       >
-        UQ:22222
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={7}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="subtitle2"
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        >
+          Theses Assessors (2)
+        </p>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
       >
-        Another test collection
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="body2"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+        >
+          UQ:22222
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
       >
-        <Memo(PolicyDescription)
-          selectedPolicyKey={4}
-        />
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+        >
+          Another test collection
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        >
+          Staff and Students (4)
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`InheritedSecurityDetails component should render collections for datastreams correctly 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  style={
-    Object {
-      "backgroundColor": "rgba(0,0,0,0.05)",
-      "padding": 24,
-    }
-  }
-  xs={12}
->
-  <ForwardRef(Typography)
-    style={
-      Object {
-        "marginTop": -8,
-      }
-    }
-    variant="h6"
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    Inherited datastream security policy details
-  </ForwardRef(Typography)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={1}
-    style={
-      Object {
-        "marginTop": 8,
-      }
-    }
-  >
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-      xs={12}
+    <h6
+      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      style="margin-top: -8px;"
     >
-      <ForwardRef(Typography)
-        variant="subtitle1"
-      >
-        UQ:11111
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={7}
-      xs={12}
+      Inherited datastream security policy details
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      style="margin-top: 8px;"
     >
-      <ForwardRef(Typography)
-        variant="subtitle2"
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
       >
-        Test collection
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="body2"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+        >
+          UQ:11111
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
       >
-        <Memo(PolicyDescription)
-          selectedPolicyKey={2}
-        />
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="subtitle1"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+        >
+          Test collection
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
       >
-        UQ:22222
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={7}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="subtitle2"
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        >
+          Theses Assessors (2)
+        </p>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
       >
-        Another test collection
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="body2"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+        >
+          UQ:22222
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
       >
-        <Memo(PolicyDescription)
-          selectedPolicyKey={4}
-        />
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+        >
+          Another test collection
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        >
+          Staff and Students (4)
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`InheritedSecurityDetails component should render collections for datastreams correctly with empty policy description 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  style={
-    Object {
-      "backgroundColor": "rgba(0,0,0,0.05)",
-      "padding": 24,
-    }
-  }
-  xs={12}
->
-  <ForwardRef(Typography)
-    style={
-      Object {
-        "marginTop": -8,
-      }
-    }
-    variant="h6"
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    Inherited datastream security policy details
-  </ForwardRef(Typography)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={1}
-    style={
-      Object {
-        "marginTop": 8,
-      }
-    }
-  >
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-      xs={12}
+    <h6
+      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      style="margin-top: -8px;"
     >
-      <ForwardRef(Typography)
-        variant="subtitle1"
-      >
-        UQ:11111
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={7}
-      xs={12}
+      Inherited datastream security policy details
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      style="margin-top: 8px;"
     >
-      <ForwardRef(Typography)
-        variant="subtitle2"
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
       >
-        Test collection
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="body2"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+        >
+          UQ:11111
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
       >
-        <Memo(PolicyDescription) />
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="subtitle1"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+        >
+          Test collection
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
       >
-        UQ:22222
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={7}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="subtitle2"
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        >
+          
+        </p>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
       >
-        Another test collection
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="body2"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+        >
+          UQ:22222
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
       >
-        <Memo(PolicyDescription) />
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+        >
+          Another test collection
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        >
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`InheritedSecurityDetails component should render collections for record correctly with empty policy description 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  style={
-    Object {
-      "backgroundColor": "rgba(0,0,0,0.05)",
-      "padding": 24,
-    }
-  }
-  xs={12}
->
-  <ForwardRef(Typography)
-    style={
-      Object {
-        "marginTop": -8,
-      }
-    }
-    variant="h6"
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    Inherited security policy details
-  </ForwardRef(Typography)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={1}
-    style={
-      Object {
-        "marginTop": 8,
-      }
-    }
-  >
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-      xs={12}
+    <h6
+      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      style="margin-top: -8px;"
     >
-      <ForwardRef(Typography)
-        variant="subtitle1"
-      >
-        UQ:11111
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={7}
-      xs={12}
+      Inherited security policy details
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      style="margin-top: 8px;"
     >
-      <ForwardRef(Typography)
-        variant="subtitle2"
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
       >
-        Test collection
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="body2"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+        >
+          UQ:11111
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
       >
-        <Memo(PolicyDescription) />
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="subtitle1"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+        >
+          Test collection
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
       >
-        UQ:22222
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={7}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="subtitle2"
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        >
+          
+        </p>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
       >
-        Another test collection
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <ForwardRef(Typography)
-        variant="body2"
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+        >
+          UQ:22222
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
       >
-        <Memo(PolicyDescription) />
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+        >
+          Another test collection
+        </h6>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        >
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`InheritedSecurityDetails component should render properly 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  style={
-    Object {
-      "backgroundColor": "rgba(0,0,0,0.05)",
-      "padding": 24,
-    }
-  }
-  xs={12}
->
-  <ForwardRef(Typography)
-    style={
-      Object {
-        "marginTop": -8,
-      }
-    }
-    variant="h6"
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    Inherited security policy details
-  </ForwardRef(Typography)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={1}
-    style={
-      Object {
-        "marginTop": 8,
-      }
-    }
-  />
-</ForwardRef(Grid)>
+    <h6
+      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      style="margin-top: -8px;"
+    >
+      Inherited security policy details
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      style="margin-top: 8px;"
+    />
+  </div>
+</div>
 `;

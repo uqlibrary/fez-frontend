@@ -1,250 +1,300 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentIndicatorsField component should mark dropdown as disabled when all indicators have been selected 1`] = `
-<Memo(NewGenericSelectField)
-  disabled={true}
-  error={false}
-  errorText=""
-  genericSelectFieldId="rek-content-indicator"
-  itemsList={
-    Array [
-      Object {
-        "disabled": false,
-        "text": "Scholarship of Teaching and Learning",
-        "value": 454079,
-      },
-      Object {
-        "disabled": false,
-        "text": "Protocol",
-        "value": 454080,
-      },
-      Object {
-        "disabled": false,
-        "text": "Case Study",
-        "value": 454081,
-      },
-    ]
-  }
-  locale={
-    Object {
-      "label": undefined,
-    }
-  }
-  meta={
-    Object {
-      "initial": Immutable.List [
-        Object {
-          "text": "Scholarship of Teaching and Learning",
-          "value": 454079,
-        },
-        Object {
-          "text": "Protocol",
-          "value": 454080,
-        },
-        Object {
-          "text": "Case Study",
-          "value": 454081,
-        },
-      ],
-    }
-  }
-  value={Array []}
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
+      data-testid="rek-content-indicator-label"
+      id="rek-content-indicator-label"
+    />
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-disabled="true"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-content-indicator-select"
+        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-content-indicator-select"
+        id="rek-content-indicator-select"
+        role="button"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-labelledby="rek-content-indicator-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-content-indicator-input"
+        data-testid="rek-content-indicator-input"
+        disabled=""
+        id="rek-content-indicator-input"
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ContentIndicatorsField component should not mark dropdown as disabled when all indicators have been selected for admins 1`] = `
-<Memo(NewGenericSelectField)
-  canUnselect={true}
-  disabled={false}
-  error={false}
-  errorText=""
-  genericSelectFieldId="rek-content-indicator"
-  itemsList={
-    Array [
-      Object {
-        "disabled": false,
-        "text": "Scholarship of Teaching and Learning",
-        "value": 454079,
-      },
-      Object {
-        "disabled": false,
-        "text": "Protocol",
-        "value": 454080,
-      },
-      Object {
-        "disabled": false,
-        "text": "Case Study",
-        "value": 454081,
-      },
-    ]
-  }
-  locale={
-    Object {
-      "label": undefined,
-    }
-  }
-  meta={
-    Object {
-      "initial": Immutable.List [
-        Object {
-          "text": "Scholarship of Teaching and Learning",
-          "value": 454079,
-        },
-        Object {
-          "text": "Protocol",
-          "value": 454080,
-        },
-        Object {
-          "text": "Case Study",
-          "value": 454081,
-        },
-      ],
-    }
-  }
-  value={Array []}
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
+      data-testid="rek-content-indicator-label"
+      id="rek-content-indicator-label"
+    />
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-content-indicator-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-content-indicator-select"
+        id="rek-content-indicator-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-labelledby="rek-content-indicator-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-content-indicator-input"
+        data-testid="rek-content-indicator-input"
+        id="rek-content-indicator-input"
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ContentIndicatorsField component should render default view 1`] = `
-<Memo(NewGenericSelectField)
-  disabled={false}
-  error={false}
-  errorText=""
-  genericSelectFieldId="rek-content-indicator"
-  itemsList={
-    Array [
-      Object {
-        "disabled": false,
-        "text": "Scholarship of Teaching and Learning",
-        "value": 454079,
-      },
-      Object {
-        "disabled": false,
-        "text": "Protocol",
-        "value": 454080,
-      },
-      Object {
-        "disabled": false,
-        "text": "Case Study",
-        "value": 454081,
-      },
-    ]
-  }
-  locale={
-    Object {
-      "label": undefined,
-    }
-  }
-  value={Array []}
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
+      data-testid="rek-content-indicator-label"
+      id="rek-content-indicator-label"
+    />
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-content-indicator-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-content-indicator-select"
+        id="rek-content-indicator-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-labelledby="rek-content-indicator-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-content-indicator-input"
+        data-testid="rek-content-indicator-input"
+        id="rek-content-indicator-input"
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ContentIndicatorsField component should render with given field props 1`] = `
-<Memo(NewGenericSelectField)
-  disabled={false}
-  error={true}
-  errorText="Test error"
-  genericSelectFieldId="rek-content-indicator"
-  input={
-    Object {
-      "onChange": [MockFunction],
-      "value": Array [
-        454079,
-        454080,
-      ],
-    }
-  }
-  itemsList={
-    Array [
-      Object {
-        "disabled": false,
-        "text": "Scholarship of Teaching and Learning",
-        "value": 454079,
-      },
-      Object {
-        "disabled": false,
-        "text": "Protocol",
-        "value": 454080,
-      },
-      Object {
-        "disabled": false,
-        "text": "Case Study",
-        "value": 454081,
-      },
-    ]
-  }
-  label="Test label"
-  locale={
-    Object {
-      "label": "Test label",
-    }
-  }
-  meta={
-    Object {
-      "error": "Test error",
-    }
-  }
-  onChange={[MockFunction]}
-  placeholder="Test placeholder"
-  value={
-    Array [
-      454079,
-      454080,
-    ]
-  }
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="rek-content-indicator-label"
+      id="rek-content-indicator-label"
+    >
+      Test label
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-content-indicator-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-content-indicator-select"
+        id="rek-content-indicator-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-labelledby="rek-content-indicator-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-content-indicator-input"
+        data-testid="rek-content-indicator-input"
+        id="rek-content-indicator-input"
+        tabindex="-1"
+        value="454079,454080"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+    <p
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1d7hrfi-MuiFormHelperText-root"
+      data-testid="rek-content-indicator-helper-text"
+      id="rek-content-indicator-helper-text"
+    >
+      Test error
+    </p>
+  </div>
+</div>
 `;
 
-exports[`ContentIndicatorsField component should render with given field props 2`] = `
-<Memo(NewGenericSelectField)
-  disabled={false}
-  error={true}
-  errorText="Test error"
-  genericSelectFieldId="rek-content-indicator"
-  input={
-    Object {
-      "value": Immutable.List [
-        454079,
-        454080,
-      ],
-    }
-  }
-  itemsList={
-    Array [
-      Object {
-        "disabled": false,
-        "text": "Scholarship of Teaching and Learning",
-        "value": 454079,
-      },
-      Object {
-        "disabled": false,
-        "text": "Protocol",
-        "value": 454080,
-      },
-      Object {
-        "disabled": false,
-        "text": "Case Study",
-        "value": 454081,
-      },
-    ]
-  }
-  label="Test label"
-  locale={
-    Object {
-      "label": "Test label",
-    }
-  }
-  meta={
-    Object {
-      "error": "Test error",
-    }
-  }
-  placeholder="Test placeholder"
-  value={
-    Array [
-      454079,
-      454080,
-    ]
-  }
-/>
+exports[`ContentIndicatorsField component should render with given field props in immutable list 1`] = `
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="rek-content-indicator-label"
+      id="rek-content-indicator-label"
+    >
+      Test label
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-content-indicator-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-content-indicator-select"
+        id="rek-content-indicator-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-labelledby="rek-content-indicator-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-content-indicator-input"
+        data-testid="rek-content-indicator-input"
+        id="rek-content-indicator-input"
+        tabindex="-1"
+        value="454079,454080"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+    <p
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1d7hrfi-MuiFormHelperText-root"
+      data-testid="rek-content-indicator-helper-text"
+      id="rek-content-indicator-helper-text"
+    >
+      Test error
+    </p>
+  </div>
+</div>
 `;

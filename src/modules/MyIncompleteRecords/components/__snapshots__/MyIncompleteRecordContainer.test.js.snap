@@ -1124,6 +1124,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         <li
                           aria-label="Select this author (Topology) to update their affiliation data."
                           class="MuiListItem-root makeStyles-listItem-150 makeStyles-highlighted-152 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          data-testid="rek-author-list-row-0"
                           id="rek-author-list-row-0"
                           tabindex="0"
                         >
@@ -1257,6 +1258,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         <li
                           aria-label="Select this author (Davidson, Robert) to update their affiliation data."
                           class="MuiListItem-root makeStyles-listItem-150 makeStyles-disabledListItem-151 makeStyles-contributorLinked-159 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          data-testid="rek-author-list-row-1"
                           id="rek-author-list-row-1"
                           tabindex="-1"
                         >
@@ -1412,6 +1414,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         <li
                           aria-label="Select this author (Babbage, John) to update their affiliation data."
                           class="MuiListItem-root makeStyles-listItem-150 makeStyles-highlighted-152 makeStyles-contributorLinked-159 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          data-testid="rek-author-list-row-2"
                           id="rek-author-list-row-2"
                           tabindex="0"
                         >
@@ -1569,6 +1572,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         <li
                           aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
                           class="MuiListItem-root makeStyles-listItem-150 makeStyles-highlighted-152 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          data-testid="rek-author-list-row-3"
                           id="rek-author-list-row-3"
                           tabindex="0"
                         >
@@ -2948,6 +2952,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <li
                           aria-label="Select this author (Topology) to update their affiliation data."
                           class="MuiListItem-root makeStyles-listItem-70 makeStyles-highlighted-72 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          data-testid="rek-author-list-row-0"
                           id="rek-author-list-row-0"
                           tabindex="0"
                         >
@@ -3081,6 +3086,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <li
                           aria-label="Select this author (Davidson, Robert) to update their affiliation data."
                           class="MuiListItem-root makeStyles-listItem-70 makeStyles-disabledListItem-71 makeStyles-contributorLinked-79 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          data-testid="rek-author-list-row-1"
                           id="rek-author-list-row-1"
                           tabindex="-1"
                         >
@@ -3236,6 +3242,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <li
                           aria-label="Select this author (Babbage, John) to update their affiliation data."
                           class="MuiListItem-root makeStyles-listItem-70 makeStyles-highlighted-72 makeStyles-contributorLinked-79 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          data-testid="rek-author-list-row-2"
                           id="rek-author-list-row-2"
                           tabindex="0"
                         >
@@ -3393,6 +3400,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <li
                           aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
                           class="MuiListItem-root makeStyles-listItem-70 makeStyles-highlighted-72 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+                          data-testid="rek-author-list-row-3"
                           id="rek-author-list-row-3"
                           tabindex="0"
                         >

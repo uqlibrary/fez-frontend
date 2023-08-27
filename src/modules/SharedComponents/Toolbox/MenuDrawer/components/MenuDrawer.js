@@ -136,6 +136,7 @@ export class MenuDrawer extends Component {
     };
 
     navigateToLink = (url, target = '_blank') => {
+        /* istanbul ignore else*/
         if (!!url) {
             if (url.indexOf('http') === -1) {
                 // internal link
@@ -146,6 +147,7 @@ export class MenuDrawer extends Component {
             }
         }
 
+        /* istanbul ignore else*/
         if (!this.props.docked) {
             this.props.onToggleDrawer();
         }
@@ -260,7 +262,7 @@ export class MenuDrawer extends Component {
                             )}
                             {this.renderMenuItems(menuItems)}
                         </List>
-                        <div id="afterMenuDrawer" tabIndex={-1} />
+                        <div id="afterMenuDrawer" data-testid="after-menu-drawer" tabIndex={-1} />
                         <div className={classes.mainMenuFooter}>
                             {txt.cricos.prefix}
                             <ExternalLink

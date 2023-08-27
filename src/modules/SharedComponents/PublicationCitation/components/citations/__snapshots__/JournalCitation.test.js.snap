@@ -1,73 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`JournalCitation renders with a mock espace record 1`] = `
-<div
-  className="citationContent citationJournal"
->
-  <CitationTitleView
-    className="citationJournalName"
-    prefix=""
-    suffix=" "
-    value="Management international review"
-  />
-  <DateCitationView
-    className="citationDate"
-    date="2005-01-01T00:00:00Z"
-    forceSpecifiedFormat={false}
-    format="YYYY"
-    isLocalised={false}
-    prefix="("
-    suffix=")."
-  />
-  <CitationView
-    className="citationVolumeNumber"
-    prefix=" "
-    suffix=" "
-    value="45"
-  />
-  <CitationView
-    className="citationIssueNumber"
-    prefix="("
-    suffix=")."
-    value="1, Special issue"
-  />
-  <DoiCitationView
-    doi="10.14264/186337"
-  />
+<div>
+  <div
+    class="citationContent citationJournal"
+  >
+    <span
+      class="citationJournalName"
+    >
+      
+      Management international review
+       
+    </span>
+    <span
+      class="citationDate"
+    >
+      (
+      2005
+      ).
+    </span>
+    <span
+      class="citationVolumeNumber"
+    >
+       
+      45
+       
+    </span>
+    <span
+      class="citationIssueNumber"
+    >
+      (
+      1, Special issue
+      ).
+    </span>
+    <span
+      data-testid="rek-doi"
+    >
+      <a
+        aria-label="Open this DOI in an new window"
+        class="citationDoiLink makeStyles-externalLink-1 makeStyles-externalLink-3"
+        data-analyticsid="citation-doi-link"
+        data-testid="citation-doi-link"
+        href="https://doi.org/10.14264/186337"
+        id="citation-doi-link"
+        rel="noopener noreferrer"
+        tabindex="0"
+        target="_blank"
+        title="Open this DOI in an new window"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-2 css-i4bv87-MuiSvgIcon-root"
+          data-testid="OpenInNewIcon"
+          focusable="false"
+          id="citation-doi-link-new-window-icon"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+          />
+        </svg>
+        https://doi.org/10.14264/186337
+      </a>
+    </span>
+  </div>
 </div>
 `;
 
 exports[`JournalCitation renders with empty publication 1`] = `
-<div
-  className="citationContent citationJournal"
->
-  <CitationTitleView
-    className="citationJournalName"
-    prefix=""
-    suffix=" "
-  />
-  <DateCitationView
-    className="citationDate"
-    forceSpecifiedFormat={false}
-    format="YYYY"
-    isLocalised={false}
-    prefix="("
-    suffix=")."
-  />
-  <CitationView
-    className="citationVolumeNumber"
-    prefix=" "
-    suffix=" "
-    value={null}
-  />
-  <CitationView
-    className="citationIssueNumber"
-    prefix="("
-    suffix=")."
-    value={null}
-  />
-  <DoiCitationView
-    doi={null}
-  />
+<div>
+  <div
+    class="citationContent citationJournal"
+  >
+    <span
+      class="citationJournalName empty"
+    />
+    <span
+      class="citationDate empty"
+    />
+    <span
+      class="citationVolumeNumber empty"
+    />
+    <span
+      class="citationIssueNumber empty"
+    />
+    <span
+      class="citationDOI empty"
+    />
+  </div>
 </div>
 `;

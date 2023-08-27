@@ -1,22 +1,28 @@
+import React from 'react';
 import JournalArticleCitation from './JournalArticleCitation';
 import { journalArticle } from 'mock/data/testing/records';
+import { render, WithRouter } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(JournalArticleCitation, props, args);
+    return render(
+        <WithRouter>
+            <JournalArticleCitation {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('JournalArticleCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: journalArticle });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: journalArticle });
+        expect(container).toMatchSnapshot();
     });
 });

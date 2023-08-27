@@ -1,16 +1,18 @@
+import React from 'react';
+import { rtlRender } from 'test-utils';
 import { FreeTextListEditor } from './FreeTextListEditor';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         listEditorId: 'free-text-list-editor',
         ...testProps,
     };
-    return getElement(FreeTextListEditor, props, args);
+    return rtlRender(<FreeTextListEditor {...props} />);
 }
 
 describe('FreeTextListEditor component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 });

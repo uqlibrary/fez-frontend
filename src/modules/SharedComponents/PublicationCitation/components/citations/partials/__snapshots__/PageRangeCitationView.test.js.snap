@@ -1,130 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageRangeCitationView test  should render endPage only 1`] = `
-<span
-  className="citationPageRange"
->
-  <PageCitationView
-    className="citationEndPage"
-    publication={
-      Object {
-        "fez_record_search_key_end_page": Object {
-          "rek_end_page": 11,
-        },
-      }
-    }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_end_page",
-        "subkey": "rek_end_page",
-      }
-    }
-  />
-  .
-</span>
+<div>
+  <span
+    class="citationPageRange"
+  >
+    
+    <span
+      class="citationEndPage"
+    >
+      11
+    </span>
+    .
+  </span>
+</div>
 `;
 
 exports[`PageRangeCitationView test  should render nothing if search key not found 1`] = `
-<span
-  className="citationPageRange empty"
->
-   
-   
-</span>
+<div>
+  <span
+    class="citationPageRange empty"
+  >
+     
+     
+  </span>
+</div>
 `;
 
 exports[`PageRangeCitationView test  should render startPage only 1`] = `
-<span
-  className="citationPageRange"
->
-  <PageCitationView
-    className="citationStartPage"
-    publication={
-      Object {
-        "fez_record_search_key_start_page": Object {
-          "rek_start_page": 11,
-        },
-      }
-    }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_start_page",
-        "subkey": "rek_start_page",
-      }
-    }
-  />
-  .
-</span>
+<div>
+  <span
+    class="citationPageRange"
+  >
+    
+    <span
+      class="citationStartPage"
+    >
+      11
+    </span>
+    .
+  </span>
+</div>
 `;
 
 exports[`PageRangeCitationView test  should render startPage only if end page is empty 1`] = `
-<span
-  className="citationPageRange"
->
-  <PageCitationView
-    className="citationStartPage"
-    publication={
-      Object {
-        "fez_record_search_key_end_page": Object {},
-        "fez_record_search_key_start_page": Object {
-          "rek_start_page": 13,
-        },
-      }
-    }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_start_page",
-        "subkey": "rek_start_page",
-      }
-    }
-  />
-  .
-</span>
+<div>
+  <span
+    class="citationPageRange"
+  >
+    
+    <span
+      class="citationStartPage"
+    >
+      13
+    </span>
+    .
+  </span>
+</div>
 `;
 
 exports[`PageRangeCitationView test  should render startPage to endPage 1`] = `
-<span
-  className="citationPageRange"
->
-  <PageCitationView
-    className="citationStartPage"
-    publication={
-      Object {
-        "fez_record_search_key_end_page": Object {
-          "rek_end_page": 17,
-        },
-        "fez_record_search_key_start_page": Object {
-          "rek_start_page": 13,
-        },
-      }
-    }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_start_page",
-        "subkey": "rek_start_page",
-      }
-    }
-  />
-  -
-  <PageCitationView
-    className="citationEndPage"
-    publication={
-      Object {
-        "fez_record_search_key_end_page": Object {
-          "rek_end_page": 17,
-        },
-        "fez_record_search_key_start_page": Object {
-          "rek_start_page": 13,
-        },
-      }
-    }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_end_page",
-        "subkey": "rek_end_page",
-      }
-    }
-  />
-  .
-</span>
+<div>
+  <span
+    class="citationPageRange"
+  >
+    
+    <span
+      class="citationStartPage"
+    >
+      13
+    </span>
+    -
+    <span
+      class="citationEndPage"
+    >
+      17
+    </span>
+    .
+  </span>
+</div>
 `;

@@ -1,4 +1,6 @@
+import React from 'react';
 import EditorsCitationView from './EditorsCitationView';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -6,13 +8,13 @@ function setup(testProps = {}) {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(EditorsCitationView, props);
+    return rtlRender(<EditorsCitationView {...props} />);
 }
 
 describe('EditorsCitationView test ', () => {
     it('should render component with no contributors', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with one contributor', () => {
@@ -26,8 +28,8 @@ describe('EditorsCitationView test ', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with two contributors', () => {
@@ -47,8 +49,8 @@ describe('EditorsCitationView test ', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with three contributors', () => {
@@ -74,7 +76,7 @@ describe('EditorsCitationView test ', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: testObject });
+        expect(container).toMatchSnapshot();
     });
 });

@@ -68,7 +68,7 @@ global.renderComponent = (component, props, args = {}) => {
                 context,
             });
         } else {
-            return render.render(React.createElement(component, props), { context });
+            render.render(React.createElement(component, props), { context });
         }
         return render;
     }

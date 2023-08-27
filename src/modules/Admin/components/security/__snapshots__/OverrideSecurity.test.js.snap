@@ -1,20 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OverrideSecurity component should render properly 1`] = `
-<ForwardRef(FormControlLabel)
-  control={
-    <ForwardRef(Checkbox)
-      checked={false}
-      inputProps={
-        Object {
-          "data-analyticsid": "test-input",
-          "data-testid": "test-input",
-          "id": "test-input",
-        }
-      }
-      onChange={[MockFunction]}
-    />
-  }
-  label="test"
-/>
+<div>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-1m9pwf3"
+        data-analyticsid="test-input"
+        data-indeterminate="false"
+        data-testid="test-input"
+        id="test-input"
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        data-testid="CheckBoxOutlineBlankIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+        />
+      </svg>
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+    >
+      test
+    </span>
+  </label>
+</div>
 `;

@@ -1,5 +1,7 @@
+import React from 'react';
 import { latestPubsPayload } from 'mock/data/testing/latestPublications';
 import { MyLatestPublications, styles } from './MyLatestPublications';
+import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -10,21 +12,27 @@ function setup(testProps = {}) {
         classes: { blueButton: 'blueButton' },
         ...testProps,
     };
-    return getElement(MyLatestPublications, props);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <MyLatestPublications {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('Component MyLatestPublications', () => {
     it('should render latest publications', () => {
-        const wrapper = setup({
+        const { container } = setup({
             latestPublicationsList: latestPubsPayload.data,
             totalPublicationsCount: latestPubsPayload.total,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render loading indicator', () => {
-        const wrapper = setup({ loadingLatestPublications: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const container = setup({ loadingLatestPublications: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should fetch data if account author details is loaded', () => {
@@ -41,8 +49,9 @@ describe('Component MyLatestPublications', () => {
 
     it('_viewMyResearch method', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ history: { push: testFn } });
-        wrapper.instance()._viewMyResearch();
+        const { getByRole } = setup({ history: { push: testFn } });
+        fireEvent.click(getByRole('button', { name: /View all/i }));
+        // wrapper.instance()._viewMyResearch();
         expect(testFn).toHaveBeenCalledWith('/records/mine');
     });
 

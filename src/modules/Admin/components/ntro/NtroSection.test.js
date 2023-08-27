@@ -8,7 +8,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(NtroSection, props, args);
+    return renderComponent(NtroSection, props, args);
 }
 
 describe('NtroSection component', () => {
@@ -31,8 +31,8 @@ describe('NtroSection component', () => {
             },
         }));
 
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -54,8 +54,8 @@ describe('NtroSection component', () => {
             },
         }));
 
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render design form fields', () => {
@@ -77,8 +77,8 @@ describe('NtroSection component', () => {
             },
         }));
 
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should not render ismn field for Book - Creative Work - Musical Composition', () => {
@@ -100,7 +100,7 @@ describe('NtroSection component', () => {
             },
         }));
 
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

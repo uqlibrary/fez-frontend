@@ -29,11 +29,17 @@ export default class ExportPublications extends PureComponent {
                 <Select
                     variant="standard"
                     id="exportPublicationsFormat"
+                    data-testid="export-publications-format"
                     onChange={this.formatChanged}
                     disabled={this.props.disabled}
                     value={-1}
                     displayEmpty
-                    data-testid="export-publications-format"
+                    SelectDisplayProps={{
+                        'data-testid': 'export-publications-format-select',
+                    }}
+                    inputProps={{
+                        'data-testid': 'export-publications-format-input',
+                    }}
                 >
                     <MenuItem key={-1} value={-1} disabled>
                         Please select

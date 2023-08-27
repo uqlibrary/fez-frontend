@@ -26,7 +26,9 @@ const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     return {
         disabled: ownProps.disabled,
-        isSuperAdmin: Boolean(((state.get('accountReducer') || {}).authorDetails || {}).is_super_administrator),
+        isSuperAdmin: Boolean(
+            ((state.get('accountReducer') || /* istanbul ignore next */ {}).authorDetails || {}).is_super_administrator,
+        ),
         formValues: formValues.get('securitySection') || Immutable.Map({}),
     };
 };

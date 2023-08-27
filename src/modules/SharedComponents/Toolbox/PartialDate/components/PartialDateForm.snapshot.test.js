@@ -1,8 +1,10 @@
+import React from 'react';
 import PartialDateForm from './PartialDateForm';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps, args = { isShallow: false }) {
+function setup(testProps) {
     const props = { partialDateFormId: 'test', ...testProps };
-    return getElement(PartialDateForm, props, args);
+    return rtlRender(<PartialDateForm {...props} />);
 }
 
 describe('PartialDateForm snapshots tests', () => {
@@ -13,8 +15,8 @@ describe('PartialDateForm snapshots tests', () => {
             onChange: () => {},
         };
 
-        const wrapper = setup(props);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
     });
 
     it('renders PartialDateForm component 2', () => {
@@ -25,9 +27,8 @@ describe('PartialDateForm snapshots tests', () => {
             onChange: () => {},
         };
 
-        const wrapper = setup(props);
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
     });
 
     it('renders PartialDateForm component 3', () => {
@@ -38,8 +39,8 @@ describe('PartialDateForm snapshots tests', () => {
             onChange: () => {},
         };
 
-        const wrapper = setup(props);
+        const { container } = setup(props);
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

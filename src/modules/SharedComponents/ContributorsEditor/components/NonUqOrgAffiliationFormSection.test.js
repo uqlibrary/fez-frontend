@@ -1,4 +1,6 @@
+import React from 'react';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -19,32 +21,32 @@ function setup(testProps = {}) {
         },
         ...testProps,
     };
-    return getElement(NonUqOrgAffiliationFormSection, props);
+    return rtlRender(<NonUqOrgAffiliationFormSection {...props} />);
 }
 
 describe('NonUqOrgAffiliationFormSection tests ', () => {
     it('should render component with defaults', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with organisation affiliation value', () => {
-        const wrapper = setup({ orgAffiliation: 'Test' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ orgAffiliation: 'Test' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with organisation affiliation type value', () => {
-        const wrapper = setup({ orgType: '453987' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ orgType: '453987' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with both values', () => {
-        const wrapper = setup({ orgAffiliation: 'Test', orgType: '453987' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ orgAffiliation: 'Test', orgType: '453987' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render full width input fields', () => {
-        const wrapper = setup({ orgAffiliation: 'Test', orgType: '453987', fullWidthFields: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ orgAffiliation: 'Test', orgType: '453987', fullWidthFields: true });
+        expect(container).toMatchSnapshot();
     });
 });

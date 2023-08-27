@@ -1,38 +1,40 @@
+import React from 'react';
 import CitationTitleView from './CitationTitleView';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = { ...testProps };
-    return getElement(CitationTitleView, props);
+    return rtlRender(<CitationTitleView {...props} />);
 }
 
 describe('CitationTitleView partial', () => {
     it('should render default view', () => {
-        const wrapper = setup({
+        const { container } = setup({
             prefix: 'prefix',
             suffix: 'suffix',
             className: 'className',
             value: 'value',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render properly with empty props', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render properly with value prop only', () => {
-        const wrapper = setup({
+        const { container } = setup({
             value: 'value',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render properly with a suffix that equal to the last character of the value', () => {
-        const wrapper = setup({
+        const { container } = setup({
             value: 'values',
             suffix: 's',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

@@ -13,7 +13,7 @@ const setup = (testProps = {}, args = { isShallow: true }) => {
         group: [1],
     };
 
-    return getElement(FieldGridItem, props, args);
+    return renderComponent(FieldGridItem, props, args);
 };
 
 describe('FieldGridItem', () => {
@@ -39,17 +39,17 @@ describe('FieldGridItem', () => {
     });
 
     it('should render default view', () => {
-        const wrapper = setup({
+        const render = setup({
             field: 'rek_title',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render default view for a composed field', () => {
-        const wrapper = setup({
+        const render = setup({
             field: 'sensitiveHandlingNote',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render with correct props', () => {
@@ -61,10 +61,10 @@ describe('FieldGridItem', () => {
             },
         }));
 
-        const wrapper = setup({
+        const render = setup({
             field: 'editors',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should handle missing field config', () => {
@@ -88,9 +88,9 @@ describe('FieldGridItem without record', () => {
     });
 
     it('should render default view', () => {
-        const wrapper = setup({
+        const render = setup({
             field: 'rek_title',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

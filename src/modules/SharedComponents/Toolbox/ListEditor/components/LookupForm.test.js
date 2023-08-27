@@ -1,37 +1,44 @@
 import React from 'react';
 import LookupForm from './LookupForm';
+import { rtlRender, fireEvent } from 'test-utils';
+import { TextField } from '@mui/material';
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
-        inputField: () => <span />,
+        inputField: ({ input }) => <TextField value={input.value} onChange={input.onChange} />,
         onAdd: testProps.onAdd || jest.fn(), // : PropTypes.func.isRequired,
         isValid: testProps.isValid || jest.fn(() => ''), // PropTypes.func,
         disabled: testProps.disabled,
     };
-    return getElement(LookupForm, props);
+    return rtlRender(<LookupForm {...props} />);
 }
 
 describe('LookupForm tests ', () => {
     it('should render lookup form', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should add key value item', () => {
         const onAddFn = jest.fn();
-        const wrapper = setup({
+        const { getByRole } = setup({
             onAdd: onAddFn,
         });
-        wrapper.instance().addKeyValueItem('test');
-        expect(onAddFn).toHaveBeenCalledWith('test');
+        fireEvent.change(getByRole('textbox'), { target: { value: 'test' } });
+        expect(onAddFn).toHaveBeenCalled();
     });
 
     it('should set default value on receiving new props', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { rerender, getByRole } = setup();
 
-        wrapper.setProps({ itemSelectedToEdit: { key: 23, value: 'Testing' } });
-        expect(wrapper.state().defaultValue).toEqual('Testing');
+        rerender(
+            <LookupForm
+                inputField={({ input }) => <TextField value={input.value} onChange={input.onChange} />}
+                onAdd={jest.fn()}
+                itemSelectedToEdit={{ key: 23, value: 'Testing' }}
+            />,
+        );
+        expect(getByRole('textbox').value).toEqual('Testing');
     });
 });

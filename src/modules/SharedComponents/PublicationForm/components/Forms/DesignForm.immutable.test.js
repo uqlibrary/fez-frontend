@@ -1,5 +1,24 @@
+import React from 'react';
 import Immutable from 'immutable';
 import DesignForm from './DesignForm';
+import { render, WithReduxStore } from 'test-utils';
+
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+            />
+        );
+    },
+}));
 
 function setup(testProps = {}) {
     const props = {
@@ -43,7 +62,11 @@ function setup(testProps = {}) {
         },
         ...testProps,
     };
-    return getElement(DesignForm, props);
+    return render(
+        <WithReduxStore>
+            <DesignForm {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('DesignForm validation ', () => {
@@ -56,7 +79,7 @@ describe('DesignForm validation ', () => {
                 },
             },
         };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(testProps);
+        expect(container).toMatchSnapshot();
     });
 });

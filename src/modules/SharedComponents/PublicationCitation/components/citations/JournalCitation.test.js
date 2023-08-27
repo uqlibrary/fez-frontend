@@ -1,22 +1,28 @@
+import React from 'react';
 import JournalCitation from './JournalCitation';
 import { journal } from 'mock/data/testing/records';
+import { render, WithRouter } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(JournalCitation, props, args);
+    return render(
+        <WithRouter>
+            <JournalCitation {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('JournalCitation', () => {
     it('renders with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper.find('[className="citationContent citationJournal"]'))).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('renders with a mock espace record', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publication: {
                 ...journal,
                 fez_record_search_key_doi: {
@@ -24,6 +30,6 @@ describe('JournalCitation', () => {
                 },
             },
         });
-        expect(toJson(wrapper.find('[className="citationContent citationJournal"]'))).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

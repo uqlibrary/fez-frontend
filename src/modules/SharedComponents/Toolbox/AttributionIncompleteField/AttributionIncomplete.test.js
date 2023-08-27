@@ -1,4 +1,6 @@
+import React from 'react';
 import { AttributionIncomplete, styles } from './AttributionIncomplete';
+import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps) {
     const props = {
@@ -16,25 +18,29 @@ function setup(testProps) {
         ...testProps,
     };
 
-    return getElement(AttributionIncomplete, props);
+    return rtlRender(<AttributionIncomplete {...props} />);
 }
 
 describe('Component AttributionIncomplete', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should render checked if record is checked', () => {
-        const wrapper = setup({ isAttributionIncomplete: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isAttributionIncomplete: true });
+        expect(container).toMatchSnapshot();
     });
-    it('should call onChange to handle change', () => {
+    it('should call onChange to handle change with true', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onChange: testFn });
-        wrapper.instance()._handleChange({ target: { checked: true } });
+        const { getByRole } = setup({ onChange: testFn });
+        fireEvent.click(getByRole('checkbox', { name: 'Test statement' }));
         expect(testFn).toHaveBeenCalledWith(true);
-        wrapper.instance()._handleChange({ target: { checked: false } });
+    });
+    it('should call onChange to handle change with false', () => {
+        const testFn = jest.fn();
+        const { getByRole } = setup({ isAttributionIncomplete: true, onChange: testFn });
+        fireEvent.click(getByRole('checkbox', { name: 'Test statement' }));
         expect(testFn).toHaveBeenCalledWith(false);
     });
     it('should have a proper style generator', () => {

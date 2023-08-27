@@ -1,6 +1,8 @@
+import React from 'react';
 import CitationCountView from './CitationCountView';
+import { render, WithRouter } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         ...testProps,
@@ -9,12 +11,16 @@ function setup(testProps = {}, args = { isShallow: false }) {
         link: testProps.link,
         title: testProps.title,
     };
-    return getElement(CitationCountView, props, args);
+    return render(
+        <WithRouter>
+            <CitationCountView {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('CitationCountView test ', () => {
     it('should render component with given count', () => {
-        const wrapper = setup({ source: 'wos', count: 4, link: 'www.google.com', title: 'Google' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ source: 'wos', count: 4, link: 'www.google.com', title: 'Google' });
+        expect(container).toMatchSnapshot();
     });
 });

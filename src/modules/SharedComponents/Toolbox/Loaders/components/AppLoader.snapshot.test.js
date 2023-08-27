@@ -1,5 +1,7 @@
+import React from 'react';
 import { AppLoader } from './AppLoader';
 import AppLoaderWithStyles from './AppLoader';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -23,7 +25,7 @@ function setup(testProps = {}) {
             },
         },
     };
-    return getElement(AppLoader, props);
+    return rtlRender(<AppLoader {...props} />);
 }
 
 describe('Component AppLoader', () => {
@@ -34,12 +36,12 @@ describe('Component AppLoader', () => {
             logoImage: 'http://image/image.svg',
             logoText: 'Fez logo',
         };
-        const wrapper = setup({ ...props });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ ...props });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with styles', () => {
-        const wrapper = getElement(AppLoaderWithStyles, { title: 'Test loader' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = rtlRender(<AppLoaderWithStyles title={'Test loader'} />);
+        expect(container).toMatchSnapshot();
     });
 });

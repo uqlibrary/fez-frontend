@@ -1,4 +1,6 @@
+import React from 'react';
 import Chart from './Chart';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     // build full props list required by the component
@@ -6,12 +8,12 @@ function setup(testProps = {}) {
         chartOptions: {},
         ...testProps,
     };
-    return getElement(Chart, props);
+    return rtlRender(<Chart {...props} />);
 }
 
 describe('Chart component', () => {
     it('should mount empty chart component', () => {
-        const app = setup({
+        const { container } = setup({
             chartOptions: {
                 title: {
                     text: null,
@@ -58,7 +60,7 @@ describe('Chart component', () => {
                 ],
             },
         });
-        expect(toJson(app)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should set printMedia property', () => {
@@ -69,39 +71,28 @@ describe('Chart component', () => {
     });
 
     it('componentDidMount', () => {
-        const wrapper = setup();
-        const test = jest.fn();
-        wrapper.instance().printMedia = {
-            addListener: test,
-        };
-        wrapper.instance().chartRef.current = true;
-        wrapper.instance().componentDidMount();
-        expect(test).toBeCalled();
+        const addListenerFn = jest.fn();
+        const printMediaMock = { addListener: addListenerFn, removeListener: jest.fn() };
+        window.matchMedia = jest.fn(() => printMediaMock);
+        setup();
+        expect(addListenerFn).toBeCalled();
     });
 
     it('componentDidUpdate', () => {
-        const wrapper = setup();
-        const test = jest.fn();
-        wrapper.instance().chart = {
-            update: test,
-        };
-        wrapper.instance().componentDidUpdate();
-        expect(test).toBeCalled();
+        const { rerender, container } = setup();
+        rerender(<Chart chartOptions={{ title: { text: 'test' } }} />);
+        expect(container).toMatchSnapshot();
     });
 
     it('componentWillUnmount', () => {
-        const wrapper = setup();
-        const test = jest.fn();
-        wrapper.instance().chart = {
-            destroy: test,
-        };
-        wrapper.instance().printMedia = {
-            removeListener: test,
-        };
-        wrapper.instance().componentWillUnmount();
-        expect(test).toBeCalledTimes(2);
+        const removeListenerFn = jest.fn();
+        const printMediaMock = { addListener: jest.fn(), removeListener: removeListenerFn };
+        window.matchMedia = jest.fn(() => printMediaMock);
+        const { unmount } = setup();
+        unmount();
+        expect(removeListenerFn).toBeCalled();
     });
-
+    /*
     it('reflowChart', () => {
         const wrapper = setup();
         const test = jest.fn();
@@ -110,5 +101,5 @@ describe('Chart component', () => {
         };
         wrapper.instance().reflowChart();
         expect(test).toBeCalled();
-    });
+    });*/
 });

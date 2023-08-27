@@ -1,598 +1,257 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DepartmentTechnicalReportForm renders  component 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={3}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
   >
-    <StandardCard
-      title="Department technical report information"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        spacing={2}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="standard-card-department-technical-report-information"
+        id="standard-card-department-technical-report-information"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
         >
-          <Field
-            autoFocus={true}
-            component={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "propTypes": Object {
-                  "FormHelperTextProps": [Function],
-                  "InputLabelProps": [Function],
-                  "InputProps": [Function],
-                  "SelectProps": [Function],
-                  "autoComplete": [Function],
-                  "autoFocus": [Function],
-                  "children": [Function],
-                  "className": [Function],
-                  "classes": [Function],
-                  "color": [Function],
-                  "defaultValue": [Function],
-                  "disabled": [Function],
-                  "error": [Function],
-                  "fullWidth": [Function],
-                  "help": [Function],
-                  "helperText": [Function],
-                  "id": [Function],
-                  "inputProps": [Function],
-                  "inputRef": [Function],
-                  "label": [Function],
-                  "margin": [Function],
-                  "maxRows": [Function],
-                  "minRows": [Function],
-                  "multiline": [Function],
-                  "name": [Function],
-                  "onBlur": [Function],
-                  "onChange": [Function],
-                  "onFocus": [Function],
-                  "placeholder": [Function],
-                  "required": [Function],
-                  "rows": [Function],
-                  "select": [Function],
-                  "size": [Function],
-                  "sx": [Function],
-                  "textFieldId": [Function],
-                  "type": [Function],
-                  "value": [Function],
-                  "variant": [Function],
-                },
-                "render": [Function],
-              }
-            }
-            disabled={false}
-            fullWidth={true}
-            label="Title"
-            multiline={true}
-            name="rek_title"
-            placeholder="Title of report"
-            required={true}
-            rows={3}
-            textFieldId="rek-title"
-            type="text"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": Object {
-                  "$$typeof": Symbol(react.memo),
-                  "compare": null,
-                  "type": [Function],
-                },
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            disabled={false}
-            floatingLabelText="School, Institute or Centre"
-            hintText=""
-            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": Object {
-                  "$$typeof": Symbol(react.memo),
-                  "compare": null,
-                  "type": [Function],
-                },
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            disabled={false}
-            floatingLabelText="Institution name"
-            hintText=""
-            name="fez_record_search_key_org_name.rek_org_name"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": Object {
-                  "$$typeof": Symbol(react.memo),
-                  "compare": null,
-                  "type": [Function],
-                },
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            disabled={false}
-            floatingLabelText="Series"
-            name="fez_record_search_key_series.rek_series"
-            placeholder=""
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": Object {
-                  "$$typeof": Symbol(react.memo),
-                  "compare": null,
-                  "type": [Function],
-                },
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            disabled={false}
-            floatingLabelText="Report number"
-            hintText=""
-            name="fez_record_search_key_report_number.rek_report_number"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "propTypes": Object {
-                  "FormHelperTextProps": [Function],
-                  "InputLabelProps": [Function],
-                  "InputProps": [Function],
-                  "SelectProps": [Function],
-                  "autoComplete": [Function],
-                  "autoFocus": [Function],
-                  "children": [Function],
-                  "className": [Function],
-                  "classes": [Function],
-                  "color": [Function],
-                  "defaultValue": [Function],
-                  "disabled": [Function],
-                  "error": [Function],
-                  "fullWidth": [Function],
-                  "help": [Function],
-                  "helperText": [Function],
-                  "id": [Function],
-                  "inputProps": [Function],
-                  "inputRef": [Function],
-                  "label": [Function],
-                  "margin": [Function],
-                  "maxRows": [Function],
-                  "minRows": [Function],
-                  "multiline": [Function],
-                  "name": [Function],
-                  "onBlur": [Function],
-                  "onChange": [Function],
-                  "onFocus": [Function],
-                  "placeholder": [Function],
-                  "required": [Function],
-                  "rows": [Function],
-                  "select": [Function],
-                  "size": [Function],
-                  "sx": [Function],
-                  "textFieldId": [Function],
-                  "type": [Function],
-                  "value": [Function],
-                  "variant": [Function],
-                },
-                "render": [Function],
-              }
-            }
-            disabled={false}
-            fullWidth={true}
-            name="fez_record_search_key_doi.rek_doi"
-            textFieldId="rek-doi"
-            type="text"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            allowPartial={true}
-            className="requiredHintField"
-            component={[Function]}
-            disabled={false}
-            floatingTitle="Date published"
-            floatingTitleRequired={true}
-            name="rek_date"
-            partialDateFieldId="rek-date"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "propTypes": Object {
-                  "FormHelperTextProps": [Function],
-                  "InputLabelProps": [Function],
-                  "InputProps": [Function],
-                  "SelectProps": [Function],
-                  "autoComplete": [Function],
-                  "autoFocus": [Function],
-                  "children": [Function],
-                  "className": [Function],
-                  "classes": [Function],
-                  "color": [Function],
-                  "defaultValue": [Function],
-                  "disabled": [Function],
-                  "error": [Function],
-                  "fullWidth": [Function],
-                  "help": [Function],
-                  "helperText": [Function],
-                  "id": [Function],
-                  "inputProps": [Function],
-                  "inputRef": [Function],
-                  "label": [Function],
-                  "margin": [Function],
-                  "maxRows": [Function],
-                  "minRows": [Function],
-                  "multiline": [Function],
-                  "name": [Function],
-                  "onBlur": [Function],
-                  "onChange": [Function],
-                  "onFocus": [Function],
-                  "placeholder": [Function],
-                  "required": [Function],
-                  "rows": [Function],
-                  "select": [Function],
-                  "size": [Function],
-                  "sx": [Function],
-                  "textFieldId": [Function],
-                  "type": [Function],
-                  "value": [Function],
-                  "variant": [Function],
-                },
-                "render": [Function],
-              }
-            }
-            disabled={false}
-            fullWidth={true}
-            label="Abstract"
-            multiline={true}
-            name="rek_description"
-            placeholder="Provide an abstract or summary of the work."
-            rows={3}
-            textFieldId="rek-description"
-            type="text"
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <StandardCard
-      help={
-        Object {
-          "buttonLabel": "CLOSE",
-          "text": <p>
-            For more information about identification of author/creator/designer, click
-             
-            <a
-              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
-              target="_blank"
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h3
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+              data-testid="standard-card-department-technical-report-information-header"
+              id="standard-card-department-technical-report-information-header"
             >
-              here
-            </a>
-          </p>,
-          "title": "Authors/Designers name",
-        }
-      }
-      title="Authors"
+              Department technical report information
+            </h3>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-department-technical-report-information-content"
+          data-testid="standard-card-department-technical-report-information-content"
+          id="standard-card-department-technical-report-information-content"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Title"
+                name="rek_title"
+                required="true"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="School, Institute or Centre"
+                name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Institution name"
+                name="fez_record_search_key_org_name.rek_org_name"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Series"
+                name="fez_record_search_key_series.rek_series"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Report number"
+                name="fez_record_search_key_report_number.rek_report_number"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                name="fez_record_search_key_doi.rek_doi"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                name="rek_date"
+                required="true"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Abstract"
+                name="rek_description"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-      <ForwardRef(Typography)>
-        Please provide a list of authors and then select your name from the list.
-      </ForwardRef(Typography)>
-      <Field
-        component={[Function]}
-        contributorEditorId="authors"
-        disabled={false}
-        locale={
-          Object {
-            "errorMessage": "You can not add two authors with the same ID",
-            "form": Object {
-              "locale": Object {
-                "addButton": "Add author",
-                "descriptionStep1": <div>
-                  <span
-                    className="authorSteps"
-                  >
-                    Step 1 of 2
-                  </span>
-                   
-                  - Please 
-                  <b>
-                    add to a list of authors below
-                  </b>
-                  , in the format and order that they are published.
-                </div>,
-                "descriptionStep1NoStep2": <div>
-                  Please 
-                  <b>
-                    add to a list of authors below
-                  </b>
-                  , in the format and order that they are published.
-                </div>,
-                "identifierLabel": "UQ identifier (if available)",
-                "nameAsPublishedFieldId": "authors-name-as-published-field",
-                "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Author's name as published",
-              },
-            },
-            "header": Object {
-              "locale": Object {
-                "contributorAssignmentColumn": "Select your name",
-                "deleteAll": "Remove all items",
-                "deleteAllConfirmation": Object {
-                  "cancelButtonLabel": "No",
-                  "confirmButtonLabel": "Yes",
-                  "confirmationMessage": "Are you sure you want to delete all items?",
-                  "confirmationTitle": "Delete all",
-                },
-                "descriptionStep2": <div>
-                  <span
-                    className="authorSteps"
-                  >
-                    Step 2 of 2
-                  </span>
-                   
-                  - Please 
-                  <b>
-                    select your name
-                  </b>
-                   from the list below (if applicable).
-                </div>,
-                "identifierColumn": "UQ identifier / Organisation",
-                "nameColumn": "Author's name as published",
-                "organisationColumn": "Organisation",
-                "reorderColumn": "Reorder items",
-              },
-            },
-            "row": Object {
-              "locale": Object {
-                "deleteHint": "Remove this item",
-                "deleteRecordConfirmation": Object {
-                  "cancelButtonLabel": "No",
-                  "confirmButtonLabel": "Yes",
-                  "confirmationMessage": "Are you sure you want to delete this item?",
-                  "confirmationTitle": "Delete item",
-                },
-                "editHint": "Edit this item",
-                "lockedTooltip": "You are not able to edit this row",
-                "moveDownHint": "Move item down the order",
-                "moveUpHint": "Move item up the order",
-                "selectHint": "Select this author ([name]) to assign it as you",
-                "selectedHint": "This is you",
-                "suffix": " listed author",
-                "unselectedHint": "Select this to confirm [identifier] is you",
-              },
-            },
-          }
-        }
-        name="authors"
-        required={true}
-        showContributorAssignment={true}
-        validate={
-          Array [
-            [Function],
-          ]
-        }
-      />
-    </StandardCard>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <StandardCard
-      title="Other details"
-    >
-      <ForwardRef(Grid)
-        container={true}
-        spacing={2}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="standard-card-authors"
+        id="standard-card-authors"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
         >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "propTypes": Object {
-                  "FormHelperTextProps": [Function],
-                  "InputLabelProps": [Function],
-                  "InputProps": [Function],
-                  "SelectProps": [Function],
-                  "autoComplete": [Function],
-                  "autoFocus": [Function],
-                  "children": [Function],
-                  "className": [Function],
-                  "classes": [Function],
-                  "color": [Function],
-                  "defaultValue": [Function],
-                  "disabled": [Function],
-                  "error": [Function],
-                  "fullWidth": [Function],
-                  "help": [Function],
-                  "helperText": [Function],
-                  "id": [Function],
-                  "inputProps": [Function],
-                  "inputRef": [Function],
-                  "label": [Function],
-                  "margin": [Function],
-                  "maxRows": [Function],
-                  "minRows": [Function],
-                  "multiline": [Function],
-                  "name": [Function],
-                  "onBlur": [Function],
-                  "onChange": [Function],
-                  "onFocus": [Function],
-                  "placeholder": [Function],
-                  "required": [Function],
-                  "rows": [Function],
-                  "select": [Function],
-                  "size": [Function],
-                  "sx": [Function],
-                  "textFieldId": [Function],
-                  "type": [Function],
-                  "value": [Function],
-                  "variant": [Function],
-                },
-                "render": [Function],
-              }
-            }
-            disabled={false}
-            fullWidth={true}
-            label="Notes (not publicly viewable)"
-            multiline={true}
-            name="comments"
-            placeholder="Add any additional information here"
-            textFieldId="comments"
-            type="text"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h3
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+              data-testid="standard-card-authors-header"
+              id="standard-card-authors-header"
+            >
+              Authors
+            </h3>
+          </div>
+          <div
+            class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+          >
+            <button
+              aria-label="Click for more information"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="help-icon"
+              data-mui-internal-clone-element="true"
+              data-testid="help-icon"
+              id="help-icon"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-7 css-i4bv87-MuiSvgIcon-root"
+                data-testid="HelpOutlineIcon"
+                focusable="false"
+                role="img"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                />
+                <title>
+                  Click for more information
+                </title>
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-authors-content"
+          data-testid="standard-card-authors-content"
+          id="standard-card-authors-content"
         >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "propTypes": Object {
-                  "FormHelperTextProps": [Function],
-                  "InputLabelProps": [Function],
-                  "InputProps": [Function],
-                  "SelectProps": [Function],
-                  "autoComplete": [Function],
-                  "autoFocus": [Function],
-                  "children": [Function],
-                  "className": [Function],
-                  "classes": [Function],
-                  "color": [Function],
-                  "defaultValue": [Function],
-                  "disabled": [Function],
-                  "error": [Function],
-                  "fullWidth": [Function],
-                  "help": [Function],
-                  "helperText": [Function],
-                  "id": [Function],
-                  "inputProps": [Function],
-                  "inputRef": [Function],
-                  "label": [Function],
-                  "margin": [Function],
-                  "maxRows": [Function],
-                  "minRows": [Function],
-                  "multiline": [Function],
-                  "name": [Function],
-                  "onBlur": [Function],
-                  "onChange": [Function],
-                  "onFocus": [Function],
-                  "placeholder": [Function],
-                  "required": [Function],
-                  "rows": [Function],
-                  "select": [Function],
-                  "size": [Function],
-                  "sx": [Function],
-                  "textFieldId": [Function],
-                  "type": [Function],
-                  "value": [Function],
-                  "variant": [Function],
-                },
-                "render": [Function],
-              }
-            }
-            disabled={false}
-            fullWidth={true}
-            label="Link"
-            name="rek_link"
-            placeholder="Type URL for this work"
-            textFieldId="rek-link"
-            type="text"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+          >
+            Please provide a list of authors and then select your name from the list.
+          </p>
+          <field
+            disabled="false"
+            is="mock"
+            name="authors"
+            required="true"
           />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="standard-card-other-details"
+        id="standard-card-other-details"
+      >
+        <div
+          class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        >
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h3
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+              data-testid="standard-card-other-details-header"
+              id="standard-card-other-details-header"
+            >
+              Other details
+            </h3>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="standard-card-other-details-content"
+          data-testid="standard-card-other-details-content"
+          id="standard-card-other-details-content"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Notes (not publicly viewable)"
+                name="comments"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Link"
+                name="rek_link"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

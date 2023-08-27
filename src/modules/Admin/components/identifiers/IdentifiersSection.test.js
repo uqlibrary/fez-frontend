@@ -8,7 +8,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(IdentifiersSection, props, args);
+    return renderComponent(IdentifiersSection, props, args);
 }
 
 describe('IdentifiersSection component', () => {
@@ -31,8 +31,8 @@ describe('IdentifiersSection component', () => {
             },
         }));
 
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -54,8 +54,8 @@ describe('IdentifiersSection component', () => {
             },
         }));
 
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render correct identifiers fields for Creative Work - Creative Work - Musical Composition', () => {
@@ -78,8 +78,8 @@ describe('IdentifiersSection component', () => {
             },
         }));
 
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render correct identifiers fields for Book - Creative Work - Musical Composition', () => {
@@ -102,7 +102,7 @@ describe('IdentifiersSection component', () => {
             },
         }));
 
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

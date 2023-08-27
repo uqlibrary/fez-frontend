@@ -1,13 +1,15 @@
+import React from 'react';
 import PartialDateField from './PartialDateField';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         classes: {
             fakeTitle: {},
         },
         ...testProps,
     };
-    return getElement(PartialDateField, props, isShallow);
+    return rtlRender(<PartialDateField {...props} />);
 }
 
 describe('Redux-form Field PartialDateField snapshots tests', () => {
@@ -20,10 +22,8 @@ describe('Redux-form Field PartialDateField snapshots tests', () => {
             },
         };
 
-        const wrapper = setup(props);
-
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
     });
 
     it('renders PartialDateField component with requiredField class on year field', () => {
@@ -36,10 +36,8 @@ describe('Redux-form Field PartialDateField snapshots tests', () => {
             },
         };
 
-        const wrapper = setup(props);
-
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
     });
 
     it('renders PartialDateField component with requiredField class on all fields', () => {
@@ -52,9 +50,7 @@ describe('Redux-form Field PartialDateField snapshots tests', () => {
             },
         };
 
-        const wrapper = setup(props);
-
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
     });
 });

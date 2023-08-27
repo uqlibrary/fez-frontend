@@ -1,23 +1,25 @@
+import React from 'react';
 import VideoDocumentCitation from './VideoDocumentCitation';
 import { videoDocument } from 'mock/data/testing/records';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(VideoDocumentCitation, props, args);
+    return rtlRender(<VideoDocumentCitation {...props} />);
 }
 
 describe('VideoDocumentCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: videoDocument });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: videoDocument });
+        expect(container).toMatchSnapshot();
     });
 });

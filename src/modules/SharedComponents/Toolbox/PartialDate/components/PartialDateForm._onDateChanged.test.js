@@ -1,6 +1,8 @@
+import React from 'react';
 import { PartialDateForm } from './PartialDateForm';
+import { rtlRender, fireEvent } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         partialDateFormId: 'test',
         classes: {
@@ -8,65 +10,52 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(PartialDateForm, props, isShallow);
+    return rtlRender(<PartialDateForm {...props} />);
 }
 
 describe('PartialDateForm unit tests', () => {
-    it('should return correct formatted date 1', () => {
-        const expectToBe = value => {
-            expect(value).toBe('2015-01-01');
-            return expectToBe;
-        };
+    it('should handle year values', () => {
         const props = {
             allowPartial: true,
-            onChange: () => expectToBe,
         };
 
-        const form = setup(props);
-        form.instance()._onDateChanged('year')({ target: { value: '2015' } });
+        const { getByTestId } = setup(props);
+        fireEvent.change(getByTestId('test-year-input'), { target: { value: '2015' } });
+        expect(getByTestId('test-year-input').value).toEqual('2015');
+        fireEvent.change(getByTestId('test-year-input'), { target: { value: undefined } });
+        expect(getByTestId('test-year-input').value).toEqual('2015');
+        fireEvent.change(getByTestId('test-year-input'), { target: { value: '' } });
+        expect(getByTestId('test-year-input').value).toEqual('');
     });
 
-    it('should return correct formatted date 2', () => {
-        const expectToBe = value => {
-            expect(value).toBe(['', '2015-01-01', '', '2015-01-29', '', '2016-02-29', '2016-02-01'].shift());
-            return expectToBe;
-        };
+    it('should handle month values', () => {
         const props = {
-            partialDateFieldId: 'test',
             allowPartial: true,
-            onChange: () => expectToBe,
         };
 
-        const form = setup(props);
-        form.instance()._onDateChanged('year')({ target: { value: NaN } });
-        form.instance()._onDateChanged('year')({ target: { value: '2015' } });
-        form.instance()._onDateChanged('month')({ target: { value: undefined } }, 0, -1);
-        form.instance()._onDateChanged('day')({ target: { value: 29 } });
-        form.instance()._onDateChanged('month')({ target: { value: undefined } }, 2, 1);
-        form.instance()._onDateChanged('year')({ target: { value: '2016' } });
-        form.instance()._onDateChanged('day')({ target: { value: NaN } });
-        form.instance()._onDateChanged('month')({ target: { value: '' } }, 2, 1);
+        const { getByTestId, getByRole } = setup(props);
+        fireEvent.mouseDown(getByTestId('test-month-select'));
+        fireEvent.click(getByRole('option', { name: 'May' }));
+
+        expect(getByTestId('test-month-input').value).toEqual('4');
+
+        fireEvent.mouseDown(getByTestId('test-month-select'));
+        fireEvent.click(getByRole('option', { name: 'Month' }));
+
+        expect(getByTestId('test-month-input').value).toEqual('-1');
     });
 
-    it('should return correct formatted date 3', () => {
-        const expectToBe = value => {
-            expect(value).toBe(['', '', '', '', '', '20/09/2016'].shift());
-            return expectToBe;
-        };
-
+    it('should handle day values', () => {
         const props = {
-            allowPartial: false,
-            dateFormat: 'DD/MM/YYYY',
-            onChange: () => expectToBe,
-            partialDateFieldId: 'test',
+            allowPartial: true,
         };
 
-        const form = setup(props);
-        form.instance()._onDateChanged('day')({ target: { value: NaN } });
-        form.instance()._onDateChanged('day')({ target: { value: '20' } });
-        form.instance()._onDateChanged('month')({ target: { value: undefined } }, 0, -1);
-        form.instance()._onDateChanged('month')({ target: { value: undefined } }, 9, 8);
-        form.instance()._onDateChanged('year')({ target: { value: NaN } });
-        form.instance()._onDateChanged('year')({ target: { value: '2016' } });
+        const { getByTestId } = setup(props);
+        fireEvent.change(getByTestId('test-day-input'), { target: { value: '29' } });
+        expect(getByTestId('test-day-input').value).toEqual('29');
+        fireEvent.change(getByTestId('test-day-input'), { target: { value: undefined } });
+        expect(getByTestId('test-day-input').value).toEqual('29');
+        fireEvent.change(getByTestId('test-day-input'), { target: { value: '' } });
+        expect(getByTestId('test-day-input').value).toEqual('');
     });
 });

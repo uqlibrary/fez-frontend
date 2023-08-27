@@ -1,4 +1,6 @@
+import React from 'react';
 import PageRangeCitationView from './PageRangeCitationView';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     // build full props list required by the component
@@ -7,39 +9,39 @@ function setup(testProps = {}) {
         publication: testProps.publication || {},
         ...testProps,
     };
-    return getElement(PageRangeCitationView, props);
+    return rtlRender(<PageRangeCitationView {...props} />);
 }
 
 describe('PageRangeCitationView test ', () => {
     it('should render nothing if search key not found', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render startPage only', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publication: {
                 fez_record_search_key_start_page: {
                     rek_start_page: 11,
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render endPage only', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publication: {
                 fez_record_search_key_end_page: {
                     rek_end_page: 11,
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render startPage to endPage', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publication: {
                 fez_record_search_key_start_page: {
                     rek_start_page: 13,
@@ -49,11 +51,11 @@ describe('PageRangeCitationView test ', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render startPage only if end page is empty', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publication: {
                 fez_record_search_key_start_page: {
                     rek_start_page: 13,
@@ -61,6 +63,6 @@ describe('PageRangeCitationView test ', () => {
                 fez_record_search_key_end_page: {},
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

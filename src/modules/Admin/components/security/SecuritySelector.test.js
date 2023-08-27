@@ -17,7 +17,7 @@ function setup(testProps) {
         ...testProps,
     };
 
-    return getElement(SecuritySelector, props);
+    return renderComponent(SecuritySelector, props);
 }
 
 describe('SecuritySelector component', () => {
@@ -31,8 +31,8 @@ describe('SecuritySelector component', () => {
             },
             securityPolicy: 2,
         };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup(testProps);
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render properly for collection', () => {
@@ -46,8 +46,8 @@ describe('SecuritySelector component', () => {
             securityPolicy: 2,
             recordType: 'collection',
         };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup(testProps);
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render properly for record', () => {
@@ -61,7 +61,7 @@ describe('SecuritySelector component', () => {
             securityPolicy: 2,
             recordType: 'record',
         };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup(testProps);
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

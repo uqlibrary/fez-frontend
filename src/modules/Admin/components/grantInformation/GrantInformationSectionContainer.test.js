@@ -12,7 +12,7 @@ const setup = (testProps = {}, args = { isShallow: true }) => {
         ...testProps,
     };
 
-    return getElement(GrantInformationSectionContainer, props, args);
+    return renderComponent(GrantInformationSectionContainer, props, args);
 };
 
 describe('GrantInformationSectionContainer', () => {
@@ -29,9 +29,9 @@ describe('GrantInformationSectionContainer', () => {
     });
 
     it('should render properly', () => {
-        const wrapper = setup({});
+        const render = setup({});
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should map state to props', () => {

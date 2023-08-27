@@ -1,4 +1,6 @@
+import React from 'react';
 import LookupListEditor from './LookupListEditor';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -6,12 +8,12 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(LookupListEditor, props);
+    return rtlRender(<LookupListEditor {...props} />);
 }
 
 describe('LookupListEditor', () => {
     it('should render default component', () => {
-        const wrapper = setup({ input: { onChange: jest.fn() } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ input: { onChange: jest.fn() } });
+        expect(container).toMatchSnapshot();
     });
 });

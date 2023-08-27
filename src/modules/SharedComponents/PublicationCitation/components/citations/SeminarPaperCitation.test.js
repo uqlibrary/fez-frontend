@@ -1,22 +1,24 @@
+import React from 'react';
 import SeminarPaperCitation from './SeminarPaperCitation';
 import { seminarPaper } from 'mock/data/testing/records';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(SeminarPaperCitation, props, args);
+    return rtlRender(<SeminarPaperCitation {...props} />);
 }
 
 describe('SeminarPaperCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: seminarPaper });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: seminarPaper });
+        expect(container).toMatchSnapshot();
     });
 });

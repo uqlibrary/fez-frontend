@@ -1,7 +1,9 @@
+import React from 'react';
 import OpenAccessIcon from './OpenAccessIcon';
 import { openAccessConfig } from 'config';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         isOpenAccess: testProps.isOpenAccess || false,
         embargoDate: testProps.embargoDate || null,
@@ -9,13 +11,13 @@ function setup(testProps = {}, args = { isShallow: false }) {
         showEmbargoText: testProps.showEmbargoText || false,
         ...testProps,
     };
-    return getElement(OpenAccessIcon, props, args);
+    return rtlRender(<OpenAccessIcon {...props} />);
 }
 
 describe('Journal Name Component test ', () => {
     it('should render open access', () => {
-        const wrapper = setup({ isOpenAccess: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isOpenAccess: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should pass style to child component', () => {
@@ -24,48 +26,51 @@ describe('Journal Name Component test ', () => {
     });
 
     it('should render open access with OPEN_ACCESS_ID_LINK_NO_DOI', () => {
-        const wrapper = setup({ isOpenAccess: true, openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({
+            isOpenAccess: true,
+            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render embargoed', () => {
-        const wrapper = setup({
+        const { container } = setup({
             embargoDate: '2019-01-01',
             openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render closed access', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render embargoed', () => {
-        const wrapper = setup({
+        const { container } = setup({
             embargoDate: '2019-01-01',
             openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
             showEmbargoText: true,
             securityStatus: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render locked', () => {
-        const wrapper = setup({
+        const { container } = setup({
             openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
             securityStatus: false,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render no icon', () => {
-        const wrapper = setup({
+        const { container } = setup({
             isOpenAccess: null,
             openAccessStatusId: null,
             embargoDate: null,
             securityStatus: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

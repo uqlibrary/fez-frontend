@@ -809,7 +809,7 @@ export const CURRENT_LICENCES = [
         text: 'Permitted Re-Use with Commercial Use Restriction',
         description: [
             'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
-            'I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.',
+            'I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only use this data in non-commercial endeavours.',
             'The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.',
         ],
     },

@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LinkInfoTemplate component should render default view 1`] = `
-<Fragment>
-  <ForwardRef(Typography)
-    variant="body2"
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
   >
     <strong>
       Link: 
     </strong>
-  </ForwardRef(Typography)>
-  <ForwardRef(Typography)
-    variant="caption"
+  </p>
+  <span
+    class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
   >
     <strong>
       Description: 
     </strong>
-  </ForwardRef(Typography)>
-</Fragment>
+  </span>
+</div>
 `;

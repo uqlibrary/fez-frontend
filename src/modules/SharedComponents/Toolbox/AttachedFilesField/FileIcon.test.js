@@ -1,57 +1,62 @@
+import React from 'react';
 import { FileIcon } from './FileIcon';
+import { rtlRender } from 'test-utils';
 
 jest.mock('@mui/styles', () => ({
     makeStyles: () => () => ({}),
 }));
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         mimeType: '',
         ...testProps,
     };
 
-    return getElement(FileIcon, props, args);
+    return rtlRender(<FileIcon {...props} />);
 }
 
 describe('FileIcon component', () => {
     it('should render the default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should render a thumbnail when applicable', () => {
-        const wrapper = setup({
+        const { container } = setup({
             pid: 'UQ:123456',
             allowDownload: true,
             thumbnailFileName: 'thumbnail_test.jpg',
             webFileName: 'web_test.jpg',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        const wrapper2 = setup({
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render a thumbnail without web file when applicable', () => {
+        const { container } = setup({
             pid: 'UQ:123456',
             allowDownload: true,
             thumbnailFileName: 'thumbnail_test.jpg',
         });
-        expect(toJson(wrapper2)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render VolumeUp for audio', () => {
-        const wrapper = setup({ mimeType: 'audio/wav' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ mimeType: 'audio/wav' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render PictureAsPdf for PDF', () => {
-        const wrapper = setup({ mimeType: 'application/pdf' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ mimeType: 'application/pdf' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render Image for image', () => {
-        const wrapper = setup({ mimeType: 'image/png' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ mimeType: 'image/png' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render Videocam for video', () => {
-        const wrapper = setup({ mimeType: 'video/mp4' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ mimeType: 'video/mp4' });
+        expect(container).toMatchSnapshot();
     });
 });

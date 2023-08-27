@@ -1,6 +1,6 @@
 import React from 'react';
 import ContributorForm from './ContributorForm';
-import { rtlRender, withRedux, fireEvent, waitFor, act } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, act } from 'test-utils';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
 
@@ -19,7 +19,11 @@ function setup(testProps = {}) {
         contributorFormId: 'rek-contributor',
         ...testProps,
     };
-    return rtlRender(withRedux()(<ContributorForm {...props} />));
+    return render(
+        <WithReduxStore>
+            <ContributorForm {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('Component ContributorForm', () => {

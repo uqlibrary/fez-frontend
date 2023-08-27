@@ -4,7 +4,7 @@ import Snackbar from '@mui/material/Snackbar';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/icons-material/Link';
 import LinkOff from '@mui/icons-material/LinkOff';
-import { locale } from 'locale';
+import locale from 'locale/global';
 import withStyles from '@mui/styles/withStyles';
 
 export const styles = theme => ({
@@ -58,6 +58,7 @@ export class OfflineSnackbar extends PureComponent {
 
     handleRequestClose = reason => {
         // MUI hack to prevent the snackbar from being hidden by clicking/touchTapping away
+        /* istanbul ignore else */
         if (reason !== 'clickaway') {
             this.setState({ open: false });
         }
