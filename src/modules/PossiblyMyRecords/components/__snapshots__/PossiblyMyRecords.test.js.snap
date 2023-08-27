@@ -347,7 +347,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                         </a>
                                         <span
                                           class="noOaIcon"
-                                          data-testid="open-access-oa-n/a-icon"
+                                          data-testid="oa-n/a-icon"
                                         />
                                       </div>
                                       <div
@@ -477,7 +477,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                         </a>
                                         <span
                                           class="noOaIcon"
-                                          data-testid="open-access-oa-n/a-icon"
+                                          data-testid="oa-n/a-icon"
                                         />
                                       </div>
                                       <div
@@ -607,7 +607,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                         </a>
                                         <span
                                           class="noOaIcon"
-                                          data-testid="open-access-oa-n/a-icon"
+                                          data-testid="oa-n/a-icon"
                                         />
                                       </div>
                                       <div

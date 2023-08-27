@@ -6,7 +6,7 @@ exports[`Journal Name Component test  should render closed access 1`] = `
 <div>
   <span
     class="noOaIcon"
-    data-testid="open-access-oa-n/a-icon"
+    data-testid="oa-n/a-icon"
   />
 </div>
 `;
@@ -18,7 +18,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
     aria-label="Link (no DOI) - Open access after 2019-01-01"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-7 makeStyles-svg-8 css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
-    data-testid="open-access-embargoed-oa-icon"
+    data-testid="embargoed-oa-icon"
     focusable="false"
     viewBox="0 0 24 24"
   >
@@ -41,7 +41,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
     aria-label="Link (no DOI) - Open access after 2019-01-01"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-11 makeStyles-svg-12 css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
-    data-testid="open-access-embargoed-oa-icon"
+    data-testid="embargoed-oa-icon"
     focusable="false"
     viewBox="0 0 24 24"
   >
@@ -59,7 +59,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
     aria-label="You do not have access to this file"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-14 css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
-    data-testid="open-access-no-oa-icon"
+    data-testid="no-oa-icon"
     focusable="false"
     viewBox="0 0 24 24"
   >
@@ -74,7 +74,7 @@ exports[`Journal Name Component test  should render no icon 1`] = `
 <div>
   <span
     class="noOaIcon"
-    data-testid="open-access-oa-n/a-icon"
+    data-testid="oa-n/a-icon"
   />
 </div>
 `;
@@ -86,7 +86,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
     aria-label="Open Access - undefined - Free to read"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2 css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
-    data-testid="open-access-oa-icon"
+    data-testid="oa-icon"
     focusable="false"
     viewBox="0 0 24 24"
   >
@@ -104,7 +104,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
     aria-label="Open Access - Free to read"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-5 makeStyles-svg-6 css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
-    data-testid="open-access-oa-icon"
+    data-testid="oa-icon"
     focusable="false"
     viewBox="0 0 24 24"
   >

@@ -124,7 +124,7 @@ exports[`Component Links  Full mount render 1`] = `
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-56 makeStyles-svg-57 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -194,7 +194,7 @@ exports[`Component Links  Full mount render 1`] = `
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -256,7 +256,7 @@ exports[`Component Links  Full mount render 1`] = `
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-56 makeStyles-svg-61 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -324,7 +324,7 @@ exports[`Component Links  Full mount render 1`] = `
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-56 makeStyles-svg-63 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -465,7 +465,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -599,7 +599,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-16 makeStyles-svg-17 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -813,7 +813,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-90 makeStyles-svg-91 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -881,7 +881,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-90 makeStyles-svg-93 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -949,7 +949,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-90 makeStyles-svg-95 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -1089,7 +1089,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-128 makeStyles-svg-129 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -1162,7 +1162,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               aria-label="Open Access - DOI - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-128 makeStyles-svg-131 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -1227,7 +1227,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -1286,7 +1286,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -1345,7 +1345,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -1479,7 +1479,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-192 makeStyles-svg-193 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -1549,7 +1549,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -1608,7 +1608,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -1667,7 +1667,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -1726,7 +1726,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -1860,7 +1860,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-150 makeStyles-svg-151 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -1925,7 +1925,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -1984,7 +1984,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2043,7 +2043,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2177,7 +2177,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-170 makeStyles-svg-171 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -2247,7 +2247,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2306,7 +2306,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2365,7 +2365,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2424,7 +2424,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2558,7 +2558,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-214 makeStyles-svg-215 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -2628,7 +2628,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2687,7 +2687,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2746,7 +2746,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2805,7 +2805,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -2943,7 +2943,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               aria-label="DOI - Open access after 24th December 2020"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-108 makeStyles-svg-109 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-embargoed-oa-icon"
+              data-testid="embargoed-oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -3008,7 +3008,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -3067,7 +3067,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -3126,7 +3126,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -3264,7 +3264,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
               aria-label="Open Access - Open access after 2100-01-01"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-252 makeStyles-svg-253 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-embargoed-oa-icon"
+              data-testid="embargoed-oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -3400,7 +3400,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -3533,7 +3533,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-308 makeStyles-svg-309 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -3672,7 +3672,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
               aria-label="Open Access - Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-280 makeStyles-svg-281 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -3811,7 +3811,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
               aria-label="Open Access - Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-294 makeStyles-svg-295 css-i4bv87-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
-              data-testid="open-access-oa-icon"
+              data-testid="oa-icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -3947,7 +3947,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -4077,7 +4077,7 @@ exports[`Component Links  should use special default description if the link has
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>
@@ -4136,7 +4136,7 @@ exports[`Component Links  should use special default description if the link has
           >
             <span
               class="noOaIcon"
-              data-testid="open-access-oa-n/a-icon"
+              data-testid="oa-n/a-icon"
             />
           </div>
         </div>

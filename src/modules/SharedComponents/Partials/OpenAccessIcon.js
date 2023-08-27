@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     svg: props => props.style,
 });
 
-export const getIconTestId = id => `open-access-${id}-icon`;
+export const getIconTestId = id => `${id}-icon`;
 
 export const OpenAccessIcon = ({
     style,

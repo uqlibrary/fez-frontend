@@ -192,7 +192,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                           </a>
                           <span
                             class="noOaIcon"
-                            data-testid="open-access-oa-n/a-icon"
+                            data-testid="oa-n/a-icon"
                           />
                         </div>
                         <div

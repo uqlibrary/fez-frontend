@@ -236,7 +236,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                     >
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -578,7 +578,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -891,7 +891,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -1077,7 +1077,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -1334,7 +1334,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -1606,7 +1606,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -1900,7 +1900,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -2313,7 +2313,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -2725,7 +2725,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -3099,7 +3099,7 @@ exports[`PublicationCitation  should render component with default item without 
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -3352,7 +3352,7 @@ exports[`PublicationCitation  should render component with default item without 
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -3504,7 +3504,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -3776,7 +3776,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -4048,7 +4048,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -4320,7 +4320,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -4599,7 +4599,7 @@ exports[`PublicationCitation  should render component with publication from mult
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -4895,7 +4895,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -5358,7 +5358,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -5615,7 +5615,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -5954,7 +5954,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -6267,7 +6267,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div
@@ -6575,7 +6575,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                       </a>
                       <span
                         class="noOaIcon"
-                        data-testid="open-access-oa-n/a-icon"
+                        data-testid="oa-n/a-icon"
                       />
                     </div>
                     <div

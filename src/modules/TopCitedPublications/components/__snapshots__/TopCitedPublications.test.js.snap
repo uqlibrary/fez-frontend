@@ -471,7 +471,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 </a>
                                 <span
                                   class="noOaIcon"
-                                  data-testid="open-access-oa-n/a-icon"
+                                  data-testid="oa-n/a-icon"
                                 />
                               </div>
                               <div
@@ -945,7 +945,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 </a>
                                 <span
                                   class="noOaIcon"
-                                  data-testid="open-access-oa-n/a-icon"
+                                  data-testid="oa-n/a-icon"
                                 />
                               </div>
                               <div

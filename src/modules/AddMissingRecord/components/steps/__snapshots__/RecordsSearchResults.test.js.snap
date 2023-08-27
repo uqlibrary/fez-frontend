@@ -395,7 +395,7 @@ exports[`Search record results should render a single claimable item with no aut
                                       </a>
                                       <span
                                         class="noOaIcon"
-                                        data-testid="open-access-oa-n/a-icon"
+                                        data-testid="oa-n/a-icon"
                                       />
                                     </div>
                                     <div
@@ -1108,7 +1108,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                       </a>
                                       <span
                                         class="noOaIcon"
-                                        data-testid="open-access-oa-n/a-icon"
+                                        data-testid="oa-n/a-icon"
                                       />
                                     </div>
                                     <div
@@ -1818,7 +1818,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                       </a>
                                       <span
                                         class="noOaIcon"
-                                        data-testid="open-access-oa-n/a-icon"
+                                        data-testid="oa-n/a-icon"
                                       />
                                     </div>
                                     <div
@@ -2528,7 +2528,7 @@ exports[`Search record results should render publications list with one publicat
                                       </a>
                                       <span
                                         class="noOaIcon"
-                                        data-testid="open-access-oa-n/a-icon"
+                                        data-testid="oa-n/a-icon"
                                       />
                                     </div>
                                     <div

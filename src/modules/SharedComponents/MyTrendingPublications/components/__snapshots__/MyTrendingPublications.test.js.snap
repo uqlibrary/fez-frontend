@@ -419,7 +419,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <span
                                   class="noOaIcon"
-                                  data-testid="open-access-oa-n/a-icon"
+                                  data-testid="oa-n/a-icon"
                                 />
                               </div>
                               <div
@@ -802,7 +802,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <span
                                   class="noOaIcon"
-                                  data-testid="open-access-oa-n/a-icon"
+                                  data-testid="oa-n/a-icon"
                                 />
                               </div>
                               <div
@@ -1165,7 +1165,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <span
                                   class="noOaIcon"
-                                  data-testid="open-access-oa-n/a-icon"
+                                  data-testid="oa-n/a-icon"
                                 />
                               </div>
                               <div

@@ -744,7 +744,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                                         </a>
                                         <span
                                           class="noOaIcon"
-                                          data-testid="open-access-oa-n/a-icon"
+                                          data-testid="oa-n/a-icon"
                                         />
                                       </div>
                                       <div
@@ -1444,7 +1444,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                                         </a>
                                         <span
                                           class="noOaIcon"
-                                          data-testid="open-access-oa-n/a-icon"
+                                          data-testid="oa-n/a-icon"
                                         />
                                       </div>
                                       <div
@@ -2144,7 +2144,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                                         </a>
                                         <span
                                           class="noOaIcon"
-                                          data-testid="open-access-oa-n/a-icon"
+                                          data-testid="oa-n/a-icon"
                                         />
                                       </div>
                                       <div

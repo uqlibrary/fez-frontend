@@ -120,7 +120,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -552,7 +552,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -871,7 +871,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -1162,7 +1162,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -1621,7 +1621,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -2102,7 +2102,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -2606,7 +2606,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -3110,7 +3110,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -3613,7 +3613,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -4017,7 +4017,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div

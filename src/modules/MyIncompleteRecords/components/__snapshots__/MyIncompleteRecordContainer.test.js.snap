@@ -175,7 +175,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                           </a>
                           <span
                             class="noOaIcon"
-                            data-testid="open-access-oa-n/a-icon"
+                            data-testid="oa-n/a-icon"
                           />
                         </div>
                         <div
@@ -2003,7 +2003,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           </a>
                           <span
                             class="noOaIcon"
-                            data-testid="open-access-oa-n/a-icon"
+                            data-testid="oa-n/a-icon"
                           />
                         </div>
                         <div

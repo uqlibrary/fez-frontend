@@ -261,7 +261,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -904,7 +904,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
@@ -1241,7 +1241,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                                     </a>
                                     <span
                                       class="noOaIcon"
-                                      data-testid="open-access-oa-n/a-icon"
+                                      data-testid="oa-n/a-icon"
                                     />
                                   </div>
                                   <div
