@@ -1,5 +1,6 @@
 import * as actions from 'actions/actionTypes';
 import { pathConfig } from 'config/pathConfig';
+import { escapeRegexp } from 'autoprefixer/lib/utils';
 
 const getExactMatchKeywords = keywordsResponse => {
     const exactMatch =
@@ -19,7 +20,7 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
         if (keywordQuery.trim() === '') {
             return titleMatches;
         }
-        const regexString = `\\w*${keywordQuery}\\w*`;
+        const regexString = `\\w*${escapeRegexp(keywordQuery)}\\w*`;
         const regex = new RegExp(regexString, 'ig');
         const titleMatch =
             !!titleFuzzyMatch &&
@@ -59,7 +60,7 @@ const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
         if (keywordQuery.trim() === '') {
             return keywordMatches;
         }
-        const regexString = `\\w*${keywordQuery}\\w*`;
+        const regexString = `\\w*${escapeRegexp(keywordQuery)}\\w*`;
         const regex = new RegExp(regexString, 'ig');
         const keywordMatch =
             !!descriptionFuzzyMatch &&
