@@ -349,4 +349,32 @@ describe('Journal Search Keyword enhancer', () => {
 
         expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
     });
+    it('returns title fuzzy match values with match on title with punctuation', () => {
+        const query = 'es reserved chars + - = & | > < ! ( ) { } [ ] ^ " ~ * ? : \\ /';
+        const mockSearchData = {
+            ...keywordsSearch.data,
+            exactMatch: null,
+        };
+        // Mock the base data to a reasonable return set for testing.
+        mockSearchData.descriptionFuzzyMatch.forEach(obj =>
+            obj.fez_journal_issn.forEach(element => (element.fez_ulrichs.ulr_description = query)),
+        );
+        mockSearchData.titleFuzzyMatch.forEach(obj => (obj.jnl_title = query));
+        const expectedObject = {
+            payload: {
+                exactMatch: [],
+                keywordMatch: [{ keyword: 'reserved' }, { keyword: 'chars' }],
+                subjectMatch: [],
+                titleMatch: [{ keyword: 'reserved' }, { keyword: 'chars' }],
+            },
+            query: query,
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+        };
+        journalSearchKeywordsEnhancer()(next)({
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+            payload: mockSearchData,
+            query: query,
+        });
+        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+    });
 });
