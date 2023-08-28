@@ -1,149 +1,214 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot tests for StandardRighthandCard component renders with title and help button 1`] = `
-<ForwardRef(Grid)
-  container={true}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={true}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Typography)
-      color="primary"
-      component="div"
-      variant="h6"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      Title
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-  >
-    <Connect(HelpIcon)
-      buttonLabel="OK"
-      text="Some help text"
-      title="Help text"
+      <div
+        class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+      >
+        Title
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      <button
+        aria-label="Click for more information"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="help-icon"
+        data-mui-internal-clone-element="true"
+        data-testid="help-icon"
+        id="help-icon"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-1 css-i4bv87-MuiSvgIcon-root"
+          data-testid="HelpOutlineIcon"
+          focusable="false"
+          role="img"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+          />
+          <title>
+            Click for more information
+          </title>
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Divider) />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  />
-</ForwardRef(Grid)>
+  </div>
+</div>
 `;
 
 exports[`Snapshot tests for StandardRighthandCard component renders with title and help button and some content 1`] = `
-<ForwardRef(Grid)
-  container={true}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={true}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Typography)
-      color="primary"
-      component="div"
-      variant="h6"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      Title
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-  >
-    <Connect(HelpIcon)
-      buttonLabel="OK"
-      text="Some help text"
-      title="Help text"
-    />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Divider) />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    Some content
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+      <div
+        class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+      >
+        Title
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      <button
+        aria-label="Click for more information"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="help-icon"
+        data-mui-internal-clone-element="true"
+        data-testid="help-icon"
+        id="help-icon"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-2 css-i4bv87-MuiSvgIcon-root"
+          data-testid="HelpOutlineIcon"
+          focusable="false"
+          role="img"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+          />
+          <title>
+            Click for more information
+          </title>
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      Some content
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Snapshot tests for StandardRighthandCard component renders with title and no help icon 1`] = `
-<ForwardRef(Grid)
-  container={true}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={true}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Typography)
-      color="primary"
-      component="div"
-      variant="h6"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      card title
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Divider) />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  />
-</ForwardRef(Grid)>
+      <div
+        class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+      >
+        card title
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+  </div>
+</div>
 `;
 
 exports[`Snapshot tests for StandardRighthandCard component renders with title, help button, testid and some content 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  data-testid="testid"
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={true}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    data-testid="testid"
   >
-    <ForwardRef(Typography)
-      color="primary"
-      component="div"
-      variant="h6"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      Title
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-  >
-    <Connect(HelpIcon)
-      buttonLabel="OK"
-      text="Some help text"
-      title="Help text"
-    />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Divider) />
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    Some content
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+      <div
+        class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+      >
+        Title
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      <button
+        aria-label="Click for more information"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="help-icon"
+        data-mui-internal-clone-element="true"
+        data-testid="help-icon"
+        id="help-icon"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-3 css-i4bv87-MuiSvgIcon-root"
+          data-testid="HelpOutlineIcon"
+          focusable="false"
+          role="img"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+          />
+          <title>
+            Click for more information
+          </title>
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      Some content
+    </div>
+  </div>
+</div>
 `;

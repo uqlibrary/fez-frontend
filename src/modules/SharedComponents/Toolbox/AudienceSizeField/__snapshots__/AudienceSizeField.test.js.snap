@@ -1,28 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AudienceSizeField component should render default view 1`] = `
-<SelectFieldWrapper
-  label="Audience size"
-  name="audienceSize"
-  selectFieldId="rek-audience-size"
->
-  <ForwardRef(MenuItem)
-    key="453992"
-    value={453992}
+<div>
+  <div
+    class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+    style="width: 100%;"
   >
-    Less than 100
-  </ForwardRef(MenuItem)>
-  <ForwardRef(MenuItem)
-    key="453993"
-    value={453993}
-  >
-    100 - 500
-  </ForwardRef(MenuItem)>
-  <ForwardRef(MenuItem)
-    key="453994"
-    value={453994}
-  >
-    Greater than 500
-  </ForwardRef(MenuItem)>
-</SelectFieldWrapper>
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
+      id="rek-audience-size-label"
+    >
+      Audience size
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-audience-size-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-audience-size-select"
+        id="rek-audience-size-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-labelledby="rek-audience-size-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-audience-size-input"
+        data-testid="rek-audience-size-input"
+        id="rek-audience-size-input"
+        name="audienceSize"
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;

@@ -1,4 +1,6 @@
+import React from 'react';
 import { CopyrightAgreement, styles } from './CopyrightAgreement';
+import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps) {
     const props = {
@@ -15,26 +17,31 @@ function setup(testProps) {
         ...testProps,
     };
 
-    return getElement(CopyrightAgreement, props);
+    return rtlRender(<CopyrightAgreement {...props} />);
 }
 
 describe('Component CopyrightAgreement', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should render checked if deposit agreement accepted', () => {
-        const wrapper = setup({ isCopyrightAgreementAccepted: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isCopyrightAgreementAccepted: true });
+        expect(container).toMatchSnapshot();
     });
 
-    it('should call onChange to handle change', () => {
+    it('should call onChange to handle change with on', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onChange: testFn });
-        wrapper.instance()._handleChange({ target: { checked: true } });
+        const { getByRole } = setup({ onChange: testFn });
+        fireEvent.click(getByRole('checkbox', { name: 'test deposit agreement' }));
         expect(testFn).toHaveBeenCalledWith('on');
-        wrapper.instance()._handleChange({ target: { checked: false } });
+    });
+
+    it('should call onChange to handle change with off', () => {
+        const testFn = jest.fn();
+        const { getByRole } = setup({ isCopyrightAgreementAccepted: true, onChange: testFn });
+        fireEvent.click(getByRole('checkbox', { name: 'test deposit agreement' }));
         expect(testFn).toHaveBeenCalledWith('off');
     });
 

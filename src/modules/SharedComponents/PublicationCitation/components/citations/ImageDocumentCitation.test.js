@@ -1,22 +1,24 @@
+import React from 'react';
 import ImageDocumentCitation from './ImageDocumentCitation';
 import { imageDocument } from 'mock/data/testing/records';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(ImageDocumentCitation, props, args);
+    return rtlRender(<ImageDocumentCitation {...props} />);
 }
 
 describe('ImageDocumentCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: imageDocument });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: imageDocument });
+        expect(container).toMatchSnapshot();
     });
 });

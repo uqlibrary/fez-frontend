@@ -1,83 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component InlineLoader should render as expected 1`] = `
-<div
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
-  <ForwardRef(Grid)
-    alignContent="center"
-    alignItems="center"
-    container={true}
-    direction="row"
-    justifyContent="center"
-    spacing={1}
+<div>
+  <div
+    style="padding: 8px;"
   >
-    <ForwardRef(Grid)
-      item={true}
-      sx={
-        Object {
-          "display": Object {
-            "sm": "none",
-            "xs": "block",
-          },
-        }
-      }
-      xs={true}
-    />
-    <ForwardRef(Grid)
-      item={true}
-      style={
-        Object {
-          "textAlign": "center",
-        }
-      }
-      xs="auto"
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
     >
-      <ForwardRef(CircularProgress)
-        aria-label="Loading"
-        color="primary"
-        size={18}
-        thickness={2}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
       />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      style={
-        Object {
-          "textAlign": "center",
-        }
-      }
-      xs="auto"
-    >
-      <ForwardRef(Typography)
-        color="primary"
-        component="span"
-        style={
-          Object {
-            "fontSize": "1.33rem",
-          }
-        }
-        variant="h5"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+        style="text-align: center;"
       >
-        This is a tst
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sx={
-        Object {
-          "display": Object {
-            "sm": "none",
-            "xs": "block",
-          },
-        }
-      }
-      xs={true}
-    />
-  </ForwardRef(Grid)>
+        <span
+          aria-label="Loading"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 18px; height: 18px;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="21"
+              stroke-width="2"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+        style="text-align: center;"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+          style="font-size: 1.33rem;"
+        >
+          This is a tst
+        </span>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+      />
+    </div>
+  </div>
 </div>
 `;

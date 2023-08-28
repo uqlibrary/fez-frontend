@@ -1,156 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EditorsCitationView test  should render component with no contributors 1`] = `
-<WithStyles(AuthorsCitationView)
-  className="citationEditors"
-  getLink={[Function]}
-  idSearchKey={
-    Object {
-      "idKey": "fez_record_search_key_contributor_id",
-      "idOrder": "rek_contributor_id_order",
-      "idSubkey": "rek_contributor_id",
-    }
-  }
-  prefix=" Edited by "
-  publication={Object {}}
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_contributor",
-      "order": "rek_contributor_order",
-      "subkey": "rek_contributor",
-    }
-  }
-  separator=", "
-  showLink={false}
-  suffix=". "
-/>
+<div>
+  <span
+    class="citationEditors empty"
+  />
+</div>
 `;
 
 exports[`EditorsCitationView test  should render component with one contributor 1`] = `
-<WithStyles(AuthorsCitationView)
-  className="citationEditors"
-  getLink={[Function]}
-  idSearchKey={
-    Object {
-      "idKey": "fez_record_search_key_contributor_id",
-      "idOrder": "rek_contributor_id_order",
-      "idSubkey": "rek_contributor_id",
-    }
-  }
-  prefix=" Edited by "
-  publication={
-    Object {
-      "fez_record_search_key_contributor": Array [
-        Object {
-          "rek_contributor": "Pedroso, Marcelo Monteiro",
-          "rek_contributor_id": null,
-          "rek_contributor_order": 1,
-          "rek_contributor_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_contributor",
-      "order": "rek_contributor_order",
-      "subkey": "rek_contributor",
-    }
-  }
-  separator=", "
-  showLink={false}
-  suffix=". "
-/>
+<div>
+  <span
+    class="citationEditors"
+  >
+     Edited by 
+    
+    <span
+      class="citationAuthor"
+      data-testid="rek-contributor-0"
+    >
+      
+      Pedroso, Marcelo Monteiro
+      
+    </span>
+    
+    . 
+  </span>
+</div>
 `;
 
 exports[`EditorsCitationView test  should render component with three contributors 1`] = `
-<WithStyles(AuthorsCitationView)
-  className="citationEditors"
-  getLink={[Function]}
-  idSearchKey={
-    Object {
-      "idKey": "fez_record_search_key_contributor_id",
-      "idOrder": "rek_contributor_id_order",
-      "idSubkey": "rek_contributor_id",
-    }
-  }
-  prefix=" Edited by "
-  publication={
-    Object {
-      "fez_record_search_key_contributor": Array [
-        Object {
-          "rek_contributor": "Pedroso, Marcelo Monteiro",
-          "rek_contributor_id": null,
-          "rek_contributor_order": 1,
-          "rek_contributor_pid": "UQ:678742",
-        },
-        Object {
-          "rek_contributor": "Smith, J",
-          "rek_contributor_id": null,
-          "rek_contributor_order": 2,
-          "rek_contributor_pid": "UQ:678742",
-        },
-        Object {
-          "rek_contributor": "Andersen, J",
-          "rek_contributor_id": null,
-          "rek_contributor_order": 3,
-          "rek_contributor_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_contributor",
-      "order": "rek_contributor_order",
-      "subkey": "rek_contributor",
-    }
-  }
-  separator=", "
-  showLink={false}
-  suffix=". "
-/>
+<div>
+  <span
+    class="citationEditors"
+  >
+     Edited by 
+    
+    <span
+      class="citationAuthor"
+      data-testid="rek-contributor-0"
+    >
+      
+      Pedroso, Marcelo Monteiro
+      
+    </span>
+    , 
+    
+    <span
+      class="citationAuthor"
+      data-testid="rek-contributor-1"
+    >
+      
+      Smith, J
+      
+    </span>
+    , 
+     and 
+    <span
+      class="citationAuthor"
+      data-testid="rek-contributor-2"
+    >
+      
+      Andersen, J
+      
+    </span>
+    
+    . 
+  </span>
+</div>
 `;
 
 exports[`EditorsCitationView test  should render component with two contributors 1`] = `
-<WithStyles(AuthorsCitationView)
-  className="citationEditors"
-  getLink={[Function]}
-  idSearchKey={
-    Object {
-      "idKey": "fez_record_search_key_contributor_id",
-      "idOrder": "rek_contributor_id_order",
-      "idSubkey": "rek_contributor_id",
-    }
-  }
-  prefix=" Edited by "
-  publication={
-    Object {
-      "fez_record_search_key_contributor": Array [
-        Object {
-          "rek_contributor": "Pedroso, Marcelo Monteiro",
-          "rek_contributor_id": null,
-          "rek_contributor_order": 1,
-          "rek_contributor_pid": "UQ:678742",
-        },
-        Object {
-          "rek_contributor": "Smith, J",
-          "rek_contributor_id": null,
-          "rek_contributor_order": 2,
-          "rek_contributor_pid": "UQ:678742",
-        },
-      ],
-    }
-  }
-  searchKey={
-    Object {
-      "key": "fez_record_search_key_contributor",
-      "order": "rek_contributor_order",
-      "subkey": "rek_contributor",
-    }
-  }
-  separator=", "
-  showLink={false}
-  suffix=". "
-/>
+<div>
+  <span
+    class="citationEditors"
+  >
+     Edited by 
+    
+    <span
+      class="citationAuthor"
+      data-testid="rek-contributor-0"
+    >
+      
+      Pedroso, Marcelo Monteiro
+      
+    </span>
+    
+     and 
+    <span
+      class="citationAuthor"
+      data-testid="rek-contributor-1"
+    >
+      
+      Smith, J
+      
+    </span>
+    
+    . 
+  </span>
+</div>
 `;

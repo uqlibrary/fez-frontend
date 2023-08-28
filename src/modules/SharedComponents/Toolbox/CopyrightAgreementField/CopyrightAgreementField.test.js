@@ -1,4 +1,6 @@
+import React from 'react';
 import CopyrightAgreementField from './CopyrightAgreementField';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps) {
     const props = {
@@ -7,6 +9,7 @@ function setup(testProps) {
         input: {
             onChange: jest.fn(),
         },
+        copyrightAgreementFieldId: 'test',
         copyrightAgreement: 'test deposit agreement',
         classes: {
             label: '',
@@ -16,12 +19,12 @@ function setup(testProps) {
         ...testProps,
     };
 
-    return getElement(CopyrightAgreementField, props);
+    return rtlRender(<CopyrightAgreementField {...props} />);
 }
 
 describe('Component CopyrightAgreement', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 });

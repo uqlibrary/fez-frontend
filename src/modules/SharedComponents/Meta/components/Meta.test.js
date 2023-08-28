@@ -21,17 +21,18 @@ function setup(testProps = {}) {
         location: { pathname: '/view/UQ:1234' },
         ...testProps,
     };
-    return getElement(Meta, props);
+
+    return renderComponent(Meta, props, { isShadow: true });
 }
 
 describe('Meta Component ', () => {
     it('should render component with journal', () => {
-        const wrapper = setup({ publication: records.journal });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.journal });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with journal with custom title for edit route', () => {
-        const wrapper = setup({
+        const renderer = setup({
             publication: records.journal,
             routesConfig: [
                 {
@@ -41,111 +42,111 @@ describe('Meta Component ', () => {
             ],
             location: { pathname: '/admin/edit/UQ:123456' },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with data collection', () => {
-        const wrapper = setup({ publication: records.dataCollection });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.dataCollection });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with audio document', () => {
-        const wrapper = setup({ publication: records.audioDocument });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.audioDocument });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with book', () => {
-        const wrapper = setup({ publication: records.book });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.book });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with book chapter', () => {
-        const wrapper = setup({ publication: records.bookChapter });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.bookChapter });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with conference paper', () => {
-        const wrapper = setup({ publication: records.conferencePaper });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.conferencePaper });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with conference proceedings', () => {
-        const wrapper = setup({ publication: records.conferenceProceedings });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.conferenceProceedings });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with creative work', () => {
-        const wrapper = setup({ publication: records.creativeWork });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.creativeWork });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with design document', () => {
-        const wrapper = setup({ publication: records.design });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.design });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with digilib image', () => {
-        const wrapper = setup({ publication: records.digilibImage });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.digilibImage });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with image', () => {
-        const wrapper = setup({ publication: records.imageDocument });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.imageDocument });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with generic document', () => {
-        const wrapper = setup({ publication: records.generic });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.generic });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with manuscript', () => {
-        const wrapper = setup({ publication: records.manuscript });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.manuscript });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with newspaper', () => {
-        const wrapper = setup({ publication: records.newspaperArticle });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.newspaperArticle });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with patent', () => {
-        const wrapper = setup({ publication: records.patent });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.patent });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with preprint', () => {
-        const wrapper = setup({ publication: records.preprint });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.preprint });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with reference entry', () => {
-        const wrapper = setup({ publication: records.referenceEntry });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.referenceEntry });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with research report', () => {
-        const wrapper = setup({ publication: records.researchReport });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.researchReport });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with thesis', () => {
-        const wrapper = setup({ publication: records.thesis });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.thesis });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with working paper', () => {
-        const wrapper = setup({ publication: records.workingPaper });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.workingPaper });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with video document', () => {
-        const wrapper = setup({ publication: records.videoDocument });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ publication: records.videoDocument });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with coverage period data mapped to DC.Subject tag', () => {
-        const wrapper = setup({
+        const renderer = setup({
             publication: {
                 rek_title: 'Record with coverage period',
                 fez_record_search_key_coverage_period: [
@@ -160,11 +161,11 @@ describe('Meta Component ', () => {
                 ],
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with coverage period data mapped to multiple DC.Subject tag', () => {
-        const wrapper = setup({
+        const renderer = setup({
             publication: {
                 rek_title: 'Record with coverage period',
                 fez_record_search_key_coverage_period: [
@@ -186,32 +187,31 @@ describe('Meta Component ', () => {
                 ],
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render component with rek_date year mapped to citation_date exactly as it is', () => {
-        const wrapper = setup({
+        const renderer = setup({
             publication: {
                 rek_title: 'Record with only year in rek_date',
                 rek_date: '1999',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render title only', () => {
-        const wrapper = setup({ location: { pathname: '/' } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({ location: { pathname: '/' } });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render description from rek_description if rek_formatted_abstract has an empty tag', () => {
         const publication = {
             rek_formatted_abstract: '<p></p>',
-            rek_description: '',
+            rek_description: 'desc',
         };
-        const wrapper = setup({ publication });
-
-        expect(wrapper.instance().getMetaTagContent(publication, 'rek_description', null, null)).toBeFalsy();
+        const renderer = setup({ publication });
+        expect(renderer._instance.getMetaTagContent(publication, 'rek_description', null, null)).toEqual('desc');
     });
 
     it('should return rek_formatted_abstract correctly with escaped special characters', () => {
@@ -220,9 +220,9 @@ describe('Meta Component ', () => {
             rek_description: '',
         };
         const expectedValue = '&lt;p&gt;This is some description in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;';
-        const wrapper = setup({ publication });
+        const renderer = setup({ publication });
 
-        expect(wrapper.instance().getMetaTagContent(publication, 'rek_description', null, null)).toEqual(expectedValue);
+        expect(renderer._instance.getMetaTagContent(publication, 'rek_description', null, null)).toEqual(expectedValue);
     });
 
     it('should return rek_title correctly with escaped special characters', () => {
@@ -231,9 +231,9 @@ describe('Meta Component ', () => {
             rek_title: '<p>This is some title in <strong>HTML</strong></p>',
         };
         const expectedValue = '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;';
-        const wrapper = setup({ publication });
+        const renderer = setup({ publication });
 
-        expect(wrapper.instance().getMetaTagContent(publication, 'rek_title', null, null)).toEqual(expectedValue);
+        expect(renderer._instance.getMetaTagContent(publication, 'rek_title', null, null)).toEqual(expectedValue);
     });
 
     it('should return rek_formatted_title correctly escaped characters when rek_title has empty value', () => {
@@ -242,9 +242,9 @@ describe('Meta Component ', () => {
             rek_title: '',
         };
         const expectedValue = '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;';
-        const wrapper = setup({ publication });
+        const renderer = setup({ publication });
 
-        expect(wrapper.instance().getMetaTagContent(publication, 'rek_title', null, null)).toEqual(expectedValue);
+        expect(renderer._instance.getMetaTagContent(publication, 'rek_title', null, null)).toEqual(expectedValue);
     });
 
     it('should return meta tags correctly', () => {
@@ -254,8 +254,8 @@ describe('Meta Component ', () => {
             rek_description: 'This is test description',
             rek_formatted_abstract: '<p></p>',
         };
-        const wrapper = setup({ publication });
-        expect(wrapper.instance().getMetaTags(publication)).toEqual([
+        const renderer = setup({ publication });
+        expect(renderer._instance.getMetaTags(publication)).toEqual([
             { name: 'DC.Title', content: '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;' },
             {
                 name: 'citation_title',
@@ -271,8 +271,8 @@ describe('Meta Component ', () => {
             rek_pid: 'UQ:111111',
             rek_date: '2015-01-01T10:00:00Z',
         };
-        const wrapper = setup({ publication });
-        expect(wrapper.instance().getMetaTags(publication)).toEqual([
+        const renderer = setup({ publication });
+        expect(renderer._instance.getMetaTags(publication)).toEqual([
             { name: 'DC.Identifier', content: 'http://localhost/view/UQ:111111' },
             { name: 'DC.Date', content: '2015-01-01' },
             { name: 'citation_date', content: '2015/01/01' },
@@ -294,8 +294,8 @@ describe('Meta Component ', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication });
-        expect(wrapper.instance().getMetaTags(publication)).toEqual([
+        const renderer = setup({ publication });
+        expect(renderer._instance.getMetaTags(publication)).toEqual([
             { name: 'DC.Identifier', content: 'http://localhost/view/UQ:222222' },
             // {name: 'citation_pdf_url', content: 'http://localhost/view/UQ:222222/abc.pdf'},
             { name: 'DC.Date', content: '2015-01-01' },

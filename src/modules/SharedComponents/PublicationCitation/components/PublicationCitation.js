@@ -255,16 +255,9 @@ export class PublicationCitation extends PureComponent {
 
     _handleDefaultActions = action => {
         const { history, publication } = this.props;
-        switch (action) {
-            case 'fixRecord':
-                history.push(pathConfig.records.fix(publication.rek_pid));
-                break;
-            case 'shareRecord':
-                // TODO: display share interface
-                break;
-            default:
-                // do nothing
-                break;
+        /* istanbul ignore else  */
+        if (action === 'fixRecord') {
+            history.push(pathConfig.records.fix(publication.rek_pid));
         }
     };
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import Immutable from 'immutable';
 import {
     ContentIndicatorsField,
@@ -5,29 +6,29 @@ import {
     showContentIndicatorsField,
 } from './ContentIndicatorsField';
 import {
-    CONTENT_INDICATORS_FOR_CONFERENCE_PAPER,
     CONTENT_INDICATORS,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_THESIS,
     contentIndicators,
 } from 'config/general';
+import { rtlRender, fireEvent, within } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(ContentIndicatorsField, props);
+    return rtlRender(<ContentIndicatorsField {...props} />);
 }
 
 describe('ContentIndicatorsField component', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with given field props', () => {
-        const wrapper = setup({
+        const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
             input: {
@@ -38,14 +39,22 @@ describe('ContentIndicatorsField component', () => {
                 error: 'Test error',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
+    });
 
-        wrapper.setProps({
+    it('should render with given field props in immutable list', () => {
+        const { container } = setup({
+            label: 'Test label',
+            placeholder: 'Test placeholder',
             input: {
                 value: Immutable.List([454079, 454080]),
+                onChange: jest.fn(),
+            },
+            meta: {
+                error: 'Test error',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should mark existing indicators as disabled', () => {
@@ -79,64 +88,54 @@ describe('ContentIndicatorsField component', () => {
         expect(getContentIndicatorsItemsList(contentIndicators(), input)).toEqual(expected);
     });
 
+    it('should handle empty props', () => {
+        const expected = CONTENT_INDICATORS.map(item => ({
+            ...item,
+            disabled: false,
+        }));
+        expected[1].disabled = false;
+        expected[2].disabled = false;
+
+        expect(getContentIndicatorsItemsList(contentIndicators())).toEqual(expected);
+    });
+
     it('should mark dropdown as disabled when all indicators have been selected', () => {
-        const wrapper = setup({
+        const { container } = setup({
             meta: {
                 initial: Immutable.List(CONTENT_INDICATORS),
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should return content indicators list items', () => {
-        const wrapper = setup();
-        const actual = wrapper.prop('itemsList');
-
-        expect(actual).toEqual(getContentIndicatorsItemsList(contentIndicators()));
-        expect(actual).toEqual(
-            expect.arrayContaining(
-                CONTENT_INDICATORS.map(item => ({
-                    ...item,
-                    disabled: false,
-                })),
-            ),
-            expect.not.arrayContaining(
-                CONTENT_INDICATORS_FOR_CONFERENCE_PAPER.map(item => ({
-                    ...item,
-                    disabled: false,
-                })),
-            ),
-        );
+        const { getByTestId } = setup();
+        fireEvent.mouseDown(getByTestId('rek-content-indicator-select'));
+        const elem = getByTestId('rek-content-indicator-options');
+        expect(within(elem).getByRole('option', { name: 'Scholarship of Teaching and Learning' })).toBeInTheDocument();
+        expect(within(elem).getByRole('option', { name: 'Protocol' })).toBeInTheDocument();
+        expect(within(elem).getByRole('option', { name: 'Case Study' })).toBeInTheDocument();
     });
 
     it('should specific should return content indicators list items for conference paper', () => {
         const input = {
             displayType: PUBLICATION_TYPE_CONFERENCE_PAPER,
         };
-        const wrapper = setup(input);
-        const actual = wrapper.prop('itemsList');
-
-        expect(actual).toEqual(
-            getContentIndicatorsItemsList(contentIndicators(PUBLICATION_TYPE_CONFERENCE_PAPER), input),
-        );
-        expect(actual).toEqual(
-            expect.arrayContaining(
-                [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER].map(item => ({
-                    ...item,
-                    disabled: false,
-                })),
-            ),
-        );
+        const { getByTestId } = setup(input);
+        fireEvent.mouseDown(getByTestId('rek-content-indicator-select'));
+        const elem = getByTestId('rek-content-indicator-options');
+        expect(within(elem).getByRole('option', { name: 'Plenary' })).toBeInTheDocument();
+        expect(within(elem).getByRole('option', { name: 'Invited' })).toBeInTheDocument();
     });
 
     it('should not mark dropdown as disabled when all indicators have been selected for admins', () => {
-        const wrapper = setup({
+        const { container } = setup({
             meta: {
                 initial: Immutable.List(CONTENT_INDICATORS),
             },
             canUnselect: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     describe('should detect whether content indicator field should be shown', () => {

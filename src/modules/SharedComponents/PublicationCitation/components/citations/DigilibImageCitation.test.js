@@ -1,22 +1,24 @@
+import React from 'react';
 import DigilibImageCitation from './DigilibImageCitation';
 import { digilibImage } from 'mock/data/testing/records';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(DigilibImageCitation, props, args);
+    return rtlRender(<DigilibImageCitation {...props} />);
 }
 
 describe('DigilibImageCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: digilibImage });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: digilibImage });
+        expect(container).toMatchSnapshot();
     });
 });

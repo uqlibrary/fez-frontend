@@ -3,7 +3,6 @@
 exports[`GroupsWithinCard component should render default view 1`] = `
 <ForwardRef(Grid)
   item={true}
-  key="Title"
   xs={12}
 >
   <AdminCard
@@ -14,7 +13,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
       container={true}
       spacing={1}
     >
-      <Memo()
+      <Memo
         groups={
           Array [
             Array [
@@ -29,15 +28,18 @@ exports[`GroupsWithinCard component should render default view 1`] = `
 `;
 
 exports[`GroupsWithoutCard component should render default view 1`] = `
-<FieldGridItem
-  field="test"
-  group={
-    Array [
-      "test",
-    ]
-  }
-  key="test"
-/>
+Array [
+  Array [
+    <FieldGridItem
+      field="test"
+      group={
+        Array [
+          "test",
+        ]
+      }
+    />,
+  ],
+]
 `;
 
 exports[`Section component should render default view 1`] = `
@@ -45,9 +47,8 @@ exports[`Section component should render default view 1`] = `
   container={true}
   spacing={1}
 >
-  <Memo()
+  <Memo
     disabled={false}
-    key="Title"
     title="Title"
   />
 </ForwardRef(Grid)>
@@ -58,9 +59,8 @@ exports[`Section component should render default view 2`] = `
   container={true}
   spacing={1}
 >
-  <Memo()
+  <Memo
     disabled={false}
-    key="0"
   />
 </ForwardRef(Grid)>
 `;

@@ -1,25 +1,72 @@
+import { render, WithReduxStore } from 'test-utils';
+
 jest.dontMock('./ResearchReportForm');
 
 import ResearchReportForm from './ResearchReportForm';
 import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from 'config/general';
+import React from 'react';
+
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: jest.fn(),
+}));
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
     };
-    return getElement(ResearchReportForm, props);
+    return render(
+        <WithReduxStore>
+            <ResearchReportForm {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('ResearchReportForm renders ', () => {
+    const ReduxFormMock = require('redux-form/immutable');
+    let getNumbersOnlyFn;
+    let transformIssnFn;
+    let normalizeIssnFn;
+    ReduxFormMock.Field.mockImplementation(
+        ({
+            name,
+            title,
+            required,
+            disabled,
+            label,
+            floatingLabelText,
+            inputNormalizer,
+            normalize,
+            transformFunction,
+        }) => {
+            if (name === 'fez_record_search_key_total_pages.rek_total_pages') {
+                getNumbersOnlyFn = normalize;
+            } else if (name === 'fez_record_search_key_issn') {
+                normalizeIssnFn = inputNormalizer;
+                transformIssnFn = transformFunction;
+            }
+
+            return (
+                <field
+                    is="mock"
+                    name={name}
+                    title={title}
+                    required={required}
+                    disabled={disabled}
+                    label={label || floatingLabelText}
+                />
+            );
+        },
+    );
     it('component', () => {
         const testProps = {
             formValues: {
                 get: jest.fn(),
             },
         };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(testProps);
+        expect(container).toMatchSnapshot();
     });
 
     it('component with 15 input fields', () => {
@@ -28,8 +75,8 @@ describe('ResearchReportForm renders ', () => {
                 get: jest.fn(),
             },
         };
-        const wrapper = setup(testProps);
-        expect(wrapper.find('Field').length).toEqual(14);
+        const { container } = setup(testProps);
+        expect(container.getElementsByTagName('field').length).toEqual(14);
     });
 
     it('component with all fields disabled', () => {
@@ -39,44 +86,31 @@ describe('ResearchReportForm renders ', () => {
             },
             submitting: true,
         };
-        const wrapper = setup(testProps);
-        wrapper.find('Field').forEach(field => {
-            expect(field.props().disabled).toEqual(true);
-        });
+        const { container } = setup(testProps);
+        expect(container.querySelectorAll('field[disabled=true]').length).toEqual(14);
     });
 
     it('should normalize total pages field', () => {
-        const testProps = {
-            formValues: {
-                get: jest.fn(),
-            },
-        };
-        const wrapper = setup(testProps);
-        expect(wrapper.instance().getNumbersOnly('Four')).toBe('');
-        expect(wrapper.instance().getNumbersOnly('12Three')).toBe('12');
-        expect(wrapper.instance().getNumbersOnly('  01Three')).toBe('01');
-        expect(wrapper.instance().getNumbersOnly('124')).toBe('124');
+        expect(getNumbersOnlyFn('Four')).toBe('');
+        expect(getNumbersOnlyFn('12Three')).toBe('12');
+        expect(getNumbersOnlyFn('  01Three')).toBe('01');
+        expect(getNumbersOnlyFn('124')).toBe('124');
     });
 
-    it('component with 4 input fields for NTRO', () => {
+    it('component with 5 input fields for NTRO', () => {
         const testProps = {
             formValues: {
                 get: jest.fn(),
             },
             isNtro: true,
         };
-        const wrapper = setup(testProps);
-        expect(wrapper.find('Field').length).toEqual(11);
-        expect(
-            wrapper
-                .find('NtroFields')
-                .dive()
-                .find('Field').length,
-        ).toEqual(6);
+        const { container } = setup(testProps);
+        expect(container.getElementsByTagName('field').length).toEqual(17);
+        expect(container.querySelectorAll('[data-testid=standard-card-ntro-data] field').length).toEqual(5);
     });
 
     it('should render validation required', () => {
-        const wrapper = setup({
+        const { container } = setup({
             formValues: {
                 get: key => {
                     const values = {
@@ -86,32 +120,19 @@ describe('ResearchReportForm renders ', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should normalize the issn input value', () => {
-        const testProps = {
-            formValues: {
-                get: jest.fn(),
-            },
-            isNtro: true,
-        };
-        const wrapper = setup(testProps);
-        expect(wrapper.instance().normalizeIssn('12345678')).toEqual('1234-5678');
-        expect(wrapper.instance().normalizeIssn('1234-5678')).toEqual('1234-5678');
-        expect(wrapper.instance().normalizeIssn('1234')).toEqual('1234');
+        expect(normalizeIssnFn('12345678')).toEqual('1234-5678');
+        expect(normalizeIssnFn('1234-5678')).toEqual('1234-5678');
+        expect(normalizeIssnFn('1234')).toEqual('1234');
     });
 
     it('should transform the issn output value', () => {
-        const testProps = {
-            formValues: {
-                get: jest.fn(),
-            },
-            isNtro: true,
-        };
-        const wrapper = setup(testProps);
-        expect(
-            wrapper.instance().transformIssn({ value: 'rek_issn', order: 'rek_issn_order' }, { key: '1234-5678' }, 3),
-        ).toEqual({ rek_issn: '1234-5678', rek_issn_order: 4 });
+        expect(transformIssnFn({ value: 'rek_issn', order: 'rek_issn_order' }, { key: '1234-5678' }, 3)).toEqual({
+            rek_issn: '1234-5678',
+            rek_issn_order: 4,
+        });
     });
 });

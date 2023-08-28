@@ -1,494 +1,354 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component MenuDrawer should render CRICOS footer 1`] = `null`;
-
 exports[`Component MenuDrawer should render empty drawer 1`] = `
-<ForwardRef(Drawer)
-  anchor="left"
-  classes={
-    Object {
-      "docked": undefined,
-      "paper": undefined,
-      "paperAnchorDockedLeft": undefined,
-    }
-  }
-  id="menudrawer"
-  onClose={[MockFunction]}
-  open={false}
-  variant="temporary"
-/>
+<body>
+  <div />
+</body>
 `;
 
 exports[`Component MenuDrawer should render opened drawer with menus, divider 1`] = `
-<ForwardRef(Drawer)
-  anchor="left"
-  classes={
-    Object {
-      "docked": undefined,
-      "paper": undefined,
-      "paperAnchorDockedLeft": undefined,
-    }
-  }
-  id="menudrawer"
-  onClose={[MockFunction]}
-  open={true}
-  variant="temporary"
+<body
+  style="padding-right: 1024px; overflow: hidden;"
 >
-  <ForwardRef(List)
-    component="nav"
-    id="mainMenu"
-    tabIndex={-1}
+  <div
+    aria-hidden="true"
+  />
+  <div
+    class="MuiDrawer-root MuiDrawer-modal MuiModal-root css-1u2w381-MuiModal-root-MuiDrawer-root"
+    id="menudrawer"
+    role="presentation"
   >
-    <ForwardRef(Grid)
-      alignContent="center"
-      alignItems="center"
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-      spacing={0}
-      wrap="nowrap"
+    <div
+      aria-hidden="true"
+      class="MuiBackdrop-root MuiModal-backdrop css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop"
+      style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+    />
+    <div
+      data-testid="sentinelStart"
+      tabindex="0"
+    />
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation16 MuiDrawer-paper MuiDrawer-paperAnchorLeft css-4t3x6l-MuiPaper-root-MuiDrawer-paper"
+      tabindex="-1"
     >
-      <ForwardRef(Grid)
-        item={true}
-        sm={12}
-        xs={10}
-        zeroMinWidth={true}
+      <nav
+        class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+        id="mainMenu"
+        tabindex="-1"
       >
-        <ExternalLink
-          className="noHover"
-          href="test"
-          id="main-menu-logo"
-          openInNewIcon={false}
-          title="test"
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-vmtq44-MuiGrid-root"
         >
           <div
-            className="test"
-            style={
-              Object {
-                "height": 50,
-                "margin": "8px auto",
-                "width": 160,
-              }
-            }
+            class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1soofh4-MuiGrid-root"
           >
-            test
+            <a
+              class="noHover makeStyles-externalLink-1 makeStyles-externalLink-3"
+              data-analyticsid="main-menu-logo-link"
+              data-testid="main-menu-logo-link"
+              href="test"
+              id="main-menu-logo-link"
+              rel="noopener noreferrer"
+              tabindex="0"
+              target="_blank"
+              title="test"
+            >
+              <div
+                class="test"
+                style="height: 50px; width: 160px; margin: 8px auto;"
+              >
+                test
+              </div>
+            </a>
           </div>
-        </ExternalLink>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "display": Object {
-              "sm": "none",
-              "xs": "block",
-            },
-          }
-        }
-        xs={2}
-      >
-        <ForwardRef(IconButton)
-          aria-label="Close menu"
-          onClick={[MockFunction]}
-          size="small"
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-bt3e8x-MuiGrid-root"
+          >
+            <button
+              aria-label="Close menu"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="KeyboardArrowLeftIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <span
+          class="menu-item-container"
         >
-          <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
-        </ForwardRef(IconButton)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-    <span
-      className="menu-item-container"
-      key="menu-item-0"
-    >
-      <ForwardRef(ListItem)
-        button={true}
-        id="menu-item-0"
-        onClick={[Function]}
-      >
-        <ForwardRef(ListItemText)
-          classes={
-            Object {
-              "primary": undefined,
-              "secondary": undefined,
-            }
-          }
-          id="menu-itemText-0"
-          primary="Primary text 0"
-          secondary="secondary text 0"
+          <div
+            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button css-155c4xx-MuiButtonBase-root-MuiListItem-root"
+            id="menu-item-0"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+              id="menu-itemText-0"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+              >
+                Primary text 0
+              </span>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
+              >
+                secondary text 0
+              </p>
+            </div>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </div>
+        </span>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
         />
-      </ForwardRef(ListItem)>
-    </span>
-    <ForwardRef(Divider)
-      key="menu_item_1"
+        <span
+          class="menu-item-container"
+        >
+          <div
+            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button css-155c4xx-MuiButtonBase-root-MuiListItem-root"
+            id="menu-item-2"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+              id="menu-itemText-2"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+              >
+                Primary text 1
+              </span>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
+              >
+                secondary text 1
+              </p>
+            </div>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </div>
+        </span>
+      </nav>
+      <div
+        data-testid="after-menu-drawer"
+        id="afterMenuDrawer"
+        tabindex="-1"
+      />
+      <div>
+        CRICOS Provider No: 
+        <a
+          class="makeStyles-externalLink-1 makeStyles-externalLink-4"
+          data-analyticsid="cricos-link"
+          data-testid="cricos-link"
+          href="http://www.uq.edu.au/about/cricos-link"
+          id="cricos-link"
+          rel="noopener noreferrer"
+          tabindex="0"
+          target="_blank"
+          title="CRICOS Provider No: "
+        >
+          00025B
+        </a>
+      </div>
+    </div>
+    <div
+      data-testid="sentinelEnd"
+      tabindex="0"
     />
-    <span
-      className="menu-item-container"
-      key="menu-item-2"
-    >
-      <ForwardRef(ListItem)
-        button={true}
-        id="menu-item-2"
-        onClick={[Function]}
-      >
-        <ForwardRef(ListItemText)
-          classes={
-            Object {
-              "primary": undefined,
-              "secondary": undefined,
-            }
-          }
-          id="menu-itemText-2"
-          primary="Primary text 1"
-          secondary="secondary text 1"
-        />
-      </ForwardRef(ListItem)>
-    </span>
-  </ForwardRef(List)>
-  <div
-    id="afterMenuDrawer"
-    tabIndex={-1}
-  />
-  <div>
-    CRICOS Provider No: 
-    <ExternalLink
-      href="http://www.uq.edu.au/about/cricos-link"
-      id="cricos"
-      openInNewIcon={false}
-      title="CRICOS Provider No: "
-    >
-      00025B
-    </ExternalLink>
   </div>
-</ForwardRef(Drawer)>
+</body>
 `;
 
 exports[`Component MenuDrawer should render opened drawer with menus, divider and skip nav button 1`] = `
-<ForwardRef(Drawer)
-  anchor="left"
-  classes={
-    Object {
-      "docked": undefined,
-      "paper": undefined,
-      "paperAnchorDockedLeft": undefined,
-    }
-  }
-  id="menudrawer"
-  onClose={[MockFunction]}
-  open={true}
-  variant="permanent"
+<body
+  style=""
 >
-  <ForwardRef(List)
-    component="nav"
-    id="mainMenu"
-    tabIndex={-1}
-  >
-    <ForwardRef(Grid)
-      alignContent="center"
-      alignItems="center"
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-      spacing={0}
-      wrap="nowrap"
+  <div>
+    <div
+      class="MuiDrawer-root MuiDrawer-docked css-7ik032-MuiDrawer-docked"
+      id="menudrawer"
     >
-      <ForwardRef(Grid)
-        item={true}
-        sm={12}
-        xs={10}
-        zeroMinWidth={true}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
       >
-        <ExternalLink
-          className="noHover"
-          href="test"
-          id="main-menu-logo"
-          openInNewIcon={false}
-          title="test"
+        <nav
+          class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+          id="mainMenu"
+          tabindex="-1"
         >
           <div
-            className="test"
-            style={
-              Object {
-                "height": 50,
-                "margin": "8px auto",
-                "width": 160,
-              }
-            }
+            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-vmtq44-MuiGrid-root"
           >
-            test
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1soofh4-MuiGrid-root"
+            >
+              <a
+                class="noHover makeStyles-externalLink-5 makeStyles-externalLink-7"
+                data-analyticsid="main-menu-logo-link"
+                data-testid="main-menu-logo-link"
+                href="test"
+                id="main-menu-logo-link"
+                rel="noopener noreferrer"
+                tabindex="0"
+                target="_blank"
+                title="test"
+              >
+                <div
+                  class="test"
+                  style="height: 50px; width: 160px; margin: 8px auto;"
+                >
+                  test
+                </div>
+              </a>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-bt3e8x-MuiGrid-root"
+            >
+              <button
+                aria-label="Close menu"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="KeyboardArrowLeftIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
           </div>
-        </ExternalLink>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "display": Object {
-              "sm": "none",
-              "xs": "block",
-            },
-          }
-        }
-        xs={2}
-      >
-        <ForwardRef(IconButton)
-          aria-label="Close menu"
-          onClick={[MockFunction]}
-          size="small"
-        >
-          <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
-        </ForwardRef(IconButton)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-    <div
-      aria-label="Skip navigation"
-      id="skipNav"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      tabIndex={1}
-      type="button"
-    >
-      <ForwardRef(Button)
-        className="skipNavButton"
-        color="primary"
-        onClick={[Function]}
-        tabIndex={-1}
-        variant="contained"
-      >
-        Skip navigation
-      </ForwardRef(Button)>
-    </div>
-    <span
-      className="menu-item-container"
-      key="menu-item-0"
-    >
-      <ForwardRef(ListItem)
-        button={true}
-        id="menu-item-0"
-        onClick={[Function]}
-      >
-        <ForwardRef(ListItemText)
-          classes={
-            Object {
-              "primary": undefined,
-              "secondary": undefined,
-            }
-          }
-          id="menu-itemText-0"
-          primary="Primary text 0"
-          secondary="secondary text 0"
-        />
-      </ForwardRef(ListItem)>
-    </span>
-    <ForwardRef(Divider)
-      key="menu_item_1"
-    />
-    <span
-      className="menu-item-container"
-      key="menu-item-2"
-    >
-      <ForwardRef(ListItem)
-        button={true}
-        id="menu-item-2"
-        onClick={[Function]}
-      >
-        <ForwardRef(ListItemText)
-          classes={
-            Object {
-              "primary": undefined,
-              "secondary": undefined,
-            }
-          }
-          id="menu-itemText-2"
-          primary="Primary text 1"
-          secondary="secondary text 1"
-        />
-      </ForwardRef(ListItem)>
-    </span>
-  </ForwardRef(List)>
-  <div
-    id="afterMenuDrawer"
-    tabIndex={-1}
-  />
-  <div>
-    CRICOS Provider No: 
-    <ExternalLink
-      href="http://www.uq.edu.au/about/cricos-link"
-      id="cricos"
-      openInNewIcon={false}
-      title="CRICOS Provider No: "
-    >
-      00025B
-    </ExternalLink>
-  </div>
-</ForwardRef(Drawer)>
-`;
-
-exports[`Component MenuDrawer should render opened drawer with menus, divider and skip nav button 2`] = `
-<ForwardRef(Drawer)
-  anchor="left"
-  classes={
-    Object {
-      "docked": undefined,
-      "paper": undefined,
-      "paperAnchorDockedLeft": undefined,
-    }
-  }
-  id="menudrawer"
-  onClose={[MockFunction]}
-  open={true}
-  variant="permanent"
->
-  <ForwardRef(List)
-    component="nav"
-    id="mainMenu"
-    tabIndex={-1}
-  >
-    <ForwardRef(Grid)
-      alignContent="center"
-      alignItems="center"
-      classes={
-        Object {
-          "container": undefined,
-        }
-      }
-      container={true}
-      spacing={0}
-      wrap="nowrap"
-    >
-      <ForwardRef(Grid)
-        item={true}
-        sm={12}
-        xs={10}
-        zeroMinWidth={true}
-      >
-        <ExternalLink
-          className="noHover"
-          href="test"
-          id="main-menu-logo"
-          openInNewIcon={false}
-          title="test"
-        >
           <div
-            className="test"
-            style={
-              Object {
-                "height": 50,
-                "margin": "8px auto",
-                "width": 160,
-              }
-            }
+            aria-label="Skip navigation"
+            id="skipNav"
+            tabindex="1"
+            type="button"
           >
-            test
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium skipNavButton css-argx73-MuiButtonBase-root-MuiButton-root"
+              tabindex="-1"
+              type="button"
+            >
+              Skip navigation
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
           </div>
-        </ExternalLink>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "display": Object {
-              "sm": "none",
-              "xs": "block",
-            },
-          }
-        }
-        xs={2}
-      >
-        <ForwardRef(IconButton)
-          aria-label="Close menu"
-          onClick={[MockFunction]}
-          size="small"
-        >
-          <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
-        </ForwardRef(IconButton)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-    <div
-      aria-label="Skip navigation"
-      id="skipNav"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      tabIndex={1}
-      type="button"
-    >
-      <ForwardRef(Button)
-        className="skipNavButton"
-        color="primary"
-        onClick={[Function]}
-        tabIndex={-1}
-        variant="contained"
-      >
-        Skip navigation
-      </ForwardRef(Button)>
+          <span
+            class="menu-item-container"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button css-155c4xx-MuiButtonBase-root-MuiListItem-root"
+              id="menu-item-0"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+                id="menu-itemText-0"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+                >
+                  Primary text 0
+                </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
+                >
+                  secondary text 0
+                </p>
+              </div>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </div>
+          </span>
+          <hr
+            class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+          />
+          <span
+            class="menu-item-container"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button css-155c4xx-MuiButtonBase-root-MuiListItem-root"
+              id="menu-item-2"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+                id="menu-itemText-2"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+                >
+                  Primary text 1
+                </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
+                >
+                  secondary text 1
+                </p>
+              </div>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </div>
+          </span>
+        </nav>
+        <div
+          data-testid="after-menu-drawer"
+          id="afterMenuDrawer"
+          tabindex="-1"
+        />
+        <div>
+          CRICOS Provider No: 
+          <a
+            class="makeStyles-externalLink-5 makeStyles-externalLink-8"
+            data-analyticsid="cricos-link"
+            data-testid="cricos-link"
+            href="http://www.uq.edu.au/about/cricos-link"
+            id="cricos-link"
+            rel="noopener noreferrer"
+            tabindex="0"
+            target="_blank"
+            title="CRICOS Provider No: "
+          >
+            00025B
+          </a>
+        </div>
+      </div>
     </div>
-    <span
-      className="menu-item-container"
-      key="menu-item-0"
-    >
-      <ForwardRef(ListItem)
-        button={true}
-        id="menu-item-0"
-        onClick={[Function]}
-      >
-        <ForwardRef(ListItemText)
-          classes={
-            Object {
-              "primary": undefined,
-              "secondary": undefined,
-            }
-          }
-          id="menu-itemText-0"
-          primary="Primary text 0"
-          secondary="secondary text 0"
-        />
-      </ForwardRef(ListItem)>
-    </span>
-    <ForwardRef(Divider)
-      key="menu_item_1"
-    />
-    <span
-      className="menu-item-container"
-      key="menu-item-2"
-    >
-      <ForwardRef(ListItem)
-        button={true}
-        id="menu-item-2"
-        onClick={[Function]}
-      >
-        <ForwardRef(ListItemText)
-          classes={
-            Object {
-              "primary": undefined,
-              "secondary": undefined,
-            }
-          }
-          id="menu-itemText-2"
-          primary="Primary text 1"
-          secondary="secondary text 1"
-        />
-      </ForwardRef(ListItem)>
-    </span>
-  </ForwardRef(List)>
-  <div
-    id="afterMenuDrawer"
-    tabIndex={-1}
-  />
-  <div>
-    CRICOS Provider No: 
-    <ExternalLink
-      href="http://www.uq.edu.au/about/cricos-link"
-      id="cricos"
-      openInNewIcon={false}
-      title="CRICOS Provider No: "
-    >
-      00025B
-    </ExternalLink>
   </div>
-</ForwardRef(Drawer)>
+</body>
 `;

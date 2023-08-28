@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import { PLACEHOLDER_ISO8601_ZULU_DATE } from '../../../../../../config/general';
+import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 
 export default class DateCitationView extends PureComponent {
     static propTypes = {

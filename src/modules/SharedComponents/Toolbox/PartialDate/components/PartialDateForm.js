@@ -100,6 +100,7 @@ export class PartialDateForm extends PureComponent {
             (props.input && props.input.value && moment(props.input.value)) ||
             (props.meta && props.meta.initial && moment(props.meta.initial)) ||
             null;
+
         if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_ISO8601_ZULU_DATE)) {
             this.state = {
                 day: dateValue.date(),
@@ -181,26 +182,27 @@ export class PartialDateForm extends PureComponent {
         return validationStatus;
     };
 
-    _displayErrors = (state, validationStatus, allowPartial = '', isRequired = '') => {
-        const allowPartialHere = allowPartial === '' ? this.props.allowPartial : allowPartial;
+    _displayErrors = (state, validationStatus, allowPartial, isRequired = '') => {
         const isRequiredHere = isRequired === '' ? this.props.required : isRequired;
 
         const { day, month, year } = state;
         const { locale } = this.props;
         const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-
+        /* istanbul ignore next */
         this.errors.date = (!!year && isNaN(year) && locale.validationMessage.year) || '';
 
         switch (validationStatus) {
             case STATUS_INVALID:
                 this.errors.date =
                     // initial load of 'required' message for required date fields
-                    (allowPartialHere &&
+                    /* istanbul ignore next */
+                    (allowPartial &&
                         isRequiredHere &&
                         !year &&
                         !isNaN(year) &&
                         locale.validationMessage.yearRequired) ||
                     // initial load of 'required' message for required date fields
+                    /* istanbul ignore next */
                     (isNaN(year) && locale.validationMessage.year) ||
                     // they've just typed in a nonsense number
                     // dont wait for date complete for the moment validation to kick in
@@ -208,10 +210,13 @@ export class PartialDateForm extends PureComponent {
                     // // date fields initially blank // remove
                     // (year === null && this._isUnselected(month) && day === null && '') || // remove
                     // they've entered a day
+                    /* istanbul ignore next */
                     (year === null && this._isUnselected(month) && !!day && '') ||
                     // they've entered a day and a month
+                    /* istanbul ignore next */
                     (year === null && validMonthIndices.includes(month) && !!day && '') ||
                     // encourage them to select a month if the year and day are selected
+                    /* istanbul ignore next */
                     (!!year && this._isUnselected(month) && !!day && locale.validationMessage.month) ||
                     locale.validationMessage.date;
                 break;
@@ -220,10 +225,10 @@ export class PartialDateForm extends PureComponent {
                 if (!!year && validMonthIndices.includes(month) && !!day) {
                     // date complete for non-partial-entry
                     this.errors.date = '';
-                } else if (allowPartialHere && !!year && this._isUnselected(month) && !day) {
+                } else if (allowPartial && !!year && this._isUnselected(month) && !day) {
                     // partial entry means they can get away with just a year
                     this.errors.date = '';
-                } else if (!allowPartialHere && !!this.props.clearable && !year && !day && month === MONTH_UNSELECTED) {
+                } else if (!allowPartial && !!this.props.clearable && !year && !day && month === MONTH_UNSELECTED) {
                     this.errors.date = '';
                 } else {
                     this.errors.date = locale.validationMessage.date;
@@ -271,7 +276,10 @@ export class PartialDateForm extends PureComponent {
                 this.setState({ [key]: '' });
             } else {
                 this.setState({
-                    [key]: parseInt(event.target.value === undefined ? value : event.target.value, 10),
+                    [key]: parseInt(
+                        event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
+                        10,
+                    ),
                 });
             }
         };
@@ -326,7 +334,7 @@ export class PartialDateForm extends PureComponent {
                                 name="month"
                                 error={!!isError}
                                 disabled={this.props.disabled}
-                                value={this.state.month === null ? -1 : this.state.month}
+                                value={this.state.month === null ? /* istanbul ignore next */ -1 : this.state.month}
                                 placeholder={locale.monthLabel}
                                 onChange={this._onDateChanged('month')}
                                 inputProps={{

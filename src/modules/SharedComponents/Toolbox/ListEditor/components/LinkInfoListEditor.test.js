@@ -1,16 +1,18 @@
+import React from 'react';
 import { LinkInfoListEditor } from './LinkInfoListEditor';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         listEditorId: 'link-info-list-editor',
         ...testProps,
     };
-    return getElement(LinkInfoListEditor, props, args);
+    return rtlRender(<LinkInfoListEditor {...props} />);
 }
 
 describe('LinkInfoListEditor component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 });

@@ -1,47 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component NtroHeader should render default view 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  xs={12}
->
-  <Alert
-    allowDismiss={false}
-    customIcon={null}
-    customType={null}
-    disableAlertClick={false}
-    dismissTitle="Click to dismiss this alert"
-    message={
-      <React.Fragment>
-        <p>
-          In order to submit this NTRO work type or update an existing NTRO work, you must include:
-        </p>
-        <ol>
-          <li>
-            A creator research statement of up to 2000 characters (250 – 300 words) that includes the background, contribution and significance of the work. It must be substantiated by the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.
-             
-            <b>
-              This is not for public view.
-            </b>
-          </li>
-          <li>
-            An abstract/description of the work, up to 800 characters (approx. 100 words). This is for public view.
-          </li>
-          <li>
-            At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or review of the work.
-          </li>
-        </ol>
-        <p>
-          Note:
-          <br />
-          A research statement can be updated at any time via the REQUEST CORRECTION button for the work.
-        </p>
-      </React.Fragment>
-    }
-    showLoader={false}
-    title="Non-traditional research output (NTRO) requirements"
-    type="info_outline"
-    wiggle={null}
-  />
-</ForwardRef(Grid)>
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      data-testid="alert"
+      style="margin-top: 5px;"
+    >
+      <div
+        class="MuiGrid-root makeStyles-root-1 MuiGrid-container makeStyles-info_outline-16 makeStyles-common-2 css-1k6h6af-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item makeStyles-icon-5 alert-icon  css-13i4rnv-MuiGrid-root"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                data-testid="InfoOutlinedIcon"
+                focusable="false"
+                id="info-outline-icon"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                />
+              </svg>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-6 alert-text css-1vd824g-MuiGrid-root"
+            >
+              <b>
+                Non-traditional research output (NTRO) requirements - 
+              </b>
+              <p>
+                In order to submit this NTRO work type or update an existing NTRO work, you must include:
+              </p>
+              <ol>
+                <li>
+                  A creator research statement of up to 2000 characters (250 – 300 words) that includes the background, contribution and significance of the work. It must be substantiated by the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.
+                   
+                  <b>
+                    This is not for public view.
+                  </b>
+                </li>
+                <li>
+                  An abstract/description of the work, up to 800 characters (approx. 100 words). This is for public view.
+                </li>
+                <li>
+                  At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or review of the work.
+                </li>
+              </ol>
+              <p>
+                Note:
+                <br />
+                A research statement can be updated at any time via the REQUEST CORRECTION button for the work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

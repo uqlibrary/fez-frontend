@@ -9,7 +9,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(FilesSection, props, args);
+    return renderComponent(FilesSection, props, args);
 }
 
 describe('FilesSection component', () => {
@@ -24,8 +24,8 @@ describe('FilesSection component', () => {
             },
         }));
 
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({});
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render default view for Files on a Data Collection publication type', () => {
@@ -35,7 +35,7 @@ describe('FilesSection component', () => {
             },
         }));
 
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({});
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

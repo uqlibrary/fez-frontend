@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Chart component should mount empty chart component 1`] = `<div />`;
+exports[`Chart component componentDidUpdate 1`] = `
+<div>
+  <div />
+</div>
+`;
+
+exports[`Chart component should mount empty chart component 1`] = `
+<div>
+  <div />
+</div>
+`;

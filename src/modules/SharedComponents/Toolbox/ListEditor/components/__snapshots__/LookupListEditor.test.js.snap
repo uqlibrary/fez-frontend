@@ -1,39 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LookupListEditor should render default component 1`] = `
-<ListEditor
-  canEdit={false}
-  distinctOnly={false}
-  formComponent={[Function]}
-  getItemSelectedToEdit={[Function]}
-  hideReorder={false}
-  input={
-    Object {
-      "onChange": [MockFunction],
-    }
-  }
-  inputNormalizer={[Function]}
-  listEditorId="lookup-list-editor"
-  locale={
-    Object {
-      "form": Object {
-        "locale": Object {
-          "inputFieldLabel": "NoLabel",
-        },
-      },
-    }
-  }
-  maxCount={0}
-  required={false}
-  rowItemTemplate={[Function]}
-  scrollList={false}
-  scrollListHeight={250}
-  searchKey={
-    Object {
-      "order": "rek_order",
-      "value": "rek_value",
-    }
-  }
-  transformFunction={[Function]}
-/>
+<div>
+  <div
+    class="undefined"
+    id="lookup-list-editor-list-editor"
+  >
+    <div
+      data-testid="lookup-list-editor-list"
+      id="lookup-list-editor-list"
+    />
+    <p
+      class="MuiFormHelperText-root css-1d7hrfi-MuiFormHelperText-root"
+    />
+  </div>
+</div>
 `;

@@ -37,6 +37,9 @@ import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'mo
 import { FileIcon } from './FileIcon';
 import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
 import * as fileUploadLocale from '../FileUploader/locale';
+import Box from '@mui/material/Box';
+import { FileAvStateIcon } from '../FileAvStateIcon';
+import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -52,10 +55,6 @@ export const useStyles = makeStyles(
             opacity: 0.5,
         },
         thumbIconCentered: {
-            textAlign: 'center',
-        },
-        upDownArrowContainer: {
-            padding: '0 !important',
             textAlign: 'center',
         },
         upDownArrow: {
@@ -156,6 +155,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   return a.dsi_order < b.dsi_order ? -1 : 1;
               })
               .map((dataStream, key) => {
+                  const id = dataStream.dsi_id;
                   const pid = dataStream.dsi_pid;
                   const fileName = dataStream.dsi_dsid;
                   const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
@@ -165,9 +165,12 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   const webFileName = checkForWeb(fileName, dataStreams);
 
                   const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
+                  const previewUrl = previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName);
+                  const isInfected = dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED;
 
                   return {
-                      id: dataStream.dsi_id,
+                      id,
+                      key: id,
                       pid,
                       fileName,
                       description: dataStream.dsi_label,
@@ -186,14 +189,17 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                           securityAccess: true,
                       },
                       openAccessStatus,
-                      previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
+                      previewMediaUrl: isInfected ? null : previewUrl,
                       webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
                       mediaUrl: getUrl(pid, fileName),
                       securityStatus: true,
                       securityPolicyStatus: getSecurityPolicyFileEmbargoStatus(dataStream),
                       embargoDate: dataStream.dsi_embargo_date,
                       fileOrder: key + 1,
-                      key: dataStream.dsi_id,
+                      avCheck: {
+                          state: dataStream.dsi_av_check_state,
+                          date: dataStream.dsi_av_check_date,
+                      },
                   };
               })
         : [];
@@ -221,6 +227,8 @@ export const checkFileNamesForDupes = (
         );
     return !hasDupe;
 };
+
+export const getFilenameId = id => `file-name-${id}`;
 
 export const AttachedFiles = ({
     dataStreams,
@@ -250,6 +258,7 @@ export const AttachedFiles = ({
     const isAuthor = userIsAuthor();
     const { openAccessStatusId } = useFormValuesContext();
     const { formValues: formValuesFromContext } = useFormValuesContext();
+    const isAdminEditing = isAdmin && canEdit;
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor, record);
@@ -357,18 +366,23 @@ export const AttachedFiles = ({
                     <Alert allowDismiss type="info" message={getSensitiveHandlingNote(record)} />
                 )}
                 {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
-                {isAdmin && canEdit && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
-                <div style={{ padding: 8 }}>
+                {isAdminEditing && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
+                <Box sx={{ padding: 1 }}>
                     <Grid container direction="row" alignItems="center" spacing={2} className={classes.header}>
                         <Grid item xs={1}>
                             &nbsp;
                         </Grid>
-                        <Grid item sm={3}>
+                        <Grid item sm={3} xs={6}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.fileName}
                             </Typography>
                         </Grid>
-                        <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <Grid
+                            item
+                            md={isAdminEditing ? 3 : 5}
+                            sm={isAdminEditing ? 3 : 7}
+                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                        >
                             <Typography variant="caption" gutterBottom>
                                 {locale.description}
                             </Typography>
@@ -378,32 +392,24 @@ export const AttachedFiles = ({
                                 {locale.size}
                             </Typography>
                         </Grid>
-                        <Grid item sm sx={{ display: { xs: 'none', sm: 'block' } }} />
-
-                        {isAdmin && canEdit && (
-                            <React.Fragment>
-                                <Grid item xs={2}>
-                                    <Typography variant="caption" gutterBottom>
-                                        {locale.embargoDateLabel || 'Embargo date'}
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs />
-                            </React.Fragment>
+                        {isAdminEditing && (
+                            <Grid item md={3} sm={4} sx={{ textAlign: 'center' }}>
+                                <Typography variant="caption" gutterBottom>
+                                    {locale.embargoDateLabel || 'Embargo date'}
+                                </Typography>
+                            </Grid>
                         )}
                     </Grid>
-                </div>
+                </Box>
                 {fileData
                     .sort((a, b) => a.fileOrder - b.fileOrder)
                     .map((item, index) => (
                         <React.Fragment key={item.id}>
-                            <div
-                                style={{ padding: 8 }}
-                                data-testid={`fez-datastream-info-attached-list-row-${item.id}`}
-                            >
+                            <Box sx={{ padding: 1 }} data-testid={`fez-datastream-info-attached-list-row-${item.id}`}>
                                 <Grid container className={classes.header} spacing={3}>
                                     <Grid item xs={12}>
-                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
-                                            <Grid item xs={1} className={classes.upDownArrowContainer}>
+                                        <Grid container direction="row" alignItems="center" spacing={2} padding={0}>
+                                            <Grid xs={1} padding={0} wrap="nowrap" textAlign={'center'}>
                                                 <IconButton
                                                     disabled={index === 0}
                                                     className={classes.upDownArrow}
@@ -416,7 +422,14 @@ export const AttachedFiles = ({
                                                 </IconButton>
                                             </Grid>
                                         </Grid>
-                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
+                                        <Grid
+                                            container
+                                            direction="row"
+                                            alignItems="center"
+                                            spacing={2}
+                                            padding={0}
+                                            wrap="nowrap"
+                                        >
                                             <Grid item xs={1} className={classes.thumbIconCentered}>
                                                 <FileIcon
                                                     {...item.iconProps}
@@ -424,8 +437,8 @@ export const AttachedFiles = ({
                                                     id={`file-icon-${index}`}
                                                 />
                                             </Grid>
-                                            <Grid item sm={3} className={classes.dataWrapper}>
-                                                {isAdmin && canEdit ? (
+                                            <Grid item sm={3} xs={7} className={classes.dataWrapper}>
+                                                {isAdminEditing ? (
                                                     <EditableFileName
                                                         {...item}
                                                         onFileNameChange={onFileNameChange(item.id)}
@@ -440,24 +453,25 @@ export const AttachedFiles = ({
                                                             setErrorMessage,
                                                             getDsIndex(item.id),
                                                         )}
-                                                        id={`file-name-${item.id}`}
+                                                        id={getFilenameId(item.id)}
                                                         key={item.id}
                                                     />
                                                 ) : (
                                                     <FileName
                                                         {...item}
                                                         onFileSelect={showPreview}
-                                                        id={`file-name-${item.id}`}
+                                                        id={getFilenameId(item.id)}
                                                     />
                                                 )}
                                             </Grid>
                                             <Grid
                                                 item
-                                                sm={3}
+                                                md={isAdminEditing ? 3 : 5}
+                                                sm={isAdminEditing ? 3 : 7}
                                                 className={classes.dataWrapper}
                                                 sx={{ display: { xs: 'none', sm: 'block' } }}
                                             >
-                                                {isAdmin && canEdit ? (
+                                                {isAdminEditing ? (
                                                     <TextField
                                                         fullWidth
                                                         onChange={onFileDescriptionChange(item.id)}
@@ -485,58 +499,97 @@ export const AttachedFiles = ({
                                                     {item.calculatedSize}
                                                 </Typography>
                                             </Grid>
-                                            <Grid
-                                                item
-                                                sm
-                                                style={{ textAlign: 'right' }}
-                                                sx={{ display: { xs: 'none', sm: 'block' } }}
-                                            >
-                                                <OpenAccessIcon
-                                                    {...item.openAccessStatus}
-                                                    securityStatus={item.securityStatus}
-                                                />
-                                            </Grid>
-                                            {isAdmin && canEdit && (
-                                                <React.Fragment>
-                                                    {/* cypress test does not like full stop in the id */}
-                                                    <Grid
-                                                        item
-                                                        xs={2}
-                                                        id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
-                                                    >
-                                                        {(openAccessConfig.openAccessFiles.includes(
-                                                            openAccessStatusId,
-                                                        ) ||
-                                                            !!item.securityPolicyStatus.isEmbargoed) && (
-                                                            <FileUploadEmbargoDate
-                                                                value={
-                                                                    item.openAccessStatus.embargoDate ??
-                                                                    item.securityPolicyStatus.embargoDate
-                                                                }
-                                                                onChange={onEmbargoDateChange(item.id)}
-                                                                disabled={disabled}
-                                                                fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
-                                                                minDate={moment().toDate()}
+                                            {!isAdminEditing && (
+                                                <Grid item xs sx={{ textAlign: 'right' }}>
+                                                    <Box sx={{ whiteSpace: 'nowrap' }}>
+                                                        <Box component={'span'} paddingRight={1}>
+                                                            <FileAvStateIcon
+                                                                state={item.avCheck?.state}
+                                                                checkedAt={item.avCheck?.date}
+                                                                id={item.id}
                                                             />
-                                                        )}
-                                                    </Grid>
-                                                    <Grid item xs style={{ textAlign: 'right' }}>
-                                                        <Tooltip title={deleteHint}>
-                                                            <span>
-                                                                <IconButton
-                                                                    id={`delete-file-${index}`}
-                                                                    data-analyticsid={`delete-file-${index}`}
-                                                                    data-testid={`delete-file-${index}`}
-                                                                    onClick={onFileDelete(item.fileName)}
+                                                        </Box>
+                                                        <Box component={'span'} paddingRight={1}>
+                                                            <OpenAccessIcon
+                                                                {...item.openAccessStatus}
+                                                                securityStatus={item.securityStatus}
+                                                            />
+                                                        </Box>
+                                                    </Box>
+                                                </Grid>
+                                            )}
+                                            {isAdminEditing && (
+                                                <Grid item md={3} sm={4}>
+                                                    <Grid container wrap="nowrap">
+                                                        <Grid item xs={3}>
+                                                            <Box
+                                                                sx={{
+                                                                    display: { xs: 'none', md: 'block' },
+                                                                    whiteSpace: 'nowrap',
+                                                                }}
+                                                            >
+                                                                <Box component={'span'} paddingRight={1}>
+                                                                    <FileAvStateIcon
+                                                                        state={item.avCheck?.state}
+                                                                        checkedAt={item.avCheck?.date}
+                                                                        id={item.id}
+                                                                    />
+                                                                </Box>
+                                                                <Box component={'span'} paddingRight={1}>
+                                                                    <OpenAccessIcon
+                                                                        {...item.openAccessStatus}
+                                                                        securityStatus={item.securityStatus}
+                                                                    />
+                                                                </Box>
+                                                            </Box>
+                                                        </Grid>
+                                                        <Grid
+                                                            item
+                                                            xs={7}
+                                                            id={`embargoDateButton-${item.fileName.replace(
+                                                                /\./g,
+                                                                '-',
+                                                            )}`}
+                                                            sx={{ marginLeft: 1 }}
+                                                        >
+                                                            {(openAccessConfig.openAccessFiles.includes(
+                                                                openAccessStatusId,
+                                                            ) ||
+                                                                !!item.securityPolicyStatus.isEmbargoed) && (
+                                                                <FileUploadEmbargoDate
+                                                                    value={
+                                                                        item.openAccessStatus.embargoDate ??
+                                                                        item.securityPolicyStatus.embargoDate
+                                                                    }
+                                                                    onChange={onEmbargoDateChange(item.id)}
                                                                     disabled={disabled}
-                                                                    size="large"
-                                                                >
-                                                                    <Delete />
-                                                                </IconButton>
-                                                            </span>
-                                                        </Tooltip>
+                                                                    fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
+                                                                    minDate={moment().toDate()}
+                                                                />
+                                                            )}
+                                                        </Grid>
+                                                        <Grid
+                                                            item
+                                                            xs={2}
+                                                            sx={{ marginTop: '-10px', textAlign: 'right' }}
+                                                        >
+                                                            <Tooltip title={deleteHint}>
+                                                                <span>
+                                                                    <IconButton
+                                                                        id={`delete-file-${index}`}
+                                                                        data-testid={`delete-file-${index}`}
+                                                                        data-analyticsid={`delete-file-${index}`}
+                                                                        onClick={onFileDelete(item.fileName)}
+                                                                        disabled={disabled}
+                                                                        sx={{ padding: '12px' }}
+                                                                    >
+                                                                        <Delete />
+                                                                    </IconButton>
+                                                                </span>
+                                                            </Tooltip>
+                                                        </Grid>
                                                     </Grid>
-                                                </React.Fragment>
+                                                </Grid>
                                             )}
                                         </Grid>
                                         {!!hasClearedEmbargoDate[getDsIndex(item.id)] && (
@@ -549,17 +602,17 @@ export const AttachedFiles = ({
                                                     alignContent={'flex-end'}
                                                     alignItems={'flex-end'}
                                                     justifyContent={'flex-end'}
-                                                    style={{ marginTop: 4 }}
+                                                    sx={{ marginTop: '4px' }}
                                                 >
                                                     <Grid item xs={6} />
                                                     <Grid item xs={6}>
-                                                        <Typography style={{ color: mui1theme.palette.warning.main }}>
+                                                        <Typography sx={{ color: mui1theme.palette.warning.main }}>
                                                             <WarningIcon
                                                                 fontSize={'small'}
-                                                                style={{
+                                                                sx={{
                                                                     color: mui1theme.palette.warning.main,
-                                                                    marginRight: 10,
-                                                                    marginBottom: -4,
+                                                                    marginRight: '10px',
+                                                                    marginBottom: '-4px',
                                                                 }}
                                                             />
                                                             {onEmbargoClearPromptText}
@@ -569,8 +622,8 @@ export const AttachedFiles = ({
                                             </React.Fragment>
                                         )}
 
-                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
-                                            <Grid item xs={1} className={classes.upDownArrowContainer}>
+                                        <Grid container direction="row" alignItems="center" spacing={2} padding={0}>
+                                            <Grid xs={1} padding={0} wrap="nowrap" textAlign={'center'}>
                                                 <IconButton
                                                     className={classes.upDownArrow}
                                                     disabled={index === fileData.length - 1}
@@ -585,7 +638,7 @@ export const AttachedFiles = ({
                                         </Grid>
                                     </Grid>
                                 </Grid>
-                            </div>
+                            </Box>
                         </React.Fragment>
                     ))}
                 {preview.mediaUrl && preview.mimeType && (

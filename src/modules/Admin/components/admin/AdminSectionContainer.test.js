@@ -9,13 +9,13 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(AdminSectionContainer, props, args);
+    return renderComponent(AdminSectionContainer, props, args);
 }
 
 describe('AdminSectionContainer component', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should map state to props', () => {

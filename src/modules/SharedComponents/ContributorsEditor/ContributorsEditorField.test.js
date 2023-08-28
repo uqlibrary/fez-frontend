@@ -1,16 +1,24 @@
+import React from 'react';
 import ContributorsEditorField from './ContributorsEditorField';
+import { render, WithRouter, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(ContributorsEditorField, props);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <ContributorsEditorField {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('ContributorsEditorField', () => {
     it('should render default component', () => {
-        const wrapper = setup({ input: { onChange: jest.fn() } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ input: { onChange: jest.fn() } });
+        expect(container).toMatchSnapshot();
     });
 });

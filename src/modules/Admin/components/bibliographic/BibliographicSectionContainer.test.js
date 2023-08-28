@@ -9,7 +9,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(BibliographicSectionContainer, props, args);
+    return renderComponent(BibliographicSectionContainer, props, args);
 }
 
 describe('BibliographicSectionContainer component', () => {
@@ -31,10 +31,10 @@ describe('BibliographicSectionContainer component', () => {
             },
         }));
 
-        const wrapper = setup(
+        const render = setup(
             {},
             { isShallow: true, requiresStore: true, store: global.setupStoreForMount(Immutable.Map({})).store },
         );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

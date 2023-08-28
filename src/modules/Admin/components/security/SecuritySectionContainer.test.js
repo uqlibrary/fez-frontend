@@ -14,15 +14,20 @@ import { getFormValues } from 'redux-form/immutable';
 
 jest.mock('../../../../context');
 import { useRecordContext, useFormValuesContext } from 'context';
+import { render, WithReduxStore } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         disabled: false,
         isSuperAdmin: true,
         ...testProps,
     };
 
-    return getElement(SecuritySectionContainer, props, args);
+    return render(
+        <WithReduxStore>
+            <SecuritySectionContainer {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('SecuritySectionContainer', () => {
@@ -56,8 +61,8 @@ describe('SecuritySectionContainer', () => {
                 ],
             },
         }));
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should fallback to default form values', () => {
@@ -85,8 +90,8 @@ describe('SecuritySectionContainer', () => {
             },
         }));
         getFormValues.mockImplementation(() => jest.fn(() => null));
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should mount with default props for a collection for a super admin', () => {
@@ -104,7 +109,7 @@ describe('SecuritySectionContainer', () => {
                 rek_object_type_lookup: 'Collection',
             },
         }));
-        const wrapper = setup(
+        const { container } = setup(
             {
                 isSuperAdmin: false,
             },
@@ -119,6 +124,6 @@ describe('SecuritySectionContainer', () => {
                 ).store,
             },
         );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

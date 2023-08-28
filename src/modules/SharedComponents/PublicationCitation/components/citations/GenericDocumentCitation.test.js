@@ -1,41 +1,43 @@
+import React from 'react';
 import GenericDocumentCitation from './GenericDocumentCitation';
 import { generic } from 'mock/data/testing/records';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(GenericDocumentCitation, props, args);
+    return rtlRender(<GenericDocumentCitation {...props} />);
 }
 
 describe('GenericDocumentCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: generic });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication: generic });
+        expect(container).toMatchSnapshot();
     });
 
     it('component with an empty publisher and title', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publication: {
                 ...generic,
                 fez_record_search_key_publisher: { rek_publisher: null },
                 rek_title: null,
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('component when no title', () => {
         delete generic.rek_title;
-        const wrapper = setup({
+        const { container } = setup({
             publication: generic,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

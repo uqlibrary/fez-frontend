@@ -1,16 +1,18 @@
+import React from 'react';
 import AudienceSizeField from './AudienceSizeField';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(AudienceSizeField, props, args);
+    return rtlRender(<AudienceSizeField {...props} />);
 }
 
 describe('AudienceSizeField component', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 });

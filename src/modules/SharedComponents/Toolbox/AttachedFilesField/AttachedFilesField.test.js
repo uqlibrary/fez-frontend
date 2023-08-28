@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     AttachedFilesField,
     deleteCallbackFactory,
@@ -10,28 +11,28 @@ import Immutable from 'immutable';
 
 import { recordWithDatastreams } from 'mock/data';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         input: {},
         ...testProps,
     };
 
-    return getElement(AttachedFilesField, props, args);
+    return renderComponent(AttachedFilesField, props);
 }
 
 describe('AttachedFilesField component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const render = setup({});
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render with initial data', () => {
-        const wrapper = setup({
+        const render = setup({
             meta: {
                 initial: Immutable.List(recordWithDatastreams.fez_datastream_info.slice(0, 1)),
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     describe('AttachedFilesField callback factories', () => {

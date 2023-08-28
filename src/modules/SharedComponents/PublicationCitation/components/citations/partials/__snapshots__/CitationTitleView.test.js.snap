@@ -1,36 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CitationTitleView partial should render default view 1`] = `
-<span
-  className="className"
->
-  prefix
-  value
-  suffix
-</span>
+<div>
+  <span
+    class="className"
+  >
+    prefix
+    value
+    suffix
+  </span>
+</div>
 `;
 
 exports[`CitationTitleView partial should render properly with a suffix that equal to the last character of the value 1`] = `
-<span
-  className=""
->
-   
-  values
-</span>
+<div>
+  <span
+    class=""
+  >
+     
+    values
+    
+  </span>
+</div>
 `;
 
 exports[`CitationTitleView partial should render properly with empty props 1`] = `
-<span
-  className=" empty"
-/>
+<div>
+  <span
+    class=" empty"
+  />
+</div>
 `;
 
 exports[`CitationTitleView partial should render properly with value prop only 1`] = `
-<span
-  className=""
->
-   
-  value
-  .
-</span>
+<div>
+  <span
+    class=""
+  >
+     
+    value
+    .
+  </span>
+</div>
 `;

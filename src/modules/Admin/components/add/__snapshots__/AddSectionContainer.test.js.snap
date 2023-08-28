@@ -117,7 +117,7 @@ Object {
 `;
 
 exports[`AddSectionContainer component should render default view 1`] = `
-<ContextProvider
+<Context.Provider
   value={
     Object {
       "getServerState": undefined,
@@ -148,6 +148,6 @@ exports[`AddSectionContainer component should render default view 1`] = `
     }
   }
 >
-  <Connect(Component) />
-</ContextProvider>
+  <Memo(Connect(Component)) />
+</Context.Provider>
 `;

@@ -1,2358 +1,1552 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PartialDateForm component should display errors correctly 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
   >
-    <ForwardRef(InputLabel)
-      error={true}
-      shrink={true}
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
+          >
+            Invalid date
+          </p>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              Month
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="-1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PartialDateForm component should handle keypress 1`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
   >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
       >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value=""
-          variant="standard"
-        />
-        <ForwardRef(FormHelperText)
-          error={true}
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          Invalid date
-        </ForwardRef(FormHelperText)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={true}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value=""
-          variant="standard"
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
+          >
+            Invalid date
+          </p>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
           >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              Month
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="-1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
-          >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PartialDateForm component should handle keypress 2`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
+  >
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
       >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value=""
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
+          >
+            Invalid date
+          </p>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              Month
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="-1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PartialDateForm component should handle keypress 3`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
+  >
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
+          >
+            Invalid date
+          </p>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              Month
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="-1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PartialDateForm component should handle partial values 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
   >
-    <ForwardRef(InputLabel)
-      error={true}
-      shrink={true}
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
       >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value={1}
-          variant="standard"
-        />
-        <ForwardRef(FormHelperText)
-          error={true}
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          Invalid date
-        </ForwardRef(FormHelperText)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={true}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={-1}
-          variant="standard"
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value="1"
+              />
+            </div>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
+          >
+            Invalid date
+          </p>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
           >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              Month
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="-1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
-          >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value={null}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PartialDateForm component should handle partial values 2`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
   >
-    <ForwardRef(InputLabel)
-      error={true}
-      shrink={true}
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value="1"
+              />
+            </div>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
+          >
+            Invalid date
+          </p>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error Mui-focused  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              May
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="4"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PartialDateForm component should handle partial values day and year only 1`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
   >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
       >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value={1}
-          variant="standard"
-        />
-        <ForwardRef(FormHelperText)
-          error={true}
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          Invalid date
-        </ForwardRef(FormHelperText)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={true}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={2}
-          variant="standard"
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value="1"
+              />
+            </div>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
+          >
+            Invalid date
+          </p>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
           >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              Month
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="-1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
-          >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value="2010"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PartialDateForm component should handle partial values with year only 1`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
+  >
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
       >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value={null}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
+      >
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              Month
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="-1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value="2010"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PartialDateForm component should load existing values 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
   >
-    <ForwardRef(InputLabel)
-      error={false}
-      shrink={true}
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
       >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value={2}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={false}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={1}
-          variant="standard"
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value="2"
+              />
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
           >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              February
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value={2020}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value="2020"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PartialDateForm component should load existing values from input value 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
   >
-    <ForwardRef(InputLabel)
-      error={false}
-      shrink={true}
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
       >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value={2}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={false}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={1}
-          variant="standard"
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value="2"
+              />
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
           >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              February
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value={2020}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value="2020"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
-exports[`PartialDateForm component with clearable flag should display an error on clearing one partial date field 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+exports[`PartialDateForm component should render comp 1`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
   >
-    <ForwardRef(InputLabel)
-      error={true}
-      shrink={true}
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        Enter a date
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
       >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value=""
-          variant="standard"
-        />
-        <ForwardRef(FormHelperText)
-          error={true}
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          Invalid date
-        </ForwardRef(FormHelperText)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={true}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={1}
-          variant="standard"
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
           >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              Month
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="-1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
-          >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value={2020}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
-exports[`PartialDateForm component with clearable flag should display an error on entering future date 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+exports[`PartialDateForm component should render comp as a required field 1`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
+    id="test"
   >
-    <ForwardRef(InputLabel)
-      error={false}
-      shrink={true}
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
-    >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
       >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value={2}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={false}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={1}
-          variant="standard"
+        Enter a date
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
         >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
-          >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
-          >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
-          >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value={2010}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
-`;
-
-exports[`PartialDateForm component with clearable flag should display an error on entering future date 2`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(InputLabel)
-      error={true}
-      shrink={true}
+           
+          *
+        </span>
+      </label>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
-    >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+        style="margin-top: -12px;"
       >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value={29}
-          variant="standard"
-        />
-        <ForwardRef(FormHelperText)
-          error={true}
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          Invalid date
-        </ForwardRef(FormHelperText)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={true}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={1}
-          variant="standard"
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-day-input"
+                data-testid="test-day-input"
+                id="test-day-input"
+                label="day"
+                maxlength="2"
+                name="day"
+                placeholder="Day"
+                type="text"
+                value="1"
+              />
+            </div>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
+          >
+            Invalid date
+          </p>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            style="width: 100%;"
           >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
-          >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
-          >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value={2010}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
-`;
-
-exports[`PartialDateForm component with clearable flag should display an error on entering invalid date 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(InputLabel)
-      error={true}
-      shrink={true}
-    >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
-    >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value={29}
-          variant="standard"
-        />
-        <ForwardRef(FormHelperText)
-          error={true}
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="test-month-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="test-month-select"
+              data-testid="test-month-select"
+              id="test-month-select"
+              role="button"
+              tabindex="0"
+            >
+              Month
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="test-month-input"
+              data-testid="test-month-input"
+              id="test-month-input"
+              label="month"
+              maxlength="2"
+              name="month"
+              placeholder="Month"
+              tabindex="-1"
+              value="-1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-1d19ux9-MuiGrid2-root"
         >
-          Invalid date
-        </ForwardRef(FormHelperText)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={true}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={1}
-          variant="standard"
-        >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
-          >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
-          >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={true}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value={2020}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
-`;
-
-exports[`PartialDateForm component with clearable flag should not display an error on clearing whole partial date field 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(InputLabel)
-      error={false}
-      shrink={true}
-    >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
-    >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value=""
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={false}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={-1}
-          variant="standard"
-        >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
-          >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
-          >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
-          >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value=""
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
-`;
-
-exports[`PartialDateForm component with clearable flag should not display an error on entering valid date 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  id="test"
-  padding={0}
-  spacing={0}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(InputLabel)
-      error={false}
-      shrink={true}
-    >
-      Enter a date
-    </ForwardRef(InputLabel)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <ForwardRef(Grid)
-      container={true}
-      padding={0}
-      spacing={2}
-      style={
-        Object {
-          "marginTop": -12,
-        }
-      }
-    >
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-day"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-day-input",
-              "data-testid": "test-day-input",
-              "id": "test-day-input",
-              "label": "day",
-              "maxLength": 2,
-            }
-          }
-          name="day"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Day"
-          type="text"
-          value={12}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(Select)
-          MenuProps={
-            Object {
-              "data-analyticsid": "test-month-options",
-              "data-testid": "test-month-options",
-              "id": "test-month-options",
-            }
-          }
-          SelectDisplayProps={
-            Object {
-              "data-analyticsid": "test-month-select",
-              "data-testid": "test-month-select",
-              "id": "test-month-select",
-            }
-          }
-          error={false}
-          id="test-month"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-month-input",
-              "data-testid": "test-month-input",
-              "id": "test-month-input",
-              "label": "month",
-              "maxLength": 2,
-            }
-          }
-          name="month"
-          onChange={[Function]}
-          placeholder="Month"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={3}
-          variant="standard"
-        >
-          <ForwardRef(MenuItem)
-            key="-1"
-            value={-1}
-          >
-            Month
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="0"
-            value={0}
-          >
-            January
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="1"
-            value={1}
-          >
-            February
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="2"
-            value={2}
-          >
-            March
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="3"
-            value={3}
-          >
-            April
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="4"
-            value={4}
-          >
-            May
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="5"
-            value={5}
-          >
-            June
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="6"
-            value={6}
-          >
-            July
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="7"
-            value={7}
-          >
-            August
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="8"
-            value={8}
-          >
-            September
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="9"
-            value={9}
-          >
-            October
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="10"
-            value={10}
-          >
-            November
-          </ForwardRef(MenuItem)>
-          <ForwardRef(MenuItem)
-            key="11"
-            value={11}
-          >
-            December
-          </ForwardRef(MenuItem)>
-        </ForwardRef(Select)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        xs={4}
-      >
-        <ForwardRef(TextField)
-          error={false}
-          fullWidth={true}
-          id="test-year"
-          inputProps={
-            Object {
-              "data-analyticsid": "test-year-input",
-              "data-testid": "test-year-input",
-              "id": "test-year-input",
-              "label": "year",
-              "maxLength": 4,
-            }
-          }
-          name="year"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Year"
-          type="text"
-          value={1990}
-          variant="standard"
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                data-analyticsid="test-year-input"
+                data-testid="test-year-input"
+                id="test-year-input"
+                label="year"
+                maxlength="4"
+                name="year"
+                placeholder="Year"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

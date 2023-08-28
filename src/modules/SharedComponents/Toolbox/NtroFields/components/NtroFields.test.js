@@ -1,6 +1,12 @@
+import React from 'react';
 import NtroFields from './NtroFields';
+import { render, WithReduxStore } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: jest.fn(),
+}));
+function setup(testProps) {
     const props = {
         submitting: false,
         hideIsmn: false,
@@ -18,53 +24,84 @@ function setup(testProps, isShallow = true) {
         showContributionStatement: false,
         ...testProps,
     };
-    return getElement(NtroFields, props, isShallow);
+    return render(
+        <WithReduxStore>
+            <NtroFields {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('Component NtroFields', () => {
+    const ReduxFormMock = require('redux-form/immutable');
+    let normalizeIsrcFn;
+    let transformIsrcFn;
+    let transformIsmnFn;
+    ReduxFormMock.Field.mockImplementation(
+        ({ name, title, required, disable, label, floatingLabelText, inputNormalizer, transformFunction }) => {
+            if (name === 'fez_record_search_key_isrc') {
+                normalizeIsrcFn = inputNormalizer;
+                transformIsrcFn = transformFunction;
+            } else if (name === 'fez_record_search_key_ismn') {
+                transformIsmnFn = transformFunction;
+            }
+
+            return (
+                <field
+                    is="mock"
+                    name={name}
+                    title={title}
+                    required={required}
+                    disabled={disable}
+                    label={label || floatingLabelText}
+                />
+            );
+        },
+    );
+
     it('should render default view', () => {
-        const wrapper = setup({});
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should render contribution statement fields as well', () => {
-        const wrapper = setup({ showContributionStatement: true });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup({ showContributionStatement: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render all fields as disabled', () => {
-        const wrapper = setup({ showContributionStatement: true, submitting: true });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup({ showContributionStatement: true, submitting: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with grants component hidden', () => {
-        const wrapper = setup({ showContributionStatement: true, hideGrants: true });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup({ showContributionStatement: true, hideGrants: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should call componentDidUpdate', () => {
-        const wrapper = setup({});
-        wrapper.setProps({
+        const props = {
             hideVolume: true,
             hideStartPage: true,
             hideAudienceSize: true,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        };
+        const { container, rerender } = setup({});
+        rerender(
+            <WithReduxStore>
+                <NtroFields {...props} />
+            </WithReduxStore>,
+        );
+        expect(container).toMatchSnapshot();
     });
 
     it('should normalize ISRC value', () => {
-        const wrapper = setup({});
-        const expected = wrapper.instance().normalizeIsrc('CD-abc2323423');
+        setup({});
+        const expected = normalizeIsrcFn('CD-abc2323423');
         expect(expected).toEqual('CD-ABC-23-23423');
     });
 
     it('should transform ISRC value', () => {
-        const wrapper = setup({});
-        const expected = wrapper.instance().transformIsrc(
+        setup({});
+        const expected = transformIsrcFn(
             {
                 value: 'fez_test',
                 order: 'fez_test_order',
@@ -79,8 +116,8 @@ describe('Component NtroFields', () => {
     });
 
     it('should transform ISMN value', () => {
-        const wrapper = setup({});
-        const expected = wrapper.instance().transformIsmn(
+        setup({});
+        const expected = transformIsmnFn(
             {
                 value: 'fez_test',
                 order: 'fez_test_order',
@@ -88,6 +125,7 @@ describe('Component NtroFields', () => {
             'ISMN TE-EST-23-12343',
             1,
         );
+
         expect(expected).toEqual({
             fez_test: 'TE-EST-23-12343',
             fez_test_order: 2,
@@ -96,16 +134,15 @@ describe('Component NtroFields', () => {
 
     // cc - in reality, signif and contrib always appear together
     it('should show significance field even if contribution field isnt empty', () => {
-        const wrapper = setup({
+        const { container } = setup({
             showContributionStatement: false,
             showSignificance: true,
         });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should not show NTRO data card in the Ntro fields', () => {
-        const wrapper = setup({
+        const { container } = setup({
             showContributionStatement: false,
             showSignificance: true,
             hideAbstract: true,
@@ -123,6 +160,6 @@ describe('Component NtroFields', () => {
             hideIsmn: true,
         });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

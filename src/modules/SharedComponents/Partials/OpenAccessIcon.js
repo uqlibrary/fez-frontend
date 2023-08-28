@@ -1,98 +1,83 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
 import { openAccessConfig } from 'config';
-import Badge from '@mui/material/Badge';
-import AccessTime from '@mui/icons-material/AccessTime';
 import Lock from '@mui/icons-material/Lock';
+import LockOpen from '@mui/icons-material/LockOpen';
+import LockClockOutlined from '@mui/icons-material/LockClock';
 import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
-import withStyles from '@mui/styles/withStyles';
+import makeStyles from '@mui/styles/makeStyles';
 
-const styles = theme => ({
-    badgeStyle: { width: 12, height: 12, marginLeft: -4, marginTop: 4 },
-    embargoedBadgeStyle: { width: 12, height: 12, marginLeft: -4, marginTop: 4, color: theme.palette.secondary.main },
+const useStyles = makeStyles({
+    svg: props => props.style,
 });
 
-export class OpenAccessIcon extends PureComponent {
-    static propTypes = {
-        isOpenAccess: PropTypes.bool,
-        embargoDate: PropTypes.string,
-        openAccessStatusId: PropTypes.number,
-        showEmbargoText: PropTypes.bool,
-        securityStatus: PropTypes.bool,
-        classes: PropTypes.object,
-    };
-    static defaultProps = {
-        isOpenAccess: false,
-        embargoDate: null,
-        showEmbargoText: false,
-        securityStatus: true,
-    };
+export const getIconTestId = id => `${id}-icon`;
 
-    render() {
-        const txt = locale.viewRecord.sections.links;
-        const classes = this.props.classes;
-        if (!this.props.securityStatus) {
-            return (
-                <Fragment>
-                    <Tooltip title={txt.securityLocked} placement="left" TransitionComponent={Fade}>
-                        <Badge
-                            badgeContent={<Lock fontSize="small" color="secondary" className={classes.badgeStyle} />}
-                        >
-                            <span
-                                className="fez-icon openAccessLocked large"
-                                role="img"
-                                aria-label={txt.securityLocked}
-                            />
-                        </Badge>
-                    </Tooltip>
-                </Fragment>
-            );
-        } else if (this.props.isOpenAccess && !this.props.embargoDate) {
-            const openAccessTitle =
-                this.props.openAccessStatusId !== openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI
-                    ? txt.openAccessLabel.replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId])
-                    : txt.labelOpenAccessNoStatus;
+export const OpenAccessIcon = ({
+    style,
+    isOpenAccess,
+    embargoDate,
+    openAccessStatusId,
+    showEmbargoText,
+    securityStatus,
+}) => {
+    const classes = useStyles({ style });
+    const txt = locale.viewRecord.sections.links;
 
-            return (
-                <Fragment>
-                    <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
-                        <span
-                            className="fez-icon openAccess large"
-                            role="img"
-                            aria-label={openAccessTitle}
-                            data-testid="open-access"
-                        />
-                    </Tooltip>
-                </Fragment>
-            );
-        } else if (!this.props.isOpenAccess && !!this.props.embargoDate) {
-            const openAccessTitle = txt.openAccessEmbargoedLabel
-                .replace('[embargo_date]', this.props.embargoDate)
-                .replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId]);
-            return (
-                <Fragment>
-                    {this.props.showEmbargoText && (
-                        <span className="is-hidden-mobile is-hidden-tablet-only">
-                            {txt.embargoedUntil.replace('[embargo_date]', this.props.embargoDate)}
-                        </span>
-                    )}
-                    <Badge badgeContent={<AccessTime fontSize="small" className={classes.embargoedBadgeStyle} />}>
-                        <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
-                            <span
-                                className="fez-icon openAccessEmbargoed large"
-                                role="img"
-                                aria-label={openAccessTitle}
-                                data-testid="open-access-embargoed"
-                            />
-                        </Tooltip>
-                    </Badge>
-                </Fragment>
-            );
-        }
-        return <span className="noOaIcon" data-testid="no-oa-icon" />;
+    if (!securityStatus) {
+        return (
+            <Tooltip title={txt.securityLocked} placement="left" TransitionComponent={Fade}>
+                <Lock className={classes.svg} data-testid={getIconTestId('no-oa')} />
+            </Tooltip>
+        );
+    } else if (isOpenAccess && !embargoDate) {
+        const openAccessTitle =
+            openAccessStatusId !== openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI
+                ? txt.openAccessLabel.replace('[oa_status]', openAccessConfig.labels[openAccessStatusId])
+                : txt.labelOpenAccessNoStatus;
+
+        return (
+            <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
+                <LockOpen className={classes.svg} data-testid={getIconTestId('oa')} />
+            </Tooltip>
+        );
+    } else if (!isOpenAccess && !!embargoDate) {
+        const openAccessTitle = txt.openAccessEmbargoedLabel
+            .replace('[embargo_date]', embargoDate)
+            .replace('[oa_status]', openAccessConfig.labels[openAccessStatusId]);
+        return (
+            <Fragment>
+                {showEmbargoText && (
+                    <span className="is-hidden-mobile is-hidden-tablet-only">
+                        {txt.embargoedUntil.replace('[embargo_date]', embargoDate)}
+                    </span>
+                )}
+                <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
+                    <LockClockOutlined className={classes.svg} data-testid={getIconTestId('embargoed-oa')} />
+                </Tooltip>
+            </Fragment>
+        );
     }
-}
+    return <span className="noOaIcon" data-testid={getIconTestId('oa-n/a')} />;
+};
 
-export default withStyles(styles)(OpenAccessIcon);
+OpenAccessIcon.propTypes = {
+    style: PropTypes.object,
+    isOpenAccess: PropTypes.bool,
+    embargoDate: PropTypes.string,
+    openAccessStatusId: PropTypes.number,
+    showEmbargoText: PropTypes.bool,
+    securityStatus: PropTypes.bool,
+};
+
+OpenAccessIcon.defaultProps = {
+    style: {},
+    isOpenAccess: false,
+    embargoDate: null,
+    showEmbargoText: false,
+    securityStatus: true,
+};
+
+export default OpenAccessIcon;

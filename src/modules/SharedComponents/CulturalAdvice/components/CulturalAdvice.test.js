@@ -1,13 +1,15 @@
+import React from 'react';
 import CulturalAdvice from './CulturalAdvice';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps) {
     const props = { ...testProps };
-    return getElement(CulturalAdvice, props);
+    return rtlRender(<CulturalAdvice {...props} />);
 }
 
 describe('Component CulturalAdvice', () => {
     it('should render component', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 });

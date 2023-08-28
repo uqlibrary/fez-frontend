@@ -9,7 +9,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(AuthorsSectionContainer, props, args);
+    return renderComponent(AuthorsSectionContainer, props, args);
 }
 
 describe('AuthorsSectionContainer component', () => {
@@ -31,10 +31,10 @@ describe('AuthorsSectionContainer component', () => {
             },
         }));
 
-        const wrapper = setup(
+        const renderComponent = setup(
             {},
             { isShallow: true, requiresStore: true, store: global.setupStoreForMount(Immutable.Map({})).store },
         );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(renderComponent.getRenderOutput()).toMatchSnapshot();
     });
 });

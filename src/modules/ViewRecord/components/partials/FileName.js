@@ -13,6 +13,7 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 
 import { pathConfig } from 'config/pathConfig';
 import componentsLocale from 'locale/components';
+import Tooltip from '@mui/material/Tooltip';
 
 export const useStyles = makeStyles(
     theme => ({
@@ -26,12 +27,18 @@ export const useStyles = makeStyles(
             cursor: 'pointer',
             placeSelf: 'center',
         },
+        disabled: {
+            cursor: 'not-allowed',
+        },
         fileDownloadIcon: {
             textAlign: 'right',
         },
     }),
     { withTheme: true },
 );
+
+export const getDownloadLinkTestId = id => `${id}-download`;
+export const getPreviewLinkTestId = id => `${id}-preview`;
 
 const FileName = ({
     downloadLicence,
@@ -46,6 +53,8 @@ const FileName = ({
     previewMediaUrl,
     securityStatus,
     webMediaUrl,
+    tooltip,
+    disabled,
 }) => {
     const classes = useStyles();
 
@@ -92,7 +101,7 @@ const FileName = ({
 
     return (
         <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id}>
-            <Grid item xs sm={allowDownload && !downloadLicence && isAudio(mimeType) ? 10 : 12}>
+            <Grid item xs sm={allowDownload && !downloadLicence && isAudio(mimeType) ? 8 : 12}>
                 <ConfirmationBox
                     confirmationBoxId="file-download-accept-licence"
                     isOpen={isOpen}
@@ -106,7 +115,8 @@ const FileName = ({
                         title={fileName}
                         className={`${classes.filename} ${classes.filenameParent}`}
                         openInNewIcon
-                        id={`${id}-download`}
+                        data-testid={getDownloadLinkTestId(id)}
+                        id={getDownloadLinkTestId(id)}
                     >
                         {fileName}
                     </ExternalLink>
@@ -117,8 +127,8 @@ const FileName = ({
                             onClick={showPreview}
                             onKeyPress={showPreview}
                             className={classes.filename}
-                            id={`${id}-preview`}
-                            data-testid={`${id}-preview`}
+                            data-testid={getPreviewLinkTestId(id)}
+                            id={getPreviewLinkTestId(id)}
                         >
                             {fileName}
                         </a>
@@ -127,11 +137,22 @@ const FileName = ({
                 {(!allowDownload || !!downloadLicence) && (
                     <Grid container>
                         <Grid item xs className={classes.filename}>
-                            <Typography variant="body2" className={`${classes.filename} ${classes.filenameParent}`}>
-                                {fileName}
-                            </Typography>
+                            <Tooltip
+                                title={!!tooltip ? tooltip : ''}
+                                id={`${id}-tooltip`}
+                                data-testid={`${id}-tooltip`}
+                            >
+                                <Typography
+                                    variant="body2"
+                                    className={`${classes.filename} ${disabled ? classes.disabled : ''} ${
+                                        classes.filenameParent
+                                    }`}
+                                >
+                                    {fileName}
+                                </Typography>
+                            </Tooltip>
                         </Grid>
-                        {!!downloadLicence && (
+                        {!disabled && !!downloadLicence && (
                             <Grid item xs="auto" className={classes.fileDownloadIcon}>
                                 <IconButton
                                     aria-label={txt.downloadButtonLabel}
@@ -149,7 +170,7 @@ const FileName = ({
                 )}
             </Grid>
             {allowDownload && !downloadLicence && isAudio(mimeType) && (
-                <Grid item sm={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     <AudioPlayer
                         pid={pid}
                         fileName={previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)}
@@ -169,11 +190,13 @@ export const FileNameProps = {
     mimeType: PropTypes.string.isRequired,
     mediaUrl: PropTypes.string.isRequired,
     webMediaUrl: PropTypes.string,
-    previewMediaUrl: PropTypes.string.isRequired,
+    previewMediaUrl: PropTypes.string,
     onFileSelect: PropTypes.func.isRequired,
     allowDownload: PropTypes.bool,
     securityStatus: PropTypes.bool,
     checksums: PropTypes.object,
+    tooltip: PropTypes.string,
+    disabled: PropTypes.bool,
 };
 
 FileName.propTypes = { ...FileNameProps };

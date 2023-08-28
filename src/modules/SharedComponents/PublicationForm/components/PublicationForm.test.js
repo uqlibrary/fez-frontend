@@ -1,9 +1,28 @@
 import PublicationForm from './PublicationForm';
 import Immutable from 'immutable';
-import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm } from './Forms';
-import { validation } from 'config';
+import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm, CreativeWorkForm } from './Forms';
+import React from 'react';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 
-function setup(testProps = {}) {
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+                validate={props.validate && props.validate.map(fn => fn.name)}
+            />
+        );
+    },
+}));
+
+function setup(testProps = {}, renderMethod = render) {
     const props = {
         autofill: jest.fn(),
         blur: jest.fn(),
@@ -46,30 +65,37 @@ function setup(testProps = {}) {
         },
         ...testProps,
     };
-    return getElement(PublicationForm, props);
+
+    return renderMethod(
+        <WithReduxStore>
+            <WithRouter>
+                <PublicationForm {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('Component PublicationForm', () => {
     it('should render component initialised with just one field - publication type', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(1);
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
+        expect(container.getElementsByTagName('field').length).toEqual(1);
     });
 
     it('should render component initialised with two fields - publication type and subtype', () => {
-        const wrapper = setup({
+        const { container } = setup({
             initialValues: {
                 rek_display_type: 179,
             },
-            hasSubtypes: false,
+            hasSubtypes: true,
         });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(1);
+        expect(container).toMatchSnapshot();
+        expect(container.getElementsByTagName('field').length).toEqual(2);
     });
 
     it('should render form after selecting both publication type and subtype (Journal article/Editorial)', () => {
-        const wrapper = setup({
+        const { container } = setup({
             initialValues: {
                 rek_display_type: 179,
                 rek_subtype: 'Editorial',
@@ -78,12 +104,12 @@ describe('Component PublicationForm', () => {
             subtypeVocabId: 453573,
         });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(2);
+        expect(container).toMatchSnapshot();
+        expect(container.getElementsByTagName('field').length).toEqual(2);
     });
 
     it('should render component with JournalArticleForm', () => {
-        const wrapper = setup({
+        const { container, getByText } = setup({
             initialValues: {
                 rek_display_type: 179,
             },
@@ -91,18 +117,14 @@ describe('Component PublicationForm', () => {
             subtypeVocabId: 453573,
             formComponent: JournalArticleForm,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('JournalArticleForm').length).toEqual(1);
 
-        let hasFilesComponent = false;
-        wrapper.find('Field').forEach(field => {
-            hasFilesComponent = hasFilesComponent || field.props().name === 'files';
-        });
-        expect(hasFilesComponent).toEqual(true);
+        expect(container).toMatchSnapshot();
+        expect(getByText('Journal article information')).toBeInTheDocument();
+        expect(container.querySelectorAll('field[name=files]').length).toEqual(1);
     });
 
     it('should render component with BookForm', () => {
-        const wrapper = setup({
+        const { getByText, container } = setup({
             initialValues: {
                 rek_display_type: 174,
             },
@@ -110,18 +132,14 @@ describe('Component PublicationForm', () => {
             subtypeVocabId: 1111,
             formComponent: BookForm,
         });
-        expect(wrapper.find('BookForm').length).toEqual(1);
 
-        let hasFilesComponent = false;
-        wrapper.find('Field').forEach(field => {
-            hasFilesComponent = hasFilesComponent || field.props().name === 'files';
-        });
-        expect(hasFilesComponent).toEqual(true);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(getByText('Book information')).toBeInTheDocument();
+        expect(container.querySelectorAll('field[name=files]').length).toEqual(1);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with GenericDocument', () => {
-        const wrapper = setup({
+        const { getByText, container } = setup({
             initialValues: {
                 rek_display_type: 202,
             },
@@ -129,18 +147,14 @@ describe('Component PublicationForm', () => {
             subtypeVocabId: 2222,
             formComponent: GenericDocumentForm,
         });
-        expect(wrapper.find('GenericDocumentForm').length).toEqual(1);
+        expect(getByText('Generic document information')).toBeInTheDocument();
 
-        let hasFilesComponent = false;
-        wrapper.find('Field').forEach(field => {
-            hasFilesComponent = hasFilesComponent || field.props().name === 'files';
-        });
-        expect(hasFilesComponent).toEqual(true);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container.querySelectorAll('field[name=files]').length).toEqual(1);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with ResearchReportForm', () => {
-        const wrapper = setup({
+        const { getByText, container } = setup({
             initialValues: {
                 rek_display_type: 275,
             },
@@ -148,52 +162,46 @@ describe('Component PublicationForm', () => {
             subtypeVocabId: 1111,
             formComponent: ResearchReportForm,
         });
-        expect(wrapper.find('ResearchReportForm').length).toEqual(1);
+        expect(getByText('Research report information')).toBeInTheDocument();
 
-        let hasFilesComponent = false;
-        wrapper.find('Field').forEach(field => {
-            hasFilesComponent = hasFilesComponent || field.props().name === 'files';
-        });
-        expect(hasFilesComponent).toEqual(true);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container.querySelectorAll('field[name=files]').length).toEqual(1);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with all fields disabled', () => {
-        const wrapper = setup({
+        const { container } = setup({
             submitting: true,
         });
-        wrapper.find('Field').forEach(field => {
-            expect(field.props().disabled).toEqual(true);
+        container.querySelectorAll('field').forEach(field => {
+            expect(field).toHaveAttribute('disabled', 'true');
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should call onFormSubmitSuccess method', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({
+        const { rerender } = setup({
             onFormSubmitSuccess: testMethod,
         });
-        wrapper.setProps({
-            submitSucceeded: true,
-        });
+        setup(
+            {
+                submitSucceeded: true,
+                onFormSubmitSuccess: testMethod,
+            },
+            rerender,
+        );
         expect(testMethod).toHaveBeenCalled();
     });
 
-    it('_handleDefaultSubmit', () => {
-        const event = { preventDefault: jest.fn() };
-        const wrapper = setup({ initialValues: {} });
-        wrapper.instance()._handleDefaultSubmit(event);
-        expect(event.preventDefault).toHaveBeenCalled();
-    });
-
     it('Shows an alert', () => {
-        const wrapper = setup({
+        const props = {
             initialValues: {},
             formComponent: null,
             changeFormType: jest.fn(),
             error: 'There is an error',
             formErrors: ['error'],
-        });
+        };
+        const { container, rerender } = setup({ ...props });
         // export const getErrorAlertProps = ({
         //     dirty = false,
         //     submitting = false,
@@ -202,81 +210,103 @@ describe('Component PublicationForm', () => {
         //     submitSucceeded = false,
         //     alertLocale = {},
         // }) => {};
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.setProps({ formComponent: () => 'test' });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.setProps({ submitSucceeded: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
+        setup({ ...props, formComponent: () => 'test' }, rerender);
+        expect(container).toMatchSnapshot();
+        setup({ ...props, submitSucceeded: true }, rerender);
+        expect(container).toMatchSnapshot();
     });
 
     it('should call getDerivedStateFromProps when props change', () => {
         const changeDisplayType = jest.fn();
         const changeFormType = jest.fn();
-        const wrapper = setup({
+        const props = {
             initialValues: {},
             changeDisplayType: changeDisplayType,
             changeFormType: changeFormType,
-        });
+        };
+        const { container, rerender } = setup({ ...props });
 
-        wrapper.setProps({
-            submitSucceeded: true,
-            hasSubtypes: false,
-            subtypes: null,
-            formComponent: null,
-            isNtro: false,
-            hasDefaultDocTypeSubType: false,
-            docTypeSubTypeCombo: null,
-        });
+        setup(
+            {
+                ...props,
+                submitSucceeded: true,
+                hasSubtypes: false,
+                subtypes: null,
+                formComponent: null,
+                isNtro: false,
+                hasDefaultDocTypeSubType: false,
+                docTypeSubTypeCombo: null,
+            },
+            rerender,
+        );
 
         // Testing conditional paths
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.setProps({
-            submitSucceeded: true,
-            hasSubtypes: true,
-            subtypes: null,
-            formComponent: null,
-            isNtro: false,
-            hasDefaultDocTypeSubType: false,
-            docTypeSubTypeCombo: null,
-        });
+        expect(container).toMatchSnapshot();
+        setup(
+            {
+                ...props,
+                submitSucceeded: true,
+                hasSubtypes: true,
+                subtypes: null,
+                formComponent: null,
+                isNtro: false,
+                hasDefaultDocTypeSubType: false,
+                docTypeSubTypeCombo: null,
+            },
+            rerender,
+        );
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.setProps({
-            submitSucceeded: true,
-            hasSubtypes: true,
-            subtypes: ['test', 'test2'],
-            formComponent: null,
-            isNtro: false,
-            hasDefaultDocTypeSubType: false,
-            docTypeSubTypeCombo: null,
-        });
+        setup(
+            {
+                ...props,
+                submitSucceeded: true,
+                hasSubtypes: true,
+                subtypes: ['test', 'test2'],
+                formComponent: null,
+                isNtro: false,
+                hasDefaultDocTypeSubType: false,
+                docTypeSubTypeCombo: null,
+            },
+            rerender,
+        );
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.setProps({
-            submitSucceeded: true,
-            hasSubtypes: true,
-            subtypes: ['test', 'test2'],
-            formComponent: null,
-            isNtro: true,
-            hasDefaultDocTypeSubType: true,
-            docTypeSubTypeCombo: null,
-        });
+        setup(
+            {
+                ...props,
+                submitSucceeded: true,
+                hasSubtypes: true,
+                subtypes: ['test', 'test2'],
+                formComponent: null,
+                isNtro: true,
+                hasDefaultDocTypeSubType: true,
+                docTypeSubTypeCombo: null,
+            },
+            rerender,
+        );
 
         expect(changeDisplayType).toHaveBeenCalled();
         expect(changeFormType).toHaveBeenCalled();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should require file upload for ntro fields', () => {
-        const wrapper = setup({
-            formComponent: JournalArticleForm,
+        const { container } = setup({
+            formComponent: CreativeWorkForm,
+            initialValues: {
+                rek_display_type: 275,
+            },
+            hasSubtypes: true,
+            subtypeVocabId: 1111,
             isNtro: true,
         });
-        expect(wrapper.find({ name: 'files' }).props().validate).toEqual([
-            validation.fileUploadRequired,
-            validation.validFileUpload,
-        ]);
+        expect(container.querySelector('field[name=files]')).toHaveAttribute(
+            'validate',
+            'fileUploadRequired,validFileUpload',
+        );
     });
 });

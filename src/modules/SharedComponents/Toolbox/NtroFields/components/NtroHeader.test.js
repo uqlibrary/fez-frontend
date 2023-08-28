@@ -1,15 +1,17 @@
+import React from 'react';
 import NtroHeader from './NtroHeader';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         ...testProps,
     };
-    return getElement(NtroHeader, props, isShallow);
+    return rtlRender(<NtroHeader {...props} />);
 }
 
 describe('Component NtroHeader', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 });

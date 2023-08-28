@@ -1,23 +1,29 @@
+import React from 'react';
 jest.dontMock('./CitationCounts');
 import CitationCounts from './CitationCounts';
 import { myRecordsList } from 'mock/data';
+import { render, WithRouter } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     const props = {
         publication: testProps.publication || {},
         ...testProps,
     };
-    return getElement(CitationCounts, props, args);
+    return render(
+        <WithRouter>
+            <CitationCounts {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('CitationCounts', () => {
     it('should render component with no metrics', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with a mock record metrics', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publication: {
                 ...myRecordsList.data[0],
                 fez_record_search_key_oa_embargo_days: {
@@ -26,7 +32,7 @@ describe('CitationCounts', () => {
                 rek_created_date: '2019-12-25T00:00:00Z',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render component with all metrics', () => {
@@ -52,8 +58,8 @@ describe('CitationCounts', () => {
             },
             rek_altmetric_id: 12345,
         };
-        const wrapper = setup({ publication });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication });
+        expect(container).toMatchSnapshot();
     });
 
     it('should not render View full statistics link on public pages for anonymous user', () => {
@@ -79,18 +85,18 @@ describe('CitationCounts', () => {
             },
             rek_altmetric_id: 12345,
         };
-        const wrapper = setup({ publication, hideViewFullStatisticsLink: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publication, hideViewFullStatisticsLink: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render open access icon when required', () => {
-        const wrapper = setup({
+        const { container } = setup({
             publication: {
                 ...myRecordsList.data[0],
                 calculateOpenAccess: () => true,
             },
         });
 
-        expect(toJson(wrapper.find('OpenAccessIcon'))).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

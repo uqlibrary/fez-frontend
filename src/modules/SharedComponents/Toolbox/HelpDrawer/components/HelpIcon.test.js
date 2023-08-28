@@ -22,6 +22,11 @@ describe('HelpIcon snapshots tests', () => {
         expect(getByTestId('help-icon')).toBeInTheDocument();
     });
 
+    it('renders help icon', () => {
+        const { getByTestId } = setup({ testId: 'test' });
+        expect(getByTestId('help-icon-test')).toBeInTheDocument();
+    });
+
     it('should set drawer content', () => {
         const onClickFn = jest.fn();
         const { getByTestId } = setup({

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NtroSectionContainer component should render default view 1`] = `
-<ContextProvider
+<Context.Provider
   value={
     Object {
       "formValues": Object {},
@@ -9,11 +9,11 @@ exports[`NtroSectionContainer component should render default view 1`] = `
   }
 >
   <Memo(NtroSection) />
-</ContextProvider>
+</Context.Provider>
 `;
 
 exports[`NtroSectionContainer component should render disabled view 1`] = `
-<ContextProvider
+<Context.Provider
   value={
     Object {
       "formValues": Object {},
@@ -23,5 +23,5 @@ exports[`NtroSectionContainer component should render disabled view 1`] = `
   <Memo(NtroSection)
     disabled={true}
   />
-</ContextProvider>
+</Context.Provider>
 `;

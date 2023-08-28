@@ -1,4 +1,6 @@
+import React from 'react';
 import OverrideSecurity from './OverrideSecurity';
+import { rtlRender } from 'test-utils';
 
 const setup = testProps => {
     const props = {
@@ -9,12 +11,12 @@ const setup = testProps => {
         },
         ...testProps,
     };
-    return getElement(OverrideSecurity, props);
+    return rtlRender(<OverrideSecurity {...props} />);
 };
 
 describe('OverrideSecurity component', () => {
     it('should render properly', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 });

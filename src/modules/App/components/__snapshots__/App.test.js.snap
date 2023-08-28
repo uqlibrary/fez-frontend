@@ -363,6 +363,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           </span>
         </nav>
         <div
+          data-testid="after-menu-drawer"
           id="afterMenuDrawer"
           tabindex="-1"
         />

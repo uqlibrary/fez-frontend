@@ -9,7 +9,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-144 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-146 css-14y2kic-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -21,7 +21,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-143 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-145 css-13i4rnv-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -30,7 +30,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-146 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-148 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-matching-works-found"
             id="standard-card-no-matching-works-found"
           >
@@ -41,7 +41,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-151 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-153 css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-no-matching-works-found-header"
                   id="standard-card-no-matching-works-found-header"
                 >
@@ -70,7 +70,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
             class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-152 css-1vd824g-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-154 css-1vd824g-MuiGrid-root"
             >
               <div
                 class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
@@ -82,7 +82,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-154 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-156 css-9mgopn-MuiDivider-root"
               />
             </div>
             <div
@@ -111,7 +111,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-58 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-60 css-14y2kic-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -123,14 +123,14 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-57 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-59 css-13i4rnv-MuiGrid-root"
     >
       <div
         data-testid="alert"
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root makeStyles-root-60 MuiGrid-container makeStyles-error-69 makeStyles-common-61 css-1k6h6af-MuiGrid-root"
+          class="MuiGrid-root makeStyles-root-62 MuiGrid-container makeStyles-error-71 makeStyles-common-63 css-1k6h6af-MuiGrid-root"
           data-analyticsid="alert-error"
           data-testid="alert-error"
           id="alert-error"
@@ -142,7 +142,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
               class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item makeStyles-icon-64 alert-icon  css-13i4rnv-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item makeStyles-icon-66 alert-icon  css-13i4rnv-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -158,7 +158,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-65 alert-text css-1vd824g-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-67 alert-text css-1vd824g-MuiGrid-root"
               >
                 <b>
                   Error - 
@@ -176,7 +176,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-77 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-79 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-matching-works-found"
             id="standard-card-no-matching-works-found"
           >
@@ -187,7 +187,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-82 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-84 css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-no-matching-works-found-header"
                   id="standard-card-no-matching-works-found-header"
                 >
@@ -347,7 +347,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                         </a>
                                         <span
                                           class="noOaIcon"
-                                          data-testid="no-oa-icon"
+                                          data-testid="oa-n/a-icon"
                                         />
                                       </div>
                                       <div
@@ -477,7 +477,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                         </a>
                                         <span
                                           class="noOaIcon"
-                                          data-testid="no-oa-icon"
+                                          data-testid="oa-n/a-icon"
                                         />
                                       </div>
                                       <div
@@ -591,7 +591,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
-                                          class="googleCitationCount CitationCountView-citationCount-39 makeStyles-externalLink-41 makeStyles-externalLink-47"
+                                          class="googleCitationCount CitationCountView-citationCount-39 makeStyles-externalLink-41 makeStyles-externalLink-48"
                                           data-analyticsid="citation-count-link"
                                           data-testid="citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:3"
@@ -607,7 +607,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                         </a>
                                         <span
                                           class="noOaIcon"
-                                          data-testid="no-oa-icon"
+                                          data-testid="oa-n/a-icon"
                                         />
                                       </div>
                                       <div
@@ -679,7 +679,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
             class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-48 css-1vd824g-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-50 css-1vd824g-MuiGrid-root"
             >
               <div
                 class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
@@ -691,7 +691,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-50 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-52 css-9mgopn-MuiDivider-root"
               />
             </div>
             <div
@@ -707,7 +707,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 >
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-51 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-53 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-display-type"
                     id="clickable-facet-category-display-type"
                     role="button"
@@ -717,7 +717,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                       class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-52 css-fjqef3-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-54 css-fjqef3-MuiTypography-root"
                         data-testid="facet-category-display-type"
                         id="facet-category-display-type"
                       >
@@ -742,7 +742,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   </div>
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-51 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-53 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-keywords"
                     id="clickable-facet-category-keywords"
                     role="button"
@@ -752,7 +752,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                       class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-52 css-fjqef3-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-54 css-fjqef3-MuiTypography-root"
                         data-testid="facet-category-keywords"
                         id="facet-category-keywords"
                       >
@@ -777,7 +777,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   </div>
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-51 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-53 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-date-range"
                     id="clickable-facet-category-date-range"
                     role="button"
@@ -787,7 +787,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                       class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-52 css-fjqef3-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-54 css-fjqef3-MuiTypography-root"
                         data-testid="facet-category-date-range"
                         id="facet-category-date-range"
                       >

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`datastream derivative helpers getAvStateDescription 1`] = `"Not yet scanned for threats"`;
+
+exports[`datastream derivative helpers getAvStateDescription 2`] = `"Clean of threats. Scanned at Jan 1, 2001 10:00 AM"`;
+
+exports[`datastream derivative helpers getAvStateDescription 3`] = `"File cannot be scanned for threats. e.g., too big, archive, encrypted"`;
+
+exports[`datastream derivative helpers getAvStateDescription 4`] = `"Flagged as infected at Jan 1, 2001 10:00 AM"`;

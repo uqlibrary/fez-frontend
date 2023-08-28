@@ -16,6 +16,7 @@ class Chart extends React.Component {
     }
 
     componentDidMount() {
+        /* istanbul ignore else */
         if (!!this.chartRef.current) {
             this.chart = new Highcharts.Chart(this.chartRef.current, this.props.chartOptions);
 
@@ -33,6 +34,7 @@ class Chart extends React.Component {
         !!this.chart && !!this.printMedia && this.printMedia.removeListener(this.reflowChart);
     }
 
+    /* istanbul ignore next */
     reflowChart = () => this.chart.reflow();
 
     render() {

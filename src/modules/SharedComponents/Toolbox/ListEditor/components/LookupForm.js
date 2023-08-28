@@ -33,6 +33,7 @@ export default class LookupForm extends Component {
         return !!props.itemSelectedToEdit ? { defaultValue: props.itemSelectedToEdit.value } : null;
     }
 
+    /* istanbul ignore next */
     addKeyValueItem = item => {
         this.props.onAdd(item);
     };

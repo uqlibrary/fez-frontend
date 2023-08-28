@@ -1,4 +1,6 @@
+import React from 'react';
 import { InlineLoader } from './InlineLoader';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -10,7 +12,7 @@ function setup(testProps = {}) {
             },
         },
     };
-    return getElement(InlineLoader, props);
+    return rtlRender(<InlineLoader {...props} />);
 }
 
 describe('Component InlineLoader', () => {
@@ -18,7 +20,7 @@ describe('Component InlineLoader', () => {
         const props = {
             message: 'This is a tst',
         };
-        const wrapper = setup({ ...props });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ ...props });
+        expect(container).toMatchSnapshot();
     });
 });

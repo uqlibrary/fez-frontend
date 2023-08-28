@@ -1,166 +1,164 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ selected 1`] = `
-<ForwardRef(FormControl)
-  error={false}
-  fullWidth={true}
-  variant="standard"
->
-  <ForwardRef(InputLabel)
-    data-testid="org-affiliation-label"
-    id="org-affiliation-label"
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
-    Org affiliation
-  </ForwardRef(InputLabel)>
-  <ForwardRef(Select)
-    MenuProps={
-      Object {
-        "data-analyticsid": "org-affiliation-options",
-        "data-testid": "org-affiliation-options",
-        "id": "org-affiliation-options",
-      }
-    }
-    SelectDisplayProps={
-      Object {
-        "data-testid": "org-affiliation-select",
-        "id": "org-affiliation-select",
-      }
-    }
-    labelId="org-affiliation-label"
-    name="org-affiliation"
-    onChange={[MockFunction]}
-    required={true}
-    value="NotUQ"
-    variant="standard"
-  >
-    <ForwardRef(MenuItem)
-      disabled={true}
-      value=""
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="org-affiliation-label"
+      id="org-affiliation-label"
     >
-      Organisational affiliation at time of publication
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      key="UQ"
-      value="UQ"
+      Org affiliation
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      required=""
     >
-      UQ
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      key="NotUQ"
-      value="NotUQ"
-    >
-      Not UQ
-    </ForwardRef(MenuItem)>
-  </ForwardRef(Select)>
-</ForwardRef(FormControl)>
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="org-affiliation-label org-affiliation-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="org-affiliation-select"
+        id="org-affiliation-select"
+        role="button"
+        tabindex="0"
+      >
+        Not UQ
+      </div>
+      <input
+        aria-hidden="true"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        name="org-affiliation"
+        required=""
+        tabindex="-1"
+        value="NotUQ"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`OrgAffiliationTypeSelector tests  should render component with UQ selected 1`] = `
-<ForwardRef(FormControl)
-  error={false}
-  fullWidth={true}
-  variant="standard"
->
-  <ForwardRef(InputLabel)
-    data-testid="org-affiliation-label"
-    id="org-affiliation-label"
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
-    Org affiliation
-  </ForwardRef(InputLabel)>
-  <ForwardRef(Select)
-    MenuProps={
-      Object {
-        "data-analyticsid": "org-affiliation-options",
-        "data-testid": "org-affiliation-options",
-        "id": "org-affiliation-options",
-      }
-    }
-    SelectDisplayProps={
-      Object {
-        "data-testid": "org-affiliation-select",
-        "id": "org-affiliation-select",
-      }
-    }
-    labelId="org-affiliation-label"
-    name="org-affiliation"
-    onChange={[MockFunction]}
-    required={true}
-    value="UQ"
-    variant="standard"
-  >
-    <ForwardRef(MenuItem)
-      disabled={true}
-      value=""
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="org-affiliation-label"
+      id="org-affiliation-label"
     >
-      Organisational affiliation at time of publication
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      key="UQ"
-      value="UQ"
+      Org affiliation
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      required=""
     >
-      UQ
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      key="NotUQ"
-      value="NotUQ"
-    >
-      Not UQ
-    </ForwardRef(MenuItem)>
-  </ForwardRef(Select)>
-</ForwardRef(FormControl)>
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="org-affiliation-label org-affiliation-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="org-affiliation-select"
+        id="org-affiliation-select"
+        role="button"
+        tabindex="0"
+      >
+        UQ
+      </div>
+      <input
+        aria-hidden="true"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        name="org-affiliation"
+        required=""
+        tabindex="-1"
+        value="UQ"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`OrgAffiliationTypeSelector tests  should render component with default values 1`] = `
-<ForwardRef(FormControl)
-  error={false}
-  fullWidth={true}
-  variant="standard"
->
-  <ForwardRef(InputLabel)
-    data-testid="org-affiliation-label"
-    id="org-affiliation-label"
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
-    Org affiliation
-  </ForwardRef(InputLabel)>
-  <ForwardRef(Select)
-    MenuProps={
-      Object {
-        "data-analyticsid": "org-affiliation-options",
-        "data-testid": "org-affiliation-options",
-        "id": "org-affiliation-options",
-      }
-    }
-    SelectDisplayProps={
-      Object {
-        "data-testid": "org-affiliation-select",
-        "id": "org-affiliation-select",
-      }
-    }
-    labelId="org-affiliation-label"
-    name="org-affiliation"
-    onChange={[MockFunction]}
-    required={true}
-    value=""
-    variant="standard"
-  >
-    <ForwardRef(MenuItem)
-      disabled={true}
-      value=""
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
+      data-testid="org-affiliation-label"
+      id="org-affiliation-label"
     >
-      Organisational affiliation at time of publication
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      key="UQ"
-      value="UQ"
+      Org affiliation
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      required=""
     >
-      UQ
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      key="NotUQ"
-      value="NotUQ"
-    >
-      Not UQ
-    </ForwardRef(MenuItem)>
-  </ForwardRef(Select)>
-</ForwardRef(FormControl)>
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="org-affiliation-label org-affiliation-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="org-affiliation-select"
+        id="org-affiliation-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        name="org-affiliation"
+        required=""
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;

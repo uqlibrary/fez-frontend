@@ -1,35 +1,55 @@
 jest.dontMock('./VideoDocumentForm');
-
+import React from 'react';
 import VideoDocumentForm from './VideoDocumentForm';
+import { render, WithReduxStore } from 'test-utils';
+
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+            />
+        );
+    },
+}));
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
     };
-    return getElement(VideoDocumentForm, props);
+    return render(
+        <WithReduxStore>
+            <VideoDocumentForm {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('VideoDocumentForm renders ', () => {
     it('component', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component with 10 input fields', () => {
-        const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(10);
+        const { container } = setup();
+        expect(container.getElementsByTagName('field').length).toEqual(10);
     });
 
     it('component with all fields disabled', () => {
-        const wrapper = setup({ submitting: true });
-        wrapper.find('Field').forEach(field => {
-            expect(field.props().disabled).toEqual(true);
-        });
+        const { container } = setup({ submitting: true });
+        expect(container.querySelectorAll('field[disabled=true]').length).toEqual(10);
     });
 
     it('component should render contributor assignment', () => {
-        const wrapper = setup({
+        const { container } = setup({
             formValues: {
                 get: key => {
                     const values = {
@@ -40,6 +60,6 @@ describe('VideoDocumentForm renders ', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });
