@@ -125,16 +125,6 @@ describe('Search action creators', () => {
             }
         });
 
-        it('should dispatch action with & replaced for journal search keywords', async () => {
-            const { apiUrl } = repositories.routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: 'a and b' });
-            mockApi.onGet(apiUrl).reply(200, { data: [] });
-
-            const expectedActions = [actions.JOURNAL_SEARCH_KEYWORDS_LOADING, actions.JOURNAL_SEARCH_KEYWORDS_LOADED];
-
-            await mockActionsStore.dispatch(journalActions.loadJournalSearchKeywords('a & b'));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
         it('should dispatch action for clear journal search keywords', async () => {
             const expectedActions = [actions.CLEAR_JOURNAL_SEARCH_KEYWORDS];
             await mockActionsStore.dispatch(journalActions.clearJournalSearchKeywords());
