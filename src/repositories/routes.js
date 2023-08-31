@@ -182,7 +182,7 @@ export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-tre
 export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies?cvo_ids=${id}` });
 export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 export const JOURNAL_LOOKUP_API = ({ query }) => ({
-    apiUrl: `journals/search?rule=lookup&query=${query}`,
+    apiUrl: `journals/search?rule=lookup&query=${encodeURIComponent(query)}`,
 });
 
 // file uploading apis
@@ -497,7 +497,7 @@ export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: und
 };
 
 export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
-    apiUrl: `journals/search?query=${query}`,
+    apiUrl: `journals/search?query=${encodeURIComponent(query)}`,
 });
 
 /**

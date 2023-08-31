@@ -537,7 +537,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <span
                           class="noOaIcon"
-                          data-testid="no-oa-icon"
+                          data-testid="oa-n/a-icon"
                         />
                       </div>
                       <div
@@ -740,7 +740,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <span
                           class="noOaIcon"
-                          data-testid="no-oa-icon"
+                          data-testid="oa-n/a-icon"
                         />
                       </div>
                       <div
@@ -898,7 +898,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-27"
+                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-28"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Testing%20book%20with%20cache"
@@ -914,7 +914,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <span
                           class="noOaIcon"
-                          data-testid="no-oa-icon"
+                          data-testid="oa-n/a-icon"
                         />
                       </div>
                       <div
@@ -1072,7 +1072,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-28"
+                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-30"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Conference%20paper%20with%20caching"
@@ -1088,7 +1088,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <span
                           class="noOaIcon"
-                          data-testid="no-oa-icon"
+                          data-testid="oa-n/a-icon"
                         />
                       </div>
                       <div
@@ -1415,7 +1415,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-29"
+                      class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-32"
                       data-analyticsid="citation-doi-link"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1093/hmg/ddw177"
@@ -1460,7 +1460,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-30"
+                          class="wosCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-33"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000393077300011"
@@ -1481,7 +1481,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-31"
+                          class="scopusCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-34"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85014391875%26origin%3Dinward"
@@ -1502,7 +1502,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-32"
+                          class="altmetricCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-35"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/9271343"
@@ -1523,7 +1523,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-33"
+                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-36"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Long-range%20regulators%20of%20the%20lncRNA%20HOTAIR%20enhance%20its%20prognostic%20potential%20in%20breast%20cancer"
@@ -1539,7 +1539,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <span
                           class="noOaIcon"
-                          data-testid="no-oa-icon"
+                          data-testid="oa-n/a-icon"
                         />
                       </div>
                       <div

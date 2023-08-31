@@ -10,14 +10,12 @@ import {
 } from 'repositories/routes';
 import { promptForDownload } from './exportPublicationsDataTransformers';
 
-const replaceAmpersand = value => value.replaceAll(' & ', ' and ');
-
 export const loadJournalLookup = searchText => dispatch => {
     dispatch({ type: actions.JOURNAL_LOOKUP_LOADING, payload: searchText });
     return (
         searchText &&
         searchText.trim().length > 0 &&
-        get(JOURNAL_LOOKUP_API({ query: replaceAmpersand(searchText) })).then(
+        get(JOURNAL_LOOKUP_API({ query: searchText })).then(
             response => {
                 dispatch({
                     type: actions.JOURNAL_LOOKUP_LOADED,
@@ -83,7 +81,7 @@ export const loadJournal = id => dispatch => {
 export const loadJournalSearchKeywords = searchQuery => async dispatch => {
     dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADING });
     try {
-        const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: replaceAmpersand(searchQuery) }));
+        const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: searchQuery }));
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADED, payload: keywordsResponse.data, query: searchQuery });
     } catch (e) {
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_FAILED, payload: e });

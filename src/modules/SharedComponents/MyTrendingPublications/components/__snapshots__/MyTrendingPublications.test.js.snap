@@ -419,7 +419,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <span
                                   class="noOaIcon"
-                                  data-testid="no-oa-icon"
+                                  data-testid="oa-n/a-icon"
                                 />
                               </div>
                               <div
@@ -802,7 +802,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <span
                                   class="noOaIcon"
-                                  data-testid="no-oa-icon"
+                                  data-testid="oa-n/a-icon"
                                 />
                               </div>
                               <div
@@ -921,7 +921,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="makeStyles-externalLink-14 makeStyles-externalLink-34"
+                          class="makeStyles-externalLink-14 makeStyles-externalLink-35"
                           data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
@@ -1041,7 +1041,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           >
                             <a
                               aria-label="Open this DOI in an new window"
-                              class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-35"
+                              class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-36"
                               data-analyticsid="citation-doi-link"
                               data-testid="citation-doi-link"
                               href="https://doi.org/10.4049/jimmunol.1490012"
@@ -1086,7 +1086,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-36"
+                                  class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-37"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
@@ -1107,7 +1107,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-37"
+                                  class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-38"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
@@ -1128,7 +1128,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-38"
+                                  class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-39"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
@@ -1149,7 +1149,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-39"
+                                  class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-40"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
@@ -1165,7 +1165,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <span
                                   class="noOaIcon"
-                                  data-testid="no-oa-icon"
+                                  data-testid="oa-n/a-icon"
                                 />
                               </div>
                               <div

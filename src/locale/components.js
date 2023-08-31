@@ -2376,6 +2376,16 @@ export default {
             label: 'Content Indicators',
             divider: ', ',
         },
+        fileAvStateIcon: {
+            description: {
+                map: {
+                    clean: date => `Clean of threats. Scanned at ${date}`,
+                    infected: date => `Flagged as infected at ${date}`,
+                    unscannable: () => 'File cannot be scanned for threats. e.g., too big, archive, encrypted',
+                    default: () => 'Not yet scanned for threats',
+                },
+            },
+        },
         attachedFiles: {
             title: 'Files',
             fileName: 'File name',
