@@ -1,19 +1,37 @@
 import React from 'react';
 import { AdminInterface, navigateToSearchResult } from './AdminInterface';
-import { useRecordContext, useTabbedContext } from 'context';
+import { useAccountContext, useRecordContext, useTabbedContext } from 'context';
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
-import pageLocale from '../../../locale/pages';
+import pageLocale from 'locale/pages';
 import * as redux from 'react-redux';
+import { render, WithReduxStore, WithRouter, fireEvent, within, createEvent } from 'test-utils';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
 }));
 jest.mock('../../../context');
 
-jest.mock('redux-form/immutable');
+// jest.mock('redux-form/immutable');
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    destroy: jest.fn(),
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+            />
+        );
+    },
+}));
 jest.mock('js-cookie', () => ({
     get: jest.fn(),
     set: jest.fn(),
@@ -24,7 +42,7 @@ jest.mock('react-redux', () => ({
     useDispatch: jest.fn(),
 }));
 
-function setup(testProps = {}) {
+function setup(testProps = {}, renderMethod = render) {
     const props = {
         createMode: false,
         authorDetails: {
@@ -54,7 +72,13 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(AdminInterface, props);
+    return renderMethod(
+        <WithReduxStore>
+            <WithRouter>
+                <AdminInterface {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('AdminInterface component', () => {
@@ -82,6 +106,11 @@ describe('AdminInterface component', () => {
                 rek_display_type: 179,
             },
         }));
+        useAccountContext.mockImplementation(() => ({
+            account: {
+                id: 's2222222',
+            },
+        }));
         useDispatchMock.mockImplementation(() => () => {});
     });
 
@@ -101,8 +130,8 @@ describe('AdminInterface component', () => {
     it('should render when no record is available', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({}));
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should render in create mode', () => {
@@ -114,7 +143,7 @@ describe('AdminInterface component', () => {
                 rek_subtype: undefined,
             },
         }));
-        const wrapper = setup({
+        const { container } = setup({
             createMode: true,
             tabs: {
                 bibliographic: {
@@ -131,7 +160,7 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render undelete title and button', () => {
@@ -143,7 +172,7 @@ describe('AdminInterface component', () => {
                 rek_subtype: undefined,
             },
         }));
-        const wrapper = setup({
+        const { container } = setup({
             createMode: false,
             isDeleted: true,
             tabs: {
@@ -153,7 +182,7 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render locked alert in edit mode', () => {
@@ -168,7 +197,7 @@ describe('AdminInterface component', () => {
                 rek_status: 2,
             },
         }));
-        const wrapper = setup({
+        const { container, getByTestId } = setup({
             authorDetails: {
                 username: 'uqstaff',
             },
@@ -189,8 +218,12 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(wrapper.find('LockedAlert').length).toEqual(1);
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(getByTestId('alert-error')).toHaveTextContent(
+            'THIS WORK IS LOCKED - ' +
+                'This work is currently being edited by undefined (uqtest). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.',
+        );
+        expect(container).toMatchSnapshot();
     });
 
     it('should render locked info alert', () => {
@@ -205,7 +238,7 @@ describe('AdminInterface component', () => {
                 rek_status: 3,
             },
         }));
-        const wrapper = setup({
+        const { container, getByTestId } = setup({
             createMode: false,
             locked: true,
             authorDetails: {
@@ -226,14 +259,17 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(wrapper.find('LockedAlert').length).toEqual(1);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(getByTestId('alert-error')).toHaveTextContent(
+            'THIS WORK IS LOCKED - ' +
+                'This work is currently being edited by undefined (uqstaff). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.',
+        );
+        expect(container).toMatchSnapshot();
     });
 
     it('should render default view as a full form view', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
-        const wrapper = setup({
+        const { container } = setup({
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -249,13 +285,13 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render default view as a tabbed form view', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
 
-        const wrapper = setup({
+        const { container } = setup({
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -271,13 +307,13 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render activated tabs only', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
 
-        const wrapper = setup({
+        const { getByRole } = setup({
             tabs: {
                 admin: {
                     activated: true,
@@ -301,14 +337,15 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(4);
-        expect(wrapper.find('TabContainer')).toHaveLength(1);
+
+        expect(getByRole('tablist')).toBeInTheDocument();
+        expect(within(getByRole('tablist')).getAllByRole('tab')).toHaveLength(4);
     });
 
     it('should render full form with activated sections', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
-        const wrapper = setup({
+        const { queryByTestId, queryByRole } = setup({
             tabs: {
                 admin: {
                     activated: false,
@@ -333,14 +370,18 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(AdminTab)')).toHaveLength(0);
-        expect(wrapper.find('TabContainer')).toHaveLength(3);
+        expect(queryByRole('tablist')).not.toBeInTheDocument();
+        expect(queryByTestId('bibliographic-section')).toBeInTheDocument();
+        expect(queryByTestId('security-section')).toBeInTheDocument();
+        expect(queryByTestId('files-section')).toBeInTheDocument();
+        expect(queryByTestId('identifiers-section')).not.toBeInTheDocument();
+        expect(queryByTestId('admin-section')).not.toBeInTheDocument();
     });
 
     it('should render security tab from query string params by default', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
 
-        const wrapper = setup({
+        const { getByTestId } = setup({
             tabs: {
                 admin: {
                     activated: true,
@@ -368,8 +409,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(5);
-        expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
+        expect(getByTestId('security-tab').getAttribute('aria-selected')).toBe('true');
     });
 
     it('should respond to keyboard shortcuts', () => {
@@ -451,7 +491,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 179,
             },
         }));
-        const wrapper = setup({
+        const { getByTestId } = setup({
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -459,13 +499,14 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(toJson(wrapper.find('WithStyles(Alert)'))).toMatchSnapshot();
+
+        expect(getByTestId('alert')).toHaveTextContent('This work has been retracted');
     });
 
     it('should display badges on tabs for erroring fields', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
 
-        const wrapper = setup({
+        const { getByTestId } = setup({
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -480,13 +521,14 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(toJson(wrapper.find('WithStyles(AdminTab)'))).toMatchSnapshot();
+        expect(getByTestId('bibliographic-tab')).toHaveTextContent(/1/);
+        expect(getByTestId('security-tab')).toHaveTextContent(/3/);
     });
 
     it('should switch the tab', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
 
-        const wrapper = setup({
+        const { getByTestId } = setup({
             tabs: {
                 admin: {
                     activated: true,
@@ -514,14 +556,10 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
-
-        wrapper
-            .find('ForwardRef(Tabs)')
-            .props()
-            .onChange({}, 'files');
-
-        expect(wrapper.find('TabContainer').props().currentTab).toBe('files');
+        expect(getByTestId('security-tab').getAttribute('aria-selected')).toBe('true');
+        fireEvent.click(getByTestId('files-tab'));
+        expect(getByTestId('files-tab').getAttribute('aria-selected')).toBe('true');
+        expect(getByTestId('security-tab').getAttribute('aria-selected')).toBe('false');
     });
 
     it('should default to security tab for non-record objects', () => {
@@ -535,13 +573,13 @@ describe('AdminInterface component', () => {
                 rek_display_type_lookup: 'Collection',
             },
         }));
-        const wrapper = setup({});
-        expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
+        const { getByTestId } = setup({});
+        expect(getByTestId('security-tab').getAttribute('aria-selected')).toBe('true');
     });
 
     it('should disabled button and render alert for form submitting', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-        const wrapper = setup({
+        const { container } = setup({
             submitting: true,
             tabs: {
                 bibliographic: {
@@ -550,13 +588,12 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should display successful alert', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-        const wrapper = setup({
-            submitSucceeded: true,
+        const { container, getByTestId, rerender } = setup({
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -564,20 +601,29 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper
-            .find('WithStyles(ConfirmDialogBox)')
-            .props()
-            .onAction();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
+
+        // should show the confirmation dialog
+        setup(
+            {
+                submitSucceeded: true,
+                tabs: {
+                    bibliographic: {
+                        activated: true,
+                        component: () => 'BibliographySectionComponent',
+                    },
+                },
+            },
+            rerender,
+        );
+        fireEvent.click(getByTestId('confirm-dialog-box'));
+        expect(container).toMatchSnapshot();
     });
 
     it('should display job created alert', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-        const wrapper = setup({
-            isJobCreated: true,
-            submitSucceeded: true,
+        const { container, getByTestId, rerender } = setup({
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -585,13 +631,25 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper
-            .find('WithStyles(ConfirmDialogBox)')
-            .props()
-            .onAction();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        // should show the confirmation dialog
+        setup(
+            {
+                isJobCreated: true,
+                submitSucceeded: true,
+                tabs: {
+                    bibliographic: {
+                        activated: true,
+                        component: () => 'BibliographySectionComponent',
+                    },
+                },
+            },
+            rerender,
+        );
+
+        fireEvent.click(getByTestId('confirm-dialog-box'));
+        expect(container).toMatchSnapshot();
     });
 
     it('should render a title with html correctly', () => {
@@ -609,7 +667,7 @@ describe('AdminInterface component', () => {
         }));
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
-        const wrapper = setup({
+        const { container } = setup({
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -617,9 +675,8 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        // prettier-ignore
-        expect(toJson(wrapper))
-            .toMatchSnapshot();
+
+        expect(container).toMatchSnapshot();
     });
 
     it('should display an alert if editing of a pubtype is not supported', () => {
@@ -630,8 +687,8 @@ describe('AdminInterface component', () => {
             },
         }));
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should navigate to "My research" after saving a record edit without referral and choosing "Edit another record"', () => {
@@ -698,7 +755,7 @@ describe('AdminInterface component', () => {
         mockUseCallback.mockRestore();
     });
 
-    it('should call method to handle cancel of the form', () => {
+    it('should call method to handle cancel of the form for new record', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({
             record: {
@@ -709,43 +766,71 @@ describe('AdminInterface component', () => {
         }));
         const push = jest.fn();
 
-        const wrapper = setup({
+        const { getByTestId } = setup({
             history: {
                 push,
             },
         });
-        wrapper
-            .find('ForwardRef(Button)')
-            .get(0)
-            .props.onClick({
-                preventDefault: jest.fn(),
-            });
-        expect(push).toHaveBeenCalledWith('/');
-        push.mockClear();
 
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_display_type: 187,
-                rek_object_type_lookup: RECORD_TYPE_RECORD,
-                rek_pid: 'UQ:111111',
-                rek_editing_user: 'noone',
-            },
-        }));
-        const wrapper2 = setup({
-            history: {
-                push,
-            },
-        });
-        wrapper2
-            .find('ForwardRef(Button)')
-            .get(0)
-            .props.onClick({
-                preventDefault: jest.fn(),
-            });
-        expect(push).toHaveBeenCalledWith('/view/UQ:111111');
+        fireEvent.click(getByTestId('admin-work-cancel-top'));
+        expect(push).toHaveBeenCalledWith('/');
     });
 
-    it('should handle cancel action of submit confirmation', () => {
+    it('should call method to handle cancel of the form for existing record', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_pid: 'UQ:111111',
+                rek_editing_user: 'noone',
+            },
+        }));
+        const push = jest.fn();
+        const { getByTestId } = setup({
+            history: {
+                push,
+            },
+        });
+
+        fireEvent.click(getByTestId('admin-work-cancel-top'));
+        expect(push).toHaveBeenCalledWith('/view/UQ:111111');
+        push.mockClear();
+    });
+
+    it('should handle cancel action of submit confirmation for new record', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+            },
+        }));
+
+        const push = jest.fn();
+
+        const { getByTestId, rerender } = setup({
+            history: {
+                push,
+            },
+        });
+
+        setup(
+            {
+                submitSucceeded: true,
+                history: {
+                    push,
+                },
+            },
+            rerender,
+        );
+
+        fireEvent.click(getByTestId('cancel-dialog-box'));
+        expect(push).toHaveBeenCalledTimes(0);
+        push.mockClear();
+    });
+
+    it('should handle cancel action of submit confirmation for existing record', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({
             record: {
@@ -756,34 +841,24 @@ describe('AdminInterface component', () => {
         }));
         const push = jest.fn();
 
-        const wrapper = setup({
+        const { getByTestId, rerender } = setup({
             history: {
                 push,
             },
         });
-        wrapper
-            .find('WithStyles(ConfirmDialogBox)')
-            .props()
-            .onCancelAction();
+
+        setup(
+            {
+                submitSucceeded: true,
+                history: {
+                    push,
+                },
+            },
+            rerender,
+        );
+        fireEvent.click(getByTestId('cancel-dialog-box'));
         expect(push).toHaveBeenCalledWith('/view/UQ:111111');
         push.mockClear();
-
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_display_type: 187,
-                rek_object_type_lookup: RECORD_TYPE_RECORD,
-            },
-        }));
-        const wrapper2 = setup({
-            history: {
-                push,
-            },
-        });
-        wrapper2
-            .find('WithStyles(ConfirmDialogBox)')
-            .props()
-            .onCancelAction();
-        expect(push).toHaveBeenCalledTimes(0);
     });
 
     it('should render unpublish button for published record', () => {
@@ -800,7 +875,7 @@ describe('AdminInterface component', () => {
             },
         }));
         const handleSubmit = jest.fn(f => f({ setIn: jest.fn() }));
-        const wrapper = setup({
+        const { getByTestId } = setup({
             handleSubmit,
             tabs: {
                 bibliographic: {
@@ -810,18 +885,16 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('#admin-work-unpublish-top').length).toEqual(1);
-        wrapper.find('#admin-work-unpublish-top').simulate('click');
+        fireEvent.click(getByTestId('unpublish-admin-top'));
         expect(handleSubmit).toHaveBeenCalledTimes(2);
         expect(onSubmit).toHaveBeenCalledTimes(2);
 
-        expect(wrapper.find('#admin-work-unpublish').length).toEqual(1);
-        wrapper.find('#admin-work-unpublish').simulate('click');
+        fireEvent.click(getByTestId('unpublish-admin'));
         expect(handleSubmit).toHaveBeenCalledTimes(2);
         expect(onSubmit).toHaveBeenCalledTimes(2);
     });
 
-    it('should render publish button for unpublished record', () => {
+    it('should render publish button for unpublished record (status = 1)', () => {
         const record = {
             rek_pid: 'UQ:123456',
             rek_status: 1,
@@ -839,19 +912,31 @@ describe('AdminInterface component', () => {
 
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({ record }));
-        const wrapper = setup({ tabs });
-        expect(wrapper.find('#admin-work-publish-top').length).toEqual(1);
-        expect(wrapper.find('#admin-work-publish').length).toEqual(1);
-        useRecordContext.mockReset();
+        const { getByTestId } = setup({ tabs });
+        expect(getByTestId('publish-admin-top')).toBeInTheDocument();
+        expect(getByTestId('publish-admin')).toBeInTheDocument();
+    });
 
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                ...record,
-                rek_status: 3,
+    it('should render publish button for unpublished record (status = 3)', () => {
+        const record = {
+            rek_pid: 'UQ:123456',
+            rek_status: 3,
+            rek_title: 'This is test record',
+            rek_object_type_lookup: 'Record',
+            rek_display_type_lookup: 'Journal Article',
+            rek_display_type: 179,
+        };
+        const tabs = {
+            bibliographic: {
+                activated: true,
+                component: () => 'BibliographySectionComponent',
             },
-        }));
-        const wrapper2 = setup({ tabs });
-        expect(wrapper2.find('#admin-work-publish').length).toEqual(1);
+        };
+
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({ record }));
+        const { getByTestId } = setup({ tabs });
+        expect(getByTestId('publish-admin')).toBeInTheDocument();
     });
 
     it('should render retract button for super admin user', () => {
@@ -871,7 +956,7 @@ describe('AdminInterface component', () => {
             },
         }));
         const handleSubmit = jest.fn(f => f({ setIn: jest.fn() }));
-        const wrapper = setup({
+        const { getByTestId } = setup({
             handleSubmit,
             tabs: {
                 bibliographic: {
@@ -881,8 +966,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('#admin-work-retract-top').length).toEqual(1);
-        wrapper.find('#admin-work-retract-top').simulate('click');
+        fireEvent.click(getByTestId('retract-admin-top'));
         expect(handleSubmit).toHaveBeenCalled();
         expect(onSubmit).toHaveBeenCalled();
     });
@@ -890,9 +974,9 @@ describe('AdminInterface component', () => {
     it('should render error', () => {
         const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
         useIsUserSuperAdmin.mockImplementationOnce(() => true);
-        useTabbedContext.mockImplementationOnce(() => ({ tabbed: false }));
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
-        const wrapper = setup({
+        const { getByTestId } = setup({
             handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
             error: { message: 'error' },
             tabs: {
@@ -903,20 +987,18 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(
-            componentToString(wrapper.find('Alert').props().message).includes(
-                pageLocale.pages.edit.alerts.errorAlert.message(' '),
-            ),
-        ).toBe(true);
+        expect(getByTestId('alert')).toHaveTextContent(
+            'Error - Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later',
+        );
     });
 
     it('should prioritize formErrors', () => {
         const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
         useIsUserSuperAdmin.mockImplementationOnce(() => true);
-        useTabbedContext.mockImplementationOnce(() => ({ tabbed: false }));
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
         const error = 'Title is required';
-        const wrapper = setup({
+        const { getByTestId } = setup({
             handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
             formErrors: { bibliographicSection: { rek_title: error } },
             error: { message: 'error' },
@@ -928,6 +1010,6 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(componentToString(wrapper.find('Alert').props().message).includes(error)).toBe(true);
+        expect(getByTestId('alert')).toHaveTextContent(/Title is required/);
     });
 });

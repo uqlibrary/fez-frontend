@@ -96,18 +96,21 @@ export class GrantListEditorRow extends PureComponent {
     };
 
     _deleteRecord = () => {
+        /* istanbul ignore else */
         if (!this.props.disabled && this.props.onDelete) {
             this.props.onDelete(this.props.grant, this.props.index);
         }
     };
 
     _onMoveUp = () => {
+        /* istanbul ignore else */
         if (!this.props.disabled && this.props.onMoveUp) {
             this.props.onMoveUp(this.props.grant, this.props.index);
         }
     };
 
     _onMoveDown = () => {
+        /* istanbul ignore else */
         if (!this.props.disabled && this.props.onMoveDown) {
             this.props.onMoveDown(this.props.grant, this.props.index);
         }

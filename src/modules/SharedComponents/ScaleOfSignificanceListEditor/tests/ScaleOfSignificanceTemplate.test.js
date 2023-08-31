@@ -1,6 +1,8 @@
+import React from 'react';
 import { ScaleOfSignificanceTemplate } from '../ScaleOfSignificanceTemplate';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         item: {
             id: 0,
@@ -11,17 +13,17 @@ function setup(testProps = {}, args = { isShallow: true }) {
         },
         ...testProps,
     };
-    return getElement(ScaleOfSignificanceTemplate, props, args);
+    return rtlRender(<ScaleOfSignificanceTemplate {...props} />);
 }
 
 describe('ScaleOfSignificanceTemplate component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with author name', () => {
-        const wrapper = setup({
+        const { container } = setup({
             item: {
                 id: 0,
                 value: {},
@@ -30,6 +32,6 @@ describe('ScaleOfSignificanceTemplate component', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

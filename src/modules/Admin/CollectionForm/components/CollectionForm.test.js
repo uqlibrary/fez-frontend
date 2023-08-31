@@ -1,7 +1,6 @@
 import React from 'react';
 import CollectionForm from './CollectionForm';
 import Immutable from 'immutable';
-import { default as formLocale } from 'locale/publicationForm';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
 /* eslint-disable react/prop-types */

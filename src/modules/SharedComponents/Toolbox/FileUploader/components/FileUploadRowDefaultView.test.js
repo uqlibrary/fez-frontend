@@ -1,5 +1,6 @@
-import { FileUploadRowDefaultView } from './FileUploadRowDefaultView';
-import FileUploadRowDefaultViewWithStyles from './FileUploadRowDefaultView';
+import React from 'react';
+import FileUploadRowDefaultView from './FileUploadRowDefaultView';
+import { render, WithReduxStore } from 'test-utils';
 
 const getProps = (testProps = {}) => ({
     index: 0,
@@ -19,43 +20,42 @@ const getProps = (testProps = {}) => ({
 });
 
 function setup(testProps = {}) {
-    return getElement(FileUploadRowDefaultView, getProps(testProps));
+    return render(
+        <WithReduxStore>
+            <FileUploadRowDefaultView {...getProps(testProps)} />
+        </WithReduxStore>,
+    );
 }
 
 describe('Component FileUploadRowDefaultView', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render default view for admin', () => {
-        const wrapper = setup({ isAdmin: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render default view with styles', () => {
-        const wrapper = getElement(FileUploadRowDefaultViewWithStyles, getProps());
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isAdmin: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should not render embargo date picker if access condition is set to closed access', () => {
-        const wrapper = setup({
+        const { container } = setup({
             accessConditionId: 1,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render embargo date picker if access condition is set to open access', () => {
-        const wrapper = setup({
+        const { container } = setup({
             accessConditionId: 5,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should not render access selector or date picker if access condition is not required to select', () => {
-        const wrapper = setup({
+        const { container } = setup({
             requireOpenAccessStatus: false,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });
