@@ -24,716 +24,727 @@ Object {
 `;
 
 exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
+<div>
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >
-    <ForwardRef(Grid)
-      container={true}
-      spacing={0}
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        md={9}
-        sm={11}
-        xs={10}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
       >
-        <ForwardRef(Grid)
-          container={true}
-          spacing={0}
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
         >
-          <ForwardRef(Grid)
-            item={true}
-            sm={5}
-            xs={12}
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
           >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            sm={3}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-          >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={1}
-        xs={2}
-      >
-        <ForwardRef(ListItemSecondaryAction)
-          style={
-            Object {
-              "margin": "0 0 -32px 0",
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-        >
-          <ForwardRef(Grid)
-            container={true}
-            spacing={0}
-          >
-            <ForwardRef(Grid)
-              item={true}
-              sx={
-                Object {
-                  "display": Object {
-                    "md": "block",
-                    "xs": "none",
-                  },
-                }
-              }
-              xs={8}
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
             >
-              <ForwardRef(ListItemText)
-                classes={
-                  Object {
-                    "root": undefined,
-                  }
-                }
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
-                }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
-                }
-              />
-            </ForwardRef(Grid)>
-            <ForwardRef(Grid)
-              item={true}
-              style={
-                Object {
-                  "textAlign": "right",
-                }
-              }
-              xs={4}
-            >
-              <ForwardRef(Tooltip)
-                disableFocusListener={false}
-                disableHoverListener={false}
-                disableTouchListener={false}
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
               >
-                <div
-                  style={
-                    Object {
-                      "display": "inline",
-                    }
-                  }
+                Grant name
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor ID
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                 >
-                  <ForwardRef(IconButton)
-                    disabled={false}
-                    onClick={[Function]}
-                    size="large"
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <Memo(ForwardRef(DeleteForeverIcon)) />
-                  </ForwardRef(IconButton)>
-                </div>
-              </ForwardRef(Tooltip)>
-            </ForwardRef(Grid)>
-          </ForwardRef(Grid)>
-        </ForwardRef(ListItemSecondaryAction)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(ListItem)>
-</Fragment>
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
 `;
 
 exports[`GrantListEditorHeader should render default mobile view 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
+<div>
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >
-    <ForwardRef(Grid)
-      container={true}
-      spacing={0}
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        md={9}
-        sm={11}
-        xs={10}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
       >
-        <ForwardRef(Grid)
-          container={true}
-          spacing={0}
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
         >
-          <ForwardRef(Grid)
-            item={true}
-            sm={5}
-            xs={12}
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
           >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            sm={3}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-          >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            sm={4}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-          >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={1}
-        xs={2}
-      >
-        <ForwardRef(ListItemSecondaryAction)
-          style={
-            Object {
-              "margin": "0 0 -32px 0",
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-        >
-          <ForwardRef(Grid)
-            container={true}
-            spacing={0}
-          >
-            <ForwardRef(Grid)
-              item={true}
-              sx={
-                Object {
-                  "display": Object {
-                    "md": "block",
-                    "xs": "none",
-                  },
-                }
-              }
-              xs={8}
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
             >
-              <ForwardRef(ListItemText)
-                classes={
-                  Object {
-                    "root": undefined,
-                  }
-                }
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
-                }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
-                }
-              />
-            </ForwardRef(Grid)>
-            <ForwardRef(Grid)
-              item={true}
-              style={
-                Object {
-                  "textAlign": "right",
-                }
-              }
-              xs={12}
-            >
-              <ForwardRef(Tooltip)
-                disableFocusListener={false}
-                disableHoverListener={false}
-                disableTouchListener={false}
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
               >
-                <div
-                  style={
-                    Object {
-                      "display": "inline",
-                    }
-                  }
+                Grant name
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4 css-1sdb5th-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor type
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                 >
-                  <ForwardRef(IconButton)
-                    disabled={false}
-                    onClick={[Function]}
-                    size="large"
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <Memo(ForwardRef(DeleteForeverIcon)) />
-                  </ForwardRef(IconButton)>
-                </div>
-              </ForwardRef(Tooltip)>
-            </ForwardRef(Grid)>
-          </ForwardRef(Grid)>
-        </ForwardRef(ListItemSecondaryAction)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(ListItem)>
-</Fragment>
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`GrantListEditorHeader should render default mobile view 2`] = `
+<div>
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Grant name
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4 css-1sdb5th-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor type
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                >
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
 `;
 
 exports[`GrantListEditorHeader should render default view 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
+<div>
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >
-    <ForwardRef(Grid)
-      container={true}
-      spacing={0}
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        md={9}
-        sm={11}
-        xs={10}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
       >
-        <ForwardRef(Grid)
-          container={true}
-          spacing={0}
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
         >
-          <ForwardRef(Grid)
-            item={true}
-            sm={5}
-            xs={12}
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
           >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            sm={3}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-          >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            sm={4}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-          >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={1}
-        xs={2}
-      >
-        <ForwardRef(ListItemSecondaryAction)
-          style={
-            Object {
-              "margin": "0 0 -32px 0",
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-        >
-          <ForwardRef(Grid)
-            container={true}
-            spacing={0}
-          >
-            <ForwardRef(Grid)
-              item={true}
-              sx={
-                Object {
-                  "display": Object {
-                    "md": "block",
-                    "xs": "none",
-                  },
-                }
-              }
-              xs={8}
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
             >
-              <ForwardRef(ListItemText)
-                classes={
-                  Object {
-                    "root": undefined,
-                  }
-                }
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
-                }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
-                }
-              />
-            </ForwardRef(Grid)>
-            <ForwardRef(Grid)
-              item={true}
-              style={
-                Object {
-                  "textAlign": "right",
-                }
-              }
-              xs={4}
-            >
-              <ForwardRef(Tooltip)
-                disableFocusListener={false}
-                disableHoverListener={false}
-                disableTouchListener={false}
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
               >
-                <div
-                  style={
-                    Object {
-                      "display": "inline",
-                    }
-                  }
+                Grant name
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4 css-1sdb5th-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor type
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                 >
-                  <ForwardRef(IconButton)
-                    disabled={false}
-                    onClick={[Function]}
-                    size="large"
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <Memo(ForwardRef(DeleteForeverIcon)) />
-                  </ForwardRef(IconButton)>
-                </div>
-              </ForwardRef(Tooltip)>
-            </ForwardRef(Grid)>
-          </ForwardRef(Grid)>
-        </ForwardRef(ListItemSecondaryAction)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(ListItem)>
-</Fragment>
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
 `;
 
 exports[`GrantListEditorHeader should show confirmation box 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    onAction={[MockFunction]}
-    onRef={[Function]}
-  />
-  <ForwardRef(ListItem)
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
+<div
+  aria-hidden="true"
+>
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >
-    <ForwardRef(Grid)
-      container={true}
-      spacing={0}
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        md={9}
-        sm={11}
-        xs={10}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
       >
-        <ForwardRef(Grid)
-          container={true}
-          spacing={0}
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
         >
-          <ForwardRef(Grid)
-            item={true}
-            sm={5}
-            xs={12}
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
           >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            sm={3}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-          >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-          <ForwardRef(Grid)
-            item={true}
-            sm={4}
-            sx={
-              Object {
-                "display": Object {
-                  "sm": "block",
-                  "xs": "none",
-                },
-              }
-            }
-          >
-            <ForwardRef(ListItemText)
-              secondaryTypographyProps={
-                Object {
-                  "variant": "caption",
-                }
-              }
-              style={
-                Object {
-                  "padding": 0,
-                }
-              }
-            />
-          </ForwardRef(Grid)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        md={3}
-        sm={1}
-        xs={2}
-      >
-        <ForwardRef(ListItemSecondaryAction)
-          style={
-            Object {
-              "margin": "0 0 -32px 0",
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-        >
-          <ForwardRef(Grid)
-            container={true}
-            spacing={0}
-          >
-            <ForwardRef(Grid)
-              item={true}
-              sx={
-                Object {
-                  "display": Object {
-                    "md": "block",
-                    "xs": "none",
-                  },
-                }
-              }
-              xs={8}
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
             >
-              <ForwardRef(ListItemText)
-                classes={
-                  Object {
-                    "root": undefined,
-                  }
-                }
-                secondaryTypographyProps={
-                  Object {
-                    "variant": "caption",
-                  }
-                }
-                style={
-                  Object {
-                    "padding": 0,
-                  }
-                }
-              />
-            </ForwardRef(Grid)>
-            <ForwardRef(Grid)
-              item={true}
-              style={
-                Object {
-                  "textAlign": "right",
-                }
-              }
-              xs={4}
-            >
-              <ForwardRef(Tooltip)
-                disableFocusListener={false}
-                disableHoverListener={false}
-                disableTouchListener={false}
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
               >
-                <div
-                  style={
-                    Object {
-                      "display": "inline",
-                    }
-                  }
+                Grant name
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4 css-1sdb5th-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor type
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                 >
-                  <ForwardRef(IconButton)
-                    disabled={false}
-                    onClick={[Function]}
-                    size="large"
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <Memo(ForwardRef(DeleteForeverIcon)) />
-                  </ForwardRef(IconButton)>
-                </div>
-              </ForwardRef(Tooltip)>
-            </ForwardRef(Grid)>
-          </ForwardRef(Grid)>
-        </ForwardRef(ListItemSecondaryAction)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(ListItem)>
-</Fragment>
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`GrantListEditorHeader should use width hook 1`] = `
+<div>
+  <li
+    class="MuiListItem-root Component-header-6 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Grant name
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4 css-1sdb5th-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Funder/sponsor type
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root Component-right-5 css-tlelie-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                >
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
 `;

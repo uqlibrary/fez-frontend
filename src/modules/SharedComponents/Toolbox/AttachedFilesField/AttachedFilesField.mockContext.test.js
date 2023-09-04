@@ -1,15 +1,16 @@
+import React from 'react';
 import { AttachedFilesField } from './AttachedFilesField';
-import { cleanup } from 'test-utils';
+import { rtlRender, cleanup } from 'test-utils';
 
 jest.mock('../../../../context');
 import { useRecordContext, useFormValuesContext } from 'context';
 
 import { recordWithDatastreams } from 'mock/data';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}, renderMethod = rtlRender) {
     const { locale, ...restProps } = testProps;
     const props = {
-        input: {},
+        input: { onChange: jest.fn() },
         dataStreams: recordWithDatastreams.fez_datastream_info,
         locale: {
             title: 'Files',
@@ -22,10 +23,16 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...restProps,
     };
 
-    return getElement(AttachedFilesField, props, args);
+    return renderMethod(<AttachedFilesField {...props} />);
 }
 
 describe('DataStreamSecuritySelector component with mockContext', () => {
+    beforeEach(() => {
+        useRecordContext.mockImplementation(() => ({
+            record: recordWithDatastreams,
+        }));
+    });
+
     afterEach(() => cleanup);
 
     it('should render with form data', () => {
@@ -41,20 +48,15 @@ describe('DataStreamSecuritySelector component with mockContext', () => {
             },
         }));
 
-        const wrapper = setup();
+        const { container } = setup();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('fires when attachment deleted', () => {
         const dataStreamsInitial = recordWithDatastreams.fez_datastream_info;
         const dataStreamsChanged = dataStreamsInitial.slice(1); // remove first item
-
         const onChange = jest.fn();
-
-        useRecordContext.mockImplementation(() => ({
-            record: recordWithDatastreams,
-        }));
 
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
@@ -62,25 +64,13 @@ describe('DataStreamSecuritySelector component with mockContext', () => {
             },
         }));
 
-        const wrapper = setup(
-            {
-                input: {
-                    onChange,
-                },
-            },
-            { isShallow: false },
-        );
+        const { rerender } = setup({ input: { onChange } });
 
         useFormValuesContext.mockImplementation(() => ({
             formValues: { fez_datastream_info: dataStreamsChanged },
         }));
 
-        wrapper.setProps({
-            input: {
-                onChange,
-            },
-        });
-        wrapper.update();
+        setup({ input: { onChange } }, rerender);
 
         expect(onChange).toHaveBeenCalledTimes(1);
     });
