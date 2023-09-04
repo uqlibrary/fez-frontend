@@ -1,4 +1,23 @@
 import PublicationSearchForm from './PublicationSearchForm';
+import React from 'react';
+import { render, WithReduxStore } from 'test-utils';
+
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+            />
+        );
+    },
+}));
 
 function setup(testProps = {}) {
     const props = {
@@ -45,14 +64,18 @@ function setup(testProps = {}) {
         pure: true,
         ...testProps,
     };
-    return getElement(PublicationSearchForm, props);
+    return render(
+        <WithReduxStore>
+            <PublicationSearchForm {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('PublicationSearchForm renders ', () => {
     it('component', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(1);
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
+        expect(container.getElementsByTagName('field').length).toEqual(1);
     });
 
     it('should display with skip search option', () => {
@@ -60,7 +83,7 @@ describe('PublicationSearchForm renders ', () => {
         const testProps = {
             onSkipSearch: testMethod,
         };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(testProps);
+        expect(container).toMatchSnapshot();
     });
 });
