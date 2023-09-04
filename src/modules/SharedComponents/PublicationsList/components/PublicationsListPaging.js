@@ -182,7 +182,7 @@ export class PublicationsListPaging extends Component {
         );
     };
 
-    renderPageButtons = (pagesToShow = []) => {
+    renderPageButtons = pagesToShow => {
         return Array(pagesToShow.length)
             .fill()
             .map((page, index) => this.renderButton(pagesToShow[index]));
