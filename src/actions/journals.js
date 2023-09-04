@@ -13,7 +13,7 @@ import { store } from '../config/store';
 import { dismissAppAlert } from './app';
 import { lastRequest, api } from '../config/axios';
 
-// The below could potentially be used on a broader scope
+// The below could potentially be applied on a broader scope
 // However, judging on how dismissAppAlert is used across the app,
 // it's hard to predict if that would suit all scenarios
 api.interceptors.response.use(response => {
