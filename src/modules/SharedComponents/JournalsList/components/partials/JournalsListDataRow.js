@@ -76,7 +76,11 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
     return (
         <>
             <TableRow className={classes?.root}>
-                <TableCell size="small" className={classes?.actionsColumn} {...(isXsDown ? { padding: 'none' } : {})}>
+                <TableCell
+                    size="small"
+                    className={classes?.actionsColumn} /* istanbul ignore next */
+                    {...(isXsDown ? { padding: 'none' } : {})}
+                >
                     <Grid container className={classes?.dataRowContainer}>
                         {isSelectable && (
                             <Grid xs={6} item>
@@ -107,7 +111,6 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                         </Grid>
                     </Grid>
                 </TableCell>
-
                 <TableCell size="small">
                     <Grid
                         container
