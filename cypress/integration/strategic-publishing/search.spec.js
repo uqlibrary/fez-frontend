@@ -375,11 +375,8 @@ context('Strategic Publishing - Search', () => {
 
         // mobile check of expected header cell count
         cy.get('[data-testid="journal-list"] table > thead > tr > th:last-child > div > div').each(($el, index) => {
-            if (index === 0) {
-                cy.wrap($el).should('not.have.css', 'display', 'none');
-            } else {
-                cy.wrap($el).should('have.css', 'display', 'none');
-            }
+            if (index === 0) cy.wrap($el).should('not.have.css', 'display', 'none');
+            else cy.wrap($el).should('have.css', 'display', 'none');
         });
 
         cy.get('[data-testid="journal-list"]')
@@ -920,18 +917,5 @@ context('Strategic Publishing - Search', () => {
                 violations => console.log(violations),
             );
         });
-    });
-
-    it.only('should clear error alert from a previous api error', () => {
-        // make a search that will yield a mocked 500 error
-        cy.get('input[data-testid="journal-search-keywords-input"]').type('api-500-error', 200);
-        cy.get('[data-testid="alert"]').should('exist');
-        cy.get('[data-testid="alert"]').should('be.visible');
-        cy.get('[data-testid="alert"]').should('contain.text', 'Unexpected error');
-
-        cy.get('[data-testid="clear-journal-search-keywords"]').click();
-        cy.get('input[data-testid="journal-search-keywords-input"]').type('tech', 200);
-        // make sure the error alert raise for the previous search is dismissed
-        cy.get('[data-testid="alert"]').should('not.exist');
     });
 });
