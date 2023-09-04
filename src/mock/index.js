@@ -105,16 +105,17 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.batchImportDirectories)
     .onGet(routes.SEARCH_EXTERNAL_RECORDS_API({}).apiUrl)
     .reply(config => {
-        if (config.params.source === 'scopus' && config.params.title)
+        if (config.params.source === 'scopus' && config.params.title) {
             return [200, mockData.externalTitleScopusResultsList];
-        else if (config.params.source === 'wos' && config.params.title)
+        } else if (config.params.source === 'wos' && config.params.title) {
             return [200, mockData.externalTitleSearchResultsList];
-        else if (config.params.source === 'crossref' && config.params.title)
+        } else if (config.params.source === 'crossref' && config.params.title) {
             return [200, mockData.externalTitleSearchResultsList];
-        else if (config.params.source === 'crossref' && config.params.doi)
+        } else if (config.params.source === 'crossref' && config.params.doi) {
             return [200, mockData.externalDoiSearchResultList];
-        else if (config.params.source === 'pubmed' && config.params.id)
+        } else if (config.params.source === 'pubmed' && config.params.id) {
             return [200, mockData.externalPubMedSearchResultsList];
+        }
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl)
     .reply(config => {
@@ -557,6 +558,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, { ...journalsSearch.keywords.forCode }];
         } else if (config.url.indexOf('query=virus') > -1) {
             return [200, { ...journalsSearch.keywords.virus }];
+        } else if (config.url.indexOf('query=api-500-error') > -1) {
+            return [500, {}];
         }
         return [200, { ...journalsSearch.keywords.none }];
     })
