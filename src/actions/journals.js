@@ -17,14 +17,11 @@ import { lastRequest, api } from '../config/axios';
 // However, judging on how dismissAppAlert is used across the app,
 // it's hard to predict if that would suit all scenarios
 api.interceptors.response.use(response => {
-    try {
-        if (lastRequest.url?.includes?.('journals/search')) {
-            // dismiss error alert raised for previous error responses
-            store.dispatch(dismissAppAlert());
-        }
-    } finally {
-        return response;
+    if (lastRequest.url?.includes?.('journals/search')) {
+        // dismiss error alert raised for previous error responses
+        store.dispatch(dismissAppAlert());
     }
+    return response;
 });
 
 export const loadJournalLookup = searchText => dispatch => {
