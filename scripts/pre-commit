@@ -77,9 +77,9 @@ fi
 
 STAGED_CYPRESS_TESTS="${GIT_DIFF} -- '*.spec'"
 if [[ (-z ${GIT_COMMIT_SKIP_CYPRESS_ONLY_KEYWORD} && $(eval "${STAGED_CYPRESS_TESTS}" | xargs cat | grep -c 'it\.only')) ]]; then
-		printf "\nYou are committing a cypress test where a single test will be executed [ it.only(...) ].\n"
-		printf "\nThis is likely to raise a false code coverage failures.\n"
-		printf "\nIf this is intentionally, perform your commit like the this: GIT_COMMIT_SKIP_CYPRESS_ONLY_KEYWORD=true git commit.\n"
+		printf "\nYou are committing a cypress test where a single test will be executed only. e.g. it.only(...)\n"
+		printf "\nThis is likely to raise false code coverage failure.\n"
+		printf "\nIf this is intentionally, please perform your commit like this: GIT_COMMIT_SKIP_CYPRESS_ONLY_KEYWORD=true git commit.\n"
 		exit 1
 fi
 
