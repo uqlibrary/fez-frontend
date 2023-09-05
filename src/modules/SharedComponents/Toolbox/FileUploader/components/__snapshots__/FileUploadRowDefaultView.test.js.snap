@@ -1,849 +1,1000 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploadRowDefaultView should not render access selector or date picker if access condition is not required to select 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-      "padding": 4,
-    }
-  }
->
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
+<div>
+  <div
+    class="FileUploadRowDefaultView-row-49"
+    style="flex-grow: 1; padding: 4px;"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-up-0"
-        data-testid="new-file-upload-up-0"
-        disabled={true}
-        id="new-file-upload-down-0"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-55 css-u78q51-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandLessIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      md={8}
-      sm={8}
+        <button
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-56 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-up-0"
+          data-testid="new-file-upload-up-0"
+          disabled=""
+          id="new-file-upload-down-0"
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandLessIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
     >
-      <ForwardRef(Typography)
-        data-testid="dsi-dsid-0"
-        gutterBottom={true}
-        noWrap={true}
-        variant="body2"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
       >
-        test.pdf
-         (
-        100 MB
-        )
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={3}
-    >
-      <TextField
-        fullWidth={true}
-        id="file-description-input-upload-0"
-        inputProps={
-          Object {
-            "maxLength": 255,
-          }
-        }
-        key="test.pdf"
-        name="fileDescription"
-        placeholder="Description"
-        textFieldId="dsi-label-upload-0"
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      className=""
-      item={true}
-      xs={1}
-    >
-      <Connect(FileUploadRowStatus)
-        disabled={false}
-        fileUploadRowStatusId="dsi-dsid-0"
-        name="test.pdf"
-        onDelete={[MockFunction]}
-      />
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
-    >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-down-0"
-        data-testid="new-file-upload-down-0"
-        disabled={false}
-        id="new-file-upload-down-0"
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
+          data-testid="dsi-dsid-0"
+        >
+          test.pdf
+           (
+          100 MB
+          )
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandMoreIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="dsi-label-upload-0"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="dsi-label-upload-0-input"
+              data-testid="dsi-label-upload-0-input"
+              id="dsi-label-upload-0-input"
+              maxlength="255"
+              name="fileDescription"
+              placeholder="Description"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-48 css-u78q51-MuiGrid-root"
+      >
+        <span
+          aria-label="Remove this file"
+          class=""
+          data-mui-internal-clone-element="true"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="dsi-dsid-0-delete"
+            data-testid="dsi-dsid-0-delete"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DeleteIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-57 css-u78q51-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-56 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-down-0"
+          data-testid="new-file-upload-down-0"
+          id="new-file-upload-down-0"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Component FileUploadRowDefaultView should not render embargo date picker if access condition is set to closed access 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-      "padding": 4,
-    }
-  }
->
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
+<div>
+  <div
+    class="FileUploadRowDefaultView-row-24"
+    style="flex-grow: 1; padding: 4px;"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-up-0"
-        data-testid="new-file-upload-up-0"
-        disabled={true}
-        id="new-file-upload-down-0"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-30 css-u78q51-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandLessIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={2}
+        <button
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-31 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-up-0"
+          data-testid="new-file-upload-up-0"
+          disabled=""
+          id="new-file-upload-down-0"
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandLessIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
     >
-      <ForwardRef(Typography)
-        data-testid="dsi-dsid-0"
-        gutterBottom={true}
-        noWrap={true}
-        variant="body2"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
       >
-        test.pdf
-         (
-        100 MB
-        )
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={3}
-    >
-      <TextField
-        fullWidth={true}
-        id="file-description-input-upload-0"
-        inputProps={
-          Object {
-            "maxLength": 255,
-          }
-        }
-        key="test.pdf"
-        name="fileDescription"
-        placeholder="Description"
-        textFieldId="dsi-label-upload-0"
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={3}
-    >
-      <Memo(NewGenericSelectField)
-        autoFocus={false}
-        disabled={false}
-        displayEmpty={true}
-        error={false}
-        formHelperTextProps={
-          Object {
-            "className": undefined,
-          }
-        }
-        genericSelectFieldId="dsi-open-access-0"
-        hideLabel={true}
-        itemsList={
-          Array [
-            Object {
-              "text": "Open Access",
-              "value": 5,
-            },
-            Object {
-              "text": "Closed Access",
-              "value": 1,
-            },
-          ]
-        }
-        onChange={[MockFunction]}
-        required={true}
-        selectPrompt="Select access conditions"
-        selectProps={
-          Object {
-            "className": undefined,
-            "input": <ForwardRef(Input)
-              autoFocus={false}
-              classes={
-                Object {
-                  "root": undefined,
-                }
-              }
-              disableUnderline={true}
-            />,
-          }
-        }
-        value={1}
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-    >
-      <ForwardRef(Typography)
-        data-testid="dsi-embargo-date-0"
-        gutterBottom={true}
-        variant="body2"
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
+          data-testid="dsi-dsid-0"
+        >
+          test.pdf
+           (
+          100 MB
+          )
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
       >
-        No date required
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      className=""
-      item={true}
-      xs={1}
-    >
-      <Connect(FileUploadRowStatus)
-        disabled={false}
-        fileUploadRowStatusId="dsi-dsid-0"
-        name="test.pdf"
-        onDelete={[MockFunction]}
-      />
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
-    >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-down-0"
-        data-testid="new-file-upload-down-0"
-        disabled={false}
-        id="new-file-upload-down-0"
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="dsi-label-upload-0"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="dsi-label-upload-0-input"
+              data-testid="dsi-label-upload-0-input"
+              id="dsi-label-upload-0-input"
+              maxlength="255"
+              name="fileDescription"
+              placeholder="Description"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandMoreIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root FileUploadRowDefaultView-selected-28 MuiInputBase-colorPrimary MuiInputBase-formControl FileUploadRowDefaultView-selector-25 css-ydg547-MuiInputBase-root-MuiInput-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="dsi-open-access-0-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="dsi-open-access-0-select"
+              id="dsi-open-access-0-select"
+              role="button"
+              tabindex="0"
+            >
+              Closed Access
+            </div>
+            <input
+              aria-hidden="true"
+              aria-labelledby="dsi-open-access-0-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="dsi-open-access-0-input"
+              data-testid="dsi-open-access-0-input"
+              id="dsi-open-access-0-input"
+              required=""
+              tabindex="-1"
+              value="1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+          data-testid="dsi-embargo-date-0"
+        >
+          No date required
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-23 css-u78q51-MuiGrid-root"
+      >
+        <span
+          aria-label="Remove this file"
+          class=""
+          data-mui-internal-clone-element="true"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="dsi-dsid-0-delete"
+            data-testid="dsi-dsid-0-delete"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DeleteIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-32 css-u78q51-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-31 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-down-0"
+          data-testid="new-file-upload-down-0"
+          id="new-file-upload-down-0"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Component FileUploadRowDefaultView should render default view 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-      "padding": 4,
-    }
-  }
->
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
+<div>
+  <div
+    class="FileUploadRowDefaultView-row-2"
+    style="flex-grow: 1; padding: 4px;"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-up-0"
-        data-testid="new-file-upload-up-0"
-        disabled={true}
-        id="new-file-upload-down-0"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-8 css-u78q51-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandLessIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={2}
+        <button
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-9 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-up-0"
+          data-testid="new-file-upload-up-0"
+          disabled=""
+          id="new-file-upload-down-0"
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandLessIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
     >
-      <ForwardRef(Typography)
-        data-testid="dsi-dsid-0"
-        gutterBottom={true}
-        noWrap={true}
-        variant="body2"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
       >
-        test.pdf
-         (
-        100 MB
-        )
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={3}
-    >
-      <TextField
-        fullWidth={true}
-        id="file-description-input-upload-0"
-        inputProps={
-          Object {
-            "maxLength": 255,
-          }
-        }
-        key="test.pdf"
-        name="fileDescription"
-        placeholder="Description"
-        textFieldId="dsi-label-upload-0"
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={3}
-    >
-      <Memo(NewGenericSelectField)
-        autoFocus={false}
-        disabled={false}
-        displayEmpty={true}
-        error="This field is required"
-        formHelperTextProps={
-          Object {
-            "className": undefined,
-          }
-        }
-        genericSelectFieldId="dsi-open-access-0"
-        hideLabel={true}
-        itemsList={
-          Array [
-            Object {
-              "text": "Open Access",
-              "value": 5,
-            },
-            Object {
-              "text": "Closed Access",
-              "value": 1,
-            },
-          ]
-        }
-        onChange={[MockFunction]}
-        required={true}
-        selectPrompt="Select access conditions"
-        selectProps={
-          Object {
-            "className": undefined,
-            "input": <ForwardRef(Input)
-              autoFocus={false}
-              classes={
-                Object {
-                  "root": undefined,
-                }
-              }
-              disableUnderline={true}
-            />,
-          }
-        }
-        value=""
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-    >
-      <ForwardRef(Typography)
-        data-testid="dsi-embargo-date-0"
-        gutterBottom={true}
-        variant="body2"
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
+          data-testid="dsi-dsid-0"
+        >
+          test.pdf
+           (
+          100 MB
+          )
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
       >
-        No date required
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      className=""
-      item={true}
-      xs={1}
-    >
-      <Connect(FileUploadRowStatus)
-        disabled={false}
-        fileUploadRowStatusId="dsi-dsid-0"
-        name="test.pdf"
-        onDelete={[MockFunction]}
-      />
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
-    >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-down-0"
-        data-testid="new-file-upload-down-0"
-        disabled={false}
-        id="new-file-upload-down-0"
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="dsi-label-upload-0"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="dsi-label-upload-0-input"
+              data-testid="dsi-label-upload-0-input"
+              id="dsi-label-upload-0-input"
+              maxlength="255"
+              name="fileDescription"
+              placeholder="Description"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandMoreIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root FileUploadRowDefaultView-placeholder-5 MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl FileUploadRowDefaultView-selector-3 css-ydg547-MuiInputBase-root-MuiInput-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="dsi-open-access-0-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="dsi-open-access-0-select"
+              id="dsi-open-access-0-select"
+              role="button"
+              tabindex="0"
+            >
+              Select access conditions
+            </div>
+            <input
+              aria-hidden="true"
+              aria-labelledby="dsi-open-access-0-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="dsi-open-access-0-input"
+              data-testid="dsi-open-access-0-input"
+              id="dsi-open-access-0-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required FileUploadRowDefaultView-error-7 css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="dsi-open-access-0-helper-text"
+            id="dsi-open-access-0-helper-text"
+          >
+            This field is required
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+          data-testid="dsi-embargo-date-0"
+        >
+          No date required
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-1 css-u78q51-MuiGrid-root"
+      >
+        <span
+          aria-label="Remove this file"
+          class=""
+          data-mui-internal-clone-element="true"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="dsi-dsid-0-delete"
+            data-testid="dsi-dsid-0-delete"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DeleteIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-10 css-u78q51-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-9 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-down-0"
+          data-testid="new-file-upload-down-0"
+          id="new-file-upload-down-0"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Component FileUploadRowDefaultView should render default view for admin 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-      "padding": 4,
-    }
-  }
->
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
+<div>
+  <div
+    class="FileUploadRowDefaultView-row-14"
+    style="flex-grow: 1; padding: 4px;"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-up-0"
-        data-testid="new-file-upload-up-0"
-        disabled={true}
-        id="new-file-upload-down-0"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-20 css-u78q51-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandLessIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={2}
+        <button
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-21 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-up-0"
+          data-testid="new-file-upload-up-0"
+          disabled=""
+          id="new-file-upload-down-0"
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandLessIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
     >
-      <ForwardRef(Typography)
-        data-testid="dsi-dsid-0"
-        gutterBottom={true}
-        noWrap={true}
-        variant="body2"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
       >
-        test.pdf
-         (
-        100 MB
-        )
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={3}
-    >
-      <TextField
-        fullWidth={true}
-        id="file-description-input-upload-0"
-        inputProps={
-          Object {
-            "maxLength": 255,
-          }
-        }
-        key="test.pdf"
-        name="fileDescription"
-        placeholder="Description"
-        textFieldId="dsi-label-upload-0"
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={4}
-    >
-      <PolicyDropdown
-        autoFocus={false}
-        disabled={false}
-        displayEmpty={true}
-        displayPrompt={true}
-        errorText="This field is required"
-        fieldLabel="Work level policy to apply to this PID"
-        fieldName="test.pdf"
-        formHelperTextProps={
-          Object {
-            "className": undefined,
-          }
-        }
-        hideLabel={true}
-        inheritedSecurity={5}
-        input={
-          Object {
-            "autoFocus": false,
-            "className": undefined,
-            "disableUnderline": true,
-            "onBlur": [Function],
-            "onChange": undefined,
-          }
-        }
-        policyDropdownId="dsi-security-policy-0"
-        policyList={
-          Array [
-            Object {
-              "id": 1,
-              "label": "Administrators",
-              "name": "Administrators",
-              "order": 0,
-              "value": 1,
-            },
-            Object {
-              "id": 2,
-              "label": "Theses Assessors",
-              "name": "Theses Assessors",
-              "order": 10,
-              "value": 2,
-            },
-            Object {
-              "id": 3,
-              "label": "Evidence Assessors",
-              "name": "Evidence Assessors",
-              "order": 20,
-              "value": 3,
-            },
-            Object {
-              "id": 4,
-              "label": "Staff and Students",
-              "name": "Staff and Students",
-              "order": 30,
-              "value": 4,
-            },
-            Object {
-              "id": 5,
-              "label": "Public",
-              "name": "Public",
-              "order": 100,
-              "value": 5,
-            },
-          ]
-        }
-        prompt="Select security policy"
-        required={true}
-        value=""
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-    >
-      <ForwardRef(Typography)
-        data-testid="dsi-embargo-date-0"
-        gutterBottom={true}
-        variant="body2"
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
+          data-testid="dsi-dsid-0"
+        >
+          test.pdf
+           (
+          100 MB
+          )
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
       >
-        No date required
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      className=""
-      item={true}
-      xs={1}
-    >
-      <Connect(FileUploadRowStatus)
-        disabled={false}
-        fileUploadRowStatusId="dsi-dsid-0"
-        name="test.pdf"
-        onDelete={[MockFunction]}
-      />
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
-    >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-down-0"
-        data-testid="new-file-upload-down-0"
-        disabled={false}
-        id="new-file-upload-down-0"
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="dsi-label-upload-0"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="dsi-label-upload-0-input"
+              data-testid="dsi-label-upload-0-input"
+              id="dsi-label-upload-0-input"
+              maxlength="255"
+              name="fileDescription"
+              placeholder="Description"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-uk9mo7-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandMoreIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
+        <div
+          class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+          style="width: 100%;"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl FileUploadRowDefaultView-selector-15 css-qie0cp-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            required=""
+            validation="function required(value) {
+  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+}"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="dsi-security-policy-0-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="dsi-security-policy-0-select"
+              id="dsi-security-policy-0-select"
+              role="button"
+              tabindex="0"
+            >
+              Select security policy
+            </div>
+            <input
+              aria-hidden="true"
+              aria-labelledby="dsi-security-policy-0-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="dsi-security-policy-0-input"
+              data-testid="dsi-security-policy-0-input"
+              id="dsi-security-policy-0-input"
+              name="test.pdf"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required FileUploadRowDefaultView-error-19 css-1d7hrfi-MuiFormHelperText-root"
+          >
+            This field is required
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+          data-testid="dsi-embargo-date-0"
+        >
+          No date required
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-13 css-u78q51-MuiGrid-root"
+      >
+        <span
+          aria-label="Remove this file"
+          class=""
+          data-mui-internal-clone-element="true"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="dsi-dsid-0-delete"
+            data-testid="dsi-dsid-0-delete"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DeleteIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-22 css-u78q51-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-21 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-down-0"
+          data-testid="new-file-upload-down-0"
+          id="new-file-upload-down-0"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
-exports[`Component FileUploadRowDefaultView should render default view with styles 1`] = `
-<FileUploadRowDefaultView
-  accessConditionId={null}
-  classes={
-    Object {
-      "error": "FileUploadRowDefaultView-error-7",
-      "icon": "FileUploadRowDefaultView-icon-1",
-      "placeholder": "FileUploadRowDefaultView-placeholder-5",
-      "row": "FileUploadRowDefaultView-row-2",
-      "securitySelector": "FileUploadRowDefaultView-securitySelector-4",
-      "selected": "FileUploadRowDefaultView-selected-6",
-      "selector": "FileUploadRowDefaultView-selector-3",
-      "upDownArrow": "FileUploadRowDefaultView-upDownArrow-9",
-      "upDownArrowContainer": "FileUploadRowDefaultView-upDownArrowContainer-8",
-      "upDownArrowContainerBottom": "FileUploadRowDefaultView-upDownArrowContainerBottom-10",
-    }
-  }
-  disabled={false}
-  embargoDate="01/01/2017"
-  index={0}
-  locale={
-    Object {
-      "embargoDateClosedAccess": "No date required",
-    }
-  }
-  name="test.pdf"
-  onAccessConditionChange={[MockFunction]}
-  onDelete={[MockFunction]}
-  onEmbargoDateChange={[MockFunction]}
-  requireOpenAccessStatus={true}
-  size="100 MB"
-/>
-`;
-
 exports[`Component FileUploadRowDefaultView should render embargo date picker if access condition is set to open access 1`] = `
-<div
-  style={
-    Object {
-      "flexGrow": 1,
-      "padding": 4,
-    }
-  }
->
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
+<div>
+  <div
+    class="FileUploadRowDefaultView-row-36"
+    style="flex-grow: 1; padding: 4px;"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-up-0"
-        data-testid="new-file-upload-up-0"
-        disabled={true}
-        id="new-file-upload-down-0"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-42 css-u78q51-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandLessIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={2}
+        <button
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-43 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-up-0"
+          data-testid="new-file-upload-up-0"
+          disabled=""
+          id="new-file-upload-down-0"
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandLessIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
     >
-      <ForwardRef(Typography)
-        data-testid="dsi-dsid-0"
-        gutterBottom={true}
-        noWrap={true}
-        variant="body2"
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
       >
-        test.pdf
-         (
-        100 MB
-        )
-      </ForwardRef(Typography)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={3}
-    >
-      <TextField
-        fullWidth={true}
-        id="file-description-input-upload-0"
-        inputProps={
-          Object {
-            "maxLength": 255,
-          }
-        }
-        key="test.pdf"
-        name="fileDescription"
-        placeholder="Description"
-        textFieldId="dsi-label-upload-0"
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      md={3}
-      sm={3}
-    >
-      <Memo(NewGenericSelectField)
-        autoFocus={false}
-        disabled={false}
-        displayEmpty={true}
-        error={false}
-        formHelperTextProps={
-          Object {
-            "className": undefined,
-          }
-        }
-        genericSelectFieldId="dsi-open-access-0"
-        hideLabel={true}
-        itemsList={
-          Array [
-            Object {
-              "text": "Open Access",
-              "value": 5,
-            },
-            Object {
-              "text": "Closed Access",
-              "value": 1,
-            },
-          ]
-        }
-        onChange={[MockFunction]}
-        required={true}
-        selectPrompt="Select access conditions"
-        selectProps={
-          Object {
-            "className": undefined,
-            "input": <ForwardRef(Input)
-              autoFocus={false}
-              classes={
-                Object {
-                  "root": undefined,
-                }
-              }
-              disableUnderline={true}
-            />,
-          }
-        }
-        value={5}
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sm={2}
-    >
-      <WithStyles(FileUploadEmbargoDate)
-        disabled={false}
-        fileUploadEmbargoDateId="dsi-embargo-date-0"
-        minDate={2017-06-29T14:00:00.000Z}
-        onChange={[MockFunction]}
-        value="01/01/2017"
-      />
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      className=""
-      item={true}
-      xs={1}
-    >
-      <Connect(FileUploadRowStatus)
-        disabled={false}
-        fileUploadRowStatusId="dsi-dsid-0"
-        name="test.pdf"
-        onDelete={[MockFunction]}
-      />
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={1}
-    wrap="nowrap"
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={1}
-    >
-      <ForwardRef(IconButton)
-        data-analyticsid="new-file-upload-down-0"
-        data-testid="new-file-upload-down-0"
-        disabled={false}
-        id="new-file-upload-down-0"
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
+          data-testid="dsi-dsid-0"
+        >
+          test.pdf
+           (
+          100 MB
+          )
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
       >
-        <Memo(ForwardRef(ExpandMoreIcon)) />
-      </ForwardRef(IconButton)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="dsi-label-upload-0"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="dsi-label-upload-0-input"
+              data-testid="dsi-label-upload-0-input"
+              id="dsi-label-upload-0-input"
+              maxlength="255"
+              name="fileDescription"
+              placeholder="Description"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root FileUploadRowDefaultView-selected-40 MuiInputBase-colorPrimary MuiInputBase-formControl FileUploadRowDefaultView-selector-37 css-ydg547-MuiInputBase-root-MuiInput-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="dsi-open-access-0-select"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="dsi-open-access-0-select"
+              id="dsi-open-access-0-select"
+              role="button"
+              tabindex="0"
+            >
+              Open Access
+            </div>
+            <input
+              aria-hidden="true"
+              aria-labelledby="dsi-open-access-0-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="dsi-open-access-0-input"
+              data-testid="dsi-open-access-0-input"
+              id="dsi-open-access-0-input"
+              required=""
+              tabindex="-1"
+              value="5"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root FileUploadEmbargoDate-input-47 MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
+            data-analyticsid="dsi-embargo-date-0-input"
+            data-testid="dsi-embargo-date-0-input"
+          >
+            <input
+              aria-invalid="true"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              id="mui-4"
+              placeholder="dd/mm/yyyy"
+              type="tel"
+              value="01/01/2017"
+            />
+            <div
+              class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
+            >
+              <button
+                aria-label="Choose date, selected date is Jan 1, 2017"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1d2b2o6-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CalendarIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-35 css-u78q51-MuiGrid-root"
+      >
+        <span
+          aria-label="Remove this file"
+          class=""
+          data-mui-internal-clone-element="true"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="dsi-dsid-0-delete"
+            data-testid="dsi-dsid-0-delete"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DeleteIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-44 css-u78q51-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-43 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          data-analyticsid="new-file-upload-down-0"
+          data-testid="new-file-upload-down-0"
+          id="new-file-upload-down-0"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;

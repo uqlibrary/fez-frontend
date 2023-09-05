@@ -1,36 +1,43 @@
-import { GrantListEditorRow, styles } from './GrantListEditorRow';
+import React from 'react';
+import GrantListEditorRowWithWidth, { GrantListEditorRow, styles } from './GrantListEditorRow';
+import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         index: 0,
-        grant: {},
+        grant: { grantAgencyName: 'Agency name', grantId: '1234', grantAgencyType: 'Government' },
         canMoveUp: false,
         canMoveDown: false,
         onMoveUp: jest.fn(),
         onMoveDown: jest.fn(),
         onDelete: jest.fn(),
-        locale: {},
+        // locale: {},
         disabled: false,
         classes: {},
         width: 'md',
         ...testProps,
     };
-    return getElement(GrantListEditorRow, props);
+    return rtlRender(<GrantListEditorRow {...props} />);
 }
 
 describe('GrantListEditorRow', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render default mobile view', () => {
-        const wrapper = setup({ width: 'xs' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ width: 'xs' });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should use width hook', () => {
+        const { container } = rtlRender(<GrantListEditorRowWithWidth index={0} grant={{}} />);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render given locale', () => {
-        const wrapper = setup({
+        const { container } = setup({
             locale: {
                 deleteRecordConfirmation: {},
                 moveUpHint: 'Move up',
@@ -46,11 +53,11 @@ describe('GrantListEditorRow', () => {
             },
         });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render given grant data', () => {
-        const wrapper = setup({
+        const { container } = setup({
             locale: {
                 deleteRecordConfirmation: {},
                 moveUpHint: 'Move up',
@@ -68,55 +75,34 @@ describe('GrantListEditorRow', () => {
                 selected: 'selected-grant',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should set confirmation box ref', () => {
-        const wrapper = setup();
-        wrapper.instance().handleConfirmationBoxRef('test');
-        expect(wrapper.instance().confirmationBox).toEqual('test');
+        expect(container).toMatchSnapshot();
     });
 
     it('should show confirmation box', () => {
-        const showConfirmationFn = jest.fn();
-        const wrapper = setup();
-        wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmationFn,
-        };
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper
-            .find('ForwardRef(IconButton)')
-            .get(2)
-            .props.onClick();
-        expect(showConfirmationFn).toHaveBeenCalled();
+        const { getByRole, container } = setup();
+        fireEvent.click(getByRole('button', { name: 'Remove this entry' }));
+        expect(container).toMatchSnapshot();
     });
 
     it('should delete grant', () => {
         const onDeleteFn = jest.fn();
-        const wrapper = setup({ onDelete: onDeleteFn });
-        wrapper.instance()._deleteRecord();
+        const { getByRole, getByTestId } = setup({ onDelete: onDeleteFn });
+        fireEvent.click(getByRole('button', { name: 'Remove this entry' }));
+        fireEvent.click(getByTestId('confirm-dialog-box'));
         expect(onDeleteFn).toHaveBeenCalled();
     });
 
     it('should move grant up', () => {
         const onMoveUpFn = jest.fn();
-        const wrapper = setup({ onMoveUp: onMoveUpFn });
-        wrapper
-            .find('ForwardRef(IconButton)')
-            .get(0)
-            .props.onClick();
+        const { getByRole } = setup({ canMoveUp: true, onMoveUp: onMoveUpFn });
+        fireEvent.click(getByRole('button', { name: 'Move entry up the order' }));
         expect(onMoveUpFn).toHaveBeenCalled();
     });
 
     it('should move grant down', () => {
         const onMoveDownFn = jest.fn();
-        const wrapper = setup({ onMoveDown: onMoveDownFn });
-        wrapper
-            .find('ForwardRef(IconButton)')
-            .get(1)
-            .props.onClick();
+        const { getByRole } = setup({ canMoveDown: true, onMoveDown: onMoveDownFn });
+        fireEvent.click(getByRole('button', { name: 'Move entry down the order' }));
         expect(onMoveDownFn).toHaveBeenCalled();
     });
 
@@ -147,16 +133,24 @@ describe('GrantListEditorRow', () => {
     });
 
     it('should not call certain event handlers if row is disabled', () => {
-        const wrapper = setup({ disabled: true });
+        const onMoveUpFn = jest.fn();
+        const onMoveDownFn = jest.fn();
+        const onDeleteFn = jest.fn();
+        const { getByRole } = setup({
+            canMoveUp: true,
+            canMoveDown: true,
+            onMoveUp: onMoveUpFn,
+            onMoveDown: onMoveDownFn,
+            onDelete: onDeleteFn,
+            disabled: true,
+        });
 
-        wrapper.instance()._deleteRecord();
-        expect(wrapper.instance().props.onDelete).not.toBeCalled();
-
-        wrapper.instance()._onMoveUp();
-        expect(wrapper.instance().props.onMoveUp).not.toBeCalled();
-
-        wrapper.instance()._onMoveDown();
-        expect(wrapper.instance().props.onMoveDown).not.toBeCalled();
+        fireEvent.click(getByRole('button', { name: 'Remove this entry' }));
+        fireEvent.click(getByRole('button', { name: 'Move entry up the order' }));
+        fireEvent.click(getByRole('button', { name: 'Move entry down the order' }));
+        expect(onMoveUpFn).not.toHaveBeenCalled();
+        expect(onMoveDownFn).not.toHaveBeenCalled();
+        expect(onDeleteFn).not.toHaveBeenCalled();
     });
 
     it('should correctly handle edit', () => {
@@ -166,13 +160,13 @@ describe('GrantListEditorRow', () => {
             grantId: '1234',
             grantAgencyType: '453985',
         };
-        const wrapper = setup({
+        const { getByRole } = setup({
             canEdit: true,
             grant: grant,
             index: 0,
             onEdit: onEditFn,
         });
-        wrapper.instance()._handleEdit();
+        fireEvent.click(getByRole('button', { name: 'Edit this entry' }));
         expect(onEditFn).toHaveBeenCalledWith(grant, 0);
     });
 });

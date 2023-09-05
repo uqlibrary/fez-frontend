@@ -2,21 +2,9 @@ import React from 'react';
 import RichEditor from './RichEditor';
 import 'ckeditor';
 import Immutable from 'immutable';
+import { rtlRender } from 'test-utils';
 
-const setReadOnlyFn = jest.fn();
-const setDataFn = jest.fn();
-window.CKEDITOR = {
-    replace: () => ({
-        setReadOnly: setReadOnlyFn,
-        setData: setDataFn,
-        on: jest.fn(),
-    }),
-};
-
-jest.mock('ckeditor');
-jest.mock('react-dom');
-
-function setup(testProps = {}, args = {}) {
+function setup(testProps = {}, renderMethod = rtlRender) {
     const props = {
         onChange: jest.fn(), // PropTypes.func.isRequired,
         disabled: false,
@@ -27,163 +15,162 @@ function setup(testProps = {}, args = {}) {
         ...testProps,
     };
 
-    return getElement(RichEditor, props, args);
+    return renderMethod(<RichEditor {...props} />);
 }
 
 describe('RichEditor', () => {
+    let onInstanceReadyFn;
+    let onChangeFn;
+    let onContentDomFn;
+    const setReadOnlyFn = jest.fn();
+    const setDataFn = jest.fn();
+    beforeEach(() => {
+        window.CKEDITOR = {
+            replace: () => ({
+                setReadOnly: setReadOnlyFn,
+                setData: setDataFn,
+                on: (name, fn) => {
+                    if (name === 'instanceReady') onInstanceReadyFn = fn;
+                    if (name === 'change') onChangeFn = fn;
+                    if (name === 'contentDom') onContentDomFn = fn;
+                },
+            }),
+        };
+    });
+
+    afterEach(() => {
+        setReadOnlyFn.mockClear();
+        setDataFn.mockClear();
+    });
+
     it('should render component', () => {
-        const wrapper = setup({}, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should render given title and description', () => {
-        const wrapper = setup(
-            {
-                title: 'This is test title',
-                description: 'This is test description',
-            },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({
+            title: 'This is test title',
+            description: 'This is test description',
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render given title and description with error', () => {
-        const wrapper = setup(
-            {
-                title: 'This is title with error',
-                description: 'This is description with error',
-                meta: {
-                    error: 'This field is required',
-                },
-                required: true,
+        const { container } = setup({
+            title: 'This is title with error',
+            description: 'This is description with error',
+            meta: {
+                error: 'This field is required',
             },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
+            required: true,
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render error showing maxValue and instructions', () => {
-        const wrapper = setup(
-            {
-                value: Immutable.Map({ htmlText: 'This is test value' }),
-                maxValue: 10,
-                instructions: 'test instructions',
-                meta: {
-                    error: 'This field is required',
-                },
-                required: true,
+        const { container } = setup({
+            value: Immutable.Map({ htmlText: 'This is test value' }),
+            maxValue: 10,
+            instructions: 'test instructions',
+            meta: {
+                error: 'This field is required',
             },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
+            required: true,
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render maxValue with missing instructions', () => {
-        const wrapper = setup(
-            {
-                maxValue: 10,
-                required: true,
-            },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper.find('RichEditor WithStyles(Typography) Typography span'))).toMatchSnapshot();
+        const { container } = setup({
+            maxValue: 10,
+            required: true,
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render error showing input length', () => {
-        const wrapper = setup(
-            {
-                value: { plainText: 'This is test value', get: jest.fn() },
-                maxValue: 10,
-                instructions: 'test instructions',
-                meta: {
-                    error: 'This field is required',
-                },
+        const { container } = setup({
+            value: { plainText: 'This is test value', get: jest.fn() },
+            maxValue: 10,
+            instructions: 'test instructions',
+            meta: {
+                error: 'This field is required',
             },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render error as react children', () => {
-        const wrapper = setup(
-            {
-                value: { plainText: 'This is test value', get: jest.fn() },
-                maxValue: 10,
-                instructions: 'test instructions',
-                meta: {
-                    error: (
-                        <p>
-                            <span>This field is required</span>
-                        </p>
-                    ),
-                },
+        const { container } = setup({
+            value: { plainText: 'This is test value', get: jest.fn() },
+            maxValue: 10,
+            instructions: 'test instructions',
+            meta: {
+                error: (
+                    <p>
+                        <span>This field is required</span>
+                    </p>
+                ),
             },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render error as one child', () => {
-        const wrapper = setup(
-            {
-                value: { plainText: 'This is test value', get: jest.fn() },
-                maxValue: 10,
-                instructions: 'test instructions',
-                meta: {
-                    error: <span>This field is required</span>,
-                },
+        const { container } = setup({
+            value: { plainText: 'This is test value', get: jest.fn() },
+            maxValue: 10,
+            instructions: 'test instructions',
+            meta: {
+                error: <span>This field is required</span>,
             },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render plain text value', () => {
-        const wrapper = setup({
-            value: 'test',
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ value: 'test' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should call componentDidUpdate', () => {
-        const wrapper = setup();
-        wrapper.setProps({
-            disabled: true,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should not set editor as read-only if disabled prop is not being changed', () => {
-        const wrapper = setup();
-        const testFn = jest.fn();
-        wrapper.instance().editorInstance = {
-            setReadOnly: testFn,
-        };
-        wrapper.update();
-        expect(testFn).not.toHaveBeenCalled();
-        wrapper.setProps({ disabled: wrapper.instance().props.disabled });
-        expect(testFn).not.toBeCalled();
+        const { container } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should set CKEditor as read only', () => {
-        const wrapper = setup({ disabled: true, value: { get: () => '<p>test</p>' } });
-        wrapper.instance().onInstanceReady();
+        const { rerender } = setup({ value: { get: () => '<p>test</p>' } });
+        setup({ disabled: true, value: { get: () => '<p>test</p>' } }, rerender);
         expect(setReadOnlyFn).toHaveBeenCalledWith(true);
         expect(setDataFn).toHaveBeenCalled();
     });
 
+    it('should not set editor as read-only if disabled prop is not being changed', () => {
+        const { rerender } = setup();
+        setup({}, rerender);
+        expect(setReadOnlyFn).not.toHaveBeenCalled();
+        expect(setDataFn).not.toBeCalled();
+    });
+
     it('should set data attribute', () => {
-        const wrapper = setup({ disabled: true, richEditorId: 'test-id' });
+        setup({ disabled: true, richEditorId: 'test-id' });
         const setAttributeFn = jest.fn();
         const e = { editor: { document: { getBody: () => ({ setAttribute: setAttributeFn }) } } };
-        wrapper.instance().onContentDom(e);
+        onContentDomFn(e);
         expect(setAttributeFn).toHaveBeenCalledWith('data-testid', 'test-id-input');
     });
 
+    it('should call setReadOnly function when instanceReady', () => {
+        setup({});
+        onInstanceReadyFn();
+        expect(setReadOnlyFn).toHaveBeenCalledWith(false);
+    });
+
     it('should call onChange function passed in props with value', () => {
-        const onChangeFn = jest.fn();
-        const wrapper = setup({ onChange: onChangeFn });
-        wrapper.instance().onChange({
+        const onChange = jest.fn();
+        setup({ onChange });
+        onChangeFn({
             editor: {
                 document: {
                     getBody: () => ({
@@ -195,16 +182,16 @@ describe('RichEditor', () => {
                 getData: () => <span>test</span>,
             },
         });
-        expect(onChangeFn).toHaveBeenCalledWith({
+        expect(onChange).toHaveBeenCalledWith({
             htmlText: <span>test</span>,
             plainText: 'test',
         });
     });
 
     it('should call onChange function passed in props with null', () => {
-        const onChangeFn = jest.fn();
-        const wrapper = setup({ onChange: onChangeFn });
-        wrapper.instance().onChange({
+        const onChange = jest.fn();
+        setup({ onChange });
+        onChangeFn({
             editor: {
                 document: {
                     getBody: () => ({
@@ -216,6 +203,6 @@ describe('RichEditor', () => {
                 getData: () => <span>test</span>,
             },
         });
-        expect(onChangeFn).toHaveBeenCalledWith(null);
+        expect(onChange).toHaveBeenCalledWith(null);
     });
 });

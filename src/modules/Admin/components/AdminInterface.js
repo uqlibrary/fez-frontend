@@ -246,6 +246,7 @@ export const AdminInterface = ({
                 <Button
                     id={`admin-work-cancel${placement}`}
                     data-analyticsid={`admin-work-cancel${placement}`}
+                    data-testid={`admin-work-cancel${placement}`}
                     style={{ whiteSpace: 'nowrap' }}
                     variant="contained"
                     color="secondary"

@@ -1,6 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Collection form should display successfull submission screen 1`] = `
+exports[`Collection form should ask when redirecting from form with data (even if submit failed) 1`] = `
+<StandardPage
+  title="Add a missing collection"
+>
+  <ConfirmDiscardFormChanges
+    dirty={true}
+    submitSucceeded={false}
+  >
+    <form>
+      <NavigationDialogBox
+        when={true}
+      />
+      <ForwardRef(Grid)
+        container={true}
+        padding={0}
+        spacing={3}
+      >
+        <ForwardRef(Grid)
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            help={Object {}}
+            title="Add a missing collection"
+          >
+            <ForwardRef(Grid)
+              container={true}
+              data-testid="community-selector"
+              id="community-selector"
+              padding={0}
+              spacing={3}
+            >
+              <ForwardRef(Grid)
+                item={true}
+                xs={12}
+              >
+                <Field
+                  ariaLabel="Select a community"
+                  component={[Function]}
+                  genericSelectFieldId="rek-ismemberof"
+                  label="Select a community"
+                  loadingHint="Loading communities..."
+                  name="fez_record_search_key_ismemberof"
+                  required={true}
+                  selectPrompt="Select a community this collection is a member of"
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </StandardCard>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        container={true}
+        padding={0}
+        spacing={2}
+      >
+        <ForwardRef(Grid)
+          item={true}
+          sm={true}
+          xs={false}
+        />
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <ForwardRef(Button)
+            color="default"
+            data-analyticsid="cancel-collection"
+            data-testid="cancel-collection"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            Return to the homepage
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <ForwardRef(Button)
+            color="primary"
+            data-analyticsid="submit-collection"
+            data-testid="submit-collection"
+            fullWidth={true}
+            variant="contained"
+          >
+            Add collection
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </form>
+  </ConfirmDiscardFormChanges>
+</StandardPage>
+`;
+
+exports[`Collection form should not ask when redirecting from form with data after successful submit 1`] = `
 <StandardPage
   title="Add a missing collection"
 >
@@ -39,7 +142,6 @@ exports[`Collection form should display successfull submission screen 1`] = `
                 <Field
                   ariaLabel="Select a community"
                   component={[Function]}
-                  disabled={false}
                   genericSelectFieldId="rek-ismemberof"
                   label="Select a community"
                   loadingHint="Loading communities..."
@@ -93,7 +195,6 @@ exports[`Collection form should display successfull submission screen 1`] = `
             color="default"
             data-analyticsid="cancel-collection"
             data-testid="cancel-collection"
-            disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
@@ -111,7 +212,6 @@ exports[`Collection form should display successfull submission screen 1`] = `
             data-analyticsid="submit-collection"
             data-testid="submit-collection"
             fullWidth={true}
-            onClick={[MockFunction]}
             variant="contained"
           >
             Add collection
@@ -124,510 +224,438 @@ exports[`Collection form should display successfull submission screen 1`] = `
 `;
 
 exports[`Collection form should render form with only the community dropdown 1`] = `
-<StandardPage
-  title="Add a missing collection"
->
-  <ConfirmDiscardFormChanges
-    dirty={true}
-    submitSucceeded={false}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
-    <form>
-      <NavigationDialogBox
-        when={true}
-      />
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={3}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        Add a missing collection
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+    >
+      <form>
+        <div />
+        <div
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
         >
-          <StandardCard
-            help={Object {}}
-            title="Add a missing collection"
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
-            <ForwardRef(Grid)
-              container={true}
-              data-testid="community-selector"
-              id="community-selector"
-              padding={0}
-              spacing={3}
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-add-a-missing-collection"
+              id="standard-card-add-a-missing-collection"
             >
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <Field
-                  ariaLabel="Select a community"
-                  component={[Function]}
-                  disabled={false}
-                  genericSelectFieldId="rek-ismemberof"
-                  label="Select a community"
-                  loadingHint="Loading communities..."
-                  name="fez_record_search_key_ismemberof"
-                  required={true}
-                  selectPrompt="Select a community this collection is a member of"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-            </ForwardRef(Grid)>
-          </StandardCard>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={2}
-      >
-        <ForwardRef(Grid)
-          item={true}
-          sm={true}
-          xs={false}
-        />
-        <ForwardRef(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-add-a-missing-collection-header"
+                    id="standard-card-add-a-missing-collection-header"
+                  >
+                    Add a missing collection
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-add-a-missing-collection-content"
+                data-testid="standard-card-add-a-missing-collection-content"
+                id="standard-card-add-a-missing-collection-content"
+              >
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  data-testid="community-selector"
+                  id="community-selector"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                  >
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="Select a community"
+                      name="fez_record_search_key_ismemberof"
+                      required="true"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
         >
-          <ForwardRef(Button)
-            color="default"
-            data-analyticsid="cancel-collection"
-            data-testid="cancel-collection"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-25dekx-MuiGrid2-root"
+          />
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
-            Return to the homepage
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <ForwardRef(Button)
-            color="primary"
-            data-analyticsid="submit-collection"
-            data-testid="submit-collection"
-            fullWidth={true}
-            onClick={[MockFunction]}
-            variant="contained"
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
+              data-analyticsid="cancel-collection"
+              data-testid="cancel-collection"
+              tabindex="0"
+              type="button"
+            >
+              Return to the homepage
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
-            Add collection
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </form>
-  </ConfirmDiscardFormChanges>
-</StandardPage>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-analyticsid="submit-collection"
+              data-testid="submit-collection"
+              tabindex="0"
+              type="button"
+            >
+              Add collection
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Collection form should render success panel 1`] = `
-<StandardPage
-  title="Add a missing collection"
->
-  <ForwardRef(Grid)
-    container={true}
-    spacing={3}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Grid)
-      item={true}
-      xs={12}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
-      <StandardCard
-        title="Collection added successfully"
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-22 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Typography)>
-          Your new collection was created successfully.
-        </ForwardRef(Typography)>
-      </StandardCard>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    container={true}
-    spacing={2}
-  >
-    <ForwardRef(Grid)
-      item={true}
-      xs={true}
+        Add a missing collection
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
-    <ForwardRef(Grid)
-      item={true}
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-21 css-13i4rnv-MuiGrid-root"
     >
-      <ForwardRef(Button)
-        fullWidth={true}
-        onClick={[Function]}
-        variant="contained"
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
       >
-        Add another collection
-      </ForwardRef(Button)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-    >
-      <ForwardRef(Button)
-        color="primary"
-        fullWidth={true}
-        onClick={[Function]}
-        variant="contained"
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            data-testid="standard-card-collection-added-successfully"
+            id="standard-card-collection-added-successfully"
+          >
+            <div
+              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              >
+                <h3
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                  data-testid="standard-card-collection-added-successfully-header"
+                  id="standard-card-collection-added-successfully-header"
+                >
+                  Collection added successfully
+                </h3>
+              </div>
+            </div>
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              data-analyticsid="standard-card-collection-added-successfully-content"
+              data-testid="standard-card-collection-added-successfully-content"
+              id="standard-card-collection-added-successfully-content"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+              >
+                Your new collection was created successfully.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
       >
-        Return to the homepage
-      </ForwardRef(Button)>
-    </ForwardRef(Grid)>
-  </ForwardRef(Grid)>
-</StandardPage>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1gtgtdn-MuiGrid2-root"
+        />
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Add another collection
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            Return to the homepage
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Collection form should render the full form 1`] = `
-<StandardPage
-  title="Add a missing collection"
->
-  <ConfirmDiscardFormChanges
-    dirty={true}
-    submitSucceeded={false}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
-    <form>
-      <NavigationDialogBox
-        when={true}
-      />
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={3}
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-12 css-14y2kic-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        Add a missing collection
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-11 css-13i4rnv-MuiGrid-root"
+    >
+      <form>
+        <div />
+        <div
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
         >
-          <StandardCard
-            help={Object {}}
-            title="Add a missing collection"
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
-            <ForwardRef(Grid)
-              container={true}
-              data-testid="community-selector"
-              id="community-selector"
-              padding={0}
-              spacing={3}
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-15 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-add-a-missing-collection"
+              id="standard-card-add-a-missing-collection"
             >
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <Field
-                  ariaLabel="Select a community"
-                  component={[Function]}
-                  disabled={false}
-                  genericSelectFieldId="rek-ismemberof"
-                  label="Select a community"
-                  loadingHint="Loading communities..."
-                  name="fez_record_search_key_ismemberof"
-                  required={true}
-                  selectPrompt="Select a community this collection is a member of"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-            </ForwardRef(Grid)>
-          </StandardCard>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <StandardCard
-            help={Object {}}
-            title="Collection details"
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-20 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-add-a-missing-collection-header"
+                    id="standard-card-add-a-missing-collection-header"
+                  >
+                    Add a missing collection
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-add-a-missing-collection-content"
+                data-testid="standard-card-add-a-missing-collection-content"
+                id="standard-card-add-a-missing-collection-content"
+              >
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  data-testid="community-selector"
+                  id="community-selector"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                  >
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="Select a community"
+                      name="fez_record_search_key_ismemberof"
+                      required="true"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
-            <ForwardRef(Grid)
-              container={true}
-              padding={0}
-              spacing={3}
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-15 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-collection-details"
+              id="standard-card-collection-details"
             >
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+              <div
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
-                <Field
-                  autoFocus={true}
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "propTypes": Object {
-                        "FormHelperTextProps": [Function],
-                        "InputLabelProps": [Function],
-                        "InputProps": [Function],
-                        "SelectProps": [Function],
-                        "autoComplete": [Function],
-                        "autoFocus": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "classes": [Function],
-                        "color": [Function],
-                        "defaultValue": [Function],
-                        "disabled": [Function],
-                        "error": [Function],
-                        "fullWidth": [Function],
-                        "help": [Function],
-                        "helperText": [Function],
-                        "id": [Function],
-                        "inputProps": [Function],
-                        "inputRef": [Function],
-                        "label": [Function],
-                        "margin": [Function],
-                        "maxRows": [Function],
-                        "minRows": [Function],
-                        "multiline": [Function],
-                        "name": [Function],
-                        "onBlur": [Function],
-                        "onChange": [Function],
-                        "onFocus": [Function],
-                        "placeholder": [Function],
-                        "required": [Function],
-                        "rows": [Function],
-                        "select": [Function],
-                        "size": [Function],
-                        "sx": [Function],
-                        "textFieldId": [Function],
-                        "type": [Function],
-                        "value": [Function],
-                        "variant": [Function],
-                      },
-                      "render": [Function],
-                    }
-                  }
-                  disabled={false}
-                  fullWidth={true}
-                  label="Title of collection"
-                  name="rek_title"
-                  placeholder="Type a title for this collection"
-                  required={true}
-                  textFieldId="rek-title"
-                  type="text"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-20 css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-collection-details-header"
+                    id="standard-card-collection-details-header"
+                  >
+                    Collection details
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-collection-details-content"
+                data-testid="standard-card-collection-details-content"
+                id="standard-card-collection-details-content"
               >
-                <Field
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "propTypes": Object {
-                        "FormHelperTextProps": [Function],
-                        "InputLabelProps": [Function],
-                        "InputProps": [Function],
-                        "SelectProps": [Function],
-                        "autoComplete": [Function],
-                        "autoFocus": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "classes": [Function],
-                        "color": [Function],
-                        "defaultValue": [Function],
-                        "disabled": [Function],
-                        "error": [Function],
-                        "fullWidth": [Function],
-                        "help": [Function],
-                        "helperText": [Function],
-                        "id": [Function],
-                        "inputProps": [Function],
-                        "inputRef": [Function],
-                        "label": [Function],
-                        "margin": [Function],
-                        "maxRows": [Function],
-                        "minRows": [Function],
-                        "multiline": [Function],
-                        "name": [Function],
-                        "onBlur": [Function],
-                        "onChange": [Function],
-                        "onFocus": [Function],
-                        "placeholder": [Function],
-                        "required": [Function],
-                        "rows": [Function],
-                        "select": [Function],
-                        "size": [Function],
-                        "sx": [Function],
-                        "textFieldId": [Function],
-                        "type": [Function],
-                        "value": [Function],
-                        "variant": [Function],
-                      },
-                      "render": [Function],
-                    }
-                  }
-                  disabled={false}
-                  fullWidth={true}
-                  label="Collection description"
-                  multiline={true}
-                  name="rek_description"
-                  placeholder="Type a description of this collection."
-                  required={true}
-                  rows={5}
-                  textFieldId="rek-description"
-                  validate={
-                    Array [
-                      [Function],
-                    ]
-                  }
-                />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
-              >
-                <ForwardRef(Typography)>
-                  Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
-                </ForwardRef(Typography)>
-                <Field
-                  ListEditorForm={
-                    Object {
-                      "$$typeof": Symbol(react.memo),
-                      "compare": null,
-                      "type": [Function],
-                    }
-                  }
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.memo),
-                      "compare": null,
-                      "type": [Function],
-                    }
-                  }
-                  disabled={false}
-                  listEditorId="rek-keywords"
-                  locale={
-                    Object {
-                      "form": Object {
-                        "locale": Object {
-                          "addButtonLabel": "Add",
-                          "id": "keywords-input",
-                          "inputFieldHint": "Type keywords",
-                          "inputFieldLabel": "Keywords",
-                        },
-                      },
-                      "header": Object {
-                        "locale": Object {
-                          "deleteAll": "Remove all keywords",
-                          "deleteAllConfirmation": Object {
-                            "cancelButtonLabel": "No",
-                            "confirmButtonLabel": "Yes",
-                            "confirmationMessage": "Are you sure you want to delete all keywords?",
-                            "confirmationTitle": "Delete all",
-                          },
-                          "nameColumn": "Keyword",
-                          "reorderColumn": "Reorder keywords",
-                        },
-                      },
-                      "row": Object {
-                        "locale": Object {
-                          "deleteHint": "Remove this keyword",
-                          "deleteRecordConfirmation": Object {
-                            "cancelButtonLabel": "No",
-                            "confirmButtonLabel": "Yes",
-                            "confirmationMessage": "Are you sure you want to delete this keyword?",
-                            "confirmationTitle": "Delete keyword",
-                          },
-                          "moveDownHint": "Move keyword down the order",
-                          "moveUpHint": "Move keyword up the order",
-                        },
-                      },
-                    }
-                  }
-                  maxCount={10}
-                  name="fez_record_search_key_keywords"
-                  searchKey={
-                    Object {
-                      "order": "rek_keywords_order",
-                      "value": "rek_keywords",
-                    }
-                  }
-                />
-              </ForwardRef(Grid)>
-              <ForwardRef(Grid)
-                item={true}
-                xs={12}
-              >
-                <ForwardRef(Typography)>
-                  Internal Notes (admin)
-                </ForwardRef(Typography)>
-                <Field
-                  component={[Function]}
-                  disabled={false}
-                  fullWidth={true}
-                  label="Internal Notes (admin)"
-                  multiline={true}
-                  name="internalNotes"
-                  placeholder="Optionally enter internal notes"
-                  richEditorId="internalNotes"
-                  rows={5}
-                />
-              </ForwardRef(Grid)>
-            </ForwardRef(Grid)>
-          </StandardCard>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={2}
-      >
-        <ForwardRef(Grid)
-          item={true}
-          sm={true}
-          xs={false}
-        />
-        <ForwardRef(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                  >
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="Title of collection"
+                      name="rek_title"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                  >
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="Collection description"
+                      name="rek_description"
+                      required="true"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                    >
+                      Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
+                    </p>
+                    <field
+                      disabled="false"
+                      is="mock"
+                      name="fez_record_search_key_keywords"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                    >
+                      Internal Notes (admin)
+                    </p>
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="Internal Notes (admin)"
+                      name="internalNotes"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
         >
-          <ForwardRef(Button)
-            color="default"
-            data-analyticsid="cancel-collection"
-            data-testid="cancel-collection"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-25dekx-MuiGrid2-root"
+          />
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
-            Return to the homepage
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <ForwardRef(Button)
-            color="primary"
-            data-analyticsid="submit-collection"
-            data-testid="submit-collection"
-            fullWidth={true}
-            onClick={[MockFunction]}
-            variant="contained"
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
+              data-analyticsid="cancel-collection"
+              data-testid="cancel-collection"
+              tabindex="0"
+              type="button"
+            >
+              Return to the homepage
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
-            Add collection
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </form>
-  </ConfirmDiscardFormChanges>
-</StandardPage>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-analyticsid="submit-collection"
+              data-testid="submit-collection"
+              tabindex="0"
+              type="button"
+            >
+              Add collection
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 `;

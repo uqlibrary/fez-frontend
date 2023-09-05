@@ -103,3 +103,107 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
   </ForwardRef(Grid)>
 </ForwardRef(Grid)>
 `;
+
+exports[`ScaleOfSignificanceForm component should render with id 1`] = `
+<ForwardRef(Grid)
+  alignItems="center"
+  container={true}
+  data-testid="rek-significance-form"
+  display="row"
+  spacing={2}
+>
+  <ForwardRef(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+    xs={12}
+  >
+    <Memo(NewGenericSelectField)
+      error={true}
+      genericSelectFieldId="rek-significance"
+      itemsList={
+        Array [
+          Object {
+            "text": "Minor",
+            "value": 454027,
+          },
+          Object {
+            "text": "Major",
+            "value": 454026,
+          },
+        ]
+      }
+      onChange={[Function]}
+      required={true}
+      value={null}
+    />
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
+    item={true}
+    xs={12}
+  >
+    <RichEditorField
+      error={false}
+      fullWidth={true}
+      id="100"
+      inputRef={
+        Object {
+          "current": null,
+        }
+      }
+      instanceRef={
+        Object {
+          "current": null,
+        }
+      }
+      name="value"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      required={true}
+      richEditorId="rek-creator-contribution-statement"
+      titleProps={
+        Object {
+          "style": Object {
+            "opacity": 0.666,
+          },
+          "variant": "caption",
+        }
+      }
+      value=""
+    />
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
+    item={true}
+    xs={9}
+  >
+    <ForwardRef(Button)
+      color="primary"
+      data-analyticsid="rek-significance-add"
+      data-testid="rek-significance-add"
+      disabled={true}
+      fullWidth={true}
+      id="add-items"
+      onClick={[Function]}
+      variant="contained"
+    >
+      label
+    </ForwardRef(Button)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
+    item={true}
+    xs={3}
+  >
+    <ForwardRef(Button)
+      data-analyticsid="rek-significance-clear"
+      data-testid="rek-significance-clear"
+      fullWidth={true}
+      id="clear-items"
+      onClick={[Function]}
+      variant="contained"
+    />
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
+`;

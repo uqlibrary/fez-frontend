@@ -1,94 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScaleOfSignificanceTemplate component should render default view 1`] = `
-<ForwardRef(Grid)
-  container={true}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Typography)
-      style={
-        Object {
-          "color": "rgba(0, 0, 0, 0.5)",
-        }
-      }
-      variant="body2"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-      First
-       listed author 
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    xs={12}
-  >
-    <ForwardRef(Typography)
-      id="scale-item-0"
-      variant="body2"
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        style="color: rgba(0, 0, 0, 0.5);"
+      >
+        First
+         listed author 
+        
+      </p>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
     >
-      Missing
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={9}
-    xs={12}
-  >
-    <ForwardRef(Typography)
-      component="span"
-      id="statement-item-0"
-      variant="body2"
-    />
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        id="scale-item-0"
+      >
+        Missing
+      </p>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        id="statement-item-0"
+      />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`ScaleOfSignificanceTemplate component should render with author name 1`] = `
-<ForwardRef(Grid)
-  container={true}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
   >
-    <ForwardRef(Typography)
-      style={
-        Object {
-          "color": "rgba(0, 0, 0, 0.5)",
-        }
-      }
-      variant="body2"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
-      First
-       listed author 
-      (author)
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    xs={12}
-  >
-    <ForwardRef(Typography)
-      id="scale-item-0"
-      variant="body2"
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        style="color: rgba(0, 0, 0, 0.5);"
+      >
+        First
+         listed author 
+        (author)
+      </p>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
     >
-      Missing
-    </ForwardRef(Typography)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={9}
-    xs={12}
-  >
-    <ForwardRef(Typography)
-      component="span"
-      id="statement-item-0"
-      variant="body2"
-    />
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        id="scale-item-0"
+      >
+        Missing
+      </p>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        id="statement-item-0"
+      />
+    </div>
+  </div>
+</div>
 `;
