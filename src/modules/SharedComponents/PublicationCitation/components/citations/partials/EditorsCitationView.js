@@ -21,6 +21,7 @@ const EditorsCitationView = ({
             separator={separator}
             searchKey={{
                 key: 'fez_record_search_key_contributor',
+                totalCountKey: 'fez_record_search_key_contributor',
                 subkey: 'rek_contributor',
                 order: 'rek_contributor_order',
             }}
