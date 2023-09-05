@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PublicationsListSorting should create component with missing locale 1`] = `
-<span
-  className="publicationsListSorting empty"
-/>
+<div>
+  <span
+    class="publicationsListSorting empty"
+  />
+</div>
 `;

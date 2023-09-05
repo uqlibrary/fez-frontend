@@ -1,10 +1,16 @@
+import React from 'react';
 import FormViewToggler from './FormViewToggler';
+import { render, WithReduxStore, fireEvent } from 'test-utils';
 
 jest.mock('../../../context');
 import { useTabbedContext } from 'context';
 
 function setup() {
-    return getElement(FormViewToggler, {});
+    return render(
+        <WithReduxStore>
+            <FormViewToggler />
+        </WithReduxStore>,
+    );
 }
 
 describe('FormViewToggler component', () => {
@@ -12,17 +18,17 @@ describe('FormViewToggler component', () => {
         useTabbedContext.mockImplementation(() => ({
             tabbed: false,
         }));
-        const wrapper = setup();
+        const { container } = setup();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render tooltip for full form', () => {
         useTabbedContext.mockImplementation(() => ({
             tabbed: true,
         }));
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should toggle form', () => {
@@ -31,12 +37,8 @@ describe('FormViewToggler component', () => {
             tabbed: false,
             toggleTabbed: toggleFn,
         }));
-        const wrapper = setup();
-
-        wrapper
-            .find('ForwardRef(Switch)')
-            .props()
-            .onChange();
+        const { getByRole } = setup();
+        fireEvent.click(getByRole('checkbox'));
         expect(toggleFn).toHaveBeenCalled();
     });
 });
