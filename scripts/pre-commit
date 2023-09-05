@@ -20,7 +20,8 @@ fi
 
 # Run code style checks on staged files
 
-STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep ".jsx\{0,1\}$")
+GIT_DIFF="git diff --cached --name-only --diff-filter=ACM"
+STAGED_FILES=$(eval "$GIT_DIFF" | grep ".jsx\{0,1\}$")
 FORMATTER="$(git rev-parse --show-toplevel)/node_modules/.bin/prettier-eslint"
 
 if [[ "$STAGED_FILES" = "" ]]; then
@@ -73,6 +74,14 @@ fi
 #   printf "\e[31mEither Jest tests failed, or code coverage is not complete. Please fix and try again.\e[0m\n"
 #   exit 2
 # else
+
+STAGED_CYPRESS_TESTS="${GIT_DIFF} -- '*.spec'"
+if [[ (-z ${GIT_COMMIT_SKIP_CYPRESS_ONLY_KEYWORD} && $(eval "${STAGED_CYPRESS_TESTS}" | xargs cat | grep -c 'it\.only')) ]]; then
+		printf "\nYou are committing a cypress test where a single test will be executed [ it.only(...) ].\n"
+		printf "\nThis is likely to raise a false code coverage failures.\n"
+		printf "\nIf this is intentionally, perform your commit like the this: GIT_COMMIT_SKIP_CYPRESS_ONLY_KEYWORD=true git commit.\n"
+		exit 1
+fi
 
 printf "\n\e[92mNo issues found. Good job!\e[0m\n\n"
 echo "Proceeding with commit..."
