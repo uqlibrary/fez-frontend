@@ -35,6 +35,7 @@ export class AuthorsCitationView extends PureComponent {
             key: 'fez_record_search_key_author',
             subkey: 'rek_author',
             order: 'rek_author_order',
+            totalCountKey: 'fez_record_search_key_author_id',
         },
         idSearchKey: {
             idKey: 'fez_record_search_key_author_id',
@@ -51,13 +52,16 @@ export class AuthorsCitationView extends PureComponent {
 
         const {
             publication,
-            searchKey: { key, order, subkey },
+            searchKey: { key, totalCountKey, order, subkey },
         } = props;
 
         // copy authors to separate variable so sorting doesn't change original record
         const publicationAuthors = publication && publication[key] && [...publication[key]];
         this.state = {
-            authorsTotal: publication && publication[key] && publication[key].length,
+            authorsTotal:
+                publication &&
+                (publication?.[totalCountKey] ?? publication[key]) &&
+                (publication?.[totalCountKey]?.length ?? publication[key].length),
             authors:
                 publicationAuthors && Array.isArray(publicationAuthors)
                     ? publicationAuthors.map(author => ({
