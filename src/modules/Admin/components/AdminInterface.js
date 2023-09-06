@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import { destroy, Field } from 'redux-form/immutable';
 import { parseHtmlToJSX } from 'helpers/general';
 import queryString from 'query-string';
+import { styled } from '@mui/material/styles';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -11,7 +12,6 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Badge from '@mui/material/Badge';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -42,13 +42,15 @@ import { useIsUserSuperAdmin } from 'hooks';
 import { translateFormErrorsToText } from '../../../config/validation';
 import { useDispatch } from 'react-redux';
 
-// import { debounce } from 'throttle-debounce';
-
-const AdminTab = withStyles({
-    root: {
-        minWidth: 84,
+const AdminTab = styled(Tab)({
+    minWidth: 84,
+});
+const StyledTabs = styled(Tabs)(({ theme }) => ({
+    '& .MuiTabs-indicator': {
+        height: 4,
+        backgroundColor: theme.palette.primary.main,
     },
-})(Tab);
+}));
 
 export const getQueryStringValue = (location, varName, initialValue) => {
     const queryStringObject = queryString.parse(
@@ -78,7 +80,6 @@ const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activate
 
 export const AdminInterface = ({
     authorDetails,
-    classes,
     createMode,
     isDeleted,
     isJobCreated,
@@ -391,11 +392,8 @@ export const AdminInterface = ({
                     <Grid container spacing={0} direction="row" sx={{ display: { xs: 'none', sm: 'flex' } }}>
                         {tabbed && (
                             <Grid item xs={12}>
-                                <Tabs
+                                <StyledTabs
                                     value={currentTabValue}
-                                    classes={{
-                                        indicator: classes.tabIndicator,
-                                    }}
                                     onChange={handleTabChange}
                                     indicatorColor="primary"
                                     textColor="primary"
@@ -408,11 +406,7 @@ export const AdminInterface = ({
                                             data-testid={`${tab}-tab`}
                                             label={
                                                 !!tabs[tab].numberOfErrors ? (
-                                                    <Badge
-                                                        className={classes.padding}
-                                                        color="error"
-                                                        badgeContent={tabs[tab].numberOfErrors}
-                                                    >
+                                                    <Badge color="error" badgeContent={tabs[tab].numberOfErrors}>
                                                         {txt.current.sections[tab].title}
                                                     </Badge>
                                                 ) : (
@@ -421,7 +415,7 @@ export const AdminInterface = ({
                                             }
                                         />
                                     ))}
-                                </Tabs>
+                                </StyledTabs>
                             </Grid>
                         )}
                     </Grid>
@@ -446,7 +440,6 @@ export const AdminInterface = ({
 
 AdminInterface.propTypes = {
     authorDetails: PropTypes.object,
-    classes: PropTypes.object,
     createMode: PropTypes.bool,
     isDeleted: PropTypes.bool,
     isJobCreated: PropTypes.bool,
