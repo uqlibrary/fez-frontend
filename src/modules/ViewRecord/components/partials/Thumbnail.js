@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import BrokenImage from '@mui/icons-material/BrokenImage';
 import Lock from '@mui/icons-material/Lock';
-import withStyles from '@mui/styles/withStyles';
 import locale from 'locale/pages';
 import { Img } from 'react-image';
 import CircularProgress from '@mui/material/CircularProgress';
 
 export const getTestId = filename => `preview-link-${filename}`;
-export const styles = () => ({
-    image: {
-        width: '100%',
-        '&:hover': {
-            cursor: 'pointer',
-        },
+const StyledThumbnailImage = styled(Img)(() => ({
+    width: '100%',
+    '&:hover': {
+        cursor: 'pointer',
     },
-    brokenImage: {
-        opacity: 0.5,
-    },
-    lockIcon: {
-        opacity: 0.5,
-    },
-});
+}));
 
 export class Thumbnail extends Component {
     static propTypes = {
@@ -35,7 +28,6 @@ export class Thumbnail extends Component {
         fileName: PropTypes.string,
         mimeType: PropTypes.string.isRequired,
         onClick: PropTypes.func,
-        classes: PropTypes.object.isRequired,
         checksums: PropTypes.object,
     };
 
@@ -70,13 +62,12 @@ export class Thumbnail extends Component {
         ) {
             return (
                 <ExternalLink href={mediaUrl} title={fileName} openInNewIcon={false} id="thumbnail">
-                    <Img
+                    <StyledThumbnailImage
                         crossorigin="anonymous"
                         src={thumbnailMediaUrl}
                         alt={thumbnailFileName}
                         loader={<CircularProgress size={15} thickness={1} />}
                         unloader={<BrokenImage color={'secondary'} />}
-                        className={this.props.classes.image}
                     />
                 </ExternalLink>
             );
@@ -106,19 +97,18 @@ export class Thumbnail extends Component {
                 data-testid={getTestId(fileName)}
             >
                 {this.props.securityStatus ? (
-                    <Img
+                    <StyledThumbnailImage
                         src={thumbnailMediaUrl}
                         alt={thumbnailFileName}
                         loader={<CircularProgress size={15} thickness={1} />}
                         unloader={<BrokenImage color={'secondary'} />}
-                        className={this.props.classes.image}
                     />
                 ) : (
-                    <Lock color={'secondary'} className={this.props.classes.lockIcon} />
+                    <Lock color={'secondary'} sx={{ opacity: 0.5 }} />
                 )}
             </a>
         );
     }
 }
 
-export default withStyles(styles)(Thumbnail);
+export default Thumbnail;

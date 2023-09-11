@@ -5,12 +5,6 @@ import { rtlRender } from 'test-utils';
 function setup(testProps = {}) {
     const props = {
         ...testProps,
-        classes: {
-            text: {
-                fontWeight: 200,
-                margin: '24px 0',
-            },
-        },
     };
     return rtlRender(<InlineLoader {...props} />);
 }

@@ -1,37 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import { HelpIcon } from '../../HelpDrawer';
-import makeStyles from '@mui/styles/makeStyles';
 
-export const useStyles = makeStyles(theme => ({
-    card: {
-        overflow: 'unset',
-        fontWeight: theme.typography.fontWeightRegular,
-    },
-    cardContentNoPadding: {
-        padding: 0,
-    },
-    cardHeaderPrimary: {
-        color: theme?.palette?.white?.main,
-        backgroundColor: theme.palette.primary.main,
-        borderRadius: '4px 4px 0px 0px',
-        padding: '12px 24px',
-    },
-    cardHeaderAccent: {
-        color: theme?.palette?.white?.main,
-        backgroundColor: theme?.palette?.accent?.main,
-        borderRadius: '4px 4px 0px 0px',
-        padding: '12px 24px',
-    },
-    fullHeight: {
-        border: '10px solid red',
-        height: '100%',
-    },
-    responsiveHeader: {
+const StyledCard = styled(Card)(({ theme }) => ({
+    overflow: 'unset',
+    fontWeight: theme.typography.fontWeightRegular,
+}));
+const StyledCardHeader = styled(CardHeader)(({ theme }) => ({
+    color: theme?.palette?.white?.main,
+    borderRadius: '4px 4px 0px 0px',
+    padding: '12px 24px',
+    '& .MuiCardHeader-title': {
         [theme.breakpoints.down('sm')]: {
             ...theme.typography.h6,
         },
@@ -55,7 +39,6 @@ export const StandardCard = ({
     subCard = false,
     title,
 }) => {
-    const classes = useStyles();
     const customBG = !!customBackgroundColor ? { backgroundColor: customBackgroundColor } : null;
     const customTitleBG = !!customTitleBgColor ? { backgroundColor: customTitleBgColor } : null;
     const customTitle = !!customTitleColor ? { color: customTitleColor } : null;
@@ -64,16 +47,23 @@ export const StandardCard = ({
     const standardCardIdActual = !!standardCardId
         ? standardCardId
         : `standard-card${typeof title === 'string' ? '-' + title.replace(/ /g, '-').toLowerCase() : ''}`;
+
     return (
-        <Card
+        <StyledCard
             id={standardCardIdActual}
             data-testid={standardCardIdActual}
-            className={`${classes.card} StandardCard`}
-            style={{ ...customBG, ...customTitle, ...fullHeightActual }}
+            className={'StandardCard'}
+            sx={{ ...customBG, ...customTitle, ...fullHeightActual }}
         >
             {!noHeader && (
-                <CardHeader
-                    style={{ ...squareTopActual, ...customTitleBG }}
+                <StyledCardHeader
+                    sx={{
+                        ...squareTopActual,
+                        ...customTitleBG,
+                        ...(accentHeader || primaryHeader
+                            ? { backgroundColor: `${primaryHeader ? 'primary' : 'accent'}.main` }
+                            : {}),
+                    }}
                     title={title}
                     titleTypographyProps={{
                         variant: smallTitle ? 'h6' : 'h5',
@@ -83,22 +73,17 @@ export const StandardCard = ({
                         id: `${standardCardIdActual}-header`,
                     }}
                     action={!!help && !!help.text && <HelpIcon {...help} />}
-                    classes={{
-                        root:
-                            (primaryHeader && classes.cardHeaderPrimary) || (accentHeader && classes.cardHeaderAccent),
-                        title: classes.responsiveHeader,
-                    }}
                 />
             )}
             <CardContent
                 id={`${standardCardIdActual}-content`}
                 data-analyticsid={`${standardCardIdActual}-content`}
                 data-testid={`${standardCardIdActual}-content`}
-                className={(noPadding && classes.cardContentNoPadding) || ''}
+                sx={{ ...(noPadding ? { padding: 0 } : {}) }}
             >
                 {children}
             </CardContent>
-        </Card>
+        </StyledCard>
     );
 };
 

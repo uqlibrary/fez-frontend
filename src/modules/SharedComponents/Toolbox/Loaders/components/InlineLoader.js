@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
 
 export class InlineLoader extends React.Component {
     static propTypes = {
         message: PropTypes.string,
-        classes: PropTypes.object,
         loaderId: PropTypes.string,
         ariaLabel: PropTypes.string,
     };
@@ -49,4 +47,4 @@ export class InlineLoader extends React.Component {
     }
 }
 
-export default withStyles(null, { withTheme: true })(InlineLoader);
+export default InlineLoader;
