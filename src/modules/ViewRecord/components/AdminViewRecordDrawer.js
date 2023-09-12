@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled, useTheme } from '@mui/material/styles';
+
 import Snackbar from '@mui/material/Snackbar';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
@@ -10,65 +10,104 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+
 import locale from 'locale/pages';
-import { useTheme } from '@mui/material/styles';
-import makeStyles from '@mui/styles/makeStyles';
 import AdminRecordDrawerSection from './AdminViewRecordDrawerSection';
 
-const drawerWidth = 260;
-
-const useStyles = makeStyles(theme => ({
-    drawer: {
-        padding: theme.spacing(0, 1),
-        [theme.breakpoints.up('md')]: {
-            width: drawerWidth,
-            flexShrink: 0,
-        },
-    },
-    drawerMobile: {
-        [theme.breakpoints.up('md')]: {
-            display: 'none',
-        },
-    },
-    // necessary for content to be below app bar
-    toolbar: theme.mixins.toolbar,
-    adjustedToolbarHeight: {
-        height: '74px',
-    },
-    drawerPaper: {
-        width: drawerWidth,
+const drawerPaperStyles = theme => ({
+    '& .MuiDrawer-paper': {
+        width: '260px',
         [theme.breakpoints.up('md')]: {
             zIndex: 1,
         },
     },
-    drawerHeader: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: theme.spacing(0, 1),
-        // necessary for content to be below app bar
-        justifyContent: 'flex-start',
+});
+const StyledDesktopDrawer = styled(Drawer)(({ theme }) => ({
+    padding: theme.spacing(0, 1),
+    [theme.breakpoints.up('md')]: {
+        width: '260px',
+        flexShrink: 0,
     },
-    drawerContent: {
-        padding: theme.spacing(2),
-        [theme.breakpoints.up('md')]: {
-            padding: theme.spacing(3),
-        },
+    ...drawerPaperStyles(theme),
+}));
+const StyledMobileDrawer = styled(Drawer)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        display: 'none',
     },
-    contentTitle: {
-        textTransform: 'uppercase',
-        fontWeight: 500,
-    },
-    notesField: {
-        maxHeight: '40vh',
-        overflowY: 'auto',
-    },
-    cursor: {
-        cursor: 'pointer',
-    },
+    ...drawerPaperStyles(theme),
+}));
+const StyledDrawerContent = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    justifyContent: 'flex-start',
 }));
 
+export const DrawerContent = ({ title, content, actions = {}, themeDirection = 'ltr', variant = 'Desktop' }) => {
+    return (
+        <div
+            key="drawContainer1"
+            id={`adminDrawerContentContainer${variant}`}
+            data-testid={`adminDrawerContentContainer${variant}`}
+        >
+            <Toolbar sx={{ height: '74px', display: { xs: 'none', md: 'block' } }} key="toolbarMobile" />
+
+            <StyledDrawerContent key="mainHeader">
+                <Typography variant={'h6'} tabIndex="0">
+                    <IconButton
+                        onClick={actions?.handleDrawerToggle}
+                        id={`adminRecordDrawerCloseBtn${variant}`}
+                        data-analyticsid={`btnAdminRecordDrawerCloseBtn${variant}`}
+                        data-testid={`btnAdminRecordDrawerCloseBtn${variant}`}
+                        aria-label="Close admin record drawer"
+                        size="large"
+                    >
+                        {/* istanbul ignore next */
+                        themeDirection === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                    </IconButton>
+                    {title}
+                </Typography>
+            </StyledDrawerContent>
+            <Divider key="headerDivider" />
+            {content?.sections?.map((section, sectionIndex) => (
+                <AdminRecordDrawerSection
+                    section={section}
+                    index={sectionIndex}
+                    copyToClipboard={actions?.writeText}
+                    key={`Drawer-Section-${sectionIndex}`}
+                    variant={variant}
+                />
+            ))}
+        </div>
+    );
+};
+DrawerContent.propTypes = {
+    title: PropTypes.string.isRequired,
+    content: PropTypes.shape({
+        sections: PropTypes.arrayOf(
+            PropTypes.oneOfType([
+                PropTypes.arrayOf(
+                    PropTypes.shape({
+                        type: PropTypes.string.isRequired,
+                        value: PropTypes.any.isRequired,
+                        scrollable: PropTypes.bool,
+                        key: PropTypes.string,
+                        clipboard: PropTypes.bool,
+                    }),
+                ),
+                PropTypes.shape({
+                    type: PropTypes.oneOf(['divider']).isRequired,
+                }),
+            ]).isRequired,
+        ).isRequired,
+    }).isRequired,
+    actions: PropTypes.object,
+    themeDirection: PropTypes.string,
+    variant: PropTypes.oneOf(['Desktop', 'Mobile']),
+};
+
 export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = false, mobileOpen = false }) => {
-    const classes = useStyles();
     const theme = useTheme();
     const [copied, setCopied] = React.useState(false);
     const [error, setError] = React.useState(null);
@@ -96,56 +135,11 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
             });
     };
 
-    const DrawerContent = ({ content, variant = 'Desktop' }) => {
-        return (
-            <div
-                key="drawContainer1"
-                id={`adminDrawerContentContainer${variant}`}
-                data-testid={`adminDrawerContentContainer${variant}`}
-            >
-                <Toolbar
-                    className={classes.adjustedToolbarHeight}
-                    sx={{ display: { xs: 'none', md: 'block' } }}
-                    key="toolbarMobile"
-                />
-
-                <div className={classes.drawerHeader} key="mainHeader">
-                    <Typography variant={'h6'} tabIndex="0">
-                        <IconButton
-                            onClick={handleDrawerToggle}
-                            id={`adminRecordDrawerCloseBtn${variant}`}
-                            data-analyticsid={`btnAdminRecordDrawerCloseBtn${variant}`}
-                            data-testid={`btnAdminRecordDrawerCloseBtn${variant}`}
-                            aria-label="Close admin record drawer"
-                            size="large"
-                        >
-                            {/* istanbul ignore next */
-                            theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                        </IconButton>
-                        {txt.drawer.title}
-                    </Typography>
-                </div>
-                <Divider key="headerDivider" />
-                {content?.sections?.map((section, sectionIndex) => (
-                    <AdminRecordDrawerSection
-                        section={section}
-                        index={sectionIndex}
-                        copyToClipboard={writeText}
-                        key={`Drawer-Section-${sectionIndex}`}
-                        variant={variant}
-                    />
-                ))}
-            </div>
-        );
-    };
+    const drawerActions = { handleDrawerToggle, writeText };
 
     return (
         <>
-            <Drawer
-                className={classes.drawer}
-                classes={{
-                    paper: classes.drawerPaper,
-                }}
+            <StyledDesktopDrawer
                 open={open}
                 variant="persistent"
                 anchor={
@@ -156,10 +150,14 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 data-testid="adminViewRecordDrawerDesktop"
                 sx={{ display: { xs: 'none', md: 'block' } }}
             >
-                <DrawerContent content={content} />
-            </Drawer>
-            <Drawer
-                className={classes.drawerMobile}
+                <DrawerContent
+                    title={txt.drawer.title}
+                    content={content}
+                    themeDirection={theme.direction}
+                    actions={drawerActions}
+                />
+            </StyledDesktopDrawer>
+            <StyledMobileDrawer
                 variant="temporary"
                 anchor={
                     /* istanbul ignore next */
@@ -167,9 +165,6 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 }
                 open={mobileOpen}
                 onClose={handleDrawerToggle}
-                classes={{
-                    paper: classes.drawerPaper,
-                }}
                 ModalProps={{
                     keepMounted: true, // Better open performance on mobile.
                 }}
@@ -177,8 +172,14 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 data-testid="adminViewRecordDrawerMobile"
                 sx={{ display: { xs: 'block', sm: 'none' } }}
             >
-                <DrawerContent content={content} variant="Mobile" />
-            </Drawer>
+                <DrawerContent
+                    title={txt.drawer.title}
+                    content={content}
+                    variant="Mobile"
+                    themeDirection={theme.direction}
+                    actions={drawerActions}
+                />
+            </StyledMobileDrawer>
             <Snackbar
                 id="copied-text-snackbar"
                 data-testid="copied-text-snackbar"

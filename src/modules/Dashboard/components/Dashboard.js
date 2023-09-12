@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 
 import { OrcidSyncContext } from 'context';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Grid from '@mui/material/Grid';
-import { styled } from '@mui/material/styles';
 
 import {
     AuthorsPublicationsPerYearChart,
