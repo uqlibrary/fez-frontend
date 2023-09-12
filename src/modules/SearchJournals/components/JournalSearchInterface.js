@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { makeStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import JournalSearchInput from './JournalSearchInput';
@@ -16,17 +15,6 @@ import Tooltip from '@mui/material/Tooltip';
 
 export const id = 'journal-search-interface';
 
-const useStyles = makeStyles({
-    closeButtonContainer: {
-        position: 'relative',
-    },
-    closeButton: {
-        position: 'absolute',
-        top: 8,
-        right: 0,
-    },
-});
-
 export const JournalSearchInterface = ({
     onSearch,
     onSearchAll,
@@ -40,8 +28,6 @@ export const JournalSearchInterface = ({
     const [snackbarNotify, setSnackbarNotify] = React.useState(false);
     const initialSelectedKeywords = React.useRef(selectedKeywords);
     const txt = locale.components.searchJournals;
-
-    const classes = useStyles();
 
     const handleSnackbarOpen = () => {
         setSnackbarNotify(true);
@@ -74,7 +60,7 @@ export const JournalSearchInterface = ({
                 message={txt.snackbar.message}
                 role="alert"
             />
-            <Grid container spacing={2} className={classes.closeButtonContainer}>
+            <Grid container spacing={2} sx={{ position: 'relative' }}>
                 {showInputControls && (
                     <Grid item xs={12} id={`${id}-search-input`} data-testid={`${id}-search-input`}>
                         <JournalSearchInput onReset={handleKeywordReset} />
@@ -101,7 +87,7 @@ export const JournalSearchInterface = ({
                         title={'Click to clear search keywords'}
                     >
                         <IconButton
-                            className={classes.closeButton}
+                            sx={{ position: 'absolute', top: 8, right: 0 }}
                             color="secondary"
                             aria-label="Clear search keywords"
                             component="span"

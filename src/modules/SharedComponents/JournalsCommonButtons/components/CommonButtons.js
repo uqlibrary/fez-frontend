@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import locale from 'locale/components';
 import { pathConfig } from 'config';
 import { useHistory, useLocation } from 'react-router';
-import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles(theme => ({
-    buttonContainer: {
-        [theme.breakpoints.up('md')]: {
-            display: 'inline-flex',
-        },
+const StyledGridButtonContainer = styled(Grid)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        display: 'inline-flex',
     },
 }));
 
 const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals = false }) => {
-    const classes = useStyles();
     const location = useLocation();
     const history = useHistory();
     const txt = locale.components.searchJournals;
@@ -28,7 +26,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
     };
     return (
         <>
-            <Grid item xs={12} sm={6} md={3} className={classes.buttonContainer}>
+            <StyledGridButtonContainer item xs={12} sm={6} md={3}>
                 <Button
                     children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
                     aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
@@ -38,9 +36,9 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
                     data-testid="journal-search-favourite-journals-button"
                     fullWidth
                 />
-            </Grid>
+            </StyledGridButtonContainer>
             {!isBrowsingAllJournals && (
-                <Grid item xs={12} sm={6} md={3} className={classes.buttonContainer}>
+                <StyledGridButtonContainer item xs={12} sm={6} md={3}>
                     <Button
                         id="journal-search-browse-all-button"
                         data-analyticsid="journal-search-browse-all-button"
@@ -50,7 +48,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
                         onClick={onSearchAll}
                         fullWidth
                     />
-                </Grid>
+                </StyledGridButtonContainer>
             )}
         </>
     );

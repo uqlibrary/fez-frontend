@@ -1,42 +1,32 @@
 import React, { Fragment, useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-import { makeStyles } from '@mui//styles';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Typography from '@mui/material/Typography';
 
-const useStyles = makeStyles(
-    theme => ({
-        listItemGutters: {
-            paddingLeft: theme.spacing(),
-            paddingRight: theme.spacing(),
-        },
-        listText: {
-            fontWeight: 400,
-        },
-    }),
-    { withTheme: true },
-);
+const StyledListItem = styled(ListItem)(({ theme }) => ({
+    '& .MuiListItem-gutters': {
+        paddingLeft: theme.spacing(),
+        paddingRight: theme.spacing(),
+    },
+}));
 
 export const FacetsFilterListItem = ({ title, disabled, nestedItems, id, isActive }) => {
-    const classes = useStyles();
     const [isOpen, setIsOpen] = useState(isActive || false);
     const handleIsOpen = useCallback(() => setIsOpen(!isOpen), [isOpen]);
     return (
         <Fragment key={`facet_fragment_${id}`}>
-            <ListItem
+            <StyledListItem
                 button
                 disabled={disabled}
                 id={`clickable-${id}`}
                 data-testid={`clickable-${id}`}
                 key={`facet_filter_${id}`}
-                classes={{
-                    gutters: classes.listItemGutters,
-                }}
                 onClick={handleIsOpen}
                 aria-expanded={isOpen}
             >
@@ -46,7 +36,7 @@ export const FacetsFilterListItem = ({ title, disabled, nestedItems, id, isActiv
                         data-testid={id}
                         variant={'body2'}
                         color={'textPrimary'}
-                        className={classes.listText}
+                        sx={{ fontWeight: 400 }}
                     >
                         {title}
                     </Typography>
@@ -56,7 +46,7 @@ export const FacetsFilterListItem = ({ title, disabled, nestedItems, id, isActiv
                 ) : (
                     <ExpandMore id={`expand-more-${id}`} data-testid={`expand-more-${id}`} />
                 )}
-            </ListItem>
+            </StyledListItem>
             {isOpen && (
                 <Collapse in={isOpen} timeout="auto" unmountOnExit>
                     {nestedItems}
