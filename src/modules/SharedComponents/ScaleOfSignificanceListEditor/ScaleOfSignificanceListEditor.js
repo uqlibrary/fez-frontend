@@ -31,8 +31,8 @@ export default class ScaleOfSignificanceListEditor extends Component {
         // rowItemTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
         category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         required: PropTypes.bool,
-        scrollList: PropTypes.bool,
-        scrollListHeight: PropTypes.number,
+        scrollList: PropTypes.bool, // doesnt seem to be used
+        scrollListHeight: PropTypes.number, // doesnt seem to be used
         canEdit: PropTypes.bool,
         getItemSelectedToEdit: PropTypes.func,
         listEditorId: PropTypes.string.isRequired,
@@ -274,6 +274,8 @@ export default class ScaleOfSignificanceListEditor extends Component {
         this.state.buttonLabel = this.props.locale.form.locale.editButtonLabel;
 
         // if its a long list we need the form to scroll into view
+        // scrollIntoView function is not attached to the form
+        /* istanbul ignore next */
         const form = document.getElementById('rek-significance-list-editor');
         form &&
             form.scrollIntoView({
