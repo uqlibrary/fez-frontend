@@ -12,7 +12,6 @@ const StyledCard = styled(Card)(({ theme }) => ({
     fontWeight: theme.typography.fontWeightRegular,
 }));
 const StyledCardHeader = styled(CardHeader)(({ theme }) => ({
-    color: theme?.palette?.white?.main,
     borderRadius: '4px 4px 0px 0px',
     padding: '12px 24px',
     '& .MuiCardHeader-title': {
@@ -58,11 +57,11 @@ export const StandardCard = ({
             {!noHeader && (
                 <StyledCardHeader
                     sx={{
+                        ...(accentHeader || primaryHeader
+                            ? { color: 'white.main', backgroundColor: `${primaryHeader ? 'primary' : 'accent'}.main` }
+                            : {}),
                         ...squareTopActual,
                         ...customTitleBG,
-                        ...(accentHeader || primaryHeader
-                            ? { backgroundColor: `${primaryHeader ? 'primary' : 'accent'}.main` }
-                            : {}),
                     }}
                     title={title}
                     titleTypographyProps={{

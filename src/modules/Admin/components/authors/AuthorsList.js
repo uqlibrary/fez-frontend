@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
 import { useTheme } from '@mui/material/styles';
-import makeStyles from '@mui/styles/makeStyles';
 import { numberToWords } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
 import Grid from '@mui/material/Grid';
@@ -27,11 +26,11 @@ import { validation } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
 
-export const useStyles = makeStyles(() => ({
+const classes = {
     linked: {
         fontWeight: 500,
     },
-}));
+};
 
 const getIcon = rowData => {
     if (parseInt(rowData.uqIdentifier, 10)) {
@@ -44,13 +43,12 @@ const getIcon = rowData => {
 };
 
 export const NameAsPublished = React.memo(({ icon, text, linked }) => {
-    const classes = useStyles();
     return (
         <Grid container spacing={2}>
-            <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Grid item sx={{ alignSelf: 'center', display: { xs: 'none', sm: 'block' } }}>
                 {icon}
             </Grid>
-            <Grid item className={linked ? classes.linked : ''}>
+            <Grid item sx={{ ...(linked ? classes.linked : {}) }}>
                 {text}
             </Grid>
         </Grid>
@@ -60,12 +58,13 @@ export const NameAsPublished = React.memo(({ icon, text, linked }) => {
 NameAsPublished.propTypes = {
     icon: PropTypes.element,
     text: PropTypes.element,
+    linked: PropTypes.bool,
 };
 
 const isValid = value => !validation.isEmpty(value) && !validation.maxLength255Validator(value);
 
-export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
-    const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
+export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInput, locale, isNtro }) => {
+    const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : {});
     const {
         header: {
             locale: { nameColumn, roleColumn, identifierColumn, organisationColumn },
@@ -94,13 +93,13 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                         <React.Fragment>
                             <Typography
                                 variant="body2"
-                                className={linkedClass(rowData)}
+                                sx={{ ...linkedClass(rowData) }}
                                 id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
                                 data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
                             >
                                 {rowData.nameAsPublished}
                             </Typography>
-                            <Typography variant="caption" className={linkedClass(rowData)}>{`${numberToWords(
+                            <Typography variant="caption" sx={{ ...linkedClass(rowData) }}>{`${numberToWords(
                                 rowData.tableData.id + 1,
                             )} ${suffix}`}</Typography>
                         </React.Fragment>
@@ -146,7 +145,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             render: rowData => (
                 <Typography
                     variant="body2"
-                    className={linkedClass(rowData)}
+                    sx={{ ...linkedClass(rowData) }}
                     id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                     data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                 >
@@ -226,7 +225,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                       render: rowData => (
                           <Typography
                               variant="body2"
-                              className={linkedClass(rowData)}
+                              sx={{ ...linkedClass(rowData) }}
                               id={`${contributorEditorId}-list-row-${rowData.tableData.id}-role`}
                               data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-role`}
                           >
@@ -285,7 +284,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                               <Grid item xs={12}>
                                   <Typography
                                       variant="body2"
-                                      className={linkedClass(rowData)}
+                                      sx={{ ...linkedClass(rowData) }}
                                       id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation`}
                                       data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation`}
                                   >
@@ -295,7 +294,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                               <Grid item xs={12}>
                                   <Typography
                                       variant="caption"
-                                      className={linkedClass(rowData)}
+                                      sx={{ ...linkedClass(rowData) }}
                                       id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
                                       data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
                                   >
@@ -397,11 +396,10 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
             locale: { addButton },
         },
     } = locale;
-    const classes = useStyles();
     const theme = useTheme();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale, isNtro, contributorEditorId });
+    columns.current = getColumns({ disabled, suffix, showRoleInput, locale, isNtro, contributorEditorId });
 
     const [data, setData] = React.useState([]);
     React.useEffect(() => {

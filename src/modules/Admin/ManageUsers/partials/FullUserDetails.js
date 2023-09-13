@@ -5,12 +5,11 @@ import { useSelector } from 'react-redux';
 import { getFormSyncErrors, getFormAsyncErrors, reduxForm, getFormValues } from 'redux-form/immutable';
 import debounce from 'debounce-promise';
 
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
-
-import makeStyles from '@mui/styles/makeStyles';
 
 import { ScrollToSection } from 'modules/SharedComponents/Toolbox/ScrollToSection';
 import NameData from './NameData';
@@ -22,12 +21,12 @@ import { FORM_NAME, DEBOUNCE_VALUE } from './manageUserConfig';
 import { checkForExisting } from '../helpers';
 import UserDetailsRow from './UserDetailsRow';
 
-const useStyles = makeStyles(theme => ({
+const classes = {
     background: {
-        backgroundColor: theme.palette.secondary.light,
-        padding: theme.spacing(2),
+        backgroundColor: 'secondary.light',
+        padding: 2,
     },
-}));
+};
 
 export const FullUserDetails = ({
     disabled,
@@ -37,7 +36,6 @@ export const FullUserDetails = ({
     onEditingCanceled,
     submitting,
 }) => {
-    const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
@@ -77,7 +75,7 @@ export const FullUserDetails = ({
                     <TableCell colSpan={9}>
                         <ScrollToSection scrollToSection>
                             <form>
-                                <div className={classes.background}>
+                                <Box sx={{ ...classes.background }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             <NameData />
@@ -119,7 +117,7 @@ export const FullUserDetails = ({
                                             </Grid>
                                         </Grid>
                                     </Grid>
-                                </div>
+                                </Box>
                             </form>
                         </ScrollToSection>
                     </TableCell>
@@ -131,7 +129,7 @@ export const FullUserDetails = ({
                     onKeyDown={handleKeyPress}
                     id="author-delete-row"
                     data-testid="author-delete-row"
-                    className={classes.background}
+                    sx={{ ...classes.background }}
                 >
                     <ConfirmationBox
                         confirmationBoxId="users-delete-this-user-confirmation"

@@ -19,24 +19,14 @@ export const NameData = () => {
     const isUserSuperAdmin = useIsUserSuperAdmin();
 
     const {
+        title,
         editRow: {
             fields: { username, fullName, email, isAdmin, isSuperAdmin },
         },
     } = locale.components.manageUsers;
 
-    // const usrAdministrator = useSelector(state => selector(state, 'usr_administrator'));
-    // const usrSuperAdministrator = useSelector(state => selector(state, 'usr_super_administrator'));
-
-    // const handleUserAdministrator = () => {
-    //     dispatch(change(FORM_NAME, 'usr_administrator', Number(!usrAdministrator)));
-    // };
-
-    // const handleUserSuperAdministrator = () => {
-    //     dispatch(change(FORM_NAME, 'usr_super_administrator', Number(!usrSuperAdministrator)));
-    // };
-
     return (
-        <StandardCard subCard title="User information" smallTitle customTitleBgColor="#F7F7F7">
+        <StandardCard subCard title={title} smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
                 <Field
                     component={UserFieldData}

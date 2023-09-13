@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { useDispatch } from 'react-redux';
-import makeStyles from '@mui/styles/makeStyles';
 import MaterialTable, { MTableAction, MTableBodyRow } from '@material-table/core';
 import { tableIcons } from './ManageAuthorsListIcons';
 
@@ -24,14 +23,6 @@ import { default as locale } from 'locale/components';
 import { loadAuthorList } from 'actions';
 import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/general';
-
-export const useStyles = makeStyles(() => ({
-    backdrop: {
-        position: 'absolute',
-        zIndex: 9999,
-        color: 'rgba(0, 0, 0, 0.2)',
-    },
-}));
 
 export const getColumns = () => {
     const {
@@ -66,7 +57,6 @@ export const getColumns = () => {
 
 export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest }) => {
     const dispatch = useDispatch();
-    const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const [isScopusIngestOpen, showScopusIngestConfirmation, hideScopusIngestConfirmation] = useConfirmationState();
 
@@ -263,7 +253,11 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 components={{
                     Container: props => <div {...props} id="authors-list" data-testid="authors-list" />,
                     OverlayLoading: props => (
-                        <Backdrop {...props} open className={classes.backdrop}>
+                        <Backdrop
+                            {...props}
+                            open
+                            sx={{ position: 'absolute', zIndex: 9999, color: 'rgba(0, 0, 0, 0.2)' }}
+                        >
                             <StandardCard noHeader standardCardId="loading-authors">
                                 <InlineLoader message={loadingText} />
                             </StandardCard>

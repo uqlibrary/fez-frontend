@@ -3,23 +3,18 @@ import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
 
 import DataStreamSecurityItem from './DataStreamSecurityItem';
 import { isDerivative } from 'helpers/datastreams';
 
-export const styles = () => ({
-    dataStreamFileBlock: {
-        backgroundColor: 'rgba(0,0,0,0.05)',
-        padding: 12,
-    },
+const classes = {
     dataStreamFileName: {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
     },
-});
+};
 
-export const DataStreamSecuritySelector = ({ attachedDataStreams, classes, collections, disabled, text, ...props }) => {
+export const DataStreamSecuritySelector = ({ attachedDataStreams, collections, disabled, text, ...props }) => {
     const canDisplay = dataStream => {
         return !isDerivative(dataStream);
     };
@@ -65,7 +60,7 @@ export const DataStreamSecuritySelector = ({ attachedDataStreams, classes, colle
                 <Grid
                     alignContent="flex-end"
                     alignItems="flex-start"
-                    className={classes.dataStreamFileBlock}
+                    sx={{ backgroundColor: 'rgba(0,0,0,0.05)', padding: '12px' }}
                     container
                     spacing={4}
                 >
@@ -94,7 +89,6 @@ export const DataStreamSecuritySelector = ({ attachedDataStreams, classes, colle
 };
 
 DataStreamSecuritySelector.propTypes = {
-    classes: PropTypes.object,
     collections: PropTypes.array,
     disabled: PropTypes.bool,
     input: PropTypes.object,
@@ -109,4 +103,4 @@ export function isSame(prevProps, nextProps) {
     );
 }
 
-export default React.memo(withStyles(styles)(DataStreamSecuritySelector), isSame);
+export default React.memo(DataStreamSecuritySelector, isSame);
