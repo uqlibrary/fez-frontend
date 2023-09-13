@@ -2,10 +2,6 @@ import React from 'react';
 import { FileIcon } from './FileIcon';
 import { rtlRender } from 'test-utils';
 
-jest.mock('@mui/styles', () => ({
-    makeStyles: () => () => ({}),
-}));
-
 function setup(testProps = {}) {
     const props = {
         mimeType: '',

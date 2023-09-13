@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@mui/styles';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -9,7 +8,6 @@ export class AttributionIncomplete extends PureComponent {
     static propTypes = {
         isAttributionIncomplete: PropTypes.bool,
         onChange: PropTypes.func,
-        classes: PropTypes.object,
         disabled: PropTypes.bool,
         attributionIncompleteStatement: PropTypes.string,
         attributionIncompleteDetail: PropTypes.string,
@@ -24,7 +22,6 @@ export class AttributionIncomplete extends PureComponent {
             isAttributionIncomplete,
             attributionIncompleteStatement,
             attributionIncompleteDetail,
-            classes,
             disabled,
         } = this.props;
 
@@ -34,9 +31,7 @@ export class AttributionIncomplete extends PureComponent {
                     <Typography variant="caption">{attributionIncompleteDetail}</Typography>
                 </div>
                 <FormControlLabel
-                    classes={{
-                        root: classes.root,
-                    }}
+                    sx={{ margin: 0 }}
                     disabled={disabled}
                     control={
                         <Checkbox
@@ -47,14 +42,11 @@ export class AttributionIncomplete extends PureComponent {
                             }}
                             checked={isAttributionIncomplete}
                             onChange={this._handleChange}
-                            classes={{ root: classes.checkboxRoot, checked: classes.checkboxChecked }}
                         />
                     }
                     label={
                         <Typography
-                            classes={{
-                                root: classes.label,
-                            }}
+                            sx={{ textAlign: 'justify', fontSize: 16, fontWeight: 300, lineHeight: '24px' }}
                             component="div"
                             id={'attributionIncomplete-label'}
                             data-testid={'attributionIncomplete-label'}
@@ -68,17 +60,4 @@ export class AttributionIncomplete extends PureComponent {
     }
 }
 
-export const styles = () => ({
-    root: {
-        margin: 0,
-    },
-    label: {
-        textAlign: 'justify',
-        fontSize: 16,
-        fontWeight: 300,
-        lineHeight: '24px',
-    },
-    checkboxRoot: {},
-});
-
-export default withStyles(styles, { withTheme: true })(AttributionIncomplete);
+export default AttributionIncomplete;

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import { makeStyles } from '@mui/styles';
 import Delete from '@mui/icons-material/Delete';
 import Grid from '@mui/material/Unstable_Grid2';
 import IconButton from '@mui/material/IconButton';
@@ -41,29 +40,16 @@ import Box from '@mui/material/Box';
 import { FileAvStateIcon } from '../FileAvStateIcon';
 import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
 
-export const useStyles = makeStyles(
-    /* istanbul ignore next */
-    theme => ({
-        header: {
-            borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        },
-        dataWrapper: {
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-        },
-        fileIcon: {
-            opacity: 0.5,
-        },
-        thumbIconCentered: {
-            textAlign: 'center',
-        },
-        upDownArrow: {
-            padding: '0 8px 0',
-            display: 'inline-block',
-        },
-    }),
-    { withTheme: true },
-);
+const classes = {
+    dataWrapper: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+    },
+    upDownArrow: {
+        padding: '0 8px 0',
+        display: 'inline-block',
+    },
+};
 
 const initialPreviewState = {
     fileName: null,
@@ -251,7 +237,6 @@ export const AttachedFiles = ({
 
     const { errorTitle } = locale;
 
-    const classes = useStyles();
     const [preview, showPreview, hidePreview] = usePreview(initialPreviewState);
     const { record } = useRecordContext();
     const isAdmin = userIsAdmin();
@@ -368,7 +353,13 @@ export const AttachedFiles = ({
                 {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
                 {isAdminEditing && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
                 <Box sx={{ padding: 1 }}>
-                    <Grid container direction="row" alignItems="center" spacing={2} className={classes.header}>
+                    <Grid
+                        container
+                        direction="row"
+                        alignItems="center"
+                        spacing={2}
+                        sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                    >
                         <Grid item xs={1}>
                             &nbsp;
                         </Grid>
@@ -406,13 +397,17 @@ export const AttachedFiles = ({
                     .map((item, index) => (
                         <React.Fragment key={item.id}>
                             <Box sx={{ padding: 1 }} data-testid={`fez-datastream-info-attached-list-row-${item.id}`}>
-                                <Grid container className={classes.header} spacing={3}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                                >
                                     <Grid item xs={12}>
                                         <Grid container direction="row" alignItems="center" spacing={2} padding={0}>
                                             <Grid xs={1} padding={0} wrap="nowrap" textAlign={'center'}>
                                                 <IconButton
                                                     disabled={index === 0}
-                                                    className={classes.upDownArrow}
+                                                    sx={{ ...classes.upDownArrow }}
                                                     id={`order-up-file-${index}`}
                                                     data-analyticsid={`order-up-file-${index}`}
                                                     data-testid={`order-up-file-${index}`}
@@ -430,14 +425,14 @@ export const AttachedFiles = ({
                                             padding={0}
                                             wrap="nowrap"
                                         >
-                                            <Grid item xs={1} className={classes.thumbIconCentered}>
+                                            <Grid item xs={1} sx={{ textAlign: 'center' }}>
                                                 <FileIcon
                                                     {...item.iconProps}
                                                     showPreview={showPreview}
                                                     id={`file-icon-${index}`}
                                                 />
                                             </Grid>
-                                            <Grid item sm={3} xs={7} className={classes.dataWrapper}>
+                                            <Grid item sm={3} xs={7} sx={{ ...classes.dataWrapper }}>
                                                 {isAdminEditing ? (
                                                     <EditableFileName
                                                         {...item}
@@ -468,8 +463,7 @@ export const AttachedFiles = ({
                                                 item
                                                 md={isAdminEditing ? 3 : 5}
                                                 sm={isAdminEditing ? 3 : 7}
-                                                className={classes.dataWrapper}
-                                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                sx={{ display: { xs: 'none', sm: 'block' }, ...classes.dataWrapper }}
                                             >
                                                 {isAdminEditing ? (
                                                     <TextField
@@ -492,8 +486,7 @@ export const AttachedFiles = ({
                                             <Grid
                                                 item
                                                 sm={2}
-                                                className={classes.dataWrapper}
-                                                sx={{ display: { xs: 'none', md: 'block' } }}
+                                                sx={{ display: { xs: 'none', md: 'block' }, ...classes.dataWrapper }}
                                             >
                                                 <Typography variant="body2" noWrap>
                                                     {item.calculatedSize}
@@ -625,7 +618,7 @@ export const AttachedFiles = ({
                                         <Grid container direction="row" alignItems="center" spacing={2} padding={0}>
                                             <Grid xs={1} padding={0} wrap="nowrap" textAlign={'center'}>
                                                 <IconButton
-                                                    className={classes.upDownArrow}
+                                                    sx={{ ...classes.upDownArrow }}
                                                     disabled={index === fileData.length - 1}
                                                     id={`order-down-file-${index}`}
                                                     data-analyticsid={`order-down-file-${index}`}

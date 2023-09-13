@@ -37,7 +37,7 @@ const paletteIndex = {
     info_outline: 'accent',
     done: 'success',
 };
-// HERE - figure out where styles are going wrong (see browser)
+
 const StyledGridWiggler = styled(Grid, {
     shouldForwardProp: prop => prop !== 'wiggle',
 })(({ wiggle }) => ({
@@ -71,10 +71,10 @@ const StyledGridWithIcon = styled(Grid, {
     color: theme.palette.white.main,
     backgroundColor: theme.palette[paletteIndex[type]].main,
 
-    '& .spinner, & .icon, & .dismiss': {
+    '& .spinner, & .icon, & button.dismiss': {
         color: theme.palette[paletteIndex[type]].dark,
     },
-    '& .action': {
+    '& button.action': {
         color: theme.palette.white.main,
         backgroundColor: theme.palette[paletteIndex[type]].dark,
     },
