@@ -37,9 +37,9 @@ const paletteIndex = {
     info_outline: 'accent',
     done: 'success',
 };
-
+// HERE - figure out where styles are going wrong (see browser)
 const StyledGridWiggler = styled(Grid, {
-    shouldForwardProp: prop => ['children', 'wiggle'].includes(prop),
+    shouldForwardProp: prop => prop !== 'wiggle',
 })(({ wiggle }) => ({
     '@keyframes wiggle': {
         from: { transform: 'rotate(-30deg)', transformOrigin: '40% 50%' },
@@ -53,22 +53,30 @@ const StyledGridWiggler = styled(Grid, {
 }));
 
 const StyledGridWithIcon = styled(Grid, {
-    shouldForwardProp: prop => ['children', 'type'].includes(prop),
+    shouldForwardProp: prop => prop !== 'type',
 })(({ theme, type }) => ({
     borderRadius: '5px',
     boxShadow: theme.shadows[1],
+    padding: '12px',
+    marginTop: '5px',
+    '&:first-of-type': {
+        marginTop: 0,
+    },
+
     '& a:link, & a:hover, & a:visited': {
         color: theme.palette.white.main,
         textDecoration: 'underline',
     },
-    '& .action': {
-        color: theme.palette.white.main,
-    },
 
     color: theme.palette.white.main,
     backgroundColor: theme.palette[paletteIndex[type]].main,
-    '& .spinner, & .icon, & .dismiss, & .action': {
-        backgroundColor: theme.palette?.[paletteIndex?.[type]]?.dark ?? 'initial',
+
+    '& .spinner, & .icon, & .dismiss': {
+        color: theme.palette[paletteIndex[type]].dark,
+    },
+    '& .action': {
+        color: theme.palette.white.main,
+        backgroundColor: theme.palette[paletteIndex[type]].dark,
     },
 }));
 
@@ -157,13 +165,7 @@ export const Alert = ({
                 id={alertId}
                 data-analyticsid={alertId}
                 data-testid={alertId}
-                sx={{
-                    padding: '12px',
-                    marginTop: '5px',
-                    '&:first-child': {
-                        marginTop: 0,
-                    },
-                }}
+                sx={{}}
             >
                 <Grid
                     item

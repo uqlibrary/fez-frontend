@@ -65,7 +65,7 @@ const contentStylesOpen = theme => ({
 });
 
 const StyledContentWrapper = styled('div', {
-    shouldForwardProp: prop => ['children', 'open'].includes(prop),
+    shouldForwardProp: prop => prop !== 'open',
 })(({ theme, open }) => ({
     flexGrow: 1,
     ...(!open ? { ...contentStyles(theme) } : {}),
