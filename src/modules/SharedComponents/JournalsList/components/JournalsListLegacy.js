@@ -1,4 +1,6 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
+
 import Grid from '@mui/material/Unstable_Grid2';
 import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
 import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
@@ -11,55 +13,57 @@ import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import JournalsListDataCol3 from './partials/JournalsListDataCol3';
 import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
-import makeStyles from '@mui/styles/makeStyles';
 
-const useStyles = makeStyles(theme => ({
-    journalList: {
-        [theme.breakpoints.down('md')]: {
-            display: 'grid',
-            gridTemplateColumns: '80% auto 50px',
-            flexWrap: 'nowrap',
-            overflowX: 'scroll',
-        },
-        [theme.breakpoints.down('sm')]: {
-            gridTemplateColumns: 'auto auto 50px',
-        },
+const StyledGridWrapper = styled(Grid)(({ theme }) => ({
+    [theme.breakpoints.down('md')]: {
+        display: 'grid',
+        gridTemplateColumns: '80% auto 50px',
+        flexWrap: 'nowrap',
+        overflowX: 'scroll',
     },
-    titleColumn: {
-        width: JournalFieldsMap[0].size.xs,
-        [theme.breakpoints.up('sm')]: {
-            width: JournalFieldsMap[0].size.sm,
-        },
-        [theme.breakpoints.up('md')]: {
-            width: JournalFieldsMap[0].size.md,
-        },
-        [theme.breakpoints.up('lg')]: {
-            width: JournalFieldsMap[0].size.lg,
-        },
-        [theme.breakpoints.up('xl')]: {
-            width: JournalFieldsMap[0].size.xl,
-        },
+    [theme.breakpoints.down('sm')]: {
+        gridTemplateColumns: 'auto auto 50px',
     },
-    moreColumnsWidth: {
-        marginLeft: 4,
-        [theme.breakpoints.down('md')]: {
-            width: '100%',
-            overflow: 'unset',
-        },
-        [theme.breakpoints.up('md')]: {
-            overflow: props => (props.minimalView ? 'unset' : 'auto hidden'),
-        },
-        flexGrow: props => (props.minimalView ? 'inherit' : 1),
-        minWidth: 'auto',
+}));
+
+const StyledGridTitleColumn = styled(Grid)(({ theme }) => ({
+    width: JournalFieldsMap[0].size.xs,
+    [theme.breakpoints.up('sm')]: {
+        width: JournalFieldsMap[0].size.sm,
     },
-    headerRow: {
-        borderBottom: '1px solid #CCC',
+    [theme.breakpoints.up('md')]: {
+        width: JournalFieldsMap[0].size.md,
+    },
+    [theme.breakpoints.up('lg')]: {
+        width: JournalFieldsMap[0].size.lg,
+    },
+    [theme.breakpoints.up('xl')]: {
+        width: JournalFieldsMap[0].size.xl,
+    },
+}));
+
+const StyledGridMoreColumnsWidth = styled(Grid, {
+    shouldForwardProp: prop => prop !== 'minimalView',
+})(({ theme, minimalView }) => ({
+    marginLeft: 4,
+    [theme.breakpoints.down('md')]: {
         width: '100%',
-        overflowY: 'hidden',
-        height: 40,
-        [theme.breakpoints.up('md')]: {
-            height: 32,
-        },
+        overflow: 'unset',
+    },
+    [theme.breakpoints.up('md')]: {
+        overflow: minimalView ? 'unset' : 'auto hidden',
+    },
+    flexGrow: minimalView ? 'inherit' : 1,
+    minWidth: 'auto',
+}));
+
+const StyledGridHeaderRow = styled(Grid)(({ theme }) => ({
+    borderBottom: '1px solid #CCC',
+    width: '100%',
+    overflowY: 'hidden',
+    height: 40,
+    [theme.breakpoints.up('md')]: {
+        height: 32,
     },
 }));
 
@@ -93,22 +97,16 @@ const JournalsListLegacy = ({
         }
     }
 
-    const props = {
-        minimalView,
-    };
-    const classes = useStyles(props);
-
     return (
-        <Grid
+        <StyledGridWrapper
             container
             spacing={0}
             padding={0}
             id="journal-list"
             data-testid="journal-list"
             alignItems="stretch"
-            className={classes.journalList}
         >
-            <Grid item className={classes.titleColumn}>
+            <StyledGridTitleColumn item>
                 {/* Header */}
                 <JournalsListHeaderCol1
                     isSelectable={isSelectable}
@@ -130,10 +128,10 @@ const JournalsListLegacy = ({
                             />
                         );
                     })}
-            </Grid>
-            <Grid item xs className={classes.moreColumnsWidth}>
+            </StyledGridTitleColumn>
+            <StyledGridMoreColumnsWidth item xs minimalView={minimalView}>
                 <div style={{ width: colWidth, paddingBottom: !minimalView ? 4 : 0 }}>
-                    <Grid container spacing={0} padding={0} alignItems="flex-end" className={classes.headerRow}>
+                    <StyledGridHeaderRow container spacing={0} padding={0} alignItems="flex-end">
                         {/* Header */}
                         {!minimalView
                             ? JournalFieldsMap.slice(1).map((item, index) => {
@@ -144,7 +142,7 @@ const JournalsListLegacy = ({
                                   .map((item, index) => {
                                       return <JournalsListHeaderCol2Min journal={item} index={index} key={index} />;
                                   })}
-                    </Grid>
+                    </StyledGridHeaderRow>
                     {/* Data */}
                     <Grid container spacing={0} padding={0} alignItems="center">
                         <Grid item xs={12} style={{ marginTop: 6 }}>
@@ -160,7 +158,7 @@ const JournalsListLegacy = ({
                         </Grid>
                     </Grid>
                 </div>
-            </Grid>
+            </StyledGridMoreColumnsWidth>
             <Grid item xs={'auto'}>
                 {/* Header */}
                 <JournalsListHeaderCol3 toggleView={toggleView} minimalView={!!minimalView} />
@@ -171,7 +169,7 @@ const JournalsListLegacy = ({
                         return <JournalsListDataCol3 key={index} journal={item} minimalView={minimalView} />;
                     })}
             </Grid>
-        </Grid>
+        </StyledGridWrapper>
     );
 };
 

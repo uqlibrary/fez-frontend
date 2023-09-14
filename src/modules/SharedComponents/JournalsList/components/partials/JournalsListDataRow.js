@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import { JournalFieldsMap } from './JournalFieldsMap';
 
 import Grid from '@mui/material/Grid';
@@ -11,63 +13,77 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { sanitiseId } from 'helpers/general';
 import Typography from '@mui/material/Typography';
-import { useIsMobileView } from 'hooks';
-import makeStyles from '@mui/styles/makeStyles';
 import Tooltip from '@mui/material/Tooltip';
 
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-const useStyles = makeStyles(theme => ({
+const classesInternal = {
     iconClosed: {
         color: '#e5e5e5',
     },
     iconOpen: {
         color: 'orange',
     },
-
-    collapsibleRow: {
-        backgroundColor: '#F5F5F5',
-    },
-
-    collapsedCell: {
+    inputLabel: {
+        color: 'rgba(0, 0, 0, 0.54)',
         padding: 0,
-        borderBottom: 0,
+        overflow: 'hidden',
+        fontSize: '0.75rem',
+        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        lineHeight: 1.1,
+        whiteSpace: 'normal',
+        textOverflow: 'ellipsis',
+        fontWeight: 600,
     },
+    subLabel: {
+        display: 'block',
+        fontWeight: 400,
+    },
+};
 
-    expandedCell: {
-        padding: theme.spacing(1),
+const StyledTableCell = styled(TableCell, {
+    shouldForwardProp: prop => prop !== 'isSelectable',
+})(({ theme, isSelectable }) => ({
+    ...(isSelectable
+        ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
+        : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+          /* istanbul ignore next */ {}),
+    [theme.breakpoints.down('xs')]: { padding: 'none' },
+    [theme.breakpoints.down('sm')]: {
+        verticalAlign: 'top',
+        paddingLeft: 0,
+        paddingRight: 0,
+        paddingBottom: 0,
     },
-
-    collapsibleContainerDataRowTop: {
-        paddingTop: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+        ...(isSelectable
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+              /* istanbul ignore next */ {}),
     },
-    collapsibleContainerDataRowBottom: {
-        paddingBottom: theme.spacing(1),
-        borderBottom: '1px solid rgba(224, 224, 224, 1)',
+    [theme.breakpoints.up('md')]: {
+        ...(isSelectable
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+              /* istanbul ignore next */ {}),
     },
-    mobileTitle: {
-        border: 0,
+    [theme.breakpoints.up('lg')]: {
+        ...(isSelectable
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+              /* istanbul ignore next */ {}),
     },
-    headerContentMobile: {
-        [theme.breakpoints.down('sm')]: {
-            paddingBottom: theme.spacing(1),
-        },
-    },
-    headerContentTitle: {
-        paddingTop: theme.spacing(1),
-    },
-    externalLink: {
-        '& svg': {
-            float: 'none',
-        },
+    [theme.breakpoints.up('xl')]: {
+        ...(isSelectable
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+              /* istanbul ignore next */ {}),
     },
 }));
 
-const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChange, checked = false }) => {
+const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
-    const classesInternal = useStyles();
-    const isXsDown = useIsMobileView();
 
     if (!!!row || (!!row && Object.keys(row).length <= 0)) return <></>;
 
@@ -75,9 +91,9 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
 
     return (
         <>
-            <TableRow className={classes?.root}>
-                <TableCell size="small" className={classes?.actionsColumn} {...(isXsDown ? { padding: 'none' } : {})}>
-                    <Grid container className={classes?.dataRowContainer}>
+            <TableRow>
+                <StyledTableCell size="small" isSelectable={isSelectable}>
+                    <Grid container sx={{ alignItems: 'center' }}>
                         {isSelectable && (
                             <Grid xs={6} item>
                                 <Checkbox
@@ -106,12 +122,12 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                             </IconButton>
                         </Grid>
                     </Grid>
-                </TableCell>
+                </StyledTableCell>
 
                 <TableCell size="small">
                     <Grid
                         container
-                        className={classes?.dataRowContainer}
+                        sx={{ alignItems: 'center' }}
                         id={`journal-list-data-col-1-${index}`}
                         data-testid={`journal-list-data-col-1-${index}`}
                     >
@@ -126,7 +142,11 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                     href={`/journal/view/${row.jnl_jid}`}
                                     title={row.jnl_title}
                                     id={sanitiseId(`${row.jnl_jid}-${row.jnl_title}`)}
-                                    className={classesInternal.externalLink}
+                                    sx={{
+                                        '& svg': {
+                                            float: 'none',
+                                        },
+                                    }}
                                     inline
                                 >
                                     {row.jnl_title}
@@ -141,22 +161,25 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                     <Grid
                                         item
                                         {...field.collapsibleComponent?.sizeHeader}
-                                        className={classes?.headerContentMobile}
-                                        sx={{
+                                        sx={theme => ({
                                             ...(!!field.collapsibleComponent?.hiddenData
                                                 ? field.collapsibleComponent?.hiddenData
                                                 : /* istanbul ignore next */ {}),
-                                        }}
-                                    >
-                                        {field.collapsibleComponent?.translateFn(field, index, {
-                                            ...classes,
-                                            ...classesInternal,
+                                            [theme.breakpoints.down('sm')]: {
+                                                paddingBottom: theme.spacing(1),
+                                            },
                                         })}
+                                    >
+                                        {field.collapsibleComponent?.translateFn(field, index, classesInternal)}
                                     </Grid>
                                     <Grid
                                         item
                                         {...field.collapsibleComponent?.sizeData}
-                                        className={classesInternal.headerContentMobile}
+                                        sx={theme => ({
+                                            [theme.breakpoints.down('sm')]: {
+                                                paddingBottom: theme.spacing(1),
+                                            },
+                                        })}
                                     >
                                         <Tooltip
                                             title={
@@ -190,12 +213,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                     </Grid>
                 </TableCell>
             </TableRow>
-            <JournalsListCollapsibleDataPanel
-                row={row}
-                open={open}
-                index={index}
-                classes={{ ...classes, ...classesInternal }}
-            />
+            <JournalsListCollapsibleDataPanel row={row} open={open} index={index} />
         </>
     );
 };
@@ -206,6 +224,5 @@ JournalsListDataRow.propTypes = {
     onChange: PropTypes.func,
     checked: PropTypes.bool,
     isSelectable: PropTypes.bool,
-    classes: PropTypes.any,
 };
 export default React.memo(JournalsListDataRow);

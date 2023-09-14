@@ -1,24 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import { locale } from 'locale';
 import OpenInNew from '@mui/icons-material/OpenInNew';
-import makeStyles from '@mui/styles/makeStyles';
 
-export const useStyles = makeStyles(() => ({
-    externalLink: inline => ({
-        ...(!inline && {
-            overflow: 'hidden',
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
-            overflowWrap: 'break-word',
-            wordBreak: 'break-all',
-            display: 'inline-block',
-        }),
-        maxWidth: '100% !important',
-        minWidth: 0,
-        verticalAlign: 'bottom',
-        cursor: 'pointer',
+const StyledLink = styled('a', {
+    shouldForwardProp: prop => prop !== 'inline',
+})(({ inline }) => ({
+    ...(!inline && {
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        textOverflow: 'ellipsis',
+        overflowWrap: 'break-word',
+        wordBreak: 'break-all',
+        display: 'inline-block',
     }),
+    maxWidth: '100% !important',
+    minWidth: 0,
+    verticalAlign: 'bottom',
+    cursor: 'pointer',
+}));
+
+const internalClasses = {
     externalLinkIcon: {
         color: 'inherit',
         fontSize: '0.66rem',
@@ -26,11 +30,13 @@ export const useStyles = makeStyles(() => ({
         float: 'right',
         marginLeft: '0.25rem',
     },
-}));
+};
 
 const ExternalLink = ({ children, className = '', height, openInNewIcon = true, width, inline = false, ...rest }) => {
-    const classes = useStyles(inline);
-
+    console.warn(
+        'ExternalLink is no longer using "className" - use "sx" instead! Only pass an sx object with styles!',
+        className,
+    );
     const openInSizedWindow = (link, width, height) => () =>
         window.open(
             link,
@@ -51,7 +57,7 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
     }
 
     return (
-        <a
+        <StyledLink
             {...{
                 ...rest,
                 id: `${rest.id}-link`,
@@ -64,24 +70,30 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
                 (openInNewIcon && locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)) ||
                 undefined
             }
-            className={[className, classes.externalLink].filter(Boolean).join(' ')}
+            inline={inline}
         >
             {!!inline ? (
                 <>
                     {!!children && children}
                     {openInNewIcon && (
-                        <OpenInNew className={classes.externalLinkIcon} id={`${rest.id}-link-new-window-icon`} />
+                        <OpenInNew
+                            sx={{ ...internalClasses.externalLinkIcon }}
+                            id={`${rest.id}-link-new-window-icon`}
+                        />
                     )}
                 </>
             ) : (
                 <>
                     {openInNewIcon && (
-                        <OpenInNew className={classes.externalLinkIcon} id={`${rest.id}-link-new-window-icon`} />
+                        <OpenInNew
+                            sx={{ ...internalClasses.externalLinkIcon }}
+                            id={`${rest.id}-link-new-window-icon`}
+                        />
                     )}
                     {!!children && children}
                 </>
             )}
-        </a>
+        </StyledLink>
     );
 };
 
