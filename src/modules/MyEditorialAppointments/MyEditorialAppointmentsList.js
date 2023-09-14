@@ -2,10 +2,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from '@material-table/core';
 import moment from 'moment';
 import { useTheme } from '@mui/material/styles';
-import makeStyles from '@mui/styles/makeStyles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
@@ -48,61 +49,54 @@ export const CustomToolbar = props => {
     );
 };
 
-const useStyles = makeStyles(theme => ({
-    datePicker: {
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            minWidth: 120,
-        },
+const StyledDatePicker = styled(DatePicker)(({ theme }) => ({
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+        minWidth: '120px',
     },
-    transformResponsive: {
-        [theme.breakpoints.down('md')]: {
-            '& [class*="MuiToolbar-root"]': {
-                padding: 0,
+}));
+
+const StyledResponsiveWrapper = styled('div')(({ theme }) => ({
+    [theme.breakpoints.down('md')]: {
+        '& [class*="MuiToolbar-root"]': {
+            padding: 0,
+            display: 'block',
+            marginBlockEnd: '12px',
+
+            '& > div:first-child': {
+                display: 'none',
+            },
+        },
+
+        '& [class*="MuiTable-root"]': {
+            '& thead': {
+                display: 'none',
+            },
+
+            '& tr[class*="MuiTableRow-root"]': {
                 display: 'block',
-                marginBlockEnd: '12px',
-
-                '& > div:first-child': {
-                    display: 'none',
-                },
-            },
-
-            '& [class*="MuiTable-root"]': {
-                '& thead': {
-                    display: 'none',
-                },
-
-                '& tr[class*="MuiTableRow-root"]': {
-                    display: 'block',
-                    width: '100%',
-                    boxSizing: 'border-box',
-
-                    '& td[class*="MuiTableCell-root"]:last-of-type': {
-                        display: 'block',
-                        clear: 'both',
-                        width: '100% !important',
-                        boxSizing: 'border-box',
-                    },
-                },
-                '& tr[class*="MuiTableRow-root"]:not(:last-of-type)': {
-                    marginBottom: '12px',
-                },
-            },
-
-            '& button#my-editorial-appointments-add-new-editorial-appointment': {
                 width: '100%',
+                boxSizing: 'border-box',
+
+                '& td[class*="MuiTableCell-root"]:last-of-type': {
+                    display: 'block',
+                    clear: 'both',
+                    width: '100% !important',
+                    boxSizing: 'border-box',
+                },
+            },
+            '& tr[class*="MuiTableRow-root"]:not(:last-of-type)': {
+                marginBottom: '12px',
             },
         },
-    },
-    editTableRow: {
-        '& td:not(:last-of-type)': {
-            verticalAlign: 'top',
+
+        '& button#my-editorial-appointments-add-new-editorial-appointment': {
+            width: '100%',
         },
     },
 }));
 
 export const GetColumns = () => {
-    const classes = useStyles();
     const theme = useTheme();
     const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
 
@@ -303,13 +297,12 @@ export const GetColumns = () => {
             editComponent: props => {
                 return (
                     <LocalizationProvider dateAdapter={AdapterMoment}>
-                        <DatePicker
+                        <StyledDatePicker
                             value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
                             onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
                             views={['year']}
                             openTo="year"
                             disableFuture
-                            className={classes.datePicker}
                             inputProps={{
                                 id: 'eap-start-year-input',
                                 'data-testid': 'eap-start-year-input',
@@ -393,7 +386,7 @@ export const GetColumns = () => {
 
                 return (
                     <LocalizationProvider dateAdapter={AdapterMoment}>
-                        <DatePicker
+                        <StyledDatePicker
                             value={(!!value && moment(String(value), 'YYYY')) || null}
                             onChange={value => {
                                 onChange((!!value && value.format('YYYY')) || null);
@@ -413,7 +406,6 @@ export const GetColumns = () => {
                                 id: 'eap-end-year-button-input',
                                 'data-testid': 'eap-end-year-button-input',
                             }}
-                            className={classes.datePicker}
                             inputProps={{
                                 id: 'eap-end-year-input',
                                 'data-testid': 'eap-end-year-input',
@@ -488,7 +480,6 @@ export const GetColumns = () => {
 };
 
 export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
-    const classes = useStyles();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = GetColumns();
@@ -515,11 +506,10 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             columns={columns.current}
             components={{
                 Container: props => (
-                    <div
+                    <StyledResponsiveWrapper
                         {...props}
                         id="my-editorial-appointments-list"
                         data-testid="my-editorial-appointments-list"
-                        className={classes.transformResponsive}
                     />
                 ),
                 Row: props => (
@@ -535,7 +525,11 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         id={`my-editorial-appointments-list-${props.mode}-row`}
                         data-testid={`my-editorial-appointments-list-${props.mode}-row`}
                         onEditingApproved={handleEditingApproved(props)}
-                        className={classes.editTableRow}
+                        sx={{
+                            '& td:not(:last-of-type)': {
+                                verticalAlign: 'top',
+                            },
+                        }}
                     />
                 ),
                 Action: props => {

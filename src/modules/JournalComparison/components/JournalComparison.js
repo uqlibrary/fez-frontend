@@ -1,4 +1,6 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
+
 import Grid from '@mui/material/Grid';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -8,18 +10,14 @@ import locale from 'locale/components';
 import JournalComparisonList from './JournalComparisonList';
 import { useLocation } from 'react-router';
 import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
-import makeStyles from '@mui/styles/makeStyles';
 
-const useStyles = makeStyles(theme => ({
-    buttonWidth: {
-        [theme.breakpoints.down('sm')]: {
-            width: '100%',
-        },
+const StyledBackToSearchButton = styled(BackToSearchButton)(({ theme }) => ({
+    [theme.breakpoints.down('sm')]: {
+        width: '100%',
     },
 }));
 
 export const JournalComparison = () => {
-    const classes = useStyles();
     const location = useLocation();
     const txt = locale.components.journalComparison;
     return (
@@ -35,11 +33,10 @@ export const JournalComparison = () => {
                                 <Grid style={{ paddingTop: location?.state?.journals ? 20 : 25 }} item xs={12}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12} sm="auto">
-                                            <BackToSearchButton
+                                            <StyledBackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
                                                 prevLocation={location?.state?.prevLocation}
-                                                className={classes.buttonWidth}
                                             />
                                         </Grid>
                                     </Grid>

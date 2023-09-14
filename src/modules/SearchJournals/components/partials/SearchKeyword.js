@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import makeStyles from '@mui/styles/makeStyles';
+
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { sanitiseId } from 'helpers/general';
@@ -8,11 +8,7 @@ import ForCodeSource from './ForCodeSource';
 import Box from '@mui/material/Box';
 import { handleKeyboardPressActivate } from 'helpers/general';
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        color: theme.palette.accent?.main,
-        cursor: 'pointer',
-    },
+const classes = {
     default: {},
     addable: {
         '&::before': {
@@ -26,7 +22,7 @@ const useStyles = makeStyles(theme => ({
             marginRight: '4px',
         },
     },
-}));
+};
 
 export const getIdSuffix = (keyword, variant, type, index) => {
     if (typeof keyword === 'string') {
@@ -49,7 +45,6 @@ export const SearchKeyword = ({
     sources,
     selectedKeywords = {},
 }) => {
-    const classes = useStyles();
     const id = getId(keyword, variant, type, index);
     const isSelected =
         Object.keys(selectedKeywords).filter(
@@ -63,8 +58,12 @@ export const SearchKeyword = ({
         <Grid item xs={12}>
             <Typography
                 component="span"
-                classes={{ root: classes.root }}
-                className={`${classes[variant || 'default']} ${isSelected && classes.added}`}
+                sx={{
+                    color: 'accent.main',
+                    cursor: 'pointer',
+                    ...classes[variant || 'default'],
+                    ...(isSelected ? classes.added : {}),
+                }}
                 onKeyPress={key => handleKeyboardPressActivate(key, handleKeywordClick)}
                 onClick={handleKeywordClick}
                 id={id}

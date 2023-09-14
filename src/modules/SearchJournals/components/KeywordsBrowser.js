@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
 import Grid from '@mui/material/Grid';
@@ -12,18 +13,14 @@ import SearchKeywordsList from './partials/SearchKeywordsList';
 import ForCodeSearchKeywordsList from './partials/ForCodeSearchKeywordsList';
 
 import locale from 'locale/components';
-import makeStyles from '@mui/styles/makeStyles';
-
-const useStyles = makeStyles(theme => ({
-    border: {
-        [theme.breakpoints.up('md')]: {
-            paddingLeft: '5px',
-            paddingRight: '5px',
-            borderStyle: 'dashed',
-            borderColor: '#CCC',
-            borderWidth: '0 0 0 1px',
-            marginTop: '10px',
-        },
+const StyledGrid = styled(Grid)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        paddingLeft: '5px',
+        paddingRight: '5px',
+        borderStyle: 'dashed',
+        borderColor: '#CCC',
+        borderWidth: '0 0 0 1px',
+        marginTop: '10px',
     },
 }));
 
@@ -38,7 +35,7 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
     const hasKeywordKeywords = journalSearchKeywords.keywordMatch.length > 0;
     const hasSubjectKeywords = journalSearchKeywords.subjectMatch.length > 0;
     const hasAnyKeywordsLoaded = hasExactKeywords || hasTitleKeywords || hasKeywordKeywords || hasSubjectKeywords;
-    const classes = useStyles();
+
     /**
      * Handle click event on keyword
      *
@@ -142,7 +139,7 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xs={12} md={3} className={classes.border} style={{ marginTop: '10px' }}>
+            <StyledGrid item xs={12} md={3} style={{ marginTop: '10px' }}>
                 <SearchKeywordsList
                     keywordsListTitle={txt.keywordMatch.title}
                     keywordsList={journalSearchKeywords.keywordMatch}
@@ -150,15 +147,15 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
                     onKeywordClick={handleKeywordsKeywordClick}
                     selectedKeywords={selectedKeywords}
                 />
-            </Grid>
-            <Grid item xs={12} md={6} className={classes.border} style={{ marginTop: '10px', paddingRight: 0 }}>
+            </StyledGrid>
+            <StyledGrid item xs={12} md={6} style={{ marginTop: '10px', paddingRight: 0 }}>
                 <ForCodeSearchKeywordsList
                     keywordsListTitle={txt.forCodeMatch.title}
                     keywordsList={journalSearchKeywords.subjectMatch}
                     onKeywordClick={handleSubjectKeywordClick}
                     selectedKeywords={selectedKeywords}
                 />
-            </Grid>
+            </StyledGrid>
         </Grid>
     );
 };

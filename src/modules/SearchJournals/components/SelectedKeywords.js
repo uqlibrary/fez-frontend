@@ -1,20 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import SelectedKeywordItem from './partials/SelectedKeywordItem';
 import locale from 'locale/components';
-import makeStyles from '@mui/styles/makeStyles';
-
-const useStyles = makeStyles(theme => ({
-    separator: {
-        [theme.breakpoints.down('sm')]: {
-            margin: '0 8px',
-        },
-    },
-}));
 
 export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
-    const classes = useStyles();
     const txt = locale.components.searchJournals;
     return (
         <React.Fragment>
@@ -32,14 +23,19 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
                                 onKeywordDelete={onKeywordDelete}
                             />
                             {addSeparator && (
-                                <span
-                                    className={classes.separator}
+                                <Box
+                                    component={'span'}
+                                    sx={theme => ({
+                                        [theme.breakpoints.down('sm')]: {
+                                            margin: '0 8px',
+                                        },
+                                    })}
                                     id={`separator-${index}`}
                                     data-testid={`separator-${index}`}
                                     key={`separator-${index}`}
                                 >
                                     {keywords[index + 1].type.toLowerCase() === 'keyword' ? 'AND' : 'OR'}
-                                </span>
+                                </Box>
                             )}
                         </React.Fragment>
                     );
