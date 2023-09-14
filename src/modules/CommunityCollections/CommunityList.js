@@ -1,8 +1,11 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
+
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -21,9 +24,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 
-// import { CommunityCollectionsPaging } from './components/CommunityCollectionsPaging';
 import { CommunityTable } from './components/CommunityTable';
-import makeStyles from '@mui/styles/makeStyles';
 import queryString from 'query-string';
 import { useHistory } from 'react-router-dom';
 import Add from '@mui/icons-material/Add';
@@ -31,39 +32,20 @@ import Add from '@mui/icons-material/Add';
 import { pushHistory } from './components/functions';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 
-const useStyles = makeStyles(theme => ({
-    communityAutoCloseParent: {
-        overflow: 'auto',
-        marginBottom: 10,
+const StyledAddButtonWrapper = styled('div')(({ theme }) => ({
+    float: 'left',
+    [theme.breakpoints.down('sm')]: {
+        float: 'none',
     },
-    addNewCommunity: {
-        float: 'left',
-        [theme.breakpoints.down('sm')]: {
-            float: 'none',
-        },
-    },
-    addNewCommunityButton: {
-        backgroundColor: '#51247A',
-        color: 'white',
-        '&:hover': {
-            backgroundColor: '#51247A',
-            color: 'white',
-        },
-    },
-    autoCloseCommunity: {
-        float: 'right',
-        [theme.breakpoints.down('sm')]: {
-            float: 'none',
-        },
-    },
-    communityCountTitle: {
-        fontWeight: 600,
-        marginBottom: 10,
+}));
+const StyledAutoCloseWrapper = styled('div')(({ theme }) => ({
+    float: 'right',
+    [theme.breakpoints.down('sm')]: {
+        float: 'none',
     },
 }));
 
 export const CommunityList = () => {
-    const classes = useStyles();
     const [autoCollapse, setAutoCollapse] = React.useState(false);
     const handleSwitchChange = event => {
         setAutoCollapse(event.target.checked);
@@ -160,26 +142,22 @@ export const CommunityList = () => {
         <StandardPage title={txt.title.communities}>
             {!!!loadingCommunitiesError && (
                 <React.Fragment>
-                    <div className={classes.communityAutoCloseParent}>
-                        <div className={classes.addNewCommunity} data-testid="admin-add-community">
+                    <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
+                        <StyledAddButtonWrapper data-testid="admin-add-community">
                             {!!adminUser && (
                                 <Button
                                     component={Link}
-                                    variant="outlined"
                                     to={pathConfig.admin.community}
                                     data-testid="admin-add-community-button"
                                     startIcon={<Add />}
-                                    className={classes.addNewCommunityButton}
+                                    variant={'contained'}
+                                    color={'primary'}
                                 >
                                     {communityCollectionsConfig.addNewCommunityText}
                                 </Button>
                             )}
-                        </div>
-                        <div
-                            className={classes.autoCloseCommunity}
-                            id="autoclose-community"
-                            data-testid="autoclose-community"
-                        >
+                        </StyledAddButtonWrapper>
+                        <StyledAutoCloseWrapper id="autoclose-community" data-testid="autoclose-community">
                             <FormControlLabel
                                 control={
                                     <Switch
@@ -193,14 +171,14 @@ export const CommunityList = () => {
                                 }
                                 label={communityCollectionsConfig.collapseSwitchText}
                             />
-                        </div>
-                    </div>
+                        </StyledAutoCloseWrapper>
+                    </Box>
 
                     <StandardCard noHeader style={{ marginTop: 10 }}>
                         {!!!loadingCommunities && (
                             <Typography
                                 variant="body2"
-                                className={classes.communityCountTitle}
+                                sx={{ fontWeight: 600, marginBottom: '10px' }}
                                 id="total-communities"
                                 data-testid="total-communities"
                             >

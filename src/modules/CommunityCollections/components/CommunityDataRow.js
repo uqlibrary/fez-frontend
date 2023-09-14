@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import AdminActions from './AdminActions';
 import * as actions from 'actions';
-import makeStyles from '@mui/styles/makeStyles';
+
 import { parseHtmlToJSX } from 'helpers/general';
 import { pathConfig } from 'config';
 import CollectionsListEmbedded from './CollectionsListEmbedded';
@@ -17,9 +17,9 @@ import Grid from '@mui/material/Grid';
 import { communityCollectionsConfig } from 'config';
 const moment = require('moment');
 
-const returnDateField = (date, conf, className) => {
+const returnDateField = (date, conf, classes) => {
     return (
-        <Grid item xs={2} className={className} sx={{ display: { xs: 'none', md: 'block' } }}>
+        <Grid item xs={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
             <Typography variant="body2">
                 {moment(date)
                     .local()
@@ -31,43 +31,9 @@ const returnDateField = (date, conf, className) => {
 
 import { Link } from 'react-router-dom';
 
-const useStyles = makeStyles({
-    rowParent: {
-        boxSizing: 'border-box',
-        boxShadow: '0 -1px 0 #eaeaea',
-        padding: '15px 0px 0px',
-    },
-    rowChild: {
-        paddingBottom: 10,
-    },
-    padTop: {
-        paddingTop: 5,
-    },
-    padTopLarge: {
-        paddingTop: 10,
-    },
-    expandButton: {
-        float: 'left',
-        width: 24,
-    },
-    title: {
-        float: 'right',
-        width: 'calc(100% - 30px)',
-        paddingTop: 10,
-        paddingBottom: 5,
-    },
-    italic: {
-        fontStyle: 'italic',
-    },
-    rightAlign: {
-        textAlign: 'center',
-    },
-    dateField: { paddingTop: 5 },
-});
-
 export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => {
     const dispatch = useDispatch();
-    const classes = useStyles();
+
     const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
 
     const open = collectionsOpen.indexOf(row.rek_pid) > -1;
@@ -80,13 +46,18 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
     };
 
     return (
-        <Grid container key={row.rek_pid} data-testid={`row-${row.rek_pid}`} className={classes.rowParent}>
+        <Grid
+            container
+            key={row.rek_pid}
+            data-testid={`row-${row.rek_pid}`}
+            sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
+        >
             <React.Fragment key={row.rek_pid}>
-                <Grid container className={classes.rowChild}>
+                <Grid container sx={{ paddingBottom: '10px' }}>
                     <Grid item xs={10} sm={11} md={adminUser ? 7 : 8}>
-                        <div className={classes.expandButton}>
+                        <Box sx={{ float: 'left', width: '24px' }}>
                             <IconButton
-                                className={classes.padTop}
+                                sx={{ paddingTop: '5px' }}
                                 aria-label="expand row"
                                 size="small"
                                 onClick={() => handleSetOpen(!open)}
@@ -96,8 +67,15 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                             >
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                             </IconButton>
-                        </div>{' '}
-                        <div className={classes.title}>
+                        </Box>{' '}
+                        <Box
+                            sx={{
+                                float: 'right',
+                                width: 'calc(100% - 30px)',
+                                paddingTop: '10px',
+                                paddingBottom: '5px',
+                            }}
+                        >
                             <Typography variant="body2">
                                 <Link
                                     to={pathConfig.records.view(row.rek_pid)}
@@ -109,7 +87,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                             </Typography>
                             {!!row.rek_description && <Typography variant="caption">{row.rek_description}</Typography>}
                             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
-                                <Typography variant="caption" className={classes.italic}>
+                                <Typography variant="caption" sx={{ fontStyle: 'italic' }}>
                                     {communityCollectionsConfig.formatCreationDate(
                                         moment(row.rek_created_date)
                                             .local()
@@ -119,10 +97,9 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                         <br />
                                     </Box>
                                     <Typography
-                                        sx={{ display: { xs: 'none', sm: 'inline' } }}
+                                        sx={{ fontStyle: 'italic', display: { xs: 'none', sm: 'inline' } }}
                                         component="span"
                                         variant="caption"
-                                        className={classes.italic}
                                     >
                                         {' / '}
                                     </Typography>
@@ -133,13 +110,13 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                     )}
                                 </Typography>
                             </Box>
-                        </div>
+                        </Box>
                         <div style={{ clear: 'both' }} />
                     </Grid>
-                    {returnDateField(row.rek_created_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
-                    {returnDateField(row.rek_updated_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
+                    {returnDateField(row.rek_created_date, conf, { paddingTop: '10px' })}
+                    {returnDateField(row.rek_updated_date, conf, { paddingTop: '10px' })}
                     {!!adminUser && (
-                        <Grid item xs={2} sm={1} className={classes.rightAlign}>
+                        <Grid item xs={2} sm={1} sx={{ textAlign: 'center' }}>
                             <AdminActions
                                 record={row.rek_pid}
                                 id={`admin-actions-${row.rek_pid}`}

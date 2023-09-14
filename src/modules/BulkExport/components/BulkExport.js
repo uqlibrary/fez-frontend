@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
+import { styled } from '@mui/material/styles';
 
 import Button from '@mui/material/Button';
 import CloudDoneIcon from '@mui/icons-material/CloudDone';
@@ -14,43 +15,30 @@ import IconButton from '@mui/material/IconButton';
 import MuiDialogContent from '@mui/material/DialogContent';
 import MuiDialogTitle from '@mui/material/DialogTitle';
 import Typography from '@mui/material/Typography';
-import makeStyles from '@mui/styles/makeStyles';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import componentsLocale from 'locale/components';
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        margin: 0,
-        padding: theme.spacing(2),
-    },
-    closeButton: {
-        position: 'absolute',
-        right: theme.spacing(1),
-        top: theme.spacing(1),
-        color: theme.palette.grey[500],
-    },
-    dialogBody: {
-        gap: '1rem',
-        marginBottom: '2rem',
-        maxWidth: '40em',
-    },
+const classes = {
     exportButton: {
         width: '100%',
         '&.loading': {
-            background: theme.palette.accent.dark,
-            color: theme.palette.primary.contrastText,
+            background: 'accent.dark',
+            color: 'primary.contrastText',
         },
         '&.success svg': {
-            color: theme.palette.success.dark,
+            color: 'success.dark',
         },
         '&.error': {
-            background: theme.palette.error.dark,
-            color: theme.palette.error.contrastText,
+            background: 'error.dark',
+            color: 'error.contrastText',
         },
     },
-    dialogMobileMargins: {
+};
+
+const StyledDialog = styled(Dialog)(({ theme }) => ({
+    '& .MuiDialog-paperScrollPaper': {
         [theme.breakpoints.down('sm')]: {
             margin: 0,
         },
@@ -69,8 +57,6 @@ const BulkExport = ({
     const [open, setOpen] = React.useState(false);
     const [exportPages, setExportPages] = React.useState([]);
     const hasSuccess = React.useRef(false);
-
-    const classes = useStyles();
 
     const openDialog = () => {
         actions.resetExportPublicationsStatus();
@@ -131,7 +117,8 @@ const BulkExport = ({
         return (
             <Button
                 children={format.label}
-                className={`${classes.exportButton} ${statusClass}`}
+                sx={{ ...classes.exportButton }}
+                className={`${statusClass}`}
                 data-analyticsid={id}
                 data-testid={id}
                 disabled={['success', 'loading'].includes(statusClass)}
@@ -186,26 +173,33 @@ const BulkExport = ({
                 id="bulk-export-open"
                 color={'default'}
             />
-            <Dialog
+            <StyledDialog
                 open={open}
                 aria-labelledby="bulk-export-dialog-title"
                 aria-describedby="bulk-export-instructions"
-                className={classes.root}
+                sx={{ margin: 0, padding: 2 }}
                 maxWidth="md"
-                classes={{
-                    paperScrollPaper: classes.dialogMobileMargins,
-                }}
             >
                 <MuiDialogTitle disableTypography>
                     <Typography variant="h4" id="bulk-export-dialog-title">
                         {buttonText}
                     </Typography>
-                    <IconButton aria-label="close" onClick={closeDialog} className={classes.closeButton} size="large">
+                    <IconButton
+                        aria-label="close"
+                        onClick={closeDialog}
+                        sx={theme => ({
+                            position: 'absolute',
+                            right: theme.spacing(1),
+                            top: theme.spacing(1),
+                            color: theme.palette.grey[500],
+                        })}
+                        size="large"
+                    >
                         <CloseIcon />
                     </IconButton>
                 </MuiDialogTitle>
                 <MuiDialogContent>
-                    <Grid container spacing={2} className={classes.dialogBody}>
+                    <Grid container spacing={2} sx={{ gap: '1rem', marginBottom: '2rem', maxWidth: '40em' }}>
                         <Grid item xs={12} id="bulk-export-instructions">
                             {sizeMessage.replace('[bulkExportSize]', pageSize)}
                         </Grid>
@@ -217,7 +211,7 @@ const BulkExport = ({
                         {exportOptionRender}
                     </Grid>
                 </MuiDialogContent>
-            </Dialog>
+            </StyledDialog>
         </div>
     );
 };

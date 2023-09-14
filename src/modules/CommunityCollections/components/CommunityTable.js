@@ -1,41 +1,18 @@
 import React from 'react';
-import makeStyles from '@mui/styles/makeStyles';
+
 import PropTypes from 'prop-types';
 import CommunityDataRow from './CommunityDataRow';
 import Grid from '@mui/material/Grid';
-const useStyles = makeStyles({
-    headerStyle: {
-        fontWeight: 400,
-    },
-    rightAlign: {
-        textAlign: 'right',
-    },
-    collapseIcon: {
-        float: 'left',
-        width: 24,
-    },
-    title: {
-        float: 'right',
-        width: 'calc(100% - 30px)',
-    },
-    dataRow: {
-        paddingTop: 10,
-    },
-});
+import Box from '@mui/material/Box';
+
 export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser }) => {
-    const classes = useStyles();
     return (
         <Grid container spacing={0}>
             {/* Header Row */}
-            <Grid
-                container
-                spacing={0}
-                className={classes.headerStyle}
-                data-testid="community-collections-primary-header"
-            >
+            <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="community-collections-primary-header">
                 <Grid item xs={6} md={adminUser ? 7 : 8}>
-                    <div className={classes.collapseIcon} />
-                    <div className={classes.title}>{labels.title}</div>
+                    <Box sx={{ float: 'left', width: '24px' }} />
+                    <Box sx={{ float: 'right', width: 'calc(100% - 30px)' }}>{labels.title}</Box>
                 </Grid>
                 <Grid item xs={2} sx={{ display: { xs: 'none', md: 'block' } }}>
                     {labels.creation_date}
@@ -44,13 +21,13 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
                     {labels.updated_date}
                 </Grid>
                 {!!adminUser && (
-                    <Grid item xs={6} md={1} className={classes.rightAlign}>
+                    <Grid item xs={6} md={1} sx={{ textAlign: 'right' }}>
                         {labels.actions}
                     </Grid>
                 )}
             </Grid>
             {/* Data Row */}
-            <Grid container className={classes.dataRow} data-testid="community-collections-primary-body">
+            <Grid container sx={{ paddingTop: '10px' }} data-testid="community-collections-primary-body">
                 {records.map(row => (
                     <CommunityDataRow
                         key={row.rek_pid}

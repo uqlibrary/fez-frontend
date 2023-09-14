@@ -3,18 +3,10 @@ import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import makeStyles from '@mui/styles/makeStyles';
 
 import { formatPublicationDate } from 'modules/ViewRecord/components/AdditionalInformation';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { parseHtmlToJSX } from 'helpers/general';
-
-export const useStyles = makeStyles(theme => ({
-    gridRow: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        marginBottom: '1rem',
-    },
-}));
 
 export const renderAuthors = (authors, field) => {
     const subKey = field.replace('fez_record_search_key', 'rek');
@@ -44,8 +36,6 @@ export const renderAuthors = (authors, field) => {
 };
 
 export const DoiField = ({ data, field, label, displayTypeLookup }) => {
-    const classes = useStyles();
-
     let value = '';
     switch (field) {
         case 'fez_record_search_key_author':
@@ -131,7 +121,12 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
     const testId = field.replace('fez_record_search_key', 'rek').replace(/_/g, '-');
 
     return (
-        <Grid container key={field} spacing={2} classes={{ root: classes.gridRow }}>
+        <Grid
+            container
+            key={field}
+            spacing={2}
+            sx={{ borderBottom: '1px solid secondary.light', marginBottom: '1rem' }}
+        >
             <Grid item xs={12} sm={3}>
                 <Typography variant="body2" component={'span'} data-testid={`${testId}-label`}>
                     {label}
