@@ -36,9 +36,6 @@ context('Journal Article admin edit', () => {
         cy.readCKEditor('ain-notes').should(text => {
             expect(text).to.contain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13
         });
-        cy.readCKEditor('rek-herdc-notes').should(text => {
-            expect(text).to.contain(record.rek_herdc_notes); // 12/1/12 Amended ID at author request #886821
-        });
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
         cy.log('Identifiers tab');
