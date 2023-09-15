@@ -7,25 +7,9 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Grid from '@mui/material/Unstable_Grid2';
 import FormHelperText from '@mui/material/FormHelperText';
-import withStyles from '@mui/styles/withStyles';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 
 import moment from 'moment';
-
-const styles = theme => ({
-    fakeTitle: {
-        color: theme.palette.secondary.main,
-        marginTop: -32,
-    },
-    hideLabel: {
-        position: 'absolute',
-        left: -10000,
-        top: 'auto',
-        width: 1,
-        height: 1,
-        overflow: 'hidden',
-    },
-});
 
 export const STATUS_VALID = 1; // user entered a valid date
 export const STATUS_INVALID = 2; // user entered an invalid date
@@ -41,10 +25,8 @@ export class PartialDateForm extends PureComponent {
         allowPartial: PropTypes.bool,
         disabled: PropTypes.bool,
         months: PropTypes.array,
-        className: PropTypes.string,
         floatingTitle: PropTypes.string.isRequired,
         floatingTitleRequired: PropTypes.bool,
-        classes: PropTypes.object,
         required: PropTypes.bool,
         hasError: PropTypes.string,
         disableFuture: PropTypes.bool,
@@ -90,7 +72,6 @@ export class PartialDateForm extends PureComponent {
         allowPartial: false,
         floatingTitle: 'Enter a date',
         floatingTitleRequired: false,
-        className: '',
         disableFuture: false,
     };
 
@@ -391,4 +372,4 @@ export class PartialDateForm extends PureComponent {
     }
 }
 
-export default withStyles(styles)(PartialDateForm);
+export default PartialDateForm;

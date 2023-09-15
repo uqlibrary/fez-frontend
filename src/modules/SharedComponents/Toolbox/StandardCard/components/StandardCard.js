@@ -1,25 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { styled } from '@mui/material/styles';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import { HelpIcon } from '../../HelpDrawer';
 
-const StyledCard = styled(Card)(({ theme }) => ({
-    overflow: 'unset',
-    fontWeight: theme.typography.fontWeightRegular,
-}));
-const StyledCardHeader = styled(CardHeader)(({ theme }) => ({
+const cardHeader = {
+    color: 'white.main',
     borderRadius: '4px 4px 0px 0px',
     padding: '12px 24px',
-    '& .MuiCardHeader-title': {
-        [theme.breakpoints.down('sm')]: {
-            ...theme.typography.h6,
-        },
+};
+const classes = {
+    cardHeaderPrimary: {
+        ...cardHeader,
+        backgroundColor: 'primary.main',
     },
-}));
+    cardHeaderAccent: {
+        ...cardHeader,
+        backgroundColor: 'accent.main',
+    },
+};
 
 export const StandardCard = ({
     accentHeader,
@@ -48,21 +49,29 @@ export const StandardCard = ({
         : `standard-card${typeof title === 'string' ? '-' + title.replace(/ /g, '-').toLowerCase() : ''}`;
 
     return (
-        <StyledCard
+        <Card
             id={standardCardIdActual}
             data-testid={standardCardIdActual}
             className={'StandardCard'}
-            sx={{ ...customBG, ...customTitle, ...fullHeightActual }}
+            sx={{
+                ...customBG,
+                ...customTitle,
+                ...fullHeightActual,
+                overflow: 'unset',
+                fontWeight: 'fontWeightRegular',
+            }}
         >
             {!noHeader && (
-                <StyledCardHeader
-                    sx={{
-                        ...(accentHeader || primaryHeader
-                            ? { color: 'white.main', backgroundColor: `${primaryHeader ? 'primary' : 'accent'}.main` }
-                            : {}),
+                <CardHeader
+                    sx={theme => ({
                         ...squareTopActual,
                         ...customTitleBG,
-                    }}
+                        ...(accentHeader && classes.cardHeaderAccent),
+                        ...(primaryHeader && classes.cardHeaderPrimary),
+                        [theme.breakpoints.down('sm')]: {
+                            ...theme.typography.h6,
+                        },
+                    })}
                     title={title}
                     titleTypographyProps={{
                         variant: smallTitle ? 'h6' : 'h5',
@@ -82,7 +91,7 @@ export const StandardCard = ({
             >
                 {children}
             </CardContent>
-        </StyledCard>
+        </Card>
     );
 };
 
