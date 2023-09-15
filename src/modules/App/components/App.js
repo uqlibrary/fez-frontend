@@ -100,7 +100,6 @@ export class AppClass extends PureComponent {
     };
     static childContextTypes = {
         userCountry: PropTypes.any,
-        isMobile: PropTypes.bool,
         selectFieldMobileOverrides: PropTypes.object,
     };
 
@@ -117,7 +116,6 @@ export class AppClass extends PureComponent {
     getChildContext() {
         return {
             userCountry: 'AU', // this.state.userCountry,
-            isMobile: this.state.isMobile,
             selectFieldMobileOverrides: {
                 style: !this.state.isMobile ? { width: '100%' } : {},
                 autoWidth: !this.state.isMobile,
@@ -374,6 +372,7 @@ export class AppClass extends PureComponent {
                                 <Grid item xs={2} sm={4}>
                                     <SearchComponent
                                         autoFocus={isIndex}
+                                        isMobile={this.state.isMobile}
                                         isInHeader
                                         showPrefixIcon
                                         showMobileSearchButton

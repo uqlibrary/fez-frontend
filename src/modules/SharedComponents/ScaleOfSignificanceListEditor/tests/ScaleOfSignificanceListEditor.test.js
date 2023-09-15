@@ -157,7 +157,6 @@ describe('ScaleOfSignificanceListEditor tests', () => {
         fireEvent.click(getByTestId('rek-significance-showhidebutton'));
         fireEvent.mouseDown(getByTestId('rek-significance-select'));
         fireEvent.click(getByRole('option', { name: 'Minor' }));
-        console.log('change by test id');
         fireEvent.change(getByTestId('rek-creator-contribution-statement'), { target: { value: 'test' } });
         fireEvent.click(getByTestId('rek-significance-add'));
         expect(container).toMatchSnapshot();
