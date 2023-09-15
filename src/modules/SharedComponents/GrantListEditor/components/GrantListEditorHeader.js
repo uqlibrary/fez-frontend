@@ -7,7 +7,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
 import DeleteForever from '@mui/icons-material/DeleteForever';
-import withStyles from '@mui/styles/withStyles';
+
 import Grid from '@mui/material/Grid';
 import { useWidth } from 'hooks';
 
@@ -21,7 +21,6 @@ export class GrantListEditorHeader extends PureComponent {
         onDeleteAll: PropTypes.func.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        classes: PropTypes.object,
         width: PropTypes.string,
         hideType: PropTypes.bool,
     };
@@ -62,7 +61,7 @@ export class GrantListEditorHeader extends PureComponent {
             deleteAllConfirmation,
             reorderColumn,
         } = this.props.locale;
-        const { classes } = this.props;
+
         return (
             <Fragment>
                 <ConfirmDialogBox
@@ -70,7 +69,14 @@ export class GrantListEditorHeader extends PureComponent {
                     onAction={this.props.onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
-                <ListItem classes={{ root: classes.header }}>
+                <ListItem
+                    sx={{
+                        borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
+                        marginTop: 1,
+                        padding: 0,
+                        paddingBottom: '6px',
+                    }}
+                >
                     <Grid container spacing={0}>
                         <Grid item xs={10} sm={11} md={9}>
                             <Grid container spacing={0}>
@@ -109,7 +115,7 @@ export class GrantListEditorHeader extends PureComponent {
                                             secondary={reorderColumn}
                                             secondaryTypographyProps={{ variant: 'caption' }}
                                             style={{ padding: 0 }}
-                                            classes={{ root: classes.right }}
+                                            sx={{ textAlign: 'right' }}
                                         />
                                     </Grid>
                                     <Grid
@@ -144,26 +150,4 @@ export class GrantListEditorHeader extends PureComponent {
         );
     }
 }
-
-export const styles = () => ({
-    right: {
-        textAlign: 'right',
-    },
-    header: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
-        marginTop: 8,
-        padding: 0,
-        paddingBottom: 6,
-    },
-    paddingRight24: {
-        paddingRight: 24,
-    },
-    paddingRight36: {
-        paddingRight: 36,
-    },
-    paddingRight14: {
-        paddingRight: 14,
-    },
-});
-
-export default withStyles(styles)(withWidth()(GrantListEditorHeader));
+export default withWidth()(GrantListEditorHeader);

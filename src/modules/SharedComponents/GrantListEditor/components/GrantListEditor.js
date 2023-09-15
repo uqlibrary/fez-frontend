@@ -7,7 +7,6 @@ import GrantListEditorForm from './GrantListEditorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Grid';
 
 export class GrantListEditor extends PureComponent {
@@ -18,7 +17,6 @@ export class GrantListEditor extends PureComponent {
         onChange: PropTypes.func,
         locale: PropTypes.object,
         input: PropTypes.object,
-        classes: PropTypes.object,
         required: PropTypes.bool,
         hideType: PropTypes.bool,
         disableDeleteAllGrants: PropTypes.bool,
@@ -132,7 +130,7 @@ export class GrantListEditor extends PureComponent {
     };
 
     render() {
-        const { classes, disabled, required, disableDeleteAllGrants, canEdit } = this.props;
+        const { disabled, required, disableDeleteAllGrants, canEdit } = this.props;
         const { grants, errorMessage, grantIndexSelectedToEdit, grantSelectedToEdit } = this.state;
 
         const renderGrantsRows = grants.map((grant, index) => (
@@ -199,7 +197,13 @@ export class GrantListEditor extends PureComponent {
                         </Grid>
                         <Grid item xs={12} style={{ marginTop: -8 }}>
                             <List
-                                classes={{ root: `${classes.list} ${grants.length > 3 ? classes.scroll : ''}` }}
+                                sx={{
+                                    width: '100%',
+                                    maxHeight: '200px',
+                                    overflow: 'hidden',
+
+                                    ...(grants.length > 3 && { overflowY: 'scroll' }),
+                                }}
                                 data-testid="rek-grant-list"
                             >
                                 {renderGrantsRows}
@@ -217,15 +221,4 @@ export class GrantListEditor extends PureComponent {
     }
 }
 
-export const styles = () => ({
-    list: {
-        width: '100%',
-        maxHeight: 200,
-        overflow: 'hidden',
-    },
-    scroll: {
-        overflowY: 'scroll',
-    },
-});
-
-export default withStyles(styles)(GrantListEditor);
+export default GrantListEditor;

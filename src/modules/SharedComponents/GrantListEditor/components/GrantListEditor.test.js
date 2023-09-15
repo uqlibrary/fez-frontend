@@ -1,5 +1,5 @@
 import React from 'react';
-import { GrantListEditor, styles } from './GrantListEditor';
+import { GrantListEditor } from './GrantListEditor';
 import Immutable from 'immutable';
 import { rtlRender, fireEvent, within } from 'test-utils';
 
@@ -10,7 +10,6 @@ function setup(testProps = {}) {
         onChange: jest.fn(),
         locale: {},
         input: {},
-        classes: {},
         required: true,
         hideType: false,
         ...testProps,
@@ -22,10 +21,6 @@ describe('GrantListEditor', () => {
     it('should render default view', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
-    });
-
-    it('should have a proper style generator', () => {
-        expect(styles()).toMatchSnapshot();
     });
 
     it('should render with default given value', () => {
