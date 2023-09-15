@@ -259,7 +259,6 @@ const publicationTypeListConferencePaper = {
             "rek_display_type_lookup": "Conference Paper",
             "rek_object_type_lookup": "Record",
             "rek_status_lookup": "Published",
-            "rek_herdc_notes": "Published bylines:<br />Horst F. Wedde1, Sebastian Lehnhoff1, Christian Rehtanz2 und Olav Krause2<br />Fakult&uml;at f&uml;ur Informatik1, <br />Fakult&uml;at f&uml;ur Elektrotechnik2<br />Technische Universit&uml;at Dortmund<br />",
             "fez_internal_notes": {
                 "ain_id": 26717,
                 "ain_pid": "UQ:228367",

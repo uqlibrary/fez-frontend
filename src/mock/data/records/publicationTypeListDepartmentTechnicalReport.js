@@ -276,7 +276,6 @@ const publicationTypeListDepartmentTechnicalReport = {
             "rek_display_type_lookup": "Department Technical Report",
             "rek_object_type_lookup": "Record",
             "rek_status_lookup": "Published",
-            "rek_herdc_notes": "Changed from Book to DTR as entered by author in dup. <br /><br />http://eprints.usq.edu.au/1585/<br />",
         },
     ]
 }
