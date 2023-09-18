@@ -557,6 +557,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, { ...journalsSearch.keywords.forCode }];
         } else if (config.url.indexOf('query=virus') > -1) {
             return [200, { ...journalsSearch.keywords.virus }];
+        } else if (config.url.indexOf('query=api-500-error') > -1) {
+            return [500, {}];
         }
         return [200, { ...journalsSearch.keywords.none }];
     })

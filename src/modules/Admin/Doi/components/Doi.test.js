@@ -16,6 +16,7 @@ import {
     UQ_FULL_NAME,
 } from 'config/general';
 import { rccDatasetCollection } from 'config/doi';
+import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 
 const confPaperRecord = {
     ...publicationTypeListConferencePaper.data[0],
@@ -47,18 +48,25 @@ jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ pid: mockRecord.rek_pid })),
 }));
 
-const setup = (testProps = {}, args = { isShallow: true }) => {
+const setup = (testProps = {}) => {
     const props = {
         record: mockRecord,
+        resetDoi: jest.fn(),
         ...testProps,
     };
 
-    return getElement(Doi, props, args);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <Doi {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 };
 
 describe('DOI component', () => {
     it('should render title with DOI', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...mockRecord,
                 fez_record_search_key_doi: {
@@ -66,25 +74,26 @@ describe('DOI component', () => {
                 },
             },
         });
-        expect(wrapper.find('[data-testid="doi-page-title"]').text()).toBe(
+
+        expect(getByTestId('doi-page-title')).toHaveTextContent(
             `Update DOI for ${mockRecord.rek_display_type_lookup} - ${mockRecord.rek_title}: ${mockRecord.rek_pid}`,
         );
     });
 
     it('should render title and enable submit button without DOI', () => {
-        const wrapper = setup({});
-        expect(wrapper.find('[data-testid="doi-page-title"]').text()).toBe(
+        const { getByTestId } = setup({});
+        expect(getByTestId('doi-page-title')).toHaveTextContent(
             `Create DOI for ${mockRecord.rek_display_type_lookup} - ${mockRecord.rek_title}: ${mockRecord.rek_pid}`,
         );
-        expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(false);
+        expect(getByTestId('rek-doi-submit')).not.toBeDisabled();
     });
 
     it('should show loading message when record is loading', () => {
-        const wrapper = setup({
+        const { getByText } = setup({
             loadingRecordToView: true,
             record: null,
         });
-        expect(wrapper.find('WithStyles(InlineLoader)').props().message).toBe('Loading work');
+        expect(getByText('Loading work')).toBeInTheDocument();
     });
 
     it('should show empty div and call loader if record is not found', () => {
@@ -100,13 +109,14 @@ describe('DOI component', () => {
 
         const testFn1 = jest.fn();
         const testFn2 = jest.fn();
-        const wrapper = setup({
+        const { container } = setup({
             record: {},
             loadRecordToView: testFn1,
             resetDoi: testFn2,
         });
-        expect(wrapper.find('div').props().className).toBe('empty');
+
         expect(testFn1).toHaveBeenCalledWith(mockRecord.rek_pid);
+        expect(container.querySelector('div.empty')).toBeInTheDocument();
 
         while (cleanupFns.length > 0) {
             cleanupFns.pop()();
@@ -117,32 +127,30 @@ describe('DOI component', () => {
     });
 
     it('should render error for unsupported subtype', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...confPaperRecord,
                 rek_subtype: 'Published abstract',
             },
         });
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe(
+        expect(getByTestId('alert')).toHaveTextContent(
             'Error:Sorry, only the following subytypes are supported for Conference Paper: Fully published paper',
         );
     });
 
     it('should render error for book chapter without a parent book', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...bookChapterRecord,
             },
         });
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe(
+        expect(getByTestId('alert')).toHaveTextContent(
             "Error:Sorry, this book chapter doesn't seem to belong to a existing book",
         );
     });
 
     it('should render error for book chapter with parent with missing nested relation', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...bookChapterRecord,
                 fez_record_search_key_isderivationof: [
@@ -155,14 +163,13 @@ describe('DOI component', () => {
                 ],
             },
         });
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe(
+        expect(getByTestId('alert')).toHaveTextContent(
             "Error:Sorry, this book chapter doesn't seem to belong to a existing book",
         );
     });
 
     it('should render error for book chapter with parent with missing UQ DOI and UQ Publisher', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...bookChapterRecord,
                 fez_record_search_key_isderivationof: [
@@ -179,15 +186,14 @@ describe('DOI component', () => {
                 ],
             },
         });
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe(
+        expect(getByTestId('alert')).toHaveTextContent(
             'Error:The parent Book does not appear to be have an UQ DOI' +
                 `The parent Book's Publisher should contain "${UQ_FULL_NAME}".`,
         );
     });
 
     it('should render error for book chapter with parent with missing UQ DOI and UQ Publisher', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...bookChapterRecord,
                 fez_record_search_key_isderivationof: [
@@ -204,8 +210,7 @@ describe('DOI component', () => {
                 ],
             },
         });
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe(
+        expect(getByTestId('alert')).toHaveTextContent(
             'Error:Sorry, only the following subytypes are supported for the parent Book: Edited book' +
                 'The parent Book does not appear to be have an UQ DOI' +
                 `The parent Book's Publisher should contain "${UQ_FULL_NAME}".`,
@@ -213,7 +218,7 @@ describe('DOI component', () => {
     });
 
     it('should render error for book chapter with parent with missing missing UQ DOI', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...bookChapterRecord,
                 fez_record_search_key_isderivationof: [
@@ -234,12 +239,11 @@ describe('DOI component', () => {
                 ],
             },
         });
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe('Error:The parent Book does not appear to be have an UQ DOI');
+        expect(getByTestId('alert')).toHaveTextContent('Error:The parent Book does not appear to be have an UQ DOI');
     });
 
     it('should render error for book chapter with parent with missing missing UQ Publisher', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...bookChapterRecord,
                 fez_record_search_key_isderivationof: [
@@ -260,14 +264,13 @@ describe('DOI component', () => {
                 ],
             },
         });
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe(
+        expect(getByTestId('alert')).toHaveTextContent(
             `Error:The parent Book's Publisher should contain "${UQ_FULL_NAME}".`,
         );
     });
 
     it('should render error for RCC datasets', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...mockRecord,
                 rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
@@ -279,20 +282,21 @@ describe('DOI component', () => {
                 ],
             },
         });
-
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe('Error:RCC Datasets are not allowed.');
+        expect(getByTestId('alert')).toHaveTextContent('Error:RCC Datasets are not allowed.');
     });
 
     it('should flag required field with no data', () => {
-        const testRecord = {
-            ...confPaperRecord,
-            fez_record_search_key_proceedings_title: {
-                rek_proceedings_title: '',
+        const { getByTestId } = setup({
+            record: {
+                ...confPaperRecord,
+                fez_record_search_key_proceedings_title: {
+                    rek_proceedings_title: '',
+                },
             },
-        };
-        const renderedError = shallow(getErrorMessage(testRecord).errorMessage);
-        expect(renderedError.text()).toBe('Error:Required field Proceedings title is either missing or invalid.');
+        });
+        expect(getByTestId('alert')).toHaveTextContent(
+            'Error:Required field Proceedings title is either missing or invalid.',
+        );
     });
 
     it('should flag required field with empty array', () => {
@@ -307,18 +311,21 @@ describe('DOI component', () => {
     });
 
     it('should render error for missing full name of UQ', () => {
-        const testRecord = {
-            ...mockRecord,
-            fez_record_search_key_publisher: {
-                rek_publisher: 'UQ',
+        const { getByTestId } = setup({
+            record: {
+                ...mockRecord,
+                fez_record_search_key_publisher: {
+                    rek_publisher: 'UQ',
+                },
             },
-        };
-        const renderedError = shallow(getErrorMessage(testRecord).errorMessage);
-        expect(renderedError.text()).toBe('Error:Publisher should contain "The University of Queensland".');
+        });
+        expect(getByTestId('alert')).toHaveTextContent(
+            'Error:Publisher should contain "The University of Queensland".',
+        );
     });
 
     it('should render warning for invalid preview field', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...mockRecord,
                 fez_record_search_key_edition: {
@@ -326,8 +333,7 @@ describe('DOI component', () => {
                 },
             },
         });
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe(
+        expect(getByTestId('alert')).toHaveTextContent(
             'Please note:Field Edition has an invalid value, e.g. 3rd or 3rd edn instead of 3; it will be omitted from submission.',
         );
     });
@@ -337,24 +343,24 @@ describe('DOI component', () => {
     });
 
     it('should render error for unsupported types', () => {
-        const wrapper1 = setup({
+        const { getByTestId } = setup({
             record: journalArticleRecord,
         });
-        const renderedError1 = shallow(wrapper1.find('Alert').props().message);
-        expect(renderedError1.text()).toBe('Error:Sorry, type Journal Article is not currently supported.');
+        expect(getByTestId('alert')).toHaveTextContent('Error:Sorry, type Journal Article is not currently supported.');
+    });
 
-        const wrapper2 = setup({
+    it('should render error for unsupported types', () => {
+        const { getByTestId } = setup({
             record: {
                 ...collectionRecord,
                 rek_display_type_lookup: null,
             },
         });
-        const renderedError2 = shallow(wrapper2.find('Alert').props().message);
-        expect(renderedError2.text()).toBe('Error:Sorry, type Collection is not currently supported.');
+        expect(getByTestId('alert')).toHaveTextContent('Error:Sorry, type Collection is not currently supported.');
     });
 
     it('should disable submit button for existing non-UQ DOI', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...confPaperRecord,
                 fez_record_search_key_doi: {
@@ -362,11 +368,11 @@ describe('DOI component', () => {
                 },
             },
         });
-        expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(true);
+        expect(getByTestId('rek-doi-submit')).toBeDisabled();
     });
 
     it('should enable submit button for existing UQ DOI', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             record: {
                 ...mockRecord,
                 fez_record_search_key_doi: {
@@ -374,7 +380,7 @@ describe('DOI component', () => {
                 },
             },
         });
-        expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(false);
+        expect(getByTestId('rek-doi-submit')).not.toBeDisabled();
     });
 
     it('should redirect to view page on form cancel', () => {
@@ -382,11 +388,8 @@ describe('DOI component', () => {
         delete window.location;
         window.location = { assign: jest.fn(), reload: jest.fn() };
 
-        const wrapper = setup({});
-        wrapper
-            .find('#rek-doi-cancel')
-            .props()
-            .onClick();
+        const { getByTestId } = setup({});
+        fireEvent.click(getByTestId('rek-doi-cancel'));
         expect(window.location.assign).toBeCalledWith(`http://localhost/view/${mockRecord.rek_pid}`);
 
         window.location = location;
@@ -397,84 +400,76 @@ describe('DOI component', () => {
         const record = {
             rek_pid: 'UQ:1234567',
             rek_display_type: 174,
+            fez_record_search_key_publisher: {
+                rek_publisher: 'The University of Queensland',
+            },
         };
-        const wrapper = setup({
+        const { getByTestId } = setup({
             handleSubmit: testFn,
             record,
         });
-        wrapper
-            .find('#rek-doi-submit')
-            .props()
-            .onClick();
+
+        fireEvent.click(getByTestId('rek-doi-submit'));
         expect(testFn).toHaveBeenCalledWith(record);
     });
 
     it('should show request progress dialogue for Crossref DOI', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             doiRequesting: true,
         });
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
-            `Upload to ${DOI_CROSSREF_NAME} is being queued.`,
-        );
+
+        expect(getByTestId('alert')).toHaveTextContent(`Upload to ${DOI_CROSSREF_NAME} is being queued.`);
     });
 
     it('should show request completed dialogue for Crossref DOI', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             doiUpdated: true,
         });
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
-            `Upload to ${DOI_CROSSREF_NAME} has been queued successfully.`,
-        );
+        expect(getByTestId('alert')).toHaveTextContent(`Upload to ${DOI_CROSSREF_NAME} has been queued successfully.`);
     });
 
     it('should contain a Crossref related confirmation message', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             doiUpdated: true,
         });
-        expect(wrapper.find('[testId="rek-doi-confirmation-box"]').props().locale.confirmationMessage).toEqual(
+        expect(getByTestId('message-content')).toHaveTextContent(
             `The request to create/update DOI has been submitted to ${DOI_CROSSREF_NAME}. You will receive an email indicating whether the DOI is successfully generated.`,
         );
     });
 
     it('should show request progress dialogue for DataCite DOI', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             doiRequesting: true,
             record: {
                 ...confPaperRecord,
                 rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
             },
         });
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
-            `Upload to ${DOI_DATACITE_NAME} is being submitted.`,
-        );
+        expect(getByTestId('alert')).toHaveTextContent(`Upload to ${DOI_DATACITE_NAME} is being submitted.`);
     });
 
     it('should show request completed dialogue for DataCite DOI', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             doiUpdated: true,
             record: {
                 ...confPaperRecord,
                 rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
             },
         });
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
+        expect(getByTestId('alert')).toHaveTextContent(
             `Upload to ${DOI_DATACITE_NAME} has been submitted successfully.`,
         );
     });
 
     it('should contain a DataCite related confirmation message', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             doiUpdated: true,
             record: {
                 ...confPaperRecord,
                 rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
             },
         });
-        expect(wrapper.find('[testId="rek-doi-confirmation-box"]').props().locale.confirmationMessage).toEqual(
+        expect(getByTestId('message-content')).toHaveTextContent(
             `The DOI has been created/updated in ${DOI_DATACITE_NAME}`,
         );
     });

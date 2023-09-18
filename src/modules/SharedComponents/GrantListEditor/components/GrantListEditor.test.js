@@ -1,6 +1,7 @@
 import React from 'react';
 import { GrantListEditor, styles } from './GrantListEditor';
 import Immutable from 'immutable';
+import { rtlRender, fireEvent, within } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -14,13 +15,13 @@ function setup(testProps = {}) {
         hideType: false,
         ...testProps,
     };
-    return getElement(GrantListEditor, props);
+    return rtlRender(<GrantListEditor {...props} />);
 }
 
 describe('GrantListEditor', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should have a proper style generator', () => {
@@ -28,7 +29,7 @@ describe('GrantListEditor', () => {
     });
 
     it('should render with default given value', () => {
-        const wrapper = setup({
+        const { container } = setup({
             input: {
                 name: 'TestField',
                 value: [
@@ -43,20 +44,20 @@ describe('GrantListEditor', () => {
                 form: {},
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render error from props', () => {
-        const wrapper = setup({
+        const { container } = setup({
             meta: {
                 error: <span>Some error</span>,
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render error from props as children', () => {
-        const wrapper = setup({
+        const { container } = setup({
             meta: {
                 error: (
                     <p>
@@ -66,34 +67,20 @@ describe('GrantListEditor', () => {
                 ),
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render string error from props', () => {
-        const wrapper = setup({
+        const { container } = setup({
             meta: {
                 error: 'Test error',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should update with error message', () => {
-        const wrapper = setup();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.setState({
-            errorMessage: 'Test error message from state',
-        });
-
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with default given value is Immutable List', () => {
-        const wrapper = setup({
+        const { container } = setup({
             input: {
                 name: 'TestField',
                 value: Immutable.List([
@@ -105,12 +92,12 @@ describe('GrantListEditor', () => {
                 ]),
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should update on receiving new props', () => {
         const onChangeFn = jest.fn();
-        const wrapper = setup({
+        let props = {
             input: {
                 name: 'TestField',
                 value: [
@@ -122,32 +109,40 @@ describe('GrantListEditor', () => {
                 ],
             },
             onChange: onChangeFn,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        };
+        const { container, rerender } = setup(props);
+        expect(container).toMatchSnapshot();
 
-        wrapper.setState({
-            grants: [
-                {
-                    grantAgencyName: 'Test',
-                    grantId: '123',
-                    grantAgencyType: 'Testing',
-                },
-            ],
-        });
+        props = {
+            classes: {},
+            input: {
+                name: 'TestField',
+                value: [
+                    {
+                        grantAgencyName: 'Test',
+                        grantId: '123',
+                        grantAgencyType: 'Testing',
+                    },
+                ],
+            },
+            onChange: onChangeFn,
+        };
+
+        rerender(<GrantListEditor {...props} />);
 
         expect(onChangeFn).toHaveBeenCalled();
     });
 
     it('should add grant to the list', () => {
-        const wrapper = setup();
-        wrapper.instance().addGrant({
-            grantAgencyName: 'Test',
-            grantId: '123',
-            grantAgencyType: 'Testing',
-        });
-        wrapper.update();
+        const { getByRole, container } = setup();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
+        fireEvent.change(getByRole('textbox', { name: 'Grant ID' }), { target: { value: '123' } });
+        fireEvent.mouseDown(getByRole('button', { name: 'Funder/Sponsor type' }));
+        fireEvent.click(getByRole('option', { name: 'Government' }));
+        fireEvent.click(getByRole('button', { name: 'Add grant' }));
+
+        expect(container).toMatchSnapshot();
     });
 
     it('should render scroll class if grants are more than 3', () => {
@@ -175,7 +170,7 @@ describe('GrantListEditor', () => {
             grantAgencyType: 'Testing 4',
         };
 
-        const wrapper = setup({
+        const { container } = setup({
             input: {
                 name: 'test',
                 value: [grant1, grant2, grant3, grant4],
@@ -184,7 +179,7 @@ describe('GrantListEditor', () => {
                 scroll: 'scroll-class',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should move the grant up', () => {
@@ -200,19 +195,21 @@ describe('GrantListEditor', () => {
             grantAgencyType: 'Testing 2',
         };
 
-        const wrapper = setup({
+        const { getByTestId, container } = setup({
             input: {
                 name: 'test',
                 value: [grant1, grant2],
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance().moveUpGrant(grant2, 1);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        let grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(grantList.length).toEqual(2);
+        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Move entry up the order' }));
+        grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Move entry up the order' }));
 
-        wrapper.instance().moveUpGrant(grant1, 1);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should not move the grant up at index 0', () => {
@@ -222,16 +219,18 @@ describe('GrantListEditor', () => {
             grantAgencyType: 'Testing 1',
         };
 
-        const wrapper = setup({
+        const { getByTestId, container } = setup({
             input: {
                 name: 'test',
                 value: [grant1],
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance().moveUpGrant(grant1, 0);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(grantList[0]).getByRole('button', { name: 'Move entry up the order' }));
+
+        expect(container).toMatchSnapshot();
     });
 
     it('should not move the grant up the disabled grant', () => {
@@ -248,16 +247,18 @@ describe('GrantListEditor', () => {
             grantAgencyType: 'Testing 2',
         };
 
-        const wrapper = setup({
+        const { getByTestId, container } = setup({
             input: {
                 name: 'test',
                 value: [grant1, grant2],
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance().moveUpGrant(grant2, 1);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Move entry up the order' }));
+
+        expect(container).toMatchSnapshot();
     });
 
     it('should move the grant down', () => {
@@ -273,19 +274,19 @@ describe('GrantListEditor', () => {
             grantAgencyType: 'Testing 2',
         };
 
-        const wrapper = setup({
+        const { getByTestId, container } = setup({
             input: {
                 name: 'test',
                 value: [grant1, grant2],
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance().moveDownGrant(grant1, 0);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(grantList[0]).getByRole('button', { name: 'Move entry down the order' }));
+        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Move entry down the order' }));
 
-        wrapper.instance().moveDownGrant(grant1, 1);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should delete grant', () => {
@@ -301,16 +302,19 @@ describe('GrantListEditor', () => {
             grantAgencyType: 'Testing 2',
         };
 
-        const wrapper = setup({
+        const { getByTestId, container } = setup({
             input: {
                 name: 'test',
                 value: [grant1, grant2],
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance().deleteGrant(grant1, 0);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(grantList[0]).getByRole('button', { name: 'Remove this entry' }));
+        fireEvent.click(getByTestId('confirm-dialog-box'));
+
+        expect(container).toMatchSnapshot();
     });
 
     it('should delete all grants', () => {
@@ -326,36 +330,16 @@ describe('GrantListEditor', () => {
             grantAgencyType: 'Testing 2',
         };
 
-        const wrapper = setup({
+        const { getByRole, getByTestId, container } = setup({
             input: {
                 name: 'test',
                 value: [grant1, grant2],
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance().deleteAllGrants();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('isFormPopulated() sets state correctly', () => {
-        const wrapper = setup({ onChange: jest.fn() });
-        wrapper.instance().isFormPopulated(true);
-        expect(wrapper.state()).toEqual({
-            errorMessage: '',
-            grantFormPopulated: true,
-            grants: [],
-            grantIndexSelectedToEdit: null,
-            grantSelectedToEdit: null,
-        });
-        wrapper.instance().isFormPopulated(false);
-        expect(wrapper.state()).toEqual({
-            errorMessage: '',
-            grantFormPopulated: false,
-            grants: [],
-            grantIndexSelectedToEdit: null,
-            grantSelectedToEdit: null,
-        });
+        expect(container).toMatchSnapshot();
+        fireEvent.click(getByRole('button', { name: 'Remove all entries' }));
+        fireEvent.click(getByTestId('confirm-dialog-box'));
+        expect(container).toMatchSnapshot();
     });
 
     it('should edit selected grant correctly', () => {
@@ -371,20 +355,20 @@ describe('GrantListEditor', () => {
             grantAgencyType: 'Testing 2',
         };
 
-        const wrapper = setup({
+        const { getByTestId, getByRole } = setup({
+            canEdit: true,
             input: {
                 name: 'test',
                 value: [grant1, grant2],
             },
         });
 
-        wrapper.instance().editGrant(grant2, 1);
+        let grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Edit this entry' }));
+        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { value: 'Agency 2' } });
+        fireEvent.click(getByRole('button', { name: 'Edit grant' }));
 
-        expect(wrapper.instance().state.grantSelectedToEdit).toEqual(grant2);
-        expect(wrapper.instance().state.grantIndexSelectedToEdit).toEqual(1);
-
-        wrapper.instance().addGrant({ ...grant2, grantAgencyName: 'Testing 2' });
-
-        expect(wrapper.instance().state.grants[1].grantAgencyName).toEqual('Testing 2');
+        grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(within(grantList[1]).getByText('Agency 2')).toBeInTheDocument();
     });
 });

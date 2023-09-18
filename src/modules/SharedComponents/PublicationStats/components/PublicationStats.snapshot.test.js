@@ -1,24 +1,26 @@
+import React from 'react';
 import { formattedData } from 'mock/data/testing/publicationStats';
 import { PublicationStats } from './PublicationStats';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         classes: {},
         ...testProps,
     };
-    return getElement(PublicationStats, props, args);
+    return rtlRender(<PublicationStats {...props} />);
 }
 
 describe('PublicationStats component', () => {
     it('should render statistics with table and data', () => {
-        const wrapper = setup({ publicationsStats: formattedData });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publicationsStats: formattedData });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render an empty component', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render 1 for hindex because they round up to 1', () => {
@@ -38,8 +40,8 @@ describe('PublicationStats component', () => {
                 years: '1992-2017',
             },
         };
-        const wrapper = setup({ publicationsStats: fakeData });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publicationsStats: fakeData });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render N/A for hindex because they equal zero', () => {
@@ -59,8 +61,8 @@ describe('PublicationStats component', () => {
                 years: '1992-2017',
             },
         };
-        const wrapper = setup({ publicationsStats: fakeData });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publicationsStats: fakeData });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render N/A for hindex because it is null', () => {
@@ -80,8 +82,8 @@ describe('PublicationStats component', () => {
                 years: '1992-2017',
             },
         };
-        const wrapper = setup({ publicationsStats: fakeData });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publicationsStats: fakeData });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render N/A for hindex because it is undefined', () => {
@@ -101,7 +103,7 @@ describe('PublicationStats component', () => {
                 years: '1992-2017',
             },
         };
-        const wrapper = setup({ publicationsStats: fakeData });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ publicationsStats: fakeData });
+        expect(container).toMatchSnapshot();
     });
 });

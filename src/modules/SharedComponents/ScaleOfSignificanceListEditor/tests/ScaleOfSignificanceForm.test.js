@@ -16,18 +16,18 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(ScaleOfSignificanceForm, props, args);
+    return renderComponent(ScaleOfSignificanceForm, props, args);
 }
 
 describe('ScaleOfSignificanceForm component', () => {
     it('should render the default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const renderer = setup({});
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render with id', () => {
-        const wrapper = setup({ locale: { id: '100' } });
-        expect(wrapper.find('RichEditorField').props().id).toBe('100');
+        const renderer = setup({ locale: { id: '100' } });
+        expect(renderer.getRenderOutput()).toMatchSnapshot();
     });
 });
 

@@ -1,13 +1,19 @@
+import React from 'react';
 import { DoiPreview } from './DoiPreview';
 import { PUBLICATION_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_RESEARCH_REPORT } from 'config/general';
+import { render, WithRouter, screen } from 'test-utils';
 
-const setup = (testProps = {}, args = { isShallow: true }) => {
+const setup = (testProps = {}) => {
     const props = {
         publication: {},
         ...testProps,
     };
 
-    return getElement(DoiPreview, props, args);
+    return render(
+        <WithRouter>
+            <DoiPreview {...props} />
+        </WithRouter>,
+    );
 };
 
 const testPublication = {
@@ -22,8 +28,8 @@ const testPublication = {
 
 describe('DoiPreview', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toBe('');
+        const { container } = setup({});
+        expect(container).toHaveTextContent('');
     });
 
     it('should render a field', () => {
@@ -42,15 +48,11 @@ describe('DoiPreview', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication });
-        expect(wrapper.find('DoiField[field="rek_title"]').props().data).toBe(publication.rek_title);
-        expect(wrapper.find('DoiField[field="rek_doi"]').props().label).toBe('DOI (Existing)');
-        expect(wrapper.find('DoiField[field="fez_record_search_key_author"]').props().data).toEqual([
-            {
-                aut_orcid_id: '10010101-101101',
-                rek_author: 'test',
-            },
-        ]);
+        const { getByTestId } = setup({ publication });
+        expect(getByTestId('rek-title')).toHaveTextContent(publication.rek_title);
+        expect(getByTestId('rek-doi-label')).toHaveTextContent('DOI (Existing)');
+        expect(getByTestId('rek-author-0')).toHaveTextContent('test');
+        expect(getByTestId('rek-author-0-orcid-link-link')).toHaveTextContent('10010101-101101');
     });
 
     it('should revert to default headings when displaytype-specific headings are not found', () => {
@@ -61,11 +63,51 @@ describe('DoiPreview', () => {
             rek_pid: 'UQ:1234567',
             fez_record_search_key_author: [],
         };
-        const wrapper = setup({ publication });
-        expect(wrapper.find('DoiField[field="rek_title"]').props().label).toBe('Title');
+        const { getByTestId } = setup({ publication });
+        expect(getByTestId('rek-title')).toHaveTextContent(publication.rek_title);
     });
 
-    it('should or should not display rek_parent_publication depending on whether start page is > 1', () => {
+    it('should display rek_parent_publication when start page is > 1', () => {
+        const publication = {
+            ...testPublication,
+            fez_record_search_key_author: [
+                {
+                    rek_author: 'test',
+                },
+            ],
+            fez_record_search_key_author_id: [],
+            fez_record_search_key_parent_publication: {
+                rek_parent_publication: 'Test publication',
+            },
+            fez_record_search_key_start_page: {
+                rek_start_page: '2',
+            },
+        };
+        const { queryByTestId } = setup({ publication });
+        expect(queryByTestId('rek-parent-publication')).toBeInTheDocument();
+    });
+
+    it('should not display rek_parent_publication when start page is 1st', () => {
+        const publication = {
+            ...testPublication,
+            fez_record_search_key_author: [
+                {
+                    rek_author: 'test',
+                },
+            ],
+            fez_record_search_key_author_id: [],
+            fez_record_search_key_parent_publication: {
+                rek_parent_publication: 'Test publication',
+            },
+            fez_record_search_key_start_page: {
+                rek_start_page: '1st',
+            },
+        };
+        const { queryByTestId } = setup({ publication });
+        expect(queryByTestId('rek-parent-publication')).not.toBeInTheDocument();
+    });
+
+    it('should not display rek_parent_publication when start page is 1', () => {
         const publication = {
             ...testPublication,
             fez_record_search_key_author: [
@@ -81,32 +123,12 @@ describe('DoiPreview', () => {
                 rek_start_page: '1',
             },
         };
-        const wrapper = setup({ publication });
-        expect(wrapper.find('DoiField[field="fez_record_search_key_parent_publication"]')).toEqual({});
-
-        const publication2 = {
-            ...publication,
-            fez_record_search_key_start_page: {
-                rek_start_page: '1st',
-            },
-        };
-        const wrapper2 = setup({ publication: publication2 });
-        expect(wrapper2.find('DoiField[field="fez_record_search_key_parent_publication"]')).toEqual({});
-
-        const publication3 = {
-            ...publication,
-            fez_record_search_key_start_page: {
-                rek_start_page: '2',
-            },
-        };
-        const wrapper3 = setup({ publication: publication3 });
-        expect(wrapper3.find('DoiField[field="fez_record_search_key_parent_publication"]').props().data).toBe(
-            publication3.fez_record_search_key_parent_publication,
-        );
+        const { queryByTestId } = setup({ publication });
+        expect(queryByTestId('rek-parent-publication')).not.toBeInTheDocument();
     });
 
-    it('should not display series field in a Research Report when issn is missing or invalid', () => {
-        const publication1 = {
+    it('should display series field in a Research Report when issn valid', () => {
+        const publication = {
             ...testPublication,
             fez_record_search_key_series: {
                 rek_series: 'something',
@@ -117,32 +139,40 @@ describe('DoiPreview', () => {
                 },
             ],
         };
-        const wrapper1 = setup({ publication: publication1 });
-        expect(wrapper1.find('DoiField[field="fez_record_search_key_series"]').props().data).toEqual({
-            rek_series: 'something',
-        });
+        const { getByTestId } = setup({ publication });
+        expect(getByTestId('rek-series')).toHaveTextContent('something');
+    });
 
-        const publication2 = {
-            ...publication1,
+    it('should not display series field in a Research Report when issn is missing', () => {
+        const publication = {
+            ...testPublication,
+            fez_record_search_key_series: {
+                rek_series: 'something',
+            },
             fez_record_search_key_issn: [],
         };
-        const wrapper2 = setup({ publication: publication2 });
-        expect(wrapper2.find('DoiField[field="fez_record_search_key_series"]')).toEqual({});
+        const { queryByTestId } = setup({ publication });
+        expect(queryByTestId('rek-series')).not.toBeInTheDocument();
+    });
 
-        const publication3 = {
-            ...publication1,
+    it('should not display series field in a Research Report when issn is invalid', () => {
+        const publication = {
+            ...testPublication,
+            fez_record_search_key_series: {
+                rek_series: 'something',
+            },
             fez_record_search_key_issn: [
                 {
                     rek_issn: 'blah',
                 },
             ],
         };
-        const wrapper3 = setup({ publication: publication3 });
-        expect(wrapper3.find('DoiField[field="fez_record_search_key_series"]')).toEqual({});
+        const { queryByTestId } = setup({ publication });
+        expect(queryByTestId('rek-series')).not.toBeInTheDocument();
     });
 
-    it('should not display issn field in a Research Report when rek_series is missing or empty', () => {
-        const publication1 = {
+    it('should display issn field in a Research Report when rek_series exists', () => {
+        const publication = {
             ...testPublication,
             fez_record_search_key_series: {
                 rek_series: 'something',
@@ -153,25 +183,35 @@ describe('DoiPreview', () => {
                 },
             ],
         };
-        const wrapper1 = setup({ publication: publication1 });
-        expect(wrapper1.find('DoiField[field="fez_record_search_key_issn"]').props().data).toEqual([
-            {
-                rek_issn: '1010-1011',
-            },
-        ]);
+        const { queryByTestId } = setup({ publication });
+        expect(queryByTestId('rek-issn')).toHaveTextContent('1010-1011');
+    });
 
-        const publication2 = {
-            ...publication1,
+    it('should not display issn field in a Research Report when rek_series is empty', () => {
+        const publication = {
+            ...testPublication,
             fez_record_search_key_series: null,
+            fez_record_search_key_issn: [
+                {
+                    rek_issn: '1010-1011',
+                },
+            ],
         };
-        const wrapper2 = setup({ publication: publication2 });
-        expect(wrapper2.find('DoiField[field="fez_record_search_key_issn"]')).toEqual({});
+        const { queryByTestId } = setup({ publication });
+        expect(queryByTestId('rek-issn')).not.toBeInTheDocument();
+    });
 
-        const publication3 = {
-            ...publication1,
+    it('should not display issn field in a Research Report when rek_series is empty', () => {
+        const publication = {
+            ...testPublication,
             fez_record_search_key_series: '',
+            fez_record_search_key_issn: [
+                {
+                    rek_issn: '1010-1011',
+                },
+            ],
         };
-        const wrapper3 = setup({ publication: publication3 });
-        expect(wrapper3.find('DoiField[field="fez_record_search_key_issn"]')).toEqual({});
+        const { queryByTestId } = setup({ publication });
+        expect(queryByTestId('rek-issn')).not.toBeInTheDocument();
     });
 });

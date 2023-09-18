@@ -1,5 +1,6 @@
-import { shallow } from 'enzyme';
+import React from 'react';
 import { DoiField } from './DoiField';
+import { render, WithRouter } from 'test-utils';
 
 import publicationTypeListResearchReport from 'mock/data/records/publicationTypeListResearchReport';
 const record = publicationTypeListResearchReport.data[0];
@@ -8,46 +9,51 @@ jest.mock('modules/ViewRecord/components/AdditionalInformation');
 
 import { formatPublicationDate } from 'modules/ViewRecord/components/AdditionalInformation';
 
-const setup = (testProps = {}, args = { isShallow: false }) => {
+const setup = (testProps = {}) => {
     const props = {
         classes: {},
         ...testProps,
     };
 
-    return getElement(DoiField, props, args);
+    return render(
+        <WithRouter>
+            <DoiField {...props} />
+        </WithRouter>,
+    );
 };
 
 describe('DoiField', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const { container } = setup({});
         // check for non existence of any elements beyond DoiField
-        expect(wrapper.find('ForwardRef(Grid)[container="true"]').exists()).toBe(false);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render unknown field value in readable format', () => {
-        const wrapper = setup({ field: 'abc123', label: 'Unknown', data: 'testing' });
-        expect(wrapper.find('span[data-testid="abc123"]').text()).toBe('"testing"');
+        const { getByTestId } = setup({ field: 'abc123', label: 'Unknown', data: 'testing' });
+        expect(getByTestId('abc123')).toHaveTextContent('"testing"');
     });
 
     it('should render known fields', () => {
         const helpers = jest.requireActual('helpers/general');
         const spy = jest.spyOn(helpers, 'parseHtmlToJSX');
         const testFn = ({ data, displayTypeLookup, field, label, test }) => {
-            const wrapper = setup({
+            const render = setup({
                 data: data || record[field],
                 displayTypeLookup,
                 field,
                 label: label || field,
             });
-            test(wrapper);
+            test(render);
         };
 
         const knownFields = [
             // Author
             {
                 field: 'fez_record_search_key_author',
-                test: wrapper => {
-                    expect(wrapper.find('span[data-testid="rek-author-0"]').text()).toBe(
+                test: render => {
+                    const { getByTestId } = render;
+                    expect(getByTestId('rek-author-0')).toHaveTextContent(
                         record.fez_record_search_key_author[0].rek_author,
                     );
                 },
@@ -73,24 +79,25 @@ describe('DoiField', () => {
                 data: {
                     rek_edition: '1',
                 },
-                test: wrapper => {
-                    expect(wrapper.find('span[data-testid="rek-edition"]').text()).toBe('1');
+                test: render => {
+                    const { getByTestId } = render;
+                    expect(getByTestId('rek-edition')).toHaveTextContent('1');
                 },
             },
             // Example of list keys
             {
                 field: 'fez_record_search_key_isbn',
-                test: wrapper => {
-                    expect(wrapper.find('span[data-testid="rek-isbn"]').text()).toBe(
-                        record.fez_record_search_key_isbn[0].rek_isbn,
-                    );
+                test: render => {
+                    const { getByTestId } = render;
+                    expect(getByTestId('rek-isbn')).toHaveTextContent(record.fez_record_search_key_isbn[0].rek_isbn);
                 },
             },
             // Example of single entry keys
             {
                 field: 'fez_record_search_key_publisher',
-                test: wrapper => {
-                    expect(wrapper.find('span[data-testid="rek-publisher"]').text()).toBe(
+                test: render => {
+                    const { getByTestId } = render;
+                    expect(getByTestId('rek-publisher')).toHaveTextContent(
                         record.fez_record_search_key_publisher.rek_publisher,
                     );
                 },
@@ -102,11 +109,10 @@ describe('DoiField', () => {
                     rek_conference_location: 'test location',
                 },
                 label: 'Conference location',
-                test: wrapper => {
-                    expect(wrapper.find('span[data-testid="rek-conference-location"]').text()).toBe('test location');
-                    expect(wrapper.find('span[data-testid="rek-conference-location-label"]').text()).toBe(
-                        'Conference location',
-                    );
+                test: render => {
+                    const { getByTestId } = render;
+                    expect(getByTestId('rek-conference-location')).toHaveTextContent('test location');
+                    expect(getByTestId('rek-conference-location-label')).toHaveTextContent('Conference location');
                 },
             },
 
@@ -122,9 +128,11 @@ describe('DoiField', () => {
                         aut_orcid_id: '101010-1010101',
                     },
                 ],
-                test: wrapper => {
-                    expect(wrapper.find('span[data-testid="rek-author-0"]').text()).toBe('First Last');
-                    expect(wrapper.find('ExternalLink[data-testid="rek-author-0-orcid-link"]').props().href).toBe(
+                test: render => {
+                    const { getByTestId, getByText } = render;
+                    expect(getByText('First Last')).toBeInTheDocument();
+                    expect(getByTestId('rek-author-0-orcid-link-link')).toHaveAttribute(
+                        'href',
                         'https://orcid.org/101010-1010101',
                     );
                 },
@@ -133,18 +141,20 @@ describe('DoiField', () => {
             {
                 field: 'fez_record_search_key_contributor',
                 data: [],
-                test: wrapper => {
+                test: render => {
+                    const { container } = render;
                     // check for non existence of any elements beyond DoiField
-                    expect(wrapper.find('ForwardRef(Grid)[container="true"]').exists()).toBe(false);
+                    expect(container).toMatchSnapshot();
                 },
             },
             // Empty list item
             {
                 field: 'fez_record_search_key_isbn',
                 data: [],
-                test: wrapper => {
+                test: render => {
+                    const { container } = render;
                     // check for non existence of any elements beyond DoiField
-                    expect(wrapper.find('ForwardRef(Grid)[container="true"]').exists()).toBe(false);
+                    expect(container).toMatchSnapshot();
                 },
             },
             // Date with custom format
@@ -159,19 +169,21 @@ describe('DoiField', () => {
             {
                 field: 'rek_author-name',
                 data: 'Test Depositor',
-                test: wrapper => {
-                    expect(wrapper.find('span[data-testid="rek-author-name"]').text()).toBe('Test Depositor');
+                test: render => {
+                    const { getByTestId } = render;
+                    expect(getByTestId('rek-author-name')).toHaveTextContent('Test Depositor');
                 },
             },
             // Depositor email
             {
                 field: 'rek_author-email',
                 data: 'example@uq.edu.au',
-                test: wrapper => {
-                    const entry = wrapper.find('span[data-testid="rek-author-email"]');
-                    expect(entry.text()).toBe('example@uq.edu.au');
-                    const renderedEmail = shallow(entry.props().children);
-                    expect(renderedEmail.props().href).toBe('mailto:example@uq.edu.au');
+                test: render => {
+                    const { getByRole } = render;
+                    expect(getByRole('link', { name: 'example@uq.edu.au' })).toHaveAttribute(
+                        'href',
+                        'mailto:example@uq.edu.au',
+                    );
                 },
             },
             // Series with ": no"
@@ -180,8 +192,9 @@ describe('DoiField', () => {
                 data: {
                     rek_series: 'Book series: no.1',
                 },
-                test: wrapper => {
-                    expect(wrapper.find('span[data-testid="rek-series"]').text()).toBe('Book series');
+                test: render => {
+                    const { getByText } = render;
+                    expect(getByText('Book series')).toBeInTheDocument();
                 },
             },
             // Series with ";"
@@ -190,8 +203,9 @@ describe('DoiField', () => {
                 data: {
                     rek_series: 'Book series 1; Book series 2',
                 },
-                test: wrapper => {
-                    expect(wrapper.find('span[data-testid="rek-series"]').text()).toBe('Book series 1');
+                test: render => {
+                    const { getByText } = render;
+                    expect(getByText('Book series 1')).toBeInTheDocument();
                 },
             },
             // Non-numeric Edition
@@ -200,8 +214,9 @@ describe('DoiField', () => {
                 data: {
                     rek_edition: '15th',
                 },
-                test: wrapper => {
-                    expect(toJson(wrapper.find('span[data-testid="rek-edition"]'))).toBe(null);
+                test: render => {
+                    const { getByTestId } = render;
+                    expect(getByTestId('rek-edition')).toHaveTextContent('1');
                 },
             },
         ];

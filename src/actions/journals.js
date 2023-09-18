@@ -9,15 +9,30 @@ import {
     MASTER_JOURNAL_LIST_INGEST_API,
 } from 'repositories/routes';
 import { promptForDownload } from './exportPublicationsDataTransformers';
+import { store } from '../config/store';
+import { dismissAppAlert } from './app';
+import { lastRequest, api } from '../config/axios';
 
-const replaceAmpersand = value => value.replaceAll(' & ', ' and ');
+// The below could potentially be applied on a broader scope
+// However, judging on how dismissAppAlert is used across the app,
+// it's hard to predict if that would suit all scenarios
+api.interceptors.response.use(response => {
+    try {
+        if (lastRequest.url?.includes?.('journals/search')) {
+            // dismiss error alert raised for previous error responses
+            store.dispatch(dismissAppAlert());
+        }
+    } finally {
+        return response;
+    }
+});
 
 export const loadJournalLookup = searchText => dispatch => {
     dispatch({ type: actions.JOURNAL_LOOKUP_LOADING, payload: searchText });
     return (
         searchText &&
         searchText.trim().length > 0 &&
-        get(JOURNAL_LOOKUP_API({ query: replaceAmpersand(searchText) })).then(
+        get(JOURNAL_LOOKUP_API({ query: searchText })).then(
             response => {
                 dispatch({
                     type: actions.JOURNAL_LOOKUP_LOADED,
@@ -83,7 +98,7 @@ export const loadJournal = id => dispatch => {
 export const loadJournalSearchKeywords = searchQuery => async dispatch => {
     dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADING });
     try {
-        const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: replaceAmpersand(searchQuery) }));
+        const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: searchQuery }));
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADED, payload: keywordsResponse.data, query: searchQuery });
     } catch (e) {
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_FAILED, payload: e });

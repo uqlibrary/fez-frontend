@@ -1,5 +1,6 @@
-import { PublicationListLoadingProgressClass } from './PublicationListLoadingProgress';
+import React from 'react';
 import PublicationListLoadingProgress from './PublicationListLoadingProgress';
+import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -9,7 +10,7 @@ function setup(testProps = {}) {
         mobile: testProps.mobile || false,
         ...testProps,
     };
-    return getElement(PublicationListLoadingProgressClass, props);
+    return rtlRender(<PublicationListLoadingProgress {...props} />);
 }
 
 describe('Search Dashboard test', () => {
@@ -29,8 +30,8 @@ describe('Search Dashboard test', () => {
             },
         };
 
-        const wrapper = setup(loadingPublicationSources);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(loadingPublicationSources);
+        expect(container).toMatchSnapshot();
     });
 
     it('Render the search dashboard with random data, one still loading)', () => {
@@ -49,8 +50,8 @@ describe('Search Dashboard test', () => {
             },
         };
 
-        const wrapper = setup(loadingPublicationSources);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(loadingPublicationSources);
+        expect(container).toMatchSnapshot();
     });
 
     it('Render the search dashboard with random data, all still loading)', () => {
@@ -69,27 +70,7 @@ describe('Search Dashboard test', () => {
             },
         };
 
-        const wrapper = setup(loadingPublicationSources);
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('Full render', () => {
-        const loadingPublicationSources = {
-            loadingPublicationSources: {
-                crossref: false,
-                crossrefCount: 0,
-                pubmed: false,
-                pubmedCount: 12,
-                scopus: false,
-                scopusCount: 4,
-                totalSearchedCount: 0,
-                totalSourcesCount: 4,
-                wos: false,
-                wosCount: 5,
-            },
-        };
-
-        const wrapper = getElement(PublicationListLoadingProgress, loadingPublicationSources, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(loadingPublicationSources);
+        expect(container).toMatchSnapshot();
     });
 });

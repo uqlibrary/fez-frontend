@@ -1,4 +1,6 @@
+import React from 'react';
 import PublicationsListSorting from './PublicationsListSorting';
+import { rtlRender } from 'test-utils';
 
 jest.mock('locale', () => ({
     locale: {
@@ -20,12 +22,12 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(PublicationsListSorting, props);
+    return rtlRender(<PublicationsListSorting {...props} />);
 }
 
 describe('PublicationsListSorting', () => {
     it('should create component with missing locale', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 });

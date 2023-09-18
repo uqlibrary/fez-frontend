@@ -25,7 +25,6 @@ let ThesisSubmissionContainer = reduxForm({
 })(ThesisSubmission);
 
 const mapStateToProps = (state, props) => {
-    console.log('map state to props');
     //  Get any initial values set during redux store initialisation
     const initialValuesSetInRedux = (!!state.get('form') && (state.get('form').toJS()[FORM_NAME] || {}).values) || {};
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;

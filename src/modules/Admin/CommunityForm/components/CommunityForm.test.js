@@ -1,6 +1,24 @@
 import CommunityForm from './CommunityForm';
 import Immutable from 'immutable';
-import { default as formLocale } from 'locale/publicationForm';
+import React from 'react';
+import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+            />
+        );
+    },
+}));
 
 function setup(testProps) {
     const props = {
@@ -45,46 +63,47 @@ function setup(testProps) {
         ...testProps,
     };
 
-    return getElement(CommunityForm, props);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <CommunityForm {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('Community form', () => {
     it('should render form', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(4);
-        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
+        expect(container.getElementsByTagName('field').length).toEqual(4);
+        expect(container.getElementsByTagName('button').length).toEqual(2);
     });
 
     it('should not disable submit button if form submit has failed', () => {
-        const wrapper = setup({ submitFailed: true });
-        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
-        wrapper.find('ForwardRef(Button)').forEach(field => {
-            if (field.props().label === formLocale.thesisSubmission.submit) {
-                expect(field.props().disabled).toEqual(false);
-            }
-        });
+        const { container, getByRole } = setup({ submitFailed: true });
+        expect(container.getElementsByTagName('button').length).toEqual(2);
+        expect(getByRole('button', { name: 'Add community' })).toBeEnabled();
     });
 
     it('should ask when redirecting from form with data (even if submit failed)', () => {
-        const wrapper = setup({ dirty: true, submitSucceeded: false });
-        expect(wrapper.find('NavigationDialogBox').length).toEqual(1);
+        const render = renderComponent(CommunityForm, { dirty: true, submitSucceeded: false });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should not ask when redirecting from form with data after successful submit', () => {
-        const wrapper = setup({ dirty: true, submitSucceeded: true });
-        expect(wrapper.find('NavigationDialogBox').length).toEqual(1);
+        const render = renderComponent(CommunityForm, { dirty: true, submitSucceeded: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should display successfull submission screen', () => {
-        const wrapper = setup({});
-        wrapper.setProps({ submitSucceeded: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ submitSucceeded: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render success panel', () => {
-        const wrapper = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
+        expect(container).toMatchSnapshot();
     });
 });
 
@@ -101,23 +120,20 @@ describe('Collection form redirections', () => {
     });
 
     it('should redirect to cancel page', () => {
-        setup({})
-            .instance()
-            .cancelSubmit();
+        const { getByTestId } = setup({});
+        fireEvent.click(getByTestId('cancel-community'));
         expect(window.location.assign).toBeCalledWith('/');
     });
 
     it('should redirect to after submit page', () => {
-        setup({})
-            .instance()
-            .afterSubmit();
+        const { getByRole } = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
+        fireEvent.click(getByRole('button', { name: 'Return to the homepage' }));
         expect(window.location.assign).toBeCalledWith('/');
     });
 
     it('should reload the page', () => {
-        setup({})
-            .instance()
-            .reloadForm();
+        const { getByRole } = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
+        fireEvent.click(getByRole('button', { name: 'Add another community' }));
         expect(window.location.reload).toBeCalled();
     });
 });

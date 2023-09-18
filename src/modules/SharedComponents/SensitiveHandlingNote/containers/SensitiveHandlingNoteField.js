@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { SENSITIVE_HANDLING_NOTE_OTHER_TYPE, SENSITIVE_HANDLING_NOTE_TYPE } from '../../../../config/general';
-import { selectFields } from '../../../../locale/selectFields';
+import { SENSITIVE_HANDLING_NOTE_OTHER_TYPE, SENSITIVE_HANDLING_NOTE_TYPE } from 'config/general';
+import { selectFields } from 'locale/selectFields';
 import { Field } from 'redux-form/immutable';
 import { useFormValuesContext } from 'context';
 import { validation } from 'config';

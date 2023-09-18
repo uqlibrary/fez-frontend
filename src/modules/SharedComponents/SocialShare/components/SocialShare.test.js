@@ -1,26 +1,28 @@
+import React from 'react';
 import { SocialShare } from './SocialShare';
 import { journalArticle } from 'mock/data/testing/records';
+import { rtlRender, fireEvent } from 'test-utils';
 
-function setup(testProps, isShallow = true, requiresStore = false, context = {}) {
+function setup(testProps) {
     const props = {
         publication: journalArticle,
         services: ['email', 'print'],
         ...testProps,
     };
-    return getElement(SocialShare, props, isShallow, requiresStore, context);
+    return rtlRender(<SocialShare {...props} />);
 }
 
 describe('Component SocialShare', () => {
     it('should render component', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should fire print method on click', () => {
         global.print = jest.fn();
-        const wrapper = setup({});
-        wrapper.find('ExternalLink#print').simulate('click');
+        const { container, getByTestId } = setup({});
+        fireEvent.click(getByTestId('print-link'));
         expect(global.print).toHaveBeenCalled();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });
