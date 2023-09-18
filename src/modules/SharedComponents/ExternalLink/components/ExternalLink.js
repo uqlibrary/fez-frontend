@@ -6,7 +6,7 @@ import { locale } from 'locale';
 import OpenInNew from '@mui/icons-material/OpenInNew';
 
 const StyledLink = styled('a', {
-    shouldForwardProp: prop => prop !== 'inline',
+    shouldForwardProp: prop => prop !== 'inline' && prop !== 'sx',
 })(({ inline }) => ({
     ...(!inline && {
         overflow: 'hidden',
@@ -16,7 +16,7 @@ const StyledLink = styled('a', {
         wordBreak: 'break-all',
         display: 'inline-block',
     }),
-    maxWidth: '100% !important',
+    maxWidth: '100%',
     minWidth: 0,
     verticalAlign: 'bottom',
     cursor: 'pointer',
@@ -33,10 +33,12 @@ const internalClasses = {
 };
 
 const ExternalLink = ({ children, className = '', height, openInNewIcon = true, width, inline = false, ...rest }) => {
-    console.warn(
-        'ExternalLink is no longer using "className" - use "sx" instead! Only pass an sx object with styles!',
-        className,
-    );
+    if (!!!rest.sx && !!className) {
+        console.warn(
+            'ExternalLink is no longer using "className" - use "sx" instead! Only pass an sx object with styles!',
+            className,
+        );
+    }
     const openInSizedWindow = (link, width, height) => () =>
         window.open(
             link,
@@ -56,12 +58,10 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
         rest.target ||= '_blank';
     }
 
+    console.log(rest.sx);
     return (
         <StyledLink
-            {...{
-                ...rest,
-                id: `${rest.id}-link`,
-            }}
+            id={`${rest.id}-link`}
             data-analyticsid={`${rest.id}-link`}
             data-testid={`${rest.id}-link`}
             tabIndex={0}
@@ -71,6 +71,7 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
                 undefined
             }
             inline={inline}
+            {...rest}
         >
             {!!inline ? (
                 <>

@@ -4,13 +4,13 @@ import CitationView from './CitationView';
 import { locale } from 'locale';
 import { pathConfig } from 'config/pathConfig';
 import { Link } from 'react-router-dom';
-import withStyles from '@mui/styles/withStyles';
+import withTheme from '@mui/styles/withTheme';
 
-export const styles = theme => ({
-    authorIdLink: {
+const classes = {
+    authorIdLink: theme => ({
         color: theme.palette.success.main,
-    },
-});
+    }),
+};
 
 export class AuthorsCitationView extends PureComponent {
     static propTypes = {
@@ -23,9 +23,9 @@ export class AuthorsCitationView extends PureComponent {
         separator: PropTypes.string,
         showLink: PropTypes.bool,
         getLink: PropTypes.func,
-        classes: PropTypes.object,
         maxAuthorDisplayNumber: PropTypes.number,
         citationStyle: PropTypes.string,
+        theme: PropTypes.any,
     };
 
     static defaultProps = {
@@ -92,7 +92,16 @@ export class AuthorsCitationView extends PureComponent {
         return id;
     };
 
-    renderAuthors = (authors, separator, showLink, getLink, maxAuthorDisplayNumber, citationStyle, authorsTotal) => {
+    renderAuthors = (
+        theme,
+        authors,
+        separator,
+        showLink,
+        getLink,
+        maxAuthorDisplayNumber,
+        citationStyle,
+        authorsTotal,
+    ) => {
         let authorsList = authors;
         if (citationStyle === 'header' || citationStyle === 'list') {
             authorsList = authorsList.slice(0, maxAuthorDisplayNumber);
@@ -142,9 +151,14 @@ export class AuthorsCitationView extends PureComponent {
 
             if (showLink) {
                 const href = getLink(author.value, author.id);
-                const className = author.id ? this.props.classes.authorIdLink : 'authorNameLink';
                 element = (
-                    <Link className={className} to={href} key={key} data-testid={`${testId}-${index}-link`}>
+                    <Link
+                        style={{ ...(!!author.id ? classes.authorIdLink(theme) : {}) }}
+                        className={!!!author.id && 'authorNameLink'}
+                        to={href}
+                        key={key}
+                        data-testid={`${testId}-${index}-link`}
+                    >
                         {element}
                     </Link>
                 );
@@ -163,7 +177,7 @@ export class AuthorsCitationView extends PureComponent {
         const maxAuthorDisplayNumber = !!this.props.maxAuthorDisplayNumber
             ? this.props.maxAuthorDisplayNumber
             : locale.components.publicationCitation.citationAuthors.maxAuthorDisplayNumber;
-        const { className, prefix, suffix, separator, showLink, getLink, citationStyle } = this.props;
+        const { theme, className, prefix, suffix, separator, showLink, getLink, citationStyle } = this.props;
         const { authors, authorsTotal } = this.state;
 
         if (authors.length === 0) return <span className={`${className || ''} empty`} />;
@@ -172,6 +186,7 @@ export class AuthorsCitationView extends PureComponent {
             <span className={className || ''}>
                 {prefix}
                 {this.renderAuthors(
+                    theme,
                     authors,
                     separator,
                     showLink,
@@ -186,4 +201,4 @@ export class AuthorsCitationView extends PureComponent {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(AuthorsCitationView);
+export default withTheme(AuthorsCitationView);

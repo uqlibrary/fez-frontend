@@ -1,10 +1,19 @@
 import React from 'react';
-
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 
 import { default as defaultConfig } from 'config/imageGalleryConfig';
 import { getThumbnail, getUrl } from './Utils';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+const StyledLazyLoadImage = styled(LazyLoadImage, {
+    shouldForwardProp: prop => prop !== 'classes',
+})(({ classes }) => ({
+    objectFit: 'cover',
+    boxSizing: 'border-box',
+    display: 'block',
+    ...classes,
+}));
 
 const ImageGalleryItemImage = ({
     item,
@@ -59,11 +68,11 @@ const ImageGalleryItemImage = ({
             : {};
 
     return (
-        <LazyLoadImage
+        <StyledLazyLoadImage
             id={`imageGalleryItemImage-${item.rek_pid}`}
             data-testid={`imageGalleryItemImage-${item.rek_pid}`}
             src={imgSrc || filename}
-            style={{ objectFit: 'cover', boxSizing: 'border-box', display: 'block', ...className }}
+            classes={className}
             className={'image-gallery-item-image'}
             {...errorHandler}
             {...rest}
