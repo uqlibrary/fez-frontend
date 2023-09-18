@@ -1,43 +1,43 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import { locale } from 'locale';
-import withStyles from '@mui/styles/withStyles';
 
-const styles = theme => ({
-    header: {
-        padding: '18px 24px 12px 24px',
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.common.white,
-        '& p': {
-            [theme.breakpoints.up('sm')]: {
-                fontSize: '1.1rem',
-                fontWeight: theme.typography.fontWeightRegular,
-            },
+const StyledGridHeader = styled(Grid)(({ theme }) => ({
+    padding: '18px 24px 12px 24px',
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
+    '& p': {
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '1.1rem',
+            fontWeight: theme.typography.fontWeightRegular,
         },
-        borderRadius: '4px 4px 0px 0px',
     },
+    borderRadius: '4px 4px 0px 0px',
+}));
+
+const classes = {
     data: {
-        padding: '24px',
+        padding: 3,
     },
-});
+};
 
 export class PublicationStats extends Component {
     static propTypes = {
         publicationsStats: PropTypes.object,
-        classes: PropTypes.object,
     };
     render() {
-        const { classes } = this.props;
         const txt = locale.components.publicationStats;
         const pubStats = this.props.publicationsStats;
         if (!pubStats) return <span className="publicationsStats empty" />;
         return (
             <React.Fragment>
                 {/* Header */}
-                <Grid container className={classes.header}>
+                <StyledGridHeader container>
                     <Grid item xs={6}>
                         <Typography variant={'body2'} color={'inherit'} gutterBottom>
                             {txt.publicationStatsTitle1}
@@ -53,11 +53,11 @@ export class PublicationStats extends Component {
                             {txt.publicationStatsTitle3}
                         </Typography>
                     </Grid>
-                </Grid>
+                </StyledGridHeader>
                 {/* Header */}
 
                 {/* Total pubs */}
-                <Grid container spacing={2} className={classes.data}>
+                <Grid container spacing={2} sx={{ ...classes.data }}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle4}</Typography>
                     </Grid>
@@ -72,7 +72,7 @@ export class PublicationStats extends Component {
                 {/* Total pubs */}
 
                 {/* Range */}
-                <Grid container spacing={2} className={classes.data}>
+                <Grid container spacing={2} sx={{ ...classes.data }}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle5}</Typography>
                     </Grid>
@@ -87,7 +87,7 @@ export class PublicationStats extends Component {
                 {/* Range */}
 
                 {/* hindex */}
-                <Grid container spacing={2} className={classes.data}>
+                <Grid container spacing={2} sx={{ ...classes.data }}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle1}</Typography>
                     </Grid>
@@ -116,7 +116,7 @@ export class PublicationStats extends Component {
                 {/* hindex */}
 
                 {/* Average */}
-                <Grid container spacing={2} className={classes.data}>
+                <Grid container spacing={2} sx={{ ...classes.data }}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle2}</Typography>
                     </Grid>
@@ -135,7 +135,7 @@ export class PublicationStats extends Component {
                 {/* Average */}
 
                 {/* Total citations */}
-                <Grid container spacing={2} className={classes.data}>
+                <Grid container spacing={2} sx={{ ...classes.data }}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle3}</Typography>
                     </Grid>
@@ -152,4 +152,4 @@ export class PublicationStats extends Component {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(PublicationStats);
+export default PublicationStats;

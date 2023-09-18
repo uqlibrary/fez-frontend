@@ -14,32 +14,8 @@ import DocumentTypeMultipleField from './Fields/DocumentTypeMultipleField';
 import { default as PublicationYearRangeField } from './Fields/PublicationYearRangeField';
 import DateRangeField from './Fields/DateRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
-import makeStyles from '@mui/styles/makeStyles';
-import * as validationRules from 'config/validation';
 
-export const useStyles = makeStyles(
-    theme => ({
-        sideBar: {
-            [theme.breakpoints.up('md')]: {
-                paddingLeft: 32,
-                marginTop: -16,
-            },
-        },
-        searchButton: {
-            [theme.breakpoints.up('sm')]: {
-                paddingLeft: 32,
-            },
-        },
-        blueButton: {
-            backgroundColor: theme.palette.accent.main,
-            color: theme.palette.white.main,
-            '&:hover': {
-                backgroundColor: theme.palette.accent.dark,
-            },
-        },
-    }),
-    { withTheme: true },
-);
+import * as validationRules from 'config/validation';
 
 export const AdvancedSearchComponent = ({
     fieldRows,
@@ -63,7 +39,6 @@ export const AdvancedSearchComponent = ({
     onAdvancedSearchRowChange,
     onSearch,
 }) => {
-    const classes = useStyles();
     const haveAllAdvancedSearchFieldsValidated = fieldRows => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
         return (
@@ -177,7 +152,7 @@ export const AdvancedSearchComponent = ({
                                         />
                                     ))}
                             </Grid>
-                            <Grid item xs={12} md={4} className={classes.sideBar}>
+                            <Grid item xs={12} md={4} sx={{ paddingLeft: { md: 4 }, marginTop: { md: '-16px' } }}>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12}>
                                         <DocumentTypeMultipleField
@@ -249,7 +224,13 @@ export const AdvancedSearchComponent = ({
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'contained'}
-                                    classes={{ root: classes.blueButton }}
+                                    sx={{
+                                        backgroundColor: 'accent.main',
+                                        color: 'white.main',
+                                        '&:hover': {
+                                            backgroundColor: 'accent.dark',
+                                        },
+                                    }}
                                     children={txt.advancedSearch.addField.title}
                                     aria-label={txt.advancedSearch.addField.aria}
                                     disabled={!canAddAnotherField}
@@ -290,7 +271,7 @@ export const AdvancedSearchComponent = ({
                                 sx={{ display: { xs: 'none', md: 'block' } }}
                             />
 
-                            <Grid item xs={12} md={4} className={classes.searchButton}>
+                            <Grid item xs={12} md={4} sx={{ paddingLeft: { sm: 4 } }}>
                                 <Button
                                     variant={'contained'}
                                     children={txt.searchButtonText}

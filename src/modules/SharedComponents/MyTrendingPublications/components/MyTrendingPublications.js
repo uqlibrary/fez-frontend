@@ -7,20 +7,6 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
-
-const styles = {
-    pubCounts: {
-        '& .citationMetrics': {
-            '& .count': {
-                fontSize: '1.75rem',
-            },
-            '& .difference': {
-                fontSize: '1rem',
-            },
-        },
-    },
-};
 
 export class MyTrendingPublications extends PureComponent {
     static propTypes = {
@@ -28,7 +14,6 @@ export class MyTrendingPublications extends PureComponent {
         loadingTrendingPublications: PropTypes.bool,
         actions: PropTypes.object,
         accountAuthorDetailsLoading: PropTypes.bool,
-        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -72,7 +57,20 @@ export class MyTrendingPublications extends PureComponent {
                                 <Grid item>
                                     <HelpIcon {...locale.components.trendingPublicationHelp} />
                                 </Grid>
-                                <Grid item xs={12} className={this.props.classes.pubCounts}>
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sx={{
+                                        '& .citationMetrics': {
+                                            '& .count': {
+                                                fontSize: '1.75rem',
+                                            },
+                                            '& .difference': {
+                                                fontSize: '1rem',
+                                            },
+                                        },
+                                    }}
+                                >
                                     <PublicationsList publicationsList={values} showMetrics />
                                 </Grid>
                             </Grid>
@@ -84,4 +82,4 @@ export class MyTrendingPublications extends PureComponent {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(MyTrendingPublications);
+export default MyTrendingPublications;

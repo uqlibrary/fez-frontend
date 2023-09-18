@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
@@ -10,38 +12,14 @@ import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 import Close from '@mui/icons-material/Close';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import makeStyles from '@mui/styles/makeStyles';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 
-const useStyles = makeStyles(
-    theme => ({
-        autoWidth: {
-            flexGrow: 1,
-            width: 1,
-        },
-        advancedSearchRowDeleteButton: {
-            margin: -6,
-            opacity: 0.33,
-            '&:hover': {
-                opacity: 1,
-            },
-        },
-        advancedSearchCombiner: {
-            marginTop: 6,
-        },
-        mobileRowSpacer: {
-            margin: '12px -18px',
-        },
-        mobileInputRow: {
-            [theme.breakpoints.down('md')]: {
-                marginTop: -18,
-            },
-        },
-    }),
-    { withTheme: true },
-);
-
+const StyledGridMobileInput = styled(Grid)(({ theme }) => ({
+    [theme.breakpoints.down('md')]: {
+        marginTop: '-18px',
+    },
+}));
 export const AdvancedSearchField = ({ InputComponent, inputProps, value, disabled }) => (
     <InputComponent
         name={`search-field-${inputProps.id}`}
@@ -71,7 +49,6 @@ export const AdvancedSearchRow = props => {
         onSearchRowChange,
         onSearchRowDelete,
     } = props;
-    const classes = useStyles();
 
     const _handleTextChange = (value, label = '') => {
         onSearchRowChange(rowIndex, { searchField: searchField, value, label });
@@ -103,7 +80,7 @@ export const AdvancedSearchRow = props => {
                 <Grid item xs={12} md={6}>
                     {/* Select and combiner */}
                     <Grid container spacing={2}>
-                        <Grid item className={classes.autoWidth} style={{ minWidth: 200 }}>
+                        <Grid item sx={{ flexGrow: 1, width: '1px', minWidth: 200 }}>
                             <FormControl
                                 variant="standard"
                                 fullWidth
@@ -166,16 +143,14 @@ export const AdvancedSearchRow = props => {
                             </FormControl>
                         </Grid>
                         <Grid item xs={'auto'}>
-                            <Typography className={classes.advancedSearchCombiner}>
-                                {txt.fieldTypes[searchField].combiner}
-                            </Typography>
+                            <Typography mt={'6px'}>{txt.fieldTypes[searchField].combiner}</Typography>
                         </Grid>
                     </Grid>
                     {/* Select and combiner */}
                 </Grid>
-                <Grid item xs={12} md={6} className={classes.mobileInputRow}>
+                <StyledGridMobileInput item xs={12} md={6}>
                     <Grid container spacing={2}>
-                        <Grid item className={classes.autoWidth} zeroMinWidth>
+                        <Grid item sx={{ flexGrow: 1, width: 1 }} zeroMinWidth>
                             <AdvancedSearchRowInput
                                 {...props}
                                 onChange={_handleTextChange}
@@ -186,7 +161,16 @@ export const AdvancedSearchRow = props => {
                             />
                         </Grid>
                         {rowIndex !== 0 && (
-                            <Grid item className={classes.advancedSearchRowDeleteButton}>
+                            <Grid
+                                item
+                                sx={{
+                                    margin: '-6px',
+                                    opacity: 0.33,
+                                    '&:hover': {
+                                        opacity: 1,
+                                    },
+                                }}
+                            >
                                 <IconButton
                                     style={{ float: 'right' }}
                                     aria-label={txt.deleteAria}
@@ -202,10 +186,10 @@ export const AdvancedSearchRow = props => {
                             </Grid>
                         )}
                         <Grid item xs={12} sx={{ display: { xs: 'block', md: 'none' } }}>
-                            <Divider className={classes.mobileRowSpacer} />
+                            <Divider sx={{ margin: '12px -18px' }} />
                         </Grid>
                     </Grid>
-                </Grid>
+                </StyledGridMobileInput>
             </Grid>
         </React.Fragment>
     );
