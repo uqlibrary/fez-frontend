@@ -17,7 +17,9 @@ module.exports = (on, config) => {
     // `on` is used to hook into various events Cypress emits
     // `config` is the resolved Cypress config
     // initPlugin(on, config);
+
+    // per https://github.com/cypress-io/code-coverage#instrument-unit-tests
     require('@cypress/code-coverage/task')(on, config);
-    on('file:preprocessor', require('@cypress/code-coverage/use-browserify-istanbul'));
+    on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'));
     return config;
 };
