@@ -3,9 +3,9 @@
 # with roughly equal numbers of files in each group, and writes the file
 # paths for each group to separate text files (bin/group1.txt and bin/group2.txt).
 # The script assumes that the test spec files are located in the
-# cypress/integration directory and its subdirectories.
+# cypress/e2e directory and its subdirectories.
 
-spec_files=$(find cypress/integration -name '*.spec.js')
+spec_files=$(find cypress/e2e -name '*.spec.js')
 num_specs=$(echo "$spec_files" | wc -l)
 group_size=$((num_specs / 2))
 group1=$(echo "$spec_files" | head -n $group_size)
