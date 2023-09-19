@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from '@mui/styles/withStyles';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -9,7 +8,6 @@ export class CopyrightAgreement extends PureComponent {
     static propTypes = {
         isCopyrightAgreementAccepted: PropTypes.bool,
         onChange: PropTypes.func,
-        classes: PropTypes.object,
         copyrightAgreement: PropTypes.node,
         disabled: PropTypes.bool,
         copyrightAgreementFieldId: PropTypes.string.isRequired,
@@ -20,13 +18,11 @@ export class CopyrightAgreement extends PureComponent {
     };
 
     render() {
-        const { isCopyrightAgreementAccepted, classes, copyrightAgreement, disabled } = this.props;
+        const { isCopyrightAgreementAccepted, copyrightAgreement, disabled } = this.props;
 
         return (
             <FormControlLabel
-                classes={{
-                    root: classes.root,
-                }}
+                sx={{ alignItems: 'flex-start', margin: 0 }}
                 disabled={disabled}
                 control={
                     <Checkbox
@@ -37,14 +33,15 @@ export class CopyrightAgreement extends PureComponent {
                         }}
                         checked={isCopyrightAgreementAccepted}
                         onChange={this._handleChange}
-                        classes={{ root: classes.checkboxRoot, checked: classes.checkboxChecked }}
+                        sx={{ color: 'status.danger', '&.Mui-checked': { color: 'primary.main' } }}
                     />
                 }
                 label={
                     <Typography
-                        classes={{
-                            root: classes.label,
-                        }}
+                        textAlign={'justify'}
+                        fontSize={16}
+                        fontWeight={300}
+                        lineHeight={'24px'}
                         color={!isCopyrightAgreementAccepted ? 'error' : 'secondary'}
                         component="div"
                         id={`${this.props.copyrightAgreementFieldId}-label`}
@@ -58,23 +55,4 @@ export class CopyrightAgreement extends PureComponent {
     }
 }
 
-export const styles = theme => ({
-    root: {
-        alignItems: 'flex-start',
-        margin: 0,
-    },
-    label: {
-        textAlign: 'justify',
-        fontSize: 16,
-        fontWeight: 300,
-        lineHeight: '24px',
-    },
-    checkboxRoot: {
-        color: (theme.status || {}).danger || '',
-    },
-    checkboxChecked: {
-        color: (!!theme.palette && `${theme.palette.primary.main} !important`) || '',
-    },
-});
-
-export default withStyles(styles, { withTheme: true })(CopyrightAgreement);
+export default CopyrightAgreement;

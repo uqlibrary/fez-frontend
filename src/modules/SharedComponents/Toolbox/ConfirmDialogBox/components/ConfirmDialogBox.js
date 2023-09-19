@@ -6,23 +6,11 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
-import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Grid';
-
-export const styles = theme => ({
-    alternateActionButtonClass: {
-        color: ((theme.palette || {}).white || {}).main,
-        backgroundColor: ((theme.palette || {}).warning || {}).main,
-        '&:hover': {
-            backgroundColor: ((theme.palette || {}).warning || {}).dark,
-        },
-    },
-});
 
 export class ConfirmDialogBox extends Component {
     static propTypes = {
         className: PropTypes.string,
-        classes: PropTypes.object,
         confirmDialogBoxId: PropTypes.string,
         hideCancelButton: PropTypes.bool,
         locale: PropTypes.object,
@@ -94,7 +82,6 @@ export class ConfirmDialogBox extends Component {
     }
 
     render() {
-        const { classes } = this.props;
         return (
             <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
                 <DialogTitle data-testid="message-title">{this.props.locale.confirmationTitle}</DialogTitle>
@@ -125,7 +112,13 @@ export class ConfirmDialogBox extends Component {
                                     variant={'contained'}
                                     data-analyticsid={`alternate-${this.props.confirmDialogBoxId}`}
                                     data-testid={`alternate-${this.props.confirmDialogBoxId}`}
-                                    className={classes.alternateActionButtonClass}
+                                    sx={{
+                                        color: 'white.main',
+                                        backgroundColor: 'warning.main',
+                                        '&:hover': {
+                                            backgroundColor: 'warning.dark',
+                                        },
+                                    }}
                                     children={this.props.locale.alternateActionButtonLabel}
                                     fullWidth
                                     onClick={this._onAlternateAction}
@@ -152,4 +145,4 @@ export class ConfirmDialogBox extends Component {
     }
 }
 
-export default withStyles(styles)(ConfirmDialogBox);
+export default ConfirmDialogBox;

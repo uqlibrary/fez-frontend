@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
+import useTheme from '@mui/styles/useTheme';
 
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
@@ -47,6 +48,7 @@ const FileName = ({
     tooltip,
     disabled,
 }) => {
+    const theme = useTheme();
     const isAudio = mimeType => {
         return mimeType.indexOf('audio') >= 0;
     };
@@ -99,17 +101,21 @@ const FileName = ({
                     locale={txt.licenceConfirmation(downloadLicence)}
                 />
                 {allowDownload && !downloadLicence && !canShowPreview(mimeType) && (
-                    <StyledWithBody2
-                        as={ExternalLink}
+                    <ExternalLink
                         href={downloadUrl}
                         title={fileName}
-                        sx={{ ...classes.filenameParent }}
+                        sx={{
+                            ...theme.typography.body2,
+                            cursor: 'pointer',
+                            placeSelf: 'center',
+                            ...classes.filenameParent,
+                        }}
                         openInNewIcon
                         data-testid={getDownloadLinkTestId(id)}
                         id={getDownloadLinkTestId(id)}
                     >
                         {fileName}
-                    </StyledWithBody2>
+                    </ExternalLink>
                 )}
                 {allowDownload && !downloadLicence && canShowPreview(mimeType) && (
                     <Typography variant="body2" sx={{ ...classes.filenameParent }}>

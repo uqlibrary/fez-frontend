@@ -53,7 +53,7 @@ export default class PublicationYearRangeField extends PureComponent {
                     </Grid>
                 </Grid>
                 <Grid container>
-                    <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
+                    <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
                         <TextField
                             variant="standard"
                             fullWidth
@@ -74,7 +74,7 @@ export default class PublicationYearRangeField extends PureComponent {
                     <Grid item xs={'auto'}>
                         <TextField
                             variant="standard"
-                            style={{ width: 24 }}
+                            sx={{ width: '24px' }}
                             value={' to '}
                             disabled
                             InputProps={{
@@ -83,7 +83,7 @@ export default class PublicationYearRangeField extends PureComponent {
                             }}
                         />
                     </Grid>
-                    <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
+                    <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
                         <TextField
                             variant="standard"
                             fullWidth

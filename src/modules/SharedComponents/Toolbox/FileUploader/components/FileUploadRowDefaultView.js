@@ -7,10 +7,10 @@ import FileUploadRowStatus from './FileUploadRowStatus';
 import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, FILE_SECURITY_POLICY_PUBLIC } from '../config';
 import { selectFields } from 'locale/selectFields';
 
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Input from '@mui/material/Input';
-import withStyles from '@mui/styles/withStyles';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import IconButton from '@mui/material/IconButton';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -30,7 +30,6 @@ export class FileUploadRowDefaultView extends PureComponent {
         requireOpenAccessStatus: PropTypes.bool.isRequired,
         disabled: PropTypes.bool,
         locale: PropTypes.object,
-        classes: PropTypes.object,
         onDelete: PropTypes.func.isRequired,
         onEmbargoDateChange: PropTypes.func.isRequired,
         onFileDescriptionChange: PropTypes.func.isRequired,
@@ -62,23 +61,27 @@ export class FileUploadRowDefaultView extends PureComponent {
             securityPolicy,
             name,
             size,
-            classes,
             focusOnIndex,
         } = this.props;
         return (
-            <div
-                style={{ flexGrow: 1, padding: 4 }}
+            <Box
+                style={{}}
                 data-testid={this.props.fileUploadRowViewId}
-                className={classes.row}
+                sx={{
+                    flexGrow: 1,
+                    padding: '4px',
+                    borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+                    marginBottom: '12px',
+                }}
             >
                 <Grid container direction="row" alignItems="center" spacing={1} wrap={'nowrap'}>
-                    <Grid item xs={1} className={classes.upDownArrowContainer}>
+                    <Grid item xs={1} sx={{ padding: '0 0 0 10px !important', height: '30px' }}>
                         <IconButton
                             disabled={index === 0}
                             id={`new-file-upload-down-${index}`}
                             data-analyticsid={`new-file-upload-up-${index}`}
                             data-testid={`new-file-upload-up-${index}`}
-                            className={classes.upDownArrow}
+                            sx={{ height: '30px', padding: 0 }}
                             onClick={this.props.onOrderUpClick}
                         >
                             <ExpandLessIcon />
@@ -94,7 +97,6 @@ export class FileUploadRowDefaultView extends PureComponent {
                     <Grid item sm={3} md={3}>
                         <TextField
                             fullWidth
-                            className={classes.input}
                             onChange={this.props.onFileDescriptionChange}
                             name="fileDescription"
                             placeholder={'Description'}
@@ -116,21 +118,19 @@ export class FileUploadRowDefaultView extends PureComponent {
                                 disabled={disabled}
                                 displayPrompt
                                 autoFocus={index === focusOnIndex}
-                                {...{
-                                    input: {
-                                        className: classes.selector,
-                                        disableUnderline: true,
-                                        autoFocus: index === focusOnIndex,
-                                        onChange: this.props.onSecurityPolicyChange,
-                                        onBlur: /* istanbul ignore next */ () => {},
-                                    },
-                                    value: securityPolicy ?? '',
+                                input={{
+                                    sx: { maxWidth: 200, fontSize: '14px' },
+                                    disableUnderline: true,
+                                    autoFocus: index === focusOnIndex,
+                                    onChange: this.props.onSecurityPolicyChange,
+                                    onBlur: /* istanbul ignore next */ () => {},
                                 }}
+                                value={securityPolicy ?? ''}
                                 errorText={!securityPolicy && selectFields.securityPolicy.errorMessage}
                                 prompt={selectFields.securityPolicy.selectPrompt}
                                 policyDropdownId={`dsi-security-policy-${index}`}
                                 formHelperTextProps={{
-                                    className: classes.error,
+                                    sx: { marginTop: 0, fontSize: '10px' },
                                 }}
                             />
                         </Grid>
@@ -149,19 +149,21 @@ export class FileUploadRowDefaultView extends PureComponent {
                                 hideLabel
                                 required
                                 selectProps={{
-                                    className: classes.selector,
+                                    sx: { maxWidth: 200, fontSize: '14px' },
                                     input: (
                                         <Input
                                             disableUnderline
                                             autoFocus={index === focusOnIndex}
-                                            classes={{
-                                                root: !!accessConditionId ? classes.selected : classes.placeholder,
+                                            sx={{
+                                                ...(!!accessConditionId
+                                                    ? { fontWeight: 400 }
+                                                    : { color: 'rgba(0, 0, 0, 0.5)' }),
                                             }}
                                         />
                                     ),
                                 }}
                                 formHelperTextProps={{
-                                    className: classes.error,
+                                    sx: { marginTop: 0, fontSize: '10px' },
                                 }}
                                 error={!accessConditionId && selectFields.accessCondition.errorMessage}
                                 selectPrompt={selectFields.accessCondition.selectPrompt}
@@ -188,7 +190,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                             )}
                         </Grid>
                     )}
-                    <Grid item xs={1} className={classes.icon}>
+                    <Grid item xs={1} sx={{ textAlign: 'center' }}>
                         <FileUploadRowStatus
                             disabled={disabled}
                             onDelete={this.props.onDelete}
@@ -198,62 +200,22 @@ export class FileUploadRowDefaultView extends PureComponent {
                     </Grid>
                 </Grid>
                 <Grid container direction="row" alignItems="center" spacing={1} wrap={'nowrap'}>
-                    <Grid item xs={1} className={classes.upDownArrowContainerBottom}>
+                    <Grid item xs={1} sx={{ padding: '0 0 0 10px!important', height: '30px', margin: '0 0 10px' }}>
                         <IconButton
                             id={`new-file-upload-down-${index}`}
                             data-analyticsid={`new-file-upload-down-${index}`}
                             data-testid={`new-file-upload-down-${index}`}
                             disabled={index === rowCount - 1}
-                            className={classes.upDownArrow}
+                            sx={{ height: '30px', padding: 0 }}
                             onClick={this.props.onOrderDownClick}
                         >
                             <ExpandMoreIcon />
                         </IconButton>
                     </Grid>
                 </Grid>
-            </div>
+            </Box>
         );
     }
 }
 
-const styles = () => ({
-    icon: {
-        textAlign: 'center',
-    },
-    row: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
-        marginBottom: '12px',
-    },
-    selector: {
-        maxWidth: 200,
-        fontSize: 14,
-    },
-    securitySelector: {
-        fontSize: 14,
-    },
-    placeholder: {
-        color: 'rgba(0, 0, 0, 0.5)',
-    },
-    selected: {
-        fontWeight: 400,
-    },
-    error: {
-        marginTop: 0,
-        fontSize: 10,
-    },
-    upDownArrowContainer: {
-        padding: '0 0 0 10px !important',
-        height: 30,
-    },
-    upDownArrow: {
-        height: 30,
-        padding: 0,
-    },
-    upDownArrowContainerBottom: {
-        padding: '0 0 0 10px!important',
-        height: 30,
-        margin: '0 0 10px',
-    },
-});
-
-export default withStyles(styles)(FileUploadRowDefaultView);
+export default FileUploadRowDefaultView;

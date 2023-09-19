@@ -10,18 +10,9 @@ import ClearIcon from '@mui/icons-material/Clear';
 import EditIcon from '@mui/icons-material/Edit';
 import CheckIcon from '@mui/icons-material/Check';
 import ReplayIcon from '@mui/icons-material/Replay';
-import makeStyles from '@mui/styles/makeStyles';
 
 import FileName from './FileName';
 import { FileNameProps } from './FileName';
-
-const useStyles = makeStyles(() => ({
-    labelTruncated: {
-        overflow: 'hidden',
-        whiteSpace: 'nowrap',
-        textOverflow: 'ellipsis',
-    },
-}));
 
 export const getFilenamePart = filename => filename.split('.').shift();
 export const getFilenameExtension = filename => filename.split('.').pop();
@@ -36,7 +27,6 @@ const EditableFileName = ({
     checkFileNamesForDupes,
     ...props
 }) => {
-    const classes = useStyles();
     const [isEditing, setIsEditing] = useState(false);
     const [isValid, setIsValid] = useState(true);
     const [isEdited, setIsEdited] = useState(false);
@@ -128,7 +118,9 @@ const EditableFileName = ({
                                 data-testid={`${props.id}-edited`}
                                 variant="body2"
                                 color="textPrimary"
-                                className={classes.labelTruncated}
+                                overflow={'hidden'}
+                                whiteSpace={'nowrap'}
+                                textOverflow={'ellipsis'}
                             >
                                 {editedFilenameRef.current}
                             </Typography>

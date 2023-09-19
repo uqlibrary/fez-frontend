@@ -3,21 +3,11 @@ import PropTypes from 'prop-types';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import InputLabel from '@mui/material/InputLabel';
-import makeStyles from '@mui/styles/makeStyles';
 
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { GENERIC_DATE_FORMAT } from 'config/general';
-
-const useStyles = makeStyles(
-    theme => ({
-        title: {
-            ...theme.typography.caption,
-        },
-    }),
-    { withTheme: true },
-);
 
 export const DateRangeField = ({
     id,
@@ -35,7 +25,6 @@ export const DateRangeField = ({
     const [fromError, setFromError] = useState(undefined);
     const [toError, setToError] = useState(undefined);
     const [allGood, setAllGood] = useState(false);
-    const classes = useStyles();
 
     useEffect(() => {
         if (!!from && !from.isValid()) {
@@ -71,13 +60,13 @@ export const DateRangeField = ({
         <React.Fragment>
             <Grid container>
                 <Grid item xs={12}>
-                    <InputLabel shrink className={classes.title}>
+                    <InputLabel shrink sx={theme => ({ ...theme.typography.caption })}>
                         {locale.title}
                     </InputLabel>
                 </Grid>
             </Grid>
             <Grid container>
-                <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
+                <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <DatePicker
                             value={from}
@@ -102,13 +91,13 @@ export const DateRangeField = ({
                 <Grid item xs="auto">
                     <TextField
                         variant="standard"
-                        style={{ width: 24 }}
+                        sx={{ width: '24px' }}
                         value=" to "
                         disabled
                         InputProps={{ disableUnderline: true }}
                     />
                 </Grid>
-                <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
+                <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <DatePicker
                             value={to}

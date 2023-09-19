@@ -69,7 +69,7 @@ const StyledGridWithIcon = styled(Grid, {
     },
 
     color: theme.palette.white.main,
-    backgroundColor: theme.palette[paletteIndex[type]].main,
+    backgroundColor: type !== 'done' ? theme.palette[paletteIndex[type]].main : theme.palette[paletteIndex[type]].light,
 
     '& .spinner, & .icon, & button.dismiss': {
         color: theme.palette[paletteIndex[type]].dark,
@@ -153,6 +153,7 @@ export const Alert = ({
     type,
     wiggle,
 }) => {
+    console.log(type);
     const renderedIcon = type !== 'custom' ? renderIcon(type) : customIcon;
     return (
         <div data-testid="alert" style={{ marginTop: '5px' }}>
