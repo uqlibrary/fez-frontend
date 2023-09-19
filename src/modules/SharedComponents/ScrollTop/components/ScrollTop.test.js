@@ -1,42 +1,44 @@
+import React from 'react';
 import { ScrollTop as ScrollTopClass } from './ScrollTop';
 import ScrollTop from './ScrollTop';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps, isShallow = false, requiresStore = false, context = {}) {
+function setup(testProps) {
     const props = {
         classes: {},
         ...testProps,
     };
-    return getElement(ScrollTopClass, props, isShallow, requiresStore, context);
+    return rtlRender(<ScrollTopClass {...props} />);
 }
 
 describe('Component ScrollTop', () => {
     it('should render component', () => {
-        const wrapper = setup({ show: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ show: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should not render component', () => {
-        const wrapper = setup({ show: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ show: false });
+        expect(container).toMatchSnapshot();
     });
 });
 
-function setupFull(testProps, isShallow = false, requiresStore = false, context = {}) {
+function setupFull(testProps) {
     const props = {
         classes: {},
         ...testProps,
     };
-    return getElement(ScrollTop, props, isShallow, requiresStore, context);
+    return rtlRender(<ScrollTop {...props} />);
 }
 
 describe('Component ScrollTop', () => {
     it('should render component', () => {
-        const wrapper = setupFull({ show: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setupFull({ show: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should not render component', () => {
-        const wrapper = setupFull({ show: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setupFull({ show: false });
+        expect(container).toMatchSnapshot();
     });
 });
