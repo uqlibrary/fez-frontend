@@ -481,49 +481,543 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                     style="margin-top: 24px;"
                   >
-                    <span>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
-                      >
-                        <span>
-                          Creator research statement*. Include Background, Contribution and Significance
-                          <span
-                            style="font-weight: 700;"
-                          >
-                             (not for public view)
-                          </span>
-                        </span>
-                        <span>
-                           *
-                        </span>
-                      </p>
-                      <span
-                        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      >
-                        Remember to include substantiation of your major or minor scale/significance claim above.
-                      </span>
-                    </span>
                     <div
-                      class=""
                       data-analyticsid="rek-creator-contribution-statement"
                       data-testid="rek-creator-contribution-statement"
                       id="rek-creator-contribution-statement"
-                    />
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      style="display: inline-block;"
                     >
-                      This field is required
                       <span>
-                         - 
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
+                        >
+                          <span>
+                            Creator research statement*. Include Background, Contribution and Significance
+                            <span
+                              style="font-weight: 700;"
+                            >
+                               (not for public view)
+                            </span>
+                          </span>
+                          <span>
+                             *
+                          </span>
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+                        >
+                          Remember to include substantiation of your major or minor scale/significance claim above.
+                        </span>
                       </span>
-                    </span>
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      style="display: inline-block;"
-                    >
-                      0 characters of 2000
-                    </span>
+                      <div
+                        style="display: none;"
+                      />
+                      <div
+                        aria-labelledby="ck-editor__label_ed022298fa745bb2d139b542b5de45828"
+                        class="ck ck-reset ck-editor ck-rounded-corners"
+                        dir="ltr"
+                        lang="en"
+                        role="application"
+                      >
+                        <label
+                          class="ck ck-label ck-voice-label"
+                          id="ck-editor__label_ed022298fa745bb2d139b542b5de45828"
+                        >
+                          Rich Text Editor
+                        </label>
+                        <div
+                          class="ck ck-editor__top ck-reset_all"
+                          role="presentation"
+                        >
+                          <div
+                            class="ck ck-sticky-panel"
+                          >
+                            <div
+                              class="ck ck-sticky-panel__placeholder"
+                              style="display: none;"
+                            />
+                            <div
+                              class="ck ck-sticky-panel__content"
+                            >
+                              <div
+                                aria-label="Editor toolbar"
+                                class="ck ck-toolbar ck-toolbar_grouping"
+                                role="toolbar"
+                                style="max-width: auto;"
+                              >
+                                <div
+                                  class="ck ck-toolbar__items"
+                                >
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e44b1c9a9b2df665eb0f497af0e20faf6"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M10.187 17H5.773c-.637 0-1.092-.138-1.364-.415-.273-.277-.409-.718-.409-1.323V4.738c0-.617.14-1.062.419-1.332.279-.27.73-.406 1.354-.406h4.68c.69 0 1.288.041 1.793.124.506.083.96.242 1.36.478.341.197.644.447.906.75a3.262 3.262 0 0 1 .808 2.162c0 1.401-.722 2.426-2.167 3.075C15.05 10.175 16 11.315 16 13.01a3.756 3.756 0 0 1-2.296 3.504 6.1 6.1 0 0 1-1.517.377c-.571.073-1.238.11-2 .11zm-.217-6.217H7v4.087h3.069c1.977 0 2.965-.69 2.965-2.072 0-.707-.256-1.22-.768-1.537-.512-.319-1.277-.478-2.296-.478zM7 5.13v3.619h2.606c.729 0 1.292-.067 1.69-.2a1.6 1.6 0 0 0 .91-.765c.165-.267.247-.566.247-.897 0-.707-.26-1.176-.778-1.409-.519-.232-1.31-.348-2.375-.348H7z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Bold (CTRL+B)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e44b1c9a9b2df665eb0f497af0e20faf6"
+                                    >
+                                      Bold
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e4f26ed4c146a7bd90ba57810226f4058"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M9.586 14.633l.021.004c-.036.335.095.655.393.962.082.083.173.15.274.201h1.474a.6.6 0 1 1 0 1.2H5.304a.6.6 0 0 1 0-1.2h1.15c.474-.07.809-.182 1.005-.334.157-.122.291-.32.404-.597l2.416-9.55a1.053 1.053 0 0 0-.281-.823 1.12 1.12 0 0 0-.442-.296H8.15a.6.6 0 0 1 0-1.2h6.443a.6.6 0 1 1 0 1.2h-1.195c-.376.056-.65.155-.823.296-.215.175-.423.439-.623.79l-2.366 9.347z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Italic (CTRL+I)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e4f26ed4c146a7bd90ba57810226f4058"
+                                    >
+                                      Italic
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_ef20dae2683a97f4dc92d1b8fd43a44a8"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M3 18v-1.5h14V18zm2.2-8V3.6c0-.4.4-.6.8-.6.3 0 .7.2.7.6v6.2c0 2 1.3 2.8 3.2 2.8 1.9 0 3.4-.9 3.4-2.9V3.6c0-.3.4-.5.8-.5.3 0 .7.2.7.5V10c0 2.7-2.2 4-4.9 4-2.6 0-4.7-1.2-4.7-4z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Underline (CTRL+U)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_ef20dae2683a97f4dc92d1b8fd43a44a8"
+                                    >
+                                      Underline
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e5c57a275a3b92f1feba7842d8064e872"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M7 16.4c-.8-.4-1.5-.9-2.2-1.5a.6.6 0 0 1-.2-.5l.3-.6h1c1 1.2 2.1 1.7 3.7 1.7 1 0 1.8-.3 2.3-.6.6-.4.6-1.2.6-1.3.2-1.2-.9-2.1-.9-2.1h2.1c.3.7.4 1.2.4 1.7v.8l-.6 1.2c-.6.8-1.1 1-1.6 1.2a6 6 0 0 1-2.4.6c-1 0-1.8-.3-2.5-.6zM6.8 9L6 8.3c-.4-.5-.5-.8-.5-1.6 0-.7.1-1.3.5-1.8.4-.6 1-1 1.6-1.3a6.3 6.3 0 0 1 4.7 0 4 4 0 0 1 1.7 1l.3.7c0 .1.2.4-.2.7-.4.2-.9.1-1 0a3 3 0 0 0-1.2-1c-.4-.2-1-.3-2-.4-.7 0-1.4.2-2 .6-.8.6-1 .8-1 1.5 0 .8.5 1 1.2 1.5.6.4 1.1.7 1.9 1H6.8z"
+                                      />
+                                      <path
+                                        d="M3 10.5V9h14v1.5z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Strikethrough (CTRL+SHIFT+X)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e5c57a275a3b92f1feba7842d8064e872"
+                                    >
+                                      Strikethrough
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e647925a24327f6c7c7320606459d5f63"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M7.03 10.349l3.818-3.819a.8.8 0 1 1 1.132 1.132L8.16 11.48l3.819 3.818a.8.8 0 1 1-1.132 1.132L7.03 12.61l-3.818 3.82a.8.8 0 1 1-1.132-1.132L5.9 11.48 2.08 7.662A.8.8 0 1 1 3.212 6.53l3.818 3.82zm8.147 7.829h2.549c.254 0 .447.05.58.152a.49.49 0 0 1 .201.413.54.54 0 0 1-.159.393c-.105.108-.266.162-.48.162h-3.594c-.245 0-.435-.066-.572-.197a.621.621 0 0 1-.205-.463c0-.114.044-.265.132-.453a1.62 1.62 0 0 1 .288-.444c.433-.436.824-.81 1.172-1.122.348-.312.597-.517.747-.615.267-.183.49-.368.667-.553.177-.185.312-.375.405-.57.093-.194.139-.384.139-.57a1.008 1.008 0 0 0-.554-.917 1.197 1.197 0 0 0-.56-.133c-.426 0-.761.182-1.005.546a2.332 2.332 0 0 0-.164.39 1.609 1.609 0 0 1-.258.488c-.096.114-.237.17-.423.17a.558.558 0 0 1-.405-.156.568.568 0 0 1-.161-.427c0-.218.05-.446.151-.683.101-.238.252-.453.452-.646s.454-.349.762-.467a2.998 2.998 0 0 1 1.081-.178c.498 0 .923.076 1.274.228a1.916 1.916 0 0 1 1.004 1.032 1.984 1.984 0 0 1-.156 1.794c-.2.32-.405.572-.613.754-.208.182-.558.468-1.048.857-.49.39-.826.691-1.008.906a2.703 2.703 0 0 0-.24.309z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Subscript
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e647925a24327f6c7c7320606459d5f63"
+                                    >
+                                      Subscript
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e187ffc5f10ccfe770a281b2df1d71fa2"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M15.677 8.678h2.549c.254 0 .447.05.58.152a.49.49 0 0 1 .201.413.54.54 0 0 1-.159.393c-.105.108-.266.162-.48.162h-3.594c-.245 0-.435-.066-.572-.197a.621.621 0 0 1-.205-.463c0-.114.044-.265.132-.453a1.62 1.62 0 0 1 .288-.444c.433-.436.824-.81 1.172-1.122.348-.312.597-.517.747-.615.267-.183.49-.368.667-.553.177-.185.312-.375.405-.57.093-.194.139-.384.139-.57a1.008 1.008 0 0 0-.554-.917 1.197 1.197 0 0 0-.56-.133c-.426 0-.761.182-1.005.546a2.332 2.332 0 0 0-.164.39 1.609 1.609 0 0 1-.258.488c-.096.114-.237.17-.423.17a.558.558 0 0 1-.405-.156.568.568 0 0 1-.161-.427c0-.218.05-.446.151-.683.101-.238.252-.453.452-.646s.454-.349.762-.467a2.998 2.998 0 0 1 1.081-.178c.498 0 .923.076 1.274.228a1.916 1.916 0 0 1 1.004 1.032 1.984 1.984 0 0 1-.156 1.794c-.2.32-.405.572-.613.754-.208.182-.558.468-1.048.857-.49.39-.826.691-1.008.906a2.703 2.703 0 0 0-.24.309zM7.03 10.349l3.818-3.819a.8.8 0 1 1 1.132 1.132L8.16 11.48l3.819 3.818a.8.8 0 1 1-1.132 1.132L7.03 12.61l-3.818 3.82a.8.8 0 1 1-1.132-1.132L5.9 11.48 2.08 7.662A.8.8 0 1 1 3.212 6.53l3.818 3.82z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Superscript
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e187ffc5f10ccfe770a281b2df1d71fa2"
+                                    >
+                                      Superscript
+                                    </span>
+                                  </button>
+                                  <span
+                                    class="ck ck-toolbar__separator"
+                                  />
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e83df2b2ac77287e82425b75098be45f4"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M11.077 15l.991-1.416a.75.75 0 1 1 1.229.86l-1.148 1.64a.748.748 0 0 1-.217.206 5.251 5.251 0 0 1-8.503-5.955.741.741 0 0 1 .12-.274l1.147-1.639a.75.75 0 1 1 1.228.86L4.933 10.7l.006.003a3.75 3.75 0 0 0 6.132 4.294l.006.004zm5.494-5.335a.748.748 0 0 1-.12.274l-1.147 1.639a.75.75 0 1 1-1.228-.86l.86-1.23a3.75 3.75 0 0 0-6.144-4.301l-.86 1.229a.75.75 0 0 1-1.229-.86l1.148-1.64a.748.748 0 0 1 .217-.206 5.251 5.251 0 0 1 8.503 5.955zm-4.563-2.532a.75.75 0 0 1 .184 1.045l-3.155 4.505a.75.75 0 1 1-1.229-.86l3.155-4.506a.75.75 0 0 1 1.045-.184z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Link (Ctrl+K)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e83df2b2ac77287e82425b75098be45f4"
+                                    >
+                                      Link
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e88fe8893fdd37916774f5a3e1f02b827"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M7 5.75c0 .414.336.75.75.75h9.5a.75.75 0 1 0 0-1.5h-9.5a.75.75 0 0 0-.75.75zM3.5 3v5H2V3.7H1v-1h2.5V3zM.343 17.857l2.59-3.257H2.92a.6.6 0 1 0-1.04 0H.302a2 2 0 1 1 3.995 0h-.001c-.048.405-.16.734-.333.988-.175.254-.59.692-1.244 1.312H4.3v1h-4l.043-.043zM7 14.75a.75.75 0 0 1 .75-.75h9.5a.75.75 0 1 1 0 1.5h-9.5a.75.75 0 0 1-.75-.75z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Numbered List
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e88fe8893fdd37916774f5a3e1f02b827"
+                                    >
+                                      Numbered List
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_eb3329d0798b35af533d9436bd5abfa74"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M7 5.75c0 .414.336.75.75.75h9.5a.75.75 0 1 0 0-1.5h-9.5a.75.75 0 0 0-.75.75zm-6 0C1 4.784 1.777 4 2.75 4c.966 0 1.75.777 1.75 1.75 0 .966-.777 1.75-1.75 1.75C1.784 7.5 1 6.723 1 5.75zm6 9c0 .414.336.75.75.75h9.5a.75.75 0 1 0 0-1.5h-9.5a.75.75 0 0 0-.75.75zm-6 0c0-.966.777-1.75 1.75-1.75.966 0 1.75.777 1.75 1.75 0 .966-.777 1.75-1.75 1.75-.966 0-1.75-.777-1.75-1.75z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Bulleted List
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_eb3329d0798b35af533d9436bd5abfa74"
+                                    >
+                                      Bulleted List
+                                    </span>
+                                  </button>
+                                  <span
+                                    class="ck ck-toolbar__separator"
+                                  />
+                                  <button
+                                    aria-disabled="true"
+                                    aria-labelledby="ck-editor__aria-label_ebe85f0150e80b0b959088c804d94b81f"
+                                    class="ck ck-button ck-disabled ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M8.69 14.915c.053.052.173.083.36.093a.366.366 0 0 1 .345.485l-.003.01a.738.738 0 0 1-.697.497h-2.67a.374.374 0 0 1-.353-.496l.013-.038a.681.681 0 0 1 .644-.458c.197-.012.325-.043.386-.093a.28.28 0 0 0 .072-.11L9.592 4.5H6.269c-.359-.017-.609.013-.75.09-.142.078-.289.265-.442.563-.192.29-.516.464-.864.464H4.17a.43.43 0 0 1-.407-.569L4.46 3h13.08l-.62 2.043a.81.81 0 0 1-.775.574h-.114a.486.486 0 0 1-.486-.486c.001-.284-.054-.464-.167-.54-.112-.076-.367-.106-.766-.091h-3.28l-2.68 10.257c-.006.074.007.127.038.158zM3 17h8a.5.5 0 1 1 0 1H3a.5.5 0 1 1 0-1zm11.299 1.17a.75.75 0 1 1-1.06-1.06l1.414-1.415-1.415-1.414a.75.75 0 0 1 1.06-1.06l1.415 1.414 1.414-1.415a.75.75 0 1 1 1.06 1.06l-1.413 1.415 1.414 1.415a.75.75 0 0 1-1.06 1.06l-1.415-1.414-1.414 1.414z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Remove Format
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_ebe85f0150e80b0b959088c804d94b81f"
+                                    >
+                                      Remove Format
+                                    </span>
+                                  </button>
+                                  <div
+                                    class="ck ck-dropdown"
+                                  >
+                                    <button
+                                      aria-haspopup="true"
+                                      aria-labelledby="ck-editor__aria-label_e4456608f07b71b16f785725e3e7700d7"
+                                      class="ck ck-button ck-off ck-dropdown__button"
+                                      tabindex="-1"
+                                      type="button"
+                                    >
+                                      <svg
+                                        class="ck ck-icon ck-button__icon"
+                                        viewBox="0 0 20 20"
+                                      >
+                                        <path
+                                          d="M10 2.5a7.47 7.47 0 0 1 4.231 1.31 7.268 7.268 0 0 1 2.703 3.454 7.128 7.128 0 0 1 .199 4.353c-.39 1.436-1.475 2.72-2.633 3.677h2.013c0-.226.092-.443.254-.603a.876.876 0 0 1 1.229 0c.163.16.254.377.254.603v.853c0 .209-.078.41-.22.567a.873.873 0 0 1-.547.28l-.101.006h-4.695a.517.517 0 0 1-.516-.518v-1.265c0-.21.128-.398.317-.489a5.601 5.601 0 0 0 2.492-2.371 5.459 5.459 0 0 0 .552-3.693 5.53 5.53 0 0 0-1.955-3.2A5.71 5.71 0 0 0 10 4.206 5.708 5.708 0 0 0 6.419 5.46 5.527 5.527 0 0 0 4.46 8.663a5.457 5.457 0 0 0 .554 3.695 5.6 5.6 0 0 0 2.497 2.37.55.55 0 0 1 .317.49v1.264c0 .286-.23.518-.516.518H2.618a.877.877 0 0 1-.614-.25.845.845 0 0 1-.254-.603v-.853c0-.226.091-.443.254-.603a.876.876 0 0 1 1.228 0c.163.16.255.377.255.603h1.925c-1.158-.958-2.155-2.241-2.545-3.678a7.128 7.128 0 0 1 .199-4.352 7.268 7.268 0 0 1 2.703-3.455A7.475 7.475 0 0 1 10 2.5z"
+                                        />
+                                      </svg>
+                                      <span
+                                        class="ck ck-tooltip ck-tooltip_s"
+                                      >
+                                        <span
+                                          class="ck ck-tooltip__text"
+                                        >
+                                          Special characters
+                                        </span>
+                                      </span>
+                                      <span
+                                        class="ck ck-button__label"
+                                        id="ck-editor__aria-label_e4456608f07b71b16f785725e3e7700d7"
+                                      >
+                                        Special characters
+                                      </span>
+                                      <svg
+                                        class="ck ck-icon ck-dropdown__arrow"
+                                        viewBox="0 0 10 10"
+                                      >
+                                        <path
+                                          d="M.941 4.523a.75.75 0 1 1 1.06-1.06l3.006 3.005 3.005-3.005a.75.75 0 1 1 1.06 1.06l-3.549 3.55a.75.75 0 0 1-1.168-.136L.941 4.523z"
+                                        />
+                                      </svg>
+                                    </button>
+                                    <div
+                                      class="ck ck-reset ck-dropdown__panel ck-dropdown__panel_se"
+                                    />
+                                  </div>
+                                  <span
+                                    class="ck ck-toolbar__separator"
+                                  />
+                                  <button
+                                    aria-disabled="true"
+                                    aria-labelledby="ck-editor__aria-label_e18e2965913211f34ed963a1be2c2725e"
+                                    class="ck ck-button ck-disabled ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M5.042 9.367l2.189 1.837a.75.75 0 0 1-.965 1.149l-3.788-3.18a.747.747 0 0 1-.21-.284.75.75 0 0 1 .17-.945L6.23 4.762a.75.75 0 1 1 .964 1.15L4.863 7.866h8.917A.75.75 0 0 1 14 7.9a4 4 0 1 1-1.477 7.718l.344-1.489a2.5 2.5 0 1 0 1.094-4.73l.008-.032H5.042z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Undo (CTRL+Z)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e18e2965913211f34ed963a1be2c2725e"
+                                    >
+                                      Undo
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-disabled="true"
+                                    aria-labelledby="ck-editor__aria-label_efa169c2ac441d1798b86a21697bed424"
+                                    class="ck ck-button ck-disabled ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M14.958 9.367l-2.189 1.837a.75.75 0 0 0 .965 1.149l3.788-3.18a.747.747 0 0 0 .21-.284.75.75 0 0 0-.17-.945L13.77 4.762a.75.75 0 1 0-.964 1.15l2.331 1.955H6.22A.75.75 0 0 0 6 7.9a4 4 0 1 0 1.477 7.718l-.344-1.489A2.5 2.5 0 1 1 6.039 9.4l-.008-.032h8.927z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Redo (CTRL+Y)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_efa169c2ac441d1798b86a21697bed424"
+                                    >
+                                      Redo
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="ck ck-editor__main"
+                          role="presentation"
+                        >
+                          <div
+                            aria-label="Rich Text Editor, main"
+                            class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"
+                            contenteditable="true"
+                            dir="ltr"
+                            lang="en"
+                            role="textbox"
+                          >
+                            <p>
+                              <br
+                                data-cke-filler="true"
+                              />
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+                        style="display: inline-block;"
+                      >
+                        This field is required
+                        <span>
+                           - 
+                        </span>
+                      </span>
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+                        style="display: inline-block;"
+                      >
+                        0 characters of 2000
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2309,49 +2803,543 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                     style="margin-top: 24px;"
                   >
-                    <span>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
-                      >
-                        <span>
-                          Creator research statement*. Include Background, Contribution and Significance
-                          <span
-                            style="font-weight: 700;"
-                          >
-                             (not for public view)
-                          </span>
-                        </span>
-                        <span>
-                           *
-                        </span>
-                      </p>
-                      <span
-                        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      >
-                        Remember to include substantiation of your major or minor scale/significance claim above.
-                      </span>
-                    </span>
                     <div
-                      class=""
                       data-analyticsid="rek-creator-contribution-statement"
                       data-testid="rek-creator-contribution-statement"
                       id="rek-creator-contribution-statement"
-                    />
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      style="display: inline-block;"
                     >
-                      This field is required
                       <span>
-                         - 
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
+                        >
+                          <span>
+                            Creator research statement*. Include Background, Contribution and Significance
+                            <span
+                              style="font-weight: 700;"
+                            >
+                               (not for public view)
+                            </span>
+                          </span>
+                          <span>
+                             *
+                          </span>
+                        </p>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+                        >
+                          Remember to include substantiation of your major or minor scale/significance claim above.
+                        </span>
                       </span>
-                    </span>
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      style="display: inline-block;"
-                    >
-                      0 characters of 2000
-                    </span>
+                      <div
+                        style="display: none;"
+                      />
+                      <div
+                        aria-labelledby="ck-editor__label_e9a102576b16f21ce94316e722c3275aa"
+                        class="ck ck-reset ck-editor ck-rounded-corners"
+                        dir="ltr"
+                        lang="en"
+                        role="application"
+                      >
+                        <label
+                          class="ck ck-label ck-voice-label"
+                          id="ck-editor__label_e9a102576b16f21ce94316e722c3275aa"
+                        >
+                          Rich Text Editor
+                        </label>
+                        <div
+                          class="ck ck-editor__top ck-reset_all"
+                          role="presentation"
+                        >
+                          <div
+                            class="ck ck-sticky-panel"
+                          >
+                            <div
+                              class="ck ck-sticky-panel__placeholder"
+                              style="display: none;"
+                            />
+                            <div
+                              class="ck ck-sticky-panel__content"
+                            >
+                              <div
+                                aria-label="Editor toolbar"
+                                class="ck ck-toolbar ck-toolbar_grouping"
+                                role="toolbar"
+                                style="max-width: auto;"
+                              >
+                                <div
+                                  class="ck ck-toolbar__items"
+                                >
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e880e9ac11cf803eb29d0623e9322da9c"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M10.187 17H5.773c-.637 0-1.092-.138-1.364-.415-.273-.277-.409-.718-.409-1.323V4.738c0-.617.14-1.062.419-1.332.279-.27.73-.406 1.354-.406h4.68c.69 0 1.288.041 1.793.124.506.083.96.242 1.36.478.341.197.644.447.906.75a3.262 3.262 0 0 1 .808 2.162c0 1.401-.722 2.426-2.167 3.075C15.05 10.175 16 11.315 16 13.01a3.756 3.756 0 0 1-2.296 3.504 6.1 6.1 0 0 1-1.517.377c-.571.073-1.238.11-2 .11zm-.217-6.217H7v4.087h3.069c1.977 0 2.965-.69 2.965-2.072 0-.707-.256-1.22-.768-1.537-.512-.319-1.277-.478-2.296-.478zM7 5.13v3.619h2.606c.729 0 1.292-.067 1.69-.2a1.6 1.6 0 0 0 .91-.765c.165-.267.247-.566.247-.897 0-.707-.26-1.176-.778-1.409-.519-.232-1.31-.348-2.375-.348H7z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Bold (CTRL+B)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e880e9ac11cf803eb29d0623e9322da9c"
+                                    >
+                                      Bold
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e725428d1ec08899f8e8e980998c13f5a"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M9.586 14.633l.021.004c-.036.335.095.655.393.962.082.083.173.15.274.201h1.474a.6.6 0 1 1 0 1.2H5.304a.6.6 0 0 1 0-1.2h1.15c.474-.07.809-.182 1.005-.334.157-.122.291-.32.404-.597l2.416-9.55a1.053 1.053 0 0 0-.281-.823 1.12 1.12 0 0 0-.442-.296H8.15a.6.6 0 0 1 0-1.2h6.443a.6.6 0 1 1 0 1.2h-1.195c-.376.056-.65.155-.823.296-.215.175-.423.439-.623.79l-2.366 9.347z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Italic (CTRL+I)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e725428d1ec08899f8e8e980998c13f5a"
+                                    >
+                                      Italic
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_ef245ae6ae11c4b605b4742a768735e73"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M3 18v-1.5h14V18zm2.2-8V3.6c0-.4.4-.6.8-.6.3 0 .7.2.7.6v6.2c0 2 1.3 2.8 3.2 2.8 1.9 0 3.4-.9 3.4-2.9V3.6c0-.3.4-.5.8-.5.3 0 .7.2.7.5V10c0 2.7-2.2 4-4.9 4-2.6 0-4.7-1.2-4.7-4z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Underline (CTRL+U)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_ef245ae6ae11c4b605b4742a768735e73"
+                                    >
+                                      Underline
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e07e052e4056aca2bfd5850b16d670d2c"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M7 16.4c-.8-.4-1.5-.9-2.2-1.5a.6.6 0 0 1-.2-.5l.3-.6h1c1 1.2 2.1 1.7 3.7 1.7 1 0 1.8-.3 2.3-.6.6-.4.6-1.2.6-1.3.2-1.2-.9-2.1-.9-2.1h2.1c.3.7.4 1.2.4 1.7v.8l-.6 1.2c-.6.8-1.1 1-1.6 1.2a6 6 0 0 1-2.4.6c-1 0-1.8-.3-2.5-.6zM6.8 9L6 8.3c-.4-.5-.5-.8-.5-1.6 0-.7.1-1.3.5-1.8.4-.6 1-1 1.6-1.3a6.3 6.3 0 0 1 4.7 0 4 4 0 0 1 1.7 1l.3.7c0 .1.2.4-.2.7-.4.2-.9.1-1 0a3 3 0 0 0-1.2-1c-.4-.2-1-.3-2-.4-.7 0-1.4.2-2 .6-.8.6-1 .8-1 1.5 0 .8.5 1 1.2 1.5.6.4 1.1.7 1.9 1H6.8z"
+                                      />
+                                      <path
+                                        d="M3 10.5V9h14v1.5z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Strikethrough (CTRL+SHIFT+X)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e07e052e4056aca2bfd5850b16d670d2c"
+                                    >
+                                      Strikethrough
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e60dad856245a70e2b9a451e867bdf4b9"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M7.03 10.349l3.818-3.819a.8.8 0 1 1 1.132 1.132L8.16 11.48l3.819 3.818a.8.8 0 1 1-1.132 1.132L7.03 12.61l-3.818 3.82a.8.8 0 1 1-1.132-1.132L5.9 11.48 2.08 7.662A.8.8 0 1 1 3.212 6.53l3.818 3.82zm8.147 7.829h2.549c.254 0 .447.05.58.152a.49.49 0 0 1 .201.413.54.54 0 0 1-.159.393c-.105.108-.266.162-.48.162h-3.594c-.245 0-.435-.066-.572-.197a.621.621 0 0 1-.205-.463c0-.114.044-.265.132-.453a1.62 1.62 0 0 1 .288-.444c.433-.436.824-.81 1.172-1.122.348-.312.597-.517.747-.615.267-.183.49-.368.667-.553.177-.185.312-.375.405-.57.093-.194.139-.384.139-.57a1.008 1.008 0 0 0-.554-.917 1.197 1.197 0 0 0-.56-.133c-.426 0-.761.182-1.005.546a2.332 2.332 0 0 0-.164.39 1.609 1.609 0 0 1-.258.488c-.096.114-.237.17-.423.17a.558.558 0 0 1-.405-.156.568.568 0 0 1-.161-.427c0-.218.05-.446.151-.683.101-.238.252-.453.452-.646s.454-.349.762-.467a2.998 2.998 0 0 1 1.081-.178c.498 0 .923.076 1.274.228a1.916 1.916 0 0 1 1.004 1.032 1.984 1.984 0 0 1-.156 1.794c-.2.32-.405.572-.613.754-.208.182-.558.468-1.048.857-.49.39-.826.691-1.008.906a2.703 2.703 0 0 0-.24.309z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Subscript
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e60dad856245a70e2b9a451e867bdf4b9"
+                                    >
+                                      Subscript
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e65b474445c787d7b43a8d91e3a2aa478"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M15.677 8.678h2.549c.254 0 .447.05.58.152a.49.49 0 0 1 .201.413.54.54 0 0 1-.159.393c-.105.108-.266.162-.48.162h-3.594c-.245 0-.435-.066-.572-.197a.621.621 0 0 1-.205-.463c0-.114.044-.265.132-.453a1.62 1.62 0 0 1 .288-.444c.433-.436.824-.81 1.172-1.122.348-.312.597-.517.747-.615.267-.183.49-.368.667-.553.177-.185.312-.375.405-.57.093-.194.139-.384.139-.57a1.008 1.008 0 0 0-.554-.917 1.197 1.197 0 0 0-.56-.133c-.426 0-.761.182-1.005.546a2.332 2.332 0 0 0-.164.39 1.609 1.609 0 0 1-.258.488c-.096.114-.237.17-.423.17a.558.558 0 0 1-.405-.156.568.568 0 0 1-.161-.427c0-.218.05-.446.151-.683.101-.238.252-.453.452-.646s.454-.349.762-.467a2.998 2.998 0 0 1 1.081-.178c.498 0 .923.076 1.274.228a1.916 1.916 0 0 1 1.004 1.032 1.984 1.984 0 0 1-.156 1.794c-.2.32-.405.572-.613.754-.208.182-.558.468-1.048.857-.49.39-.826.691-1.008.906a2.703 2.703 0 0 0-.24.309zM7.03 10.349l3.818-3.819a.8.8 0 1 1 1.132 1.132L8.16 11.48l3.819 3.818a.8.8 0 1 1-1.132 1.132L7.03 12.61l-3.818 3.82a.8.8 0 1 1-1.132-1.132L5.9 11.48 2.08 7.662A.8.8 0 1 1 3.212 6.53l3.818 3.82z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Superscript
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e65b474445c787d7b43a8d91e3a2aa478"
+                                    >
+                                      Superscript
+                                    </span>
+                                  </button>
+                                  <span
+                                    class="ck ck-toolbar__separator"
+                                  />
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e9c86bbf5ad342e5d864afdebaf2c27e1"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M11.077 15l.991-1.416a.75.75 0 1 1 1.229.86l-1.148 1.64a.748.748 0 0 1-.217.206 5.251 5.251 0 0 1-8.503-5.955.741.741 0 0 1 .12-.274l1.147-1.639a.75.75 0 1 1 1.228.86L4.933 10.7l.006.003a3.75 3.75 0 0 0 6.132 4.294l.006.004zm5.494-5.335a.748.748 0 0 1-.12.274l-1.147 1.639a.75.75 0 1 1-1.228-.86l.86-1.23a3.75 3.75 0 0 0-6.144-4.301l-.86 1.229a.75.75 0 0 1-1.229-.86l1.148-1.64a.748.748 0 0 1 .217-.206 5.251 5.251 0 0 1 8.503 5.955zm-4.563-2.532a.75.75 0 0 1 .184 1.045l-3.155 4.505a.75.75 0 1 1-1.229-.86l3.155-4.506a.75.75 0 0 1 1.045-.184z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Link (Ctrl+K)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e9c86bbf5ad342e5d864afdebaf2c27e1"
+                                    >
+                                      Link
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e2f06817ce9f1f611f3488d147b2deab8"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M7 5.75c0 .414.336.75.75.75h9.5a.75.75 0 1 0 0-1.5h-9.5a.75.75 0 0 0-.75.75zM3.5 3v5H2V3.7H1v-1h2.5V3zM.343 17.857l2.59-3.257H2.92a.6.6 0 1 0-1.04 0H.302a2 2 0 1 1 3.995 0h-.001c-.048.405-.16.734-.333.988-.175.254-.59.692-1.244 1.312H4.3v1h-4l.043-.043zM7 14.75a.75.75 0 0 1 .75-.75h9.5a.75.75 0 1 1 0 1.5h-9.5a.75.75 0 0 1-.75-.75z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Numbered List
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e2f06817ce9f1f611f3488d147b2deab8"
+                                    >
+                                      Numbered List
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-labelledby="ck-editor__aria-label_e90d6a4c500d48767bb6889ff6b89d62d"
+                                    aria-pressed="false"
+                                    class="ck ck-button ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M7 5.75c0 .414.336.75.75.75h9.5a.75.75 0 1 0 0-1.5h-9.5a.75.75 0 0 0-.75.75zm-6 0C1 4.784 1.777 4 2.75 4c.966 0 1.75.777 1.75 1.75 0 .966-.777 1.75-1.75 1.75C1.784 7.5 1 6.723 1 5.75zm6 9c0 .414.336.75.75.75h9.5a.75.75 0 1 0 0-1.5h-9.5a.75.75 0 0 0-.75.75zm-6 0c0-.966.777-1.75 1.75-1.75.966 0 1.75.777 1.75 1.75 0 .966-.777 1.75-1.75 1.75-.966 0-1.75-.777-1.75-1.75z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Bulleted List
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e90d6a4c500d48767bb6889ff6b89d62d"
+                                    >
+                                      Bulleted List
+                                    </span>
+                                  </button>
+                                  <span
+                                    class="ck ck-toolbar__separator"
+                                  />
+                                  <button
+                                    aria-disabled="true"
+                                    aria-labelledby="ck-editor__aria-label_e37c311b06c8cd5202fb67e872f382fb0"
+                                    class="ck ck-button ck-disabled ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M8.69 14.915c.053.052.173.083.36.093a.366.366 0 0 1 .345.485l-.003.01a.738.738 0 0 1-.697.497h-2.67a.374.374 0 0 1-.353-.496l.013-.038a.681.681 0 0 1 .644-.458c.197-.012.325-.043.386-.093a.28.28 0 0 0 .072-.11L9.592 4.5H6.269c-.359-.017-.609.013-.75.09-.142.078-.289.265-.442.563-.192.29-.516.464-.864.464H4.17a.43.43 0 0 1-.407-.569L4.46 3h13.08l-.62 2.043a.81.81 0 0 1-.775.574h-.114a.486.486 0 0 1-.486-.486c.001-.284-.054-.464-.167-.54-.112-.076-.367-.106-.766-.091h-3.28l-2.68 10.257c-.006.074.007.127.038.158zM3 17h8a.5.5 0 1 1 0 1H3a.5.5 0 1 1 0-1zm11.299 1.17a.75.75 0 1 1-1.06-1.06l1.414-1.415-1.415-1.414a.75.75 0 0 1 1.06-1.06l1.415 1.414 1.414-1.415a.75.75 0 1 1 1.06 1.06l-1.413 1.415 1.414 1.415a.75.75 0 0 1-1.06 1.06l-1.415-1.414-1.414 1.414z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Remove Format
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e37c311b06c8cd5202fb67e872f382fb0"
+                                    >
+                                      Remove Format
+                                    </span>
+                                  </button>
+                                  <div
+                                    class="ck ck-dropdown"
+                                  >
+                                    <button
+                                      aria-haspopup="true"
+                                      aria-labelledby="ck-editor__aria-label_ec96c61b28619b095fff16ad8be0fcc92"
+                                      class="ck ck-button ck-off ck-dropdown__button"
+                                      tabindex="-1"
+                                      type="button"
+                                    >
+                                      <svg
+                                        class="ck ck-icon ck-button__icon"
+                                        viewBox="0 0 20 20"
+                                      >
+                                        <path
+                                          d="M10 2.5a7.47 7.47 0 0 1 4.231 1.31 7.268 7.268 0 0 1 2.703 3.454 7.128 7.128 0 0 1 .199 4.353c-.39 1.436-1.475 2.72-2.633 3.677h2.013c0-.226.092-.443.254-.603a.876.876 0 0 1 1.229 0c.163.16.254.377.254.603v.853c0 .209-.078.41-.22.567a.873.873 0 0 1-.547.28l-.101.006h-4.695a.517.517 0 0 1-.516-.518v-1.265c0-.21.128-.398.317-.489a5.601 5.601 0 0 0 2.492-2.371 5.459 5.459 0 0 0 .552-3.693 5.53 5.53 0 0 0-1.955-3.2A5.71 5.71 0 0 0 10 4.206 5.708 5.708 0 0 0 6.419 5.46 5.527 5.527 0 0 0 4.46 8.663a5.457 5.457 0 0 0 .554 3.695 5.6 5.6 0 0 0 2.497 2.37.55.55 0 0 1 .317.49v1.264c0 .286-.23.518-.516.518H2.618a.877.877 0 0 1-.614-.25.845.845 0 0 1-.254-.603v-.853c0-.226.091-.443.254-.603a.876.876 0 0 1 1.228 0c.163.16.255.377.255.603h1.925c-1.158-.958-2.155-2.241-2.545-3.678a7.128 7.128 0 0 1 .199-4.352 7.268 7.268 0 0 1 2.703-3.455A7.475 7.475 0 0 1 10 2.5z"
+                                        />
+                                      </svg>
+                                      <span
+                                        class="ck ck-tooltip ck-tooltip_s"
+                                      >
+                                        <span
+                                          class="ck ck-tooltip__text"
+                                        >
+                                          Special characters
+                                        </span>
+                                      </span>
+                                      <span
+                                        class="ck ck-button__label"
+                                        id="ck-editor__aria-label_ec96c61b28619b095fff16ad8be0fcc92"
+                                      >
+                                        Special characters
+                                      </span>
+                                      <svg
+                                        class="ck ck-icon ck-dropdown__arrow"
+                                        viewBox="0 0 10 10"
+                                      >
+                                        <path
+                                          d="M.941 4.523a.75.75 0 1 1 1.06-1.06l3.006 3.005 3.005-3.005a.75.75 0 1 1 1.06 1.06l-3.549 3.55a.75.75 0 0 1-1.168-.136L.941 4.523z"
+                                        />
+                                      </svg>
+                                    </button>
+                                    <div
+                                      class="ck ck-reset ck-dropdown__panel ck-dropdown__panel_se"
+                                    />
+                                  </div>
+                                  <span
+                                    class="ck ck-toolbar__separator"
+                                  />
+                                  <button
+                                    aria-disabled="true"
+                                    aria-labelledby="ck-editor__aria-label_e655a64cce2ac4b256c040edf45b3ac58"
+                                    class="ck ck-button ck-disabled ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M5.042 9.367l2.189 1.837a.75.75 0 0 1-.965 1.149l-3.788-3.18a.747.747 0 0 1-.21-.284.75.75 0 0 1 .17-.945L6.23 4.762a.75.75 0 1 1 .964 1.15L4.863 7.866h8.917A.75.75 0 0 1 14 7.9a4 4 0 1 1-1.477 7.718l.344-1.489a2.5 2.5 0 1 0 1.094-4.73l.008-.032H5.042z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Undo (CTRL+Z)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e655a64cce2ac4b256c040edf45b3ac58"
+                                    >
+                                      Undo
+                                    </span>
+                                  </button>
+                                  <button
+                                    aria-disabled="true"
+                                    aria-labelledby="ck-editor__aria-label_e9ef5d546c2aee9513e584808890d129d"
+                                    class="ck ck-button ck-disabled ck-off"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <svg
+                                      class="ck ck-icon ck-button__icon"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M14.958 9.367l-2.189 1.837a.75.75 0 0 0 .965 1.149l3.788-3.18a.747.747 0 0 0 .21-.284.75.75 0 0 0-.17-.945L13.77 4.762a.75.75 0 1 0-.964 1.15l2.331 1.955H6.22A.75.75 0 0 0 6 7.9a4 4 0 1 0 1.477 7.718l-.344-1.489A2.5 2.5 0 1 1 6.039 9.4l-.008-.032h8.927z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="ck ck-tooltip ck-tooltip_s"
+                                    >
+                                      <span
+                                        class="ck ck-tooltip__text"
+                                      >
+                                        Redo (CTRL+Y)
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="ck ck-button__label"
+                                      id="ck-editor__aria-label_e9ef5d546c2aee9513e584808890d129d"
+                                    >
+                                      Redo
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="ck ck-editor__main"
+                          role="presentation"
+                        >
+                          <div
+                            aria-label="Rich Text Editor, main"
+                            class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"
+                            contenteditable="true"
+                            dir="ltr"
+                            lang="en"
+                            role="textbox"
+                          >
+                            <p>
+                              <br
+                                data-cke-filler="true"
+                              />
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+                        style="display: inline-block;"
+                      >
+                        This field is required
+                        <span>
+                           - 
+                        </span>
+                      </span>
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+                        style="display: inline-block;"
+                      >
+                        0 characters of 2000
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

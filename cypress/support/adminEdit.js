@@ -12,7 +12,6 @@ Cypress.Commands.add('loadRecordForAdminEdit', pid => {
 });
 
 Cypress.Commands.add('adminEditCleanup', () => {
-    cy.killCKEditor();
     cy.killWindowUnloadHandler();
 });
 

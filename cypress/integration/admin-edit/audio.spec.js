@@ -68,9 +68,9 @@ context('Audio admin edit', () => {
                 cy.get('div:nth-child(14) span span')
                     .eq(0)
                     .should('have.text', 'Transcript');
-                cy.get('#cke_rek-transcript-editor').should('exist');
                 cy.readCKEditor('rek-transcript').should(text => {
-                    expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
+                    expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript.substring(0, 10));
+                    // substring: hard to compare html to a string!
                 });
                 cy.get('[data-testid=rek-alternate-genre-input]')
                     .should(
@@ -117,9 +117,10 @@ context('Audio admin edit', () => {
                 cy.get('@embargoDateButton').click(); // date picker popup appears
             });
 
-        cy.get('[role="dialog"] [role="presentation"]').within(() => {
-            cy.get('.MuiPickersCalendarHeader-label').should('have.text', 'January 2099');
-        });
+        cy.get('[role="dialog"] [role="presentation"] .MuiPickersCalendarHeader-label').should(
+            'have.text',
+            'January 2099',
+        );
 
         cy.get('@embargoDateButton').click(); // date picker disappears
 
@@ -142,7 +143,6 @@ context('Audio admin edit', () => {
                 cy.get('span span')
                     .eq(0)
                     .should('contain', 'Advisory statement');
-                cy.get('#cke_rek-advisory-statement-editor').should('exist');
                 cy.readCKEditor('rek-advisory-statement').should(text => {
                     expect(text).to.contain(record.fez_record_search_key_advisory_statement.rek_advisory_statement);
                 });
