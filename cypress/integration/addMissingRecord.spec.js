@@ -16,6 +16,7 @@ context('Add missing record', () => {
         cy.get('[data-testid=rek-display-type-options]')
             .find('li[role=option]')
             .contains('Journal Article')
+            .eq(0)
             .click();
         cy.get('#submit-work').should('not.exist');
 
