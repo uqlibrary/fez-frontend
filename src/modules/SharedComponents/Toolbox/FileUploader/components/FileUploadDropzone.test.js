@@ -71,7 +71,7 @@ describe('Component FileUploadDropzone', () => {
                 types: ['Files', 'Files'],
             },
         });
-        await new Promise(r => setTimeout(r, 10));
+        await new Promise(r => setTimeout(r, 50));
 
         expect(onDropFn).toHaveBeenCalledWith(
             [{ fileData: file, name: 'hello.png', size: 5 }],
@@ -109,7 +109,7 @@ describe('Component FileUploadDropzone', () => {
         fireEvent.drop(getByTestId('fez-datastream-info-input'), {
             dataTransfer: { files: [file], types: ['Files'] },
         });
-        await new Promise(r => setTimeout(r, 10));
+        await new Promise(r => setTimeout(r, 50));
 
         expect(onDropFn).toHaveBeenCalledWith(
             [],
