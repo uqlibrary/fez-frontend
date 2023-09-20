@@ -1,22 +1,24 @@
+import React from 'react';
 import HerdcStatusField from './HerdcStatusField';
 import Immutable from 'immutable';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(HerdcStatusField, props, args);
+    return rtlRender(<HerdcStatusField {...props} />);
 }
 
 describe('HerdcStatusField component', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with given field props', () => {
-        const wrapper = setup({
+        const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
             input: {
@@ -27,11 +29,11 @@ describe('HerdcStatusField component', () => {
                 error: 'Test error',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render immutable list as selected value with given field props', () => {
-        const wrapper = setup({
+        const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
             input: {
@@ -42,15 +44,15 @@ describe('HerdcStatusField component', () => {
                 error: 'Test error',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render when given a default value field props', () => {
-        const wrapper = setup({
+        const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
             defaultValue: 'afr',
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });
