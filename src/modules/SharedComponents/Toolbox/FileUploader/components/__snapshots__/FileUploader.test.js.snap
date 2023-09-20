@@ -20,14 +20,12 @@ exports[`Component FileUploader should handle file order change 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -145,14 +143,12 @@ exports[`Component FileUploader should handle file order change 2`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -858,14 +854,12 @@ exports[`Component FileUploader should handle file order change 3`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -1585,14 +1579,12 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -1712,14 +1704,12 @@ exports[`Component FileUploader should not render rows for uploaded files with a
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -1837,14 +1827,12 @@ exports[`Component FileUploader should not render rows for uploaded files with a
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -2419,14 +2407,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -2544,14 +2530,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -3325,14 +3309,12 @@ exports[`Component FileUploader should render default component 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -3450,14 +3432,12 @@ exports[`Component FileUploader should render disabled component 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="true"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -3576,14 +3556,12 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -3701,14 +3679,12 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -4283,14 +4259,12 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -4723,14 +4697,12 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -4848,14 +4820,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -4973,14 +4943,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -5685,14 +5653,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -6390,14 +6356,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -7164,14 +7128,12 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -7289,14 +7251,12 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -7871,14 +7831,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -7996,14 +7954,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -8716,14 +8672,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -9431,14 +9385,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -10217,14 +10169,12 @@ exports[`Component FileUploader should render security policy selector if admin 
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -10342,14 +10292,12 @@ exports[`Component FileUploader should set max files error message 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div
@@ -10827,14 +10775,12 @@ exports[`Component FileUploader should update file description 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            data-testid="file-upload-dropzone"
             id="FileUploadDropZone"
             tabindex="0"
           >
             <div
               aria-disabled="false"
               class=""
-              data-testid="TestFileUpload"
               style="position: relative; padding: 0px;"
             >
               <div

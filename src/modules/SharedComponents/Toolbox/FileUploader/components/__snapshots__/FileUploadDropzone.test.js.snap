@@ -9,7 +9,6 @@ exports[`Component FileUploadDropzone should render component with default props
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
       <div
-        data-testid="file-upload-dropzone"
         id="FileUploadDropZone"
         tabindex="0"
       >
@@ -81,7 +80,6 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
       <div
-        data-testid="file-upload-dropzone"
         id="FileUploadDropZone"
         tabindex="0"
       >
