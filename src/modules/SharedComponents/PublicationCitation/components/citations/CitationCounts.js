@@ -78,7 +78,7 @@ export class CitationCounts extends PureComponent {
                         {...(this.props.publication.calculateOpenAccess
                             ? this.props.publication.calculateOpenAccess()
                             : {})}
-                        style={{ marginBottom: -5 }}
+                        style={{ marginBottom: '-5px' }}
                     />
                 </Grid>
                 <Grid item>

@@ -7,11 +7,6 @@ import LockOpen from '@mui/icons-material/LockOpen';
 import LockClockOutlined from '@mui/icons-material/LockClock';
 import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
-import makeStyles from '@mui/styles/makeStyles';
-
-const useStyles = makeStyles({
-    svg: props => props.style,
-});
 
 export const getIconTestId = id => `${id}-icon`;
 
@@ -23,13 +18,12 @@ export const OpenAccessIcon = ({
     showEmbargoText,
     securityStatus,
 }) => {
-    const classes = useStyles({ style });
     const txt = locale.viewRecord.sections.links;
 
     if (!securityStatus) {
         return (
             <Tooltip title={txt.securityLocked} placement="left" TransitionComponent={Fade}>
-                <Lock className={classes.svg} data-testid={getIconTestId('no-oa')} />
+                <Lock sx={{ ...style }} data-testid={getIconTestId('no-oa')} />
             </Tooltip>
         );
     } else if (isOpenAccess && !embargoDate) {
@@ -40,7 +34,7 @@ export const OpenAccessIcon = ({
 
         return (
             <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
-                <LockOpen className={classes.svg} data-testid={getIconTestId('oa')} />
+                <LockOpen sx={{ ...style }} data-testid={getIconTestId('oa')} />
             </Tooltip>
         );
     } else if (!isOpenAccess && !!embargoDate) {
@@ -55,7 +49,7 @@ export const OpenAccessIcon = ({
                     </span>
                 )}
                 <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
-                    <LockClockOutlined className={classes.svg} data-testid={getIconTestId('embargoed-oa')} />
+                    <LockClockOutlined sx={{ ...style }} data-testid={getIconTestId('embargoed-oa')} />
                 </Tooltip>
             </Fragment>
         );
