@@ -9,7 +9,6 @@ import PictureAsPdf from '@mui/icons-material/PictureAsPdf';
 import Typography from '@mui/material/Typography';
 import Videocam from '@mui/icons-material/Videocam';
 import VolumeUp from '@mui/icons-material/VolumeUp';
-import withStyles from '@mui/styles/withStyles';
 
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
@@ -33,29 +32,6 @@ import {
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 import { FileAvStateIcon } from '../../SharedComponents/Toolbox/FileAvStateIcon';
 import Box from '@mui/material/Box';
-
-export const styles = theme => ({
-    header: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    },
-    dataWrapper: {
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
-    },
-    fileIcon: {
-        opacity: 0.5,
-    },
-    thumbIconCentered: {
-        textAlign: 'center',
-    },
-    containerPadding: {
-        padding: '8px 0',
-        [theme.breakpoints.up('sm')]: {
-            padding: theme.spacing(1),
-        },
-    },
-});
 
 export const getSecurityAccess = (dataStream, props) => {
     const { isAdmin, isAuthor, author } = props;
@@ -190,7 +166,6 @@ export const formatBytes = bytes => {
 export class FilesClass extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object,
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
         author: PropTypes.object,
@@ -239,15 +214,15 @@ export class FilesClass extends Component {
             };
             return <Thumbnail {...thumbnailProps} />;
         } else if (mimeType.indexOf('audio') >= 0) {
-            return <VolumeUp className={this.props.classes.fileIcon} color={'secondary'} />;
+            return <VolumeUp sx={{ opacity: 0.5 }} color={'secondary'} />;
         } else if (mimeType.indexOf('pdf') >= 0) {
-            return <PictureAsPdf className={this.props.classes.fileIcon} color={'secondary'} />;
+            return <PictureAsPdf sx={{ opacity: 0.5 }} color={'secondary'} />;
         } else if (mimeType.indexOf('image') >= 0) {
-            return <Image className={this.props.classes.fileIcon} color={'secondary'} />;
+            return <Image sx={{ opacity: 0.5 }} color={'secondary'} />;
         } else if (mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf') {
-            return <Videocam className={this.props.classes.fileIcon} color={'secondary'} />;
+            return <Videocam sx={{ opacity: 0.5 }} color={'secondary'} />;
         } else {
-            return <InsertDriveFile className={this.props.classes.fileIcon} color={'secondary'} />;
+            return <InsertDriveFile sx={{ opacity: 0.5 }} color={'secondary'} />;
         }
     };
 
@@ -474,14 +449,14 @@ export class FilesClass extends Component {
                     ).length > 0 && (
                         <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
                     )}
-                    <div className={this.props.classes.containerPadding}>
+                    <Box sx={{ padding: { xs: '8px 0', sm: 1 } }}>
                         <Grid
                             container
                             direction="row"
                             alignItems="center"
                             spacing={2}
                             padding={0}
-                            className={this.props.classes.header}
+                            sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                         >
                             <Grid item xs={2} sm={1}>
                                 &nbsp;
@@ -514,10 +489,10 @@ export class FilesClass extends Component {
                             </Grid>
                             <Grid item sm sx={{ display: { xs: 'none', sm: 'block' } }} />
                         </Grid>
-                    </div>
+                    </Box>
 
                     {fileData.map((item, index) => (
-                        <div className={this.props.classes.containerPadding} key={index}>
+                        <Box sx={{ padding: { xs: '8px 0', sm: 1 } }} key={index}>
                             <Grid
                                 container
                                 direction="row"
@@ -526,13 +501,13 @@ export class FilesClass extends Component {
                                 spacing={2}
                                 padding={0}
                                 wrap={'nowrap'}
-                                className={this.props.classes.header}
+                                sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                             >
                                 <Grid
                                     item
                                     xs={2}
                                     sm={1}
-                                    className={this.props.classes.thumbIconCentered}
+                                    textAlign={'center'}
                                     data-analyticsid={`dsi-mimetype-${index}`}
                                     data-testid={`dsi-mimetype-${index}`}
                                 >
@@ -542,7 +517,9 @@ export class FilesClass extends Component {
                                     item
                                     xs={8}
                                     sm={4}
-                                    className={this.props.classes.dataWrapper}
+                                    textOverflow={'ellipsis'}
+                                    whiteSpace={'nowrap'}
+                                    overflow={'hidden'}
                                     data-analyticsid={`dsi-dsid-${index}`}
                                     data-testid={`dsi-dsid-${index}`}
                                 >
@@ -563,7 +540,9 @@ export class FilesClass extends Component {
                                     item
                                     sm={6}
                                     md={4}
-                                    className={this.props.classes.dataWrapper}
+                                    textOverflow={'ellipsis'}
+                                    whiteSpace={'nowrap'}
+                                    overflow={'hidden'}
                                     data-testid={`dsi-label-${index}`}
                                     sx={{ display: { xs: 'none', sm: 'block' } }}
                                 >
@@ -574,7 +553,9 @@ export class FilesClass extends Component {
                                 <Grid
                                     item
                                     md={2}
-                                    className={this.props.classes.dataWrapper}
+                                    textOverflow={'ellipsis'}
+                                    whiteSpace={'nowrap'}
+                                    overflow={'hidden'}
                                     data-testid={`dsi-size-${index}`}
                                     sx={{ display: { xs: 'none', md: 'block' } }}
                                 >
@@ -607,7 +588,7 @@ export class FilesClass extends Component {
                                     </Box>
                                 </Grid>
                             </Grid>
-                        </div>
+                        </Box>
                     ))}
                     {this.state.preview.mediaUrl && this.state.preview.mimeType && (
                         <MediaPreview
@@ -636,4 +617,4 @@ export class FilesClass extends Component {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(FilesClass);
+export default FilesClass;

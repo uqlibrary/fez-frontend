@@ -5,59 +5,37 @@ import { default as componentLocale } from 'locale/components';
 import { pathConfig } from 'config/pathConfig';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Link } from 'react-router-dom';
-import withStyles from '@mui/styles/withStyles';
+
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
-const styles = theme => ({
-    gridRow: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    },
-    ul: {
-        ...theme.typography.body2,
-        listStyleType: 'none',
-        padding: 0,
-        margin: 0,
-    },
-    contentIndicator: {
-        '& + &::before': {
-            content: `"${componentLocale.components.contentIndicators.divider}"`,
-        },
-    },
-    containerPadding: {
-        padding: `${theme.spacing(1)} 0`,
-        [theme.breakpoints.up('sm')]: {
-            padding: theme.spacing(1),
-        },
-    },
-});
-
-export class PublicationDetailsClass extends PureComponent {
+export class PublicationDetails extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object,
     };
 
     ViewRecordRow = ({ heading, data, rowId }) => (
-        <div className={this.props.classes.containerPadding}>
-            <Grid container spacing={2} padding={0} className={this.props.classes.gridRow} alignItems="flex-start">
+        <Box sx={theme => ({ padding: { xs: `${theme.spacing(1)} 0`, sm: theme.spacing(1) } })}>
+            <Grid
+                container
+                spacing={2}
+                padding={0}
+                sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                alignItems="flex-start"
+            >
                 <Grid item xs={12} sm={3}>
-                    <Typography
-                        variant="body2"
-                        component={'span'}
-                        classes={{ root: this.props.classes.header }}
-                        data-testid={`${rowId}-label`}
-                    >
+                    <Typography variant="body2" component={'span'} data-testid={`${rowId}-label`}>
                         {heading}
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={9} className={this.props.classes.data}>
+                <Grid item xs={12} sm={9}>
                     <Typography variant="body2" component={'span'} data-testid={`${rowId}`}>
                         {data}
                     </Typography>
                 </Grid>
             </Grid>
-        </div>
+        </Box>
     );
 
     render() {
@@ -108,14 +86,19 @@ export class PublicationDetailsClass extends PureComponent {
                                 heading={componentLocale.components.contentIndicators.label}
                                 data={this.props.publication.fez_record_search_key_content_indicator.map(
                                     (item, index) => (
-                                        <span
+                                        <Box
+                                            component={'span'}
                                             key={index}
                                             data-analyticsid={`rek-content-indicator-${index}`}
                                             data-testid={`rek-content-indicator-${index}`}
-                                            className={this.props.classes.contentIndicator}
+                                            sx={{
+                                                '& + &::before': {
+                                                    content: `"${componentLocale.components.contentIndicators.divider}"`,
+                                                },
+                                            }}
                                         >
                                             {item.rek_content_indicator_lookup}
-                                        </span>
+                                        </Box>
                                     ),
                                 )}
                                 rowId="rek-content-indicator"
@@ -126,7 +109,15 @@ export class PublicationDetailsClass extends PureComponent {
                             <this.ViewRecordRow
                                 heading={recordTypeHeading}
                                 data={
-                                    <ul className={this.props.classes.ul}>
+                                    <Box
+                                        component={'ul'}
+                                        sx={theme => ({
+                                            ...theme.typography.body2,
+                                            listStyleType: 'none',
+                                            padding: 0,
+                                            margin: 0,
+                                        })}
+                                    >
                                         {this.props.publication.fez_record_search_key_ismemberof.map(
                                             (collection, index) =>
                                                 collection.rek_ismemberof &&
@@ -147,7 +138,7 @@ export class PublicationDetailsClass extends PureComponent {
                                                     </li>
                                                 ),
                                         )}
-                                    </ul>
+                                    </Box>
                                 }
                                 rowId="rek-ismemberof"
                             />
@@ -158,6 +149,4 @@ export class PublicationDetailsClass extends PureComponent {
     }
 }
 
-const StyledPublicationDetailsClass = withStyles(styles, { withTheme: true })(PublicationDetailsClass);
-const PublicationDetails = props => <StyledPublicationDetailsClass {...props} />;
 export default PublicationDetails;

@@ -1,6 +1,7 @@
 import React from 'react';
-import makeStyles from '@mui/styles/makeStyles';
+
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -11,27 +12,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as actions from 'actions';
 
 const moment = require('moment');
-
-const useStyles = makeStyles(theme => ({
-    root: {
-        width: '100%',
-    },
-    heading: {
-        fontSize: theme.typography.pxToRem(15),
-        fontWeight: theme.typography.fontWeightRegular,
-    },
-    detailedHistoryRowHeader: {
-        padding: '5px',
-        color: '#fff',
-        backgroundColor: '#51247A',
-        paddingLeft: '5px',
-    },
-    detailedHistoryRow: {
-        '&:nth-child(even)': {
-            backgroundColor: '#efefef',
-        },
-    },
-}));
 
 const historyEventDate = date => {
     return moment
@@ -48,9 +28,8 @@ export const DetailedHistory = ({ record }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const classes = useStyles();
     return (
-        <div className={classes.root} id="detailed-history" data-testid="detailed-history">
+        <Box sx={{ width: '100%' }} id="detailed-history" data-testid="detailed-history">
             {detailedHistoryList && detailedHistoryList.length > 0 && (
                 <Accordion>
                     <AccordionSummary
@@ -63,10 +42,18 @@ export const DetailedHistory = ({ record }) => {
                     </AccordionSummary>
                     <AccordionDetails>
                         <Grid container data-testid={'detailed-history-grid'}>
-                            <Grid item xs={4} className={classes.detailedHistoryRowHeader}>
+                            <Grid
+                                item
+                                xs={4}
+                                sx={{ padding: '5px', color: '#fff', backgroundColor: '#51247A', paddingLeft: '5px' }}
+                            >
                                 <span>Date</span>
                             </Grid>
-                            <Grid item xs={8} className={classes.detailedHistoryRowHeader}>
+                            <Grid
+                                item
+                                xs={8}
+                                sx={{ padding: '5px', color: '#fff', backgroundColor: '#51247A', paddingLeft: '5px' }}
+                            >
                                 <span>Event</span>
                             </Grid>
                             {detailedHistoryList
@@ -78,7 +65,11 @@ export const DetailedHistory = ({ record }) => {
                                             key={histItem.pre_id}
                                             id={`detailed-history-row-${histItem.pre_id}`}
                                             data-testid={`detailed-history-row-${histItem.pre_id}`}
-                                            className={classes.detailedHistoryRow}
+                                            sx={{
+                                                '&:nth-child(even)': {
+                                                    backgroundColor: '#efefef',
+                                                },
+                                            }}
                                         >
                                             <Grid item xs={4} style={{ padding: '5px' }}>
                                                 <Typography
@@ -102,7 +93,7 @@ export const DetailedHistory = ({ record }) => {
                     </AccordionDetails>
                 </Accordion>
             )}
-        </div>
+        </Box>
     );
 };
 

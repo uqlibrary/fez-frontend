@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 
 import DefaultTemplate from './DefaultTemplate';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import makeStyles from '@mui/styles/makeStyles';
 import { formatUrlTextWithWbrTags as formatUrlText } from 'helpers/general';
 
-export const useStyles = makeStyles(() => ({
+const classes = {
     wrappableExternalLink: {
         overflow: 'visible !important',
         textOverflow: 'clip !important',
@@ -19,10 +18,9 @@ export const useStyles = makeStyles(() => ({
         verticalAlign: 'bottom',
         cursor: 'pointer',
     },
-}));
+};
 
 export const LinkTemplate = ({ data, templateProps, fieldId }) => {
-    const classes = useStyles();
     const { href, title, text, format = false } = templateProps;
     const derivedText = text(data);
     const finalLinkText = format ? formatUrlText(derivedText) : derivedText;
@@ -34,7 +32,7 @@ export const LinkTemplate = ({ data, templateProps, fieldId }) => {
                     href={href(data)}
                     title={title}
                     id={`${fieldId}-lookup`}
-                    className={classes.wrappableExternalLink}
+                    sx={{ ...classes.wrappableExternalLink }}
                 >
                     {finalLinkText}
                 </ExternalLink>

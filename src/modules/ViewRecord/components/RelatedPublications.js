@@ -4,24 +4,17 @@ import locale from 'locale/viewRecord';
 import { pathConfig } from 'config/pathConfig';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Link } from 'react-router-dom';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
-import withStyles from '@mui/styles/withStyles';
 
-const styles = () => ({
-    list: {
-        margin: 0,
-    },
-});
-
-export class RelatedPublicationsClass extends PureComponent {
+export class RelatedPublications extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         title: PropTypes.string,
         parentSearchKey: PropTypes.object,
         childrenSearchKey: PropTypes.object.isRequired,
         showPublicationTitle: PropTypes.bool,
-        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -41,7 +34,7 @@ export class RelatedPublicationsClass extends PureComponent {
         const testId = parentSearchKey && parentSearchKey.pid.replace(/_/g, '-');
 
         return (
-            <ul className={`${this.props.classes.list} publicationList`}>
+            <Box component={'ul'} sx={{ margin: 0 }} className={'publicationList'}>
                 {this.renderSubList(parents, parentSearchKey)}
                 {showPublicationTitle && (
                     <li key={'current'}>
@@ -52,7 +45,7 @@ export class RelatedPublicationsClass extends PureComponent {
                     </li>
                 )}
                 {this.renderSubList(children, childrenSearchKey)}
-            </ul>
+            </Box>
         );
     };
 
@@ -101,6 +94,4 @@ export class RelatedPublicationsClass extends PureComponent {
     }
 }
 
-const StyledRelatedPublicationsClass = withStyles(styles, { withTheme: true })(RelatedPublicationsClass);
-const RelatedPublications = props => <StyledRelatedPublicationsClass {...props} />;
 export default RelatedPublications;

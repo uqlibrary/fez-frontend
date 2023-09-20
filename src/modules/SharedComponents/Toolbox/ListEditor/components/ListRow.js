@@ -9,19 +9,7 @@ import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import Delete from '@mui/icons-material/Delete';
 import Edit from '@mui/icons-material/Edit';
-import makeStyles from '@mui/styles/makeStyles';
 import { GenericTemplate } from './GenericTemplate';
-
-const useStyles = makeStyles(() => ({
-    center: {
-        textAlign: 'center',
-    },
-    row: {
-        marginLeft: 0,
-        marginRight: 0,
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
-    },
-}));
 
 export const ListRow = ({
     canEdit,
@@ -39,7 +27,6 @@ export const ListRow = ({
     onMoveUp,
     listRowId,
 }) => {
-    const classes = useStyles();
     const { moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation, editHint } = locale;
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
@@ -72,12 +59,12 @@ export const ListRow = ({
                 locale={deleteRecordConfirmation}
                 confirmationBoxId={`${listRowId}-delete`}
             />
-            <Grid container alignItems="center" spacing={1} className={classes.row}>
+            <Grid container alignItems="center" spacing={1} ml={0} mt={0} borderBottom={'1px solid rgba(0, 0, 0, 0.1)'}>
                 <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6} md={hideReorder ? 11 : 9}>
                     <ItemTemplate item={item} />
                 </Grid>
                 {!hideReorder && (
-                    <Grid item xs={5} sm={5} md={2} className={classes.center}>
+                    <Grid item xs={5} sm={5} md={2} textAlign={'center'}>
                         <Grid container justifyContent="flex-end">
                             {canMoveUp && (
                                 <Grid item>
@@ -140,7 +127,7 @@ export const ListRow = ({
                         </Grid>
                     </Grid>
                 )}
-                <Grid item xs={2} sm={1} className={classes.center}>
+                <Grid item xs={2} sm={1} textAlign={'center'}>
                     <Tooltip title={deleteHint}>
                         <span>
                             <IconButton

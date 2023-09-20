@@ -3,18 +3,9 @@ import PropTypes from 'prop-types';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import makeStyles from '@mui/styles/makeStyles';
 import Button from '@mui/material/Button';
 import { isValidKeyword } from 'config/validation';
 import { indexOf } from 'lodash';
-
-const useStyles = makeStyles(theme => ({
-    MUITextLabel: theme.components.MuiFormLabel.styleOverrides,
-    remindToAdd: {
-        marginTop: 8,
-        color: '#f06f0d',
-    },
-}));
 
 const onItemChangeCallback = (setItem, normalize) => {
     const callback = event => setItem(normalize(event.target.value));
@@ -37,7 +28,6 @@ export const FreeTextForm = ({
     listEditorId,
     onSubmit,
 }) => {
-    const classes = useStyles();
     const [item, setItem] = useState(itemSelectedToEdit || '');
     const [itemSubmitted, setItemSubmitted] = useState(false);
 
@@ -100,7 +90,7 @@ export const FreeTextForm = ({
                     required={required}
                 />
                 {remindToAdd && remindToAddText && item.length !== 0 && !isValid(item) && (
-                    <Typography variant="caption" className={classes.remindToAdd}>
+                    <Typography variant="caption" mt={'8px'} color={'#f06f0d'}>
                         {remindToAddText}
                     </Typography>
                 )}

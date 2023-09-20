@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import makeStyles from '@mui/styles/makeStyles';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
@@ -9,20 +8,7 @@ import DeleteForever from '@mui/icons-material/DeleteForever';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 
-const useStyles = makeStyles(() => ({
-    right: {
-        textAlign: 'right',
-    },
-    center: {
-        textAlign: 'center',
-    },
-    header: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
-    },
-}));
-
 export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder, listEditorId }) => {
-    const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const { nameColumn, reorderColumn, deleteAll, deleteAllConfirmation } = locale;
 
@@ -35,16 +21,16 @@ export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder, list
                 locale={deleteAllConfirmation}
                 confirmationBoxId={`${listEditorId}-delete-all`}
             />
-            <Grid container alignItems="center" spacing={2} className={classes.header}>
+            <Grid container alignItems="center" spacing={2} borderBottom={'1px solid rgba(0, 0, 0, 0.1)'}>
                 <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
                     <Typography variant="caption">{nameColumn}</Typography>
                 </Grid>
                 {!hideReorder && (
-                    <Grid item xs={5} sm={5} className={classes.right}>
+                    <Grid item xs={5} sm={5} textAlign={'right'}>
                         <Typography variant="caption">{reorderColumn}</Typography>
                     </Grid>
                 )}
-                <Grid item xs={2} sm={1} className={classes.center}>
+                <Grid item xs={2} sm={1} textAlign={'center'}>
                     <Tooltip title={deleteAll}>
                         <span>
                             <IconButton

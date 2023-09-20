@@ -1,29 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import makeStyles from '@mui/styles/makeStyles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET } from 'config/general';
-
-const useStyles = makeStyles(
-    theme => ({
-        gridRow: {
-            borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        },
-        data: {
-            paddingRight: 4,
-        },
-        containerPadding: {
-            padding: `${theme.spacing(1)} 0`,
-            [theme.breakpoints.up('sm')]: {
-                padding: theme.spacing(1),
-            },
-        },
-    }),
-    { withTheme: true },
-);
 
 const searchByOrder = (grantData, orderSubkey, order) => {
     return grantData && grantData.filter(grantData => grantData[orderSubkey] === order)[0];
@@ -31,7 +13,6 @@ const searchByOrder = (grantData, orderSubkey, order) => {
 
 const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => {
     const txt = locale.viewRecord.headings.default.grantInformation;
-    const classes = useStyles();
 
     const hasGrantId = !!grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0;
     const grantIdTitle = hasGrantId ? txt.fez_record_search_key_grant_id : '';
@@ -39,8 +20,15 @@ const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => 
         hasGrantId && grantId.rek_grant_id !== ORG_TYPES_LOOKUP[ORG_TYPE_NOT_SET] ? grantId.rek_grant_id : '';
 
     return (
-        <div className={classes.containerPadding} key={index}>
-            <Grid container spacing={2} padding={0} key={order} className={classes.gridRow} alignItems="flex-start">
+        <Box sx={theme => ({ padding: { xs: `${theme.spacing(1)} 0`, sm: 1 } })} key={index}>
+            <Grid
+                container
+                spacing={2}
+                padding={0}
+                key={order}
+                sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                alignItems="flex-start"
+            >
                 <Grid item xs={12} sm={3}>
                     <Typography variant="body2" data-testid={`rek-grant-label-${index}`}>
                         {`${txt.fez_record_search_key_grant_agency}${(grantIdTitle && ` (${grantIdTitle})`) || ''}`}
@@ -56,7 +44,7 @@ const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => 
                     </Typography>
                 </Grid>
             </Grid>
-        </div>
+        </Box>
     );
 };
 
