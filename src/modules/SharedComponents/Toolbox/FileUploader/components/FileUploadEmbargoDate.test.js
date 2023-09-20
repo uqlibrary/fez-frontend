@@ -1,5 +1,6 @@
-import { FileUploadEmbargoDate } from './FileUploadEmbargoDate';
-import FileUploadEmbargoDateWithStyles from './FileUploadEmbargoDate';
+import React from 'react';
+import FileUploadEmbargoDate from './FileUploadEmbargoDate';
+import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -10,40 +11,28 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(FileUploadEmbargoDate, props);
+    return rtlRender(<FileUploadEmbargoDate {...props} />);
 }
 
 describe('Component FileUploadEmbargoDate', () => {
     it('should render with default setup', () => {
-        const wrapper = setup({ value: '2016' });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.instance()._onChange();
+        const { container } = setup({ value: '2016' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with no supplied date', () => {
-        const wrapper = setup({
+        const { container } = setup({
             minDate: new Date('2016'),
             classes: {
                 input: '',
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render with default setup with styles', () => {
-        const wrapper = getElement(FileUploadEmbargoDateWithStyles, {
-            minDate: new Date('2016'),
-            value: '2016',
-            classes: {
-                input: '',
-            },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled', () => {
-        const wrapper = setup({ disabled: true, value: '2016' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ disabled: true, value: '2016' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should set correct date on date changed', () => {
@@ -61,17 +50,16 @@ describe('Component FileUploadEmbargoDate', () => {
             value: '2016',
         };
 
-        const wrapper = setup(props);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container, getByRole } = setup(props);
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance()._onChange('Sat Feb 10 2018 00:00:00 GMT+1000 (AEST)');
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        fireEvent.change(getByRole('textbox'), { target: { value: '01/01/2018' } });
+        expect(container).toMatchSnapshot();
         expect(onDateChangedTestFn).toHaveBeenCalled();
     });
 
     it('should display the clear field', () => {
-        const wrapper = setup({ canBeCleared: true, value: '2016' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ canBeCleared: true, value: '2016' });
+        expect(container).toMatchSnapshot();
     });
 });

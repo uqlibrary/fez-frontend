@@ -1,11 +1,13 @@
+import React from 'react';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps, args = {}) {
+function setup(testProps) {
     const props = {
         ...testProps,
     };
 
-    return getElement(FileUploadDropzoneStaticContent, props, args);
+    return rtlRender(<FileUploadDropzoneStaticContent {...props} />);
 }
 
 describe('Component FileUploadDropzoneStaticContent', () => {
@@ -17,7 +19,7 @@ describe('Component FileUploadDropzoneStaticContent', () => {
                 fileUploadInstruction: 'Upload whatever you like :)',
             },
         };
-        const wrapper = setup(props, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup(props);
+        expect(container).toMatchSnapshot();
     });
 });

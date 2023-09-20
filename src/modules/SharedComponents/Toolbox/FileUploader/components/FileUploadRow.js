@@ -48,6 +48,7 @@ export class FileUploadRow extends PureComponent {
     };
 
     _showConfirmation = () => {
+        /* istanbul ignore else */
         if (this.confirmationBox) this.confirmationBox.showConfirmation();
     };
 

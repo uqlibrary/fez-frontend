@@ -1,5 +1,6 @@
-import { FileUploadTermsAndConditions } from './FileUploadTermsAndConditions';
-import FileUploadTermsAndConditionsWithStyles from './FileUploadTermsAndConditions';
+import React from 'react';
+import FileUploadTermsAndConditions from './FileUploadTermsAndConditions';
+import { rtlRender, fireEvent } from 'test-utils';
 
 const getProps = (testProps = {}) => ({
     disabled: false,
@@ -15,29 +16,24 @@ const getProps = (testProps = {}) => ({
 });
 
 function setup(testProps = {}) {
-    return getElement(FileUploadTermsAndConditions, getProps(testProps));
+    return rtlRender(<FileUploadTermsAndConditions {...getProps(testProps)} />);
 }
 
 describe('Component FileUploadTermsAndConditions', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render default view with styles', () => {
-        const wrapper = getElement(FileUploadTermsAndConditionsWithStyles, getProps(), { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render checked if terms and conditions accepted', () => {
-        const wrapper = setup({ isTermsAndConditionsAccepted: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isTermsAndConditionsAccepted: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should call onAcceptTermsAndConditions to handle change', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onAcceptTermsAndConditions: testFn });
-        wrapper.instance()._handleChange({ target: { checked: true } });
+        const { getByRole } = setup({ onAcceptTermsAndConditions: testFn });
+        fireEvent.click(getByRole('checkbox'));
         expect(testFn).toHaveBeenCalledWith(true);
     });
 });

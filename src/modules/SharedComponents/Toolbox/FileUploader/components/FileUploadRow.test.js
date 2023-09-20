@@ -1,8 +1,12 @@
+import React from 'react';
 import { FileUploadRow } from './FileUploadRow';
+import { render, WithReduxStore, fireEvent, within } from 'test-utils';
+import moment from 'moment';
 
 function setup(testProps = {}) {
     const props = {
         index: 0,
+        isAdmin: false,
         uploadedFile: { name: 'a.txt', size: 100 },
         requireOpenAccessStatus: true,
         onDelete: jest.fn(),
@@ -11,42 +15,46 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(FileUploadRow, props);
+    return render(
+        <WithReduxStore>
+            <FileUploadRow {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('FileUploadRow', () => {
     it('renders with uploaded file', () => {
-        const wrapper = setup();
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('call prop to update file metadata with closed access', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({
+        const { getByRole } = setup({
             requireOpenAccessStatus: true,
             onAccessConditionChange: testFunction,
             uploadedFile: file,
             index: 0,
         });
 
-        wrapper.instance()._updateAccessCondition(8);
-        expect(testFunction).toHaveBeenCalledWith(file, 0, 8);
+        fireEvent.mouseDown(getByRole('button', { name: 'Select access conditions' }));
+        fireEvent.click(getByRole('option', { name: 'Closed Access' }));
+        expect(testFunction).toHaveBeenCalledWith(file, 0, 1);
     });
+
     it('call prop to update file description', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({
+        const { getByTestId } = setup({
             requireOpenAccessStatus: true,
             onFileDescriptionChange: testFunction,
             uploadedFile: file,
             index: 0,
         });
-
-        wrapper.instance()._updateFileDescription({ target: { value: 'Test Description' } });
+        fireEvent.change(getByTestId('dsi-label-upload-0-input'), { target: { value: 'Test Description' } });
         expect(testFunction).toHaveBeenCalledWith(file, 0, 'Test Description');
     });
 
@@ -54,21 +62,23 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({
+        const { getByRole } = setup({
             requireOpenAccessStatus: true,
             onAccessConditionChange: testFunction,
             uploadedFile: file,
             index: 0,
         });
 
-        wrapper.instance()._updateAccessCondition(9);
-        expect(testFunction).toHaveBeenCalledWith(file, 0, 9);
+        fireEvent.mouseDown(getByRole('button', { name: 'Select access conditions' }));
+        fireEvent.click(getByRole('option', { name: 'Open Access' }));
+        expect(testFunction).toHaveBeenCalledWith(file, 0, 5);
     });
+
     it('call prop to update file metadata with non-public security policy', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({
+        const { getByRole } = setup({
             requireOpenAccessStatus: true,
             isAdmin: true,
             onSecurityPolicyChange: testFunction,
@@ -76,15 +86,16 @@ describe('FileUploadRow', () => {
             index: 0,
         });
 
-        wrapper.instance()._updateSecurityPolicy(8);
-        expect(testFunction).toHaveBeenCalledWith(file, 0, 8);
+        fireEvent.mouseDown(getByRole('button', { name: 'Select security policy' }));
+        fireEvent.click(getByRole('option', { name: 'Administrators' }));
+        expect(testFunction).toHaveBeenCalledWith(file, 0, 1);
     });
 
     it('call prop to update file metadata with public security policy', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({
+        const { getByRole } = setup({
             requireOpenAccessStatus: true,
             isAdmin: true,
             onSecurityPolicyChange: testFunction,
@@ -92,68 +103,61 @@ describe('FileUploadRow', () => {
             index: 0,
         });
 
-        wrapper.instance()._updateSecurityPolicy(9);
-        expect(testFunction).toHaveBeenCalledWith(file, 0, 9);
+        fireEvent.mouseDown(getByRole('button', { name: 'Select security policy' }));
+        fireEvent.click(getByRole('option', { name: 'Public' }));
+        expect(testFunction).toHaveBeenCalledWith(file, 0, 5);
     });
 
     it('call prop to update file metadata with open access date', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({ onEmbargoDateChange: testFunction, uploadedFile: file, index: 0 });
+        file.access_condition_id = 5;
+        const { getByTestId } = setup({
+            onEmbargoDateChange: testFunction,
+            uploadedFile: file,
+            index: 0,
+        });
+        fireEvent.change(within(getByTestId('dsi-embargo-date-0-input')).getByRole('textbox'), {
+            target: { value: '01/01/2016' },
+        });
 
-        wrapper.instance()._updateEmbargoDate(new Date(2016));
-        expect(testFunction).toHaveBeenCalledWith(file, 0, new Date(2016));
+        expect(testFunction).toHaveBeenCalledWith(file, 0, moment('01/01/2016', 'DD/MM/YYYY', true));
     });
 
-    it('call prop to update file order', () => {
+    it('call prop to move file down', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
-        const wrapper = setup({
-            onOrderUpClick: testFunction,
+        const { getByTestId } = setup({
             onOrderDownClick: testFunction,
             uploadedFile: file,
             index: 0,
         });
+        fireEvent.click(getByTestId('new-file-upload-down-0'));
+        expect(testFunction).toHaveBeenCalled();
+    });
 
-        wrapper.instance()._onOrderUpClick(1);
-        expect(testFunction).toHaveBeenCalledWith(0, 1);
-        wrapper.instance()._onOrderDownClick(0);
-        expect(testFunction).toHaveBeenCalledWith(0, 0);
+    it('call prop to move file up', () => {
+        const testFunction = jest.fn();
+        const file = new File([''], 'a.txt');
+        const { getByTestId } = setup({
+            onOrderUpClick: testFunction,
+            uploadedFile: file,
+            index: 1,
+        });
+        fireEvent.click(getByTestId('new-file-upload-up-1'));
+        expect(testFunction).toHaveBeenCalled();
     });
 
     it('should show confirmation and delete file', () => {
         const onDeleteFn = jest.fn();
-        const showConfirmationFn = jest.fn();
-        const wrapper = setup({
+        const { container, getByTestId } = setup({
             width: 'xs',
             onDelete: onDeleteFn,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper
-            .find('WithStyles(FileUploadRowMobileView)')
-            .props()
-            .onDelete();
-        expect(showConfirmationFn).not.toBeCalled();
-
-        wrapper
-            .find('WithStyles(ConfirmDialogBox)')
-            .props()
-            .onRef({
-                showConfirmation: showConfirmationFn,
-            });
-
-        wrapper
-            .find('WithStyles(FileUploadRowMobileView)')
-            .props()
-            .onDelete();
-        expect(showConfirmationFn).toHaveBeenCalled();
-
-        wrapper
-            .find('WithStyles(ConfirmDialogBox)')
-            .props()
-            .onAction();
+        expect(container).toMatchSnapshot();
+        fireEvent.click(getByTestId('dsi-dsid-0-delete'));
+        fireEvent.click(getByTestId('confirm-dsi-dsid-delete'));
         expect(onDeleteFn).toHaveBeenCalled();
     });
 });

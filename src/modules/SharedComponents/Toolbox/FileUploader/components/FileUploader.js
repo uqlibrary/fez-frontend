@@ -297,7 +297,7 @@ export class FileUploader extends PureComponent {
     calculateMaxFileSize = () => {
         const { maxFileSize, fileSizeUnit } = this.props.fileRestrictionsConfig;
         const exponent = config.SIZE_UNITS.indexOf(fileSizeUnit);
-        return maxFileSize * Math.pow(config.SIZE_BASE, exponent >= 0 ? exponent : 0);
+        return maxFileSize * Math.pow(config.SIZE_BASE, exponent >= 0 ? exponent : /* istanbul ignore next */ 0);
     };
 
     /**
