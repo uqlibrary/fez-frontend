@@ -1,4 +1,4 @@
-import { DocumentTypeMultipleField, styles } from './DocumentTypeMultipleField';
+import { DocumentTypeMultipleField } from './DocumentTypeMultipleField';
 
 function setup(testProps = {}) {
     const props = {
@@ -49,30 +49,6 @@ describe('DocumentTypeMultipleField component', () => {
             .props()
             .onChange({ target: { value: 316 } });
         expect(updateDocTypeValuesFn).toHaveBeenCalledWith(316);
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            typography: {
-                caption: 'test1',
-            },
-            palette: {
-                accent: {
-                    main: 'test2',
-                },
-                white: {
-                    main: 'test3',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette.accent;
-        delete theme.palette.white;
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
     });
 
     it('should have the value "0" if docTypes property is empty', () => {

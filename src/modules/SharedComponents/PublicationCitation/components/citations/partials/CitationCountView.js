@@ -25,7 +25,7 @@ export class CitationCountView extends PureComponent {
             <React.Fragment>
                 <ExternalLink
                     id="citation-count"
-                    className={'${source}CitationCount'}
+                    className={`${source}CitationCount`}
                     sx={{ ...theme.typography.caption, marginRight: '8px' }}
                     href={link}
                     aria-label={title}

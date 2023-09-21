@@ -40,7 +40,7 @@ export const ConfirmationBox = ({
         onClose();
         !!onAlternateAction && onAlternateAction();
     };
-    console.log(classes);
+
     return (
         <Dialog
             style={{ padding: 6 }}

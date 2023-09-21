@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { styled } from '@mui/material/styles';
-
-const StyledRule = styled('hr')(({ theme }) => ({
-    opacity: 0.1,
-    border: 0,
-    borderTop: `1px solid ${theme.palette.primary.main}`,
-}));
-const StyledTitle = styled(Typography)(({ theme }) => ({
-    opacity: 0.85,
-    color: theme.palette.primary.main,
-    fontSize: theme.typography.fontSize,
-    fontWeight: 500,
-}));
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 export class Cards extends Component {
     static propTypes = {
@@ -29,12 +17,28 @@ export class Cards extends Component {
                     <Grid item xs={12}>
                         <Grid container spacing={1}>
                             <Grid item xs>
-                                <StyledRule />
+                                <Box
+                                    component={'hr'}
+                                    sx={{
+                                        opacity: 0.1,
+                                        border: 0,
+                                        borderTop: '1px solid',
+                                        borderTopColor: 'primary.main',
+                                    }}
+                                />
                             </Grid>
                             <Grid item xs={'auto'} sx={{ ml: '-4px' }}>
-                                <StyledTitle component={'h4'} color={'primary'}>
+                                <Typography
+                                    component={'h4'}
+                                    sx={{
+                                        opacity: 0.85,
+                                        color: 'primary.main',
+                                        fontSize: 'fontSize',
+                                        fontWeight: 500,
+                                    }}
+                                >
                                     &nbsp;{title}
-                                </StyledTitle>
+                                </Typography>
                             </Grid>
                         </Grid>
                     </Grid>

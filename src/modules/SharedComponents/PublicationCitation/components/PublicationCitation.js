@@ -208,7 +208,6 @@ export class PublicationCitation extends PureComponent {
 
     constructor(props) {
         super(props);
-        console.log(props.theme);
         // keep a list of all available citations
         this.citationComponents = {
             AudioDocumentCitation,

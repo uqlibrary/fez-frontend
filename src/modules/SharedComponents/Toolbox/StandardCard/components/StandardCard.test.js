@@ -3,10 +3,6 @@ import { render, WithReduxStore } from 'test-utils';
 
 import StandardCard from './StandardCard';
 
-jest.mock('@mui/styles', () => ({
-    makeStyles: () => () => ({}),
-}));
-
 function setup(testProps) {
     const props = {
         title: 'card title',

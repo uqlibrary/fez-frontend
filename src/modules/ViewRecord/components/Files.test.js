@@ -1,14 +1,7 @@
 import React from 'react';
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import {
-    default as Files,
-    formatBytes,
-    getFileOpenAccessStatus,
-    untranscodedItem,
-    styles,
-    getDownloadLicence,
-} from './Files';
+import { default as Files, formatBytes, getFileOpenAccessStatus, untranscodedItem, getDownloadLicence } from './Files';
 import * as mock from 'mock/data';
 import {
     AV_CHECK_STATE_CLEAN,
@@ -100,36 +93,6 @@ describe('Files Component ', () => {
     it('should render component', () => {
         const { container } = setup({});
         expect(container).toMatchSnapshot();
-    });
-
-    it('should have a style helper', () => {
-        const theme = {
-            palette: { secondary: { light: 'red' } },
-            breakpoints: { up: () => '@media (min-width: 600px)' },
-            spacing: num => num * 8,
-        };
-        expect(styles(theme)).toStrictEqual({
-            header: {
-                borderBottom: '1px solid red',
-            },
-            containerPadding: {
-                '@media (min-width: 600px)': {
-                    padding: 8,
-                },
-                padding: '8px 0',
-            },
-            dataWrapper: {
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-            },
-            fileIcon: {
-                opacity: 0.5,
-            },
-            thumbIconCentered: {
-                textAlign: 'center',
-            },
-        });
     });
 
     it('should not render advisory statement', () => {

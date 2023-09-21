@@ -1,4 +1,4 @@
-import { SimpleSearchComponent, styles } from './SimpleSearchComponent';
+import { SimpleSearchComponent } from './SimpleSearchComponent';
 import * as constants from 'config/general';
 
 function setup(testProps = {}) {
@@ -162,23 +162,6 @@ describe('SimpleSearchComponent', () => {
         wrapper.setState({ searchText: 'this is fine' });
         wrapper.update();
         expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            palette: {
-                secondary: {
-                    main: 'test1',
-                },
-                white: {
-                    main: 'test2',
-                },
-            },
-            typography: {
-                fontWeightNormal: 'test3',
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
     });
 
     it('should have default event handler props return undefined', () => {

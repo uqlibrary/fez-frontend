@@ -4,9 +4,6 @@ import FileUploadEmbargoDateWithStyles from './FileUploadEmbargoDate';
 function setup(testProps = {}) {
     const props = {
         minDate: new Date('2016'),
-        classes: {
-            input: '',
-        },
         ...testProps,
     };
 
@@ -23,9 +20,6 @@ describe('Component FileUploadEmbargoDate', () => {
     it('should render with no supplied date', () => {
         const wrapper = setup({
             minDate: new Date('2016'),
-            classes: {
-                input: '',
-            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -34,9 +28,6 @@ describe('Component FileUploadEmbargoDate', () => {
         const wrapper = getElement(FileUploadEmbargoDateWithStyles, {
             minDate: new Date('2016'),
             value: '2016',
-            classes: {
-                input: '',
-            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

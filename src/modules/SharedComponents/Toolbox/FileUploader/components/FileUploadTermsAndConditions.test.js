@@ -1,5 +1,4 @@
 import { FileUploadTermsAndConditions } from './FileUploadTermsAndConditions';
-import FileUploadTermsAndConditionsWithStyles from './FileUploadTermsAndConditions';
 
 const getProps = (testProps = {}) => ({
     disabled: false,
@@ -21,11 +20,6 @@ function setup(testProps = {}) {
 describe('Component FileUploadTermsAndConditions', () => {
     it('should render default view', () => {
         const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render default view with styles', () => {
-        const wrapper = getElement(FileUploadTermsAndConditionsWithStyles, getProps(), { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

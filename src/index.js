@@ -1,6 +1,3 @@
-if (process.env.BRANCH === 'production') {
-    require('./MuiClassNameSetup');
-}
 // External
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
