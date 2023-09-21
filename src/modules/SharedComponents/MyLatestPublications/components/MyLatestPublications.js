@@ -8,17 +8,6 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import withStyles from '@mui/styles/withStyles';
-
-export const styles = theme => ({
-    blueButton: {
-        backgroundColor: theme.palette.accent.main,
-        color: theme.palette.white.main,
-        '&:hover': {
-            backgroundColor: theme.palette.accent.dark,
-        },
-    },
-});
 
 export class MyLatestPublications extends PureComponent {
     static propTypes = {
@@ -74,7 +63,13 @@ export class MyLatestPublications extends PureComponent {
                             variant="contained"
                             onClick={this._viewMyResearch}
                             color="secondary"
-                            className={this.props.classes.blueButton}
+                            sx={{
+                                backgroundColor: 'accent.main',
+                                color: 'white.main',
+                                '&:hover': {
+                                    backgroundColor: 'accent.dark',
+                                },
+                            }}
                         >
                             {`${txt.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
                         </Button>
@@ -85,4 +80,4 @@ export class MyLatestPublications extends PureComponent {
     }
 }
 
-export default withStyles(styles)(MyLatestPublications);
+export default MyLatestPublications;

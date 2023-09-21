@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import withTheme from '@mui/styles/withTheme';
+import { withTheme } from 'helpers/withTheme';
 
 import Box from '@mui/material/Box';
 

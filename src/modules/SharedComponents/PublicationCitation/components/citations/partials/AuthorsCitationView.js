@@ -4,7 +4,7 @@ import CitationView from './CitationView';
 import { locale } from 'locale';
 import { pathConfig } from 'config/pathConfig';
 import { Link } from 'react-router-dom';
-import withTheme from '@mui/styles/withTheme';
+import { withTheme } from 'helpers/withTheme';
 
 const classes = {
     authorIdLink: theme => ({

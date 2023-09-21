@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import withTheme from '@mui/styles/withTheme';
+import { withTheme } from 'helpers/withTheme';
 
 import { parseHtmlToJSX } from 'helpers/general';
 import { Link } from 'react-router-dom';
@@ -208,6 +208,7 @@ export class PublicationCitation extends PureComponent {
 
     constructor(props) {
         super(props);
+        console.log(props.theme);
         // keep a list of all available citations
         this.citationComponents = {
             AudioDocumentCitation,
