@@ -33,12 +33,6 @@ const internalClasses = {
 };
 
 const ExternalLink = ({ children, className = '', height, openInNewIcon = true, width, inline = false, ...rest }) => {
-    if (!!!rest.sx && !!className) {
-        console.warn(
-            'ExternalLink is no longer using "className" - use "sx" instead! Only pass an sx object with styles!',
-            className,
-        );
-    }
     const openInSizedWindow = (link, width, height) => () =>
         window.open(
             link,
@@ -58,7 +52,6 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
         rest.target ||= '_blank';
     }
 
-    console.log(rest.sx);
     return (
         <StyledLink
             id={`${rest.id}-link`}
@@ -71,6 +64,7 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
                 undefined
             }
             inline={inline}
+            className={className}
             {...rest}
         >
             {!!inline ? (

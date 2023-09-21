@@ -44,4 +44,4 @@ export class CitationCountView extends PureComponent {
     }
 }
 
-export default withTheme(CitationCountView);
+export default withTheme()(CitationCountView);

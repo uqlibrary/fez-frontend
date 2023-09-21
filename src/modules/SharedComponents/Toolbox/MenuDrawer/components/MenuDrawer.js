@@ -147,7 +147,7 @@ export class MenuDrawer extends Component {
                 sx={{
                     '& .MuiDrawer-paper': {
                         width: '260px',
-                        '-webkit-box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)',
+                        WebkitBoxShadow: '5px 0 5px -2px rgba(0,0,0,0.15)',
                         boxShadow: '5px 0 5px -2px rgba(0,0,0,0.15)',
                     },
                     '& .MuiDrawer-paperAnchorDockedLeft': {

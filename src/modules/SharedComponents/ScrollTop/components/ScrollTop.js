@@ -49,10 +49,10 @@ export const ScrollTop = ({ show, showAfter }) => {
                     position: 'absolute',
                     right: '32px',
                     bottom: '16px',
-                    '-webkit-transition': 'opacity 0.5s',
+                    WebkitTransition: 'opacity 0.5s',
                     transition: 'opacity 0.3s',
                     '&hover:': {
-                        '-webkit-transition': 'opacity 0.5s',
+                        WebkitTransition: 'opacity 0.5s',
                         transition: 'opacity 0.3s',
                         opacity: 0.9,
                     },

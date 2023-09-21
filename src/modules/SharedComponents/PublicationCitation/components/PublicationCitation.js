@@ -605,4 +605,4 @@ export class PublicationCitation extends PureComponent {
     }
 }
 
-export default withTheme(PublicationCitation);
+export default withTheme()(PublicationCitation);

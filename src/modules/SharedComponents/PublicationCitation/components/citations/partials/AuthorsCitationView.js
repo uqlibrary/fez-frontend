@@ -201,4 +201,4 @@ export class AuthorsCitationView extends PureComponent {
     }
 }
 
-export default withTheme(AuthorsCitationView);
+export default withTheme()(AuthorsCitationView);

@@ -16,7 +16,7 @@ const StyledResearchedLink = styled('div')({
         cursor: 'pointer',
     },
     '& .error': {
-        '-webkit-filter': 'grayscale(1)',
+        WebkitFilter: 'grayscale(1)',
         filter: 'grayscale(1)',
     },
 });

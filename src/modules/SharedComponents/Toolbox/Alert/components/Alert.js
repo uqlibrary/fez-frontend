@@ -153,7 +153,6 @@ export const Alert = ({
     type,
     wiggle,
 }) => {
-    console.log(type);
     const renderedIcon = type !== 'custom' ? renderIcon(type) : customIcon;
     return (
         <div data-testid="alert" style={{ marginTop: '5px' }}>

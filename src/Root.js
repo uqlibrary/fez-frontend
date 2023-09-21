@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 // MUI1
 import { mui1theme } from 'config';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
-import './MuiClassNameSetup';
 
 // Top level "pages"
 import { App } from 'modules/App';

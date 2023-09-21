@@ -101,4 +101,4 @@ export class CitationCounts extends PureComponent {
     }
 }
 
-export default withTheme(CitationCounts);
+export default withTheme()(CitationCounts);
