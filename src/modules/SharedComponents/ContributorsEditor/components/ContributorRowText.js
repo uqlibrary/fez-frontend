@@ -139,7 +139,7 @@ ContributorRowText.propTypes = {
     classes: PropTypes.object,
     index: PropTypes.number,
     suffix: PropTypes.string,
-    selectedClass: PropTypes.string,
+    selectedClass: PropTypes.object,
     showRoleInput: PropTypes.bool,
     width: PropTypes.string,
 };

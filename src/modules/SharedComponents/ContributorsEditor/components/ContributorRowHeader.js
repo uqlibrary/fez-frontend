@@ -94,7 +94,7 @@ export class ContributorRowHeader extends PureComponent {
                         <People />
                     </ListItemIcon>
 
-                    <Grid container classes={{ container: classes.listContainer }}>
+                    <Grid container classes={{ container: classes?.listContainer }}>
                         <Grid item xs={10} sm={5} md={3}>
                             <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }} />
                         </Grid>
@@ -117,7 +117,7 @@ export class ContributorRowHeader extends PureComponent {
                             )}
                         </Grid>
                     </Grid>
-                    <ListItemSecondaryAction classes={{ root: classes.paddingRight64 }}>
+                    <ListItemSecondaryAction classes={{ root: classes?.paddingRight64 }}>
                         <ListItemText
                             secondary={reorderColumn}
                             secondaryTypographyProps={{ variant: 'caption' }}

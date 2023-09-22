@@ -1,5 +1,4 @@
 import { FileUploadDropzone, removeInvalidFileNames } from './FileUploadDropzone';
-import FileUploadDropzoneWithStyles from './FileUploadDropzone';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 
 function setup(testProps = {}, args = { isShallow: true }) {

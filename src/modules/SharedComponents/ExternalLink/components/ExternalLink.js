@@ -54,6 +54,7 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
 
     return (
         <StyledLink
+            {...rest}
             tabIndex={0}
             title={
                 rest.title ||
@@ -62,7 +63,6 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
             }
             inline={inline}
             className={className}
-            {...rest}
             id={`${rest.id}-link`}
             data-analyticsid={`${rest.id}-link`}
             data-testid={`${rest.id}-link`}

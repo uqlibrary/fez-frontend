@@ -154,7 +154,7 @@ export class AuthorsCitationView extends PureComponent {
                 element = (
                     <Link
                         style={{ ...(!!author.id ? classes.authorIdLink(theme) : {}) }}
-                        className={!!!author.id && 'authorNameLink'}
+                        className={!!!author.id ? 'authorNameLink' : ''}
                         to={href}
                         key={key}
                         data-testid={`${testId}-${index}-link`}

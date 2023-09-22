@@ -8,11 +8,12 @@ export class Cards extends Component {
     static propTypes = {
         title: PropTypes.any,
         children: PropTypes.any,
+        classes: PropTypes.object,
     };
     render() {
-        const { title, children } = this.props;
+        const { title, classes, children } = this.props;
         return (
-            <Grid container spacing={0} sx={{ mt: '8px' }} className={'AdminCard'}>
+            <Grid container spacing={0} sx={{ mt: '8px' }} className={`${classes?.card} AdminCard`}>
                 <Grid item xs={12}>
                     <Grid item xs={12}>
                         <Grid container spacing={1}>
@@ -25,9 +26,10 @@ export class Cards extends Component {
                                         borderTop: '1px solid',
                                         borderTopColor: 'primary.main',
                                     }}
+                                    className={classes?.divider}
                                 />
                             </Grid>
-                            <Grid item xs={'auto'} sx={{ ml: '-4px' }}>
+                            <Grid item xs={'auto'} sx={{ ml: '-4px' }} className={classes?.titlePortion}>
                                 <Typography
                                     component={'h4'}
                                     sx={{
@@ -36,6 +38,7 @@ export class Cards extends Component {
                                         fontSize: 'fontSize',
                                         fontWeight: 500,
                                     }}
+                                    className={classes?.title}
                                 >
                                     &nbsp;{title}
                                 </Typography>

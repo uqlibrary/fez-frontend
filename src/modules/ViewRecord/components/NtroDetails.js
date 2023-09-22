@@ -36,7 +36,7 @@ export class NtroDetails extends PureComponent {
                     <Typography
                         variant="body2"
                         component={'span'}
-                        classes={{ root: this.props.classes.header }}
+                        classes={{ root: this.props.classes?.header }}
                         data-testid={`${rowId}-label-0`}
                     >
                         {heading}
@@ -45,7 +45,7 @@ export class NtroDetails extends PureComponent {
                         <Typography
                             variant="caption"
                             component={'span'}
-                            classes={{ root: this.props.classes.header }}
+                            classes={{ root: this.props.classes?.header }}
                             data-testid={`${rowId}-label-1`}
                         >
                             {subheading}
