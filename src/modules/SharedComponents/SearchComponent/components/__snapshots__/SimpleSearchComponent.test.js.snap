@@ -1,57 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SimpleSearchComponent should have a proper style generator 1`] = `
-Object {
-  "inHeader": Object {
-    "& input[type=\\"search\\"]::-webkit-search-cancel-button": Object {
-      "display": "none",
-    },
-    "backgroundColor": "test2",
-    "margin": "-4px",
-    "width": "calc(100% + 8px)",
-  },
-  "mobileCloseButton": Object {
-    "fill": "test1",
-    "opacity": 0.5,
-  },
-  "mobileHeader": Object {
-    "backgroundColor": "test2",
-    "height": 70,
-    "left": 0,
-    "position": "absolute",
-    "top": 0,
-    "width": "100%",
-    "zIndex": 100,
-  },
-  "mobileSearchInput": Object {
-    "& > div": Object {
-      "height": "100%",
-    },
-    "& input": Object {
-      "fontSize": 24,
-      "fontWeight": "test3",
-      "lineHeight": 1.2,
-      "overflow": "hidden",
-      "textOverflow": "ellipsis",
-    },
-    "height": 70,
-    "width": "99%",
-  },
-  "searchHeaderContainerPadding": Object {
-    "&.MuiGrid-item": Object {
-      "padding": "4px",
-    },
-  },
-  "searchIconMobile": Object {
-    "fill": "test2",
-  },
-  "searchIconPrefix": Object {
-    "fill": "test1",
-    "opacity": 0.66,
-  },
-}
-`;
-
 exports[`SimpleSearchComponent should render default view 1`] = `
 <Fragment>
   <form
@@ -226,27 +174,34 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
   >
     <ForwardRef(Grid)
       alignItems="center"
-      className={Object {}}
       container={true}
       direction="row"
       spacing={1}
       sx={
         Object {
+          "& input[type=\\"search\\"]::-webkit-search-cancel-button": Object {
+            "display": "none",
+          },
+          "backgroundColor": "white.main",
           "display": Object {
             "sm": "flex",
             "xs": "none",
           },
+          "margin": "-4px",
+          "width": "calc(100% + 8px)",
         }
       }
       wrap="nowrap"
     >
       <ForwardRef(Grid)
-        classes={
+        item={true}
+        sx={
           Object {
-            "item": undefined,
+            "&.MuiGrid-item": Object {
+              "padding": "4px",
+            },
           }
         }
-        item={true}
         xs={true}
       >
         <TextField
@@ -313,7 +268,9 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
           onClick={[Function]}
           size="large"
         >
-          <Memo(ForwardRef(SearchIcon)) />
+          <Memo(ForwardRef(SearchIcon))
+            sx={[Function]}
+          />
         </ForwardRef(IconButton)>
       </ForwardRef(Tooltip)>
     </ForwardRef(Box)>

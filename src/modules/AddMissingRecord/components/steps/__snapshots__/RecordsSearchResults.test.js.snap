@@ -18,7 +18,7 @@ exports[`Search record results should render a single claimable item with no aut
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               eSpace
             </p>
@@ -55,7 +55,7 @@ exports[`Search record results should render a single claimable item with no aut
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Web of science
             </p>
@@ -92,7 +92,7 @@ exports[`Search record results should render a single claimable item with no aut
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Scopus
             </p>
@@ -129,7 +129,7 @@ exports[`Search record results should render a single claimable item with no aut
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               PubMed
             </p>
@@ -166,7 +166,7 @@ exports[`Search record results should render a single claimable item with no aut
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Crossref
             </p>
@@ -217,18 +217,18 @@ exports[`Search record results should render a single claimable item with no aut
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 css-13shxg4-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-35 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-possible-matches-found"
           id="standard-card-possible-matches-found"
         >
           <div
-            class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-40 css-1hzv55z-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -263,6 +263,7 @@ exports[`Search record results should render a single claimable item with no aut
                     class="publicationCitation"
                   >
                     <div
+                      class="css-0"
                       data-testid="publication-citation-parent-UQ:795469"
                       id="publication-citation-parent-UQ:795469"
                     >
@@ -280,7 +281,7 @@ exports[`Search record results should render a single claimable item with no aut
                               style="min-width: 1px;"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-47 css-1uywuy6-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                               >
                                 <a
                                   href="/view/UQ:795469"
@@ -290,7 +291,7 @@ exports[`Search record results should render a single claimable item with no aut
                               </h6>
                             </div>
                             <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-48 css-1idn90j-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                             >
                               <div
                                 class="citationContent citationBook"
@@ -334,7 +335,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 >
                                   <a
                                     aria-label="Open this DOI in an new window"
-                                    class="citationDoiLink makeStyles-externalLink-57 makeStyles-externalLink-59"
+                                    class="citationDoiLink css-1oqhn84"
                                     data-analyticsid="citation-doi-link"
                                     data-testid="citation-doi-link"
                                     href="https://doi.org/10.1007/978-3-319-71580-3"
@@ -346,7 +347,7 @@ exports[`Search record results should render a single claimable item with no aut
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-58 css-i4bv87-MuiSvgIcon-root"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                       data-testid="OpenInNewIcon"
                                       focusable="false"
                                       id="citation-doi-link-new-window-icon"
@@ -368,8 +369,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-49 css-1wrgmsj-MuiGrid-root"
-                                  style="flex-grow: 1;"
+                                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -379,7 +379,7 @@ exports[`Search record results should render a single claimable item with no aut
                                     >
                                       <a
                                         aria-label="Full citation in Google scholar will open in a new window"
-                                        class="googleCitationCount CitationCountView-citationCount-61 makeStyles-externalLink-57 makeStyles-externalLink-63"
+                                        class="googleCitationCount css-si3g8d"
                                         data-analyticsid="citation-count-link"
                                         data-testid="citation-count-link"
                                         href="https://scholar.google.com/scholar?q=intitle:Early%20Onset%20Scoliosis%20-%20this%20is%20an%20edited%20book%20with%20editors%20only"
@@ -417,7 +417,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 Found in: 
                                 <a
                                   aria-label="Link to eSpace will open in a new window."
-                                  class="publicationSource makeStyles-externalLink-57 makeStyles-externalLink-66"
+                                  class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-espace-link"
                                   data-testid="publication-source-espace-link"
                                   href="https://fez-staging.library.uq.edu.au/view/UQ:795469"
@@ -429,7 +429,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-58 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="publication-source-espace-link-new-window-icon"
@@ -443,7 +443,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 </a>
                                 <a
                                   aria-label="Link to Crossref will open in a new window."
-                                  class="publicationSource makeStyles-externalLink-57 makeStyles-externalLink-67"
+                                  class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-crossref-link"
                                   data-testid="publication-source-crossref-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fdoi.org%2F10.1007/978-3-319-71580-3"
@@ -455,7 +455,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-58 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="publication-source-crossref-link-new-window-icon"
@@ -473,7 +473,7 @@ exports[`Search record results should render a single claimable item with no aut
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-50 css-a5rdam-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
                       >
                         <div
                           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -497,7 +497,7 @@ exports[`Search record results should render a single claimable item with no aut
                       </div>
                     </div>
                     <hr
-                      class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-46 css-9mgopn-MuiDivider-root"
+                      class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                     />
                   </div>
                 </div>
@@ -554,10 +554,10 @@ exports[`Search record results should render a single claimable item with no aut
         class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-41 css-1vd824g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
           >
             Repository search
           </div>
@@ -566,7 +566,7 @@ exports[`Search record results should render a single claimable item with no aut
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <hr
-            class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-43 css-9mgopn-MuiDivider-root"
+            class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
           />
         </div>
         <div
@@ -582,7 +582,7 @@ exports[`Search record results should render a single claimable item with no aut
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   eSpace
                 </p>
@@ -619,7 +619,7 @@ exports[`Search record results should render a single claimable item with no aut
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Web of science
                 </p>
@@ -656,7 +656,7 @@ exports[`Search record results should render a single claimable item with no aut
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Scopus
                 </p>
@@ -693,7 +693,7 @@ exports[`Search record results should render a single claimable item with no aut
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   PubMed
                 </p>
@@ -730,7 +730,7 @@ exports[`Search record results should render a single claimable item with no aut
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-34 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Crossref
                 </p>
@@ -798,7 +798,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               eSpace
             </p>
@@ -835,7 +835,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Web of science
             </p>
@@ -872,7 +872,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Scopus
             </p>
@@ -909,7 +909,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               PubMed
             </p>
@@ -946,7 +946,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Crossref
             </p>
@@ -997,18 +997,18 @@ exports[`Search record results should render a single unclaimable item with no a
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 css-13shxg4-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-69 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-possible-matches-found"
           id="standard-card-possible-matches-found"
         >
           <div
-            class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-74 css-1hzv55z-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -1043,6 +1043,7 @@ exports[`Search record results should render a single unclaimable item with no a
                     class="publicationCitation"
                   >
                     <div
+                      class="css-0"
                       data-testid="publication-citation-parent-UQ:795469"
                       id="publication-citation-parent-UQ:795469"
                     >
@@ -1060,7 +1061,7 @@ exports[`Search record results should render a single unclaimable item with no a
                               style="min-width: 1px;"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-78 css-1uywuy6-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                               >
                                 <a
                                   href="/view/UQ:795469"
@@ -1068,7 +1069,7 @@ exports[`Search record results should render a single unclaimable item with no a
                               </h6>
                             </div>
                             <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-79 css-1idn90j-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                             >
                               <div>
                                 Citation display not available for 
@@ -1081,8 +1082,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-80 css-1wrgmsj-MuiGrid-root"
-                                  style="flex-grow: 1;"
+                                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -1092,7 +1092,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                     >
                                       <a
                                         aria-label="Full citation in Google scholar will open in a new window"
-                                        class="googleCitationCount CitationCountView-citationCount-88 makeStyles-externalLink-90 makeStyles-externalLink-92"
+                                        class="googleCitationCount css-si3g8d"
                                         data-analyticsid="citation-count-link"
                                         data-testid="citation-count-link"
                                         href="https://scholar.google.com/scholar?q=intitle:undefined"
@@ -1130,7 +1130,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 Found in: 
                                 <a
                                   aria-label="Link to eSpace will open in a new window."
-                                  class="publicationSource makeStyles-externalLink-90 makeStyles-externalLink-95"
+                                  class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-espace-link"
                                   data-testid="publication-source-espace-link"
                                   href="https://fez-staging.library.uq.edu.au/view/UQ:795469"
@@ -1142,7 +1142,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-91 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="publication-source-espace-link-new-window-icon"
@@ -1156,7 +1156,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 </a>
                                 <a
                                   aria-label="Link to Crossref will open in a new window."
-                                  class="publicationSource makeStyles-externalLink-90 makeStyles-externalLink-96"
+                                  class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-crossref-link"
                                   data-testid="publication-source-crossref-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fdoi.org%2F10.1007/978-3-319-71580-3"
@@ -1168,7 +1168,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-91 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="publication-source-crossref-link-new-window-icon"
@@ -1186,7 +1186,7 @@ exports[`Search record results should render a single unclaimable item with no a
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-81 css-a5rdam-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
                       >
                         <div
                           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -1207,7 +1207,7 @@ exports[`Search record results should render a single unclaimable item with no a
                       </div>
                     </div>
                     <hr
-                      class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-77 css-9mgopn-MuiDivider-root"
+                      class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                     />
                   </div>
                 </div>
@@ -1264,10 +1264,10 @@ exports[`Search record results should render a single unclaimable item with no a
         class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-97 css-1vd824g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
           >
             Repository search
           </div>
@@ -1276,7 +1276,7 @@ exports[`Search record results should render a single unclaimable item with no a
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <hr
-            class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-99 css-9mgopn-MuiDivider-root"
+            class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
           />
         </div>
         <div
@@ -1292,7 +1292,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   eSpace
                 </p>
@@ -1329,7 +1329,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Web of science
                 </p>
@@ -1366,7 +1366,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Scopus
                 </p>
@@ -1403,7 +1403,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   PubMed
                 </p>
@@ -1440,7 +1440,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-68 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Crossref
                 </p>
@@ -1508,7 +1508,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               eSpace
             </p>
@@ -1545,7 +1545,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Web of science
             </p>
@@ -1582,7 +1582,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Scopus
             </p>
@@ -1619,7 +1619,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               PubMed
             </p>
@@ -1656,7 +1656,7 @@ exports[`Search record results should render a single unclaimable item with no a
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Crossref
             </p>
@@ -1707,18 +1707,18 @@ exports[`Search record results should render a single unclaimable item with no a
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 css-13shxg4-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-101 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-possible-matches-found"
           id="standard-card-possible-matches-found"
         >
           <div
-            class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-106 css-1hzv55z-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -1753,6 +1753,7 @@ exports[`Search record results should render a single unclaimable item with no a
                     class="publicationCitation"
                   >
                     <div
+                      class="css-0"
                       data-testid="publication-citation-parent-UQ:795469"
                       id="publication-citation-parent-UQ:795469"
                     >
@@ -1770,7 +1771,7 @@ exports[`Search record results should render a single unclaimable item with no a
                               style="min-width: 1px;"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-110 css-1uywuy6-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                               >
                                 <a
                                   href="/view/UQ:795469"
@@ -1778,7 +1779,7 @@ exports[`Search record results should render a single unclaimable item with no a
                               </h6>
                             </div>
                             <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-111 css-1idn90j-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                             >
                               <div>
                                 Citation display not available for 
@@ -1791,8 +1792,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-112 css-1wrgmsj-MuiGrid-root"
-                                  style="flex-grow: 1;"
+                                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -1802,7 +1802,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                     >
                                       <a
                                         aria-label="Full citation in Google scholar will open in a new window"
-                                        class="googleCitationCount CitationCountView-citationCount-120 makeStyles-externalLink-122 makeStyles-externalLink-124"
+                                        class="googleCitationCount css-si3g8d"
                                         data-analyticsid="citation-count-link"
                                         data-testid="citation-count-link"
                                         href="https://scholar.google.com/scholar?q=intitle:undefined"
@@ -1840,7 +1840,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 Found in: 
                                 <a
                                   aria-label="Link to eSpace will open in a new window."
-                                  class="publicationSource makeStyles-externalLink-122 makeStyles-externalLink-127"
+                                  class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-espace-link"
                                   data-testid="publication-source-espace-link"
                                   href="https://fez-staging.library.uq.edu.au/view/UQ:795469"
@@ -1852,7 +1852,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-123 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="publication-source-espace-link-new-window-icon"
@@ -1866,7 +1866,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 </a>
                                 <a
                                   aria-label="Link to Crossref will open in a new window."
-                                  class="publicationSource makeStyles-externalLink-122 makeStyles-externalLink-128"
+                                  class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-crossref-link"
                                   data-testid="publication-source-crossref-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fdoi.org%2F10.1007/978-3-319-71580-3"
@@ -1878,7 +1878,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-123 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="publication-source-crossref-link-new-window-icon"
@@ -1896,7 +1896,7 @@ exports[`Search record results should render a single unclaimable item with no a
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-113 css-a5rdam-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
                       >
                         <div
                           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -1917,7 +1917,7 @@ exports[`Search record results should render a single unclaimable item with no a
                       </div>
                     </div>
                     <hr
-                      class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-109 css-9mgopn-MuiDivider-root"
+                      class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                     />
                   </div>
                 </div>
@@ -1974,10 +1974,10 @@ exports[`Search record results should render a single unclaimable item with no a
         class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-129 css-1vd824g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
           >
             Repository search
           </div>
@@ -1986,7 +1986,7 @@ exports[`Search record results should render a single unclaimable item with no a
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <hr
-            class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-131 css-9mgopn-MuiDivider-root"
+            class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
           />
         </div>
         <div
@@ -2002,7 +2002,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   eSpace
                 </p>
@@ -2039,7 +2039,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Web of science
                 </p>
@@ -2076,7 +2076,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Scopus
                 </p>
@@ -2113,7 +2113,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   PubMed
                 </p>
@@ -2150,7 +2150,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-100 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Crossref
                 </p>
@@ -2218,7 +2218,7 @@ exports[`Search record results should render publications list with one publicat
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               eSpace
             </p>
@@ -2255,7 +2255,7 @@ exports[`Search record results should render publications list with one publicat
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Web of science
             </p>
@@ -2292,7 +2292,7 @@ exports[`Search record results should render publications list with one publicat
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Scopus
             </p>
@@ -2329,7 +2329,7 @@ exports[`Search record results should render publications list with one publicat
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               PubMed
             </p>
@@ -2366,7 +2366,7 @@ exports[`Search record results should render publications list with one publicat
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Crossref
             </p>
@@ -2417,18 +2417,18 @@ exports[`Search record results should render publications list with one publicat
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 css-13shxg4-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-133 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-possible-matches-found"
           id="standard-card-possible-matches-found"
         >
           <div
-            class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-138 css-1hzv55z-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -2463,6 +2463,7 @@ exports[`Search record results should render publications list with one publicat
                     class="publicationCitation"
                   >
                     <div
+                      class="css-0"
                       data-testid="publication-citation-parent-UQ:255472"
                       id="publication-citation-parent-UQ:255472"
                     >
@@ -2480,7 +2481,7 @@ exports[`Search record results should render publications list with one publicat
                               style="min-width: 1px;"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-142 css-1uywuy6-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                               >
                                 <a
                                   href="/view/UQ:255472"
@@ -2488,7 +2489,7 @@ exports[`Search record results should render publications list with one publicat
                               </h6>
                             </div>
                             <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-143 css-1idn90j-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                             >
                               <div>
                                 Citation display not available for 
@@ -2501,8 +2502,7 @@ exports[`Search record results should render publications list with one publicat
                                 class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-144 css-1wrgmsj-MuiGrid-root"
-                                  style="flex-grow: 1;"
+                                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -2512,7 +2512,7 @@ exports[`Search record results should render publications list with one publicat
                                     >
                                       <a
                                         aria-label="Full citation in Google scholar will open in a new window"
-                                        class="googleCitationCount CitationCountView-citationCount-152 makeStyles-externalLink-154 makeStyles-externalLink-156"
+                                        class="googleCitationCount css-si3g8d"
                                         data-analyticsid="citation-count-link"
                                         data-testid="citation-count-link"
                                         href="https://scholar.google.com/scholar?q=intitle:undefined"
@@ -2545,7 +2545,7 @@ exports[`Search record results should render publications list with one publicat
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-145 css-a5rdam-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
                       >
                         <div
                           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -2569,7 +2569,7 @@ exports[`Search record results should render publications list with one publicat
                       </div>
                     </div>
                     <hr
-                      class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-141 css-9mgopn-MuiDivider-root"
+                      class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                     />
                   </div>
                 </div>
@@ -2626,10 +2626,10 @@ exports[`Search record results should render publications list with one publicat
         class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-159 css-1vd824g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
           >
             Repository search
           </div>
@@ -2638,7 +2638,7 @@ exports[`Search record results should render publications list with one publicat
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <hr
-            class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-161 css-9mgopn-MuiDivider-root"
+            class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
           />
         </div>
         <div
@@ -2654,7 +2654,7 @@ exports[`Search record results should render publications list with one publicat
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   eSpace
                 </p>
@@ -2691,7 +2691,7 @@ exports[`Search record results should render publications list with one publicat
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Web of science
                 </p>
@@ -2728,7 +2728,7 @@ exports[`Search record results should render publications list with one publicat
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Scopus
                 </p>
@@ -2765,7 +2765,7 @@ exports[`Search record results should render publications list with one publicat
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   PubMed
                 </p>
@@ -2802,7 +2802,7 @@ exports[`Search record results should render publications list with one publicat
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-132 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Crossref
                 </p>
@@ -2870,7 +2870,7 @@ exports[`Search record results should render spinner 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               eSpace
             </p>
@@ -2907,7 +2907,7 @@ exports[`Search record results should render spinner 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Web of science
             </p>
@@ -2944,7 +2944,7 @@ exports[`Search record results should render spinner 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Scopus
             </p>
@@ -2981,7 +2981,7 @@ exports[`Search record results should render spinner 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               PubMed
             </p>
@@ -3018,7 +3018,7 @@ exports[`Search record results should render spinner 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
             >
               Crossref
             </p>
@@ -3123,10 +3123,10 @@ exports[`Search record results should render spinner 1`] = `
         class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-11 css-1vd824g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
           >
             Repository search
           </div>
@@ -3135,7 +3135,7 @@ exports[`Search record results should render spinner 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <hr
-            class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-13 css-9mgopn-MuiDivider-root"
+            class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
           />
         </div>
         <div
@@ -3151,7 +3151,7 @@ exports[`Search record results should render spinner 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   eSpace
                 </p>
@@ -3188,7 +3188,7 @@ exports[`Search record results should render spinner 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Web of science
                 </p>
@@ -3225,7 +3225,7 @@ exports[`Search record results should render spinner 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Scopus
                 </p>
@@ -3262,7 +3262,7 @@ exports[`Search record results should render spinner 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   PubMed
                 </p>
@@ -3299,7 +3299,7 @@ exports[`Search record results should render spinner 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-10 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
                 >
                   Crossref
                 </p>
@@ -3368,18 +3368,18 @@ exports[`Search record results should render stepper and no results 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 css-13shxg4-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-no-matching-works-found"
           id="standard-card-no-matching-works-found"
         >
           <div
-            class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                 data-testid="standard-card-no-matching-works-found-header"
                 id="standard-card-no-matching-works-found-header"
               >
@@ -3445,10 +3445,10 @@ exports[`Search record results should render stepper and no results 1`] = `
         class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-7 css-1vd824g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
           >
             Repository search
           </div>
@@ -3457,7 +3457,7 @@ exports[`Search record results should render stepper and no results 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <hr
-            class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-9 css-9mgopn-MuiDivider-root"
+            class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
           />
         </div>
         <div

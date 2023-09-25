@@ -16,7 +16,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
   <svg
     aria-hidden="true"
     aria-label="Link (no DOI) - Open access after 2019-01-01"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-7 makeStyles-svg-8 css-i4bv87-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="embargoed-oa-icon"
     focusable="false"
@@ -39,7 +39,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
   <svg
     aria-hidden="true"
     aria-label="Link (no DOI) - Open access after 2019-01-01"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-11 makeStyles-svg-12 css-i4bv87-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="embargoed-oa-icon"
     focusable="false"
@@ -57,7 +57,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
   <svg
     aria-hidden="true"
     aria-label="You do not have access to this file"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-14 css-i4bv87-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="no-oa-icon"
     focusable="false"
@@ -84,7 +84,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
   <svg
     aria-hidden="true"
     aria-label="Open Access - undefined - Free to read"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2 css-i4bv87-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="oa-icon"
     focusable="false"
@@ -102,7 +102,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
   <svg
     aria-hidden="true"
     aria-label="Open Access - Free to read"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-5 makeStyles-svg-6 css-i4bv87-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="oa-icon"
     focusable="false"

@@ -2,8 +2,9 @@
 
 exports[`FileUploadRow renders with uploaded file 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
     confirmDialogBoxId="dsi-dsid-delete"
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -14,9 +15,15 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(FileUploadRowDefaultView)
+  <FileUploadRowDefaultView
     index={0}
+    locale={
+      Object {
+        "embargoDateClosedAccess": "No date required",
+      }
+    }
     name="a.txt"
     onAccessConditionChange={[Function]}
     onDelete={[Function]}
@@ -33,8 +40,9 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
 
 exports[`FileUploadRow should show confirmation and delete file 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
     confirmDialogBoxId="dsi-dsid-delete"
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -45,9 +53,18 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(FileUploadRowMobileView)
+  <FileUploadRowMobileView
     index={0}
+    locale={
+      Object {
+        "embargoDateClosedAccess": "No date required",
+        "embargoDateColumn": "Embargo date",
+        "fileAccessColumn": "File access",
+        "filenameColumn": "File name",
+      }
+    }
     name="a.txt"
     onAccessConditionChange={[Function]}
     onDelete={[Function]}

@@ -9,7 +9,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-240 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -76,7 +76,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-244 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -165,7 +165,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -177,7 +177,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-245 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -191,7 +191,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -206,19 +206,18 @@ exports[`AdminInterface component should disabled button and render alert for fo
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-246 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-248 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-251 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -255,7 +254,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-252 MuiGrid-container makeStyles-info_outline-267 makeStyles-common-253 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
                 data-analyticsid="alert-info"
                 data-testid="alert-info"
                 id="alert-info"
@@ -267,7 +266,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-256 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <span
                         class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary spinner css-u4ps4u-MuiCircularProgress-root"
@@ -292,7 +291,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       </span>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-257 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Saving - 
@@ -378,7 +377,7 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-338 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -391,7 +390,7 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root makeStyles-root-341 MuiGrid-container makeStyles-info-355 makeStyles-common-342 css-1k6h6af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -400,7 +399,7 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
                   class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item makeStyles-icon-345 alert-icon  css-13i4rnv-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -416,7 +415,7 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-346 alert-text css-1vd824g-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                   >
                     <b />
                     Editing of record is not yet supported.
@@ -441,7 +440,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-298 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -508,7 +507,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-302 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -601,7 +600,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -613,7 +612,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-303 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -627,7 +626,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -642,19 +641,18 @@ exports[`AdminInterface component should display job created alert 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-304 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-306 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-309 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -759,7 +757,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-298 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -826,7 +824,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-302 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -919,7 +917,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -931,7 +929,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-303 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -945,7 +943,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -960,19 +958,18 @@ exports[`AdminInterface component should display job created alert 2`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-304 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-306 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-309 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1008,7 +1005,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-310 MuiGrid-container makeStyles-done-326 makeStyles-common-311 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
                 data-analyticsid="alert-done"
                 data-testid="alert-done"
                 id="alert-done"
@@ -1020,7 +1017,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-314 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -1036,7 +1033,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-315 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Success - 
@@ -1126,7 +1123,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-269 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -1193,7 +1190,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-273 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -1286,7 +1283,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -1298,7 +1295,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-274 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -1312,7 +1309,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -1327,19 +1324,18 @@ exports[`AdminInterface component should display successful alert 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-275 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-277 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-280 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1444,7 +1440,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-269 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -1511,7 +1507,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-273 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -1604,7 +1600,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -1616,7 +1612,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-274 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -1630,7 +1626,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -1645,19 +1641,18 @@ exports[`AdminInterface component should display successful alert 2`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-275 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-277 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-280 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1693,7 +1688,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-281 MuiGrid-container makeStyles-done-297 makeStyles-common-282 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
                 data-analyticsid="alert-done"
                 data-testid="alert-done"
                 id="alert-done"
@@ -1705,7 +1700,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-285 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -1721,7 +1716,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-286 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Success - 
@@ -1811,7 +1806,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-327 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -1885,7 +1880,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-331 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -1982,19 +1977,18 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-332 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-334 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-337 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2097,7 +2091,7 @@ exports[`AdminInterface component should render default view as a full form view
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-83 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -2163,7 +2157,7 @@ exports[`AdminInterface component should render default view as a full form view
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-87 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -2260,19 +2254,18 @@ exports[`AdminInterface component should render default view as a full form view
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-90 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-93 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2297,19 +2290,18 @@ exports[`AdminInterface component should render default view as a full form view
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="files-section"
               id="files-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-90 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-93 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="files-section-header"
                     id="files-section-header"
                   >
@@ -2334,19 +2326,18 @@ exports[`AdminInterface component should render default view as a full form view
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="security-section"
               id="security-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-90 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-93 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="security-section-header"
                     id="security-section-header"
                   >
@@ -2449,7 +2440,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-94 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -2516,7 +2507,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-98 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -2609,7 +2600,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -2621,7 +2612,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-99 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -2635,7 +2626,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                     </button>
                     <button
                       aria-selected="false"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-99 MuiTab-textColorPrimary css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="security-tab"
                       data-testid="security-tab"
                       role="tab"
@@ -2649,7 +2640,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -2664,19 +2655,18 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-100 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-102 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-105 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2779,7 +2769,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -2846,7 +2836,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-5 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -2922,7 +2912,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -2934,7 +2924,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-6 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -2948,7 +2938,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                     </button>
                     <button
                       aria-selected="false"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-6 MuiTab-textColorPrimary css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="files-tab"
                       data-testid="files-tab"
                       role="tab"
@@ -2962,7 +2952,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                     </button>
                     <button
                       aria-selected="false"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-6 MuiTab-textColorPrimary css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="security-tab"
                       data-testid="security-tab"
                       role="tab"
@@ -2976,7 +2966,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -2991,19 +2981,18 @@ exports[`AdminInterface component should render in create mode 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-7 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-9 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-12 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -3089,7 +3078,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-25 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -3156,7 +3145,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-29 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -3188,7 +3177,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 style="margin-top: 5px;"
               >
                 <div
-                  class="MuiGrid-root makeStyles-root-30 MuiGrid-container makeStyles-error-39 makeStyles-common-31 css-1k6h6af-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
                   data-analyticsid="alert-error"
                   data-testid="alert-error"
                   id="alert-error"
@@ -3200,7 +3189,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item makeStyles-icon-34 alert-icon makeStyles-wiggler-33 css-13i4rnv-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item alert-icon css-eosocp-MuiGrid-root"
                       >
                         <svg
                           aria-hidden="true"
@@ -3216,7 +3205,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                         </svg>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-35 alert-text css-1vd824g-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                       >
                         <b>
                           THIS WORK IS LOCKED - 
@@ -3226,7 +3215,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                     </div>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto makeStyles-actionButton-36 css-11gq09b-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
@@ -3315,7 +3304,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -3327,7 +3316,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-47 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -3341,7 +3330,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                     </button>
                     <button
                       aria-selected="false"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-47 MuiTab-textColorPrimary css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="files-tab"
                       data-testid="files-tab"
                       role="tab"
@@ -3355,7 +3344,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                     </button>
                     <button
                       aria-selected="false"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-47 MuiTab-textColorPrimary css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="security-tab"
                       data-testid="security-tab"
                       role="tab"
@@ -3369,7 +3358,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -3384,19 +3373,18 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-48 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-50 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-53 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -3496,7 +3484,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-54 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -3563,7 +3551,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-58 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -3595,7 +3583,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 style="margin-top: 5px;"
               >
                 <div
-                  class="MuiGrid-root makeStyles-root-59 MuiGrid-container makeStyles-error-68 makeStyles-common-60 css-1k6h6af-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
                   data-analyticsid="alert-error"
                   data-testid="alert-error"
                   id="alert-error"
@@ -3607,7 +3595,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item makeStyles-icon-63 alert-icon makeStyles-wiggler-62 css-13i4rnv-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item alert-icon css-eosocp-MuiGrid-root"
                       >
                         <svg
                           aria-hidden="true"
@@ -3623,7 +3611,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-64 alert-text css-1vd824g-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                       >
                         <b>
                           THIS WORK IS LOCKED - 
@@ -3633,7 +3621,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto makeStyles-actionButton-65 css-11gq09b-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
@@ -3726,7 +3714,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -3738,7 +3726,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-76 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -3752,7 +3740,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                     </button>
                     <button
                       aria-selected="false"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-76 MuiTab-textColorPrimary css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="files-tab"
                       data-testid="files-tab"
                       role="tab"
@@ -3766,7 +3754,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                     </button>
                     <button
                       aria-selected="false"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-76 MuiTab-textColorPrimary css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="security-tab"
                       data-testid="security-tab"
                       role="tab"
@@ -3780,7 +3768,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -3795,19 +3783,18 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-77 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-79 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-82 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -3911,7 +3898,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-13 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -3978,7 +3965,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-17 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -4054,7 +4041,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
               >
                 <div
                   class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -4066,7 +4053,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                   >
                     <button
                       aria-selected="true"
-                      class="MuiButtonBase-root MuiTab-root ForwardRef(Tab)-root-18 MuiTab-textColorPrimary Mui-selected css-1q335yr-MuiButtonBase-root-MuiTab-root"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
                       data-analyticsid="bibliographic-tab"
                       data-testid="bibliographic-tab"
                       role="tab"
@@ -4080,7 +4067,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                     </button>
                   </div>
                   <span
-                    class="MuiTabs-indicator tabindicator css-14t6lgd-MuiTabs-indicator"
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
                     style="left: 0px; width: 0px;"
                   />
                 </div>
@@ -4095,19 +4082,18 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-19 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="bibliographic-section"
               id="bibliographic-section"
             >
               <div
-                class="MuiCardHeader-root makeStyles-cardHeaderPrimary-21 css-185gdzj-MuiCardHeader-root"
-                style="border-top-left-radius: 0; border-top-right-radius: 0;"
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title makeStyles-responsiveHeader-24 css-7n68d0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >

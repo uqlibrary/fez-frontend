@@ -9,7 +9,7 @@ exports[`myDatasets test gets publications when user clicks back and state is no
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-114 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -21,7 +21,7 @@ exports[`myDatasets test gets publications when user clicks back and state is no
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-113 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -30,18 +30,18 @@ exports[`myDatasets test gets publications when user clicks back and state is no
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-datasets-found"
             id="standard-card-no-datasets-found"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-no-datasets-found-header"
                   id="standard-card-no-datasets-found-header"
                 >
@@ -83,7 +83,7 @@ exports[`myDatasets test gets publications when user clicks back and state is se
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-105 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -95,7 +95,7 @@ exports[`myDatasets test gets publications when user clicks back and state is se
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-104 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -104,18 +104,18 @@ exports[`myDatasets test gets publications when user clicks back and state is se
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-107 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-datasets-found"
             id="standard-card-no-datasets-found"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-112 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-no-datasets-found-header"
                   id="standard-card-no-datasets-found-header"
                 >
@@ -157,7 +157,7 @@ exports[`myDatasets test renders active filters 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-96 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -169,7 +169,7 @@ exports[`myDatasets test renders active filters 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-95 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -178,18 +178,18 @@ exports[`myDatasets test renders active filters 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-98 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-datasets-found"
             id="standard-card-no-datasets-found"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-103 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-no-datasets-found-header"
                   id="standard-card-no-datasets-found-header"
                 >
@@ -231,7 +231,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-17 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -243,7 +243,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-16 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -252,7 +252,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-19 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
           >
@@ -453,6 +453,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                       class="publicationCitation"
                     >
                       <div
+                        class="css-0"
                         data-testid="publication-citation-parent-UQ:1"
                         id="publication-citation-parent-UQ:1"
                       >
@@ -470,7 +471,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-36 css-1uywuy6-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                                 >
                                   <a
                                     href="/view/UQ:1"
@@ -480,7 +481,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                                 </h6>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-37 css-1idn90j-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                               >
                                 <div>
                                   Citation display not available for 
@@ -493,8 +494,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                                   class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-38 css-1wrgmsj-MuiGrid-root"
-                                    style="flex-grow: 1;"
+                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -504,7 +504,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
-                                          class="googleCitationCount CitationCountView-citationCount-46 makeStyles-externalLink-48 makeStyles-externalLink-50"
+                                          class="googleCitationCount css-si3g8d"
                                           data-analyticsid="citation-count-link"
                                           data-testid="citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:1"
@@ -537,7 +537,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-39 css-a5rdam-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
                         >
                           <div
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -560,7 +560,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                         </div>
                       </div>
                       <hr
-                        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-35 css-9mgopn-MuiDivider-root"
+                        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                       />
                     </div>
                   </div>
@@ -592,7 +592,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-54 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -604,7 +604,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-53 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -613,7 +613,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-56 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
           >
@@ -814,6 +814,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                       class="publicationCitation"
                     >
                       <div
+                        class="css-0"
                         data-testid="publication-citation-parent-UQ:1"
                         id="publication-citation-parent-UQ:1"
                       >
@@ -831,7 +832,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-73 css-1uywuy6-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                                 >
                                   <a
                                     href="/view/UQ:1"
@@ -841,7 +842,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                                 </h6>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-74 css-1idn90j-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                               >
                                 <div>
                                   Citation display not available for 
@@ -854,8 +855,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                                   class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-75 css-1wrgmsj-MuiGrid-root"
-                                    style="flex-grow: 1;"
+                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -865,7 +865,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
-                                          class="googleCitationCount CitationCountView-citationCount-83 makeStyles-externalLink-85 makeStyles-externalLink-87"
+                                          class="googleCitationCount css-si3g8d"
                                           data-analyticsid="citation-count-link"
                                           data-testid="citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:1"
@@ -898,7 +898,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-76 css-a5rdam-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
                         >
                           <div
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -921,7 +921,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                         </div>
                       </div>
                       <hr
-                        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-72 css-9mgopn-MuiDivider-root"
+                        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                       />
                     </div>
                   </div>
@@ -945,10 +945,10 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true StandardRighthandCard-title-90 css-1vd824g-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
             >
               <div
-                class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
               >
                 Refine results
               </div>
@@ -957,7 +957,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth StandardRighthandCard-divider-92 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
               />
             </div>
             <div
@@ -973,7 +973,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                 >
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-93 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-ysuh30-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-keywords"
                     id="clickable-facet-category-keywords"
                     role="button"
@@ -983,7 +983,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                       class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-94 css-fjqef3-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-bjxqyt-MuiTypography-root"
                         data-testid="facet-category-keywords"
                         id="facet-category-keywords"
                       >
@@ -1008,7 +1008,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   </div>
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-93 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-ysuh30-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-date-range"
                     id="clickable-facet-category-date-range"
                     role="button"
@@ -1018,7 +1018,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                       class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-94 css-fjqef3-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-bjxqyt-MuiTypography-root"
                         data-testid="facet-category-date-range"
                         id="facet-category-date-range"
                       >
@@ -1043,7 +1043,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   </div>
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters makeStyles-listItemGutters-93 MuiListItem-padding MuiListItem-button css-i2pnn9-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-ysuh30-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-open-access"
                     id="clickable-facet-category-open-access"
                     role="button"
@@ -1053,7 +1053,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                       class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 makeStyles-listText-94 css-fjqef3-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-bjxqyt-MuiTypography-root"
                         data-testid="facet-category-open-access"
                         id="facet-category-open-access"
                       >
@@ -1101,7 +1101,7 @@ Object {
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
         >
           <h2
-            class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
             data-analyticsid="page-title"
             data-testid="page-title"
             id="page-title"
@@ -1113,7 +1113,7 @@ Object {
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -1185,7 +1185,7 @@ Object {
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
           data-analyticsid="page-title"
           data-testid="page-title"
           id="page-title"
@@ -1197,7 +1197,7 @@ Object {
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       />
       <div
-        class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -1323,7 +1323,7 @@ exports[`myDatasets test renders loading screen while loading publications while
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-5 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1335,7 +1335,7 @@ exports[`myDatasets test renders loading screen while loading publications while
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-4 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -1409,7 +1409,7 @@ exports[`myDatasets test renders no results 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-8 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1421,7 +1421,7 @@ exports[`myDatasets test renders no results 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-7 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -1430,18 +1430,18 @@ exports[`myDatasets test renders no results 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-10 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-datasets-found"
             id="standard-card-no-datasets-found"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-15 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-no-datasets-found-header"
                   id="standard-card-no-datasets-found-header"
                 >

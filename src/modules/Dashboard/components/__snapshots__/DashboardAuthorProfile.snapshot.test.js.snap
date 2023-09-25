@@ -3,7 +3,7 @@
 exports[`Dashboard Author Profile test Render the authors profile as expected for a UQ researcher) 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-fam12c-MuiPaper-root-MuiCard-root"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1194a8g-MuiGrid-root"
@@ -13,8 +13,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
       >
         <div
           aria-label="Photograph of  Professor J Researcher"
-          class="MuiAvatar-root MuiAvatar-circular css-1wlk0hk-MuiAvatar-root"
-          style="background-size: cover, cover; background-color: rgba(0, 0, 0, 0.3); width: 125px; height: 125px; margin: 8px;"
+          class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
           title="Professor J Researcher"
         >
           <img
@@ -39,7 +38,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 DashboardAuthorDetails-authorDetails-1 css-1uywuy6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-s0bjcf-MuiTypography-root"
                 >
                   Professor
                    
@@ -52,7 +51,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption DashboardAuthorDetails-authorDetails-1 css-1e4ju4k-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
                 >
                   <b>
                     Affiliate Professor
@@ -60,7 +59,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   , Institute for Molecular Bioscience
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-caption DashboardAuthorDetails-authorDetails-1 css-1e4ju4k-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
                 >
                   <b>
                     Affiliate Professorial Res Fellow
@@ -68,7 +67,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   , School of Chemistry and Molecular Biosciences
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-caption DashboardAuthorDetails-authorDetails-1 css-1e4ju4k-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
                 >
                   <b>
                     ARC Australian Laureate Fellow
@@ -89,7 +88,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <a
-                  class="DashboardResearcherIdsClass-researcherIDlink-2 makeStyles-externalLink-5 makeStyles-externalLink-7"
+                  class="css-hi05s4"
                   data-analyticsid="researcher-link"
                   data-testid="researcher-link"
                   href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
@@ -110,7 +109,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <a
-                  class="DashboardResearcherIdsClass-researcherIDlink-2 makeStyles-externalLink-5 makeStyles-externalLink-8"
+                  class="css-hi05s4"
                   data-analyticsid="scopus-link"
                   data-testid="scopus-link"
                   href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -131,7 +130,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <a
-                  class="DashboardResearcherIdsClass-researcherIDlink-2 makeStyles-externalLink-5 makeStyles-externalLink-9"
+                  class="css-hi05s4"
                   data-analyticsid="google_scholar-link"
                   data-testid="google_scholar-link"
                   href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -152,7 +151,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <a
-                  class="DashboardResearcherIdsClass-researcherIDlink-2 makeStyles-externalLink-5 makeStyles-externalLink-10"
+                  class="css-hi05s4"
                   data-analyticsid="orcid-link"
                   data-testid="orcid-link"
                   href="https://orcid.org/0000-0001-1111-1111"
@@ -181,7 +180,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   title="Click to visit your ORCID profile"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption DashboardResearcherIdsClass-orcidLink-4 css-1e4ju4k-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
                   >
                      orcid.org/0000-0001-1111-1111
                   </span>
@@ -206,7 +205,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
 exports[`Dashboard Author Profile test Renders empty div if there is no profile but profile image exists 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-fam12c-MuiPaper-root-MuiCard-root"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1194a8g-MuiGrid-root"
@@ -216,8 +215,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
       >
         <div
           aria-label="Photograph of    "
-          class="MuiAvatar-root MuiAvatar-circular css-1wlk0hk-MuiAvatar-root"
-          style="background-size: cover, cover; background-color: rgba(0, 0, 0, 0.3); width: 125px; height: 125px; margin: 8px;"
+          class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
           title="  "
         >
           <img
@@ -242,7 +240,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 DashboardAuthorDetails-authorDetails-14 css-1uywuy6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-s0bjcf-MuiTypography-root"
                 >
                   
                    
@@ -267,7 +265,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <a
-                  class="DashboardResearcherIdsClass-researcherIDlink-15 makeStyles-externalLink-18 makeStyles-externalLink-20"
+                  class="css-hi05s4"
                   data-analyticsid="researcher-link"
                   data-testid="researcher-link"
                   href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid"
@@ -288,7 +286,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <a
-                  class="DashboardResearcherIdsClass-researcherIDlink-15 makeStyles-externalLink-18 makeStyles-externalLink-21"
+                  class="css-hi05s4"
                   data-analyticsid="scopus-link"
                   data-testid="scopus-link"
                   href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid"
@@ -309,7 +307,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <a
-                  class="DashboardResearcherIdsClass-researcherIDlink-15 makeStyles-externalLink-18 makeStyles-externalLink-22"
+                  class="css-hi05s4"
                   data-analyticsid="google_scholar-link"
                   data-testid="google_scholar-link"
                   href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile"
@@ -330,7 +328,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <a
-                  class="DashboardResearcherIdsClass-researcherIDlink-15"
+                  class="css-10b6o39"
                   data-testid="orcid"
                   id="orcid"
                   tabindex="0"

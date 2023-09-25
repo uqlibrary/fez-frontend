@@ -312,7 +312,7 @@ exports[`Community form should display successfull submission screen 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-22 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -324,7 +324,7 @@ exports[`Community form should display successfull submission screen 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-21 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <span />
@@ -338,18 +338,18 @@ exports[`Community form should display successfull submission screen 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-community-details"
                 id="standard-card-community-details"
               >
                 <div
-                  class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
                 >
                   <div
                     class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                       data-testid="standard-card-community-details-header"
                       id="standard-card-community-details-header"
                     >
@@ -429,7 +429,7 @@ exports[`Community form should display successfull submission screen 1`] = `
                 style="margin-top: 5px;"
               >
                 <div
-                  class="MuiGrid-root makeStyles-root-30 MuiGrid-container makeStyles-done-46 makeStyles-common-31 css-1k6h6af-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
                 >
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -438,7 +438,7 @@ exports[`Community form should display successfull submission screen 1`] = `
                       class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item makeStyles-icon-34 alert-icon  css-13i4rnv-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                       >
                         <svg
                           aria-hidden="true"
@@ -454,7 +454,7 @@ exports[`Community form should display successfull submission screen 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-35 alert-text css-1vd824g-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                       >
                         <b>
                           Success - 
@@ -842,7 +842,7 @@ exports[`Community form should render form 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -854,7 +854,7 @@ exports[`Community form should render form 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div />
@@ -868,18 +868,18 @@ exports[`Community form should render form 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-community-details"
                 id="standard-card-community-details"
               >
                 <div
-                  class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
                 >
                   <div
                     class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                       data-testid="standard-card-community-details-header"
                       id="standard-card-community-details-header"
                     >
@@ -1007,7 +1007,7 @@ exports[`Community form should render success panel 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-48 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1019,7 +1019,7 @@ exports[`Community form should render success panel 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-47 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -1028,18 +1028,18 @@ exports[`Community form should render success panel 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-50 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-community-added-successfully"
             id="standard-card-community-added-successfully"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-55 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-community-added-successfully-header"
                   id="standard-card-community-added-successfully-header"
                 >

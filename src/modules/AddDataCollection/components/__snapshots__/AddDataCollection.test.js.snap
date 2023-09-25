@@ -11,7 +11,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-85 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -23,7 +23,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-84 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <span />
@@ -34,18 +34,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-deposit-agreement"
               id="standard-card-deposit-agreement"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-deposit-agreement-header"
                     id="standard-card-deposit-agreement-header"
                   >
@@ -60,10 +60,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 id="standard-card-deposit-agreement-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -80,18 +80,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-information"
               id="standard-card-dataset-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-dataset-information-header"
                     id="standard-card-dataset-information-header"
                   >
@@ -106,10 +106,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 id="standard-card-dataset-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -120,7 +120,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -131,7 +131,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -142,7 +142,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -153,7 +153,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -164,7 +164,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -174,7 +174,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -184,7 +184,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -201,18 +201,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-anzsrc-field-of-research-(for)-codes"
               id="standard-card-anzsrc-field-of-research-(for)-codes"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-anzsrc-field-of-research-(for)-codes-header"
                     id="standard-card-anzsrc-field-of-research-(for)-codes-header"
                   >
@@ -244,18 +244,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 Creators css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-creators"
               id="standard-card-creators"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-creators-header"
                     id="standard-card-creators-header"
                   >
@@ -282,18 +282,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-access-and-licence"
               id="standard-card-access-and-licence"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-access-and-licence-header"
                     id="standard-card-access-and-licence-header"
                   >
@@ -314,7 +314,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-94 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -340,10 +340,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 id="standard-card-access-and-licence-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -354,7 +354,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -365,7 +365,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -382,18 +382,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-project-information"
               id="standard-card-project-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-project-information-header"
                     id="standard-card-project-information-header"
                   >
@@ -408,10 +408,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 id="standard-card-project-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -422,7 +422,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -433,7 +433,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -442,7 +442,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -458,18 +458,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-details"
               id="standard-card-dataset-details"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-dataset-details-header"
                     id="standard-card-dataset-details-header"
                   >
@@ -484,10 +484,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 id="standard-card-dataset-details-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -496,7 +496,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -506,7 +506,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -515,7 +515,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -525,7 +525,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -534,7 +534,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -544,7 +544,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -554,7 +554,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -571,18 +571,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-geographic-coordinates"
               id="standard-card-geographic-coordinates"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-geographic-coordinates-header"
                     id="standard-card-geographic-coordinates-header"
                   >
@@ -613,18 +613,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-related-datasets/work"
               id="standard-card-related-datasets/work"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-related-datasets/work-header"
                     id="standard-card-related-datasets/work-header"
                   >
@@ -650,18 +650,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-additional-information"
               id="standard-card-additional-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-additional-information-header"
                     id="standard-card-additional-information-header"
                   >
@@ -676,10 +676,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 id="standard-card-additional-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -689,7 +689,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -706,18 +706,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-88 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-upload-files"
               id="standard-card-upload-files"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-93 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-upload-files-header"
                     id="standard-card-upload-files-header"
                   >
@@ -797,7 +797,7 @@ exports[`AddDataCollection test should render component with a valid collection 
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-124 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -809,7 +809,7 @@ exports[`AddDataCollection test should render component with a valid collection 
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-123 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div />
@@ -820,18 +820,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-deposit-agreement"
               id="standard-card-deposit-agreement"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-deposit-agreement-header"
                     id="standard-card-deposit-agreement-header"
                   >
@@ -846,10 +846,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                 id="standard-card-deposit-agreement-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -866,18 +866,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-information"
               id="standard-card-dataset-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-dataset-information-header"
                     id="standard-card-dataset-information-header"
                   >
@@ -892,10 +892,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                 id="standard-card-dataset-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -906,7 +906,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -917,7 +917,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -928,7 +928,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -939,7 +939,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -950,7 +950,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -960,7 +960,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -970,7 +970,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -987,18 +987,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-anzsrc-field-of-research-(for)-codes"
               id="standard-card-anzsrc-field-of-research-(for)-codes"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-anzsrc-field-of-research-(for)-codes-header"
                     id="standard-card-anzsrc-field-of-research-(for)-codes-header"
                   >
@@ -1030,18 +1030,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 Creators css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-creators"
               id="standard-card-creators"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-creators-header"
                     id="standard-card-creators-header"
                   >
@@ -1068,18 +1068,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-access-and-licence"
               id="standard-card-access-and-licence"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-access-and-licence-header"
                     id="standard-card-access-and-licence-header"
                   >
@@ -1100,7 +1100,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-133 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -1126,10 +1126,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                 id="standard-card-access-and-licence-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1140,7 +1140,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1151,7 +1151,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1168,18 +1168,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-project-information"
               id="standard-card-project-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-project-information-header"
                     id="standard-card-project-information-header"
                   >
@@ -1194,10 +1194,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                 id="standard-card-project-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1208,7 +1208,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1219,7 +1219,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1228,7 +1228,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1244,18 +1244,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-details"
               id="standard-card-dataset-details"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-dataset-details-header"
                     id="standard-card-dataset-details-header"
                   >
@@ -1270,10 +1270,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                 id="standard-card-dataset-details-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1282,7 +1282,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -1292,7 +1292,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1301,7 +1301,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -1311,7 +1311,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1320,7 +1320,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -1330,7 +1330,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1340,7 +1340,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1357,18 +1357,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-geographic-coordinates"
               id="standard-card-geographic-coordinates"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-geographic-coordinates-header"
                     id="standard-card-geographic-coordinates-header"
                   >
@@ -1399,18 +1399,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-related-datasets/work"
               id="standard-card-related-datasets/work"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-related-datasets/work-header"
                     id="standard-card-related-datasets/work-header"
                   >
@@ -1436,18 +1436,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-additional-information"
               id="standard-card-additional-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-additional-information-header"
                     id="standard-card-additional-information-header"
                   >
@@ -1462,10 +1462,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                 id="standard-card-additional-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1475,7 +1475,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1492,18 +1492,18 @@ exports[`AddDataCollection test should render component with a valid collection 
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-127 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-upload-files"
               id="standard-card-upload-files"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-132 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-upload-files-header"
                     id="standard-card-upload-files-header"
                   >
@@ -1579,7 +1579,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-113 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1591,7 +1591,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-112 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div />
@@ -1602,18 +1602,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-deposit-agreement"
               id="standard-card-deposit-agreement"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-deposit-agreement-header"
                     id="standard-card-deposit-agreement-header"
                   >
@@ -1628,10 +1628,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 id="standard-card-deposit-agreement-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1648,18 +1648,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-information"
               id="standard-card-dataset-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-dataset-information-header"
                     id="standard-card-dataset-information-header"
                   >
@@ -1674,10 +1674,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 id="standard-card-dataset-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1688,7 +1688,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1699,7 +1699,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1710,7 +1710,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1721,7 +1721,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1732,7 +1732,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1742,7 +1742,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1752,7 +1752,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1769,18 +1769,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-anzsrc-field-of-research-(for)-codes"
               id="standard-card-anzsrc-field-of-research-(for)-codes"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-anzsrc-field-of-research-(for)-codes-header"
                     id="standard-card-anzsrc-field-of-research-(for)-codes-header"
                   >
@@ -1812,18 +1812,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 Creators css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-creators"
               id="standard-card-creators"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-creators-header"
                     id="standard-card-creators-header"
                   >
@@ -1850,18 +1850,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-access-and-licence"
               id="standard-card-access-and-licence"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-access-and-licence-header"
                     id="standard-card-access-and-licence-header"
                   >
@@ -1882,7 +1882,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-122 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -1908,10 +1908,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 id="standard-card-access-and-licence-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1922,7 +1922,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1933,7 +1933,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1950,18 +1950,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-project-information"
               id="standard-card-project-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-project-information-header"
                     id="standard-card-project-information-header"
                   >
@@ -1976,10 +1976,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 id="standard-card-project-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -1990,7 +1990,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2001,7 +2001,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2010,7 +2010,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2026,18 +2026,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-details"
               id="standard-card-dataset-details"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-dataset-details-header"
                     id="standard-card-dataset-details-header"
                   >
@@ -2052,10 +2052,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 id="standard-card-dataset-details-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2064,7 +2064,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -2074,7 +2074,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2083,7 +2083,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -2093,7 +2093,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2102,7 +2102,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -2112,7 +2112,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2122,7 +2122,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2139,18 +2139,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-geographic-coordinates"
               id="standard-card-geographic-coordinates"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-geographic-coordinates-header"
                     id="standard-card-geographic-coordinates-header"
                   >
@@ -2181,18 +2181,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-related-datasets/work"
               id="standard-card-related-datasets/work"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-related-datasets/work-header"
                     id="standard-card-related-datasets/work-header"
                   >
@@ -2218,18 +2218,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-additional-information"
               id="standard-card-additional-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-additional-information-header"
                     id="standard-card-additional-information-header"
                   >
@@ -2244,10 +2244,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 id="standard-card-additional-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2257,7 +2257,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2274,18 +2274,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-116 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-upload-files"
               id="standard-card-upload-files"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-121 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-upload-files-header"
                     id="standard-card-upload-files-header"
                   >
@@ -2361,7 +2361,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2373,7 +2373,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div />
@@ -2384,18 +2384,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-deposit-agreement"
               id="standard-card-deposit-agreement"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-deposit-agreement-header"
                     id="standard-card-deposit-agreement-header"
                   >
@@ -2410,10 +2410,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 id="standard-card-deposit-agreement-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2430,18 +2430,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-information"
               id="standard-card-dataset-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-dataset-information-header"
                     id="standard-card-dataset-information-header"
                   >
@@ -2456,10 +2456,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 id="standard-card-dataset-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2470,7 +2470,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2481,7 +2481,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2492,7 +2492,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2503,7 +2503,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2514,7 +2514,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-1kuauyq-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2524,7 +2524,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2534,7 +2534,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2551,18 +2551,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-anzsrc-field-of-research-(for)-codes"
               id="standard-card-anzsrc-field-of-research-(for)-codes"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-anzsrc-field-of-research-(for)-codes-header"
                     id="standard-card-anzsrc-field-of-research-(for)-codes-header"
                   >
@@ -2594,18 +2594,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 Creators css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-creators"
               id="standard-card-creators"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-creators-header"
                     id="standard-card-creators-header"
                   >
@@ -2632,18 +2632,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-access-and-licence"
               id="standard-card-access-and-licence"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-access-and-licence-header"
                     id="standard-card-access-and-licence-header"
                   >
@@ -2664,7 +2664,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-11 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -2690,10 +2690,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 id="standard-card-access-and-licence-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2704,7 +2704,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2715,7 +2715,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-1dutqxk-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2732,18 +2732,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-project-information"
               id="standard-card-project-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-project-information-header"
                     id="standard-card-project-information-header"
                   >
@@ -2758,10 +2758,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 id="standard-card-project-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2772,7 +2772,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2783,7 +2783,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2792,7 +2792,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2808,18 +2808,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-details"
               id="standard-card-dataset-details"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-dataset-details-header"
                     id="standard-card-dataset-details-header"
                   >
@@ -2834,10 +2834,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 id="standard-card-dataset-details-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-10zcizf-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2846,7 +2846,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -2856,7 +2856,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2865,7 +2865,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -2875,7 +2875,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2884,7 +2884,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -2894,7 +2894,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2904,7 +2904,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1byjd3r-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -2921,18 +2921,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-geographic-coordinates"
               id="standard-card-geographic-coordinates"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-geographic-coordinates-header"
                     id="standard-card-geographic-coordinates-header"
                   >
@@ -2963,18 +2963,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-related-datasets/work"
               id="standard-card-related-datasets/work"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-related-datasets/work-header"
                     id="standard-card-related-datasets/work-header"
                   >
@@ -3000,18 +3000,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-additional-information"
               id="standard-card-additional-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-additional-information-header"
                     id="standard-card-additional-information-header"
                   >
@@ -3026,10 +3026,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 id="standard-card-additional-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -3039,7 +3039,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       disabled="false"
@@ -3056,18 +3056,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-upload-files"
               id="standard-card-upload-files"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-upload-files-header"
                     id="standard-card-upload-files-header"
                   >

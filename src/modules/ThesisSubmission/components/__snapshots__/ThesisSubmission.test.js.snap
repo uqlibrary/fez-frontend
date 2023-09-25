@@ -11,7 +11,7 @@ exports[`ThesisSubmission should display successfull submission screen 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-77 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -23,7 +23,7 @@ exports[`ThesisSubmission should display successfull submission screen 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-76 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -32,18 +32,18 @@ exports[`ThesisSubmission should display successfull submission screen 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-79 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-your-thesis-has-been-deposited"
             id="standard-card-your-thesis-has-been-deposited"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-84 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-your-thesis-has-been-deposited-header"
                   id="standard-card-your-thesis-has-been-deposited-header"
                 >
@@ -119,7 +119,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-40 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -131,7 +131,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-39 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <span />
@@ -142,18 +142,18 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-thesis-information"
               id="standard-card-thesis-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-thesis-information-header"
                     id="standard-card-thesis-information-header"
                   >
@@ -228,18 +228,18 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-supervisors"
               id="standard-card-supervisors"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-supervisors-header"
                     id="standard-card-supervisors-header"
                   >
@@ -265,18 +265,18 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-field-of-research"
               id="standard-card-field-of-research"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-field-of-research-header"
                     id="standard-card-field-of-research-header"
                   >
@@ -307,18 +307,18 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-keywords"
               id="standard-card-keywords"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-keywords-header"
                     id="standard-card-keywords-header"
                   >
@@ -349,18 +349,18 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-43 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-upload-files"
               id="standard-card-upload-files"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-48 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-upload-files-header"
                     id="standard-card-upload-files-header"
                   >
@@ -389,7 +389,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-49 MuiGrid-container makeStyles-info_outline-64 makeStyles-common-50 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
                 data-analyticsid="thesis-submission-validation"
                 data-testid="thesis-submission-validation"
                 id="thesis-submission-validation"
@@ -401,7 +401,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-53 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <span
                         class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary spinner css-u4ps4u-MuiCircularProgress-root"
@@ -426,7 +426,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
                       </span>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-54 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Saving - 
@@ -491,7 +491,7 @@ exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-31 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -503,7 +503,7 @@ exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-30 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -512,18 +512,18 @@ exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-33 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-your-thesis-has-been-deposited"
             id="standard-card-your-thesis-has-been-deposited"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-38 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-your-thesis-has-been-deposited-header"
                   id="standard-card-your-thesis-has-been-deposited-header"
                 >
@@ -593,7 +593,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-21 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -605,7 +605,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-20 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <span />
@@ -616,18 +616,18 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-thesis-information"
               id="standard-card-thesis-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-thesis-information-header"
                     id="standard-card-thesis-information-header"
                   >
@@ -702,18 +702,18 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-supervisors"
               id="standard-card-supervisors"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-supervisors-header"
                     id="standard-card-supervisors-header"
                   >
@@ -739,18 +739,18 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-field-of-research"
               id="standard-card-field-of-research"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-field-of-research-header"
                     id="standard-card-field-of-research-header"
                   >
@@ -781,18 +781,18 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-keywords"
               id="standard-card-keywords"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-keywords-header"
                     id="standard-card-keywords-header"
                   >
@@ -823,18 +823,18 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-upload-files"
               id="standard-card-upload-files"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-upload-files-header"
                     id="standard-card-upload-files-header"
                   >
@@ -912,7 +912,7 @@ exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-12 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -924,7 +924,7 @@ exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-11 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -933,18 +933,18 @@ exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-14 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-your-thesis-has-been-deposited"
             id="standard-card-your-thesis-has-been-deposited"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-19 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-your-thesis-has-been-deposited-header"
                   id="standard-card-your-thesis-has-been-deposited-header"
                 >
@@ -1014,7 +1014,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1026,7 +1026,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <span />
@@ -1037,18 +1037,18 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-thesis-information"
               id="standard-card-thesis-information"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-thesis-information-header"
                     id="standard-card-thesis-information-header"
                   >
@@ -1123,18 +1123,18 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-supervisors"
               id="standard-card-supervisors"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-supervisors-header"
                     id="standard-card-supervisors-header"
                   >
@@ -1160,18 +1160,18 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-field-of-research"
               id="standard-card-field-of-research"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-field-of-research-header"
                     id="standard-card-field-of-research-header"
                   >
@@ -1202,18 +1202,18 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-keywords"
               id="standard-card-keywords"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-keywords-header"
                     id="standard-card-keywords-header"
                   >
@@ -1244,18 +1244,18 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-5 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-upload-files"
               id="standard-card-upload-files"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-10 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-upload-files-header"
                     id="standard-card-upload-files-header"
                   >
@@ -1333,7 +1333,7 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-122 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1345,7 +1345,7 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-121 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -1354,18 +1354,18 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-124 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-your-thesis-has-been-deposited"
             id="standard-card-your-thesis-has-been-deposited"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-129 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-your-thesis-has-been-deposited-header"
                   id="standard-card-your-thesis-has-been-deposited-header"
                 >
@@ -1407,7 +1407,7 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root makeStyles-root-130 MuiGrid-container makeStyles-error-139 makeStyles-common-131 css-1k6h6af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -1416,7 +1416,7 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
                   class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item makeStyles-icon-134 alert-icon  css-13i4rnv-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -1432,7 +1432,7 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-135 alert-text css-1vd824g-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                   >
                     <b>
                       FILE UPLOAD ERROR - 
@@ -1488,7 +1488,7 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-96 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1500,7 +1500,7 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-95 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -1509,18 +1509,18 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-98 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-your-thesis-has-been-deposited"
             id="standard-card-your-thesis-has-been-deposited"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-103 css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                   data-testid="standard-card-your-thesis-has-been-deposited-header"
                   id="standard-card-your-thesis-has-been-deposited-header"
                 >
@@ -1562,7 +1562,7 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root makeStyles-root-104 MuiGrid-container makeStyles-error-113 makeStyles-common-105 css-1k6h6af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -1571,7 +1571,7 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
                   class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item makeStyles-icon-108 alert-icon  css-13i4rnv-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -1587,7 +1587,7 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-109 alert-text css-1vd824g-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                   >
                     <b>
                       FILE UPLOAD ERROR - 
@@ -1603,7 +1603,7 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto makeStyles-actionButton-110 css-11gq09b-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
               >
                 <button
                   class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"

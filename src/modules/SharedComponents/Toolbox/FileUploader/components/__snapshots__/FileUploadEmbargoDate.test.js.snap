@@ -7,9 +7,6 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
   <ForwardRef(DatePicker)
     InputProps={
       Object {
-        "classes": Object {
-          "root": "",
-        },
         "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
@@ -31,9 +28,6 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
   <ForwardRef(DatePicker)
     InputProps={
       Object {
-        "classes": Object {
-          "root": "",
-        },
         "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
@@ -56,9 +50,6 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
   <ForwardRef(DatePicker)
     InputProps={
       Object {
-        "classes": Object {
-          "root": "",
-        },
         "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
@@ -74,15 +65,24 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
 `;
 
 exports[`Component FileUploadEmbargoDate should render with default setup with styles 1`] = `
-<FileUploadEmbargoDate
-  classes={
-    Object {
-      "input": "FileUploadEmbargoDate-input-1",
+<LocalizationProvider
+  dateAdapter={[Function]}
+>
+  <ForwardRef(DatePicker)
+    InputProps={
+      Object {
+        "data-analyticsid": "undefined-input",
+        "data-testid": "undefined-input",
+        "disableUnderline": true,
+      }
     }
-  }
-  minDate={2016-01-01T00:00:00.000Z}
-  value="2016"
-/>
+    inputFormat="DD/MM/YYYY"
+    minDate={2016-01-01T00:00:00.000Z}
+    onChange={[Function]}
+    renderInput={[Function]}
+    value={2016-01-01T00:00:00.000Z}
+  />
+</LocalizationProvider>
 `;
 
 exports[`Component FileUploadEmbargoDate should render with no supplied date 1`] = `
@@ -92,9 +92,6 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
   <ForwardRef(DatePicker)
     InputProps={
       Object {
-        "classes": Object {
-          "root": "",
-        },
         "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
@@ -116,9 +113,6 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   <ForwardRef(DatePicker)
     InputProps={
       Object {
-        "classes": Object {
-          "root": "",
-        },
         "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,
@@ -140,9 +134,6 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   <ForwardRef(DatePicker)
     InputProps={
       Object {
-        "classes": Object {
-          "root": "",
-        },
         "data-analyticsid": "undefined-input",
         "data-testid": "undefined-input",
         "disableUnderline": true,

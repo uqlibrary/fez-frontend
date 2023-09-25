@@ -1,53 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DocumentTypeMultipleField component should have a proper style generator 1`] = `
-Object {
-  "selectedMenuItem": Object {
-    "backgroundColor": "test2 !important",
-    "color": "test3",
-  },
-  "title": Object {
-    "0": "t",
-    "1": "e",
-    "2": "s",
-    "3": "t",
-    "4": "1",
-  },
-}
-`;
-
-exports[`DocumentTypeMultipleField component should have a proper style generator 2`] = `
-Object {
-  "selectedMenuItem": Object {
-    "backgroundColor": " !important",
-    "color": "",
-  },
-  "title": Object {
-    "0": "t",
-    "1": "e",
-    "2": "s",
-    "3": "t",
-    "4": "1",
-  },
-}
-`;
-
-exports[`DocumentTypeMultipleField component should have a proper style generator 3`] = `
-Object {
-  "selectedMenuItem": Object {
-    "backgroundColor": " !important",
-    "color": "",
-  },
-  "title": Object {
-    "0": "t",
-    "1": "e",
-    "2": "s",
-    "3": "t",
-    "4": "1",
-  },
-}
-`;
-
 exports[`DocumentTypeMultipleField component should render default view 1`] = `
 <ForwardRef(FormControl)
   fullWidth={true}
@@ -76,14 +28,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="1"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -93,14 +44,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="2"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -110,14 +60,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="3"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -127,14 +76,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="4"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -144,14 +92,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="5"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -161,14 +108,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="6"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -178,14 +124,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="7"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -195,14 +140,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="8"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -212,14 +156,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="9"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -229,14 +172,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="10"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -246,14 +188,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="11"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -263,14 +204,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="12"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -280,14 +220,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="13"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -297,14 +236,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="14"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -314,14 +252,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="15"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -331,14 +268,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="16"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -348,14 +284,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="17"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -365,14 +300,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="18"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -382,14 +316,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="19"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -399,14 +332,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="20"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -416,14 +348,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="21"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -433,14 +364,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="22"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -450,14 +380,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="23"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -467,14 +396,13 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="24"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -514,14 +442,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="1"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -531,14 +458,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="2"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -548,14 +474,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="3"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -565,14 +490,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="4"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -582,14 +506,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="5"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -599,14 +522,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="6"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -616,14 +538,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="7"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -633,14 +554,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="8"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -650,14 +570,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="9"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -667,14 +586,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="10"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -684,14 +602,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="11"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -701,14 +618,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="12"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -718,14 +634,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="13"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -735,14 +650,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="14"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -752,14 +666,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="15"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -769,14 +682,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="16"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -786,14 +698,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="17"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -803,14 +714,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="18"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -820,14 +730,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="19"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -837,14 +746,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="20"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -854,14 +762,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="21"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -871,14 +778,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="22"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -888,14 +794,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="23"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -905,14 +810,13 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="24"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -957,14 +861,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="1"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -974,14 +877,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="2"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -991,14 +893,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="3"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1008,14 +909,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="4"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1025,14 +925,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="5"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1042,14 +941,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="6"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1059,14 +957,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="7"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1076,14 +973,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="8"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1093,14 +989,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="9"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1110,14 +1005,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="10"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1127,14 +1021,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="11"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1144,14 +1037,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="12"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1161,14 +1053,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="13"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1178,14 +1069,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="14"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1195,14 +1085,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="15"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1212,14 +1101,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="16"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1229,14 +1117,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="17"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1246,14 +1133,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="18"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1263,14 +1149,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="19"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1280,14 +1165,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="20"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1297,14 +1181,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="21"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1314,14 +1197,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={true}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="22"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1331,14 +1213,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={true}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="23"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }
@@ -1348,14 +1229,13 @@ exports[`DocumentTypeMultipleField component should render with given document t
     </ForwardRef(MenuItem)>
     <ForwardRef(MenuItem)
       checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
       key="24"
-      style={
+      sx={
         Object {
+          "&.Mui-selected": Object {
+            "backgroundColor": "accent.main",
+            "color": "white.main",
+          },
           "display": "block",
         }
       }

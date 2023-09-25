@@ -6,16 +6,16 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
     >
       <div
-        class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
       >
         Title
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1c5kpke-MuiGrid-root"
     >
       <button
         aria-label="Click for more information"
@@ -28,7 +28,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-1 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -50,7 +50,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
       />
     </div>
     <div
@@ -66,16 +66,16 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
     >
       <div
-        class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
       >
         Title
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1c5kpke-MuiGrid-root"
     >
       <button
         aria-label="Click for more information"
@@ -88,7 +88,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-2 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -110,7 +110,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
       />
     </div>
     <div
@@ -128,10 +128,10 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
     >
       <div
-        class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
       >
         card title
       </div>
@@ -140,7 +140,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
       />
     </div>
     <div
@@ -157,16 +157,16 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
     data-testid="testid"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
     >
       <div
-        class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
       >
         Title
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1c5kpke-MuiGrid-root"
     >
       <button
         aria-label="Click for more information"
@@ -179,7 +179,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-3 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -201,7 +201,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     >
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
       />
     </div>
     <div

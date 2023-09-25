@@ -64,6 +64,15 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
           data-testid="alternate-dialog-box"
           fullWidth={true}
           onClick={[Function]}
+          sx={
+            Object {
+              "&:hover": Object {
+                "backgroundColor": "warning.dark",
+              },
+              "backgroundColor": "warning.main",
+              "color": "white.main",
+            }
+          }
           variant="contained"
         >
           ENG: Maybe
@@ -288,6 +297,15 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
           data-testid="alternate-dialog-box"
           fullWidth={true}
           onClick={[Function]}
+          sx={
+            Object {
+              "&:hover": Object {
+                "backgroundColor": "warning.dark",
+              },
+              "backgroundColor": "warning.main",
+              "color": "white.main",
+            }
+          }
           variant="contained"
         >
           Maybe

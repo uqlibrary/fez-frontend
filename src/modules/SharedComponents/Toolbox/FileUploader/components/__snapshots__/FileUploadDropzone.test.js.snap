@@ -5206,7 +5206,7 @@ exports[`Component FileUploadDropzone should render component with default props
           }
         }
       >
-        <WithStyles(FileUploadDropzoneStaticContent)
+        <FileUploadDropzoneStaticContent
           locale={Object {}}
         />
       </n>

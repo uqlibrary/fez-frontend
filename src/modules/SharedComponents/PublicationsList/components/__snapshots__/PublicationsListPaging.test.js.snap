@@ -11,20 +11,32 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
   <ForwardRef(Grid)
     container={true}
     spacing={0}
+    sx={
+      Object {
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+      }
+    }
   >
     <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
-      <ForwardRef(Button)
-        className="undefined paging-previous"
+      <Styled(ForwardRef(Button))
+        className="paging-previous"
         disabled={false}
         onClick={[Function]}
         variant="text"
       >
-        <Memo(ForwardRef(ChevronLeftIcon)) />
+        <Memo(ForwardRef(ChevronLeftIcon))
+          sx={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+        />
         Previous
-      </ForwardRef(Button)>
+      </Styled(ForwardRef(Button))>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
       data-analyticsid="undefined-desktop-controls"
@@ -38,12 +50,13 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
             "sm": "block",
             "xs": "none",
           },
+          "textAlign": "center",
         }
       }
     >
       <ForwardRef(Button)
         aria-label="Click to select page 1 of 50 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-1"
         data-testid="undefined-select-page-1"
@@ -52,6 +65,15 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         key="1"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         1
@@ -59,7 +81,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       ...
       <ForwardRef(Button)
         aria-label="Click to select page 8 of 50 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-8"
         data-testid="undefined-select-page-8"
@@ -68,13 +90,22 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         key="8"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         8
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 9 of 50 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-9"
         data-testid="undefined-select-page-9"
@@ -83,13 +114,22 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         key="9"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         9
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 10 of 50 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="primary"
         data-analyticsid="undefined-select-page-10"
         data-testid="undefined-select-page-10"
@@ -98,13 +138,24 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         key="10"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "fontSize": "1.2rem",
+            "fontWeight": 900,
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         10
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 11 of 50 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-11"
         data-testid="undefined-select-page-11"
@@ -113,13 +164,22 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         key="11"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         11
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 12 of 50 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-12"
         data-testid="undefined-select-page-12"
@@ -128,6 +188,15 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         key="12"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         12
@@ -135,7 +204,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       ...
       <ForwardRef(Button)
         aria-label="Click to select page 50 of 50 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-50"
         data-testid="undefined-select-page-50"
@@ -144,6 +213,15 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         key="50"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         50
@@ -169,26 +247,32 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         paddingRight={1}
         textAlign="center"
       >
-        <ForwardRef(Button)
+        <Styled(ForwardRef(Button))
           variant="text"
         >
           Page 10 of 50
-        </ForwardRef(Button)>
+        </Styled(ForwardRef(Button))>
       </ForwardRef(Box)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
-      <ForwardRef(Button)
-        className="undefined paging-next"
+      <Styled(ForwardRef(Button))
+        className="paging-next"
         disabled={false}
         onClick={[Function]}
         variant="text"
       >
         Next
-        <Memo(ForwardRef(ChevronRightIcon)) />
-      </ForwardRef(Button)>
+        <Memo(ForwardRef(ChevronRightIcon))
+          sx={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+        />
+      </Styled(ForwardRef(Button))>
     </ForwardRef(Grid)>
   </ForwardRef(Grid)>
 </div>
@@ -205,20 +289,32 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
   <ForwardRef(Grid)
     container={true}
     spacing={0}
+    sx={
+      Object {
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+      }
+    }
   >
     <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
-      <ForwardRef(Button)
-        className="undefined paging-previous"
+      <Styled(ForwardRef(Button))
+        className="paging-previous"
         disabled={true}
         onClick={[Function]}
         variant="text"
       >
-        <Memo(ForwardRef(ChevronLeftIcon)) />
+        <Memo(ForwardRef(ChevronLeftIcon))
+          sx={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+        />
         Previous
-      </ForwardRef(Button)>
+      </Styled(ForwardRef(Button))>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
       data-analyticsid="undefined-desktop-controls"
@@ -232,12 +328,13 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
             "sm": "block",
             "xs": "none",
           },
+          "textAlign": "center",
         }
       }
     >
       <ForwardRef(Button)
         aria-label="Click to select page 1 of 3 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="primary"
         data-analyticsid="undefined-select-page-1"
         data-testid="undefined-select-page-1"
@@ -246,13 +343,24 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         key="1"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "fontSize": "1.2rem",
+            "fontWeight": 900,
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         1
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 2 of 3 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-2"
         data-testid="undefined-select-page-2"
@@ -261,13 +369,22 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         key="2"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         2
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 3 of 3 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-3"
         data-testid="undefined-select-page-3"
@@ -276,6 +393,15 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         key="3"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         3
@@ -301,26 +427,32 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         paddingRight={1}
         textAlign="center"
       >
-        <ForwardRef(Button)
+        <Styled(ForwardRef(Button))
           variant="text"
         >
           Page 1 of 3
-        </ForwardRef(Button)>
+        </Styled(ForwardRef(Button))>
       </ForwardRef(Box)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
-      <ForwardRef(Button)
-        className="undefined paging-next"
+      <Styled(ForwardRef(Button))
+        className="paging-next"
         disabled={false}
         onClick={[Function]}
         variant="text"
       >
         Next
-        <Memo(ForwardRef(ChevronRightIcon)) />
-      </ForwardRef(Button)>
+        <Memo(ForwardRef(ChevronRightIcon))
+          sx={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+        />
+      </Styled(ForwardRef(Button))>
     </ForwardRef(Grid)>
   </ForwardRef(Grid)>
 </div>
@@ -331,20 +463,32 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
   <ForwardRef(Grid)
     container={true}
     spacing={0}
+    sx={
+      Object {
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+      }
+    }
   >
     <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
-      <ForwardRef(Button)
-        className="undefined paging-previous"
+      <Styled(ForwardRef(Button))
+        className="paging-previous"
         disabled={false}
         onClick={[Function]}
         variant="text"
       >
-        <Memo(ForwardRef(ChevronLeftIcon)) />
+        <Memo(ForwardRef(ChevronLeftIcon))
+          sx={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+        />
         Previous
-      </ForwardRef(Button)>
+      </Styled(ForwardRef(Button))>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
       data-analyticsid="undefined-desktop-controls"
@@ -358,12 +502,13 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
             "sm": "block",
             "xs": "none",
           },
+          "textAlign": "center",
         }
       }
     >
       <ForwardRef(Button)
         aria-label="Click to select page 1 of 3 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-1"
         data-testid="undefined-select-page-1"
@@ -372,13 +517,22 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         key="1"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         1
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 2 of 3 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-2"
         data-testid="undefined-select-page-2"
@@ -387,13 +541,22 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         key="2"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         2
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 3 of 3 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="primary"
         data-analyticsid="undefined-select-page-3"
         data-testid="undefined-select-page-3"
@@ -402,6 +565,17 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         key="3"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "fontSize": "1.2rem",
+            "fontWeight": 900,
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         3
@@ -427,26 +601,32 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         paddingRight={1}
         textAlign="center"
       >
-        <ForwardRef(Button)
+        <Styled(ForwardRef(Button))
           variant="text"
         >
           Page 3 of 3
-        </ForwardRef(Button)>
+        </Styled(ForwardRef(Button))>
       </ForwardRef(Box)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
-      <ForwardRef(Button)
-        className="undefined paging-next"
+      <Styled(ForwardRef(Button))
+        className="paging-next"
         disabled={true}
         onClick={[Function]}
         variant="text"
       >
         Next
-        <Memo(ForwardRef(ChevronRightIcon)) />
-      </ForwardRef(Button)>
+        <Memo(ForwardRef(ChevronRightIcon))
+          sx={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+        />
+      </Styled(ForwardRef(Button))>
     </ForwardRef(Grid)>
   </ForwardRef(Grid)>
 </div>
@@ -457,20 +637,32 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
   <ForwardRef(Grid)
     container={true}
     spacing={0}
+    sx={
+      Object {
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+      }
+    }
   >
     <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
-      <ForwardRef(Button)
-        className="undefined paging-previous"
+      <Styled(ForwardRef(Button))
+        className="paging-previous"
         disabled={false}
         onClick={[Function]}
         variant="text"
       >
-        <Memo(ForwardRef(ChevronLeftIcon)) />
+        <Memo(ForwardRef(ChevronLeftIcon))
+          sx={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+        />
         Previous
-      </ForwardRef(Button)>
+      </Styled(ForwardRef(Button))>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
       data-analyticsid="undefined-desktop-controls"
@@ -484,12 +676,13 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
             "sm": "block",
             "xs": "none",
           },
+          "textAlign": "center",
         }
       }
     >
       <ForwardRef(Button)
         aria-label="Click to select page 1 of 3 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-1"
         data-testid="undefined-select-page-1"
@@ -498,13 +691,22 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         key="1"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         1
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 2 of 3 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="primary"
         data-analyticsid="undefined-select-page-2"
         data-testid="undefined-select-page-2"
@@ -513,13 +715,24 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         key="2"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "fontSize": "1.2rem",
+            "fontWeight": 900,
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         2
       </ForwardRef(Button)>
       <ForwardRef(Button)
         aria-label="Click to select page 3 of 3 result pages"
-        className=" paging-button"
+        className="paging-button"
         color="inherit"
         data-analyticsid="undefined-select-page-3"
         data-testid="undefined-select-page-3"
@@ -528,6 +741,15 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         key="3"
         onClick={[Function]}
         size="small"
+        sx={
+          Object {
+            "flex": "1 0 auto",
+            "height": "32px",
+            "margin": "0 2px",
+            "minHeight": "32px",
+            "minWidth": "32px",
+          }
+        }
         variant="text"
       >
         3
@@ -553,26 +775,32 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         paddingRight={1}
         textAlign="center"
       >
-        <ForwardRef(Button)
+        <Styled(ForwardRef(Button))
           variant="text"
         >
           Page 2 of 3
-        </ForwardRef(Button)>
+        </Styled(ForwardRef(Button))>
       </ForwardRef(Box)>
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
-      <ForwardRef(Button)
-        className="undefined paging-next"
+      <Styled(ForwardRef(Button))
+        className="paging-next"
         disabled={false}
         onClick={[Function]}
         variant="text"
       >
         Next
-        <Memo(ForwardRef(ChevronRightIcon)) />
-      </ForwardRef(Button)>
+        <Memo(ForwardRef(ChevronRightIcon))
+          sx={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+        />
+      </Styled(ForwardRef(Button))>
     </ForwardRef(Grid)>
   </ForwardRef(Grid)>
 </div>
@@ -2039,7 +2267,7 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
 exports[`PublicationsListPaging renders  should render buttons with zero total pages 1`] = `
 <ForwardRef(Button)
   aria-label="Click to select page test of 0 result pages"
-  className=" paging-button"
+  className="paging-button"
   color="inherit"
   data-analyticsid="undefined-select-page-test"
   data-testid="undefined-select-page-test"
@@ -2047,6 +2275,15 @@ exports[`PublicationsListPaging renders  should render buttons with zero total p
   id="undefined-select-page-test"
   onClick={[Function]}
   size="small"
+  sx={
+    Object {
+      "flex": "1 0 auto",
+      "height": "32px",
+      "margin": "0 2px",
+      "minHeight": "32px",
+      "minWidth": "32px",
+    }
+  }
   variant="text"
 >
   test

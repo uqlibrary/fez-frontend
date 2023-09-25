@@ -6,18 +6,18 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-29 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-34 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -38,7 +38,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-35 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -155,18 +155,18 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-29 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-34 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -196,18 +196,18 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-64 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-69 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -228,7 +228,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-70 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -286,18 +286,18 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-64 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-69 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -327,18 +327,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-15 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-20 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -359,7 +359,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-21 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -428,18 +428,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-15 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-20 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -460,7 +460,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-21 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -614,18 +614,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-15 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-20 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -655,18 +655,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-8 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-13 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -687,7 +687,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-14 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -756,18 +756,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-8 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-13 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -788,7 +788,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-14 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -942,18 +942,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-8 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-13 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -983,18 +983,18 @@ exports[`Component NtroFields should render default view 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -1015,7 +1015,7 @@ exports[`Component NtroFields should render default view 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-7 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1169,18 +1169,18 @@ exports[`Component NtroFields should render default view 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -1210,18 +1210,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-22 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-27 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -1242,7 +1242,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-28 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1311,18 +1311,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-22 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-27 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -1343,7 +1343,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-28 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1502,18 +1502,18 @@ exports[`Component NtroFields should show significance field even if contributio
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-57 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-62 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -1534,7 +1534,7 @@ exports[`Component NtroFields should show significance field even if contributio
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-63 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1592,18 +1592,18 @@ exports[`Component NtroFields should show significance field even if contributio
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-57 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-62 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -1624,7 +1624,7 @@ exports[`Component NtroFields should show significance field even if contributio
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-63 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1778,18 +1778,18 @@ exports[`Component NtroFields should show significance field even if contributio
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-57 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-62 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >

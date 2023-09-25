@@ -25,7 +25,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
      
     <a
       aria-label="Check publisher's OA archiving policy in a new window"
-      class="makeStyles-externalLink-1 makeStyles-externalLink-3"
+      class=" css-1oqhn84"
       data-analyticsid="rek-journal-name-sherpa-link"
       data-testid="rek-journal-name-sherpa-link"
       href="https://example.com/"
@@ -37,7 +37,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-2 css-i4bv87-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
         data-testid="OpenInNewIcon"
         focusable="false"
         id="rek-journal-name-sherpa-link-new-window-icon"
@@ -71,7 +71,7 @@ exports[`Journal Name Component test  should render without era journal listed 1
      
     <a
       aria-label="Check publisher's OA archiving policy in a new window"
-      class="makeStyles-externalLink-4 makeStyles-externalLink-6"
+      class=" css-1oqhn84"
       data-analyticsid="rek-journal-name-sherpa-link"
       data-testid="rek-journal-name-sherpa-link"
       href="https://example.com/"
@@ -83,7 +83,7 @@ exports[`Journal Name Component test  should render without era journal listed 1
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-5 css-i4bv87-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
         data-testid="OpenInNewIcon"
         focusable="false"
         id="rek-journal-name-sherpa-link-new-window-icon"

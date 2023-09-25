@@ -7,34 +7,34 @@ exports[`Component ScrollTop should not render component 1`] = `
 `;
 
 exports[`Component ScrollTop should not render component 2`] = `
-<ScrollTop
-  classes={
-    Object {
-      "scrollTop": "ScrollTop-scrollTop-1",
-    }
-  }
-  show={false}
-  showAfter={100}
+<div
+  className="scrolltop-hidden"
 />
 `;
 
 exports[`Component ScrollTop should render component 1`] = `
 <ForwardRef(Fab)
   aria-label="Scroll to top of page"
-  classes={
-    Object {
-      "root": undefined,
-    }
-  }
   color="secondary"
   id="scrolltopbtn"
   onClick={[Function]}
   sx={
     Object {
+      "&hover:": Object {
+        "WebkitTransition": "opacity 0.5s",
+        "opacity": 0.9,
+        "transition": "opacity 0.3s",
+      },
+      "WebkitTransition": "opacity 0.5s",
+      "bottom": "16px",
       "display": Object {
         "md": "inline-flex",
         "xs": "none",
       },
+      "opacity": 0,
+      "position": "absolute",
+      "right": "32px",
+      "transition": "opacity 0.3s",
     }
   }
   title="Scroll to top of page"
@@ -44,13 +44,32 @@ exports[`Component ScrollTop should render component 1`] = `
 `;
 
 exports[`Component ScrollTop should render component 2`] = `
-<ScrollTop
-  classes={
+<ForwardRef(Fab)
+  aria-label="Scroll to top of page"
+  color="secondary"
+  id="scrolltopbtn"
+  onClick={[Function]}
+  sx={
     Object {
-      "scrollTop": "ScrollTop-scrollTop-1",
+      "&hover:": Object {
+        "WebkitTransition": "opacity 0.5s",
+        "opacity": 0.9,
+        "transition": "opacity 0.3s",
+      },
+      "WebkitTransition": "opacity 0.5s",
+      "bottom": "16px",
+      "display": Object {
+        "md": "inline-flex",
+        "xs": "none",
+      },
+      "opacity": 0,
+      "position": "absolute",
+      "right": "32px",
+      "transition": "opacity 0.3s",
     }
   }
-  show={true}
-  showAfter={100}
-/>
+  title="Scroll to top of page"
+>
+  <Memo(ForwardRef(ArrowUpwardIcon)) />
+</ForwardRef(Fab)>
 `;

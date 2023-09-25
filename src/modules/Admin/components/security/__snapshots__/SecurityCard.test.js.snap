@@ -369,16 +369,7 @@ exports[`SecurityCard component should render security card correctly for record
               Object {
                 "$$typeof": Symbol(react.memo),
                 "compare": [Function],
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "Naked": [Function],
-                  "options": Object {},
-                  "propTypes": Object {
-                    "classes": [Function],
-                  },
-                  "render": [Function],
-                  "useStyles": [Function],
-                },
+                "type": [Function],
               }
             }
             disabled={false}
@@ -578,16 +569,7 @@ exports[`SecurityCard component should render security card correctly for record
               Object {
                 "$$typeof": Symbol(react.memo),
                 "compare": [Function],
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "Naked": [Function],
-                  "options": Object {},
-                  "propTypes": Object {
-                    "classes": [Function],
-                  },
-                  "render": [Function],
-                  "useStyles": [Function],
-                },
+                "type": [Function],
               }
             }
             disabled={false}
@@ -787,16 +769,7 @@ exports[`SecurityCard component should render security card with disabled inputs
               Object {
                 "$$typeof": Symbol(react.memo),
                 "compare": [Function],
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "Naked": [Function],
-                  "options": Object {},
-                  "propTypes": Object {
-                    "classes": [Function],
-                  },
-                  "render": [Function],
-                  "useStyles": [Function],
-                },
+                "type": [Function],
               }
             }
             disabled={true}

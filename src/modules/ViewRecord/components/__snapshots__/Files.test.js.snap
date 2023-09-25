@@ -487,18 +487,18 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-596 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-601 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -513,10 +513,10 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
         id="standard-card-files-content"
       >
         <div
-          class="FilesClass-containerPadding-595"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-591 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -559,13 +559,13 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-595"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-591 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-594 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -596,7 +596,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-592 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -609,10 +609,10 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-605 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-606"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -623,7 +623,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-592 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -633,7 +633,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-592 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -694,18 +694,18 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-617 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-622 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -720,10 +720,10 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
         id="standard-card-files-content"
       >
         <div
-          class="FilesClass-containerPadding-616"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-612 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -766,19 +766,19 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-616"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-612 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-615 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-614 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -789,7 +789,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-613 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -802,10 +802,10 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-623 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-624"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -816,7 +816,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-613 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -826,7 +826,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-613 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -887,18 +887,18 @@ exports[`Files Component  should not render advisory statement 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-28 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-33 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -913,10 +913,10 @@ exports[`Files Component  should not render advisory statement 1`] = `
         id="standard-card-files-content"
       >
         <div
-          class="FilesClass-containerPadding-27"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-23 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -959,13 +959,13 @@ exports[`Files Component  should not render advisory statement 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-27"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-23 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-26 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -996,7 +996,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-24 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -1009,10 +1009,10 @@ exports[`Files Component  should not render advisory statement 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-37 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-38"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -1023,7 +1023,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-24 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -1033,7 +1033,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-24 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -1083,19 +1083,19 @@ exports[`Files Component  should not render advisory statement 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-27"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-23 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-26 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-25 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1106,7 +1106,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-24 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -1119,10 +1119,10 @@ exports[`Files Component  should not render advisory statement 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-37 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-38"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -1133,7 +1133,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-24 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -1143,7 +1143,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-24 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -1204,18 +1204,18 @@ exports[`Files Component  should not render advisory statement 2`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-50 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-55 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -1234,7 +1234,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-56 MuiGrid-container makeStyles-info-70 makeStyles-common-57 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -1243,7 +1243,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-60 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -1259,7 +1259,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-61 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   hello
@@ -1269,10 +1269,10 @@ exports[`Files Component  should not render advisory statement 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-49"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-45 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -1315,13 +1315,13 @@ exports[`Files Component  should not render advisory statement 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-49"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-45 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-48 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -1352,7 +1352,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-46 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -1365,10 +1365,10 @@ exports[`Files Component  should not render advisory statement 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-76 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-77"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -1379,7 +1379,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-46 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -1389,7 +1389,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-46 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -1439,19 +1439,19 @@ exports[`Files Component  should not render advisory statement 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-49"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-45 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-48 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-47 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1462,7 +1462,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-46 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -1475,10 +1475,10 @@ exports[`Files Component  should not render advisory statement 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-76 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-77"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -1489,7 +1489,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-46 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -1499,7 +1499,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-46 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -1562,18 +1562,18 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-128 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-133 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -1592,7 +1592,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-134 MuiGrid-container makeStyles-info-148 makeStyles-common-135 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -1601,7 +1601,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-138 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -1617,7 +1617,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-139 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.
@@ -1627,10 +1627,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-127"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-123 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -1673,13 +1673,13 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-127"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-123 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-126 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -1710,7 +1710,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-124 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -1723,10 +1723,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-154 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-155"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -1737,7 +1737,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-124 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -1747,7 +1747,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-124 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -1797,19 +1797,19 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-127"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-123 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-126 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-125 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1820,7 +1820,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-124 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -1833,10 +1833,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-154 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-155"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -1847,7 +1847,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-124 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -1857,7 +1857,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-124 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -1918,18 +1918,18 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-167 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-172 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -1948,7 +1948,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-173 MuiGrid-container makeStyles-info-187 makeStyles-common-174 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -1957,7 +1957,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-177 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -1973,7 +1973,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-178 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   Other
@@ -1983,10 +1983,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-166"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-162 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -2029,13 +2029,13 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-166"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-162 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-165 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -2066,7 +2066,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-163 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -2079,10 +2079,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-193 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-194"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -2093,7 +2093,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-163 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -2103,7 +2103,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-163 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -2153,19 +2153,19 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-166"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-162 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-165 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-164 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -2176,7 +2176,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-163 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -2189,10 +2189,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-193 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-194"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -2203,7 +2203,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-163 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -2213,7 +2213,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-163 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -2274,18 +2274,18 @@ exports[`Files Component  should render advisory statement 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-89 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-94 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2304,7 +2304,7 @@ exports[`Files Component  should render advisory statement 1`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-95 MuiGrid-container makeStyles-info-109 makeStyles-common-96 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -2313,7 +2313,7 @@ exports[`Files Component  should render advisory statement 1`] = `
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-99 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -2329,7 +2329,7 @@ exports[`Files Component  should render advisory statement 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-100 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   hello
@@ -2339,10 +2339,10 @@ exports[`Files Component  should render advisory statement 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-88"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-84 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -2385,13 +2385,13 @@ exports[`Files Component  should render advisory statement 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-88"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-84 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-87 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -2422,7 +2422,7 @@ exports[`Files Component  should render advisory statement 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-85 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -2435,10 +2435,10 @@ exports[`Files Component  should render advisory statement 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-115 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-116"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -2449,7 +2449,7 @@ exports[`Files Component  should render advisory statement 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-85 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -2459,7 +2459,7 @@ exports[`Files Component  should render advisory statement 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-85 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -2509,19 +2509,19 @@ exports[`Files Component  should render advisory statement 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-88"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-84 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-87 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-86 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -2532,7 +2532,7 @@ exports[`Files Component  should render advisory statement 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-85 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -2545,10 +2545,10 @@ exports[`Files Component  should render advisory statement 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-115 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-116"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -2559,7 +2559,7 @@ exports[`Files Component  should render advisory statement 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-85 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -2569,7 +2569,7 @@ exports[`Files Component  should render advisory statement 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-85 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -2630,18 +2630,18 @@ exports[`Files Component  should render an image as the original filename with n
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-284 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-289 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2660,7 +2660,7 @@ exports[`Files Component  should render an image as the original filename with n
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-290 MuiGrid-container makeStyles-info-304 makeStyles-common-291 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -2669,7 +2669,7 @@ exports[`Files Component  should render an image as the original filename with n
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-294 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -2685,7 +2685,7 @@ exports[`Files Component  should render an image as the original filename with n
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-295 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   No statement
@@ -2699,7 +2699,7 @@ exports[`Files Component  should render an image as the original filename with n
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-290 MuiGrid-container makeStyles-info-304 makeStyles-common-291 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -2708,7 +2708,7 @@ exports[`Files Component  should render an image as the original filename with n
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-294 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -2724,7 +2724,7 @@ exports[`Files Component  should render an image as the original filename with n
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-295 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   test
@@ -2734,10 +2734,10 @@ exports[`Files Component  should render an image as the original filename with n
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-283"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-279 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -2780,19 +2780,19 @@ exports[`Files Component  should render an image as the original filename with n
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-283"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-279 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-282 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-281 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -2803,7 +2803,7 @@ exports[`Files Component  should render an image as the original filename with n
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-280 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -2816,10 +2816,10 @@ exports[`Files Component  should render an image as the original filename with n
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-307 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-308"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -2830,7 +2830,7 @@ exports[`Files Component  should render an image as the original filename with n
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-280 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -2840,7 +2840,7 @@ exports[`Files Component  should render an image as the original filename with n
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-280 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -2901,18 +2901,18 @@ exports[`Files Component  should render audio files with _xt in their filename f
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-635 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-640 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2927,10 +2927,10 @@ exports[`Files Component  should render audio files with _xt in their filename f
         id="standard-card-files-content"
       >
         <div
-          class="FilesClass-containerPadding-634"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-630 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -2973,19 +2973,19 @@ exports[`Files Component  should render audio files with _xt in their filename f
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-634"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-630 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-633 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-632 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="VolumeUpIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -2996,7 +2996,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-631 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -3009,7 +3009,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-8 css-167c4fm-MuiGrid-root"
                 >
                   <a
-                    class="makeStyles-filename-642 makeStyles-filenameParent-641 makeStyles-externalLink-646 makeStyles-externalLink-648"
+                    class=" css-za9t3z"
                     data-analyticsid="file-name-0-download-link"
                     data-testid="file-name-0-download-link"
                     href="http://localhost/view/UQ:676287/audio.wav"
@@ -3021,7 +3021,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-647 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-0-download-link-new-window-icon"
@@ -3075,7 +3075,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-631 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -3085,7 +3085,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-631 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -3135,19 +3135,19 @@ exports[`Files Component  should render audio files with _xt in their filename f
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-634"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-630 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-633 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-632 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="VolumeUpIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -3158,7 +3158,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-631 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -3171,7 +3171,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-8 css-167c4fm-MuiGrid-root"
                 >
                   <a
-                    class="makeStyles-filename-642 makeStyles-filenameParent-641 makeStyles-externalLink-646 makeStyles-externalLink-651"
+                    class=" css-za9t3z"
                     data-analyticsid="file-name-1-download-link"
                     data-testid="file-name-1-download-link"
                     href="http://localhost/view/UQ:676287/audiotest_xt.mp3"
@@ -3183,7 +3183,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-647 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-1-download-link-new-window-icon"
@@ -3237,7 +3237,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-631 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -3247,7 +3247,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-631 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -3308,18 +3308,18 @@ exports[`Files Component  should render component 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-6 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-11 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -3334,10 +3334,10 @@ exports[`Files Component  should render component 1`] = `
         id="standard-card-files-content"
       >
         <div
-          class="FilesClass-containerPadding-5"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-1 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -3380,13 +3380,13 @@ exports[`Files Component  should render component 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-5"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-1 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-4 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -3417,7 +3417,7 @@ exports[`Files Component  should render component 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-2 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -3430,10 +3430,10 @@ exports[`Files Component  should render component 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-15 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-16"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -3444,7 +3444,7 @@ exports[`Files Component  should render component 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-2 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -3454,7 +3454,7 @@ exports[`Files Component  should render component 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-2 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -3504,19 +3504,19 @@ exports[`Files Component  should render component 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-5"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-1 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-4 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-3 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -3527,7 +3527,7 @@ exports[`Files Component  should render component 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-2 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -3540,10 +3540,10 @@ exports[`Files Component  should render component 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-15 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-16"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -3554,7 +3554,7 @@ exports[`Files Component  should render component 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-2 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -3564,7 +3564,7 @@ exports[`Files Component  should render component 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-2 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -3625,18 +3625,18 @@ exports[`Files Component  should render component 2`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-492 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-497 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -3655,19 +3655,19 @@ exports[`Files Component  should render component 2`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-498 MuiGrid-container makeStyles-info_outline-513 makeStyles-common-499 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
             data-analyticsid="login-info-alert"
             data-testid="login-info-alert"
             id="login-info-alert"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true makeStyles-linked-506 css-cyocdy-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-yrmeox-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-502 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -3683,7 +3683,7 @@ exports[`Files Component  should render component 2`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-503 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b>
                     You are not logged in - 
@@ -3693,7 +3693,7 @@ exports[`Files Component  should render component 2`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto makeStyles-actionButton-504 css-11gq09b-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
@@ -3712,10 +3712,10 @@ exports[`Files Component  should render component 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-491"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-487 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -3758,13 +3758,13 @@ exports[`Files Component  should render component 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-491"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-487 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-490 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -3795,7 +3795,7 @@ exports[`Files Component  should render component 2`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-488 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -3808,7 +3808,7 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class="makeStyles-filename-519 makeStyles-filenameParent-518 makeStyles-externalLink-523 makeStyles-externalLink-525"
+                    class=" css-za9t3z"
                     data-analyticsid="file-name-0-download-link"
                     data-testid="file-name-0-download-link"
                     href="http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb"
@@ -3820,7 +3820,7 @@ exports[`Files Component  should render component 2`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-524 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-0-download-link-new-window-icon"
@@ -3836,7 +3836,7 @@ exports[`Files Component  should render component 2`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-488 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -3846,7 +3846,7 @@ exports[`Files Component  should render component 2`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-488 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -3896,13 +3896,13 @@ exports[`Files Component  should render component 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-491"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-487 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-490 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
@@ -3933,7 +3933,7 @@ exports[`Files Component  should render component 2`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-488 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -3946,10 +3946,10 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-518 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-519"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -3960,7 +3960,7 @@ exports[`Files Component  should render component 2`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-488 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -3970,7 +3970,7 @@ exports[`Files Component  should render component 2`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-488 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -4020,13 +4020,13 @@ exports[`Files Component  should render component 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-491"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-487 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-490 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-2"
               data-testid="dsi-mimetype-2"
             >
@@ -4057,7 +4057,7 @@ exports[`Files Component  should render component 2`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-488 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-2"
               data-testid="dsi-dsid-2"
             >
@@ -4070,10 +4070,10 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-518 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-519"
+                      class="css-gkvags"
                       data-testid="file-name-2-preview"
                       id="file-name-2-preview"
                     >
@@ -4084,7 +4084,7 @@ exports[`Files Component  should render component 2`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-488 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-2"
             >
               <p
@@ -4094,7 +4094,7 @@ exports[`Files Component  should render component 2`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-488 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-2"
             >
               <p
@@ -4144,13 +4144,13 @@ exports[`Files Component  should render component 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-491"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-487 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-490 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-3"
               data-testid="dsi-mimetype-3"
             >
@@ -4181,7 +4181,7 @@ exports[`Files Component  should render component 2`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-488 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-3"
               data-testid="dsi-dsid-3"
             >
@@ -4194,10 +4194,10 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-518 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-519"
+                      class="css-gkvags"
                       data-testid="file-name-3-preview"
                       id="file-name-3-preview"
                     >
@@ -4208,7 +4208,7 @@ exports[`Files Component  should render component 2`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-488 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-3"
             >
               <p
@@ -4218,7 +4218,7 @@ exports[`Files Component  should render component 2`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-488 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-3"
             >
               <p
@@ -4268,13 +4268,13 @@ exports[`Files Component  should render component 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-491"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-487 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-490 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-4"
               data-testid="dsi-mimetype-4"
             >
@@ -4305,7 +4305,7 @@ exports[`Files Component  should render component 2`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-488 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-4"
               data-testid="dsi-dsid-4"
             >
@@ -4318,10 +4318,10 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-518 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-519"
+                      class="css-gkvags"
                       data-testid="file-name-4-preview"
                       id="file-name-4-preview"
                     >
@@ -4332,7 +4332,7 @@ exports[`Files Component  should render component 2`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-488 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-4"
             >
               <p
@@ -4342,7 +4342,7 @@ exports[`Files Component  should render component 2`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-488 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-4"
             >
               <p
@@ -4392,19 +4392,19 @@ exports[`Files Component  should render component 2`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-491"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-487 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-490 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-5"
               data-testid="dsi-mimetype-5"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-489 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -4415,7 +4415,7 @@ exports[`Files Component  should render component 2`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-488 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-5"
               data-testid="dsi-dsid-5"
             >
@@ -4431,11 +4431,11 @@ exports[`Files Component  should render component 2`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-filename-519 css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-zqcp4i-MuiGrid-root"
                     >
                       <p
                         aria-label=""
-                        class="MuiTypography-root MuiTypography-body2 makeStyles-filename-519  makeStyles-filenameParent-518 css-1omq3q2-MuiTypography-root"
+                        class=" css-17zaxj"
                         data-mui-internal-clone-element="true"
                         data-testid="file-name-5-tooltip"
                       >
@@ -4447,7 +4447,7 @@ exports[`Files Component  should render component 2`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-488 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-5"
             >
               <p
@@ -4457,7 +4457,7 @@ exports[`Files Component  should render component 2`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-488 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-5"
             >
               <p
@@ -4518,18 +4518,18 @@ exports[`Files Component  should render component for public users 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-538 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-543 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -4548,19 +4548,19 @@ exports[`Files Component  should render component for public users 1`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-544 MuiGrid-container makeStyles-info_outline-559 makeStyles-common-545 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
             data-analyticsid="login-info-alert"
             data-testid="login-info-alert"
             id="login-info-alert"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true makeStyles-linked-552 css-cyocdy-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-yrmeox-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-548 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -4576,7 +4576,7 @@ exports[`Files Component  should render component for public users 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-549 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b>
                     You are not logged in - 
@@ -4586,7 +4586,7 @@ exports[`Files Component  should render component for public users 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto makeStyles-actionButton-550 css-11gq09b-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
@@ -4605,10 +4605,10 @@ exports[`Files Component  should render component for public users 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-537"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-533 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -4651,19 +4651,19 @@ exports[`Files Component  should render component for public users 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-537"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-533 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-536 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-535 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -4674,7 +4674,7 @@ exports[`Files Component  should render component for public users 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-534 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -4690,11 +4690,11 @@ exports[`Files Component  should render component for public users 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-filename-562 css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-zqcp4i-MuiGrid-root"
                     >
                       <p
                         aria-label=""
-                        class="MuiTypography-root MuiTypography-body2 makeStyles-filename-562  makeStyles-filenameParent-561 css-1omq3q2-MuiTypography-root"
+                        class=" css-17zaxj"
                         data-mui-internal-clone-element="true"
                         data-testid="file-name-0-tooltip"
                       >
@@ -4706,7 +4706,7 @@ exports[`Files Component  should render component for public users 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-534 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -4716,7 +4716,7 @@ exports[`Files Component  should render component for public users 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-534 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -4777,18 +4777,18 @@ exports[`Files Component  should render files based on security policy correctly
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-573 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-578 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -4803,10 +4803,10 @@ exports[`Files Component  should render files based on security policy correctly
         id="standard-card-files-content"
       >
         <div
-          class="FilesClass-containerPadding-572"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-568 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -4849,19 +4849,19 @@ exports[`Files Component  should render files based on security policy correctly
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-572"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-568 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-571 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-570 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -4872,7 +4872,7 @@ exports[`Files Component  should render files based on security policy correctly
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-569 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -4888,11 +4888,11 @@ exports[`Files Component  should render files based on security policy correctly
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-filename-580 css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-zqcp4i-MuiGrid-root"
                     >
                       <p
                         aria-label=""
-                        class="MuiTypography-root MuiTypography-body2 makeStyles-filename-580  makeStyles-filenameParent-579 css-1omq3q2-MuiTypography-root"
+                        class=" css-17zaxj"
                         data-mui-internal-clone-element="true"
                         data-testid="file-name-0-tooltip"
                       >
@@ -4900,7 +4900,7 @@ exports[`Files Component  should render files based on security policy correctly
                       </p>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto makeStyles-fileDownloadIcon-582 css-1wrgmsj-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-qf0jps-MuiGrid-root"
                     >
                       <button
                         aria-label="Download file"
@@ -4932,7 +4932,7 @@ exports[`Files Component  should render files based on security policy correctly
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-569 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -4940,7 +4940,7 @@ exports[`Files Component  should render files based on security policy correctly
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-569 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -5001,18 +5001,18 @@ exports[`Files Component  should render icon for mimeType 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-324 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-329 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -5027,10 +5027,10 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         id="standard-card-files-content"
       >
         <div
-          class="FilesClass-containerPadding-323"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-319 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -5073,13 +5073,13 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-323"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-319 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-322 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -5110,7 +5110,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-320 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -5123,10 +5123,10 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-333 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-334"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -5137,7 +5137,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-320 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -5145,7 +5145,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-320 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -5195,19 +5195,19 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-323"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-319 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-322 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-321 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="VideocamIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -5218,7 +5218,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-320 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -5231,10 +5231,10 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-333 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-334"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -5245,7 +5245,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-320 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -5253,7 +5253,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-320 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -5303,13 +5303,13 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-323"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-319 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-322 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-2"
               data-testid="dsi-mimetype-2"
             >
@@ -5340,7 +5340,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-320 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-2"
               data-testid="dsi-dsid-2"
             >
@@ -5353,10 +5353,10 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-333 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-334"
+                      class="css-gkvags"
                       data-testid="file-name-2-preview"
                       id="file-name-2-preview"
                     >
@@ -5367,7 +5367,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-320 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-2"
             >
               <p
@@ -5375,7 +5375,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-320 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-2"
             >
               <p
@@ -5425,13 +5425,13 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-323"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-319 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-322 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-3"
               data-testid="dsi-mimetype-3"
             >
@@ -5462,7 +5462,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-320 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-3"
               data-testid="dsi-dsid-3"
             >
@@ -5475,7 +5475,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-8 css-167c4fm-MuiGrid-root"
                 >
                   <a
-                    class="makeStyles-filename-334 makeStyles-filenameParent-333 makeStyles-externalLink-342 makeStyles-externalLink-344"
+                    class=" css-za9t3z"
                     data-analyticsid="file-name-3-download-link"
                     data-testid="file-name-3-download-link"
                     href="http://localhost/view/UQ:1/test.mp3"
@@ -5487,7 +5487,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-343 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-3-download-link-new-window-icon"
@@ -5541,7 +5541,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-320 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-3"
             >
               <p
@@ -5549,7 +5549,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-320 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-3"
             >
               <p
@@ -5599,13 +5599,13 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-323"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-319 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-322 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-4"
               data-testid="dsi-mimetype-4"
             >
@@ -5636,7 +5636,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-320 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-4"
               data-testid="dsi-dsid-4"
             >
@@ -5649,10 +5649,10 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-333 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-334"
+                      class="css-gkvags"
                       data-testid="file-name-4-preview"
                       id="file-name-4-preview"
                     >
@@ -5663,7 +5663,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-320 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-4"
             >
               <p
@@ -5671,7 +5671,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-320 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-4"
             >
               <p
@@ -5721,18 +5721,18 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-323"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-319 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-322 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-5"
               data-testid="dsi-mimetype-5"
             >
               <a
-                class="makeStyles-externalLink-342 makeStyles-externalLink-347"
+                class=" css-1oqhn84"
                 data-analyticsid="thumbnail-link"
                 data-testid="thumbnail-link"
                 href="http://localhost/view/UQ:1/test.pdf"
@@ -5764,7 +5764,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-320 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-5"
               data-testid="dsi-dsid-5"
             >
@@ -5777,7 +5777,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class="makeStyles-filename-334 makeStyles-filenameParent-333 makeStyles-externalLink-342 makeStyles-externalLink-348"
+                    class=" css-za9t3z"
                     data-analyticsid="file-name-5-download-link"
                     data-testid="file-name-5-download-link"
                     href="http://localhost/view/UQ:1/test.pdf"
@@ -5789,7 +5789,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-343 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-5-download-link-new-window-icon"
@@ -5805,7 +5805,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-320 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-5"
             >
               <p
@@ -5813,7 +5813,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-320 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-5"
             >
               <p
@@ -5863,19 +5863,19 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-323"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-319 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-322 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-6"
               data-testid="dsi-mimetype-6"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-321 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="InsertDriveFileIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -5886,7 +5886,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-320 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-6"
               data-testid="dsi-dsid-6"
             >
@@ -5899,7 +5899,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class="makeStyles-filename-334 makeStyles-filenameParent-333 makeStyles-externalLink-342 makeStyles-externalLink-350"
+                    class=" css-za9t3z"
                     data-analyticsid="file-name-6-download-link"
                     data-testid="file-name-6-download-link"
                     href="http://localhost/view/UQ:1/random.txt"
@@ -5911,7 +5911,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-343 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-6-download-link-new-window-icon"
@@ -5927,7 +5927,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-320 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-6"
             >
               <p
@@ -5935,7 +5935,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-320 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-6"
             >
               <p
@@ -5996,18 +5996,18 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-245 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-250 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -6026,7 +6026,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-251 MuiGrid-container makeStyles-info-265 makeStyles-common-252 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -6035,7 +6035,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-255 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -6051,7 +6051,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-256 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   test
@@ -6061,10 +6061,10 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-244"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-240 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -6107,13 +6107,13 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-244"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-240 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-243 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -6144,7 +6144,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-241 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -6157,10 +6157,10 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-271 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-272"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -6171,7 +6171,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-241 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -6181,7 +6181,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-241 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -6231,19 +6231,19 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-244"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-240 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-243 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-242 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -6254,7 +6254,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-241 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -6267,10 +6267,10 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-271 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-272"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -6281,7 +6281,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-241 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -6291,7 +6291,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-241 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -6352,18 +6352,18 @@ exports[`Files Component  should render sensitive handling note 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-206 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-211 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -6382,7 +6382,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-212 MuiGrid-container makeStyles-info-226 makeStyles-common-213 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -6391,7 +6391,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-216 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -6407,7 +6407,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-217 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.
@@ -6417,10 +6417,10 @@ exports[`Files Component  should render sensitive handling note 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-205"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-201 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -6463,13 +6463,13 @@ exports[`Files Component  should render sensitive handling note 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-205"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-201 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-204 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
@@ -6500,7 +6500,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-202 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -6513,10 +6513,10 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-232 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-233"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -6527,7 +6527,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-202 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -6537,7 +6537,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-202 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p
@@ -6587,19 +6587,19 @@ exports[`Files Component  should render sensitive handling note 1`] = `
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-205"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-201 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-204 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-1"
               data-testid="dsi-mimetype-1"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-203 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -6610,7 +6610,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-202 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-1"
               data-testid="dsi-dsid-1"
             >
@@ -6623,10 +6623,10 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-232 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-233"
+                      class="css-gkvags"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -6637,7 +6637,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-202 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-1"
             >
               <p
@@ -6647,7 +6647,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-202 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-1"
             >
               <p
@@ -6708,18 +6708,18 @@ exports[`Files Component  should show a blacklisted collection member when the u
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-658 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-663 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -6738,7 +6738,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-664 MuiGrid-container makeStyles-info-678 makeStyles-common-665 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -6747,7 +6747,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-668 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -6763,7 +6763,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-669 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   No statement
@@ -6777,7 +6777,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root makeStyles-root-664 MuiGrid-container makeStyles-info-678 makeStyles-common-665 css-1k6h6af-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -6786,7 +6786,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
                 class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-icon-668 alert-icon  css-13i4rnv-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -6802,7 +6802,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-669 alert-text css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                 >
                   <b />
                   test
@@ -6812,10 +6812,10 @@ exports[`Files Component  should show a blacklisted collection member when the u
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-657"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-653 header css-zl5zqp-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-tgwsdf-MuiGrid2-root"
           >
             <div
               class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1phf2xn-MuiGrid2-root"
@@ -6858,19 +6858,19 @@ exports[`Files Component  should show a blacklisted collection member when the u
           </div>
         </div>
         <div
-          class="FilesClass-containerPadding-657"
+          class="MuiBox-root css-378kpi"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 FilesClass-header-653 header css-1e0siu4-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1un9n0d-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 FilesClass-thumbIconCentered-656 css-1phf2xn-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 MuiGrid2-grid-sm-1 css-1fcgqe2-MuiGrid2-root"
               data-analyticsid="dsi-mimetype-0"
               data-testid="dsi-mimetype-0"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium FilesClass-fileIcon-655 css-ez3bwd-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -6881,7 +6881,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 FilesClass-dataWrapper-654 css-1b1zuvr-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-8 MuiGrid2-grid-sm-4 css-1cr1bcm-MuiGrid2-root"
               data-analyticsid="dsi-dsid-0"
               data-testid="dsi-dsid-0"
             >
@@ -6894,10 +6894,10 @@ exports[`Files Component  should show a blacklisted collection member when the u
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 makeStyles-filenameParent-681 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
                   >
                     <a
-                      class="makeStyles-filename-682"
+                      class="css-gkvags"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -6908,7 +6908,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 FilesClass-dataWrapper-654 css-170m22o-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 MuiGrid2-grid-md-4 css-32eg0n-MuiGrid2-root"
               data-testid="dsi-label-0"
             >
               <p
@@ -6918,7 +6918,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 FilesClass-dataWrapper-654 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-1rdg08b-MuiGrid2-root"
               data-testid="dsi-size-0"
             >
               <p

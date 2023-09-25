@@ -1,32 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GrantListEditorHeader should have a proper style generator 1`] = `
-Object {
-  "header": Object {
-    "borderBottom": "1px solid rgba(0, 0, 0, 0.2)",
-    "marginTop": 8,
-    "padding": 0,
-    "paddingBottom": 6,
-  },
-  "paddingRight14": Object {
-    "paddingRight": 14,
-  },
-  "paddingRight24": Object {
-    "paddingRight": 24,
-  },
-  "paddingRight36": Object {
-    "paddingRight": 36,
-  },
-  "right": Object {
-    "textAlign": "right",
-  },
-}
-`;
-
 exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 <div>
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -81,7 +58,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
@@ -135,7 +112,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 exports[`GrantListEditorHeader should render default mobile view 1`] = `
 <div>
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -204,7 +181,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
@@ -258,7 +235,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
 exports[`GrantListEditorHeader should render default mobile view 2`] = `
 <div>
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -327,7 +304,7 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
@@ -381,7 +358,7 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
 exports[`GrantListEditorHeader should render default view 1`] = `
 <div>
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -450,7 +427,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
@@ -506,7 +483,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
   aria-hidden="true"
 >
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -575,7 +552,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
@@ -629,7 +606,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
 exports[`GrantListEditorHeader should use width hook 1`] = `
 <div>
   <li
-    class="MuiListItem-root Component-header-6 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -698,7 +675,7 @@ exports[`GrantListEditorHeader should use width hook 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root Component-right-5 css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span

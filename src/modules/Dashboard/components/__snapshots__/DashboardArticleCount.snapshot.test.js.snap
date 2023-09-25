@@ -6,17 +6,17 @@ exports[`Dashboard Article Count test Render the authors article counts as expec
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1bckzb6-MuiGrid-root"
     >
       313
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-184x3de-MuiGrid-root"
     >
       eSpace works from
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1lr4ka9-MuiGrid-root"
     >
       1975
       <span>

@@ -15,7 +15,7 @@ exports[`Component FileUploader should handle file order change 1`] = `
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={Array []}
@@ -187,7 +187,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -532,7 +532,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -17681,7 +17681,7 @@ exports[`Component FileUploader should render default component 1`] = `
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={Array []}
@@ -17853,7 +17853,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       disabled={true}
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
@@ -18026,7 +18026,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={Array []}
@@ -18198,7 +18198,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -18543,7 +18543,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -18828,7 +18828,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={Array []}
@@ -19000,7 +19000,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={Array []}
@@ -19172,7 +19172,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -19521,7 +19521,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={Array []}
@@ -19693,7 +19693,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -20038,7 +20038,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -20385,7 +20385,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={Array []}
@@ -20557,7 +20557,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -20906,7 +20906,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={Array []}
@@ -21078,7 +21078,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -21423,7 +21423,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={
@@ -21770,7 +21770,7 @@ exports[`Component FileUploader should render security policy selector if admin 
     >
       You may add up to 5 files (max 1KB each)
     </ForwardRef(Typography)>
-    <WithStyles(FileUploadDropzone)
+    <FileUploadDropzone
       fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
       fileUploadLimit={5}
       filesInQueue={Array []}
