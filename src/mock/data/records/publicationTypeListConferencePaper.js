@@ -9,9 +9,6 @@ const publicationTypeListConferencePaper = {
     "to": 1,
     "data": [
         {
-            "rek_editing_user": "uqmfeen1",
-            "rek_editing_user_lookup": "Feeney, Michael",
-            "rek_editing_start_date": "2023-09-06 05:15:00",
             "rek_pid": "UQ:228367",
             'rek_title': 'Cost analysis: outsourcing radiofrequency ablution for massiv<sub>e</sub>&nbsp;renal m<sup>a</sup>sses&nbsp;™&nbsp;♦',
             "rek_description": null,

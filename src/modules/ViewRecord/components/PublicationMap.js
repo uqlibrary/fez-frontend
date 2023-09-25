@@ -22,6 +22,9 @@ const styles = {
     fillOpacity: 0.35,
 };
 
+const libraries = ['drawing', 'places', 'geometry'];
+const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
+
 export const getDefaultCenter = geoCoords => {
     if (geoCoords.length > 0) {
         const minLngPoint = geoCoords.reduce((min, point) => (point.lng < min ? point.lng : min), geoCoords[0].lng);
@@ -64,11 +67,10 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
 
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
-        libraries: ['drawing', 'places', 'geometry'],
+        googleMapsApiKey,
+        libraries,
         version: '3.exp',
     });
-
     const [map, setMap] = React.useState(null);
     const searchBox = React.useRef(null);
     const drawingManagerRef = React.useRef();

@@ -70,5 +70,5 @@ export class Page extends Component {
         );
     }
 }
-
-export default Page;
+const StandardPage = props => <Page {...props} />;
+export default StandardPage;

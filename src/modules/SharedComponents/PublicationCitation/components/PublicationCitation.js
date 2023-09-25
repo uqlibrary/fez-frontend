@@ -458,6 +458,7 @@ export class PublicationCitation extends PureComponent {
                                             sx={{
                                                 overflowWrap: 'break-word !important',
                                             }}
+                                            className={'PublicationCitation-citationTitle'}
                                         >
                                             {this.renderTitle()}
                                         </Typography>
