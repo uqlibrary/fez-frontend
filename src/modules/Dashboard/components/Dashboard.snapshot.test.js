@@ -1,5 +1,5 @@
 import React from 'react';
-import Dashboard, { fibonacci, styles } from './Dashboard';
+import Dashboard, { fibonacci } from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
@@ -404,10 +404,11 @@ describe('Dashboard test', () => {
                     { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+            // eslint-disable-next-line prettier/prettier
             },
-            /* eslint-enable max-len */
         });
 
+        /* eslint-enable max-len */
         expect(container).toMatchSnapshot();
     });
 
@@ -548,27 +549,6 @@ describe('Dashboard test', () => {
         });
         fireEvent.click(getByText(/View and Complete/i));
         expect(testFn).toBeCalledWith('/records/incomplete');
-    });
-
-    it('should have a style generator', () => {
-        const theme = {
-            breakpoints: {
-                up: jest.fn(() => 'test1'),
-                down: jest.fn(() => 'test2'),
-            },
-            palette: {
-                primary: {
-                    main: '#acf',
-                },
-                white: {
-                    main: '#fff',
-                },
-                accent: {
-                    main: '#ccc',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
     });
 
     /* it('calls action to sync to ORCID', () => {

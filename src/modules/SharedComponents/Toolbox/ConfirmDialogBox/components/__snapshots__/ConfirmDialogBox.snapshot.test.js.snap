@@ -332,42 +332,6 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
 </ForwardRef(Dialog)>
 `;
 
-exports[`ConfirmDialogBox snapshots tests should have a proper style generator 1`] = `
-Object {
-  "alternateActionButtonClass": Object {
-    "&:hover": Object {
-      "backgroundColor": "test3",
-    },
-    "backgroundColor": "test2",
-    "color": "test4",
-  },
-}
-`;
-
-exports[`ConfirmDialogBox snapshots tests should have a proper style generator 2`] = `
-Object {
-  "alternateActionButtonClass": Object {
-    "&:hover": Object {
-      "backgroundColor": undefined,
-    },
-    "backgroundColor": undefined,
-    "color": undefined,
-  },
-}
-`;
-
-exports[`ConfirmDialogBox snapshots tests should have a proper style generator 3`] = `
-Object {
-  "alternateActionButtonClass": Object {
-    "&:hover": Object {
-      "backgroundColor": undefined,
-    },
-    "backgroundColor": undefined,
-    "color": undefined,
-  },
-}
-`;
-
 exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dialog 1`] = `
 <ForwardRef(Dialog)
   open={true}

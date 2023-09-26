@@ -402,33 +402,6 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
 </div>
 `;
 
-exports[`Dashboard Researcher IDs test should have a style generator 1`] = `
-Object {
-  "orcidLink": Object {
-    "color": "#fff",
-  },
-  "orcidSyncBadge": Object {
-    "& button": Object {
-      "padding": 0,
-      "position": "relative",
-      "top": -15,
-    },
-    "& svg": Object {
-      "color": "#fff",
-    },
-  },
-  "researcherIDlink": Object {
-    "& .error": Object {
-      "-webkit-filter": "grayscale(1)",
-      "filter": "grayscale(1)",
-    },
-    "&:hover": Object {
-      "cursor": "pointer",
-    },
-  },
-}
-`;
-
 exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
 <DocumentFragment>
   <div
@@ -439,7 +412,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="makeStyles-externalLink-35 makeStyles-externalLink-37"
+        class="css-hi05s4"
         data-analyticsid="researcher-link"
         data-testid="researcher-link"
         href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
@@ -460,7 +433,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="makeStyles-externalLink-35 makeStyles-externalLink-38"
+        class="css-hi05s4"
         data-analyticsid="scopus-link"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -481,7 +454,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="makeStyles-externalLink-35 makeStyles-externalLink-39"
+        class="css-hi05s4"
         data-analyticsid="google_scholar-link"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -502,7 +475,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="makeStyles-externalLink-35 makeStyles-externalLink-40"
+        class="css-hi05s4"
         data-analyticsid="orcid-link"
         data-testid="orcid-link"
         href="https://orcid.org/0000-0001-1111-1111"
@@ -518,7 +491,9 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
       </a>
-      <span>
+      <span
+        class="css-1o7ot5c"
+      >
         <button
           aria-label="Information about uploading your eSpace works to ORCID"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
@@ -530,7 +505,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
           type="button"
         >
           <svg
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall makeStyles-helpIcon-41 css-ptiqhd-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
             data-testid="HelpOutlineIcon"
             focusable="false"
             role="img"
@@ -561,7 +536,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
         >
            orcid.org/0000-0001-1111-1111
         </span>

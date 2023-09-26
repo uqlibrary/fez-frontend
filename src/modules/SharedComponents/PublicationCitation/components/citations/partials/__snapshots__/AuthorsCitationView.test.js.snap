@@ -195,8 +195,10 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
   >
     
     <a
+      class=""
       data-testid="rek-author-0-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
@@ -210,8 +212,10 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
     
      and 
     <a
+      class=""
       data-testid="rek-author-1-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
@@ -317,8 +321,10 @@ exports[`AuthorsCitationView should render component with 3 authors for publicat
   >
     
     <a
+      class=""
       data-testid="rek-author-0-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
@@ -332,8 +338,10 @@ exports[`AuthorsCitationView should render component with 3 authors for publicat
     , 
     
     <a
+      class=""
       data-testid="rek-author-1-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
@@ -347,8 +355,10 @@ exports[`AuthorsCitationView should render component with 3 authors for publicat
     , 
      and 
     <a
+      class=""
       data-testid="rek-author-2-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
@@ -696,8 +706,10 @@ exports[`AuthorsCitationView should render component with link containing contri
   >
     
     <a
+      class=""
       data-testid="rek-contributor-0-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_contributor_id%5D%5Bvalue%5D=74066&searchQueryParams%5Brek_contributor_id%5D%5Blabel%5D=74066+(Fitzgerald%2C+Lisa)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"

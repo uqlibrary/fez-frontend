@@ -2,6 +2,7 @@ import React from 'react';
 import { AuthorsCitationView } from './AuthorsCitationView';
 import { pathConfig } from 'config/pathConfig';
 import { render, WithRouter } from 'test-utils';
+import { mui1theme } from 'config/theme';
 
 function setup(testProps = {}) {
     const props = {
@@ -11,6 +12,7 @@ function setup(testProps = {}) {
         suffix: testProps.suffix,
         className: testProps.className || '',
         showLink: testProps.showLink || false,
+        theme: mui1theme,
         ...testProps,
     };
     return render(

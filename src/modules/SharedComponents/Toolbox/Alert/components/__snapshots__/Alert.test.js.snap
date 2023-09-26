@@ -7,16 +7,16 @@ exports[`Alert should dismiss alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root makeStyles-root-171 MuiGrid-container makeStyles-common-172 css-1k6h6af-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true makeStyles-linked-179 css-cyocdy-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-yrmeox-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item makeStyles-icon-175 alert-icon  css-13i4rnv-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
@@ -32,7 +32,7 @@ exports[`Alert should dismiss alert 1`] = `
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-176 alert-text css-1vd824g-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
           >
             <b>
               Title - 
@@ -40,7 +40,7 @@ exports[`Alert should dismiss alert 1`] = `
             Message
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item makeStyles-dismissButton-178 css-o3905f-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item css-zxylgf-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
@@ -71,7 +71,7 @@ exports[`Alert should dismiss alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto makeStyles-actionButton-177 css-11gq09b-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
@@ -88,7 +88,7 @@ exports[`Alert should dismiss alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item makeStyles-dismissButton-178 css-1c6hw6e-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item css-1lq6dh0-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"

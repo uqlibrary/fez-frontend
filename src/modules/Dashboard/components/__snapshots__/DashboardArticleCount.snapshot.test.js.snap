@@ -28,35 +28,6 @@ exports[`Dashboard Article Count test Render the authors article counts as expec
 </div>
 `;
 
-exports[`Dashboard Article Count test should have a style generator 1`] = `
-Object {
-  "articlesFrom": Object {
-    "color": "#fff",
-    "fontSize": "0.9rem",
-    "fontWeight": "600",
-    "lineHeight": "1rem",
-    "padding": "0 16px",
-    "textAlign": "center",
-  },
-  "dateRange": Object {
-    "color": "#fff",
-    "fontSize": "1.25rem",
-    "fontWeight": "600",
-    "lineHeight": "1.5rem",
-    "padding": "0 16px",
-    "textAlign": "center",
-  },
-  "noOfArticles": Object {
-    "color": "#fff",
-    "fontSize": "4.75rem",
-    "fontWeight": "600",
-    "lineHeight": "4.75rem",
-    "padding": "0 16px",
-    "textAlign": "center",
-  },
-}
-`;
-
 exports[`Dashboard Article Count test should not render anything if any data is missing 1`] = `
 <div>
   <div

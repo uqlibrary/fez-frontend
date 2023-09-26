@@ -1,4 +1,4 @@
-import { ConfirmDialogBox, styles } from './ConfirmDialogBox';
+import { ConfirmDialogBox } from './ConfirmDialogBox';
 
 const getProps = (testProps = {}) => ({
     classes: {},
@@ -39,31 +39,6 @@ describe('ConfirmDialogBox snapshots tests', () => {
         const wrapper = setup({ showAlternateActionButton: true });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            breakpoints: {
-                up: jest.fn(() => 'test1'),
-            },
-            palette: {
-                warning: {
-                    main: 'test2',
-                    dark: 'test3',
-                },
-                white: {
-                    main: 'test4',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette.warning;
-        delete theme.palette.white;
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
     });
 
     it('renders component with customised locale', () => {

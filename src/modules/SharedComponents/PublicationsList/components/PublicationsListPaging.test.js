@@ -1,4 +1,4 @@
-import PublicationsListPagingWithStyles, { PublicationsListPaging, paginate } from './PublicationsListPaging';
+import PublicationsListPaging, { paginate } from './PublicationsListPaging';
 import { locale } from 'locale';
 
 // Responsiveness is handled in Cypress tests
@@ -25,11 +25,6 @@ function setup(testProps = {}, testArgs = {}) {
 describe('PublicationsListPaging renders ', () => {
     it('component with empty paging data', () => {
         const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('component with styles', () => {
-        const wrapper = getElement(PublicationsListPagingWithStyles, getProps(), { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

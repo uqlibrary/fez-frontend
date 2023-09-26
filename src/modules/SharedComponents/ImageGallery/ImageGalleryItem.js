@@ -147,7 +147,7 @@ const ImageGalleryItem = ({
                 width={itemWidth}
                 height={itemHeight}
                 loading={lazyLoading ? 'lazy' : 'eager'}
-                className={{
+                classes={{
                     ...internalClasses.imageGalleryItemImage(theme),
                     ...(!!classes && classes?.imageListItemImage),
                 }}
@@ -207,10 +207,10 @@ ImageGalleryItem.propTypes = {
     security: PropTypes.object,
     classes: PropTypes.shape({
         imageListItem: PropTypes.shape({
-            root: PropTypes.string,
-            item: PropTypes.string,
+            root: PropTypes.object,
+            item: PropTypes.object,
         }),
-        imageListItemImage: PropTypes.string,
+        imageListItemImage: PropTypes.object,
         imageListItemBar: PropTypes.object,
         imageListAlertBar: PropTypes.object,
     }),

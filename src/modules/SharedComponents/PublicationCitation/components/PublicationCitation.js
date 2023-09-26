@@ -271,7 +271,7 @@ export class PublicationCitation extends PureComponent {
                     lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
                     itemWidth={imageConfig.thumbnailImage.defaultWidth}
                     itemHeight={imageConfig.thumbnailImage.defaultHeight}
-                    classes={{
+                    sx={{
                         imageListItem: { root: classes.imageListItemRoot(theme) },
                         imageListItemImage: classes.imageListItemImage(theme),
                     }}

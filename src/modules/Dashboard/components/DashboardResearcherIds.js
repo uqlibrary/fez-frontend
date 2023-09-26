@@ -93,7 +93,7 @@ export const renderButton = args => {
     );
 };
 
-export class DashboardResearcherIds extends React.Component {
+export class DashboardResearcherIdsClass extends React.Component {
     static propTypes = {
         values: PropTypes.shape({
             researcher: PropTypes.string,
@@ -148,5 +148,5 @@ export class DashboardResearcherIds extends React.Component {
         );
     }
 }
-
+const DashboardResearcherIds = props => <DashboardResearcherIdsClass {...props} />;
 export default DashboardResearcherIds;

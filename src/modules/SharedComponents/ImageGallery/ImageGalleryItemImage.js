@@ -19,7 +19,7 @@ const ImageGalleryItemImage = ({
     item,
     security,
     customDefaultConfig = {},
-    className,
+    classes,
     setRestricted,
     setAdvisory,
     setUnavailable,
@@ -72,7 +72,7 @@ const ImageGalleryItemImage = ({
             id={`imageGalleryItemImage-${item.rek_pid}`}
             data-testid={`imageGalleryItemImage-${item.rek_pid}`}
             src={imgSrc || filename}
-            classes={className}
+            classes={classes}
             className={'image-gallery-item-image'}
             {...errorHandler}
             {...rest}
@@ -87,7 +87,7 @@ ImageGalleryItemImage.propTypes = {
         thumbnailImage: PropTypes.object,
         allowedTypes: PropTypes.array,
     }),
-    className: PropTypes.string,
+    classes: PropTypes.object,
     setRestricted: PropTypes.func,
     setAdvisory: PropTypes.func,
     setUnavailable: PropTypes.func,
@@ -95,7 +95,7 @@ ImageGalleryItemImage.propTypes = {
 
 ImageGalleryItemImage.defaultProps = {
     security: { isAdmin: false, isAuthor: false, author: {} },
-    className: '',
+    classes: {},
 };
 
 export default React.memo(ImageGalleryItemImage);

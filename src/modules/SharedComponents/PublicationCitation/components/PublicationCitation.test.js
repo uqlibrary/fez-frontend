@@ -1,4 +1,6 @@
 import React from 'react';
+import { mui1theme } from 'config/theme';
+
 import { PublicationCitation } from './PublicationCitation';
 import { mockRecordToFix, journalArticle } from 'mock/data/testing/records';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
@@ -13,6 +15,7 @@ function setup(testProps = {}) {
         },
         hideLinks: false,
         citationStyle: 'header',
+        theme: mui1theme,
         ...testProps,
     };
     return render(
