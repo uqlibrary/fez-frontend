@@ -9,7 +9,6 @@ import TabbedFields from './partials/TabbedFields';
 
 export const Section = ({ sectionKey, sectionConfig }) => {
     const { journalDetails } = useJournalDetailsContext();
-
     return (
         <Grid item xs={12}>
             <StandardCard
@@ -32,6 +31,7 @@ export const Section = ({ sectionKey, sectionConfig }) => {
                         {...sectionConfig.tabs}
                         tabId={`journal-details-tab-${sectionConfig.tabs.tabId}`}
                         data={journalDetails[sectionConfig.key][sectionConfig.tabs.tabKey]}
+                        title={sectionConfig.title}
                     />
                 )}
             </StandardCard>

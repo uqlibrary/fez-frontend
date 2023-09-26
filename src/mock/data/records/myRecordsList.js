@@ -85,6 +85,9 @@ const myRecordsList = {
         }, {
             "rek_author_id": 745,
             "rek_author_id_lookup": "Martin, Sally"
+        }, {
+            rek_author_id: 2746,
+            "rek_author_id_lookup": "Meunier, Frederic A."
         }],
         "fez_record_search_key_content_indicator": [{
             "rek_content_indicator": 454079,

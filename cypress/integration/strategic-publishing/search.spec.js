@@ -917,5 +917,18 @@ context('Strategic Publishing - Search', () => {
                 violations => console.log(violations),
             );
         });
+
+        it('should clear error alert from a previous api error', () => {
+            // make a search that will yield a mocked 500 error
+            cy.get('input[data-testid="journal-search-keywords-input"]').type('api-500-error', 200);
+            cy.get('[data-testid="alert"]').should('exist');
+            cy.get('[data-testid="alert"]').should('be.visible');
+            cy.get('[data-testid="alert"]').should('contain.text', 'Unexpected error');
+
+            cy.get('[data-testid="clear-journal-search-keywords"]').click();
+            cy.get('input[data-testid="journal-search-keywords-input"]').type('tech', 200);
+            // make sure the error alert raise for the previous search is dismissed
+            cy.get('[data-testid="alert"]').should('not.exist');
+        });
     });
 });

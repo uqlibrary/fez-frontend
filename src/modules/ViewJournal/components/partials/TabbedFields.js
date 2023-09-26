@@ -13,7 +13,7 @@ import ViewRow from './ViewRow';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
+const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title }) => {
     const theme = useTheme();
     const isXsDown = useMediaQuery(theme.breakpoints.down('sm'));
     const isSmDown = useMediaQuery(theme.breakpoints.down('md'));
@@ -33,8 +33,9 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
                     onChange={handleTabChange}
                     textColor="primary"
                     value={currentTabValue}
-                    scrollButtons={isSmDown && multipleData ? true : false}
-                    variant={isSmDown && multipleData ? 'scrollable' : 'standard'}
+                    scrollButtons={data.length > 1 ? 'auto' : false}
+                    variant={data.length > 1 ? 'scrollable' : 'standard'}
+                    aria-label={`Navigate details for ${title.replace('Clarivate Journal Citation Reports - ', '')}`}
                 >
                     {data.map((tab, index) => (
                         <Tab
@@ -85,6 +86,7 @@ TabbedFields.propTypes = {
     tabId: PropTypes.string,
     tabTitle: PropTypes.string,
     tabs: PropTypes.array,
+    title: PropTypes.string,
 };
 
 export default TabbedFields;
