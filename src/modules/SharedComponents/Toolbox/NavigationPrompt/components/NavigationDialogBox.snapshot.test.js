@@ -1,30 +1,34 @@
+import React from 'react';
+import { rtlRender, WithRouter } from 'test-utils';
+
 import NavigationDialogBox from './NavigationDialogBox';
 
-function setup(testProps = {}, args = {}) {
-    const props = { ...testProps };
-    return getElement(NavigationDialogBox, props, args);
+function setup(testProps = {}) {
+    return rtlRender(
+        <WithRouter>
+            <NavigationDialogBox {...testProps} />
+        </WithRouter>,
+    );
 }
 
 describe('NavigationDialogBox component', () => {
     it('should render', () => {
-        const wrapper = setup(
-            {
-                when: true,
-                txt: {
-                    confirmationTitle: 'Confirmation',
-                    confirmationMessage: 'Are you sure?',
-                    cancelButtonLabel: 'No',
-                    confirmButtonLabel: 'Yes',
-                },
+        const { container, getByTestId } = setup({
+            when: true,
+            txt: {
+                confirmationTitle: 'Confirmation',
+                confirmationMessage: 'Are you sure?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes',
             },
-            { isShallow: false },
-        );
-        const smallWrapper = wrapper.find('NavigationDialogBox');
-        expect(toJson(smallWrapper)).toMatchSnapshot();
+        });
+        expect(getByTestId('confirm-dialog-box')).toBeInTheDocument();
+        expect(container).toMatchSnapshot();
     });
 
     it('should not render', () => {
-        const wrapper = setup({ when: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container, queryByTestId } = setup({ when: false });
+        expect(queryByTestId('confirm-dialog-box')).not.toBeInTheDocument();
+        expect(container).toMatchSnapshot();
     });
 });

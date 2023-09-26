@@ -8,6 +8,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
 import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 export const styles = theme => ({
     alternateActionButtonClass: {
@@ -96,58 +97,60 @@ export class ConfirmDialogBox extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
-                <DialogTitle data-testid="message-title">{this.props.locale.confirmationTitle}</DialogTitle>
-                <DialogContent>
-                    <DialogContentText data-testid="message-content">
-                        {this.props.locale.confirmationMessage}
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Grid container spacing={1}>
-                        <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+            <Box data-testid="confirm-dialog-box" component={'span'}>
+                <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
+                    <DialogTitle data-testid="message-title">{this.props.locale.confirmationTitle}</DialogTitle>
+                    <DialogContent>
+                        <DialogContentText data-testid="message-content">
+                            {this.props.locale.confirmationMessage}
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Grid container spacing={1}>
+                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
 
-                        <Grid item xs={12} sm={'auto'}>
-                            <Button
-                                children={this.props.locale.confirmButtonLabel}
-                                autoFocus
-                                color={'primary'}
-                                fullWidth
-                                onClick={this._onAction}
-                                data-analyticsid={`confirm-${this.props.confirmDialogBoxId}`}
-                                data-testid={`confirm-${this.props.confirmDialogBoxId}`}
-                            />
-                        </Grid>
-                        {this.props.showAlternateActionButton && (
-                            // an optional middle button that will display in a warning colour
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
-                                    variant={'contained'}
-                                    data-analyticsid={`alternate-${this.props.confirmDialogBoxId}`}
-                                    data-testid={`alternate-${this.props.confirmDialogBoxId}`}
-                                    className={classes.alternateActionButtonClass}
-                                    children={this.props.locale.alternateActionButtonLabel}
-                                    fullWidth
-                                    onClick={this._onAlternateAction}
-                                />
-                            </Grid>
-                        )}
-                        {!this.props.hideCancelButton && (
-                            <Grid item xs={12} sm={'auto'}>
-                                <Button
-                                    variant={'contained'}
+                                    children={this.props.locale.confirmButtonLabel}
+                                    autoFocus
                                     color={'primary'}
-                                    data-analyticsid={`cancel-${this.props.confirmDialogBoxId}`}
-                                    data-testid={`cancel-${this.props.confirmDialogBoxId}`}
-                                    children={this.props.locale.cancelButtonLabel}
                                     fullWidth
-                                    onClick={this._onCancelAction}
+                                    onClick={this._onAction}
+                                    data-analyticsid={`confirm-${this.props.confirmDialogBoxId}`}
+                                    data-testid={`confirm-${this.props.confirmDialogBoxId}`}
                                 />
                             </Grid>
-                        )}
-                    </Grid>
-                </DialogActions>
-            </Dialog>
+                            {this.props.showAlternateActionButton && (
+                                // an optional middle button that will display in a warning colour
+                                <Grid item xs={12} sm={'auto'}>
+                                    <Button
+                                        variant={'contained'}
+                                        data-analyticsid={`alternate-${this.props.confirmDialogBoxId}`}
+                                        data-testid={`alternate-${this.props.confirmDialogBoxId}`}
+                                        className={classes.alternateActionButtonClass}
+                                        children={this.props.locale.alternateActionButtonLabel}
+                                        fullWidth
+                                        onClick={this._onAlternateAction}
+                                    />
+                                </Grid>
+                            )}
+                            {!this.props.hideCancelButton && (
+                                <Grid item xs={12} sm={'auto'}>
+                                    <Button
+                                        variant={'contained'}
+                                        color={'primary'}
+                                        data-analyticsid={`cancel-${this.props.confirmDialogBoxId}`}
+                                        data-testid={`cancel-${this.props.confirmDialogBoxId}`}
+                                        children={this.props.locale.cancelButtonLabel}
+                                        fullWidth
+                                        onClick={this._onCancelAction}
+                                    />
+                                </Grid>
+                            )}
+                        </Grid>
+                    </DialogActions>
+                </Dialog>
+            </Box>
         );
     }
 }
