@@ -28,11 +28,11 @@ context('Journal Article admin edit', () => {
         cy.log('Notes tab');
         cy.get('[data-testid=notes-section-header]').should('have.text', 'Notes');
 
-        cy.readCKEditor('rek-notes').should(text => {
+        cy.readCKEditor('rek-notes').then(text => {
             expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
             // 'Published online before print: 28 December 2012.'
         });
-        cy.readCKEditor('ain-notes').should(text => {
+        cy.readCKEditor('ain-notes').then(text => {
             expect(text).to.contain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13'
         });
 
@@ -104,7 +104,7 @@ context('Journal Article admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
-                        cy.readCKEditor('rek-title').should(text => {
+                        cy.readCKEditor('rek-title').then(text => {
                             expect(text).to.contain(record.rek_title);
                         });
                     });
@@ -202,7 +202,7 @@ context('Journal Article admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Abstract / Description');
-                        cy.readCKEditor('rek-description').should(text => {
+                        cy.readCKEditor('rek-description').then(text => {
                             expect(text).to.contain(record.rek_description);
                         });
                     });
@@ -370,7 +370,7 @@ context('Journal Article admin edit', () => {
                     cy.get('span span')
                         .eq(0)
                         .should('have.text', 'Additional notes (public)');
-                    cy.readCKEditor('rek-notes').should(text => {
+                    cy.readCKEditor('rek-notes').then(text => {
                         expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                     });
                 });

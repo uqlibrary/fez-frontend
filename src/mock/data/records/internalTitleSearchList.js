@@ -48,12 +48,7 @@ const internalTitleSearchList = {
             rek_depositor: 6230,
             rek_display_type_lookup: 'Image',
             rek_display_type: 238,
-            fez_record_search_key_advisory_statement: {
-            rek_advisory_statement_id: 23188,
-                rek_advisory_statement_pid: "UQ:375129",
-                rek_advisory_statement_xsdmf_id: null,
-                rek_advisory_statement: "Aboriginal and Torres Strait Islander people are warned that this photograph may contain images of Aboriginal and Islander people now deceased."
-            },
+            fez_record_search_key_advisory_statement: "Aboriginal and Torres Strait Islander people are warned that this photograph may contain images of Aboriginal and Islander people now deceased.",
             fez_datastream_info: [
                 {
                     dsi_id: 2706296,

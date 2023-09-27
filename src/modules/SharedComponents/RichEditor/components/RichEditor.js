@@ -34,32 +34,34 @@ const RichEditor = fieldProps => {
     // It updates the state of the application.
     function handleEditorDataChange(event, editor) {
         const textValue = editor.getData().replace(/<[^>]*>?/gm, '');
-        fieldProps.onChange(
+        const newTypedValue =
             textValue.length > 0
                 ? {
                       htmlText: editor.getData(),
                       plainText: textValue,
                   }
-                : null,
-        );
+                : null;
+        fieldProps.onChange(newTypedValue);
     }
-    let dataForEditor =
-        fieldProps.input?.value?.get && fieldProps.input.value.hasOwnProperty('get')
-            ? fieldProps.input.value.get('htmlText')
-            : '';
-    if (!!fieldProps && fieldProps.hasOwnProperty('value')) {
-        if (!!fieldProps.value.hasOwnProperty('get') && !!fieldProps.value.get('htmlText')) {
-            dataForEditor = fieldProps.value.get('htmlText');
-        } else if (!!fieldProps.value.htmlText) {
-            dataForEditor = fieldProps.value.htmlText;
-        } else if (typeof fieldProps.value === 'string' && fieldProps.value.length > 0) {
-            dataForEditor = fieldProps.value;
-        } else {
-            dataForEditor = ''; // undetectable Map value comes through, don't use
+
+    function getContent() {
+        let dataForEditor = '';
+        if (fieldProps.input?.value?.get) {
+            dataForEditor = fieldProps.input.value.get('htmlText');
+        } else if (!!fieldProps && (fieldProps.hasOwnProperty('value') || fieldProps.value)) {
+            if (!!fieldProps.value.get && !!fieldProps.value.get('htmlText')) {
+                dataForEditor = fieldProps.value.get('htmlText');
+            } else if (!!fieldProps.value.htmlText) {
+                dataForEditor = fieldProps.value.htmlText;
+            } else if (typeof fieldProps.value === 'string' && fieldProps.value.length > 0) {
+                dataForEditor = fieldProps.value;
+            }
         }
+        return dataForEditor;
     }
+
     function handleEditorReady(editor) {
-        !!editor && editor.hasOwnProperty('setData') && editor.setData(dataForEditor);
+        !!editor && editor.hasOwnProperty('setData') && editor.setData(getContent());
     }
     let error = null;
     const inputLength =
@@ -79,12 +81,13 @@ const RichEditor = fieldProps => {
             });
     }
     // rendered content of empty CKEditor:
-    // <br data-cke-filler="true">
+    // <p><br data-cke-filler="true"></p>
     return (
         <div
             id={fieldProps.richEditorId}
             data-testid={fieldProps.richEditorId}
             data-analyticsid={fieldProps.richEditorId}
+            style={!!fieldProps.hidden ? { display: 'none' } : null}
         >
             <span>
                 {fieldProps.title && (
@@ -99,21 +102,19 @@ const RichEditor = fieldProps => {
                     </Typography>
                 )}
             </span>
-            {!fieldProps.hidden && (
-                <CKEditor
-                    className={fieldProps.className}
-                    editor={ClassicExtended}
-                    config={getCkEditorConfig()}
-                    data={dataForEditor}
-                    ref={fieldProps.inputRef}
-                    onReady={editor => {
-                        handleEditorReady(editor);
-                    }}
-                    onChange={(event, editor) => {
-                        handleEditorDataChange(event, editor);
-                    }}
-                />
-            )}
+            <CKEditor
+                className={fieldProps.className}
+                editor={ClassicExtended}
+                config={getCkEditorConfig()}
+                data={getContent()}
+                // ref={fieldProps.inputRef}
+                onReady={editor => {
+                    handleEditorReady(editor);
+                }}
+                onChange={(event, editor) => {
+                    handleEditorDataChange(event, editor);
+                }}
+            />
             {fieldProps.meta && fieldProps.meta.error && (
                 <Typography
                     color="error"

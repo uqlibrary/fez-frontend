@@ -99,15 +99,17 @@ export const ScaleOfSignificanceForm = ({
 
     const isValidStatement = statement => !!statement?.plainText?.trim();
 
+    function getContributionStatement() {
+        return contributionStatement.plainText === 'Missing' ? '' : contributionStatement;
+    }
+
     return (
         <Grid
             container
             spacing={2}
-            // display="row"
             display={hidden ? 'none' : 'row'}
             alignItems="center"
             data-testid="rek-significance-form"
-            // style={{ display: hidden ? 'none' : 'flex' }}
         >
             {!!authorOrderAlert && (
                 <Grid item xs={12}>
@@ -133,13 +135,19 @@ export const ScaleOfSignificanceForm = ({
                     name="value"
                     id={(!!id && /* istanbul ignore next */ id) || ''}
                     onChange={handleContributionStatement}
-                    // onKeyPress={saveChanges}
+                    onKeyPress={saveChanges}
                     error={!!errorText}
                     disabled={disabled}
                     inputRef={contributionStatementInput}
                     instanceRef={contributionStatementEditor}
                     title={contributionStatementInputFieldLabel}
-                    value={formMode === 'edit' && !!contributionStatement ? contributionStatement : ''}
+                    titleProps={{
+                        variant: 'caption',
+                        style: {
+                            opacity: 0.666,
+                        },
+                    }}
+                    value={formMode === 'edit' && !!contributionStatement ? getContributionStatement() : ''}
                     input={input}
                     required
                 />

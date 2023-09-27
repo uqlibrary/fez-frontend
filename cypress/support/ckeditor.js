@@ -14,11 +14,11 @@ Cypress.Commands.add('typeCKEditor', (element, content) => {
 // Usage example:
 // cy.readCKEditor('editor1')
 //     .then(text => {
-//         cy.wrap(text)
-//             .should('eq', expected);
+//         expect(text).to.contain(expected);
 //     });
 Cypress.Commands.add('readCKEditor', element => {
     return cy.get(`[data-testid="${element}"] .ck-editor__main p`).should('exist');
+    // .should('be.visible')
 });
 
 // check content of from CKEditor instance

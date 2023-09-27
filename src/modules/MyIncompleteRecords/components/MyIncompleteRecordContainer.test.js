@@ -50,6 +50,7 @@ describe('MyIncompleteRecordContainer', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading'));
 
+        // snapshot not used as there are css classnames with numbers that change on each start:mock :(
         expect(getByTestId('page-title')).toHaveTextContent('Complete my work');
         expect(getByTestId('publication-citation-parent-UQ:352045')).toHaveTextContent(
             'Il Sogno: Topology and the Brodsky Quartet play Elvis Costello',
@@ -111,6 +112,7 @@ describe('MyIncompleteRecordContainer', () => {
         );
 
         await waitForElementToBeRemoved(() => getByText('Loading'));
+        // snapshot not used as there are css classnames with numbers that change on each start:mock :(
         expect(getByTestId('page-title')).toHaveTextContent('Complete my work');
         expect(getByTestId('publication-citation-parent-UQ:352045')).toHaveTextContent(
             'Il Sogno: Topology and the Brodsky Quartet play Elvis Costello',

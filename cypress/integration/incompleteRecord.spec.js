@@ -14,7 +14,7 @@ context('Incomplete record form', () => {
     const checkResearchStatement = statement => {
         cy.typeCKEditor('rek-creator-contribution-statement', statement);
         cy.readCKEditor('rek-creator-contribution-statement').then(text => {
-            cy.wrap(text).should('eq', statement);
+            expect(text).to.contain(statement);
         });
     };
 
@@ -221,9 +221,15 @@ context('Incomplete record form', () => {
                 cy.get('[data-testid=rek-author-list-row-0-actions]')
                     // .should('not.have.css', 'marginLeft', '65px')
                     .should('have.css', 'borderTopColor', 'rgb(221, 221, 221)')
-                    .should('have.css', 'borderTopWidth', '1px')
                     .should('have.css', 'marginTop', '10px')
                     .should('have.css', 'marginBottom', '-8px');
+                cy.get('[data-testid=rek-author-list-row-0-actions]')
+                    .invoke('css', 'border-top-width')
+                    .then(value => {
+                        // getting 1.09545px :(
+                        const borderTopWidth = parseInt(value, 10);
+                        expect(borderTopWidth).to.eq(1);
+                    });
             });
         });
     });

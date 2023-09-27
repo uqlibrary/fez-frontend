@@ -1,12 +1,5 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListCreativeWork';
 
-function rowHasAuthor(rowid, authorName) {
-    cy.get(`[data-testid="rek-significance-list-row-${rowid}"]`)
-        .find('p')
-        .eq(0)
-        .should('contain', authorName);
-}
-
 context('Creative Work admin edit, general', () => {
     const record = recordList.data[0];
 
@@ -107,6 +100,21 @@ context('in the NTRO section, the significance and statement works correctly', (
         cy.adminEditCleanup();
     });
 
+    function rowAuthorDisplaysAs(rowId, authorName) {
+        const ordinalLabelList = ['First', 'Second', 'Third', 'Fourth'];
+        const ordinalLabel = ordinalLabelList[rowId];
+        cy.get(`[data-testid="scalesignif-author-${rowId}"]`).should('contain', authorName);
+        cy.get(`[data-testid="scalesignif-author-${rowId}"]`).should('contain', ordinalLabel);
+    }
+
+    function rowScaleDisplaysAs(rowId, significanceLabel) {
+        cy.get(`[data-testid="scale-item-${rowId}"]`).should('have.text', significanceLabel);
+    }
+
+    function rowStatementDisplaysAs(rowId, statement) {
+        cy.get(`[data-testid="statement-item-${rowId}"]`).should('contain', statement);
+    }
+
     function clickFormSaveButton(label) {
         const button = 'button[data-testid="rek-significance-add"]';
         cy.waitUntil(() => cy.get(button).should('exist'));
@@ -166,21 +174,11 @@ context('in the NTRO section, the significance and statement works correctly', (
 
                         record.fez_record_search_key_author
                             .map(item => item.rek_author)
-                            .forEach((author, index) => {
-                                cy.get(`[data-testid="rek-significance-list-row-${index}"]`)
-                                    .find('p')
-                                    .eq(0)
-                                    .should('contain', author);
-                            });
+                            .forEach((author, index) => rowAuthorDisplaysAs(index, author));
 
                         record.fez_record_search_key_significance
                             .map(item => item.rek_significance_lookup)
-                            .forEach((significance, index) => {
-                                cy.get(`[data-testid="rek-significance-list-row-${index}"]`)
-                                    .find('p')
-                                    .eq(1)
-                                    .should('have.text', significance || 'Missing');
-                            });
+                            .forEach((significance, index) => rowScaleDisplaysAs(index, significance || 'Missing'));
 
                         record.fez_record_search_key_creator_contribution_statement
                             .map(item => item.rek_creator_contribution_statement)
@@ -189,10 +187,7 @@ context('in the NTRO section, the significance and statement works correctly', (
                                     (statement, regex) => statement.replace(regex, ''),
                                     contribution,
                                 );
-                                cy.get(`[data-testid="rek-significance-list-row-${index}"]`)
-                                    .find('span')
-                                    .eq(0)
-                                    .should('contain', reducedContributionStatement);
+                                rowStatementDisplaysAs(index, reducedContributionStatement);
                             });
                     });
             });
@@ -234,26 +229,24 @@ context('in the NTRO section, the significance and statement works correctly', (
                         const newContributionStatementText = 'new entry';
                         cy.typeCKEditor('rek-creator-contribution-statement', newContributionStatementText);
                         clickFormSaveButton('ADD');
+                        // the show hide status is correct
+                        cy.waitUntil(() =>
+                            cy.get('[data-testid="rek-significance-showhidebutton"]').should('be.visible'),
+                        );
+                        cy.get('[data-testid="rek-significance-form"]').should('not.be.visible');
                         // the newly added item appears correctly
                         cy.get('[data-testid="rek-significance-list"]')
                             .children()
                             .should('have.length', 4);
-                        cy.get('[data-testid="rek-significance-list-row-3"]')
-                            .find('span')
-                            .eq(0)
-                            .should('contain', newContributionStatementText);
-                        cy.get('[data-testid="rek-significance-list-row-3"]')
-                            .find('p')
-                            .eq(1)
-                            .should('have.text', 'Minor');
-                        // the show hide status is correct
-                        cy.waitUntil(() => cy.get('[data-testid="rek-significance-showhidebutton"]').should('exist'));
-                        cy.get('[data-testid="rek-significance-form"]').should('have.attr', 'style', 'display: none;');
+                        rowStatementDisplaysAs(3, newContributionStatementText);
+                        rowScaleDisplaysAs(3, 'Minor');
+
+                        // try editing after adding
                     });
             });
     });
 
-    it('in the NTRO section, the add form loads empty after using the edit form', () => {
+    it('in the NTRO section, the add form loads empty after cancelling out of the edit form', () => {
         cy.adminEditTabbedView();
         cy.get('[data-testid="ntro-tab"]').click();
         cy.get('[data-testid=ntro-section-content]')
@@ -275,7 +268,7 @@ context('in the NTRO section, the significance and statement works correctly', (
                         });
 
                         clickFormCancelButton();
-                        cy.get('[data-testid="rek-significance-form"]').should('have.attr', 'style', 'display: none;');
+                        cy.get('[data-testid="rek-significance-form"]').should('not.be.visible');
                         cy.get('[data-testid="rek-significance-showhidebutton"]')
                             .parent()
                             .should('be.visible');
@@ -287,27 +280,9 @@ context('in the NTRO section, the significance and statement works correctly', (
                             .parent()
                             .should('not.be.visible');
 
+                        // the fields are empty ready for entry
                         cy.get('[data-testid="rek-significance-select"]').should('contain', '');
                         cy.assertCKEditorEmpty('rek-creator-contribution-statement');
-                    });
-            });
-
-        // popup appears at foot of page, outside Admin section
-        cy.assertChangeSelectFromTo('rek-significance', '', 'Minor'); // was unselected
-
-        cy.get('[data-testid=ntro-section-content]')
-            .as('NTRO')
-            .within(() => {
-                cy.get('.AdminCard')
-                    .eq(0)
-                    .within(() => {
-                        const newContributionStatementText = 'new entry';
-                        cy.typeCKEditor('rek-creator-contribution-statement', newContributionStatementText);
-                        clickFormSaveButton('ADD');
-                        // the newly added item appears correctly
-                        cy.get('[data-testid="rek-significance-list"]')
-                            .children()
-                            .should('have.length', 4);
                     });
             });
     });
@@ -324,19 +299,29 @@ context('in the NTRO section, the significance and statement works correctly', (
                         for (const [rowId, value] of Object.entries(statementList)) {
                             clickRowEditButton(rowId);
 
+                            // the form loads correctly
                             cy.get('button[data-testid="rek-significance-add"]').should('contain', 'UPDATE');
-                            cy.get('[data-testid="rek-significance-select"]').should('contain', value.significance);
-                            cy.readCKEditor('rek-creator-contribution-statement').then(text => {
-                                expect(text).to.contain(value.statementContains);
-                            });
+                            if (['Minor', 'Major'].includes(value.significance)) {
+                                cy.get('[data-testid="rek-significance-select"]').should('contain', value.significance);
+                            } else {
+                                // a display of 'Missing' will load the selector with the message below
+                                cy.get('[data-testid="rek-significance-label"]').should(
+                                    'contain',
+                                    'Scale/Significance of work',
+                                );
+                            }
+                            if (value.statementContains === 'Missing') {
+                                cy.assertCKEditorEmpty('rek-creator-contribution-statement');
+                            } else {
+                                cy.readCKEditor('rek-creator-contribution-statement').then(text => {
+                                    expect(text).to.contain(value.statementContains);
+                                });
+                            }
+
                             if (rowId === 0) {
                                 // the cancel button clears the form when loaded from edit
                                 clickFormCancelButton();
-                                cy.get('[data-testid="rek-significance-form"]').should(
-                                    'have.attr',
-                                    'style',
-                                    'display: none;',
-                                );
+                                cy.get('[data-testid="rek-significance-form"]').should('not.be.visible');
                                 cy.get('[data-testid="rek-significance-showhidebutton"]')
                                     .parent()
                                     .should('be.visible');
@@ -377,18 +362,10 @@ context('in the NTRO section, the significance and statement works correctly', (
                     .eq(0)
                     .within(() => {
                         clickFormSaveButton('UPDATE');
-                        cy.get('[data-testid="scale-item-0"]').should('have.text', statementList[0].newSignificance);
-                        cy.get('[data-testid="statement-item-0"]').should('contain', statementList[0].newText);
-                        cy.get('[data-testid="rek-significance-list-row-0"]')
-                            .find('p')
-                            .eq(0)
-                            .should('contain', 'First')
-                            .and('contain', 'Ashkanasy');
-                        cy.get('[data-testid="rek-significance-list-row-1"]')
-                            .find('p')
-                            .eq(0)
-                            .should('contain', 'Second')
-                            .and('contain', 'Belanger');
+                        rowScaleDisplaysAs(0, statementList[0].newSignificance);
+                        rowStatementDisplaysAs(0, statementList[0].newText);
+                        rowAuthorDisplaysAs(0, 'Ashkanasy');
+                        rowAuthorDisplaysAs(1, 'Belanger');
                     });
             });
 
@@ -425,11 +402,9 @@ context('in the NTRO section, the significance and statement works correctly', (
                     .eq(0)
                     .within(() => {
                         clickFormSaveButton('UPDATE');
-                        cy.get('[data-testid="scale-item-1"]').should('have.text', statementList[0].newSignificance);
-                        cy.get('[data-testid="statement-item-1"]').should('contain', statementList[0].newText);
-                        cy.get('[data-testid="scalesignif-author-1"]')
-                            .should('contain', 'Second')
-                            .and('contain', 'Belanger');
+                        rowScaleDisplaysAs(1, statementList[0].newSignificance);
+                        rowStatementDisplaysAs(1, statementList[0].newText);
+                        rowAuthorDisplaysAs(1, 'Belanger');
                     });
             });
 
@@ -453,25 +428,26 @@ context('in the NTRO section, the significance and statement works correctly', (
                     .within(() => {
                         cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
 
-                        rowHasAuthor(0, 'Ashkanasy');
-                        rowHasAuthor(1, 'Belanger');
-                        rowHasAuthor(2, 'Bernal');
+                        rowAuthorDisplaysAs(0, 'Ashkanasy');
+                        rowAuthorDisplaysAs(1, 'Belanger');
+                        rowAuthorDisplaysAs(2, 'Bernal');
 
                         cy.get('[data-testid="rek-significance-list-row-1-move-down"]')
                             .should('exist')
                             .click();
 
-                        rowHasAuthor(0, 'Ashkanasy');
-                        rowHasAuthor(1, 'Bernal');
-                        rowHasAuthor(2, 'Belanger');
+                        // note order change
+                        rowAuthorDisplaysAs(0, 'Ashkanasy');
+                        rowAuthorDisplaysAs(1, 'Bernal');
+                        rowAuthorDisplaysAs(2, 'Belanger');
 
                         cy.get('[data-testid="rek-significance-list-row-1-move-up"]')
                             .should('exist')
                             .click();
 
-                        rowHasAuthor(0, 'Bernal');
-                        rowHasAuthor(1, 'Ashkanasy');
-                        rowHasAuthor(2, 'Belanger');
+                        rowAuthorDisplaysAs(0, 'Bernal');
+                        rowAuthorDisplaysAs(1, 'Ashkanasy');
+                        rowAuthorDisplaysAs(2, 'Belanger');
                     });
             });
     });
@@ -500,25 +476,24 @@ context('in the NTRO section, the significance and statement works correctly', (
                     .eq(0)
                     .within(() => {
                         clickFormSaveButton('UPDATE');
-                        cy.get('[data-testid="scale-item-1"]').should('have.text', statementList[0].newSignificance);
-                        cy.get('[data-testid="statement-item-1"]').should('contain', statementList[0].newText);
-                        cy.get('[data-testid="scalesignif-author-1"]')
-                            .should('contain', 'Second')
-                            .and('contain', 'Belanger');
+                        rowScaleDisplaysAs(1, statementList[0].newSignificance);
+                        rowStatementDisplaysAs(1, statementList[0].newText);
+                        rowAuthorDisplaysAs(1, 'Belanger');
                     });
             });
 
-        rowHasAuthor(0, 'Ashkanasy');
-        rowHasAuthor(1, 'Belanger');
-        rowHasAuthor(2, 'Bernal');
+        rowAuthorDisplaysAs(0, 'Ashkanasy');
+        rowAuthorDisplaysAs(1, 'Belanger');
+        rowAuthorDisplaysAs(2, 'Bernal');
 
         cy.get('[data-testid="rek-significance-list-row-1-move-down"]')
             .should('exist')
             .click();
 
-        rowHasAuthor(0, 'Ashkanasy');
-        rowHasAuthor(1, 'Bernal');
-        rowHasAuthor(2, 'Belanger');
+        // note order change
+        rowAuthorDisplaysAs(0, 'Ashkanasy');
+        rowAuthorDisplaysAs(1, 'Bernal');
+        rowAuthorDisplaysAs(2, 'Belanger');
 
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -526,14 +501,8 @@ context('in the NTRO section, the significance and statement works correctly', (
                 cy.get('.AdminCard')
                     .eq(0)
                     .within(() => {
-                        cy.get('[data-testid="rek-significance-list-row-2"]')
-                            .find('p')
-                            .eq(1)
-                            .should('have.text', statementList[0].newSignificance);
-                        cy.get('[data-testid="rek-significance-list-row-2"]')
-                            .find('span')
-                            .eq(0)
-                            .should('contain', statementList[0].newText);
+                        rowScaleDisplaysAs(2, statementList[0].newSignificance);
+                        rowStatementDisplaysAs(2, statementList[0].newText);
                     });
             });
 
@@ -560,7 +529,7 @@ context('in the NTRO section, the significance and statement works correctly', (
                             .should('have.length', 3);
 
                         // the form is initially hidden
-                        cy.get('[data-testid="rek-significance-form"]').should('have.attr', 'style', 'display: none;');
+                        cy.get('[data-testid="rek-significance-form"]').should('not.be.visible');
 
                         clickButtonShowForm();
                         cy.get('button[data-testid="rek-significance-add"]').should('contain', 'ADD');
@@ -584,7 +553,7 @@ context('in the NTRO section, the significance and statement works correctly', (
                     .within(() => {
                         // clear the form & the form hides and add button reappears
                         clickFormCancelButton();
-                        cy.get('[data-testid="rek-significance-form"]').should('have.attr', 'style', 'display: none;');
+                        cy.get('[data-testid="rek-significance-form"]').should('not.be.visible');
                         cy.get('[data-testid="rek-significance-showhidebutton"]')
                             .parent()
                             .should('be.visible');

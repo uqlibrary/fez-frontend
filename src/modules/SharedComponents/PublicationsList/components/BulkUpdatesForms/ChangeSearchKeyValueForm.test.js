@@ -101,6 +101,11 @@ describe('ChangeSearchKeyValueForm', () => {
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-key-select'));
+        fireEvent.click(getByText('Advisory statement'));
+
+        expect(getByTestId('rek-advisory-statement')).toBeInTheDocument();
+
+        fireEvent.mouseDown(getByTestId('search-key-select'));
         fireEvent.click(getByText('OA status'));
 
         expect(getByTestId('rek-oa-status-select')).toBeInTheDocument();
@@ -134,10 +139,5 @@ describe('ChangeSearchKeyValueForm', () => {
         fireEvent.click(getByText('Copyright notice'));
 
         expect(getByTestId('rek-rights-input')).toBeInTheDocument();
-
-        fireEvent.mouseDown(getByTestId('search-key-select'));
-        fireEvent.click(getByText('Advisory statement'));
-
-        expect(getByTestId('rek-advisory-statement')).toBeInTheDocument();
     });
 });

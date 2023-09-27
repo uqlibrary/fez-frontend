@@ -56,8 +56,17 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       }
       name="value"
       onChange={[Function]}
+      onKeyPress={[Function]}
       required={true}
       richEditorId="rek-creator-contribution-statement"
+      titleProps={
+        Object {
+          "style": Object {
+            "opacity": 0.666,
+          },
+          "variant": "caption",
+        }
+      }
       value=""
     />
   </ForwardRef(Grid)>
@@ -150,8 +159,17 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
       }
       name="value"
       onChange={[Function]}
+      onKeyPress={[Function]}
       required={true}
       richEditorId="rek-creator-contribution-statement"
+      titleProps={
+        Object {
+          "style": Object {
+            "opacity": 0.666,
+          },
+          "variant": "caption",
+        }
+      }
       value=""
     />
   </ForwardRef(Grid)>
