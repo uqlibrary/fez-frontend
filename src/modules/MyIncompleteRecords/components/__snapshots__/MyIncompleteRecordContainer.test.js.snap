@@ -512,7 +512,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         style="display: none;"
                       />
                       <div
-                        aria-labelledby="ck-editor__label_ed022298fa745bb2d139b542b5de45828"
+                        aria-labelledby="ck-editor__label_eaeea46a0673aece29302430b23487ff8"
                         class="ck ck-reset ck-editor ck-rounded-corners"
                         dir="ltr"
                         lang="en"
@@ -520,7 +520,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                       >
                         <label
                           class="ck ck-label ck-voice-label"
-                          id="ck-editor__label_ed022298fa745bb2d139b542b5de45828"
+                          id="ck-editor__label_eaeea46a0673aece29302430b23487ff8"
                         >
                           Rich Text Editor
                         </label>
@@ -548,7 +548,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                   class="ck ck-toolbar__items"
                                 >
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e44b1c9a9b2df665eb0f497af0e20faf6"
+                                    aria-labelledby="ck-editor__aria-label_e5cec55725ae43f3c29cdcbdafc10b498"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -573,13 +573,13 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e44b1c9a9b2df665eb0f497af0e20faf6"
+                                      id="ck-editor__aria-label_e5cec55725ae43f3c29cdcbdafc10b498"
                                     >
                                       Bold
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e4f26ed4c146a7bd90ba57810226f4058"
+                                    aria-labelledby="ck-editor__aria-label_e23edc3a6cb66ea9938fa4223e94e35ce"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -604,13 +604,13 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e4f26ed4c146a7bd90ba57810226f4058"
+                                      id="ck-editor__aria-label_e23edc3a6cb66ea9938fa4223e94e35ce"
                                     >
                                       Italic
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_ef20dae2683a97f4dc92d1b8fd43a44a8"
+                                    aria-labelledby="ck-editor__aria-label_e27202b9ce81614d17d609c7376a0c499"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -635,13 +635,13 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_ef20dae2683a97f4dc92d1b8fd43a44a8"
+                                      id="ck-editor__aria-label_e27202b9ce81614d17d609c7376a0c499"
                                     >
                                       Underline
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e5c57a275a3b92f1feba7842d8064e872"
+                                    aria-labelledby="ck-editor__aria-label_e77006f710f943b0c89b6bc39d7283c5e"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -669,13 +669,13 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e5c57a275a3b92f1feba7842d8064e872"
+                                      id="ck-editor__aria-label_e77006f710f943b0c89b6bc39d7283c5e"
                                     >
                                       Strikethrough
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e647925a24327f6c7c7320606459d5f63"
+                                    aria-labelledby="ck-editor__aria-label_ea8ffbc543a395938f7f213173d22e131"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -700,13 +700,13 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e647925a24327f6c7c7320606459d5f63"
+                                      id="ck-editor__aria-label_ea8ffbc543a395938f7f213173d22e131"
                                     >
                                       Subscript
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e187ffc5f10ccfe770a281b2df1d71fa2"
+                                    aria-labelledby="ck-editor__aria-label_e27ace67892ec2834fa16f3313dcc261b"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -731,7 +731,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e187ffc5f10ccfe770a281b2df1d71fa2"
+                                      id="ck-editor__aria-label_e27ace67892ec2834fa16f3313dcc261b"
                                     >
                                       Superscript
                                     </span>
@@ -740,7 +740,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     class="ck ck-toolbar__separator"
                                   />
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e83df2b2ac77287e82425b75098be45f4"
+                                    aria-labelledby="ck-editor__aria-label_e8a728664c07391a59acd7e0c0b704aac"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -765,13 +765,13 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e83df2b2ac77287e82425b75098be45f4"
+                                      id="ck-editor__aria-label_e8a728664c07391a59acd7e0c0b704aac"
                                     >
                                       Link
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e88fe8893fdd37916774f5a3e1f02b827"
+                                    aria-labelledby="ck-editor__aria-label_e3b6331ae6fe94842d9b8a58025e81dd0"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -796,13 +796,13 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e88fe8893fdd37916774f5a3e1f02b827"
+                                      id="ck-editor__aria-label_e3b6331ae6fe94842d9b8a58025e81dd0"
                                     >
                                       Numbered List
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_eb3329d0798b35af533d9436bd5abfa74"
+                                    aria-labelledby="ck-editor__aria-label_e5fb7d76146f14deed8458a63feffee72"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -827,7 +827,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_eb3329d0798b35af533d9436bd5abfa74"
+                                      id="ck-editor__aria-label_e5fb7d76146f14deed8458a63feffee72"
                                     >
                                       Bulleted List
                                     </span>
@@ -837,7 +837,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                   />
                                   <button
                                     aria-disabled="true"
-                                    aria-labelledby="ck-editor__aria-label_ebe85f0150e80b0b959088c804d94b81f"
+                                    aria-labelledby="ck-editor__aria-label_ee4f26c9a87a82a000c8f4b1c9d58a452"
                                     class="ck ck-button ck-disabled ck-off"
                                     tabindex="-1"
                                     type="button"
@@ -861,7 +861,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_ebe85f0150e80b0b959088c804d94b81f"
+                                      id="ck-editor__aria-label_ee4f26c9a87a82a000c8f4b1c9d58a452"
                                     >
                                       Remove Format
                                     </span>
@@ -871,7 +871,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                   >
                                     <button
                                       aria-haspopup="true"
-                                      aria-labelledby="ck-editor__aria-label_e4456608f07b71b16f785725e3e7700d7"
+                                      aria-labelledby="ck-editor__aria-label_e5aa5fee44bc594691c745083269a8ef9"
                                       class="ck ck-button ck-off ck-dropdown__button"
                                       tabindex="-1"
                                       type="button"
@@ -895,7 +895,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                       </span>
                                       <span
                                         class="ck ck-button__label"
-                                        id="ck-editor__aria-label_e4456608f07b71b16f785725e3e7700d7"
+                                        id="ck-editor__aria-label_e5aa5fee44bc594691c745083269a8ef9"
                                       >
                                         Special characters
                                       </span>
@@ -917,7 +917,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                   />
                                   <button
                                     aria-disabled="true"
-                                    aria-labelledby="ck-editor__aria-label_e18e2965913211f34ed963a1be2c2725e"
+                                    aria-labelledby="ck-editor__aria-label_ee4de134bdd20860e466bd2e6111aabe0"
                                     class="ck ck-button ck-disabled ck-off"
                                     tabindex="-1"
                                     type="button"
@@ -941,14 +941,14 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e18e2965913211f34ed963a1be2c2725e"
+                                      id="ck-editor__aria-label_ee4de134bdd20860e466bd2e6111aabe0"
                                     >
                                       Undo
                                     </span>
                                   </button>
                                   <button
                                     aria-disabled="true"
-                                    aria-labelledby="ck-editor__aria-label_efa169c2ac441d1798b86a21697bed424"
+                                    aria-labelledby="ck-editor__aria-label_e25b38ed70ddd5502afce7c82347d251a"
                                     class="ck ck-button ck-disabled ck-off"
                                     tabindex="-1"
                                     type="button"
@@ -972,7 +972,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_efa169c2ac441d1798b86a21697bed424"
+                                      id="ck-editor__aria-label_e25b38ed70ddd5502afce7c82347d251a"
                                     >
                                       Redo
                                     </span>
@@ -2834,7 +2834,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         style="display: none;"
                       />
                       <div
-                        aria-labelledby="ck-editor__label_e9a102576b16f21ce94316e722c3275aa"
+                        aria-labelledby="ck-editor__label_ebf73ca98e8ca37cae91c54267b54ccd1"
                         class="ck ck-reset ck-editor ck-rounded-corners"
                         dir="ltr"
                         lang="en"
@@ -2842,7 +2842,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       >
                         <label
                           class="ck ck-label ck-voice-label"
-                          id="ck-editor__label_e9a102576b16f21ce94316e722c3275aa"
+                          id="ck-editor__label_ebf73ca98e8ca37cae91c54267b54ccd1"
                         >
                           Rich Text Editor
                         </label>
@@ -2870,7 +2870,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   class="ck ck-toolbar__items"
                                 >
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e880e9ac11cf803eb29d0623e9322da9c"
+                                    aria-labelledby="ck-editor__aria-label_e5b7c9a411c1910f5536c559d5de0a146"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -2895,13 +2895,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e880e9ac11cf803eb29d0623e9322da9c"
+                                      id="ck-editor__aria-label_e5b7c9a411c1910f5536c559d5de0a146"
                                     >
                                       Bold
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e725428d1ec08899f8e8e980998c13f5a"
+                                    aria-labelledby="ck-editor__aria-label_e676cf19d300c46b35fc47b012efc3ba5"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -2926,13 +2926,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e725428d1ec08899f8e8e980998c13f5a"
+                                      id="ck-editor__aria-label_e676cf19d300c46b35fc47b012efc3ba5"
                                     >
                                       Italic
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_ef245ae6ae11c4b605b4742a768735e73"
+                                    aria-labelledby="ck-editor__aria-label_ea6ab6007147c795d241557c86d7898a3"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -2957,13 +2957,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_ef245ae6ae11c4b605b4742a768735e73"
+                                      id="ck-editor__aria-label_ea6ab6007147c795d241557c86d7898a3"
                                     >
                                       Underline
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e07e052e4056aca2bfd5850b16d670d2c"
+                                    aria-labelledby="ck-editor__aria-label_eeb7d2d4206e494c15080eaabb7d1b4b1"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -2991,13 +2991,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e07e052e4056aca2bfd5850b16d670d2c"
+                                      id="ck-editor__aria-label_eeb7d2d4206e494c15080eaabb7d1b4b1"
                                     >
                                       Strikethrough
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e60dad856245a70e2b9a451e867bdf4b9"
+                                    aria-labelledby="ck-editor__aria-label_eea77b89028af9e092eb4458e1e47b508"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -3022,13 +3022,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e60dad856245a70e2b9a451e867bdf4b9"
+                                      id="ck-editor__aria-label_eea77b89028af9e092eb4458e1e47b508"
                                     >
                                       Subscript
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e65b474445c787d7b43a8d91e3a2aa478"
+                                    aria-labelledby="ck-editor__aria-label_e37bda2f8ac883560da10b2f543093034"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -3053,7 +3053,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e65b474445c787d7b43a8d91e3a2aa478"
+                                      id="ck-editor__aria-label_e37bda2f8ac883560da10b2f543093034"
                                     >
                                       Superscript
                                     </span>
@@ -3062,7 +3062,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     class="ck ck-toolbar__separator"
                                   />
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e9c86bbf5ad342e5d864afdebaf2c27e1"
+                                    aria-labelledby="ck-editor__aria-label_e5c2b35345dbf72f85c8e37e20cef339c"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -3087,13 +3087,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e9c86bbf5ad342e5d864afdebaf2c27e1"
+                                      id="ck-editor__aria-label_e5c2b35345dbf72f85c8e37e20cef339c"
                                     >
                                       Link
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e2f06817ce9f1f611f3488d147b2deab8"
+                                    aria-labelledby="ck-editor__aria-label_e27b52a0d28325d9aab7bb94284dbba1a"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -3118,13 +3118,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e2f06817ce9f1f611f3488d147b2deab8"
+                                      id="ck-editor__aria-label_e27b52a0d28325d9aab7bb94284dbba1a"
                                     >
                                       Numbered List
                                     </span>
                                   </button>
                                   <button
-                                    aria-labelledby="ck-editor__aria-label_e90d6a4c500d48767bb6889ff6b89d62d"
+                                    aria-labelledby="ck-editor__aria-label_e4ea81d40d56a9acb2cd6da9dc0a80d36"
                                     aria-pressed="false"
                                     class="ck ck-button ck-off"
                                     tabindex="-1"
@@ -3149,7 +3149,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e90d6a4c500d48767bb6889ff6b89d62d"
+                                      id="ck-editor__aria-label_e4ea81d40d56a9acb2cd6da9dc0a80d36"
                                     >
                                       Bulleted List
                                     </span>
@@ -3159,7 +3159,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   />
                                   <button
                                     aria-disabled="true"
-                                    aria-labelledby="ck-editor__aria-label_e37c311b06c8cd5202fb67e872f382fb0"
+                                    aria-labelledby="ck-editor__aria-label_e01229dabb31af394360044241a20a3bd"
                                     class="ck ck-button ck-disabled ck-off"
                                     tabindex="-1"
                                     type="button"
@@ -3183,7 +3183,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e37c311b06c8cd5202fb67e872f382fb0"
+                                      id="ck-editor__aria-label_e01229dabb31af394360044241a20a3bd"
                                     >
                                       Remove Format
                                     </span>
@@ -3193,7 +3193,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   >
                                     <button
                                       aria-haspopup="true"
-                                      aria-labelledby="ck-editor__aria-label_ec96c61b28619b095fff16ad8be0fcc92"
+                                      aria-labelledby="ck-editor__aria-label_edfa73547fb438684942cde89f66c5476"
                                       class="ck ck-button ck-off ck-dropdown__button"
                                       tabindex="-1"
                                       type="button"
@@ -3217,7 +3217,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                       </span>
                                       <span
                                         class="ck ck-button__label"
-                                        id="ck-editor__aria-label_ec96c61b28619b095fff16ad8be0fcc92"
+                                        id="ck-editor__aria-label_edfa73547fb438684942cde89f66c5476"
                                       >
                                         Special characters
                                       </span>
@@ -3239,7 +3239,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   />
                                   <button
                                     aria-disabled="true"
-                                    aria-labelledby="ck-editor__aria-label_e655a64cce2ac4b256c040edf45b3ac58"
+                                    aria-labelledby="ck-editor__aria-label_ef2d778886746185bd25c3bba2e896f76"
                                     class="ck ck-button ck-disabled ck-off"
                                     tabindex="-1"
                                     type="button"
@@ -3263,14 +3263,14 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e655a64cce2ac4b256c040edf45b3ac58"
+                                      id="ck-editor__aria-label_ef2d778886746185bd25c3bba2e896f76"
                                     >
                                       Undo
                                     </span>
                                   </button>
                                   <button
                                     aria-disabled="true"
-                                    aria-labelledby="ck-editor__aria-label_e9ef5d546c2aee9513e584808890d129d"
+                                    aria-labelledby="ck-editor__aria-label_ea26dde2b77392fbaf02e81e9faec802e"
                                     class="ck ck-button ck-disabled ck-off"
                                     tabindex="-1"
                                     type="button"
@@ -3294,7 +3294,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     </span>
                                     <span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e9ef5d546c2aee9513e584808890d129d"
+                                      id="ck-editor__aria-label_ea26dde2b77392fbaf02e81e9faec802e"
                                     >
                                       Redo
                                     </span>
