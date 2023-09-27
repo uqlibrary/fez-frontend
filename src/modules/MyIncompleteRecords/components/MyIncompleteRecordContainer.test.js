@@ -50,22 +50,58 @@ describe('MyIncompleteRecordContainer', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading'));
 
-        expect(asFragment()).toMatchSnapshot();
+        expect(getByTestId('page-title')).toHaveTextContent('Complete my work');
+        expect(getByTestId('publication-citation-parent-UQ:352045')).toHaveTextContent(
+            'Il Sogno: Topology and the Brodsky Quartet play Elvis Costello',
+        );
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Davidson, Robert');
+        const publicationCitationGoogleUrl =
+            'https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello';
+        expect(getByTestId('citation-count-link')).toHaveAttribute('href', publicationCitationGoogleUrl);
+        expect(getByTestId('rek-significance-input')).toBeInTheDocument();
+        expect(getByTestId('rek-significance-input')).toBeEmptyDOMElement();
+        expect(getByTestId('rek-creator-contribution-statement')).toBeInTheDocument();
+        expect(getByTestId('standard-card-ntro-data-header')).toHaveTextContent('NTRO data');
+        expect(getByTestId('standard-card-ntro-data-content')).toHaveTextContent('Audience size');
+        expect(getByTestId('rek-audience-size-select')).toBeInTheDocument();
+        expect(getByTestId('rek-quality-indicator-label')).toHaveTextContent('Quality indicators');
+        expect(getByTestId('rek-quality-indicator-select')).toBeInTheDocument();
+        expect(getByTestId('standard-card-grant-details-header')).toHaveTextContent('Grant details');
+        expect(getByTestId('standard-card-grant-details-content')).toHaveTextContent(
+            "Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list",
+        );
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('TopologyFirst listed author');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent(
+            'Davidson, RobertSecond listed author',
+        );
+        expect(getByTestId('rek-author-list-row-2-name-as-published')).toHaveTextContent(
+            'Babbage, JohnThird listed author',
+        );
+        expect(getByTestId('rek-author-list-row-3-name-as-published')).toHaveTextContent(
+            'The Brodsky QuartetFourth listed author',
+        );
+        expect(getByTestId('standard-card-notes-header')).toHaveTextContent('Notes');
+        expect(getByTestId('comments-label')).toHaveTextContent('Notes for this work');
+        expect(getByTestId('comments-input')).toBeInTheDocument();
+        expect(getByTestId('comments-input')).toBeEmptyDOMElement();
+
         fireEvent.mouseDown(getByTestId('rek-significance-select'));
         fireEvent.click(getByText('Major'));
 
-        expect(getByTestId('page-title')).toHaveTextContent('Complete my work');
+        expect(getByTestId('rek-significance-select')).toHaveTextContent('Major');
+        expect(getByTestId('rek-significance-input')).toHaveAttribute('value', '454026');
     });
 
     it('should handle undefined fez_record_search_key_grant_agency', async () => {
-        mockApi.onGet(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:111111' }).apiUrl).replyOnce(200, {
+        const url = repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:111111' }).apiUrl;
+        mockApi.onGet(url).replyOnce(200, {
             data: {
                 ...incompleteNTRORecordUQ352045,
                 fez_record_search_key_grant_agency: undefined,
             },
         });
 
-        const { getByText, asFragment } = setup(
+        const { getByTestId, getByText, asFragment } = setup(
             {},
             {
                 accountReducer: {
@@ -75,7 +111,19 @@ describe('MyIncompleteRecordContainer', () => {
         );
 
         await waitForElementToBeRemoved(() => getByText('Loading'));
-        expect(asFragment()).toMatchSnapshot();
+        expect(getByTestId('page-title')).toHaveTextContent('Complete my work');
+        expect(getByTestId('publication-citation-parent-UQ:352045')).toHaveTextContent(
+            'Il Sogno: Topology and the Brodsky Quartet play Elvis Costello',
+        );
+        expect(getByTestId('rek-grant-agency-label')).toHaveTextContent('Funder/Sponsor name');
+        expect(getByTestId('rek-grant-agency-input')).toBeInTheDocument();
+        expect(getByTestId('rek-grant-agency-input')).toBeEmptyDOMElement();
+        expect(getByTestId('rek-grant-id-label')).toHaveTextContent('Grant ID');
+        expect(getByTestId('rek-grant-id-input')).toBeInTheDocument();
+        expect(getByTestId('rek-grant-type-select')).toHaveTextContent('Funder/Sponsor type');
+        expect(getByTestId('rek-grant-type-input')).toBeInTheDocument();
+        expect(getByTestId('rek-grant-type-input')).toBeEmptyDOMElement();
+        expect(getByTestId('rek-grant-add')).toHaveTextContent('Add grant');
     });
 
     it('should render default component with default values', async () => {
