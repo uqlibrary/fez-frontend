@@ -58,16 +58,10 @@ const RichEditor = fieldProps => {
             dataForEditor = ''; // undetectable Map value comes through, don't use
         }
     }
-    // A handler executed when the editor has been initialized and is ready.
-    // It synchronizes the initial data state and saves the reference to the editor instance.
     function handleEditorReady(editor) {
-        // You can store the "editor" and use when it is needed.
-        editor.setData(dataForEditor);
+        !!editor && editor.hasOwnProperty('setData') && editor.setData(dataForEditor);
     }
     let error = null;
-    // <br data-cke-filler="true">
-    console.log('fieldProps.value.length=', fieldProps.value.length);
-    console.log(fieldProps);
     const inputLength =
         (fieldProps.value && fieldProps.value.plainText && fieldProps.value.plainText.length) ||
         fieldProps.value.length - 7; // default rich editor has "<p></p>"
@@ -84,6 +78,8 @@ const RichEditor = fieldProps => {
                 }
             });
     }
+    // rendered content of empty CKEditor:
+    // <br data-cke-filler="true">
     return (
         <div
             id={fieldProps.richEditorId}
