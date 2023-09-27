@@ -21,7 +21,7 @@ export const handleSignificanceCallbackFactory = setSignificance => {
 export const resetFormCallbackFactory = (contributionStatementEditor, setSignificance, showForm) => {
     const callback = () => {
         setSignificance(null);
-        contributionStatementEditor.current.setData(null);
+        !!contributionStatementEditor.current && contributionStatementEditor.current.setData(null);
         showForm(false);
     };
     return [callback, [contributionStatementEditor, setSignificance]];
@@ -54,6 +54,7 @@ export const ScaleOfSignificanceForm = ({
     itemSelectedToEdit,
     buttonLabel,
     input,
+    hidden,
 }) => {
     const [significance, setSignificance] = useState(null);
     const [contributionStatement, setContributionStatement] = useState(null);
@@ -64,11 +65,12 @@ export const ScaleOfSignificanceForm = ({
         if (itemIndexSelectedToEdit !== null && formMode === 'edit') {
             setSignificance(itemSelectedToEdit.key);
             setContributionStatement(itemSelectedToEdit.value);
-            contributionStatementEditor.current.setData(itemSelectedToEdit.value.htmlText);
+            !!contributionStatementEditor.current &&
+                contributionStatementEditor.current.setData(itemSelectedToEdit.value.htmlText);
         } else {
             setSignificance(null);
             setContributionStatement('');
-            contributionStatementEditor.current.setData('');
+            !!contributionStatementEditor.current && contributionStatementEditor.current.setData('');
         }
     }, [itemIndexSelectedToEdit, itemSelectedToEdit, formMode]);
 
@@ -98,7 +100,15 @@ export const ScaleOfSignificanceForm = ({
     const isValidStatement = statement => !!statement?.plainText?.trim();
 
     return (
-        <Grid container spacing={2} display="row" alignItems="center" data-testid="rek-significance-form">
+        <Grid
+            container
+            spacing={2}
+            // display="row"
+            display={hidden ? 'none' : 'row'}
+            alignItems="center"
+            data-testid="rek-significance-form"
+            // style={{ display: hidden ? 'none' : 'flex' }}
+        >
             {!!authorOrderAlert && (
                 <Grid item xs={12}>
                     <Alert {...authorOrderAlert} />
@@ -119,23 +129,16 @@ export const ScaleOfSignificanceForm = ({
             </Grid>
             <Grid item xs={12}>
                 <RichEditorField
-                    fullWidth
                     richEditorId="rek-creator-contribution-statement"
                     name="value"
                     id={(!!id && /* istanbul ignore next */ id) || ''}
                     onChange={handleContributionStatement}
-                    onKeyPress={saveChanges}
+                    // onKeyPress={saveChanges}
                     error={!!errorText}
                     disabled={disabled}
                     inputRef={contributionStatementInput}
                     instanceRef={contributionStatementEditor}
                     title={contributionStatementInputFieldLabel}
-                    titleProps={{
-                        variant: 'caption',
-                        style: {
-                            opacity: 0.666,
-                        },
-                    }}
                     value={formMode === 'edit' && !!contributionStatement ? contributionStatement : ''}
                     input={input}
                     required
@@ -177,6 +180,7 @@ ScaleOfSignificanceForm.propTypes = {
     disabled: PropTypes.bool,
     errorText: PropTypes.string,
     formMode: PropTypes.string,
+    hidden: PropTypes.bool,
     input: PropTypes.any,
     itemIndexSelectedToEdit: PropTypes.any,
     itemSelectedToEdit: PropTypes.object,

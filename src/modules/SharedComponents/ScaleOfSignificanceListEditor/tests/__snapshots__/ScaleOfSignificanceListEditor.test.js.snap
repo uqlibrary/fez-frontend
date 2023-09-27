@@ -4,6 +4,29 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -48,7 +71,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 0,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -75,7 +99,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 1,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -102,7 +127,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 2,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -129,7 +155,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 3,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -156,7 +183,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 4,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -183,7 +211,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 5,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -210,7 +239,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 6,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -237,7 +267,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 7,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -264,7 +295,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 8,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -291,7 +323,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 9,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -312,6 +345,29 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -356,7 +412,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 0,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -383,7 +440,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 1,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -410,7 +468,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 2,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -437,7 +496,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 3,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -464,7 +524,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 4,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -491,7 +552,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 5,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -518,7 +580,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 6,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -545,7 +608,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 7,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -572,7 +636,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 8,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -599,7 +664,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 9,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -620,6 +686,29 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -664,7 +753,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 0,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -691,7 +781,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 1,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -718,7 +809,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 2,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -745,7 +837,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 3,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -772,7 +865,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 4,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -799,7 +893,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 5,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -826,7 +921,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 6,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -853,7 +949,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 7,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -880,7 +977,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 8,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -907,7 +1005,8 @@ exports[`ScaleOfSignificanceListEditor tests Should render a list of many items 
           },
           "id": 9,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -928,6 +1027,29 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -978,6 +1100,29 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1021,8 +1166,9 @@ exports[`ScaleOfSignificanceListEditor tests should add an object item and set s
             "rek_author": null,
           },
           "id": 0,
-          "key": undefined,
-          "value": Object {
+          "key": "test",
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1043,6 +1189,29 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 1`] =
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1093,6 +1262,29 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 2`] =
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1136,14 +1328,15 @@ exports[`ScaleOfSignificanceListEditor tests should add item and set state 2`] =
             "rek_author": null,
           },
           "id": 0,
-          "key": "test",
-          "value": Object {
+          "key": undefined,
+          "scaleValue": "test",
+          "signifValue": Object {
             "htmlText": null,
           },
         }
       }
       itemTemplate={[Function]}
-      key="test"
+      key="[object Object]-0"
       listRowId="test-list-editor-list-row-0"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -1158,6 +1351,29 @@ exports[`ScaleOfSignificanceListEditor tests should move down an item 1`] = `
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1202,7 +1418,8 @@ exports[`ScaleOfSignificanceListEditor tests should move down an item 1`] = `
           },
           "id": 0,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1229,7 +1446,8 @@ exports[`ScaleOfSignificanceListEditor tests should move down an item 1`] = `
           },
           "id": 1,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1256,7 +1474,8 @@ exports[`ScaleOfSignificanceListEditor tests should move down an item 1`] = `
           },
           "id": 2,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1277,6 +1496,29 @@ exports[`ScaleOfSignificanceListEditor tests should move up an item 1`] = `
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1321,7 +1563,8 @@ exports[`ScaleOfSignificanceListEditor tests should move up an item 1`] = `
           },
           "id": 0,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1348,7 +1591,8 @@ exports[`ScaleOfSignificanceListEditor tests should move up an item 1`] = `
           },
           "id": 1,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1375,7 +1619,8 @@ exports[`ScaleOfSignificanceListEditor tests should move up an item 1`] = `
           },
           "id": 2,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1396,6 +1641,34 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    input={
+      Object {
+        "name": "test",
+      }
+    }
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1446,6 +1719,29 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={true}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1496,6 +1792,29 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1546,6 +1865,42 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    input={
+      Object {
+        "name": "test",
+        "value": Array [
+          Object {
+            "rek_value": "test 1",
+          },
+          Object {
+            "rek_value": "test 2",
+          },
+        ],
+      }
+    }
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1590,7 +1945,8 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           },
           "id": 0,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1617,7 +1973,8 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           },
           "id": 1,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1638,6 +1995,42 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
 <div
   id="test-list-editor-list-editor"
 >
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    input={
+      Object {
+        "name": "test",
+        "value": Immutable.List [
+          Object {
+            "rek_value": "test 1",
+          },
+          Object {
+            "rek_value": "test 2",
+          },
+        ],
+      }
+    }
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1682,7 +2075,8 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           },
           "id": 0,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1709,7 +2103,8 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           },
           "id": 1,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1730,98 +2125,29 @@ exports[`ScaleOfSignificanceListEditor tests should update an entry with selecte
 <div
   id="test-list-editor-list-editor"
 >
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
     disabled={false}
-    hideReorder={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
     listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
   />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": "test 1",
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="test 1"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": "new 1",
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="new 1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests should update an item with selected index 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
   <ForwardRef(Box)
     alignItems="flex-end"
     display="flex"
@@ -1866,7 +2192,125 @@ exports[`ScaleOfSignificanceListEditor tests should update an item with selected
           },
           "id": 0,
           "key": undefined,
-          "value": Object {
+          "scaleValue": "test 1",
+          "signifValue": Object {
+            "htmlText": null,
+          },
+        }
+      }
+      itemTemplate={[Function]}
+      key="[object Object]-0"
+      listRowId="test-list-editor-list-row-0"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <Memo(ListRow)
+      canEdit={false}
+      canMoveDown={false}
+      canMoveUp={true}
+      disabled={false}
+      hideReorder={false}
+      index={1}
+      item={
+        Object {
+          "author": Object {
+            "rek_author": null,
+          },
+          "id": 1,
+          "key": undefined,
+          "scaleValue": "new 1",
+          "signifValue": Object {
+            "htmlText": null,
+          },
+        }
+      }
+      itemTemplate={[Function]}
+      key="[object Object]-1"
+      listRowId="test-list-editor-list-row-1"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`ScaleOfSignificanceListEditor tests should update an item with selected index 1`] = `
+<div
+  id="test-list-editor-list-editor"
+>
+  <Memo(ScaleOfSignificanceForm)
+    buttonLabel="Add item"
+    disabled={false}
+    error={false}
+    formMode="edit"
+    hidden={true}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="list-editor-form"
+    listEditorId="test-list-editor"
+    locale={
+      Object {
+        "addButtonLabel": "Add item",
+        "editButtonLabel": "Edit item",
+        "significanceInputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    required={false}
+    saveChangeToItem={[Function]}
+    showForm={[Function]}
+  />
+  <ForwardRef(Box)
+    alignItems="flex-end"
+    display="flex"
+    justifyContent="flex-end"
+  >
+    <ForwardRef(IconButton)
+      data-analyticsid="rek-significance-showhidebutton"
+      data-testid="rek-significance-showhidebutton"
+      onClick={[Function]}
+      size="small"
+      style={
+        Object {
+          "backgroundColor": "#51247A",
+          "color": "#fff",
+        }
+      }
+    >
+      <Memo(ForwardRef(AddIcon)) />
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
+  <Memo(ListRowHeader)
+    disabled={false}
+    hideReorder={false}
+    listEditorId="test-list-editor"
+    onDeleteAll={[Function]}
+  />
+  <div
+    data-testid="test-list-editor-list"
+    id="test-list-editor-list"
+  >
+    <Memo(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={false}
+      disabled={false}
+      hideReorder={false}
+      index={0}
+      item={
+        Object {
+          "author": Object {
+            "rek_author": null,
+          },
+          "id": 0,
+          "key": undefined,
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1893,7 +2337,8 @@ exports[`ScaleOfSignificanceListEditor tests should update an item with selected
           },
           "id": 1,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }
@@ -1920,7 +2365,8 @@ exports[`ScaleOfSignificanceListEditor tests should update an item with selected
           },
           "id": 2,
           "key": undefined,
-          "value": Object {
+          "scaleValue": undefined,
+          "signifValue": Object {
             "htmlText": null,
           },
         }

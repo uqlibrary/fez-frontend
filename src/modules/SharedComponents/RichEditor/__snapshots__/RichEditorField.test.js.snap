@@ -2,9 +2,9 @@
 
 exports[`RichEditorField should render default component 1`] = `
 <div>
-  <span />
-  <div
-    class=""
-  />
+  <div>
+    <span />
+    <div />
+  </div>
 </div>
 `;
