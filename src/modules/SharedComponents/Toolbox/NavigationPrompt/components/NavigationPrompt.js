@@ -62,5 +62,4 @@ export class NavigationPrompt extends PureComponent {
         return <div>{this.props.children(this.setNavigationConfirmation, this._onConfirm, this._onCancel)}</div>;
     }
 }
-
 export default withRouter(NavigationPrompt);

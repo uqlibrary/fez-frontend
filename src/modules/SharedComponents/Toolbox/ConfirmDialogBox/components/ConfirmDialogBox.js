@@ -32,6 +32,7 @@ export class ConfirmDialogBox extends Component {
         onAlternateAction: PropTypes.func,
         onRef: PropTypes.func,
         showAlternateActionButton: PropTypes.bool,
+        isOpen: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -44,6 +45,7 @@ export class ConfirmDialogBox extends Component {
         },
         showAlternateActionButton: false,
         confirmDialogBoxId: 'dialog-box',
+        isOpen: false,
     };
 
     constructor(props) {
@@ -55,7 +57,7 @@ export class ConfirmDialogBox extends Component {
         this._onAction = this._onAction.bind(this);
 
         this.state = {
-            isDialogOpen: false,
+            isDialogOpen: this.props.isOpen,
         };
     }
 

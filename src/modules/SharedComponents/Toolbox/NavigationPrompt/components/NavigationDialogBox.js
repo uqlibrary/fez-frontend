@@ -21,6 +21,7 @@ const NavigationDialogBox = ({ when, txt }) => {
 
 NavigationDialogBox.propTypes = {
     when: PropTypes.bool.isRequired,
+    history: PropTypes.object,
     txt: PropTypes.object,
 };
 

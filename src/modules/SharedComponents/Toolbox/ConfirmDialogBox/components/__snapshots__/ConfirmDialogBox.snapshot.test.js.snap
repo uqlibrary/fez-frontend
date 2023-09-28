@@ -1,317 +1,337 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ConfirmDialogBox snapshots tests renders component with customised locale 1`] = `
-<ForwardRef(Dialog)
-  open={false}
-  style={
-    Object {
-      "padding": 6,
-    }
-  }
+<ForwardRef(Box)
+  component="span"
+  data-testid="confirm-dialog-box"
 >
-  <ForwardRef(DialogTitle)
-    data-testid="message-title"
+  <ForwardRef(Dialog)
+    open={false}
+    style={
+      Object {
+        "padding": 6,
+      }
+    }
   >
-    ENG: Confirmation
-  </ForwardRef(DialogTitle)>
-  <ForwardRef(DialogContent)>
-    <ForwardRef(DialogContentText)
-      data-testid="message-content"
+    <ForwardRef(DialogTitle)
+      data-testid="message-title"
     >
-      ENG: Are you sure?
-    </ForwardRef(DialogContentText)>
-  </ForwardRef(DialogContent)>
-  <ForwardRef(DialogActions)>
-    <ForwardRef(Grid)
-      container={true}
-      spacing={1}
-    >
+      ENG: Confirmation
+    </ForwardRef(DialogTitle)>
+    <ForwardRef(DialogContent)>
+      <ForwardRef(DialogContentText)
+        data-testid="message-content"
+      >
+        ENG: Are you sure?
+      </ForwardRef(DialogContentText)>
+    </ForwardRef(DialogContent)>
+    <ForwardRef(DialogActions)>
       <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
+        container={true}
+        spacing={1}
+      >
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
           }
-        }
-        xs={true}
-      />
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          autoFocus={true}
-          color="primary"
-          data-analyticsid="confirm-dialog-box"
-          data-testid="confirm-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
+          xs={true}
+        />
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          ENG: Yes
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          data-analyticsid="alternate-dialog-box"
-          data-testid="alternate-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+          <ForwardRef(Button)
+            autoFocus={true}
+            color="primary"
+            data-analyticsid="confirm-dialog-box"
+            data-testid="confirm-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            ENG: Yes
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          ENG: Maybe
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          color="primary"
-          data-analyticsid="cancel-dialog-box"
-          data-testid="cancel-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+          <ForwardRef(Button)
+            data-analyticsid="alternate-dialog-box"
+            data-testid="alternate-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            ENG: Maybe
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          ENG: No
-        </ForwardRef(Button)>
+          <ForwardRef(Button)
+            color="primary"
+            data-analyticsid="cancel-dialog-box"
+            data-testid="cancel-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            ENG: No
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
       </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(DialogActions)>
-</ForwardRef(Dialog)>
+    </ForwardRef(DialogActions)>
+  </ForwardRef(Dialog)>
+</ForwardRef(Box)>
 `;
 
 exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
-<ForwardRef(Dialog)
-  open={false}
-  style={
-    Object {
-      "padding": 6,
-    }
-  }
+<ForwardRef(Box)
+  component="span"
+  data-testid="confirm-dialog-box"
 >
-  <ForwardRef(DialogTitle)
-    data-testid="message-title"
+  <ForwardRef(Dialog)
+    open={false}
+    style={
+      Object {
+        "padding": 6,
+      }
+    }
   >
-    Confirmation
-  </ForwardRef(DialogTitle)>
-  <ForwardRef(DialogContent)>
-    <ForwardRef(DialogContentText)
-      data-testid="message-content"
+    <ForwardRef(DialogTitle)
+      data-testid="message-title"
     >
-      Are you sure?
-    </ForwardRef(DialogContentText)>
-  </ForwardRef(DialogContent)>
-  <ForwardRef(DialogActions)>
-    <ForwardRef(Grid)
-      container={true}
-      spacing={1}
-    >
-      <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
-          }
-        }
-        xs={true}
-      />
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
+      Confirmation
+    </ForwardRef(DialogTitle)>
+    <ForwardRef(DialogContent)>
+      <ForwardRef(DialogContentText)
+        data-testid="message-content"
       >
-        <ForwardRef(Button)
-          autoFocus={true}
-          color="primary"
-          data-analyticsid="confirm-dialog-box"
-          data-testid="confirm-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
+        Are you sure?
+      </ForwardRef(DialogContentText)>
+    </ForwardRef(DialogContent)>
+    <ForwardRef(DialogActions)>
+      <ForwardRef(Grid)
+        container={true}
+        spacing={1}
+      >
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Yes
-        </ForwardRef(Button)>
+          <ForwardRef(Button)
+            autoFocus={true}
+            color="primary"
+            data-analyticsid="confirm-dialog-box"
+            data-testid="confirm-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Yes
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
       </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(DialogActions)>
-</ForwardRef(Dialog)>
+    </ForwardRef(DialogActions)>
+  </ForwardRef(Dialog)>
+</ForwardRef(Box)>
 `;
 
 exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 1`] = `
-<ForwardRef(Dialog)
-  open={false}
-  style={
-    Object {
-      "padding": 6,
-    }
-  }
+<ForwardRef(Box)
+  component="span"
+  data-testid="confirm-dialog-box"
 >
-  <ForwardRef(DialogTitle)
-    data-testid="message-title"
+  <ForwardRef(Dialog)
+    open={false}
+    style={
+      Object {
+        "padding": 6,
+      }
+    }
   >
-    Confirmation
-  </ForwardRef(DialogTitle)>
-  <ForwardRef(DialogContent)>
-    <ForwardRef(DialogContentText)
-      data-testid="message-content"
+    <ForwardRef(DialogTitle)
+      data-testid="message-title"
     >
-      Are you sure?
-    </ForwardRef(DialogContentText)>
-  </ForwardRef(DialogContent)>
-  <ForwardRef(DialogActions)>
-    <ForwardRef(Grid)
-      container={true}
-      spacing={1}
-    >
+      Confirmation
+    </ForwardRef(DialogTitle)>
+    <ForwardRef(DialogContent)>
+      <ForwardRef(DialogContentText)
+        data-testid="message-content"
+      >
+        Are you sure?
+      </ForwardRef(DialogContentText)>
+    </ForwardRef(DialogContent)>
+    <ForwardRef(DialogActions)>
       <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
+        container={true}
+        spacing={1}
+      >
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
           }
-        }
-        xs={true}
-      />
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          autoFocus={true}
-          color="primary"
-          data-analyticsid="confirm-dialog-box"
-          data-testid="confirm-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
+          xs={true}
+        />
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Yes
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          color="primary"
-          data-analyticsid="cancel-dialog-box"
-          data-testid="cancel-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+          <ForwardRef(Button)
+            autoFocus={true}
+            color="primary"
+            data-analyticsid="confirm-dialog-box"
+            data-testid="confirm-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Yes
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          No
-        </ForwardRef(Button)>
+          <ForwardRef(Button)
+            color="primary"
+            data-analyticsid="cancel-dialog-box"
+            data-testid="cancel-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            No
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
       </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(DialogActions)>
-</ForwardRef(Dialog)>
+    </ForwardRef(DialogActions)>
+  </ForwardRef(Dialog)>
+</ForwardRef(Box)>
 `;
 
 exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe buttons 1`] = `
-<ForwardRef(Dialog)
-  open={false}
-  style={
-    Object {
-      "padding": 6,
-    }
-  }
+<ForwardRef(Box)
+  component="span"
+  data-testid="confirm-dialog-box"
 >
-  <ForwardRef(DialogTitle)
-    data-testid="message-title"
+  <ForwardRef(Dialog)
+    open={false}
+    style={
+      Object {
+        "padding": 6,
+      }
+    }
   >
-    Confirmation
-  </ForwardRef(DialogTitle)>
-  <ForwardRef(DialogContent)>
-    <ForwardRef(DialogContentText)
-      data-testid="message-content"
+    <ForwardRef(DialogTitle)
+      data-testid="message-title"
     >
-      Are you sure?
-    </ForwardRef(DialogContentText)>
-  </ForwardRef(DialogContent)>
-  <ForwardRef(DialogActions)>
-    <ForwardRef(Grid)
-      container={true}
-      spacing={1}
-    >
+      Confirmation
+    </ForwardRef(DialogTitle)>
+    <ForwardRef(DialogContent)>
+      <ForwardRef(DialogContentText)
+        data-testid="message-content"
+      >
+        Are you sure?
+      </ForwardRef(DialogContentText)>
+    </ForwardRef(DialogContent)>
+    <ForwardRef(DialogActions)>
       <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
+        container={true}
+        spacing={1}
+      >
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
           }
-        }
-        xs={true}
-      />
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          autoFocus={true}
-          color="primary"
-          data-analyticsid="confirm-dialog-box"
-          data-testid="confirm-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
+          xs={true}
+        />
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Yes
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          data-analyticsid="alternate-dialog-box"
-          data-testid="alternate-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+          <ForwardRef(Button)
+            autoFocus={true}
+            color="primary"
+            data-analyticsid="confirm-dialog-box"
+            data-testid="confirm-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Yes
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Maybe
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          color="primary"
-          data-analyticsid="cancel-dialog-box"
-          data-testid="cancel-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+          <ForwardRef(Button)
+            data-analyticsid="alternate-dialog-box"
+            data-testid="alternate-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            Maybe
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          No
-        </ForwardRef(Button)>
+          <ForwardRef(Button)
+            color="primary"
+            data-analyticsid="cancel-dialog-box"
+            data-testid="cancel-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            No
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
       </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(DialogActions)>
-</ForwardRef(Dialog)>
+    </ForwardRef(DialogActions)>
+  </ForwardRef(Dialog)>
+</ForwardRef(Box)>
 `;
 
 exports[`ConfirmDialogBox snapshots tests should have a proper style generator 1`] = `
@@ -351,151 +371,161 @@ Object {
 `;
 
 exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dialog 1`] = `
-<ForwardRef(Dialog)
-  open={true}
-  style={
-    Object {
-      "padding": 6,
-    }
-  }
+<ForwardRef(Box)
+  component="span"
+  data-testid="confirm-dialog-box"
 >
-  <ForwardRef(DialogTitle)
-    data-testid="message-title"
+  <ForwardRef(Dialog)
+    open={true}
+    style={
+      Object {
+        "padding": 6,
+      }
+    }
   >
-    Confirmation
-  </ForwardRef(DialogTitle)>
-  <ForwardRef(DialogContent)>
-    <ForwardRef(DialogContentText)
-      data-testid="message-content"
+    <ForwardRef(DialogTitle)
+      data-testid="message-title"
     >
-      Are you sure?
-    </ForwardRef(DialogContentText)>
-  </ForwardRef(DialogContent)>
-  <ForwardRef(DialogActions)>
-    <ForwardRef(Grid)
-      container={true}
-      spacing={1}
-    >
+      Confirmation
+    </ForwardRef(DialogTitle)>
+    <ForwardRef(DialogContent)>
+      <ForwardRef(DialogContentText)
+        data-testid="message-content"
+      >
+        Are you sure?
+      </ForwardRef(DialogContentText)>
+    </ForwardRef(DialogContent)>
+    <ForwardRef(DialogActions)>
       <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
+        container={true}
+        spacing={1}
+      >
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
           }
-        }
-        xs={true}
-      />
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          autoFocus={true}
-          color="primary"
-          data-analyticsid="confirm-dialog-box"
-          data-testid="confirm-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
+          xs={true}
+        />
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Yes
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          color="primary"
-          data-analyticsid="cancel-dialog-box"
-          data-testid="cancel-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+          <ForwardRef(Button)
+            autoFocus={true}
+            color="primary"
+            data-analyticsid="confirm-dialog-box"
+            data-testid="confirm-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Yes
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          No
-        </ForwardRef(Button)>
+          <ForwardRef(Button)
+            color="primary"
+            data-analyticsid="cancel-dialog-box"
+            data-testid="cancel-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            No
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
       </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(DialogActions)>
-</ForwardRef(Dialog)>
+    </ForwardRef(DialogActions)>
+  </ForwardRef(Dialog)>
+</ForwardRef(Box)>
 `;
 
 exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dialog 2`] = `
-<ForwardRef(Dialog)
-  open={false}
-  style={
-    Object {
-      "padding": 6,
-    }
-  }
+<ForwardRef(Box)
+  component="span"
+  data-testid="confirm-dialog-box"
 >
-  <ForwardRef(DialogTitle)
-    data-testid="message-title"
+  <ForwardRef(Dialog)
+    open={false}
+    style={
+      Object {
+        "padding": 6,
+      }
+    }
   >
-    Confirmation
-  </ForwardRef(DialogTitle)>
-  <ForwardRef(DialogContent)>
-    <ForwardRef(DialogContentText)
-      data-testid="message-content"
+    <ForwardRef(DialogTitle)
+      data-testid="message-title"
     >
-      Are you sure?
-    </ForwardRef(DialogContentText)>
-  </ForwardRef(DialogContent)>
-  <ForwardRef(DialogActions)>
-    <ForwardRef(Grid)
-      container={true}
-      spacing={1}
-    >
+      Confirmation
+    </ForwardRef(DialogTitle)>
+    <ForwardRef(DialogContent)>
+      <ForwardRef(DialogContentText)
+        data-testid="message-content"
+      >
+        Are you sure?
+      </ForwardRef(DialogContentText)>
+    </ForwardRef(DialogContent)>
+    <ForwardRef(DialogActions)>
       <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "display": Object {
-              "sm": "block",
-              "xs": "none",
-            },
+        container={true}
+        spacing={1}
+      >
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
           }
-        }
-        xs={true}
-      />
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          autoFocus={true}
-          color="primary"
-          data-analyticsid="confirm-dialog-box"
-          data-testid="confirm-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
+          xs={true}
+        />
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Yes
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          color="primary"
-          data-analyticsid="cancel-dialog-box"
-          data-testid="cancel-dialog-box"
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+          <ForwardRef(Button)
+            autoFocus={true}
+            color="primary"
+            data-analyticsid="confirm-dialog-box"
+            data-testid="confirm-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+          >
+            Yes
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          No
-        </ForwardRef(Button)>
+          <ForwardRef(Button)
+            color="primary"
+            data-analyticsid="cancel-dialog-box"
+            data-testid="cancel-dialog-box"
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            No
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
       </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </ForwardRef(DialogActions)>
-</ForwardRef(Dialog)>
+    </ForwardRef(DialogActions)>
+  </ForwardRef(Dialog)>
+</ForwardRef(Box)>
 `;
