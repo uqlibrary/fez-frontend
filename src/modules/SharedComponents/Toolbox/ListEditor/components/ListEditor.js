@@ -266,7 +266,11 @@ export default class ListEditor extends Component {
             />
         ));
         return (
-            <div className={`${this.props.className}`} id={`${this.props.listEditorId}-list-editor`}>
+            <div
+                className={`${this.props.className}`}
+                id={`${this.props.listEditorId}-list-editor`}
+                data-testid={`${this.props.listEditorId}-list-editor`}
+            >
                 <this.props.formComponent
                     inputField={this.props.inputField}
                     key={
