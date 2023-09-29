@@ -23,14 +23,6 @@ exports[`NotesSection component should render default view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "rek_herdc_notes",
-          ],
-        ],
-        "title": "HERDC notes",
-      },
-      Object {
-        "groups": Array [
-          Array [
             "rek_ci_notice_attribution_incomplete",
           ],
         ],
@@ -61,14 +53,6 @@ exports[`NotesSection component should render disabled view 1`] = `
           ],
         ],
         "title": "Internal notes",
-      },
-      Object {
-        "groups": Array [
-          Array [
-            "rek_herdc_notes",
-          ],
-        ],
-        "title": "HERDC notes",
       },
       Object {
         "groups": Array [

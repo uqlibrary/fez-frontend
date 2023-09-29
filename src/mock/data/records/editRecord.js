@@ -402,7 +402,6 @@ const editRecord = {
     "rek_pubmed_doc_type_lookup": null,
     "rek_object_type_lookup": "Record",
     "rek_status_lookup": "Published",
-    "rek_herdc_notes": null,
     "rek_editing_user": null,
     "rek_editing_user_lookup": null,
     "rek_editing_start_date": null,

@@ -26,7 +26,6 @@ describe('NotesSection component', () => {
                 fez_internal_notes: {
                     ain_detail: 'Test internal notes',
                 },
-                rek_herdc_notes: 'Test HERDC notes',
             },
         }));
 
@@ -46,7 +45,6 @@ describe('NotesSection component', () => {
                 fez_internal_notes: {
                     ain_detail: 'Test internal notes',
                 },
-                rek_herdc_notes: 'Test HERDC notes',
             },
         }));
 
