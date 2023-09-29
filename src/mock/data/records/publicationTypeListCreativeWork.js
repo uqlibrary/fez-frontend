@@ -357,7 +357,6 @@ const publicationTypeListCreativeWork = {
             "rek_display_type_lookup": "Creative Work",
             "rek_object_type_lookup": "Record",
             "rek_status_lookup": "Published",
-            "rek_herdc_notes": "Published by-line : Prof Neal M. Ashkanasy, Professor of Management University of Queensland Business School<br />",
             "fez_internal_notes": {
                 "ain_id": 128864,
                 "ain_pid": "UQ:285760",
