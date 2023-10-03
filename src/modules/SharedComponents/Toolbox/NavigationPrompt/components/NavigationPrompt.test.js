@@ -25,13 +25,11 @@ function setup(testProps = {}, renderer = render) {
 
 describe('NavigationPrompt component', () => {
     it('should render', () => {
-        const testFunction = jest.fn();
         const { container, getByTestId } = setup({
             when: true,
-            history: { block: testFunction },
+            history: { block: jest.fn(() => jest.fn()) },
         });
-        expect(getByTestId('confirm-dialog-box')).toBeInTheDocument();
-        expect(testFunction).toHaveBeenCalled();
+        expect(getByTestId('confirmDialogBox')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 

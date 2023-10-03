@@ -1,7 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 
-import { Doi, getErrorMessage, getWarningMessage, isArrayValid } from './Doi';
+import { Doi, getWarningMessage, isArrayValid } from './Doi';
 
 import publicationTypeListConferencePaper from 'mock/data/records/publicationTypeListConferencePaper';
 import publicationTypeListJournalArticle from 'mock/data/records/publicationTypeListJournalArticle';
