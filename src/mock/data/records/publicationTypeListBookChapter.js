@@ -158,7 +158,6 @@ const publicationTypeListBookChapter = {
             "rek_display_type_lookup": "Book Chapter",
             "rek_object_type_lookup": "Record",
             "rek_status_lookup": "Published",
-            "rek_herdc_notes": "Unable to locate original matter or confirm original title was in English as previously entered.",
             "fez_record_search_key_security_policy": [5]
         },
         {
@@ -182,8 +181,7 @@ const publicationTypeListBookChapter = {
             "rek_thomson_citation_count": null,
             "rek_subtype": "Research book chapter (original research)",
             "rek_scopus_citation_count": 0,
-            "rek_herdc_notes": null,
-            "rek_scopus_doc_type": "ch",
+                "rek_scopus_doc_type": "ch",
             "rek_wok_doc_type": null,
             "rek_pubmed_doc_type": null,
             "rek_security_inherited": 1,
@@ -404,8 +402,7 @@ const publicationTypeListBookChapter = {
             "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Creative Work - Textual",
             "rek_scopus_citation_count": null,
-            "rek_herdc_notes_xsdmf_id": null,
-            "rek_scopus_doc_type_xsdmf_id": null,
+                "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": null,
             "rek_wok_doc_type_xsdmf_id": null,
             "rek_wok_doc_type": null,
@@ -583,7 +580,6 @@ const publicationTypeListBookChapter = {
             "rek_display_type_lookup": "Book Chapter",
             "rek_object_type_lookup": "Record",
             "rek_status_lookup": "Published",
-            "rek_herdc_notes": "Geoff Wilkes is Lecturer in German Studies at the University of Queensland in Brisbane, Australia<br /><br />This chapter, by Nils Grosch, was originally published in German and has been translated into English by Geoff Wilkes.<br /><br />8/6 Translation - not herdc eligible:<br />Author note: &quot;Both chapters are 100% original work by the two authors (Frank and Grosch); my contribution was 100% of the translations&quot;. <br />Both chapter records: UQ:278002 &amp; UQ:278000<br /><br /><strong>Front matter attached to UQ:277996</strong><br /><br />13/2/13 - Moved to Non-HERDC, translation only as per author statement from the book.&nbsp; <br /><br />",
             "fez_internal_notes": {
                 "ain_id": 133743,
                 "ain_pid": "UQ:278002",

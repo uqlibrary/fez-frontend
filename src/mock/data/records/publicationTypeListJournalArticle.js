@@ -435,7 +435,6 @@ const publicationTypeListJournalArticle = {
             'rek_display_type_lookup': 'Journal Article',
             'rek_object_type_lookup': 'Record',
             'rek_status_lookup': 'Published',
-            'rek_herdc_notes': '12/1/12 Amended ID at author request #886821',
             'fez_internal_notes': {
                 'ain_id': 42684,
                 'ain_pid': 'UQ:288291',

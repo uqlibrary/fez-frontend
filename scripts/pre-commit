@@ -84,8 +84,11 @@ fi
 #   exit 2
 # else
 
-STAGED_CYPRESS_TESTS="${GIT_DIFF} -- '*.spec'"
-if [[ (-z ${GIT_COMMIT_SKIP_CYPRESS_ONLY_KEYWORD_CHECK} && $(eval "${STAGED_CYPRESS_TESTS}" | xargs cat | grep '^+' | grep -c 'it\.only')) ]]; then
+STAGED_CYPRESS_TESTS="${GIT_DIFF} -- '*.spec.*'"
+CYPRESS_ONLY_COUNT=$(eval "${STAGED_CYPRESS_TESTS}" | xargs cat | grep -c '\.only(')
+STAGED_UNIT_TESTS="${GIT_DIFF} -- '*.test.*'"
+UNIT_ONLY_COUNT=$(eval "${STAGED_UNIT_TESTS}" | xargs cat | grep -c '\.only(')
+if [[ -z ${GIT_COMMIT_SKIP_CYPRESS_ONLY_KEYWORD_CHECK} && $(($CYPRESS_ONLY_COUNT+$UNIT_ONLY_COUNT)) -ne 0 ]]; then
     cat << EOF
 
 $(printf "${C_YELLOW}Warning${C_RESET}"): It appears that you're attempting to commit a Cypress test using the "only" keyword,
