@@ -24,10 +24,6 @@ jest.mock('@react-google-maps/api', () => ({
 
 function setup(testProps = {}) {
     const props = {
-        classes: {
-            gridRow: 'gridRow',
-            list: 'list',
-        },
         publication: {
             ...(testProps.publication || records.journalArticle || {}),
             rek_formatted_abstract: 'This is a&nbsp;test',

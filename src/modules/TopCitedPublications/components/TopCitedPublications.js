@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import locale from 'locale/components';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
@@ -18,25 +19,20 @@ const withWidth = () => WrappedComponent => props => {
     return <WrappedComponent {...props} width={width} />;
 };
 
-export const styles = theme => ({
-    tabs: {
-        [theme.breakpoints.up('sm')]: {
-            margin: '-16px -16px 0px -16px',
-        },
-        [theme.breakpoints.down('sm')]: {
-            margin: '-16px -16px 0px -16px',
-        },
-        backgroundColor: theme.palette.primary.main,
-        borderRadius: '4px 4px 0px 0px',
+const StyledTabs = styled(Tabs)(({ theme }) => ({
+    [theme.breakpoints.up('sm')]: {
+        margin: '-16px -16px 0px -16px',
     },
-    tab: {
-        color: theme.palette.white.main,
+    [theme.breakpoints.down('sm')]: {
+        margin: '-16px -16px 0px -16px',
     },
-    tabIndicator: {
-        height: 4,
+    backgroundColor: theme.palette.primary.main,
+    borderRadius: '4px 4px 0px 0px',
+    '& .MuiTabs-indicator': {
+        height: '4px',
         backgroundColor: theme.palette.accent.main,
     },
-});
+}));
 
 export class TopCitedPublicationsClass extends PureComponent {
     static propTypes = {
@@ -45,7 +41,6 @@ export class TopCitedPublicationsClass extends PureComponent {
         actions: PropTypes.object.isRequired,
         showSourceCountIcon: PropTypes.bool,
         theme: PropTypes.object,
-        classes: PropTypes.object,
         width: PropTypes.string,
     };
 
@@ -75,7 +70,6 @@ export class TopCitedPublicationsClass extends PureComponent {
     };
 
     render() {
-        const { classes } = this.props;
         const txt = locale.components.topCitedPublications;
         if (this.props.loadingTopCitedPublications) {
             return (
@@ -109,9 +103,7 @@ export class TopCitedPublicationsClass extends PureComponent {
             <React.Fragment>
                 {!this.props.loadingTopCitedPublications && this.props.topCitedPublicationsList.length > 0 ? (
                     <StandardCard noHeader>
-                        <Tabs
-                            className={classes.tabs}
-                            classes={{ indicator: classes.tabIndicator }}
+                        <StyledTabs
                             value={this.state.topCitedTab}
                             onChange={this.handleTabChange}
                             variant="fullWidth"
@@ -125,14 +117,14 @@ export class TopCitedPublicationsClass extends PureComponent {
                                     values &&
                                     values.length >= 1 && (
                                         <Tab
-                                            className={classes.tab}
+                                            sx={{ color: 'white.main' }}
                                             key={key}
                                             label={this.props.width === 'xs' ? txt[key].mobileTitle : txt[key].title}
                                             value={key}
                                         />
                                     ),
                             )}
-                        </Tabs>
+                        </StyledTabs>
 
                         {/* Content */}
                         {reorderedItems.map(
@@ -176,4 +168,4 @@ export class TopCitedPublicationsClass extends PureComponent {
     }
 }
 const TopCitedPublications = withWidth()(TopCitedPublicationsClass);
-export default withStyles(styles)(TopCitedPublications);
+export default TopCitedPublications;

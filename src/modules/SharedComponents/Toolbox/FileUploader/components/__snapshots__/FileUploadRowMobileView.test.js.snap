@@ -3,10 +3,10 @@
 exports[`Component FileUploadRowMobileView should not render access selector or date picker if access condition is not required to select 1`] = `
 <div>
   <ul
-    class="MuiList-root FileUploadRowMobileView-root-20 root MuiList-padding css-h4y409-MuiList-root"
+    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
   >
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-21 listItem MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -47,10 +47,10 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
 exports[`Component FileUploadRowMobileView should not render embargo date picker if access condition is set to closed access 1`] = `
 <div>
   <ul
-    class="MuiList-root FileUploadRowMobileView-root-9 root MuiList-padding css-h4y409-MuiList-root"
+    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
   >
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-10 listItem MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -85,7 +85,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       </div>
     </li>
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-10 listItem MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -162,7 +162,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       class="MuiListItem-container css-oyakqy-MuiListItem-container"
     >
       <div
-        class="MuiListItem-root FileUploadRowMobileView-listItem-10 listItem MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-15z8t9h-MuiListItem-root"
       >
         <div
           class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -200,7 +200,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root FileUploadRowMobileView-secondaryAction-11 css-518kzi-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-inawym-MuiListItemSecondaryAction-root"
       >
         <span
           aria-label="Remove this file"
@@ -239,10 +239,10 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
 exports[`Component FileUploadRowMobileView should render default view 1`] = `
 <div>
   <ul
-    class="MuiList-root FileUploadRowMobileView-root-1 root MuiList-padding css-h4y409-MuiList-root"
+    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
   >
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-2 listItem MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -277,7 +277,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       </div>
     </li>
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-2 listItem MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -361,7 +361,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       class="MuiListItem-container css-oyakqy-MuiListItem-container"
     >
       <div
-        class="MuiListItem-root FileUploadRowMobileView-listItem-2 listItem MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-15z8t9h-MuiListItem-root"
       >
         <div
           class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -399,7 +399,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root FileUploadRowMobileView-secondaryAction-3 css-518kzi-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-inawym-MuiListItemSecondaryAction-root"
       >
         <span
           aria-label="Remove this file"
@@ -438,10 +438,10 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
 exports[`Component FileUploadRowMobileView should render default view for admin 1`] = `
 <div>
   <ul
-    class="MuiList-root FileUploadRowMobileView-root-6 root MuiList-padding css-h4y409-MuiList-root"
+    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
   >
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-7 listItem MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -476,7 +476,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
       </div>
     </li>
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-7 listItem MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -564,7 +564,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
       class="MuiListItem-container css-oyakqy-MuiListItem-container"
     >
       <div
-        class="MuiListItem-root FileUploadRowMobileView-listItem-7 listItem MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-15z8t9h-MuiListItem-root"
       >
         <div
           class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -602,7 +602,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root FileUploadRowMobileView-secondaryAction-8 css-518kzi-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-inawym-MuiListItemSecondaryAction-root"
       >
         <span
           aria-label="Remove this file"
@@ -641,10 +641,10 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
 exports[`Component FileUploadRowMobileView should render embargo date picker if access condition is set to open access 1`] = `
 <div>
   <ul
-    class="MuiList-root FileUploadRowMobileView-root-14 root MuiList-padding css-h4y409-MuiList-root"
+    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
   >
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-15 listItem MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -679,7 +679,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       </div>
     </li>
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-15 listItem MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -756,7 +756,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       class="MuiListItem-container css-oyakqy-MuiListItem-container"
     >
       <div
-        class="MuiListItem-root FileUploadRowMobileView-listItem-15 listItem MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-15z8t9h-MuiListItem-root"
       >
         <div
           class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -780,10 +780,10 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
             class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
             >
               <div
-                class="MuiInputBase-root MuiInput-root FileUploadEmbargoDate-input-19 MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
                 data-analyticsid="dsi-embargo-date-0-input"
                 data-testid="dsi-embargo-date-0-input"
               >
@@ -831,7 +831,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root FileUploadRowMobileView-secondaryAction-16 css-518kzi-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-inawym-MuiListItemSecondaryAction-root"
       >
         <span
           aria-label="Remove this file"

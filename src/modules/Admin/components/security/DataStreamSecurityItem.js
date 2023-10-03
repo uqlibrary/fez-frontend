@@ -32,7 +32,7 @@ const DataStreamSecurityItem = ({
 
     return (
         <React.Fragment key={dataStream.dsi_dsid}>
-            <Grid item xs={12} sm={6} className={classes.dataStreamFileName}>
+            <Grid item xs={12} sm={6} sx={{ ...classes.dataStreamFileName }}>
                 <Link title={dataStream.dsi_dsid} underline="hover">
                     {dataStream.dsi_dsid}
                 </Link>

@@ -2,32 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
-import makeStyles from '@mui/styles/makeStyles';
 import { sanitiseId } from 'helpers/general';
 import { handleKeyboardPressActivate } from 'helpers/general';
 
-const useStyles = makeStyles(theme => ({
-    chip: {
-        margin: theme.spacing(1),
-        [theme.breakpoints.down('sm')]: {
-            maxWidth: '100%',
-            margin: '8px 0',
-        },
-    },
-    keyword: {
-        fontWeight: 400,
-    },
-}));
-
 export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
-    const classes = useStyles();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDeleteKeyword = React.useCallback(() => onKeywordDelete(keyword), [keyword]);
 
     const idValue = sanitiseId(`journal-search-chip-${keyword.type}-${keyword.text}`);
     return (
         <Chip
-            className={classes.chip}
+            sx={theme => ({
+                margin: 1,
+                [theme.breakpoints.down('sm')]: {
+                    maxWidth: '100%',
+                    margin: '8px 0',
+                },
+            })}
             id={idValue}
             data-testid={idValue}
             data-analyticsid={idValue}
@@ -36,7 +27,7 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
                     <Typography variant="body2" component="span" color="secondary">
                         {`${keyword.type}: `}
                     </Typography>
-                    <Typography variant="body2" component="span" className={classes.keyword}>
+                    <Typography variant="body2" component="span" fontWeight={400}>
                         {keyword.text}
                     </Typography>
                 </React.Fragment>

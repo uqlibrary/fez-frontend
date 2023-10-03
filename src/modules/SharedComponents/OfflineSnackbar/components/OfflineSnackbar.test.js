@@ -1,5 +1,5 @@
 import React from 'react';
-import { OfflineSnackbar, styles } from './OfflineSnackbar';
+import { OfflineSnackbar } from './OfflineSnackbar';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -48,26 +48,5 @@ describe('Component OfflineSnackbar', () => {
         const { unmount } = setup();
         unmount();
         expect(removeEventListenerFn).toHaveBeenCalled();
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            palette: {
-                success: {
-                    light: 'test1',
-                },
-                error: {
-                    light: 'test2',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette.success;
-        delete theme.palette.error;
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
     });
 });

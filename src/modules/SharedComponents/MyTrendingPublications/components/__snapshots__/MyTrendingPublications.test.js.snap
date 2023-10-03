@@ -114,7 +114,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-1 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -133,7 +133,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </button>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1a5tvbh-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-0"
@@ -144,6 +144,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
               class="publicationCitation"
             >
               <div
+                class="css-0"
                 data-testid="publication-citation-parent-UQ:330391"
                 id="publication-citation-parent-UQ:330391"
               >
@@ -161,7 +162,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-5 css-1uywuy6-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:330391"
@@ -175,7 +176,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       >
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="makeStyles-externalLink-14 makeStyles-externalLink-16"
+                          class=" css-1oqhn84"
                           data-analyticsid="my-trending-pubs-scopus-link"
                           data-testid="my-trending-pubs-scopus-link"
                           href="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-84899524861"
@@ -212,7 +213,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-6 css-1idn90j-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -295,7 +296,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           >
                             <a
                               aria-label="Open this DOI in an new window"
-                              class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-18"
+                              class="citationDoiLink css-1oqhn84"
                               data-analyticsid="citation-doi-link"
                               data-testid="citation-doi-link"
                               href="https://doi.org/10.4049/jimmunol.1490012"
@@ -307,7 +308,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-15 css-i4bv87-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -329,8 +330,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-7 css-1wrgmsj-MuiGrid-root"
-                            style="flex-grow: 1;"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                           >
                             <div
                               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -340,7 +340,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-22"
+                                  class="wosCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
@@ -354,14 +354,14 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                     class="fez-icon wos large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-21"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     12
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-23"
+                                  class="scopusCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
@@ -375,14 +375,14 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                     class="fez-icon scopus large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-21"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     13
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-24"
+                                  class="altmetricCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
@@ -396,14 +396,14 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                     class="fez-icon altmetric large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-21"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     5
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-25"
+                                  class="googleCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
@@ -437,7 +437,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-4 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
               />
             </div>
           </div>
@@ -477,7 +477,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-1 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -496,7 +496,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </button>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1a5tvbh-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-0"
@@ -507,6 +507,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
               class="publicationCitation"
             >
               <div
+                class="css-0"
                 data-testid="publication-citation-parent-UQ:103860"
                 id="publication-citation-parent-UQ:103860"
               >
@@ -524,7 +525,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-5 css-1uywuy6-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:103860"
@@ -538,7 +539,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="makeStyles-externalLink-14 makeStyles-externalLink-28"
+                          class=" css-1oqhn84"
                           data-analyticsid="my-trending-pubs-thomson-link"
                           data-testid="my-trending-pubs-thomson-link"
                           href="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&SrcAuth=uqueensland&KeyUT=000247207500034"
@@ -575,7 +576,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-6 css-1idn90j-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -678,7 +679,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           >
                             <a
                               aria-label="Open this DOI in an new window"
-                              class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-29"
+                              class="citationDoiLink css-1oqhn84"
                               data-analyticsid="citation-doi-link"
                               data-testid="citation-doi-link"
                               href="https://doi.org/10.1016/j.vaccine.2006.05.110"
@@ -690,7 +691,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-15 css-i4bv87-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -712,8 +713,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-7 css-1wrgmsj-MuiGrid-root"
-                            style="flex-grow: 1;"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                           >
                             <div
                               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -723,7 +723,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-30"
+                                  class="wosCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000240470000014"
@@ -737,14 +737,14 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                     class="fez-icon wos large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-21"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     87
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-31"
+                                  class="scopusCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-33747892383%26origin%3Dinward"
@@ -758,14 +758,14 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                     class="fez-icon scopus large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-21"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     135
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-32"
+                                  class="altmetricCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://queensland.altmetric.com/details/5488391"
@@ -779,14 +779,14 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                     class="fez-icon altmetric large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-21"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     15
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-33"
+                                  class="googleCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Prophylactic%20HPV%20vaccines:%20Underlying%20mechanisms"
@@ -820,7 +820,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-4 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
               />
             </div>
           </div>
@@ -860,7 +860,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-1 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -879,7 +879,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </button>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1a5tvbh-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-0"
@@ -890,6 +890,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
               class="publicationCitation"
             >
               <div
+                class="css-0"
                 data-testid="publication-citation-parent-UQ:330391"
                 id="publication-citation-parent-UQ:330391"
               >
@@ -907,7 +908,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-5 css-1uywuy6-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:330391"
@@ -921,7 +922,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="makeStyles-externalLink-14 makeStyles-externalLink-35"
+                          class=" css-1oqhn84"
                           data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
@@ -958,7 +959,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-6 css-1idn90j-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -1041,7 +1042,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           >
                             <a
                               aria-label="Open this DOI in an new window"
-                              class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-36"
+                              class="citationDoiLink css-1oqhn84"
                               data-analyticsid="citation-doi-link"
                               data-testid="citation-doi-link"
                               href="https://doi.org/10.4049/jimmunol.1490012"
@@ -1053,7 +1054,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-15 css-i4bv87-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -1075,8 +1076,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-7 css-1wrgmsj-MuiGrid-root"
-                            style="flex-grow: 1;"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                           >
                             <div
                               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -1086,7 +1086,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-37"
+                                  class="wosCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
@@ -1100,14 +1100,14 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                     class="fez-icon wos large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-21"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     12
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-38"
+                                  class="scopusCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
@@ -1121,14 +1121,14 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                     class="fez-icon scopus large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-21"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     13
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-39"
+                                  class="altmetricCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
@@ -1142,14 +1142,14 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                     class="fez-icon altmetric large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-21"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     5
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount CitationCountView-citationCount-20 makeStyles-externalLink-14 makeStyles-externalLink-40"
+                                  class="googleCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
@@ -1183,7 +1183,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-4 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
               />
             </div>
           </div>

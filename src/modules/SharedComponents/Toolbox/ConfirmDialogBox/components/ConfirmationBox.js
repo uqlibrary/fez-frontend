@@ -6,18 +6,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
-import makeStyles from '@mui/styles/makeStyles';
 import Grid from '@mui/material/Grid';
-
-export const useStyles = makeStyles(theme => ({
-    alternateActionButtonClass: {
-        color: theme.palette.white?.main,
-        backgroundColor: theme.palette.warning.main,
-        '&:hover': {
-            backgroundColor: theme.palette.warning.dark,
-        },
-    },
-}));
 
 export const ConfirmationBox = ({
     actionButtonColor,
@@ -37,7 +26,6 @@ export const ConfirmationBox = ({
     showAlternateActionButton,
     showInputForm,
 }) => {
-    const classesInternal = useStyles();
     const _onAction = () => {
         onClose();
         onAction();
@@ -59,7 +47,7 @@ export const ConfirmationBox = ({
             open={isOpen}
             id={confirmationBoxId}
             data-testid={confirmationBoxId}
-            classes={classes}
+            sx={{ ...classes }}
         >
             <DialogTitle data-testid="message-title">{locale.confirmationTitle}</DialogTitle>
             <DialogContent>
@@ -90,7 +78,13 @@ export const ConfirmationBox = ({
                         <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'contained'}
-                                className={classesInternal.alternateActionButtonClass}
+                                sx={{
+                                    color: 'white.main',
+                                    backgroundColor: 'warning.main',
+                                    '&:hover': {
+                                        backgroundColor: 'warning.dark',
+                                    },
+                                }}
                                 children={locale.alternateActionButtonLabel}
                                 fullWidth
                                 onClick={_onAlternateAction}

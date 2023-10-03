@@ -3,26 +3,16 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import JWPlayer from '@jwplayer/jwplayer-react';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
-import makeStyles from '@mui/styles/makeStyles';
-import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
-const useStyles = makeStyles(theme => ({
-    containerPadding: {
-        padding: `${theme.spacing(1)} 0`,
-        [theme.breakpoints.up('sm')]: {
-            padding: theme.spacing(1),
-        },
-    },
-}));
+import { useTheme } from '@mui/material/styles';
 
 const MediaPreviewButtons = React.memo(({ ...props }) => {
-    const classes = useStyles();
     const { openOriginal, openWeb, close } = locale.viewRecord.sections.files.preview;
     const { mediaUrl, fileName, webMediaUrl, onClose, id } = props;
 
@@ -35,7 +25,11 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
     }, [webMediaUrl]);
 
     return (
-        <div className={classes.containerPadding} id={id} data-testid={id}>
+        <Box
+            sx={theme => ({ padding: { xs: `${theme.spacing(1)} 0`, sm: theme.spacing(1) } })}
+            id={id}
+            data-testid={id}
+        >
             <Grid container spacing={2} padding={0} justifyContent="flex-end" direction="row">
                 {mediaUrl && (
                     <Grid item xs={12} sm="auto">
@@ -75,7 +69,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                     </Button>
                 </Grid>
             </Grid>
-        </div>
+        </Box>
     );
 });
 

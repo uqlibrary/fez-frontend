@@ -1,23 +1,39 @@
 /* eslint-disable camelcase */
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router';
 import PropTypes from 'prop-types';
-import { parseHtmlToJSX } from 'helpers/general';
+import { styled } from '@mui/material/styles';
+
+import { useDispatch } from 'react-redux';
+import { useParams, useHistory } from 'react-router';
 
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+import Badge from '@mui/material/Badge';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
+import AdminViewRecordDrawer from './AdminViewRecordDrawer';
+import Button from '@mui/material/Button';
+
+import { belongsToAuthor, userIsAdmin } from 'hooks';
+import { AUTH_URL_LOGIN, general } from 'config';
+import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
+import { notFound } from '../../../config/routes';
+import locale from 'locale/pages';
+import globalLocale from 'locale/global';
+import * as actions from 'actions';
+import fields from 'locale/viewRecord';
+import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
+import { parseHtmlToJSX, doesListContainItem } from 'helpers/general';
+import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-
 import { DetailedHistory } from './DetailedHistory';
 import { shouldHandleAuthorAffiliations } from 'modules/Admin/helpers';
-
 import AdditionalInformation from './AdditionalInformation';
 import AvailableVersions from './AvailableVersions';
 import Files from './Files';
@@ -27,63 +43,39 @@ import NtroDetails from './NtroDetails';
 import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 
-import { belongsToAuthor, userIsAdmin } from 'hooks';
-import { AUTH_URL_LOGIN, general } from 'config';
-import locale from 'locale/pages';
-import globalLocale from 'locale/global';
-import * as actions from 'actions';
-import { notFound } from '../../../config/routes';
-import clsx from 'clsx';
-import Badge from '@mui/material/Badge';
-import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
-import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
-import makeStyles from '@mui/styles/makeStyles';
-import AdminViewRecordDrawer from './AdminViewRecordDrawer';
-import Button from '@mui/material/Button';
-import fields from 'locale/viewRecord';
-import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
-import { doesListContainItem } from 'helpers/general';
-
-import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
-
-import { useHistory } from 'react-router';
-import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
-
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
 }
-const drawerWidth = 260;
 
-const useStyles = makeStyles(theme => ({
-    content: {
-        flexGrow: 1,
+const contentStyles = theme => ({
+    transition: theme.transitions.create('margin', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginRight: 0,
+});
+const contentStylesOpen = theme => ({
+    [theme.breakpoints.up('md')]: {
         transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
         }),
-        marginRight: 0,
+        marginRight: '260px',
     },
-    contentShift: {
-        [theme.breakpoints.up('md')]: {
-            transition: theme.transitions.create('margin', {
-                easing: theme.transitions.easing.easeOut,
-                duration: theme.transitions.duration.enteringScreen,
-            }),
-            marginRight: drawerWidth,
-        },
-    },
-    alignVerticalAxisCentre: {
-        display: 'flex',
-        alignItems: 'center',
-    },
-    cursor: {
-        cursor: 'pointer',
-    },
-    marginVariableTop: {
-        marginTop: -12,
-        [theme.breakpoints.up('sm')]: {
-            marginTop: -24,
-        },
+});
+
+const StyledContentWrapper = styled('div', {
+    shouldForwardProp: prop => prop !== 'open',
+})(({ theme, open }) => ({
+    flexGrow: 1,
+    ...(!open ? { ...contentStyles(theme) } : {}),
+    ...(!!open ? { ...contentStylesOpen(theme) } : {}),
+}));
+
+const StyledGridWithTopMargin = styled(Grid)(({ theme }) => ({
+    marginTop: '-12px',
+    [theme.breakpoints.up('sm')]: {
+        marginTop: '-24px',
     },
 }));
 
@@ -109,13 +101,9 @@ export const NewViewRecord = ({
         isNtro &&
         !general.NTRO_RESEARCH_REPORT_SUBTYPES.includes(recordToView?.rek_subtype) &&
         belongsToAuthor(author, recordToView);
-    const classes = useStyles();
+
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
-
-    // const [AAError, setAAError] = React.useState([]);
-    // const [AAOrphan, setAAOrphan] = React.useState([]);
-    // const [AAProblems, setAAProblems] = React.useState([]);
 
     const handleMobileDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -213,16 +201,11 @@ export const NewViewRecord = ({
     } else if (isNotFoundRoute || (recordToViewError && recordToViewError.status === 404)) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
-                <Grid
-                    container
-                    className={classes.marginVariableTop}
-                    id="notFoundGridContainer"
-                    data-testid="notFoundGridContainer"
-                >
+                <StyledGridWithTopMargin container id="notFoundGridContainer" data-testid="notFoundGridContainer">
                     <Grid item xs={12}>
                         {locale.pages.viewRecord.notFound.message}
                     </Grid>
-                </Grid>
+                </StyledGridWithTopMargin>
                 {recordToViewError && (
                     <Typography variant={'caption'} style={{ opacity: 0.5 }}>
                         {`(${recordToViewError.status} - ${recordToViewError.message})`}
@@ -240,11 +223,7 @@ export const NewViewRecord = ({
         return <div className="empty" />;
     }
     return (
-        <div
-            className={clsx(classes.content, {
-                [classes.contentShift]: open,
-            })}
-        >
+        <StyledContentWrapper open={open}>
             <StandardPage
                 className="viewRecord"
                 title={parseHtmlToJSX(recordToView.rek_title)}
@@ -258,7 +237,7 @@ export const NewViewRecord = ({
                         mobileOpen={mobileOpen}
                     />
                 )}
-                <Grid container className={classes.marginVariableTop}>
+                <StyledGridWithTopMargin container>
                     <Grid item xs={12}>
                         <PublicationCitation
                             publication={recordToView}
@@ -290,12 +269,12 @@ export const NewViewRecord = ({
                                         </Button>
                                     </Grid>
                                 )}
-                                <Grid item xs className={classes.alignVerticalAxisCentre}>
+                                <Grid item xs sx={{ display: 'flex', alignItems: 'center' }}>
                                     {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
                                         <Chip label={recordToView.rek_status_lookup} variant="outlined" />
                                     )}
                                 </Grid>
-                                <Grid item className={classes.alignVerticalAxisCentre}>
+                                <Grid item sx={{ display: 'flex', alignItems: 'center' }}>
                                     <SocialShare
                                         publication={recordToView}
                                         services={['email', 'print']}
@@ -306,7 +285,7 @@ export const NewViewRecord = ({
                             </Grid>
                         </Grid>
                     )}
-                </Grid>
+                </StyledGridWithTopMargin>
                 {isAdmin && (
                     <Grid item xs={12} style={{ marginBottom: 24 }}>
                         <DetailedHistory record={recordToView} />
@@ -351,7 +330,7 @@ export const NewViewRecord = ({
                     {!isDeleted && <AvailableVersions publication={recordToView} />}
                 </Grid>
             </StandardPage>
-        </div>
+        </StyledContentWrapper>
     );
 };
 

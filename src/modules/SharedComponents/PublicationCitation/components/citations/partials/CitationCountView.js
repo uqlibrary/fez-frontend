@@ -1,17 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import withStyles from '@mui/styles/withStyles';
+import { withTheme } from 'helpers/withTheme';
 
-const styles = theme => ({
-    citationCount: {
-        ...theme.typography.caption,
-        marginRight: 8,
-    },
-    citationCountNumber: {
-        marginLeft: '0.4em',
-    },
-});
+import Box from '@mui/material/Box';
+
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export class CitationCountView extends PureComponent {
     static propTypes = {
@@ -19,7 +12,7 @@ export class CitationCountView extends PureComponent {
         count: PropTypes.any,
         link: PropTypes.string,
         title: PropTypes.string,
-        classes: PropTypes.object,
+        theme: PropTypes.any,
     };
 
     constructor(props) {
@@ -27,23 +20,28 @@ export class CitationCountView extends PureComponent {
     }
 
     render() {
-        const { source, count, link, title, classes } = this.props;
+        const { source, count, link, title, theme } = this.props;
         return (
             <React.Fragment>
                 <ExternalLink
                     id="citation-count"
-                    className={`${source}CitationCount ${classes.citationCount}`}
+                    className={`${source}CitationCount`}
+                    sx={{ ...theme.typography.caption, marginRight: '8px' }}
                     href={link}
                     aria-label={title}
                     title={title}
                     openInNewIcon={false}
                 >
                     <span className={`fez-icon ${source} large`} />
-                    {count !== null && <span className={this.props.classes.citationCountNumber}>{count}</span>}
+                    {count !== null && (
+                        <Box component={'span'} sx={{ marginLeft: '0.4em' }}>
+                            {count}
+                        </Box>
+                    )}
                 </ExternalLink>
             </React.Fragment>
         );
     }
 }
 
-export default withStyles(styles, { withTheme: true })(CitationCountView);
+export default withTheme()(CitationCountView);

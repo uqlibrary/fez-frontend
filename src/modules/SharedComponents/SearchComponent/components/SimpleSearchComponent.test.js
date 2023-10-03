@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimpleSearchComponent, styles } from './SimpleSearchComponent';
+import { SimpleSearchComponent } from './SimpleSearchComponent';
 import { rtlRender, fireEvent, createEvent } from 'test-utils';
 
 jest.mock('config/general', () => ({
@@ -92,7 +92,7 @@ describe('SimpleSearchComponent', () => {
         expect(searchFn).toBeCalled();
     });
 
-    it('should render with defautl onSearch callback', () => {
+    it('should render with default onSearch callback', () => {
         const { container, getByTestId } = setup({
             searchText: 'new search value',
         });
@@ -141,22 +141,5 @@ describe('SimpleSearchComponent', () => {
     it('searchTextValidationMessage() should return a message for being too long', () => {
         const { getByText } = setup({ searchText: 'this is way way too long' });
         expect(getByText('Must be 20 characters or less')).toBeInTheDocument();
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            palette: {
-                secondary: {
-                    main: 'test1',
-                },
-                white: {
-                    main: 'test2',
-                },
-            },
-            typography: {
-                fontWeightNormal: 'test3',
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
     });
 });

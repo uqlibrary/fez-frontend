@@ -9,7 +9,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -21,16 +21,16 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiStepper-root MuiStepper-horizontal Component-stepper-4 css-m5vj9m-MuiStepper-root"
+        class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
       >
         <div
           class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Component-stepperLabel-5 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
@@ -79,7 +79,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
           class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled Component-stepperLabel-5 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -128,7 +128,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
           class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled Component-stepperLabel-5 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -182,7 +182,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-7 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -194,16 +194,16 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-6 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiStepper-root MuiStepper-horizontal Component-stepper-9 css-m5vj9m-MuiStepper-root"
+        class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
       >
         <div
           class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Component-stepperLabel-10 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
@@ -242,7 +242,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
           class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Component-stepperLabel-10 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
@@ -291,7 +291,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
           class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled Component-stepperLabel-10 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -345,7 +345,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-17 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -357,16 +357,16 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-16 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiStepper-root MuiStepper-horizontal Component-stepper-19 css-m5vj9m-MuiStepper-root"
+        class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
       >
         <div
           class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Component-stepperLabel-20 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
@@ -405,7 +405,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
           class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Component-stepperLabel-20 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
@@ -444,7 +444,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
           class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Component-stepperLabel-20 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
@@ -498,7 +498,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-12 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -510,16 +510,16 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-11 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiStepper-root MuiStepper-horizontal Component-stepper-14 css-m5vj9m-MuiStepper-root"
+        class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
       >
         <div
           class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Component-stepperLabel-15 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
@@ -568,7 +568,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
           class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled Component-stepperLabel-15 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -617,7 +617,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
           class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled Component-stepperLabel-15 css-ascpo7-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
           >
             <span
               class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"

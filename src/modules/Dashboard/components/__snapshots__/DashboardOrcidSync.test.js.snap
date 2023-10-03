@@ -13,7 +13,7 @@ exports[`DashboardOrcidSync should render Error status 1`] = `
     type="button"
   >
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall makeStyles-helpIcon-4 css-ptiqhd-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
       data-testid="SyncProblemIcon"
       focusable="false"
       role="img"
@@ -47,7 +47,7 @@ exports[`DashboardOrcidSync should render Pending status 1`] = `
     type="button"
   >
     <span
-      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary makeStyles-helpIcon-3 css-u4ps4u-MuiCircularProgress-root"
+      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1w1pxvu-MuiCircularProgress-root"
       font-size="small"
       role="progressbar"
       style="width: 40px; height: 40px;"
@@ -87,7 +87,7 @@ exports[`DashboardOrcidSync should render properly 1`] = `
     type="button"
   >
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall makeStyles-helpIcon-2 css-ptiqhd-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
       data-testid="HelpOutlineIcon"
       focusable="false"
       role="img"
@@ -120,7 +120,7 @@ exports[`DashboardOrcidSyncContainer should render properly 1`] = `
     type="button"
   >
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall makeStyles-helpIcon-1 css-ptiqhd-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
       data-testid="HelpOutlineIcon"
       focusable="false"
       role="img"

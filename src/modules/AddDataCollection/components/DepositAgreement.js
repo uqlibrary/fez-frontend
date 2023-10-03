@@ -1,31 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import makeStyles from '@mui/styles/makeStyles';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-
-export const useStyles = makeStyles(
-    theme => ({
-        root: {
-            alignItems: 'flex-start',
-            margin: 0,
-        },
-        label: {
-            textAlign: 'justify',
-            fontSize: 16,
-            fontWeight: 300,
-            lineHeight: '24px',
-        },
-        checkboxRoot: {
-            color: theme.status.danger,
-        },
-        checkboxChecked: {
-            color: `${theme.palette.primary.main} !important`,
-        },
-    }),
-    { withTheme: true },
-);
 
 const DepositAgreement = ({
     isDepositAgreementAccepted,
@@ -34,17 +11,13 @@ const DepositAgreement = ({
     depositAgreementFieldId,
     disabled,
 }) => {
-    const classes = useStyles();
-
     const _handleChange = event => {
         onChange(event.target.checked ? 'on' : 'off');
     };
 
     return (
         <FormControlLabel
-            classes={{
-                root: classes.root,
-            }}
+            sx={{ alignItems: 'flex-start', margin: 0 }}
             disabled={disabled}
             control={
                 <Checkbox
@@ -55,14 +28,12 @@ const DepositAgreement = ({
                     }}
                     checked={isDepositAgreementAccepted}
                     onChange={_handleChange}
-                    classes={{ root: classes.checkboxRoot, checked: classes.checkboxChecked }}
+                    sx={{ color: 'status.danger', '& .Mui-checked': { color: 'primary.main' } }}
                 />
             }
             label={
                 <Typography
-                    classes={{
-                        root: classes.label,
-                    }}
+                    sx={{ textAlign: 'justify', fontSize: 16, fontWeight: 300, lineHeight: '24px' }}
                     color={!isDepositAgreementAccepted ? 'error' : 'secondary'}
                     component="div"
                     id={`${depositAgreementFieldId}-label`}

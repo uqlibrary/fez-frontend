@@ -19,7 +19,6 @@ import Attachment from '@mui/icons-material/Attachment';
 import CalendarTodayOutlined from '@mui/icons-material/CalendarTodayOutlined';
 import LockOutlined from '@mui/icons-material/LockOutlined';
 import Input from '@mui/material/Input';
-import withStyles from '@mui/styles/withStyles';
 
 export class FileUploadRowMobileView extends PureComponent {
     static propTypes = {
@@ -64,12 +63,14 @@ export class FileUploadRowMobileView extends PureComponent {
             name,
             size,
             focusOnIndex,
-            classes,
         } = this.props;
 
         return (
-            <List classes={{ root: classes.root }} data-testid={this.props.fileUploadRowViewId}>
-                <ListItem classes={{ root: classes.listItem }}>
+            <List
+                sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                data-testid={this.props.fileUploadRowViewId}
+            >
+                <ListItem sx={{ px: 0 }}>
                     <ListItemIcon>
                         <Attachment />
                     </ListItemIcon>
@@ -84,7 +85,7 @@ export class FileUploadRowMobileView extends PureComponent {
                 </ListItem>
                 {requireOpenAccessStatus && (
                     <Fragment>
-                        <ListItem classes={{ root: classes.listItem }}>
+                        <ListItem sx={{ px: 0 }}>
                             <ListItemIcon>
                                 <LockOutlined />
                             </ListItemIcon>
@@ -101,22 +102,16 @@ export class FileUploadRowMobileView extends PureComponent {
                                         disabled={disabled}
                                         displayPrompt
                                         autoFocus={index === focusOnIndex}
-                                        {...{
-                                            input: {
-                                                className: classes.selector,
-                                                disableUnderline: true,
-                                                autoFocus: index === focusOnIndex,
-                                                onChange: this.props.onSecurityPolicyChange,
-                                                onBlur: /* istanbul ignore next */ () => {},
-                                            },
-                                            value: securityPolicy ?? '',
+                                        input={{
+                                            disableUnderline: true,
+                                            autoFocus: index === focusOnIndex,
+                                            onChange: this.props.onSecurityPolicyChange,
+                                            onBlur: /* istanbul ignore next */ () => {},
                                         }}
+                                        value={securityPolicy ?? ''}
                                         errorText={!securityPolicy && selectFields.securityPolicy.errorMessage}
                                         prompt={selectFields.securityPolicy.selectPrompt}
                                         policyDropdownId={`dsi-security-policy-${index}`}
-                                        formHelperTextProps={{
-                                            className: classes.error,
-                                        }}
                                     />
                                 )}
                                 {!!!this.props.isAdmin && (
@@ -132,21 +127,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                         hideLabel
                                         required
                                         selectProps={{
-                                            className: classes.selector,
-                                            input: (
-                                                <Input
-                                                    disableUnderline
-                                                    autoFocus={index === focusOnIndex}
-                                                    classes={{
-                                                        root: !!accessConditionId
-                                                            ? classes.selected
-                                                            : classes.placeholder,
-                                                    }}
-                                                />
-                                            ),
-                                        }}
-                                        formHelperTextProps={{
-                                            className: classes.error,
+                                            input: <Input disableUnderline autoFocus={index === focusOnIndex} />,
                                         }}
                                         error={!accessConditionId && selectFields.accessCondition.errorMessage}
                                         selectPrompt={selectFields.accessCondition.selectPrompt}
@@ -154,7 +135,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                 )}
                             </ListItemText>
                         </ListItem>
-                        <ListItem classes={{ root: classes.listItem }}>
+                        <ListItem sx={{ px: 0 }}>
                             <ListItemIcon>
                                 <CalendarTodayOutlined />
                             </ListItemIcon>
@@ -180,7 +161,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                     />
                                 )}
                             </ListItemText>
-                            <ListItemSecondaryAction classes={{ root: classes.secondaryAction }}>
+                            <ListItemSecondaryAction sx={{ textAlign: 'center' }}>
                                 <FileUploadRowStatus
                                     disabled={this.props.disabled}
                                     onDelete={this.props.onDelete}
@@ -196,17 +177,4 @@ export class FileUploadRowMobileView extends PureComponent {
     }
 }
 
-const styles = theme => ({
-    root: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    },
-    listItem: {
-        paddingLeft: 0,
-        paddingRight: 0,
-    },
-    secondaryAction: {
-        textAlign: 'center',
-    },
-});
-
-export default withStyles(styles)(FileUploadRowMobileView);
+export default FileUploadRowMobileView;

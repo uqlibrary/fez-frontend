@@ -3,10 +3,10 @@
 exports[`Component CopyrightAgreement should render default view 1`] = `
 <div>
   <label
-    class="MuiFormControlLabel-root CopyrightAgreement-root-1 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root CopyrightAgreement-checkboxRoot-3 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root CopyrightAgreement-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-root CopyrightAgreement-checkboxRoot-3 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-v3js7l-MuiButtonBase-root-MuiCheckbox-root"
     >
       <input
         class="PrivateSwitchBase-input css-1m9pwf3"
@@ -32,7 +32,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       />
     </span>
     <div
-      class="MuiTypography-root CopyrightAgreement-label-2 MuiTypography-body1 css-v0lc22-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-oaumxi-MuiTypography-root"
       data-testid="test-label"
       id="test-label"
     >

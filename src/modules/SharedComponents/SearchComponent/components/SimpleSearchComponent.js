@@ -14,58 +14,7 @@ import ArrowForward from '@mui/icons-material/ArrowForward';
 import { MAX_PUBLIC_SEARCH_TEXT_LENGTH } from 'config/general';
 import { locale } from 'locale';
 
-import withStyles from '@mui/styles/withStyles';
 import Fade from '@mui/material/Fade';
-
-export const styles = theme => ({
-    searchIconPrefix: {
-        fill: theme.palette.secondary.main,
-        opacity: 0.66,
-    },
-    inHeader: {
-        backgroundColor: theme.palette.white.main,
-        '& input[type="search"]::-webkit-search-cancel-button': {
-            display: 'none',
-        },
-        width: 'calc(100% + 8px)',
-        margin: '-4px',
-    },
-    searchIconMobile: {
-        fill: theme.palette.white.main,
-    },
-    mobileCloseButton: {
-        fill: theme.palette.secondary.main,
-        opacity: 0.5,
-    },
-    mobileHeader: {
-        zIndex: 100,
-        backgroundColor: theme.palette.white.main,
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: 70,
-    },
-    mobileSearchInput: {
-        width: '99%',
-        height: 70,
-        '& > div': {
-            height: '100%',
-        },
-        '& input': {
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            fontSize: 24,
-            lineHeight: 1.2,
-            fontWeight: theme.typography.fontWeightNormal,
-        },
-    },
-    searchHeaderContainerPadding: {
-        '&.MuiGrid-item': {
-            padding: '4px',
-        },
-    },
-});
 
 export class SimpleSearchComponent extends PureComponent {
     static propTypes = {
@@ -82,8 +31,6 @@ export class SimpleSearchComponent extends PureComponent {
         onSearchTextChange: PropTypes.func.isRequired,
         onToggleSearchMode: PropTypes.func,
         onInvalidSearch: PropTypes.func,
-
-        classes: PropTypes.object,
     };
     static defaultProps = {
         searchText: '',
@@ -172,7 +119,6 @@ export class SimpleSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
-        const { classes } = this.props;
         const ariaLabel = { 'aria-label': txt.ariaInputLabel };
         return (
             <React.Fragment>
@@ -185,26 +131,37 @@ export class SimpleSearchComponent extends PureComponent {
                                 alignItems={'center'}
                                 spacing={1}
                                 wrap={'nowrap'}
-                                className={classes.inHeader}
                                 direction={'row'}
-                                sx={{ display: { xs: 'none', sm: 'flex' } }}
+                                sx={{
+                                    display: { xs: 'none', sm: 'flex' },
+                                    backgroundColor: 'white.main',
+                                    '& input[type="search"]::-webkit-search-cancel-button': {
+                                        display: 'none',
+                                    },
+                                    width: 'calc(100% + 8px)',
+                                    margin: '-4px',
+                                }}
                             >
                                 {this.props.showPrefixIcon && (
                                     <Grid
                                         item
                                         xs={'auto'}
-                                        classes={{
-                                            item: classes.searchHeaderContainerPadding,
+                                        sx={{
+                                            '&.MuiGrid-item': {
+                                                padding: '4px',
+                                            },
                                         }}
                                     >
-                                        <Search className={classes.searchIconPrefix} />
+                                        <Search sx={theme => ({ fill: theme.palette.secondary.main, opacity: 0.66 })} />
                                     </Grid>
                                 )}
                                 <Grid
                                     item
                                     xs
-                                    classes={{
-                                        item: classes.searchHeaderContainerPadding,
+                                    sx={{
+                                        '&.MuiGrid-item': {
+                                            padding: '4px',
+                                        },
                                     }}
                                 >
                                     <TextField
@@ -237,11 +194,25 @@ export class SimpleSearchComponent extends PureComponent {
                                             aria-label={txt.mobileSearchButtonAriaLabel}
                                             size="large"
                                         >
-                                            <Search className={classes.searchIconMobile} />
+                                            <Search
+                                                sx={theme => ({
+                                                    fill: theme.palette.white.main,
+                                                })}
+                                            />
                                         </IconButton>
                                     </Tooltip>
                                 ) : (
-                                    <div className={classes.mobileHeader}>
+                                    <Box
+                                        sx={{
+                                            zIndex: 100,
+                                            backgroundColor: 'white.main',
+                                            position: 'absolute',
+                                            top: 0,
+                                            left: 0,
+                                            width: '100%',
+                                            height: '70px',
+                                        }}
+                                    >
                                         <Grid
                                             container
                                             spacing={0}
@@ -252,13 +223,12 @@ export class SimpleSearchComponent extends PureComponent {
                                         >
                                             {this.props.showMobileSearchButton && (
                                                 <Grid item>
-                                                    <IconButton
-                                                        onClick={this._handleToggleMobile}
-                                                        className={classes.mobileSearchButtons}
-                                                        size="large"
-                                                    >
+                                                    <IconButton onClick={this._handleToggleMobile} size="large">
                                                         <Close
-                                                            className={classes.mobileCloseButton}
+                                                            sx={theme => ({
+                                                                fill: theme.palette.secondary.main,
+                                                                opacity: 0.5,
+                                                            })}
                                                             fontSize="inherit"
                                                         />
                                                     </IconButton>
@@ -266,7 +236,20 @@ export class SimpleSearchComponent extends PureComponent {
                                             )}
                                             <Grid item xs zeroMinWidth>
                                                 <TextField
-                                                    className={classes.mobileSearchInput}
+                                                    sx={{
+                                                        width: '99%',
+                                                        height: '70px',
+                                                        '& > div': {
+                                                            height: '100%',
+                                                        },
+                                                        '& input': {
+                                                            overflow: 'hidden',
+                                                            textOverflow: 'ellipsis',
+                                                            fontSize: '24px',
+                                                            lineHeight: 1.2,
+                                                            fontWeight: 'fontWeightNormal',
+                                                        },
+                                                    }}
                                                     type="search"
                                                     id="mobileSearchField"
                                                     textFieldId="mobile-search"
@@ -286,7 +269,6 @@ export class SimpleSearchComponent extends PureComponent {
                                                     <IconButton
                                                         onClick={this._handleSearch}
                                                         disabled={this.state.searchTerm.trim().length === 0}
-                                                        className={classes.mobileSearchButtons}
                                                         size="large"
                                                     >
                                                         <ArrowForward fontSize="inherit" />
@@ -294,7 +276,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                 </Grid>
                                             )}
                                         </Grid>
-                                    </div>
+                                    </Box>
                                 )}
                             </Box>
                         </React.Fragment>
@@ -354,4 +336,4 @@ export class SimpleSearchComponent extends PureComponent {
     }
 }
 
-export default withStyles(styles)(SimpleSearchComponent);
+export default SimpleSearchComponent;

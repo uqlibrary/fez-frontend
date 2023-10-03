@@ -9,7 +9,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-276 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -21,7 +21,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-275 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -31,18 +31,18 @@ exports[`Component DeleteRecord should display general alert if trying to delete
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-278 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-deleted"
               id="standard-card-work-to-be-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-283 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -60,6 +60,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:12096"
                     id="publication-citation-parent-UQ:12096"
                   >
@@ -77,7 +78,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-285 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:12096"
@@ -93,8 +94,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-287 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -104,7 +104,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                                   >
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-295 makeStyles-externalLink-297 makeStyles-externalLink-299"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Aboriginal%20and%20Torres%20Strait%20Islander%20Studies%20Unit"
@@ -138,7 +138,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-284 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -158,18 +158,18 @@ exports[`Component DeleteRecord should display general alert if trying to delete
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-278 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-283 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -214,7 +214,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-303 MuiGrid-container makeStyles-error_outline-313 makeStyles-common-304 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -223,7 +223,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-307 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -239,7 +239,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-308 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Error - 
@@ -309,7 +309,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-321 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -321,7 +321,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-320 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -331,18 +331,18 @@ exports[`Component DeleteRecord should display general alert if trying to delete
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-323 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-deleted"
               id="standard-card-work-to-be-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-328 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -360,6 +360,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
@@ -377,7 +378,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-330 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:41878"
@@ -387,7 +388,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-331 css-1idn90j-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                           >
                             <div
                               class="citationContent citationJournalArticle"
@@ -513,8 +514,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-332 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -524,7 +524,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount CitationCountView-citationCount-341 makeStyles-externalLink-343 makeStyles-externalLink-345"
+                                      class="wosCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -538,14 +538,14 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="CitationCountView-citationCountNumber-342"
+                                        class="MuiBox-root css-19k1sqg"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-341 makeStyles-externalLink-343 makeStyles-externalLink-346"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -584,19 +584,19 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
-                          <span
-                            class="PublicationCitation-contentIndicatorTitle-334"
+                          <div
+                            class="MuiBox-root css-w4835h"
                           >
                             Content Indicators
                             :
-                          </span>
+                          </div>
                           Scholarship of Teaching and Learning, Protocol
                         </span>
                       </div>
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-329 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -616,18 +616,18 @@ exports[`Component DeleteRecord should display general alert if trying to delete
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-323 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-328 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -672,7 +672,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-350 MuiGrid-container makeStyles-error_outline-360 makeStyles-common-351 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -681,7 +681,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-354 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -697,7 +697,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-355 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Error - 
@@ -760,7 +760,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
 
 exports[`Component DeleteRecord should display general alert if trying to delete a non-Community or Collection that errors 2`] = `
 <div
-  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-355 alert-text css-1vd824g-MuiGrid-root"
+  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
 >
   <b>
     Error - 
@@ -778,7 +778,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-231 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -790,7 +790,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-230 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -800,18 +800,18 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-233 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-deleted"
               id="standard-card-work-to-be-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-238 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -829,6 +829,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:350647"
                     id="publication-citation-parent-UQ:350647"
                   >
@@ -846,7 +847,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-240 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:350647"
@@ -862,8 +863,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-242 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -873,7 +873,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                                   >
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-250 makeStyles-externalLink-252 makeStyles-externalLink-254"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Barikin,%20Amelia%20-%20Large%20Screens%20and%20the%20Transnational%20Public%20Sphere:%20Curating%20for%20Public%20Spaces"
@@ -907,7 +907,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-239 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -927,18 +927,18 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-233 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-238 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -983,7 +983,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-258 MuiGrid-container makeStyles-error_outline-268 makeStyles-common-259 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -992,7 +992,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-262 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -1008,7 +1008,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-263 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Error - 
@@ -1078,7 +1078,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-186 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1090,7 +1090,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-185 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -1100,18 +1100,18 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-188 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-deleted"
               id="standard-card-work-to-be-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-193 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -1129,6 +1129,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:12096"
                     id="publication-citation-parent-UQ:12096"
                   >
@@ -1146,7 +1147,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-195 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:12096"
@@ -1162,8 +1163,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-197 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -1173,7 +1173,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                                   >
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-205 makeStyles-externalLink-207 makeStyles-externalLink-209"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Aboriginal%20and%20Torres%20Strait%20Islander%20Studies%20Unit"
@@ -1207,7 +1207,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-194 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -1227,18 +1227,18 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-188 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-193 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -1283,7 +1283,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-213 MuiGrid-container makeStyles-error_outline-223 makeStyles-common-214 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -1292,7 +1292,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-217 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -1308,7 +1308,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-218 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Error - 
@@ -1378,7 +1378,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-124 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1390,7 +1390,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-123 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -1400,18 +1400,18 @@ exports[`Component DeleteRecord should render delete record form for records wit
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-126 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-deleted"
               id="standard-card-work-to-be-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-131 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -1429,6 +1429,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
@@ -1446,7 +1447,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-133 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:41878"
@@ -1456,7 +1457,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-134 css-1idn90j-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                           >
                             <div
                               class="citationContent citationJournalArticle"
@@ -1575,7 +1576,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                               >
                                 <a
                                   aria-label="Open this DOI in an new window"
-                                  class="citationDoiLink makeStyles-externalLink-143 makeStyles-externalLink-145"
+                                  class="citationDoiLink css-1oqhn84"
                                   data-analyticsid="citation-doi-link"
                                   data-testid="citation-doi-link"
                                   href="https://doi.org/10.1426412345"
@@ -1587,7 +1588,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-144 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="citation-doi-link-new-window-icon"
@@ -1609,8 +1610,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-135 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -1620,7 +1620,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount CitationCountView-citationCount-147 makeStyles-externalLink-143 makeStyles-externalLink-149"
+                                      class="wosCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -1634,14 +1634,14 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="CitationCountView-citationCountNumber-148"
+                                        class="MuiBox-root css-19k1sqg"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-147 makeStyles-externalLink-143 makeStyles-externalLink-150"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -1680,19 +1680,19 @@ exports[`Component DeleteRecord should render delete record form for records wit
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
-                          <span
-                            class="PublicationCitation-contentIndicatorTitle-137"
+                          <div
+                            class="MuiBox-root css-w4835h"
                           >
                             Content Indicators
                             :
-                          </span>
+                          </div>
                           Scholarship of Teaching and Learning, Protocol
                         </span>
                       </div>
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-132 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -1712,18 +1712,18 @@ exports[`Component DeleteRecord should render delete record form for records wit
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-126 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-131 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -1764,18 +1764,18 @@ exports[`Component DeleteRecord should render delete record form for records wit
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-126 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-131 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -1868,7 +1868,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-155 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1880,7 +1880,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-154 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -1890,18 +1890,18 @@ exports[`Component DeleteRecord should render delete record form for records wit
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-157 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-deleted"
               id="standard-card-work-to-be-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-162 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -1919,6 +1919,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
@@ -1936,7 +1937,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-164 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:41878"
@@ -1946,7 +1947,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-165 css-1idn90j-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                           >
                             <div
                               class="citationContent citationJournalArticle"
@@ -2065,7 +2066,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                               >
                                 <a
                                   aria-label="Open this DOI in an new window"
-                                  class="citationDoiLink makeStyles-externalLink-174 makeStyles-externalLink-176"
+                                  class="citationDoiLink css-1oqhn84"
                                   data-analyticsid="citation-doi-link"
                                   data-testid="citation-doi-link"
                                   href="https://doi.org/10.2364312345"
@@ -2077,7 +2078,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-175 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="citation-doi-link-new-window-icon"
@@ -2099,8 +2100,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-166 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -2110,7 +2110,7 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount CitationCountView-citationCount-178 makeStyles-externalLink-174 makeStyles-externalLink-180"
+                                      class="wosCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -2124,14 +2124,14 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="CitationCountView-citationCountNumber-179"
+                                        class="MuiBox-root css-19k1sqg"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-178 makeStyles-externalLink-174 makeStyles-externalLink-181"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -2170,19 +2170,19 @@ exports[`Component DeleteRecord should render delete record form for records wit
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
-                          <span
-                            class="PublicationCitation-contentIndicatorTitle-168"
+                          <div
+                            class="MuiBox-root css-w4835h"
                           >
                             Content Indicators
                             :
-                          </span>
+                          </div>
                           Scholarship of Teaching and Learning, Protocol
                         </span>
                       </div>
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-163 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -2202,18 +2202,18 @@ exports[`Component DeleteRecord should render delete record form for records wit
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-157 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-162 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -2254,18 +2254,18 @@ exports[`Component DeleteRecord should render delete record form for records wit
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-157 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-162 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -2304,18 +2304,18 @@ exports[`Component DeleteRecord should render delete record form for records wit
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-157 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-162 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -2407,7 +2407,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-62 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2419,7 +2419,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-61 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -2429,18 +2429,18 @@ exports[`Component DeleteRecord should render delete record form with data colle
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-64 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-deleted"
               id="standard-card-work-to-be-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-69 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -2458,6 +2458,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
@@ -2475,7 +2476,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-71 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:41878"
@@ -2485,7 +2486,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-72 css-1idn90j-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                           >
                             <div
                               class="citationContent citationDataCollection"
@@ -2578,7 +2579,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                               >
                                 <a
                                   aria-label="Open this DOI in an new window"
-                                  class="citationDoiLink makeStyles-externalLink-81 makeStyles-externalLink-83"
+                                  class="citationDoiLink css-1oqhn84"
                                   data-analyticsid="citation-doi-link"
                                   data-testid="citation-doi-link"
                                   href="https://doi.org/10.2364312345"
@@ -2590,7 +2591,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-82 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="citation-doi-link-new-window-icon"
@@ -2612,8 +2613,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-73 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -2623,7 +2623,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount CitationCountView-citationCount-85 makeStyles-externalLink-81 makeStyles-externalLink-87"
+                                      class="wosCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -2637,14 +2637,14 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="CitationCountView-citationCountNumber-86"
+                                        class="MuiBox-root css-19k1sqg"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-85 makeStyles-externalLink-81 makeStyles-externalLink-88"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -2683,19 +2683,19 @@ exports[`Component DeleteRecord should render delete record form with data colle
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
-                          <span
-                            class="PublicationCitation-contentIndicatorTitle-75"
+                          <div
+                            class="MuiBox-root css-w4835h"
                           >
                             Content Indicators
                             :
-                          </span>
+                          </div>
                           Scholarship of Teaching and Learning, Protocol
                         </span>
                       </div>
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-70 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -2715,18 +2715,18 @@ exports[`Component DeleteRecord should render delete record form with data colle
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-64 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-69 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -2767,18 +2767,18 @@ exports[`Component DeleteRecord should render delete record form with data colle
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-64 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-69 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -2817,18 +2817,18 @@ exports[`Component DeleteRecord should render delete record form with data colle
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-64 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-69 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -2920,7 +2920,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-93 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2932,7 +2932,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-92 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -2942,18 +2942,18 @@ exports[`Component DeleteRecord should render delete record form with deleted da
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-95 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-deleted"
               id="standard-card-work-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-100 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-deleted-header"
                     id="standard-card-work-deleted-header"
                   >
@@ -2971,6 +2971,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
@@ -2988,7 +2989,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-102 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:41878"
@@ -2998,7 +2999,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-103 css-1idn90j-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                           >
                             <div
                               class="citationContent citationDataCollection"
@@ -3091,7 +3092,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                               >
                                 <a
                                   aria-label="Open this DOI in an new window"
-                                  class="citationDoiLink makeStyles-externalLink-112 makeStyles-externalLink-114"
+                                  class="citationDoiLink css-1oqhn84"
                                   data-analyticsid="citation-doi-link"
                                   data-testid="citation-doi-link"
                                   href="https://doi.org/10.2364312345"
@@ -3103,7 +3104,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-113 css-i4bv87-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="citation-doi-link-new-window-icon"
@@ -3125,8 +3126,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-104 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -3136,7 +3136,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount CitationCountView-citationCount-116 makeStyles-externalLink-112 makeStyles-externalLink-118"
+                                      class="wosCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -3150,14 +3150,14 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="CitationCountView-citationCountNumber-117"
+                                        class="MuiBox-root css-19k1sqg"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-116 makeStyles-externalLink-112 makeStyles-externalLink-119"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -3196,19 +3196,19 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
-                          <span
-                            class="PublicationCitation-contentIndicatorTitle-106"
+                          <div
+                            class="MuiBox-root css-w4835h"
                           >
                             Content Indicators
                             :
-                          </span>
+                          </div>
                           Scholarship of Teaching and Learning, Protocol
                         </span>
                       </div>
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-101 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -3228,18 +3228,18 @@ exports[`Component DeleteRecord should render delete record form with deleted da
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-95 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-100 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -3280,18 +3280,18 @@ exports[`Component DeleteRecord should render delete record form with deleted da
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-95 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-100 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -3330,18 +3330,18 @@ exports[`Component DeleteRecord should render delete record form with deleted da
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-95 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-100 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -3433,7 +3433,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-32 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -3445,7 +3445,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-31 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -3455,18 +3455,18 @@ exports[`Component DeleteRecord should render delete record form with deleted re
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-34 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-deleted"
               id="standard-card-work-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-39 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-deleted-header"
                     id="standard-card-work-deleted-header"
                   >
@@ -3484,6 +3484,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
@@ -3501,7 +3502,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-41 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:41878"
@@ -3511,7 +3512,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-42 css-1idn90j-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                           >
                             <div
                               class="citationContent citationJournalArticle"
@@ -3637,8 +3638,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-43 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -3648,7 +3648,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount CitationCountView-citationCount-52 makeStyles-externalLink-54 makeStyles-externalLink-56"
+                                      class="wosCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -3662,14 +3662,14 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="CitationCountView-citationCountNumber-53"
+                                        class="MuiBox-root css-19k1sqg"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-52 makeStyles-externalLink-54 makeStyles-externalLink-57"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -3708,19 +3708,19 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
-                          <span
-                            class="PublicationCitation-contentIndicatorTitle-45"
+                          <div
+                            class="MuiBox-root css-w4835h"
                           >
                             Content Indicators
                             :
-                          </span>
+                          </div>
                           Scholarship of Teaching and Learning, Protocol
                         </span>
                       </div>
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-40 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -3740,18 +3740,18 @@ exports[`Component DeleteRecord should render delete record form with deleted re
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-34 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-39 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -3846,7 +3846,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -3858,7 +3858,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <form>
         <div
@@ -3868,18 +3868,18 @@ exports[`Component DeleteRecord should render delete record form with record cit
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-4 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-deleted"
               id="standard-card-work-to-be-deleted"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-9 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -3897,6 +3897,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                   class="publicationCitation"
                 >
                   <div
+                    class="css-0"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
@@ -3914,7 +3915,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-11 css-1uywuy6-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
                                 href="/view/UQ:41878"
@@ -3924,7 +3925,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-12 css-1idn90j-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                           >
                             <div
                               class="citationContent citationJournalArticle"
@@ -4050,8 +4051,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                               class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-13 css-1wrgmsj-MuiGrid-root"
-                                style="flex-grow: 1;"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                               >
                                 <div
                                   class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -4061,7 +4061,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount CitationCountView-citationCount-22 makeStyles-externalLink-24 makeStyles-externalLink-26"
+                                      class="wosCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -4075,14 +4075,14 @@ exports[`Component DeleteRecord should render delete record form with record cit
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="CitationCountView-citationCountNumber-23"
+                                        class="MuiBox-root css-19k1sqg"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount CitationCountView-citationCount-22 makeStyles-externalLink-24 makeStyles-externalLink-27"
+                                      class="googleCitationCount css-si3g8d"
                                       data-analyticsid="citation-count-link"
                                       data-testid="citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -4121,19 +4121,19 @@ exports[`Component DeleteRecord should render delete record form with record cit
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
-                          <span
-                            class="PublicationCitation-contentIndicatorTitle-15"
+                          <div
+                            class="MuiBox-root css-w4835h"
                           >
                             Content Indicators
                             :
-                          </span>
+                          </div>
                           Scholarship of Teaching and Learning, Protocol
                         </span>
                       </div>
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-10 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -4153,18 +4153,18 @@ exports[`Component DeleteRecord should render delete record form with record cit
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-4 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-9 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >

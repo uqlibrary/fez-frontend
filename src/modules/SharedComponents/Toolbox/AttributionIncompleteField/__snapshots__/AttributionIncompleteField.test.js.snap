@@ -8,10 +8,10 @@ exports[`Component AttributionIncompleteField should render default view 1`] = `
     />
   </div>
   <label
-    class="MuiFormControlLabel-root AttributionIncomplete-root-1 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary Mui-checked MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
     >
       <input
         checked=""
@@ -38,7 +38,7 @@ exports[`Component AttributionIncompleteField should render default view 1`] = `
       />
     </span>
     <div
-      class="MuiTypography-root AttributionIncomplete-label-2 MuiTypography-body1 css-u1nwny-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
       data-testid="attributionIncomplete-label"
       id="attributionIncomplete-label"
     />

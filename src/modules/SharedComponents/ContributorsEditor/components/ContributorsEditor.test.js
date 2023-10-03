@@ -1,19 +1,14 @@
-import { ContributorsEditor, mapStateToProps, styles } from './ContributorsEditor';
+import { ContributorsEditor, mapStateToProps } from './ContributorsEditor';
 import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 import locale from 'locale/components';
-import { createTheme } from '@mui/material/styles';
 import { render, WithReduxStore, fireEvent, waitFor, within } from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         author: { aut_id: 1 },
-        classes: {
-            list: 'list',
-            scroll: 'scroll',
-        },
         contributorEditorId: 'test',
         locale: testProps.locale || locale.components.contributors.field,
         ...testProps,
@@ -610,21 +605,6 @@ describe('ContributorsEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should have a proper style generator', () => {
-        const theme = createTheme({
-            components: {
-                MuiUseMediaQuery: {
-                    styleOverrides: {
-                        defaultProps: {
-                            noSsr: true,
-                        },
-                    },
-                },
-            },
-        });
-        expect(styles(theme)).toMatchSnapshot();
-    });
-
     it('should map state to props as expected', () => {
         const testFunction = () => ({
             author: 'test',
@@ -646,24 +626,4 @@ describe('ContributorsEditor', () => {
             record: null,
         });
     });
-    /*
-    // Tests for infinite scroll appear or not
-    it('renders no contributor rows with no infinite scroll', () => {
-        const wrapper = setup({ contributors: [] });
-        wrapper.setState({ contributors: [] });
-        expect(wrapper.find('ContributorRow').length).toEqual(0);
-        expect(wrapper.find('Infinite').length).toEqual(0);
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('renders 3 contributor rows with no infinite scroll', () => {
-        const wrapper = setup({ contributors: [] });
-        wrapper.setState({
-            contributors: [{ nameAsPublished: 1 }, { nameAsPublished: 2 }, { nameAsPublished: 3 }],
-        });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(ContributorRow)').length).toEqual(3);
-        expect(wrapper.find('Infinite').length).toEqual(0);
-    });*/
 });

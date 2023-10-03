@@ -3,17 +3,16 @@
 exports[`Component FileUploadRowDefaultView should not render access selector or date picker if access condition is not required to select 1`] = `
 <div>
   <div
-    class="FileUploadRowDefaultView-row-49"
-    style="flex-grow: 1; padding: 4px;"
+    class="MuiBox-root css-moxgk8"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-55 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-56 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-up-0"
           data-testid="new-file-upload-up-0"
           disabled=""
@@ -77,7 +76,7 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-48 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -113,10 +112,10 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-57 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-56 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-down-0"
           data-testid="new-file-upload-down-0"
           id="new-file-upload-down-0"
@@ -147,17 +146,16 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
 exports[`Component FileUploadRowDefaultView should not render embargo date picker if access condition is set to closed access 1`] = `
 <div>
   <div
-    class="FileUploadRowDefaultView-row-24"
-    style="flex-grow: 1; padding: 4px;"
+    class="MuiBox-root css-moxgk8"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-30 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-31 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-up-0"
           data-testid="new-file-upload-up-0"
           disabled=""
@@ -227,7 +225,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
           class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root FileUploadRowDefaultView-selected-28 MuiInputBase-colorPrimary MuiInputBase-formControl FileUploadRowDefaultView-selector-25 css-ydg547-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
               aria-expanded="false"
@@ -277,7 +275,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-23 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -313,10 +311,10 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-32 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-31 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-down-0"
           data-testid="new-file-upload-down-0"
           id="new-file-upload-down-0"
@@ -347,17 +345,16 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
 exports[`Component FileUploadRowDefaultView should render default view 1`] = `
 <div>
   <div
-    class="FileUploadRowDefaultView-row-2"
-    style="flex-grow: 1; padding: 4px;"
+    class="MuiBox-root css-moxgk8"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-8 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-9 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-up-0"
           data-testid="new-file-upload-up-0"
           disabled=""
@@ -427,7 +424,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root FileUploadRowDefaultView-placeholder-5 MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl FileUploadRowDefaultView-selector-3 css-ydg547-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
               aria-expanded="false"
@@ -465,7 +462,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required FileUploadRowDefaultView-error-7 css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1gwxeva-MuiFormHelperText-root"
             data-testid="dsi-open-access-0-helper-text"
             id="dsi-open-access-0-helper-text"
           >
@@ -484,7 +481,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-1 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -520,10 +517,10 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-10 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-9 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-down-0"
           data-testid="new-file-upload-down-0"
           id="new-file-upload-down-0"
@@ -554,17 +551,16 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
 exports[`Component FileUploadRowDefaultView should render default view for admin 1`] = `
 <div>
   <div
-    class="FileUploadRowDefaultView-row-14"
-    style="flex-grow: 1; padding: 4px;"
+    class="MuiBox-root css-moxgk8"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-20 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-21 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-up-0"
           data-testid="new-file-upload-up-0"
           disabled=""
@@ -635,7 +631,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
           style="width: 100%;"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl FileUploadRowDefaultView-selector-15 css-qie0cp-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
@@ -678,7 +674,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required FileUploadRowDefaultView-error-19 css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1gwxeva-MuiFormHelperText-root"
           >
             This field is required
           </p>
@@ -695,7 +691,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-13 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -731,10 +727,10 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-22 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-21 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-down-0"
           data-testid="new-file-upload-down-0"
           id="new-file-upload-down-0"
@@ -765,17 +761,16 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
 exports[`Component FileUploadRowDefaultView should render embargo date picker if access condition is set to open access 1`] = `
 <div>
   <div
-    class="FileUploadRowDefaultView-row-36"
-    style="flex-grow: 1; padding: 4px;"
+    class="MuiBox-root css-moxgk8"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-42 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-43 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-up-0"
           data-testid="new-file-upload-up-0"
           disabled=""
@@ -845,7 +840,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
           class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root FileUploadRowDefaultView-selected-40 MuiInputBase-colorPrimary MuiInputBase-formControl FileUploadRowDefaultView-selector-37 css-ydg547-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
               aria-expanded="false"
@@ -888,10 +883,10 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root FileUploadEmbargoDate-input-47 MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
             data-analyticsid="dsi-embargo-date-0-input"
             data-testid="dsi-embargo-date-0-input"
           >
@@ -932,7 +927,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-35 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -968,10 +963,10 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-44 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-43 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-down-0"
           data-testid="new-file-upload-down-0"
           id="new-file-upload-down-0"

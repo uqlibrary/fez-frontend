@@ -13,7 +13,6 @@ function setup(testProps = {}, render = rtlRender) {
     const { previewFileName, ...rest } = testProps;
     const props = {
         id: id,
-        classes: {},
         pid: journalArticle.rek_pid,
         fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
         mimeType: 'application/pdf',
@@ -55,7 +54,6 @@ describe('File Name Component ', () => {
 
     test('should render component and display file name only when disabled', async () => {
         const { queryByTestId, getByText, container } = setup({ downloadLicence: {}, disabled: true });
-
         expect(queryByTestId('test-file-name')).toBeInTheDocument();
         expect(getByText('UQ676287_OA.pdf')).toBeInTheDocument();
         expect(container.querySelector('p[class*="disabled"]')).toBeInTheDocument();

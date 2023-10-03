@@ -9,19 +9,8 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import makeStyles from '@mui/styles/makeStyles';
-
-const useStyles = makeStyles(() => ({
-    icon: {
-        textAlign: 'center',
-    },
-    header: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
-    },
-}));
 
 export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled, isAdmin }) => {
-    const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const {
         filenameColumn,
@@ -42,7 +31,14 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                 confirmationBoxId="delete-all-files"
             />
             <div style={{ flexGrow: 1, padding: 4 }}>
-                <Grid container direction="row" alignItems="center" spacing={1} className={classes.header} gutter={8}>
+                <Grid
+                    container
+                    direction="row"
+                    alignItems="center"
+                    spacing={1}
+                    sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.1)' }}
+                    gutter={8}
+                >
                     <Grid item md={3} sm={2}>
                         <Typography variant="caption" gutterBottom>
                             {filenameColumn}
@@ -65,7 +61,7 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                             {requireOpenAccessStatus && embargoDateColumn}
                         </Typography>
                     </Grid>
-                    <Grid item xs={1} className={classes.icon}>
+                    <Grid item xs={1} sx={{ textAlign: 'center' }}>
                         <Tooltip title={deleteAllFiles}>
                             <span>
                                 <IconButton

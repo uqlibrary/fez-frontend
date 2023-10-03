@@ -1,22 +1,20 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from '../containers/DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
-import withStyles from '@mui/styles/withStyles';
 
 const background = require('../../../../public/images/dashboard_cover.jpg');
 
-const styles = {
-    wrapper: {
-        backgroundImage: 'url(' + background + ')',
-        backgroundSize: 'cover',
-        padding: 16,
-    },
-};
+const StyledCard = styled(Card)({
+    backgroundImage: 'url(' + background + ')',
+    backgroundSize: 'cover',
+    padding: 16,
+});
 
 export class DashboardAuthorProfile extends PureComponent {
     static propTypes = {
@@ -27,13 +25,13 @@ export class DashboardAuthorProfile extends PureComponent {
     };
 
     render() {
-        const { author, authorDetails, history, classes } = this.props;
+        const { author, authorDetails, history } = this.props;
         if (!authorDetails) {
             return <div className="AuthorProfile empty" />;
         }
 
         return (
-            <Card className={classes.wrapper}>
+            <StyledCard>
                 <Grid container spacing={3} alignContent={'center'} alignItems={'center'} justifyContent={'center'}>
                     {/* Profile avatar */}
                     {authorDetails.image_exists === 1 && (
@@ -89,9 +87,9 @@ export class DashboardAuthorProfile extends PureComponent {
                         <DashboardArticleCount />
                     </Grid>
                 </Grid>
-            </Card>
+            </StyledCard>
         );
     }
 }
 
-export default withStyles(styles, { withTheme: true })(DashboardAuthorProfile);
+export default DashboardAuthorProfile;

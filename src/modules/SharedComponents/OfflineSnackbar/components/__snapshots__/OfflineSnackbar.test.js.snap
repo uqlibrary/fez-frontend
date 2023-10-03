@@ -30,7 +30,7 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-194g3cw-MuiSvgIcon-root"
                 data-testid="LinkIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -94,7 +94,7 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vgc25c-MuiSvgIcon-root"
                 data-testid="LinkOffIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -118,37 +118,4 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
     </div>
   </div>
 </div>
-`;
-
-exports[`Component OfflineSnackbar should have a proper style generator 1`] = `
-Object {
-  "error": Object {
-    "color": "test2",
-  },
-  "success": Object {
-    "color": "test1",
-  },
-}
-`;
-
-exports[`Component OfflineSnackbar should have a proper style generator 2`] = `
-Object {
-  "error": Object {
-    "color": undefined,
-  },
-  "success": Object {
-    "color": undefined,
-  },
-}
-`;
-
-exports[`Component OfflineSnackbar should have a proper style generator 3`] = `
-Object {
-  "error": Object {
-    "color": undefined,
-  },
-  "success": Object {
-    "color": undefined,
-  },
-}
 `;

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
+
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -19,11 +21,16 @@ import { useHistory, useLocation } from 'react-router';
 import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
-import { makeStyles } from '@mui/styles';
 
 import { ScrollToPos as ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToPos';
 
 export const id = 'journal-search-results';
+
+const StyledGridButtonContainer = styled(Grid)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        display: 'inline-flex',
+    },
+}));
 
 export const getSearchResultSortingParams = (journalSearchQueryParams, journalsListPerPage, sortingDefaults) => {
     const { sortBy = 'score', sortDirection = 'Desc' } = {
@@ -36,16 +43,7 @@ export const getSearchResultSortingParams = (journalSearchQueryParams, journalsL
     return { sortBy, sortDirection, pageSize };
 };
 
-const useStyles = makeStyles(theme => ({
-    buttonContainer: {
-        [theme.breakpoints.up('md')]: {
-            display: 'inline-flex',
-        },
-    },
-}));
-
 export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals = false }) => {
-    const classes = useStyles();
     const location = useLocation();
     const history = useHistory();
     const txt = locale.components.searchJournals;
@@ -178,14 +176,14 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                     {!!journalsList && (
                         <Grid style={{ paddingTop: 20 }} item xs={12}>
                             <Grid container spacing={2}>
-                                <Grid item xs={12} sm={6} md={3} className={classes.buttonContainer}>
+                                <StyledGridButtonContainer item xs={12} sm={6} md={3}>
                                     <AddToFavouritesButton
                                         disabled={countSelectedJournals() < 1}
                                         clearSelectedJournals={clearSelectedJournals}
                                         selectedJournals={selectedJournals}
                                     />
-                                </Grid>
-                                <Grid item xs={12} sm={6} md={3} className={classes.buttonContainer}>
+                                </StyledGridButtonContainer>
+                                <StyledGridButtonContainer item xs={12} sm={6} md={3}>
                                     <Button
                                         disabled={countSelectedJournals() < 2}
                                         onClick={handleJournalsComparisonClick}
@@ -198,7 +196,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                                         data-testid="journal-comparison-button"
                                         fullWidth
                                     />
-                                </Grid>
+                                </StyledGridButtonContainer>
                                 <CommonButtons onSearchAll={onSearchAll} browseAllJournals={browseAllJournals} />
                             </Grid>
                         </Grid>

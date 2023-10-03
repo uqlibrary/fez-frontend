@@ -27,23 +27,6 @@ import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { default as alertLocale } from 'locale/publicationForm';
 
-import makeStyles from '@mui/styles/makeStyles';
-
-export const useStyles = makeStyles(
-    theme => ({
-        GridType: {
-            paddingBottom: 12,
-            borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        },
-        GridSubType: {
-            marginTop: 12,
-            paddingBottom: 12,
-            borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        },
-    }),
-    { withTheme: true },
-);
-
 export const MyIncompleteRecord = props => {
     const {
         submitSucceeded,
@@ -60,7 +43,6 @@ export const MyIncompleteRecord = props => {
         disableDeleteAllGrants,
         history,
     } = props;
-    const classes = useStyles();
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
@@ -134,7 +116,14 @@ export const MyIncompleteRecord = props => {
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
-                                <Grid container className={classes.GridType}>
+                                <Grid
+                                    container
+                                    sx={{
+                                        paddingBottom: '12px',
+                                        borderBottom: '1px solid',
+                                        borderBottomColor: 'secondary.light',
+                                    }}
+                                >
                                     {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
                                         <Grid container alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
@@ -151,7 +140,15 @@ export const MyIncompleteRecord = props => {
                                         </Grid>
                                     )}
                                 </Grid>
-                                <Grid container className={classes.GridSubType}>
+                                <Grid
+                                    container
+                                    sx={{
+                                        marginTop: '12px',
+                                        paddingBottom: '12px',
+                                        borderBottom: '1px solid',
+                                        borderBottomColor: 'secondary.light',
+                                    }}
+                                >
                                     {!!recordToFix && !!recordToFix.rek_subtype && (
                                         <Grid container alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>

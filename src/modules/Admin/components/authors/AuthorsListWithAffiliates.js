@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
 import { useTheme } from '@mui/material/styles';
-import makeStyles from '@mui/styles/makeStyles';
 import { numberToWords, validation } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -36,15 +35,15 @@ import EditAuthorAffiliations from './EditAuthorAffiliations';
 import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 import { ChevronRight } from '@mui/icons-material';
 
-export const useStyles = makeStyles(theme => ({
+const classes = {
     linked: {
         fontWeight: 500,
     },
     problem: {
-        color: theme.palette.error.main,
+        color: 'error.main',
         fontWeight: 500,
     },
-}));
+};
 
 const getIcon = ({ rowData, inProblemState }) => {
     if (!!inProblemState) {
@@ -73,13 +72,12 @@ const getIcon = ({ rowData, inProblemState }) => {
 };
 
 export const NameAsPublished = React.memo(({ icon, text, linked }) => {
-    const classes = useStyles();
     return (
         <Grid container spacing={2}>
-            <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Grid item sx={{ alignSelf: 'center', display: { xs: 'none', sm: 'block' } }}>
                 {icon}
             </Grid>
-            <Grid item className={linked ? classes.linked : ''}>
+            <Grid item sx={{ ...(linked ? classes.linked : {}) }}>
                 {text}
             </Grid>
         </Grid>
@@ -93,8 +91,10 @@ NameAsPublished.propTypes = {
 
 const isValid = value => !validation.isEmpty(value) && !validation.maxLength255Validator(value);
 
-export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
-    const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
+export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInput, locale, isNtro }) => {
+    const linkedClass = (rowData, isProblem) =>
+        // eslint-disable-next-line no-nested-ternary
+        !!isProblem ? classes.problem : !!rowData.aut_id ? classes.linked : '';
 
     const {
         header: {
@@ -131,7 +131,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                             <React.Fragment>
                                 <Typography
                                     variant="body2"
-                                    className={inProblemState ? classes.problem : linkedClass(rowData)}
+                                    sx={{ ...linkedClass(rowData, inProblemState) }}
                                     id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
                                     data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
                                 >
@@ -139,7 +139,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                                 </Typography>
                                 <Typography
                                     variant="caption"
-                                    className={inProblemState ? classes.problem : linkedClass(rowData)}
+                                    sx={{ ...linkedClass(rowData, inProblemState) }}
                                 >{`${numberToWords(rowData.tableData.id + 1)} ${suffix}`}</Typography>
                             </React.Fragment>
                         }
@@ -187,7 +187,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                 return (
                     <Typography
                         variant="body2"
-                        className={inProblemState ? classes.problem : linkedClass(rowData)}
+                        sx={{ ...linkedClass(rowData, inProblemState) }}
                         id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                         data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                     >
@@ -486,7 +486,6 @@ export const AuthorsListWithAffiliates = ({
             locale: { addButton },
         },
     } = locale;
-    const classes = useStyles();
     const theme = useTheme();
     const materialTableRef = React.createRef();
 
@@ -494,7 +493,6 @@ export const AuthorsListWithAffiliates = ({
     columns.current = getColumns({
         disabled,
         suffix,
-        classes,
         showRoleInput,
         locale,
         isNtro,

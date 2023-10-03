@@ -50,9 +50,6 @@ function setup(testProps = {}, renderMethod = render) {
             is_super_administrator: 1,
             username: 'test',
         },
-        classes: {
-            tabIndicator: 'tabindicator',
-        },
         submitting: false,
         handleSubmit: jest.fn(),
         history: {

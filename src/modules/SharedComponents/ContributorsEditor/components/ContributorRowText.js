@@ -8,6 +8,27 @@ import Grid from '@mui/material/Grid';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 
+const getListItemTypography = (primaryText, secondaryText, primaryTypographyClass, secondaryTypographyClass) => (
+    <ListItemText
+        disableTypography
+        primary={
+            primaryText && (
+                <Typography noWrap variant="body2" sx={{ ...primaryTypographyClass }}>
+                    {primaryText}
+                </Typography>
+            )
+        }
+        secondary={
+            secondaryText && (
+                <Typography noWrap variant="caption" display={'block'} sx={{ ...secondaryTypographyClass }}>
+                    {secondaryText}
+                </Typography>
+            )
+        }
+        secondaryTypographyProps={{ variant: 'caption' }}
+    />
+);
+
 export const ContributorRowText = ({
     canEdit,
     classes,
@@ -36,30 +57,12 @@ export const ContributorRowText = ({
         );
     };
 
-    const getListItemTypography = (primaryText, secondaryText, primaryClass, secondaryClass) => (
-        <ListItemText
-            disableTypography
-            primary={
-                primaryText && (
-                    <Typography noWrap variant="body2" classes={{ root: primaryClass }}>
-                        {primaryText}
-                    </Typography>
-                )
-            }
-            secondary={
-                secondaryText && (
-                    <Typography noWrap variant="caption" display={'block'} classes={{ root: secondaryClass }}>
-                        {secondaryText}
-                    </Typography>
-                )
-            }
-            secondaryTypographyProps={{ variant: 'caption' }}
-        />
-    );
-
     if (!contributor.aut_title || contributor.aut_title.length < 2) {
         contributor.aut_title = ''; // if missing or has silly value - blank
     }
+
+    const primaryTypographyClass = { ...(width === 'xs' ? classes.identifierName : classes.primary), ...selectedClass };
+    const secondaryTypographyClass = { ...(width === 'xs' ? classes.identifierSubtitle : {}), ...selectedClass };
 
     return (
         <>
@@ -73,8 +76,8 @@ export const ContributorRowText = ({
                 {getListItemTypography(
                     contributor.nameAsPublished,
                     contributorOrder,
-                    `${classes.primary} ${selectedClass}`,
-                    `${selectedClass}`,
+                    { ...classes.primary, ...selectedClass },
+                    selectedClass,
                 )}
             </Grid>
             {isAuthorLinked(contributor) && haveFullAuthorDetails(contributor) && (
@@ -91,8 +94,8 @@ export const ContributorRowText = ({
                             locale.global.orgTitle} (${contributor.aut_org_username ||
                             contributor.aut_student_username ||
                             contributor.aut_ref_num} - ${contributor.aut_id})`,
-                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                        `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
+                        primaryTypographyClass,
+                        secondaryTypographyClass,
                     )}
                 </Grid>
             )}
@@ -110,8 +113,8 @@ export const ContributorRowText = ({
                             !!ORG_TYPES_LOOKUP[contributor.orgtype] &&
                             `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}`) ||
                             ''}`,
-                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                        `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
+                        primaryTypographyClass,
+                        secondaryTypographyClass,
                     )}
                 </Grid>
             )}
@@ -120,8 +123,8 @@ export const ContributorRowText = ({
                     {getListItemTypography(
                         contributor.creatorRole,
                         '',
-                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                        `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
+                        primaryTypographyClass,
+                        secondaryTypographyClass,
                     )}
                 </Grid>
             )}
@@ -136,7 +139,7 @@ ContributorRowText.propTypes = {
     classes: PropTypes.object,
     index: PropTypes.number,
     suffix: PropTypes.string,
-    selectedClass: PropTypes.string,
+    selectedClass: PropTypes.object,
     showRoleInput: PropTypes.bool,
     width: PropTypes.string,
 };

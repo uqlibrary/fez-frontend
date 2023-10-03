@@ -12,7 +12,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -66,10 +66,10 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+          class="MuiListItemText-root css-564e8j-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -121,7 +121,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -162,10 +162,10 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+          class="MuiListItemText-root css-564e8j-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -215,7 +215,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -256,10 +256,10 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+          class="MuiListItemText-root css-564e8j-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -311,7 +311,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -362,10 +362,10 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
         class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+          class="MuiListItemText-root css-564e8j-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -417,7 +417,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -458,10 +458,10 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
         class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+          class="MuiListItemText-root css-d3ohrr-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary undefined test-class-1 css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -503,27 +503,6 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
 </div>
 `;
 
-exports[`Component ContributorRowHeader should have a proper style generator 1`] = `
-Object {
-  "header": Object {
-    "borderBottom": "1px solid rgba(0, 0, 0, 0.2)",
-    "marginTop": 8,
-  },
-  "infinitePaddingRight": Object {
-    "paddingRight": 36,
-  },
-  "paddingRight": Object {
-    "paddingRight": 40,
-  },
-  "paddingRightEdit": Object {
-    "paddingRight": 78,
-  },
-  "right": Object {
-    "textAlign": "right",
-  },
-}
-`;
-
 exports[`Component ContributorRowHeader should use extra padding if row is editable 1`] = `
 <div>
   <span
@@ -534,7 +513,7 @@ exports[`Component ContributorRowHeader should use extra padding if row is edita
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -575,10 +554,10 @@ exports[`Component ContributorRowHeader should use extra padding if row is edita
         class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+          class="MuiListItemText-root css-3n6t5b-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary undefined test-class-1 css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -632,7 +611,7 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root header MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -673,10 +652,10 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
         class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+          class="MuiListItemText-root css-564e8j-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary right paddingRight40 css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
           >
             Reorder records
           </span>

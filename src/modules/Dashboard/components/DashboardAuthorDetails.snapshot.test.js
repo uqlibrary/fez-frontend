@@ -1,5 +1,5 @@
 import React from 'react';
-import { DashboardAuthorDetails, styles } from './DashboardAuthorDetails';
+import { DashboardAuthorDetails } from './DashboardAuthorDetails';
 import { currentAuthor, authorDetails } from 'mock/data';
 import { rtlRender } from 'test-utils';
 
@@ -22,26 +22,4 @@ describe('Dashboard Author Details test', () => {
         });
         expect(container).toMatchSnapshot();
     });
-
-    it('should have a style generator', () => {
-        const theme = {
-            palette: {
-                white: {
-                    main: '#fff',
-                },
-            },
-        };
-
-        expect(styles(theme)).toEqual({
-            authorDetails: {
-                color: '#fff',
-            },
-        });
-    });
-    /*
-    it('identifies Casual position status', () => {
-        const wrapper = setup();
-        const instance = wrapper.instance();
-        expect(instance.areAllCasualPositions(['Assistant Casual Staff'])).toBe(true);
-    });*/
 });

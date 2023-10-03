@@ -5,19 +5,8 @@ import Tooltip from '@mui/material/Tooltip';
 import Person from '@mui/icons-material/Person';
 import PersonOutline from '@mui/icons-material/PersonOutline';
 import Fade from '@mui/material/Fade';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles(
-    theme => ({
-        iconButton: {
-            color: theme.palette.white.main,
-        },
-    }),
-    { withTheme: true },
-);
 
 export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, signInTooltipText, onClick }) => {
-    const classes = useStyles();
     return (
         <div className="auth-button-wrapper">
             <Tooltip
@@ -33,9 +22,9 @@ export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, signInTooltip
                     size="large"
                 >
                     {isAuthorizedUser ? (
-                        <Person id="logged-in-icon" className={classes.iconButton} />
+                        <Person id="logged-in-icon" sx={{ color: 'white.main' }} />
                     ) : (
-                        <PersonOutline id="logged-out-icon" className={classes.iconButton} />
+                        <PersonOutline id="logged-out-icon" sx={{ color: 'white.main' }} />
                     )}
                 </IconButton>
             </Tooltip>
