@@ -4,6 +4,7 @@ exports[`LookupListEditor should render default component 1`] = `
 <div>
   <div
     class="undefined"
+    data-testid="lookup-list-editor-list-editor"
     id="lookup-list-editor-list-editor"
   >
     <div

@@ -6,7 +6,12 @@ exports[`Component PublicationForm Shows an alert 1`] = `
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
@@ -118,7 +123,12 @@ exports[`Component PublicationForm Shows an alert 2`] = `
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
@@ -994,7 +1004,12 @@ exports[`Component PublicationForm should render component initialised with just
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
@@ -1106,7 +1121,12 @@ exports[`Component PublicationForm should render component initialised with two 
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
@@ -1229,7 +1249,12 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
@@ -1833,7 +1858,12 @@ exports[`Component PublicationForm should render component with GenericDocument 
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
@@ -2307,7 +2337,12 @@ exports[`Component PublicationForm should render component with JournalArticleFo
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
@@ -2874,7 +2909,12 @@ exports[`Component PublicationForm should render component with ResearchReportFo
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
@@ -3477,7 +3517,12 @@ exports[`Component PublicationForm should render component with all fields disab
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
@@ -3587,7 +3632,12 @@ exports[`Component PublicationForm should render form after selecting both publi
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
     >
-      <div />
+      <div>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+      </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >

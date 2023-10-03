@@ -3,7 +3,7 @@
 exports[`ConfirmDialogBox snapshots tests renders component with customised locale 1`] = `
 <ForwardRef(Box)
   component="span"
-  data-testid="confirm-dialog-box"
+  data-testid="confirmDialogBox"
 >
   <ForwardRef(Dialog)
     open={false}
@@ -98,7 +98,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
 exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
 <ForwardRef(Box)
   component="span"
-  data-testid="confirm-dialog-box"
+  data-testid="confirmDialogBox"
 >
   <ForwardRef(Dialog)
     open={false}
@@ -162,7 +162,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
 exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 1`] = `
 <ForwardRef(Box)
   component="span"
-  data-testid="confirm-dialog-box"
+  data-testid="confirmDialogBox"
 >
   <ForwardRef(Dialog)
     open={false}
@@ -242,7 +242,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
 exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe buttons 1`] = `
 <ForwardRef(Box)
   component="span"
-  data-testid="confirm-dialog-box"
+  data-testid="confirmDialogBox"
 >
   <ForwardRef(Dialog)
     open={false}
@@ -373,7 +373,7 @@ Object {
 exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dialog 1`] = `
 <ForwardRef(Box)
   component="span"
-  data-testid="confirm-dialog-box"
+  data-testid="confirmDialogBox"
 >
   <ForwardRef(Dialog)
     open={true}
@@ -453,7 +453,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
 exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dialog 2`] = `
 <ForwardRef(Box)
   component="span"
-  data-testid="confirm-dialog-box"
+  data-testid="confirmDialogBox"
 >
   <ForwardRef(Dialog)
     open={false}

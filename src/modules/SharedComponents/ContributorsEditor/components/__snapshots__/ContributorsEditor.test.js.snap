@@ -192,6 +192,10 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
@@ -452,6 +456,10 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <br />
           <div>
             <span
@@ -954,6 +962,10 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
@@ -1476,6 +1488,10 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <br />
           <div>
             <span
@@ -1870,6 +1886,10 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <br />
           <div>
             <span
@@ -2214,6 +2234,10 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <br />
           <div>
             <span
@@ -2912,6 +2936,10 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
@@ -6218,6 +6246,10 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
@@ -7973,6 +8005,10 @@ exports[`ContributorsEditor should get contributors from props and input value s
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
@@ -8366,6 +8402,10 @@ exports[`ContributorsEditor should get contributors from props and input value s
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
           style="margin-bottom: 0px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >

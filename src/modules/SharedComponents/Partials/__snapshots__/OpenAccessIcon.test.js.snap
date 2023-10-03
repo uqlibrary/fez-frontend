@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Journal Name Component test  should pass style to child component 1`] = `undefined`;
+exports[`Journal Name Component test  should pass style to child component 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    aria-label="Open Access - undefined - Free to read"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-3 makeStyles-svg-4 css-i4bv87-MuiSvgIcon-root"
+    data-mui-internal-clone-element="true"
+    data-testid="oa-icon"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+    />
+  </svg>
+</div>
+`;
 
 exports[`Journal Name Component test  should render closed access 1`] = `
 <div>

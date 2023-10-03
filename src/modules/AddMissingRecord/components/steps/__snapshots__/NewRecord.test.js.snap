@@ -8,6 +8,10 @@ exports[`Add new record should not render publication form if author is not load
 
 exports[`Add new record should render stepper and a publication form 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <form>
     <div
       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"

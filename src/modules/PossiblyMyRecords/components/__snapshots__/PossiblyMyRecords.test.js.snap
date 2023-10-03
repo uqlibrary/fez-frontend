@@ -238,6 +238,10 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
     <div
       class="MuiGrid-root MuiGrid-item Page-layoutCard-16 css-13i4rnv-MuiGrid-root"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
       >

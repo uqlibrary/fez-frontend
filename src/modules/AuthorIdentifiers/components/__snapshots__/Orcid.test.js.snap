@@ -23,6 +23,10 @@ exports[`Component Orcid  should render if account doesnt have first name and la
     <div
       class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
       >

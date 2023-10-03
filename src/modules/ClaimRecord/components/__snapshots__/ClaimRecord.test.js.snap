@@ -312,7 +312,16 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -738,7 +747,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -1257,7 +1275,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -1712,7 +1739,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -2290,7 +2326,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -2954,7 +2999,16 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -4032,6 +4086,10 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               </div>
             </div>
           </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <span />
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
@@ -4741,7 +4799,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -5455,6 +5522,10 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </div>
             </div>
           </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <span />
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
@@ -6164,7 +6235,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -6882,7 +6962,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -7332,7 +7421,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </div>
             </div>
           </div>
-          <div />
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >

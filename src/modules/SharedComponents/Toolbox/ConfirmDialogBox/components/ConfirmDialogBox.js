@@ -99,7 +99,7 @@ export class ConfirmDialogBox extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <Box data-testid="confirm-dialog-box" component={'span'}>
+            <Box data-testid="confirmDialogBox" component={'span'}>
                 <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
                     <DialogTitle data-testid="message-title">{this.props.locale.confirmationTitle}</DialogTitle>
                     <DialogContent>

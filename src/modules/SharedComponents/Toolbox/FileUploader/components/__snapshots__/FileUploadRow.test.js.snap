@@ -2,6 +2,10 @@
 
 exports[`FileUploadRow renders with uploaded file 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <div
     class="FileUploadRowDefaultView-row-3"
     style="flex-grow: 1; padding: 4px;"
@@ -209,6 +213,10 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
 
 exports[`FileUploadRow should show confirmation and delete file 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <ul
     class="MuiList-root FileUploadRowMobileView-root-116 MuiList-padding css-h4y409-MuiList-root"
   >

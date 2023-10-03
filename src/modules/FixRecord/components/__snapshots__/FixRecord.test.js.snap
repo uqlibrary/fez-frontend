@@ -308,7 +308,16 @@ exports[`Component FixRecord should render fix record form 1`] = `
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -1359,6 +1368,10 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                   </div>
                 </div>
                 
+                <span
+                  class="MuiBox-root css-0"
+                  data-testid="confirmDialogBox"
+                />
               </div>
             </div>
           </div>

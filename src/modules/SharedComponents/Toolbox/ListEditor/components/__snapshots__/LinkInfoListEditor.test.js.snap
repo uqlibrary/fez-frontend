@@ -4,6 +4,7 @@ exports[`LinkInfoListEditor component should render default view 1`] = `
 <div>
   <div
     class="undefined"
+    data-testid="link-info-list-editor-list-editor"
     id="link-info-list-editor-list-editor"
   >
     <div

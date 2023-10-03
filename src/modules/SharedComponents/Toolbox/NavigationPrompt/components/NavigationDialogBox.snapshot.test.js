@@ -22,13 +22,13 @@ describe('NavigationDialogBox component', () => {
                 confirmButtonLabel: 'Yes',
             },
         });
-        expect(getByTestId('confirm-dialog-box')).toBeInTheDocument();
+        expect(getByTestId('confirmDialogBox')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
     it('should not render', () => {
         const { container, queryByTestId } = setup({ when: false });
-        expect(queryByTestId('confirm-dialog-box')).not.toBeInTheDocument();
+        expect(queryByTestId('confirmDialogBox')).not.toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 });

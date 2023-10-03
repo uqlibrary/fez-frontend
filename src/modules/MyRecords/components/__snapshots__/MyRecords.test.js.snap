@@ -664,7 +664,12 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                 </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                />
+                >
+                  <span
+                    class="MuiBox-root css-0"
+                    data-testid="confirmDialogBox"
+                  />
+                </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
@@ -1364,7 +1369,12 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                 </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                />
+                >
+                  <span
+                    class="MuiBox-root css-0"
+                    data-testid="confirmDialogBox"
+                  />
+                </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
@@ -2064,7 +2074,12 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                 </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                />
+                >
+                  <span
+                    class="MuiBox-root css-0"
+                    data-testid="confirmDialogBox"
+                  />
+                </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
@@ -2776,7 +2791,12 @@ exports[`MyRecords test renders loading screen while export publications loading
                 </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                />
+                >
+                  <span
+                    class="MuiBox-root css-0"
+                    data-testid="confirmDialogBox"
+                  />
+                </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
@@ -3166,7 +3186,12 @@ exports[`MyRecords test renders loading screen while loading publications while 
                 </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                />
+                >
+                  <span
+                    class="MuiBox-root css-0"
+                    data-testid="confirmDialogBox"
+                  />
+                </div>
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >

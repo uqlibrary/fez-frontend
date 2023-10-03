@@ -422,6 +422,10 @@ exports[`Component FileUploader should handle file order change 2`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-206"
         data-testid="fez-datastream-info-list-row-0"
@@ -626,6 +630,10 @@ exports[`Component FileUploader should handle file order change 2`] = `
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-206"
         data-testid="fez-datastream-info-list-row-1"
@@ -1133,6 +1141,10 @@ exports[`Component FileUploader should handle file order change 3`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-206"
         data-testid="fez-datastream-info-list-row-0"
@@ -1337,6 +1349,10 @@ exports[`Component FileUploader should handle file order change 3`] = `
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-206"
         data-testid="fez-datastream-info-list-row-1"
@@ -2102,6 +2118,10 @@ exports[`Component FileUploader should not render rows for uploaded files with a
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-280"
         data-testid="fez-datastream-info-list-row-0"
@@ -2242,6 +2262,10 @@ exports[`Component FileUploader should not render rows for uploaded files with a
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-280"
         data-testid="fez-datastream-info-list-row-1"
@@ -2809,6 +2833,10 @@ exports[`Component FileUploader should not reset file access or embargo date inf
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-352"
         data-testid="fez-datastream-info-list-row-0"
@@ -3042,6 +3070,10 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-352"
         data-testid="fez-datastream-info-list-row-1"
@@ -3954,6 +3986,10 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-48"
         data-testid="fez-datastream-info-list-row-0"
@@ -4094,6 +4130,10 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-48"
         data-testid="fez-datastream-info-list-row-1"
@@ -4534,6 +4574,10 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-48"
         data-testid="fez-datastream-info-list-row-0"
@@ -5222,6 +5266,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-84"
         data-testid="fez-datastream-info-list-row-0"
@@ -5425,6 +5473,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-84"
         data-testid="fez-datastream-info-list-row-1"
@@ -5932,6 +5984,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-84"
         data-testid="fez-datastream-info-list-row-0"
@@ -6128,6 +6184,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-84"
         data-testid="fez-datastream-info-list-row-1"
@@ -6635,6 +6695,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-84"
         data-testid="fez-datastream-info-list-row-0"
@@ -6831,6 +6895,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-84"
         data-testid="fez-datastream-info-list-row-1"
@@ -7526,6 +7594,10 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-244"
         data-testid="fez-datastream-info-list-row-0"
@@ -7666,6 +7738,10 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-244"
         data-testid="fez-datastream-info-list-row-1"
@@ -8233,6 +8309,10 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-165"
         data-testid="fez-datastream-info-list-row-0"
@@ -8440,6 +8520,10 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-165"
         data-testid="fez-datastream-info-list-row-1"
@@ -8951,6 +9035,10 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-165"
         data-testid="fez-datastream-info-list-row-0"
@@ -9153,6 +9241,10 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-165"
         data-testid="fez-datastream-info-list-row-1"
@@ -9664,6 +9756,10 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-165"
         data-testid="fez-datastream-info-list-row-0"
@@ -9866,6 +9962,10 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           </div>
         </div>
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-165"
         data-testid="fez-datastream-info-list-row-1"
@@ -10612,6 +10712,10 @@ exports[`Component FileUploader should set max files error message 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-316"
         data-testid="fez-datastream-info-list-row-0"
@@ -11054,6 +11158,10 @@ exports[`Component FileUploader should update file description 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       data-testid="fez-datastream-info-list"
     >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="FileUploadRowDefaultView-row-127"
         data-testid="fez-datastream-info-list-row-0"

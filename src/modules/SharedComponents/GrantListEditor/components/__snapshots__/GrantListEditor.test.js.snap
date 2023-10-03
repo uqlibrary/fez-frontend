@@ -184,6 +184,10 @@ exports[`GrantListEditor should add grant to the list 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-38 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -312,6 +316,10 @@ exports[`GrantListEditor should add grant to the list 1`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -674,6 +682,10 @@ exports[`GrantListEditor should delete all grants 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-122 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -802,6 +814,10 @@ exports[`GrantListEditor should delete all grants 1`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -973,6 +989,10 @@ exports[`GrantListEditor should delete all grants 1`] = `
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -1514,6 +1534,10 @@ exports[`GrantListEditor should delete grant 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-110 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -1642,6 +1666,10 @@ exports[`GrantListEditor should delete grant 1`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -1813,6 +1841,10 @@ exports[`GrantListEditor should delete grant 1`] = `
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -2177,6 +2209,10 @@ exports[`GrantListEditor should delete grant 2`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-110 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -2305,6 +2341,10 @@ exports[`GrantListEditor should delete grant 2`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -2678,6 +2718,10 @@ exports[`GrantListEditor should move the grant down 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-98 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -2806,6 +2850,10 @@ exports[`GrantListEditor should move the grant down 1`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -2977,6 +3025,10 @@ exports[`GrantListEditor should move the grant down 1`] = `
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -3339,6 +3391,10 @@ exports[`GrantListEditor should move the grant down 2`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-98 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -3467,6 +3523,10 @@ exports[`GrantListEditor should move the grant down 2`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -3638,6 +3698,10 @@ exports[`GrantListEditor should move the grant down 2`] = `
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -4000,6 +4064,10 @@ exports[`GrantListEditor should move the grant up 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-62 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -4128,6 +4196,10 @@ exports[`GrantListEditor should move the grant up 1`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -4299,6 +4371,10 @@ exports[`GrantListEditor should move the grant up 1`] = `
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -4661,6 +4737,10 @@ exports[`GrantListEditor should move the grant up 2`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-62 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -4789,6 +4869,10 @@ exports[`GrantListEditor should move the grant up 2`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -4960,6 +5044,10 @@ exports[`GrantListEditor should move the grant up 2`] = `
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -5322,6 +5410,10 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-74 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -5450,6 +5542,10 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -5810,6 +5906,10 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-74 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -5938,6 +6038,10 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -6298,6 +6402,10 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-86 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -6426,6 +6534,10 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -6593,6 +6705,10 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -6955,6 +7071,10 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-86 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -7083,6 +7203,10 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -7250,6 +7374,10 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -8164,6 +8292,10 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-50 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -8292,6 +8424,10 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
           class="MuiList-root undefined scroll-class MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -8463,6 +8599,10 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -8636,6 +8776,10 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -8809,6 +8953,10 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
               </div>
             </div>
           </li>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -9355,6 +9503,10 @@ exports[`GrantListEditor should render with default given value 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-2 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -9483,6 +9635,10 @@ exports[`GrantListEditor should render with default given value 1`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -9843,6 +9999,10 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-14 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -9971,6 +10131,10 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"
@@ -10331,6 +10495,10 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root Component-header-26 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
           >
@@ -10459,6 +10627,10 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
           class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
           data-testid="rek-grant-list"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <li
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
             style="padding: 8px 0px 8px 0px;"

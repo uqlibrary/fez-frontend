@@ -1,7 +1,7 @@
 import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
 import Immutable from 'immutable';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, screen, preview } from 'test-utils';
 
 /* eslint-disable react/prop-types */
 jest.mock('redux-form/immutable', () => ({
@@ -108,7 +108,7 @@ describe('AddDataCollection test', () => {
     it('should navigate to my datasets url', async () => {
         const clearNewRecordFn = jest.fn();
         const pushFn = jest.fn();
-        const { getByTestId, rerender } = setup({
+        const { rerender } = setup({
             submitSucceeded: false,
         });
 
@@ -124,8 +124,8 @@ describe('AddDataCollection test', () => {
             },
             rerender,
         );
-
-        fireEvent.click(getByTestId('confirm-dialog-box'));
+        preview.debug();
+        fireEvent.click(screen.getByTestId('confirm-dialog-box'));
 
         expect(clearNewRecordFn).toHaveBeenCalled();
         expect(pushFn).toHaveBeenCalledWith('/data-collections/mine');

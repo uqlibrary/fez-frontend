@@ -214,7 +214,12 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
         />
       </div>
       <form>
-        <div />
+        <div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+        </div>
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >

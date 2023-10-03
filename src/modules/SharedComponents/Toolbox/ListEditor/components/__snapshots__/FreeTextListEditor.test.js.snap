@@ -4,6 +4,7 @@ exports[`FreeTextListEditor component should render default view 1`] = `
 <div>
   <div
     class="undefined"
+    data-testid="free-text-list-editor-list-editor"
     id="free-text-list-editor-list-editor"
   >
     <div

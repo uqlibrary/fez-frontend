@@ -26,6 +26,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
       class="MuiGrid-root MuiGrid-item Page-layoutCard-84 css-13i4rnv-MuiGrid-root"
     >
       <form>
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
         <span />
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 DataCollection css-dkd71f-MuiGrid2-root"
@@ -812,7 +816,16 @@ exports[`AddDataCollection test should render component with a valid collection 
       class="MuiGrid-root MuiGrid-item Page-layoutCard-123 css-13i4rnv-MuiGrid-root"
     >
       <form>
-        <div />
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+        <div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+        </div>
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 DataCollection css-dkd71f-MuiGrid2-root"
         >
@@ -1594,7 +1607,16 @@ exports[`AddDataCollection test should render component with an invalid collecti
       class="MuiGrid-root MuiGrid-item Page-layoutCard-112 css-13i4rnv-MuiGrid-root"
     >
       <form>
-        <div />
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+        <div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+        </div>
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 DataCollection css-dkd71f-MuiGrid2-root"
         >
@@ -2376,7 +2398,16 @@ exports[`AddDataCollection test should render data set form 1`] = `
       class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
     >
       <form>
-        <div />
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
+        <div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+        </div>
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 DataCollection css-dkd71f-MuiGrid2-root"
         >

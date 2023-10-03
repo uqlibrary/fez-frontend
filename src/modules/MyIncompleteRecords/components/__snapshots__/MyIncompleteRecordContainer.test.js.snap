@@ -197,7 +197,12 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
         />
       </div>
       <form>
-        <div />
+        <div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+        </div>
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
@@ -1016,6 +1021,10 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
                         style="margin-bottom: 0px;"
                       >
+                        <span
+                          class="MuiBox-root css-0"
+                          data-testid="confirmDialogBox"
+                        />
                         <br />
                         <div>
                           <span
@@ -2025,7 +2034,12 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
         />
       </div>
       <form>
-        <div />
+        <div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+        </div>
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
@@ -2844,6 +2858,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
                         style="margin-bottom: 0px;"
                       >
+                        <span
+                          class="MuiBox-root css-0"
+                          data-testid="confirmDialogBox"
+                        />
                         <br />
                         <div>
                           <span
