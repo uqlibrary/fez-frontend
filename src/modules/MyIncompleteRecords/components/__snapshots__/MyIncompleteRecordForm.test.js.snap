@@ -436,7 +436,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         id="rek-significance-label"
                       >
@@ -457,7 +457,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-significance-select"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
                           id="rek-significance-select"
                           role="button"
@@ -471,6 +471,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                         </div>
                         <input
                           aria-hidden="true"
+                          aria-invalid="true"
                           aria-labelledby="rek-significance-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                           data-analyticsid="rek-significance-input"
@@ -579,7 +580,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         id="rek-audience-size-label"
                       >
@@ -600,7 +601,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-audience-size-select"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-audience-size-select"
                           id="rek-audience-size-select"
                           role="button"
@@ -614,6 +615,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                         </div>
                         <input
                           aria-hidden="true"
+                          aria-invalid="true"
                           aria-labelledby="rek-audience-size-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                           data-analyticsid="rek-audience-size-input"
@@ -691,7 +693,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                         data-testid="rek-grant-agency"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="rek-grant-agency-label"
                           for="rek-grant-agency-input"
@@ -727,7 +729,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                         data-testid="rek-grant-id"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="rek-grant-id-label"
                           for="rek-grant-id-input"
@@ -785,6 +787,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                           </div>
                           <input
                             aria-hidden="true"
+                            aria-invalid="false"
                             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                             data-testid="rek-grant-type-input"
                             disabled=""
@@ -954,7 +957,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                   style="margin-top: -24px;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     data-testid="comments-label"
                     for="comments-input"
@@ -982,7 +985,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                       aria-hidden="true"
                       class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
                       readonly=""
-                      style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding: 0px; width: 100%;"
+                      style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                       tabindex="-1"
                     />
                   </div>

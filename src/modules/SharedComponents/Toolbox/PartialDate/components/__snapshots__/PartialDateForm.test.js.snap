@@ -64,7 +64,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -75,6 +75,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -194,7 +195,7 @@ exports[`PartialDateForm component should handle keypress 1`] = `
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -205,6 +206,7 @@ exports[`PartialDateForm component should handle keypress 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -324,7 +326,7 @@ exports[`PartialDateForm component should handle keypress 2`] = `
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -335,6 +337,7 @@ exports[`PartialDateForm component should handle keypress 2`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -454,7 +457,7 @@ exports[`PartialDateForm component should handle keypress 3`] = `
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -465,6 +468,7 @@ exports[`PartialDateForm component should handle keypress 3`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -584,7 +588,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -595,6 +599,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -714,7 +719,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -725,6 +730,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -844,7 +850,7 @@ exports[`PartialDateForm component should handle partial values day and year onl
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -855,6 +861,7 @@ exports[`PartialDateForm component should handle partial values day and year onl
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -981,6 +988,7 @@ exports[`PartialDateForm component should handle partial values with year only 1
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -1107,6 +1115,7 @@ exports[`PartialDateForm component should load existing values 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -1233,6 +1242,7 @@ exports[`PartialDateForm component should load existing values from input value 
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -1359,6 +1369,7 @@ exports[`PartialDateForm component should render comp 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -1485,7 +1496,7 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -1496,6 +1507,7 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"

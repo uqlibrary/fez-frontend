@@ -15,7 +15,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-10dv3g5-MuiGrid2-root"
       >
         <a
-          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-n3j285-MuiTypography-root-MuiLink-root"
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
           title="testA.txt"
         >
           testA.txt
@@ -35,7 +35,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             id="dsi-security-policy-0-label"
           >
@@ -72,6 +72,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               aria-labelledby="dsi-security-policy-0-label"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="dsi-security-policy-0-input"
@@ -121,7 +122,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-10dv3g5-MuiGrid2-root"
       >
         <a
-          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-n3j285-MuiTypography-root-MuiLink-root"
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
           title="test4.txt"
         >
           test4.txt
@@ -141,7 +142,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="dsi-security-policy-0-label"
           >
@@ -174,6 +175,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               aria-labelledby="dsi-security-policy-0-label"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="dsi-security-policy-0-input"
@@ -218,7 +220,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-10dv3g5-MuiGrid2-root"
       >
         <a
-          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-n3j285-MuiTypography-root-MuiLink-root"
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
           title="test9.txt"
         >
           test9.txt
@@ -238,7 +240,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             id="dsi-security-policy-0-label"
           >
@@ -275,6 +277,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               aria-labelledby="dsi-security-policy-0-label"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="dsi-security-policy-0-input"

@@ -5,7 +5,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
   <svg
     aria-hidden="true"
     aria-label="Open Access - undefined - Free to read"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-3 makeStyles-svg-4 css-i4bv87-MuiSvgIcon-root"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1k9ar5s-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="oa-icon"
     focusable="false"

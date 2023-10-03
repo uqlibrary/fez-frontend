@@ -6,7 +6,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -32,6 +32,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
@@ -62,7 +63,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -84,6 +85,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
@@ -114,7 +116,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -136,6 +138,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
@@ -166,7 +169,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -192,6 +195,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
@@ -222,7 +226,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -236,7 +240,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-code-select"
         id="rek-herdc-code-select"
         role="button"
@@ -250,6 +254,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="true"
         aria-labelledby="rek-herdc-code-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
@@ -287,7 +292,7 @@ exports[`HerdcCodeField component should render when given a default value field
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -315,6 +320,7 @@ exports[`HerdcCodeField component should render when given a default value field
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
@@ -345,7 +351,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -359,7 +365,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-code-select"
         id="rek-herdc-code-select"
         role="button"
@@ -373,6 +379,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="true"
         aria-labelledby="rek-herdc-code-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"

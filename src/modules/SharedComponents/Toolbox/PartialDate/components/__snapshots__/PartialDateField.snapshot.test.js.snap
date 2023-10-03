@@ -63,7 +63,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="undefined-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="undefined-month-select"
               data-testid="undefined-month-select"
               id="undefined-month-select"
@@ -74,6 +74,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="undefined-month-input"
               data-testid="undefined-month-input"
@@ -192,7 +193,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="undefined-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="undefined-month-select"
               data-testid="undefined-month-select"
               id="undefined-month-select"
@@ -203,6 +204,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="undefined-month-input"
               data-testid="undefined-month-input"
@@ -321,7 +323,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="undefined-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="undefined-month-select"
               data-testid="undefined-month-select"
               id="undefined-month-select"
@@ -332,6 +334,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="undefined-month-input"
               data-testid="undefined-month-input"

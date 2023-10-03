@@ -1,60 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DocumentTypeMultipleField component should have a proper style generator 1`] = `
-Object {
-  "selectedMenuItem": Object {
-    "backgroundColor": "test2 !important",
-    "color": "test3",
-  },
-  "title": Object {
-    "0": "t",
-    "1": "e",
-    "2": "s",
-    "3": "t",
-    "4": "1",
-  },
-}
-`;
-
-exports[`DocumentTypeMultipleField component should have a proper style generator 2`] = `
-Object {
-  "selectedMenuItem": Object {
-    "backgroundColor": " !important",
-    "color": "",
-  },
-  "title": Object {
-    "0": "t",
-    "1": "e",
-    "2": "s",
-    "3": "t",
-    "4": "1",
-  },
-}
-`;
-
-exports[`DocumentTypeMultipleField component should have a proper style generator 3`] = `
-Object {
-  "selectedMenuItem": Object {
-    "backgroundColor": " !important",
-    "color": "",
-  },
-  "title": Object {
-    "0": "t",
-    "1": "e",
-    "2": "s",
-    "3": "t",
-    "4": "1",
-  },
-}
-`;
-
 exports[`DocumentTypeMultipleField component should render default view 1`] = `
 <div>
   <div
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
     >
       Work type
@@ -81,6 +33,7 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         name="document-type-selector"
         tabindex="-1"
@@ -108,7 +61,7 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
     >
       Work type
@@ -135,6 +88,7 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         disabled=""
         name="document-type-selector"
@@ -163,7 +117,7 @@ exports[`DocumentTypeMultipleField component should render with given document t
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
     >
       Work type
@@ -188,6 +142,7 @@ exports[`DocumentTypeMultipleField component should render with given document t
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         name="document-type-selector"
         tabindex="-1"

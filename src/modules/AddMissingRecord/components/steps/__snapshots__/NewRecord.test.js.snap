@@ -89,7 +89,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     id="rek-display-type-label"
                   >
@@ -124,6 +124,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                     </div>
                     <input
                       aria-hidden="true"
+                      aria-invalid="false"
                       aria-labelledby="rek-display-type-label"
                       class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                       data-analyticsid="rek-display-type-input"

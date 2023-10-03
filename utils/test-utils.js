@@ -26,8 +26,6 @@ import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
 import preview from 'jest-preview';
 
-import preview from 'jest-preview';
-
 export const AllTheProviders = props => {
     return (
         <MuiThemeProvider theme={mui1theme}>

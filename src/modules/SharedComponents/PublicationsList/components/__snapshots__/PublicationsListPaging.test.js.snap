@@ -15,19 +15,19 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
     id="test"
   >
     <div
-      class="MuiGrid-root MuiGrid-container PublicationsListPaging-gridContainer-76 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-dlp602-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-73 paging-previous css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-previous css-eim5ci-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-74 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronLeftIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -43,14 +43,14 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto PublicationsListPaging-paginationGridContainer-77 css-jqg9cv-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-dva1xv-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
       >
         <button
           aria-label="Click to select page 1 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-71 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -64,7 +64,7 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall PublicationsListPaging-pageButton-71 PublicationsListPaging-current-72 paging-button css-1txkq4h-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall paging-button css-1j5g3oy-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-2"
           data-testid="test-select-page-2"
           id="test-select-page-2"
@@ -78,7 +78,7 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-71 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-3"
           data-testid="test-select-page-3"
           id="test-select-page-3"
@@ -101,7 +101,7 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
           class="MuiBox-root css-1ml4cqn"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-73 css-d37pjp-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-eim5ci-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -116,14 +116,14 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-73 paging-next css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-next css-eim5ci-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           Next
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-74 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronRightIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -149,19 +149,19 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
     id="test"
   >
     <div
-      class="MuiGrid-root MuiGrid-container PublicationsListPaging-gridContainer-41 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-dlp602-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-38 paging-previous css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-previous css-eim5ci-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-39 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronLeftIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -177,14 +177,14 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto PublicationsListPaging-paginationGridContainer-42 css-jqg9cv-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-dva1xv-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
       >
         <button
           aria-label="Click to select page 1 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-36 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -199,7 +199,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         ...
         <button
           aria-label="Click to select page 8 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-36 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-8"
           data-testid="test-select-page-8"
           id="test-select-page-8"
@@ -213,7 +213,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
         <button
           aria-label="Click to select page 9 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-36 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-9"
           data-testid="test-select-page-9"
           id="test-select-page-9"
@@ -227,7 +227,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
         <button
           aria-label="Click to select page 10 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall PublicationsListPaging-pageButton-36 PublicationsListPaging-current-37 paging-button css-1txkq4h-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall paging-button css-1j5g3oy-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-10"
           data-testid="test-select-page-10"
           id="test-select-page-10"
@@ -241,7 +241,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
         <button
           aria-label="Click to select page 11 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-36 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-11"
           data-testid="test-select-page-11"
           id="test-select-page-11"
@@ -255,7 +255,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
         <button
           aria-label="Click to select page 12 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-36 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-12"
           data-testid="test-select-page-12"
           id="test-select-page-12"
@@ -270,7 +270,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         ...
         <button
           aria-label="Click to select page 50 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-36 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-50"
           data-testid="test-select-page-50"
           id="test-select-page-50"
@@ -293,7 +293,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           class="MuiBox-root css-1ml4cqn"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-38 css-d37pjp-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-eim5ci-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -308,14 +308,14 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-38 paging-next css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-next css-eim5ci-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           Next
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-39 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronRightIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -349,20 +349,20 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
     id="test"
   >
     <div
-      class="MuiGrid-root MuiGrid-container PublicationsListPaging-gridContainer-20 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-dlp602-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-17 paging-previous css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-previous css-eim5ci-MuiButtonBase-root-MuiButton-root"
           disabled=""
           tabindex="-1"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-18 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronLeftIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -375,14 +375,14 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto PublicationsListPaging-paginationGridContainer-21 css-jqg9cv-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-dva1xv-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
       >
         <button
           aria-label="Click to select page 1 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall PublicationsListPaging-pageButton-15 PublicationsListPaging-current-16 paging-button css-1txkq4h-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall paging-button css-1j5g3oy-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -396,7 +396,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-15 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-2"
           data-testid="test-select-page-2"
           id="test-select-page-2"
@@ -410,7 +410,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-15 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-3"
           data-testid="test-select-page-3"
           id="test-select-page-3"
@@ -433,7 +433,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           class="MuiBox-root css-1ml4cqn"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-17 css-d37pjp-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-eim5ci-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -448,14 +448,14 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-17 paging-next css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-next css-eim5ci-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           Next
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-18 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronRightIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -481,19 +481,19 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
     id="test"
   >
     <div
-      class="MuiGrid-root MuiGrid-container PublicationsListPaging-gridContainer-34 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-dlp602-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-31 paging-previous css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-previous css-eim5ci-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-32 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronLeftIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -509,14 +509,14 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto PublicationsListPaging-paginationGridContainer-35 css-jqg9cv-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-dva1xv-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
       >
         <button
           aria-label="Click to select page 1 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-29 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -530,7 +530,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-29 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-2"
           data-testid="test-select-page-2"
           id="test-select-page-2"
@@ -544,7 +544,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall PublicationsListPaging-pageButton-29 PublicationsListPaging-current-30 paging-button css-1txkq4h-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall paging-button css-1j5g3oy-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-3"
           data-testid="test-select-page-3"
           id="test-select-page-3"
@@ -567,7 +567,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           class="MuiBox-root css-1ml4cqn"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-31 css-d37pjp-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-eim5ci-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -582,7 +582,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-31 paging-next css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-next css-eim5ci-MuiButtonBase-root-MuiButton-root"
           disabled=""
           tabindex="-1"
           type="button"
@@ -590,7 +590,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           Next
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-32 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronRightIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -613,19 +613,19 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
     id="test"
   >
     <div
-      class="MuiGrid-root MuiGrid-container PublicationsListPaging-gridContainer-27 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-dlp602-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-24 paging-previous css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-previous css-eim5ci-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-25 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronLeftIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -641,14 +641,14 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto PublicationsListPaging-paginationGridContainer-28 css-jqg9cv-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-dva1xv-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
       >
         <button
           aria-label="Click to select page 1 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-22 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -662,7 +662,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall PublicationsListPaging-pageButton-22 PublicationsListPaging-current-23 paging-button css-1txkq4h-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall paging-button css-1j5g3oy-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-2"
           data-testid="test-select-page-2"
           id="test-select-page-2"
@@ -676,7 +676,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit PublicationsListPaging-pageButton-22 paging-button css-c9a9to-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-vksm78-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-3"
           data-testid="test-select-page-3"
           id="test-select-page-3"
@@ -699,7 +699,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           class="MuiBox-root css-1ml4cqn"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-24 css-d37pjp-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-eim5ci-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -714,14 +714,14 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium PublicationsListPaging-nextPrevButtons-24 paging-next css-d37pjp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium paging-next css-eim5ci-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           Next
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium PublicationsListPaging-nextPrevIcons-25 css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-17e890r-MuiSvgIcon-root"
             data-testid="ChevronRightIcon"
             focusable="false"
             viewBox="0 0 24 24"

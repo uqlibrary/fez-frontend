@@ -64,7 +64,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 1`] =
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -75,6 +75,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 1`] =
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -194,7 +195,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 2 1`]
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -205,6 +206,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 2 1`]
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"
@@ -324,7 +326,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 3 1`]
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -335,6 +337,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 3 1`]
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="true"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               data-analyticsid="test-month-input"
               data-testid="test-month-input"

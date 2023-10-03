@@ -16,7 +16,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
           data-testid="simple-search"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="simple-search-label"
             for="simple-search-input"
@@ -99,7 +99,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
           data-testid="simple-search"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="simple-search-label"
             for="simple-search-input"
@@ -182,7 +182,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
           data-testid="simple-search"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="simple-search-label"
             for="simple-search-input"
@@ -265,7 +265,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
           data-testid="simple-search"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="simple-search-label"
             for="simple-search-input"
@@ -348,7 +348,7 @@ exports[`SearchComponent should render default view 1`] = `
           data-testid="simple-search"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="simple-search-label"
             for="simple-search-input"
@@ -483,8 +483,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-autoWidth-33 css-13i4rnv-MuiGrid-root"
-                  style="min-width: 200px;"
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -498,7 +497,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
                         role="button"
@@ -508,6 +507,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                       </div>
                       <input
                         aria-hidden="true"
+                        aria-invalid="true"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
@@ -536,19 +536,19 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 makeStyles-advancedSearchCombiner-35 css-u1nwny-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 makeStyles-mobileInputRow-37 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth makeStyles-autoWidth-33 css-175wz9v-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -578,7 +578,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
                 >
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth makeStyles-mobileRowSpacer-36 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -586,7 +586,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-sideBar-30 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -598,7 +598,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
@@ -625,6 +625,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   </div>
                   <input
                     aria-hidden="true"
+                    aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="document-type-selector"
                     tabindex="-1"
@@ -664,8 +665,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -691,8 +691,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       aria-labelledby="combiner-label"
@@ -710,8 +709,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -743,7 +741,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
@@ -788,7 +786,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root makeStyles-blueButton-32 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root makeStyles-blueButton-32 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -840,7 +838,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-searchButton-31 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -869,7 +867,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-44"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             />
           </div>
@@ -948,8 +946,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-autoWidth-11 css-13i4rnv-MuiGrid-root"
-                  style="min-width: 200px;"
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -963,7 +960,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
                         role="button"
@@ -973,6 +970,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                       </div>
                       <input
                         aria-hidden="true"
+                        aria-invalid="true"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
@@ -1001,19 +999,19 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 makeStyles-advancedSearchCombiner-13 css-u1nwny-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 makeStyles-mobileInputRow-15 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth makeStyles-autoWidth-11 css-175wz9v-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -1043,7 +1041,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
                 >
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth makeStyles-mobileRowSpacer-14 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -1051,7 +1049,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-sideBar-8 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -1063,7 +1061,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
@@ -1090,6 +1088,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   </div>
                   <input
                     aria-hidden="true"
+                    aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="document-type-selector"
                     tabindex="-1"
@@ -1129,8 +1128,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -1156,8 +1154,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       aria-labelledby="combiner-label"
@@ -1175,8 +1172,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -1208,7 +1204,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
@@ -1253,7 +1249,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root makeStyles-blueButton-10 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root makeStyles-blueButton-10 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -1305,7 +1301,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-searchButton-9 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -1334,21 +1330,21 @@ exports[`SearchComponent should render in advanced search and take in considerat
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-22"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             >
               <span
                 data-testid="open-access-caption"
               >
                 <span
-                  class="makeStyles-combiner-20"
+                  class="MuiBox-root css-1pfoj4l"
                   data-testid="open-access-caption-combiner"
                   id="open-access-caption-combiner"
                 >
                   is
                 </span>
                 <span
-                  class="makeStyles-value-21"
+                  class="MuiBox-root css-14h1whs"
                   data-testid="open-access-caption-value"
                   id="open-access-caption-value"
                 >
@@ -1374,10 +1370,10 @@ exports[`SearchComponent should render simple search even if it says is advanced
     style="margin: 8px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-46 css-13e2t53-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-51 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -1415,7 +1411,7 @@ exports[`SearchComponent should render simple search even if it says is advanced
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-47 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
           data-testid="SearchIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1439,10 +1435,10 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
     style="margin: 8px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-24 css-13e2t53-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-29 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -1480,7 +1476,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-25 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
           data-testid="SearchIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1566,8 +1562,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-autoWidth-311 css-13i4rnv-MuiGrid-root"
-                  style="min-width: 200px;"
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -1581,7 +1576,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
                         role="button"
@@ -1591,6 +1586,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                       </div>
                       <input
                         aria-hidden="true"
+                        aria-invalid="true"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
@@ -1619,19 +1615,19 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 makeStyles-advancedSearchCombiner-313 css-u1nwny-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 makeStyles-mobileInputRow-315 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth makeStyles-autoWidth-311 css-175wz9v-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -1661,7 +1657,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
                 >
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth makeStyles-mobileRowSpacer-314 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -1669,7 +1665,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-sideBar-308 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -1681,7 +1677,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
@@ -1708,6 +1704,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   </div>
                   <input
                     aria-hidden="true"
+                    aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="document-type-selector"
                     tabindex="-1"
@@ -1747,8 +1744,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -1774,8 +1770,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       aria-labelledby="combiner-label"
@@ -1793,8 +1788,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -1826,7 +1820,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
@@ -1872,7 +1866,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root makeStyles-blueButton-310 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root makeStyles-blueButton-310 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -1924,7 +1918,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-searchButton-309 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -1953,7 +1947,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-322"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             />
           </div>
@@ -2027,7 +2021,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-218"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             />
           </div>
@@ -2106,8 +2100,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-autoWidth-244 css-13i4rnv-MuiGrid-root"
-                  style="min-width: 200px;"
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -2121,7 +2114,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
                         role="button"
@@ -2131,6 +2124,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                       </div>
                       <input
                         aria-hidden="true"
+                        aria-invalid="true"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
@@ -2159,19 +2153,19 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 makeStyles-advancedSearchCombiner-246 css-u1nwny-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 makeStyles-mobileInputRow-248 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth makeStyles-autoWidth-244 css-175wz9v-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -2201,7 +2195,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
                 >
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth makeStyles-mobileRowSpacer-247 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -2209,7 +2203,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-sideBar-241 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -2221,7 +2215,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
@@ -2248,6 +2242,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   </div>
                   <input
                     aria-hidden="true"
+                    aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="document-type-selector"
                     tabindex="-1"
@@ -2287,8 +2282,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -2314,8 +2308,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       aria-labelledby="combiner-label"
@@ -2333,8 +2326,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -2366,7 +2358,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
@@ -2411,7 +2403,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root makeStyles-blueButton-243 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root makeStyles-blueButton-243 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -2463,7 +2455,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-searchButton-242 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -2492,21 +2484,21 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-255"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             >
               <span
                 data-testid="open-access-caption"
               >
                 <span
-                  class="makeStyles-combiner-253"
+                  class="MuiBox-root css-1pfoj4l"
                   data-testid="open-access-caption-combiner"
                   id="open-access-caption-combiner"
                 >
                   is
                 </span>
                 <span
-                  class="makeStyles-value-254"
+                  class="MuiBox-root css-14h1whs"
                   data-testid="open-access-caption-value"
                   id="open-access-caption-value"
                 >
@@ -2542,7 +2534,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           data-testid="simple-search"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="simple-search-label"
             for="simple-search-input"
@@ -2677,8 +2669,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-autoWidth-62 css-13i4rnv-MuiGrid-root"
-                  style="min-width: 200px;"
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -2692,7 +2683,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
                         role="button"
@@ -2702,6 +2693,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                       </div>
                       <input
                         aria-hidden="true"
+                        aria-invalid="true"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
@@ -2730,19 +2722,19 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 makeStyles-advancedSearchCombiner-64 css-u1nwny-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 makeStyles-mobileInputRow-66 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth makeStyles-autoWidth-62 css-175wz9v-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -2772,7 +2764,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
                 >
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth makeStyles-mobileRowSpacer-65 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -2780,7 +2772,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-sideBar-59 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -2792,7 +2784,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
@@ -2819,6 +2811,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   </div>
                   <input
                     aria-hidden="true"
+                    aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="document-type-selector"
                     tabindex="-1"
@@ -2858,8 +2851,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -2885,8 +2877,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       aria-labelledby="combiner-label"
@@ -2904,8 +2895,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -2937,7 +2927,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
@@ -2982,7 +2972,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root makeStyles-blueButton-61 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root makeStyles-blueButton-61 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -3034,7 +3024,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-searchButton-60 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -3063,7 +3053,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-73"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             />
           </div>
@@ -3142,8 +3132,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-autoWidth-229 css-13i4rnv-MuiGrid-root"
-                  style="min-width: 200px;"
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -3157,7 +3146,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
                         role="button"
@@ -3167,6 +3156,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                       </div>
                       <input
                         aria-hidden="true"
+                        aria-invalid="true"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
@@ -3195,19 +3185,19 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 makeStyles-advancedSearchCombiner-231 css-u1nwny-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 makeStyles-mobileInputRow-233 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth makeStyles-autoWidth-229 css-175wz9v-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -3237,7 +3227,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
                 >
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth makeStyles-mobileRowSpacer-232 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -3245,7 +3235,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-sideBar-226 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -3257,7 +3247,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
@@ -3284,6 +3274,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   </div>
                   <input
                     aria-hidden="true"
+                    aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="document-type-selector"
                     tabindex="-1"
@@ -3323,8 +3314,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -3350,8 +3340,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       aria-labelledby="combiner-label"
@@ -3369,8 +3358,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -3402,7 +3390,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
@@ -3447,7 +3435,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root makeStyles-blueButton-228 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root makeStyles-blueButton-228 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -3499,7 +3487,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-searchButton-227 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -3528,7 +3516,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-240"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             />
           </div>
@@ -3555,7 +3543,7 @@ exports[`SearchComponent should toggle to simple search 1`] = `
           data-testid="simple-search"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="simple-search-label"
             for="simple-search-input"
@@ -3690,8 +3678,7 @@ exports[`SearchComponent should update advanced search row on search text change
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-autoWidth-296 css-13i4rnv-MuiGrid-root"
-                  style="min-width: 200px;"
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -3715,6 +3702,7 @@ exports[`SearchComponent should update advanced search row on search text change
                       </div>
                       <input
                         aria-hidden="true"
+                        aria-invalid="false"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
@@ -3741,7 +3729,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 makeStyles-advancedSearchCombiner-298 css-u1nwny-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
                   >
                     contains
                   </p>
@@ -3749,13 +3737,13 @@ exports[`SearchComponent should update advanced search row on search text change
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 makeStyles-mobileInputRow-300 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth makeStyles-autoWidth-296 css-175wz9v-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
                 >
                   <div
                     aria-label="Type a value to search all fields for"
@@ -3784,7 +3772,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
                 >
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth makeStyles-mobileRowSpacer-299 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -3792,7 +3780,7 @@ exports[`SearchComponent should update advanced search row on search text change
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-sideBar-293 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -3804,7 +3792,7 @@ exports[`SearchComponent should update advanced search row on search text change
                 class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
@@ -3831,6 +3819,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   </div>
                   <input
                     aria-hidden="true"
+                    aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="document-type-selector"
                     tabindex="-1"
@@ -3870,8 +3859,7 @@ exports[`SearchComponent should update advanced search row on search text change
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -3897,8 +3885,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       aria-labelledby="combiner-label"
@@ -3916,8 +3903,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -3949,7 +3935,7 @@ exports[`SearchComponent should update advanced search row on search text change
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
@@ -3994,7 +3980,7 @@ exports[`SearchComponent should update advanced search row on search text change
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root makeStyles-blueButton-295 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root makeStyles-blueButton-295 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             id="add-another-search-row"
@@ -4048,7 +4034,7 @@ exports[`SearchComponent should update advanced search row on search text change
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-searchButton-294 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -4077,28 +4063,28 @@ exports[`SearchComponent should update advanced search row on search text change
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-307"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             >
               <span
                 data-testid="all-caption"
               >
                 <span
-                  class="makeStyles-title-304"
+                  class="MuiBox-root css-1i7p2di"
                   data-testid="all-caption-title"
                   id="all-caption-title"
                 >
                   Any field
                 </span>
                 <span
-                  class="makeStyles-combiner-305"
+                  class="MuiBox-root css-1pfoj4l"
                   data-testid="all-caption-combiner"
                   id="all-caption-combiner"
                 >
                   contains
                 </span>
                 <span
-                  class="makeStyles-value-306"
+                  class="MuiBox-root css-14h1whs"
                   data-testid="all-caption-value"
                   id="all-caption-value"
                 >
@@ -4182,8 +4168,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-autoWidth-356 css-13i4rnv-MuiGrid-root"
-                  style="min-width: 200px;"
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -4197,7 +4182,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
                         role="button"
@@ -4207,6 +4192,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                       </div>
                       <input
                         aria-hidden="true"
+                        aria-invalid="true"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
@@ -4235,19 +4221,19 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 makeStyles-advancedSearchCombiner-358 css-u1nwny-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 makeStyles-mobileInputRow-360 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth makeStyles-autoWidth-356 css-175wz9v-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -4277,7 +4263,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
                 >
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth makeStyles-mobileRowSpacer-359 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -4285,7 +4271,7 @@ exports[`SearchComponent should update date range filter 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-sideBar-353 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -4297,7 +4283,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
@@ -4324,6 +4310,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                   <input
                     aria-hidden="true"
+                    aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="document-type-selector"
                     tabindex="-1"
@@ -4363,8 +4350,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -4390,8 +4376,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       aria-labelledby="combiner-label"
@@ -4409,8 +4394,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -4445,7 +4429,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink makeStyles-title-363 css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15a1x70-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Created date range
@@ -4456,8 +4440,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
@@ -4506,8 +4489,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -4524,8 +4506,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
@@ -4582,7 +4563,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink makeStyles-title-363 css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15a1x70-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Updated date range
@@ -4593,8 +4574,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
@@ -4643,8 +4623,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -4661,8 +4640,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
@@ -4716,7 +4694,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
@@ -4761,7 +4739,7 @@ exports[`SearchComponent should update date range filter 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root makeStyles-blueButton-355 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root makeStyles-blueButton-355 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             id="add-another-search-row"
@@ -4815,7 +4793,7 @@ exports[`SearchComponent should update date range filter 1`] = `
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-searchButton-354 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -4844,28 +4822,28 @@ exports[`SearchComponent should update date range filter 1`] = `
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-368"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             >
               <span
                 data-testid="rek-created-date-caption"
               >
                 <span
-                  class="makeStyles-title-365"
+                  class="MuiBox-root css-1i7p2di"
                   data-testid="rek-created-date-caption-title"
                   id="rek-created-date-caption-title"
                 >
                   Created
                 </span>
                 <span
-                  class="makeStyles-combiner-366"
+                  class="MuiBox-root css-1pfoj4l"
                   data-testid="rek-created-date-caption-combiner"
                   id="rek-created-date-caption-combiner"
                 >
                   between
                 </span>
                 <span
-                  class="makeStyles-value-367"
+                  class="MuiBox-root css-14h1whs"
                   data-testid="rek-created-date-caption-value"
                   id="rek-created-date-caption-value"
                 >
@@ -4949,8 +4927,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item makeStyles-autoWidth-356 css-13i4rnv-MuiGrid-root"
-                  style="min-width: 200px;"
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -4964,7 +4941,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
                         role="button"
@@ -4974,6 +4951,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                       </div>
                       <input
                         aria-hidden="true"
+                        aria-invalid="true"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
@@ -5002,19 +4980,19 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 makeStyles-advancedSearchCombiner-358 css-u1nwny-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 makeStyles-mobileInputRow-360 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth makeStyles-autoWidth-356 css-175wz9v-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -5044,7 +5022,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
                 >
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth makeStyles-mobileRowSpacer-359 css-9mgopn-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -5052,7 +5030,7 @@ exports[`SearchComponent should update date range filter 2`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-sideBar-353 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -5064,7 +5042,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
@@ -5091,6 +5069,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                   <input
                     aria-hidden="true"
+                    aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="document-type-selector"
                     tabindex="-1"
@@ -5130,8 +5109,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -5157,8 +5135,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       aria-labelledby="combiner-label"
@@ -5176,8 +5153,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -5212,7 +5188,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink makeStyles-title-363 css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15a1x70-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Created date range
@@ -5223,8 +5199,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
@@ -5273,8 +5248,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -5291,8 +5265,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
@@ -5349,7 +5322,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink makeStyles-title-363 css-6nelbu-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15a1x70-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Updated date range
@@ -5360,8 +5333,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                 class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
@@ -5410,8 +5382,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                    style="width: 24px;"
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -5428,8 +5399,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
-                  style="flex-grow: 1; width: 1px;"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
@@ -5483,7 +5453,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
@@ -5528,7 +5498,7 @@ exports[`SearchComponent should update date range filter 2`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root makeStyles-blueButton-355 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root makeStyles-blueButton-355 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             id="add-another-search-row"
@@ -5582,7 +5552,7 @@ exports[`SearchComponent should update date range filter 2`] = `
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 makeStyles-searchButton-354 css-1lj5egr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -5611,28 +5581,28 @@ exports[`SearchComponent should update date range filter 2`] = `
             data-testid="advanced-search-caption"
           >
             <span
-              class="makeStyles-captions-368"
+              class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
             >
               <span
                 data-testid="rek-created-date-caption"
               >
                 <span
-                  class="makeStyles-title-365"
+                  class="MuiBox-root css-1i7p2di"
                   data-testid="rek-created-date-caption-title"
                   id="rek-created-date-caption-title"
                 >
                   Created
                 </span>
                 <span
-                  class="makeStyles-combiner-366"
+                  class="MuiBox-root css-1pfoj4l"
                   data-testid="rek-created-date-caption-combiner"
                   id="rek-created-date-caption-combiner"
                 >
                   between
                 </span>
                 <span
-                  class="makeStyles-value-367"
+                  class="MuiBox-root css-14h1whs"
                   data-testid="rek-created-date-caption-value"
                   id="rek-created-date-caption-value"
                 >
