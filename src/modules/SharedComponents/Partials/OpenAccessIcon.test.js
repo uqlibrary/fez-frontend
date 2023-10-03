@@ -21,8 +21,8 @@ describe('Journal Name Component test ', () => {
     });
 
     it('should pass style to child component', () => {
-        const wrapper = setup({ isOpenAccess: true, style: { spacingBottom: -10, border: '10px solid purple' } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isOpenAccess: true, style: { spacingBottom: -10, border: '10px solid purple' } });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render open access with OPEN_ACCESS_ID_LINK_NO_DOI', () => {

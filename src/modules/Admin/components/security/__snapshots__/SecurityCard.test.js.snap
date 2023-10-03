@@ -1,819 +1,1060 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SecurityCard component should not render data stream security selector for the record if no datastreams found 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
   >
-    <StandardCard
-      accentHeader={true}
-      standardCardId="record-security-card"
-      subCard={true}
-      title={
-        <span>
-          <strong>
-            Work
-          </strong>
-           level security - 
-          UQ:123456
-        </span>
-      }
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={2}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-7 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="record-security-card"
+        id="record-security-card"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root makeStyles-cardHeaderAccent-10 css-185gdzj-MuiCardHeader-root"
         >
-          <Memo(InheritedSecurityDetails)
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            parentKey="rek_security_policy"
-            title="Inherited security policy details"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-12 css-1hzv55z-MuiTypography-root"
+              data-testid="record-security-card-header"
+              id="record-security-card-header"
+            >
+              <span>
+                <strong>
+                  Work
+                </strong>
+                 level security - 
+                UQ:123456
+              </span>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="record-security-card-content"
+          data-testid="record-security-card-content"
+          id="record-security-card-content"
         >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            disabled={false}
-            label="Override inherited security (detailed below)"
-            name="securitySection.rek_security_inherited"
-            normalize={[Function]}
-            overrideSecurityId="rek-security-inherited"
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                  style="margin-top: -8px;"
+                >
+                  Inherited security policy details
+                </h6>
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  style="margin-top: 8px;"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+                    >
+                      Test collection
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+                    >
+                      undefined
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    >
+                      Theses Assessors (2)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Override inherited security (detailed below)"
+                name="securitySection.rek_security_inherited"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`SecurityCard component should render security card correctly for collection with data stream selector for collection 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
   >
-    <StandardCard
-      accentHeader={true}
-      standardCardId="record-security-card"
-      subCard={true}
-      title={
-        <span>
-          <strong>
-            Collection
-          </strong>
-           level security - 
-          UQ:123456
-        </span>
-      }
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={2}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-19 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="record-security-card"
+        id="record-security-card"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root makeStyles-cardHeaderAccent-22 css-185gdzj-MuiCardHeader-root"
         >
-          <Memo(SecuritySelector)
-            disabled={true}
-            fieldName="securitySection.rek_security_policy"
-            recordType="collection"
-            securityPolicy={5}
-            securitySelectorId="rek-security-policy"
-            text={
-              Object {
-                "cardTitle": [Function],
-                "dataStreamFieldLabel": <span>
-                  Override datastream level policy to apply to the 
-                  <b>
-                    datastream
-                  </b>
-                   of this PID
-                </span>,
-                "dataStreamSelectedTitle": <span>
-                  Current collection 
-                  <b>
-                    datastream
-                  </b>
-                   level security policy details
-                </span>,
-                "description": "",
-                "fieldLabel": "Override collection level policy to apply to this PID",
-                "prompt": "Select a security policy to apply",
-                "selectedTitle": "Current collection level security policy details",
-              }
-            }
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-24 css-1hzv55z-MuiTypography-root"
+              data-testid="record-security-card-header"
+              id="record-security-card-header"
+            >
+              <span>
+                <strong>
+                  Collection
+                </strong>
+                 level security - 
+                UQ:123456
+              </span>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="record-security-card-content"
+          data-testid="record-security-card-content"
+          id="record-security-card-content"
         >
-          <Memo(SecuritySelector)
-            disabled={true}
-            fieldName="securitySection.rek_datastream_policy"
-            recordType="collection"
-            securityPolicy={5}
-            securitySelectorId="rek-datastream-policy"
-            text={
-              Object {
-                "fieldLabel": <span>
-                  Override datastream level policy to apply to the 
-                  <b>
-                    datastream
-                  </b>
-                   of this PID
-                </span>,
-                "prompt": "Select a security policy to apply",
-                "selectedTitle": <span>
-                  Current collection 
-                  <b>
-                    datastream
-                  </b>
-                   level security policy details
-                </span>,
-              }
-            }
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+              >
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                >
+                  <field
+                    disabled="true"
+                    is="mock"
+                    name="securitySection.rek_security_policy"
+                  />
+                </div>
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                  style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                    style="margin-top: -8px;"
+                  >
+                    Current collection level security policy details
+                  </h6>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-85682g-MuiGrid2-root"
+                    style="margin-top: 8px;"
+                  >
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1sv416d-MuiGrid2-root"
+                    >
+                      <b>
+                        Name (ID):
+                      </b>
+                    </div>
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-tnkek8-MuiGrid2-root"
+                    >
+                      Public (5)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+              >
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                >
+                  <field
+                    disabled="true"
+                    is="mock"
+                    name="securitySection.rek_datastream_policy"
+                  />
+                </div>
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                  style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                    style="margin-top: -8px;"
+                  >
+                    <span>
+                      Current collection 
+                      <b>
+                        datastream
+                      </b>
+                       level security policy details
+                    </span>
+                  </h6>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-85682g-MuiGrid2-root"
+                    style="margin-top: 8px;"
+                  >
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1sv416d-MuiGrid2-root"
+                    >
+                      <b>
+                        Name (ID):
+                      </b>
+                    </div>
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-tnkek8-MuiGrid2-root"
+                    >
+                      Public (5)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`SecurityCard component should render security card correctly for community 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
   >
-    <StandardCard
-      accentHeader={true}
-      standardCardId="record-security-card"
-      subCard={true}
-      title={
-        <span>
-          <strong>
-            Community
-          </strong>
-           level security - 
-          UQ:123456
-        </span>
-      }
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={2}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-25 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="record-security-card"
+        id="record-security-card"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root makeStyles-cardHeaderAccent-28 css-185gdzj-MuiCardHeader-root"
         >
-          <Memo(SecuritySelector)
-            disabled={false}
-            fieldName="securitySection.rek_security_policy"
-            recordType="community"
-            securityPolicy={5}
-            securitySelectorId="rek-security-policy"
-            text={
-              Object {
-                "cardTitle": [Function],
-                "description": "",
-                "fieldLabel": "Override community level policy to apply to this PID",
-                "prompt": "Select a security policy to apply",
-                "selectedTitle": "Selected community record security policy details",
-              }
-            }
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-30 css-1hzv55z-MuiTypography-root"
+              data-testid="record-security-card-header"
+              id="record-security-card-header"
+            >
+              <span>
+                <strong>
+                  Community
+                </strong>
+                 level security - 
+                UQ:123456
+              </span>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="record-security-card-content"
+          data-testid="record-security-card-content"
+          id="record-security-card-content"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+              >
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                >
+                  <field
+                    disabled="false"
+                    is="mock"
+                    name="securitySection.rek_security_policy"
+                  />
+                </div>
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                  style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                    style="margin-top: -8px;"
+                  >
+                    Selected community record security policy details
+                  </h6>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-85682g-MuiGrid2-root"
+                    style="margin-top: 8px;"
+                  >
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1sv416d-MuiGrid2-root"
+                    >
+                      <b>
+                        Name (ID):
+                      </b>
+                    </div>
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-tnkek8-MuiGrid2-root"
+                    >
+                      Public (5)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`SecurityCard component should render security card correctly for record type 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
   >
-    <StandardCard
-      accentHeader={true}
-      standardCardId="record-security-card"
-      subCard={true}
-      title={
-        <span>
-          <strong>
-            Work
-          </strong>
-           level security - 
-          UQ:123456
-        </span>
-      }
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={2}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="record-security-card"
+        id="record-security-card"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root makeStyles-cardHeaderAccent-4 css-185gdzj-MuiCardHeader-root"
         >
-          <Memo(InheritedSecurityDetails)
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            parentKey="rek_security_policy"
-            title="Inherited security policy details"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+              data-testid="record-security-card-header"
+              id="record-security-card-header"
+            >
+              <span>
+                <strong>
+                  Work
+                </strong>
+                 level security - 
+                UQ:123456
+              </span>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="record-security-card-content"
+          data-testid="record-security-card-content"
+          id="record-security-card-content"
         >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            disabled={false}
-            label="Override inherited security (detailed below)"
-            name="securitySection.rek_security_inherited"
-            normalize={[Function]}
-            overrideSecurityId="rek-security-inherited"
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <StandardCard
-      accentHeader={true}
-      standardCardId="datastream-security-card"
-      subCard={true}
-      title={
-        <span>
-          <strong>
-            Datastream
-          </strong>
-           level security - 
-          UQ:123456
-        </span>
-      }
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                  style="margin-top: -8px;"
+                >
+                  Inherited security policy details
+                </h6>
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  style="margin-top: 8px;"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+                    >
+                      Test collection
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+                    >
+                      undefined
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    >
+                      Theses Assessors (2)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Override inherited security (detailed below)"
+                name="securitySection.rek_security_inherited"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={1}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="datastream-security-card"
+        id="datastream-security-card"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root makeStyles-cardHeaderAccent-4 css-185gdzj-MuiCardHeader-root"
         >
-          <Memo(InheritedSecurityDetails)
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            parentKey="rek_datastream_policy"
-            title="Inherited datastream security policy details"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+              data-testid="datastream-security-card-header"
+              id="datastream-security-card-header"
+            >
+              <span>
+                <strong>
+                  Datastream
+                </strong>
+                 level security - 
+                UQ:123456
+              </span>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="datastream-security-card-content"
+          data-testid="datastream-security-card-content"
+          id="datastream-security-card-content"
         >
-          <Field
-            attachedDataStreams={
-              Array [
-                Object {
-                  "dsi_dsid": "test1.txt",
-                  "dsi_security_policy": 1,
-                },
-              ]
-            }
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": [Function],
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "Naked": [Function],
-                  "options": Object {},
-                  "propTypes": Object {
-                    "classes": [Function],
-                  },
-                  "render": [Function],
-                  "useStyles": [Function],
-                },
-              }
-            }
-            disabled={false}
-            key="1"
-            name="securitySection.dataStreams"
-            text={
-              Object {
-                "cardTitle": [Function],
-                "noDataStreams": "No datastreams to display",
-                "overridePolicyPrompt": "Security policy for this file to override inheritance",
-                "overridePrompt": "Override datastream security policy details",
-              }
-            }
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-17w906u-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                  style="margin-top: -8px;"
+                >
+                  Inherited datastream security policy details
+                </h6>
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  style="margin-top: 8px;"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+                    >
+                      Test collection
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+                    >
+                      undefined
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    >
+                      Administrators (1)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                name="securitySection.dataStreams"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`SecurityCard component should render security card correctly for record type if user checks override security 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
   >
-    <StandardCard
-      accentHeader={true}
-      standardCardId="record-security-card"
-      subCard={true}
-      title={
-        <span>
-          <strong>
-            Work
-          </strong>
-           level security - 
-          UQ:123456
-        </span>
-      }
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={2}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-13 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="record-security-card"
+        id="record-security-card"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root makeStyles-cardHeaderAccent-16 css-185gdzj-MuiCardHeader-root"
         >
-          <Memo(InheritedSecurityDetails)
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            parentKey="rek_security_policy"
-            title="Inherited security policy details"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-18 css-1hzv55z-MuiTypography-root"
+              data-testid="record-security-card-header"
+              id="record-security-card-header"
+            >
+              <span>
+                <strong>
+                  Work
+                </strong>
+                 level security - 
+                UQ:123456
+              </span>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="record-security-card-content"
+          data-testid="record-security-card-content"
+          id="record-security-card-content"
         >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            disabled={false}
-            label="Override inherited security (detailed below)"
-            name="securitySection.rek_security_inherited"
-            normalize={[Function]}
-            overrideSecurityId="rek-security-inherited"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <Memo(SecuritySelector)
-            disabled={false}
-            fieldName="securitySection.rek_security_policy"
-            recordType="record"
-            securityPolicy={5}
-            securitySelectorId="rek-security-policy"
-            text={
-              Object {
-                "cardTitle": [Function],
-                "dataStream": Object {
-                  "cardTitle": [Function],
-                  "noDataStreams": "No datastreams to display",
-                  "overridePolicyPrompt": "Security policy for this file to override inheritance",
-                  "overridePrompt": "Override datastream security policy details",
-                },
-                "dataStreamFieldLabel": "Override work level policy to apply to this PID",
-                "dataStreamSelectedTitle": "Selected work level datastream security policy details",
-                "description": "",
-                "fieldLabel": "Override work",
-                "inheritedPolicy": Object {
-                  "dataStream": Object {
-                    "title": "Inherited datastream security policy details",
-                  },
-                  "record": Object {
-                    "title": "Inherited security policy details",
-                  },
-                },
-                "prompt": "Select a security policy to apply",
-                "selectedTitle": "Selected work level security policy details",
-              }
-            }
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <StandardCard
-      accentHeader={true}
-      standardCardId="datastream-security-card"
-      subCard={true}
-      title={
-        <span>
-          <strong>
-            Datastream
-          </strong>
-           level security - 
-          UQ:123456
-        </span>
-      }
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                  style="margin-top: -8px;"
+                >
+                  Inherited security policy details
+                </h6>
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  style="margin-top: 8px;"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+                    >
+                      Test collection
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+                    >
+                      undefined
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    >
+                      Theses Assessors (2)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="Override inherited security (detailed below)"
+                name="securitySection.rek_security_inherited"
+              />
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+              >
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                >
+                  <field
+                    disabled="false"
+                    is="mock"
+                    name="securitySection.rek_security_policy"
+                  />
+                </div>
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                  style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                    style="margin-top: -8px;"
+                  >
+                    Selected work level security policy details
+                  </h6>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-85682g-MuiGrid2-root"
+                    style="margin-top: 8px;"
+                  >
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1sv416d-MuiGrid2-root"
+                    >
+                      <b>
+                        Name (ID):
+                      </b>
+                    </div>
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-tnkek8-MuiGrid2-root"
+                    >
+                      Public (5)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={1}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-13 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="datastream-security-card"
+        id="datastream-security-card"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root makeStyles-cardHeaderAccent-16 css-185gdzj-MuiCardHeader-root"
         >
-          <Memo(InheritedSecurityDetails)
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            parentKey="rek_datastream_policy"
-            title="Inherited datastream security policy details"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-18 css-1hzv55z-MuiTypography-root"
+              data-testid="datastream-security-card-header"
+              id="datastream-security-card-header"
+            >
+              <span>
+                <strong>
+                  Datastream
+                </strong>
+                 level security - 
+                UQ:123456
+              </span>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="datastream-security-card-content"
+          data-testid="datastream-security-card-content"
+          id="datastream-security-card-content"
         >
-          <Field
-            attachedDataStreams={
-              Array [
-                Object {
-                  "dsi_dsid": "test2.txt",
-                  "dsi_security_policy": 1,
-                },
-              ]
-            }
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": [Function],
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "Naked": [Function],
-                  "options": Object {},
-                  "propTypes": Object {
-                    "classes": [Function],
-                  },
-                  "render": [Function],
-                  "useStyles": [Function],
-                },
-              }
-            }
-            disabled={false}
-            key="1"
-            name="securitySection.dataStreams"
-            text={
-              Object {
-                "cardTitle": [Function],
-                "noDataStreams": "No datastreams to display",
-                "overridePolicyPrompt": "Security policy for this file to override inheritance",
-                "overridePrompt": "Override datastream security policy details",
-              }
-            }
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-17w906u-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                  style="margin-top: -8px;"
+                >
+                  Inherited datastream security policy details
+                </h6>
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  style="margin-top: 8px;"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+                    >
+                      Test collection
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+                    >
+                      undefined
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    >
+                      Administrators (1)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                name="securitySection.dataStreams"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`SecurityCard component should render security card with disabled inputs 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
   >
-    <StandardCard
-      accentHeader={true}
-      standardCardId="record-security-card"
-      subCard={true}
-      title={
-        <span>
-          <strong>
-            Work
-          </strong>
-           level security - 
-          UQ:123456
-        </span>
-      }
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={2}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-31 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="record-security-card"
+        id="record-security-card"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root makeStyles-cardHeaderAccent-34 css-185gdzj-MuiCardHeader-root"
         >
-          <Memo(InheritedSecurityDetails)
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            parentKey="rek_security_policy"
-            title="Inherited security policy details"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-36 css-1hzv55z-MuiTypography-root"
+              data-testid="record-security-card-header"
+              id="record-security-card-header"
+            >
+              <span>
+                <strong>
+                  Work
+                </strong>
+                 level security - 
+                UQ:123456
+              </span>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="record-security-card-content"
+          data-testid="record-security-card-content"
+          id="record-security-card-content"
         >
-          <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            disabled={true}
-            label="Override inherited security (detailed below)"
-            name="securitySection.rek_security_inherited"
-            normalize={[Function]}
-            overrideSecurityId="rek-security-inherited"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
-        >
-          <Memo(SecuritySelector)
-            disabled={true}
-            fieldName="securitySection.rek_security_policy"
-            recordType="record"
-            securityPolicy={5}
-            securitySelectorId="rek-security-policy"
-            text={
-              Object {
-                "cardTitle": [Function],
-                "dataStream": Object {
-                  "cardTitle": [Function],
-                  "noDataStreams": "No datastreams to display",
-                  "overridePolicyPrompt": "Security policy for this file to override inheritance",
-                  "overridePrompt": "Override datastream security policy details",
-                },
-                "dataStreamFieldLabel": "Override work level policy to apply to this PID",
-                "dataStreamSelectedTitle": "Selected work level datastream security policy details",
-                "description": "",
-                "fieldLabel": "Override work",
-                "inheritedPolicy": Object {
-                  "dataStream": Object {
-                    "title": "Inherited datastream security policy details",
-                  },
-                  "record": Object {
-                    "title": "Inherited security policy details",
-                  },
-                },
-                "prompt": "Select a security policy to apply",
-                "selectedTitle": "Selected work level security policy details",
-              }
-            }
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    xs={12}
-  >
-    <StandardCard
-      accentHeader={true}
-      standardCardId="datastream-security-card"
-      subCard={true}
-      title={
-        <span>
-          <strong>
-            Datastream
-          </strong>
-           level security - 
-          UQ:123456
-        </span>
-      }
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                  style="margin-top: -8px;"
+                >
+                  Inherited security policy details
+                </h6>
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  style="margin-top: 8px;"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+                    >
+                      Test collection
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+                    >
+                      undefined
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    >
+                      Theses Assessors (2)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <field
+                disabled="true"
+                is="mock"
+                label="Override inherited security (detailed below)"
+                name="securitySection.rek_security_inherited"
+              />
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+              >
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                >
+                  <field
+                    disabled="true"
+                    is="mock"
+                    name="securitySection.rek_security_policy"
+                  />
+                </div>
+                <div
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                  style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                    style="margin-top: -8px;"
+                  >
+                    Selected work level security policy details
+                  </h6>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-85682g-MuiGrid2-root"
+                    style="margin-top: 8px;"
+                  >
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1sv416d-MuiGrid2-root"
+                    >
+                      <b>
+                        Name (ID):
+                      </b>
+                    </div>
+                    <div
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-tnkek8-MuiGrid2-root"
+                    >
+                      Public (5)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
-      <ForwardRef(Grid)
-        container={true}
-        padding={0}
-        spacing={1}
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-31 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        data-testid="datastream-security-card"
+        id="datastream-security-card"
       >
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+        <div
+          class="MuiCardHeader-root makeStyles-cardHeaderAccent-34 css-185gdzj-MuiCardHeader-root"
         >
-          <Memo(InheritedSecurityDetails)
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            parentKey="rek_datastream_policy"
-            title="Inherited datastream security policy details"
-          />
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          xs={12}
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-36 css-1hzv55z-MuiTypography-root"
+              data-testid="datastream-security-card-header"
+              id="datastream-security-card-header"
+            >
+              <span>
+                <strong>
+                  Datastream
+                </strong>
+                 level security - 
+                UQ:123456
+              </span>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          data-analyticsid="datastream-security-card-content"
+          data-testid="datastream-security-card-content"
+          id="datastream-security-card-content"
         >
-          <Field
-            attachedDataStreams={
-              Array [
-                Object {
-                  "dsi_dsid": "test3.txt",
-                  "dsi_security_policy": 1,
-                },
-              ]
-            }
-            collections={
-              Array [
-                Object {
-                  "parent": Object {
-                    "rek_datastream_policy": 1,
-                    "rek_security_policy": 2,
-                  },
-                  "rek_ismemberof": "Test collection",
-                },
-              ]
-            }
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": [Function],
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "Naked": [Function],
-                  "options": Object {},
-                  "propTypes": Object {
-                    "classes": [Function],
-                  },
-                  "render": [Function],
-                  "useStyles": [Function],
-                },
-              }
-            }
-            disabled={true}
-            key="1"
-            name="securitySection.dataStreams"
-            text={
-              Object {
-                "cardTitle": [Function],
-                "noDataStreams": "No datastreams to display",
-                "overridePolicyPrompt": "Security policy for this file to override inheritance",
-                "overridePrompt": "Override datastream security policy details",
-              }
-            }
-          />
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
-    </StandardCard>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-17w906u-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+                  style="margin-top: -8px;"
+                >
+                  Inherited datastream security policy details
+                </h6>
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  style="margin-top: 8px;"
+                >
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+                    >
+                      Test collection
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+                    >
+                      undefined
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    >
+                      Administrators (1)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+            >
+              <field
+                disabled="true"
+                is="mock"
+                name="securitySection.dataStreams"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
