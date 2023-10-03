@@ -10,6 +10,8 @@ import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
+// This will be removed in JSS migration
+/* istanbul ignore next */
 export const styles = theme => ({
     alternateActionButtonClass: {
         color: ((theme.palette || {}).white || {}).main,

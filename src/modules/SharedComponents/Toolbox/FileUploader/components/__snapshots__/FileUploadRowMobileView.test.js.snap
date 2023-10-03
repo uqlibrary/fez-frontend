@@ -128,6 +128,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
               </div>
               <input
                 aria-hidden="true"
+                aria-invalid="false"
                 aria-labelledby="dsi-open-access-0-label"
                 class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                 data-analyticsid="dsi-open-access-0-input"
@@ -310,7 +311,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-labelledby="dsi-open-access-0-select"
-                class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                 data-testid="dsi-open-access-0-select"
                 id="dsi-open-access-0-select"
                 role="button"
@@ -320,6 +321,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
               </div>
               <input
                 aria-hidden="true"
+                aria-invalid="true"
                 aria-labelledby="dsi-open-access-0-label"
                 class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                 data-analyticsid="dsi-open-access-0-input"
@@ -514,7 +516,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-labelledby="dsi-security-policy-0-select"
-                class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                 data-testid="dsi-security-policy-0-select"
                 id="dsi-security-policy-0-select"
                 role="button"
@@ -524,6 +526,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
               </div>
               <input
                 aria-hidden="true"
+                aria-invalid="true"
                 aria-labelledby="dsi-security-policy-0-label"
                 class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                 data-analyticsid="dsi-security-policy-0-input"
@@ -722,6 +725,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
               </div>
               <input
                 aria-hidden="true"
+                aria-invalid="false"
                 aria-labelledby="dsi-open-access-0-label"
                 class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                 data-analyticsid="dsi-open-access-0-input"

@@ -79,17 +79,17 @@ exports[`Add new record should render stepper and a publication form 1`] = `
             id="standard-card-work-type-content"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-17w906u-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-8bk111-MuiGrid2-root"
             >
               <div
-                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
               >
                 <div
                   class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     id="rek-display-type-label"
                   >
@@ -124,6 +124,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                     </div>
                     <input
                       aria-hidden="true"
+                      aria-invalid="false"
                       aria-labelledby="rek-display-type-label"
                       class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                       data-analyticsid="rek-display-type-input"

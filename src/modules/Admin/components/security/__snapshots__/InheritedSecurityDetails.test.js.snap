@@ -13,7 +13,7 @@ exports[`InheritedSecurityDetails component should render collections correctly 
       Inherited security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
       style="margin-top: 8px;"
     >
       <div
@@ -88,7 +88,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
       Inherited datastream security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
       style="margin-top: 8px;"
     >
       <div
@@ -163,7 +163,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
       Inherited datastream security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
       style="margin-top: 8px;"
     >
       <div
@@ -238,7 +238,7 @@ exports[`InheritedSecurityDetails component should render collections for record
       Inherited security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
       style="margin-top: 8px;"
     >
       <div
@@ -313,7 +313,7 @@ exports[`InheritedSecurityDetails component should render properly 1`] = `
       Inherited security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
       style="margin-top: 8px;"
     />
   </div>

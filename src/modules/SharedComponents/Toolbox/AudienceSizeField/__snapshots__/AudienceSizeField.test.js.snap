@@ -7,7 +7,7 @@ exports[`AudienceSizeField component should render default view 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       id="rek-audience-size-label"
     >
@@ -34,6 +34,7 @@ exports[`AudienceSizeField component should render default view 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="rek-audience-size-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-audience-size-input"

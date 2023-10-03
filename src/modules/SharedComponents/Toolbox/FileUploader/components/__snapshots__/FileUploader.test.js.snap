@@ -514,7 +514,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
                   role="button"
@@ -524,6 +524,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-open-access-0-label"
                   autofocus=""
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
@@ -724,7 +725,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
                   role="button"
@@ -734,6 +735,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-open-access-1-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-1-input"
@@ -1233,7 +1235,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
                   role="button"
@@ -1243,6 +1245,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-open-access-0-label"
                   autofocus=""
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
@@ -1443,7 +1446,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
                   role="button"
@@ -1453,6 +1456,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-open-access-1-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-1-input"
@@ -2935,6 +2939,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="false"
                   aria-labelledby="dsi-open-access-0-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-0-input"
@@ -3164,7 +3169,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
                   role="button"
@@ -3174,6 +3179,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-open-access-1-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-1-input"
@@ -3285,7 +3291,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         class="MuiFormControlLabel-root FileUploadTermsAndConditions-root-364 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-366 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-366 MuiCheckbox-colorPrimary MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-366 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-366 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-366 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-366 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
         >
           <input
             class="PrivateSwitchBase-input css-1m9pwf3"
@@ -5358,7 +5364,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
                   role="button"
@@ -5368,6 +5374,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-open-access-0-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-0-input"
@@ -5567,7 +5574,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
                   role="button"
@@ -5577,6 +5584,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-open-access-1-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-1-input"
@@ -6086,6 +6094,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="false"
                   aria-labelledby="dsi-open-access-0-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-0-input"
@@ -6278,7 +6287,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
                   role="button"
@@ -6288,6 +6297,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-open-access-1-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-1-input"
@@ -6797,6 +6807,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="false"
                   aria-labelledby="dsi-open-access-0-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-0-input"
@@ -6999,6 +7010,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="false"
                   aria-labelledby="dsi-open-access-1-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-1-input"
@@ -7140,7 +7152,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         class="MuiFormControlLabel-root FileUploadTermsAndConditions-root-96 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-98 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-98 MuiCheckbox-colorPrimary MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-98 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-98 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-98 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-98 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
         >
           <input
             class="PrivateSwitchBase-input css-1m9pwf3"
@@ -8406,7 +8418,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-0-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-0-select"
                   id="dsi-security-policy-0-select"
                   role="button"
@@ -8416,6 +8428,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-security-policy-0-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-security-policy-0-input"
@@ -8619,7 +8632,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-1-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-1-select"
                   id="dsi-security-policy-1-select"
                   role="button"
@@ -8629,6 +8642,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-security-policy-1-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-security-policy-1-input"
@@ -9142,6 +9156,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="false"
                   aria-labelledby="dsi-security-policy-0-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-security-policy-0-input"
@@ -9340,7 +9355,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-1-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-1-select"
                   id="dsi-security-policy-1-select"
                   role="button"
@@ -9350,6 +9365,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-security-policy-1-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-security-policy-1-input"
@@ -9863,6 +9879,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="false"
                   aria-labelledby="dsi-security-policy-0-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-security-policy-0-input"
@@ -10071,6 +10088,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="false"
                   aria-labelledby="dsi-security-policy-1-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-security-policy-1-input"
@@ -10213,7 +10231,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         class="MuiFormControlLabel-root FileUploadTermsAndConditions-root-175 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-177 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-177 MuiCheckbox-colorPrimary MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-177 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-177 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-177 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-177 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
         >
           <input
             class="PrivateSwitchBase-input css-1m9pwf3"
@@ -11250,7 +11268,7 @@ exports[`Component FileUploader should update file description 1`] = `
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
-                  class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
                   role="button"
@@ -11260,6 +11278,7 @@ exports[`Component FileUploader should update file description 1`] = `
                 </div>
                 <input
                   aria-hidden="true"
+                  aria-invalid="true"
                   aria-labelledby="dsi-open-access-0-label"
                   class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                   data-analyticsid="dsi-open-access-0-input"

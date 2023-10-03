@@ -6,7 +6,7 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       data-testid="rek-content-indicator-label"
       id="rek-content-indicator-label"
@@ -32,6 +32,7 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="rek-content-indicator-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-content-indicator-input"
@@ -63,7 +64,7 @@ exports[`ContentIndicatorsField component should not mark dropdown as disabled w
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       data-testid="rek-content-indicator-label"
       id="rek-content-indicator-label"
@@ -89,6 +90,7 @@ exports[`ContentIndicatorsField component should not mark dropdown as disabled w
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="rek-content-indicator-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-content-indicator-input"
@@ -119,7 +121,7 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       data-testid="rek-content-indicator-label"
       id="rek-content-indicator-label"
@@ -145,6 +147,7 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="rek-content-indicator-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-content-indicator-input"
@@ -175,7 +178,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-content-indicator-label"
       id="rek-content-indicator-label"
@@ -189,7 +192,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-content-indicator-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-content-indicator-select"
         id="rek-content-indicator-select"
         role="button"
@@ -203,6 +206,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="true"
         aria-labelledby="rek-content-indicator-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-content-indicator-input"
@@ -240,7 +244,7 @@ exports[`ContentIndicatorsField component should render with given field props i
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-content-indicator-label"
       id="rek-content-indicator-label"
@@ -254,7 +258,7 @@ exports[`ContentIndicatorsField component should render with given field props i
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-content-indicator-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-content-indicator-select"
         id="rek-content-indicator-select"
         role="button"
@@ -268,6 +272,7 @@ exports[`ContentIndicatorsField component should render with given field props i
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="true"
         aria-labelledby="rek-content-indicator-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="rek-content-indicator-input"

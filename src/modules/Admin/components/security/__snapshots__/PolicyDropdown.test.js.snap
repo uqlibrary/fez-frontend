@@ -7,7 +7,7 @@ exports[`PolicyDropdown component should hide policies that the user cant select
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       id="test-policy-label"
     >
@@ -45,6 +45,7 @@ exports[`PolicyDropdown component should hide policies that the user cant select
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="test-policy-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="test-policy-input"
@@ -78,7 +79,7 @@ exports[`PolicyDropdown component should render properly 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       id="test-policy-label"
     >
@@ -116,6 +117,7 @@ exports[`PolicyDropdown component should render properly 1`] = `
       </div>
       <input
         aria-hidden="true"
+        aria-invalid="false"
         aria-labelledby="test-policy-label"
         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
         data-analyticsid="test-policy-input"

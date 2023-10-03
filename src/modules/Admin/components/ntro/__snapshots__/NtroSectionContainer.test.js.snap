@@ -5,6 +5,8 @@ exports[`NtroSectionContainer component should render default view 1`] = `
   value={
     Object {
       "getServerState": undefined,
+      "noopCheck": "once",
+      "stabilityCheck": "once",
       "store": Object {
         "dispatch": [MockFunction],
         "getState": [MockFunction] {

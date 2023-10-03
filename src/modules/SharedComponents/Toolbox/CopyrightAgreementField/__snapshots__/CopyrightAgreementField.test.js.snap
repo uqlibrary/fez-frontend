@@ -6,7 +6,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
     class="MuiFormControlLabel-root CopyrightAgreement-root-1 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root CopyrightAgreement-checkboxRoot-3 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root CopyrightAgreement-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-root CopyrightAgreement-checkboxRoot-3 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root CopyrightAgreement-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root CopyrightAgreement-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root CopyrightAgreement-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
     >
       <input
         class="PrivateSwitchBase-input css-1m9pwf3"

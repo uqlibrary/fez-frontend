@@ -6,7 +6,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 dataStreamFileName css-y6fwcd-MuiGrid2-root"
   >
     <a
-      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-n3j285-MuiTypography-root-MuiLink-root"
+      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
       title="test.jpg"
     >
       test.jpg
@@ -26,7 +26,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="dsi-security-policy-0-label"
       >
@@ -59,6 +59,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="false"
           aria-labelledby="dsi-security-policy-0-label"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           data-analyticsid="dsi-security-policy-0-input"
@@ -92,7 +93,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 dataStreamFileName css-y6fwcd-MuiGrid2-root"
   >
     <a
-      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-n3j285-MuiTypography-root-MuiLink-root"
+      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
       title="test.jpg"
     >
       test.jpg
@@ -112,7 +113,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="dsi-security-policy-0-label"
       >
@@ -145,6 +146,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="false"
           aria-labelledby="dsi-security-policy-0-label"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           data-analyticsid="dsi-security-policy-0-input"
@@ -178,7 +180,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 dataStreamFileName css-y6fwcd-MuiGrid2-root"
   >
     <a
-      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-n3j285-MuiTypography-root-MuiLink-root"
+      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
       title="test.jpg"
     >
       test.jpg
@@ -198,7 +200,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="dsi-security-policy-2-label"
       >
@@ -231,6 +233,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="false"
           aria-labelledby="dsi-security-policy-2-label"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           data-analyticsid="dsi-security-policy-2-input"

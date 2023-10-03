@@ -6,7 +6,7 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
     class="MuiFormControlLabel-root FileUploadTermsAndConditions-root-5 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-7 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-7 MuiCheckbox-colorPrimary Mui-checked FileUploadTermsAndConditions-checkboxChecked-8 MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-7 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-7 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-7 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked FileUploadTermsAndConditions-checkboxChecked-8 MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-7 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
     >
       <input
         checked=""
@@ -45,7 +45,7 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
     class="MuiFormControlLabel-root FileUploadTermsAndConditions-root-1 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-3 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-3 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
     >
       <input
         class="PrivateSwitchBase-input css-1m9pwf3"
