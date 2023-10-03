@@ -1,9 +1,6 @@
 /* eslint-env jest */
 import React from 'react';
 
-import Enzyme, { mount, render, shallow } from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import toJson from 'enzyme-to-json';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
@@ -88,56 +85,11 @@ global.renderComponent = (component, props, args = {}) => {
     );
 };
 
-// get a mounted or shallow element rendererd by Enzyme
-global.getElement = (component, props, args = {}) => {
-    const { isShallow, requiresStore, context, store, renderer } = {
-        isShallow: true,
-        requiresStore: false,
-        context: {},
-        store: setupStoreForMount().store,
-        renderer: mount,
-        ...args,
-    };
-
-    if (isShallow) {
-        if (requiresStore) {
-            return shallow(<Provider store={store}>{React.createElement(component, props)}</Provider>, {
-                context,
-            });
-        } else {
-            return shallow(React.createElement(component, props), { context });
-        }
-    }
-
-    return renderer(
-        <Provider store={store}>
-            <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
-                <StyledEngineProvider injectFirst>
-                    <ThemeProvider theme={mui1theme}>
-                        <LocalizationProvider dateAdapter={MomentUtils}>
-                            {React.createElement(component, props)}
-                        </LocalizationProvider>
-                    </ThemeProvider>
-                </StyledEngineProvider>
-            </MemoryRouter>
-        </Provider>,
-    );
-};
-
 global.componentToString = component => {
     return prettyFormat(TestRenderer.create(component), {
         plugins: [prettyFormat.plugins.ReactTestComponent],
     }).toString();
 };
-
-// React Enzyme adapter
-Enzyme.configure({ adapter: new Adapter() });
-
-// Make Enzyme functions available in all test files without importing
-global.shallow = shallow;
-global.render = render;
-global.mount = mount;
-global.toJson = toJson;
 
 // set global store for testing actions
 global.setupStoreForActions = setupStoreForActions;
