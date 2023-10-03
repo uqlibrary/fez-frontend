@@ -365,6 +365,7 @@ describe('ListEditor tests', () => {
             });
             return instance;
         };
+
         it('should render an item to the list', () => {
             const instance = getInstance();
             expect(instance.state.itemList.length).toEqual(0);
@@ -390,6 +391,18 @@ describe('ListEditor tests', () => {
             instance.addItem({ id: 'test', value: 'testing value' });
             expect(instance.state.itemList.length).toEqual(1);
             expect(instance.state.itemList).toEqual([{ id: 'test', value: 'testing value' }]);
+        });
+
+        it('should update an string item in the list', () => {
+            const instance = getInstance();
+
+            expect(instance.state.itemList.length).toEqual(0);
+            instance.addItem({ id: 'test', key: 'key', value: 'test value' });
+            expect(instance.state.itemList.length).toEqual(1);
+            instance.editItem(0);
+            instance.addItem('newKey');
+            expect(instance.state.itemList.length).toEqual(1);
+            expect(instance.state.itemList).toEqual([{ id: 'test', key: 'newKey', value: 'test value' }]);
         });
 
         it('should render items not more than maxCount', () => {
