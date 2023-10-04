@@ -37,12 +37,9 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
 
     const authorNames = React.createRef(null);
     const [authorNameNoMatchCount, setAuthorNameNoMatchCount] = React.useState(null);
-    authorNames.current =
-        !!recordsSelected &&
-        recordsSelected.length > 0 &&
-        Object.values(recordsSelected).map(record =>
-            record.fez_record_search_key_author.map(author => author.rek_author),
-        );
+    authorNames.current = Object.values(recordsSelected).map(record =>
+        record.fez_record_search_key_author.map(author => author.rek_author),
+    );
 
     React.useEffect(() => {
         if (!!searchAuthorByName) {

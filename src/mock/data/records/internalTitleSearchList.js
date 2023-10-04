@@ -11,6 +11,8 @@ const internalTitleSearchList = {
             rek_pid: 'UQ:795469',
             rek_status_lookup: 'Published',
             rek_security_inherited: 1,
+            fez_record_search_key_author: ['Parker, Malcolm'],
+            fez_record_search_key_author_id: [410],
             fez_record_search_key_isbn: ['9783319715797', '9783319715803'],
             fez_record_search_key_ismemberof: [
                 {
