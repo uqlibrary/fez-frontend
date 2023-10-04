@@ -4957,7 +4957,6 @@ describe('transformers', () => {
                 fez_internal_notes: {
                     ain_detail: '<p>This is test internal note</p>',
                 },
-                rek_herdc_notes: 'This is test herdc notes',
 
                 rek_ci_notice_attribution_incomplete: 1,
             };
@@ -4968,10 +4967,6 @@ describe('transformers', () => {
                         htmlText: '<p>This is test internal note</p>',
                         plainText: 'This is test internal note',
                     },
-                    rek_herdc_notes: {
-                        htmlText: 'This is test herdc notes',
-                        plainText: 'This is test herdc notes',
-                    },
                     rek_ci_notice_attribution_incomplete: true,
                 }),
             ).toEqual(expected);
@@ -4981,7 +4976,6 @@ describe('transformers', () => {
                 fez_internal_notes: {
                     ain_detail: '<p>This is test internal note</p>',
                 },
-                rek_herdc_notes: 'This is test herdc notes',
 
                 rek_ci_notice_attribution_incomplete: 0,
             };
@@ -4991,10 +4985,6 @@ describe('transformers', () => {
                     internalNotes: {
                         htmlText: '<p>This is test internal note</p>',
                         plainText: 'This is test internal note',
-                    },
-                    rek_herdc_notes: {
-                        htmlText: 'This is test herdc notes',
-                        plainText: 'This is test herdc notes',
                     },
                     rek_ci_notice_attribution_incomplete: false,
                 }),
@@ -5015,7 +5005,6 @@ describe('transformers', () => {
                 fez_record_search_key_additional_notes: {
                     rek_additional_notes: '<p>This is test additional note</p>',
                 },
-                rek_herdc_notes: 'This is test herdc notes',
                 fez_internal_notes: null,
             };
 
@@ -5024,10 +5013,6 @@ describe('transformers', () => {
                     additionalNotes: {
                         htmlText: '<p>This is test additional note</p>',
                         plainText: 'This is test additional note',
-                    },
-                    rek_herdc_notes: {
-                        htmlText: 'This is test herdc notes',
-                        plainText: 'This is test herdc notes',
                     },
                 }),
             ).toEqual(expected);

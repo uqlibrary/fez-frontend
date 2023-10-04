@@ -30,14 +30,10 @@ context('Journal Article admin edit', () => {
         cy.get('[data-testid=notes-section-content]').within(() => {
             cy.get('#cke_rek-notes-editor').should('exist');
             cy.get('#cke_ain-notes-editor').should('exist');
-            cy.get('#cke_rek-herdc-notes-editor').should('exist');
         });
 
         cy.readCKEditor('ain-notes').should(text => {
             expect(text).to.contain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13
-        });
-        cy.readCKEditor('rek-herdc-notes').should(text => {
-            expect(text).to.contain(record.rek_herdc_notes); // 12/1/12 Amended ID at author request #886821
         });
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------

@@ -438,7 +438,6 @@ const internalTitleSearchList = {
             rek_thomson_citation_count: 4,
             rek_subtype: 'Article (original research)',
             rek_scopus_citation_count: 1,
-            rek_herdc_notes: 'Stephen B Lambert medical epidemiologist, Queensland Paediatric Infectious Diseases Laboratory, Royal Children&rsquo;s Hospital, Herston, QLD 4029, Australia sblambert@uq.edu.au',
             rek_scopus_doc_type: 'le',
             rek_wok_doc_type: 'L',
             rek_security_inherited: 1,

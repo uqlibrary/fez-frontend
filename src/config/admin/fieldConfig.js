@@ -107,23 +107,6 @@ export default {
                 richEditorId: 'rek-title',
             },
         },
-        rek_herdc_notes: {
-            component: RichEditorField,
-            componentProps: {
-                name: 'notesSection.rek_herdc_notes',
-                title: 'HERDC notes',
-                disabled: true,
-                titleProps: {
-                    variant: 'caption',
-                    style: {
-                        opacity: 0.666,
-                    },
-                },
-                height: 100,
-                format: value => Immutable.Map(value),
-                richEditorId: 'rek-herdc-notes',
-            },
-        },
         internalNotes: {
             component: RichEditorField,
             componentProps: {
