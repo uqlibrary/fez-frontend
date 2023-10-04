@@ -135,6 +135,10 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
     >
       <form>
         <span />
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
         >
@@ -609,6 +613,10 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
     >
       <form>
         <span />
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
         >
@@ -1030,6 +1038,10 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
     >
       <form>
         <span />
+        <span
+          class="MuiBox-root css-0"
+          data-testid="confirmDialogBox"
+        />
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
         >

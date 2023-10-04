@@ -1,236 +1,161 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PublicationSearchForm renders  component 1`] = `
-<StandardCard
-  title="Search for your publication"
->
-  <form
-    onSubmit={[MockFunction]}
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+    data-testid="standard-card-search-for-your-publication"
+    id="standard-card-search-for-your-publication"
   >
-    <ForwardRef(Grid)
-      alignItems="center"
-      container={true}
-      spacing={2}
+    <div
+      class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={12}
+      <div
+        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
       >
-        <ForwardRef(Typography)
-          gutterBottom={true}
-          id="search-description"
+        <h3
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+          data-testid="standard-card-search-for-your-publication-header"
+          id="standard-card-search-for-your-publication-header"
         >
-          Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
-        </ForwardRef(Typography)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm={true}
-        xs={12}
-      >
-        <Field
-          aria-describedby="search-description"
-          autoComplete="search"
-          autoFocus={true}
-          color="primary"
-          component={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "propTypes": Object {
-                "FormHelperTextProps": [Function],
-                "InputLabelProps": [Function],
-                "InputProps": [Function],
-                "SelectProps": [Function],
-                "autoComplete": [Function],
-                "autoFocus": [Function],
-                "children": [Function],
-                "className": [Function],
-                "classes": [Function],
-                "color": [Function],
-                "defaultValue": [Function],
-                "disabled": [Function],
-                "error": [Function],
-                "fullWidth": [Function],
-                "help": [Function],
-                "helperText": [Function],
-                "id": [Function],
-                "inputProps": [Function],
-                "inputRef": [Function],
-                "label": [Function],
-                "margin": [Function],
-                "maxRows": [Function],
-                "minRows": [Function],
-                "multiline": [Function],
-                "name": [Function],
-                "onBlur": [Function],
-                "onChange": [Function],
-                "onFocus": [Function],
-                "placeholder": [Function],
-                "required": [Function],
-                "rows": [Function],
-                "select": [Function],
-                "size": [Function],
-                "sx": [Function],
-                "textFieldId": [Function],
-                "type": [Function],
-                "value": [Function],
-                "variant": [Function],
-              },
-              "render": [Function],
-            }
-          }
-          fullWidth={true}
-          label="Enter DOI, Pubmed Id or Title"
-          name="searchQuery"
-          required={true}
-          textFieldId="search-query"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          color="primary"
-          disabled={false}
-          fullWidth={true}
-          onClick={[MockFunction]}
-          variant="contained"
+          Search for your publication
+        </h3>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-search-for-your-publication-content"
+      data-testid="standard-card-search-for-your-publication-content"
+      id="standard-card-search-for-your-publication-content"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-ofrcno-MuiGrid-root"
         >
-          Search
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </form>
-</StandardCard>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-i0iyry-MuiTypography-root"
+              id="search-description"
+            >
+              Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+          >
+            <field
+              is="mock"
+              label="Enter DOI, Pubmed Id or Title"
+              name="searchQuery"
+              required="true"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Search
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PublicationSearchForm renders  should display with skip search option 1`] = `
-<StandardCard
-  title="Search for your publication"
->
-  <form
-    onSubmit={[MockFunction]}
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-7 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+    data-testid="standard-card-search-for-your-publication"
+    id="standard-card-search-for-your-publication"
   >
-    <ForwardRef(Grid)
-      alignItems="center"
-      container={true}
-      spacing={2}
+    <div
+      class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={12}
+      <div
+        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
       >
-        <ForwardRef(Typography)
-          gutterBottom={true}
-          id="search-description"
+        <h3
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-12 css-1hzv55z-MuiTypography-root"
+          data-testid="standard-card-search-for-your-publication-header"
+          id="standard-card-search-for-your-publication-header"
         >
-          Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
-        </ForwardRef(Typography)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm={true}
-        xs={12}
-      >
-        <Field
-          aria-describedby="search-description"
-          autoComplete="search"
-          autoFocus={true}
-          color="primary"
-          component={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "propTypes": Object {
-                "FormHelperTextProps": [Function],
-                "InputLabelProps": [Function],
-                "InputProps": [Function],
-                "SelectProps": [Function],
-                "autoComplete": [Function],
-                "autoFocus": [Function],
-                "children": [Function],
-                "className": [Function],
-                "classes": [Function],
-                "color": [Function],
-                "defaultValue": [Function],
-                "disabled": [Function],
-                "error": [Function],
-                "fullWidth": [Function],
-                "help": [Function],
-                "helperText": [Function],
-                "id": [Function],
-                "inputProps": [Function],
-                "inputRef": [Function],
-                "label": [Function],
-                "margin": [Function],
-                "maxRows": [Function],
-                "minRows": [Function],
-                "multiline": [Function],
-                "name": [Function],
-                "onBlur": [Function],
-                "onChange": [Function],
-                "onFocus": [Function],
-                "placeholder": [Function],
-                "required": [Function],
-                "rows": [Function],
-                "select": [Function],
-                "size": [Function],
-                "sx": [Function],
-                "textFieldId": [Function],
-                "type": [Function],
-                "value": [Function],
-                "variant": [Function],
-              },
-              "render": [Function],
-            }
-          }
-          fullWidth={true}
-          label="Enter DOI, Pubmed Id or Title"
-          name="searchQuery"
-          required={true}
-          textFieldId="search-query"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          color="primary"
-          disabled={false}
-          fullWidth={true}
-          onClick={[MockFunction]}
-          variant="contained"
+          Search for your publication
+        </h3>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      data-analyticsid="standard-card-search-for-your-publication-content"
+      data-testid="standard-card-search-for-your-publication-content"
+      id="standard-card-search-for-your-publication-content"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-ofrcno-MuiGrid-root"
         >
-          Search
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <ForwardRef(Button)
-          fullWidth={true}
-          onClick={[MockFunction]}
-          variant="text"
-        >
-          Skip search
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-  </form>
-</StandardCard>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-i0iyry-MuiTypography-root"
+              id="search-description"
+            >
+              Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+          >
+            <field
+              is="mock"
+              label="Enter DOI, Pubmed Id or Title"
+              name="searchQuery"
+              required="true"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Search
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Skip search
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 `;

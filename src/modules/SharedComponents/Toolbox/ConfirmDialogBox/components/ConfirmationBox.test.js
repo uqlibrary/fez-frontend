@@ -1,6 +1,6 @@
 import React from 'react';
 import ConfirmationBox from './ConfirmationBox';
-import { rtlRender, fireEvent, act } from 'test-utils';
+import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {

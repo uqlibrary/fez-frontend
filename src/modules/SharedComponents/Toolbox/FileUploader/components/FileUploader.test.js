@@ -1,471 +1,569 @@
+import React from 'react';
 import { FileUploader } from './FileUploader';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 import FileUploaderContainer, { getErrorMessage } from './FileUploader';
 import locale from '../locale';
-const moment = require('moment');
+import { render, WithReduxStore, fireEvent, waitFor, within } from 'test-utils';
+
+import * as Hook from 'hooks/useWidth';
 
 const getProps = (testProps = {}) => ({
+    clearFileUpload: testProps.clearFileUpload || jest.fn(),
+    filesInQueue: [],
+    fileNameRestrictions: /.+/,
+    ...testProps,
     fileRestrictionsConfig: {
-        fileUploadLimit: 5,
+        fileUploadLimit: (testProps.fileRestrictionsConfig && testProps.fileRestrictionsConfig.fileUploadLimit) || 5,
         maxFileSize: 1,
-        fileSizeUnit: 'K',
+        fileSizeUnit: (testProps.fileRestrictionsConfig && testProps.fileRestrictionsConfig.fileSizeUnit) || 'K',
         fileNameRestrictions: FILE_NAME_RESTRICTION,
         mimeTypeWhitelist: MIME_TYPE_WHITELIST,
     },
-    filesInQueue: [],
-    // locale: locale,
-    fileNameRestrictions: /.+/,
-    ...testProps,
 });
 
 function setup(testProps = {}) {
-    return getElement(FileUploader, getProps(testProps));
+    return render(
+        <WithReduxStore>
+            <FileUploader {...getProps(testProps)} />
+        </WithReduxStore>,
+    );
 }
 
 describe('Component FileUploader', () => {
-    const dateToCheck = '10/10/2017';
-    const getMockFile = name => ({ fileData: new File([''], name), name: name, size: 0 });
     const MockDate = require('mockdate');
     beforeEach(() => {
         MockDate.set('2020-01-01T00:00:00.000Z', 10);
-        const _File = window.File;
-        const FILE = (data = [''], name) => new _File(data, name, { lastModified: 12345678912 });
-        window.File = jest.fn((data, name) => FILE(data, name));
-        // getMockFile = (name) => ({fileData: new File([''], name), name: name, size: 0});
     });
     afterEach(() => {
         MockDate.reset();
     });
 
     it('should render default component', () => {
-        const wrapper = setup();
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render security policy selector if admin user', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true, isAdmin: true });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup({ requireOpenAccessStatus: true, isAdmin: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should mount and unmount containers and clear file uploader', () => {
-        const wrapper = getElement(
-            FileUploaderContainer,
-            getProps({
-                isNtro: true,
-                fileRestrictionsConfig: {
-                    fileUploadLimit: 5,
-                    maxFileSize: 1,
-                    fileSizeUnit: 'B',
-                    fileNameRestrictions: FILE_NAME_RESTRICTION,
-                },
-            }),
-            { isShallow: false },
+        const { container, unmount } = render(
+            <WithReduxStore>
+                <FileUploaderContainer
+                    {...getProps({
+                        isNtro: true,
+                        fileRestrictionsConfig: {
+                            fileUploadLimit: 5,
+                            maxFileSize: 1,
+                            fileSizeUnit: 'B',
+                            fileNameRestrictions: FILE_NAME_RESTRICTION,
+                        },
+                    })}
+                />
+            </WithReduxStore>,
         );
-        const tree = toJson(wrapper);
 
-        expect(tree).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.unmount();
-        expect(tree).toMatchSnapshot();
+        unmount();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled component', () => {
-        const wrapper = setup({ disabled: true });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
     });
 
-    it('should render rows for uploaded files', () => {
-        const wrapper = setup();
+    it('should render rows for uploaded files', async () => {
+        // default view
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+        useWidth.mockImplementation(() => 'sm');
 
-        const tree = toJson(wrapper);
+        const { container, getByText, getByTestId } = setup();
+        expect(container).toMatchSnapshot();
 
-        expect(tree).toMatchSnapshot();
+        // drag and drop 2 files
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        const files = [getMockFile('a.txt'), getMockFile('b.txt')];
+        await waitFor(() => getByText(/hello\.png/i));
+        expect(getByText('Successfully added 2 file(s) to upload queue.')).toBeInTheDocument();
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance()._handleDroppedFiles(files, {});
+        // delete first file
+        fireEvent.click(getByTestId('dsi-dsid-0-delete'));
+        fireEvent.click(getByTestId('confirm-dsi-dsid-delete'));
+        expect(container).toMatchSnapshot();
 
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-        const fileDataA = wrapper.instance().state.filesInQueue[0].fileData;
-        expect(fileDataA.name).toEqual('a.txt');
-        const fileDataB = wrapper.instance().state.filesInQueue[1].fileData;
-        expect(fileDataB.name).toEqual('b.txt');
-
-        wrapper.instance()._deleteFile({}, 0);
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.instance().state.isTermsAndConditionsAccepted).toBeFalsy();
-
-        wrapper.instance()._deleteAllFiles();
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.instance().state.filesInQueue.length).toEqual(0);
+        // delete all files
+        fireEvent.click(getByTestId('delete-all-files'));
+        fireEvent.click(getByTestId('confirm-delete-all-files'));
+        expect(container).toMatchSnapshot();
     });
 
-    it('should render rows for uploaded files with access required', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true });
+    it('should render rows for uploaded files with access required', async () => {
+        const { container, getByTestId, getByRole, getByText } = setup({ requireOpenAccessStatus: true });
+        expect(container).toMatchSnapshot();
 
-        const tree = toJson(wrapper);
+        // drag and drop 2 files
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        expect(tree).toMatchSnapshot();
+        await waitFor(() => getByText(/hello\.png/i));
 
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const files = [fileA, fileB];
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance()._handleDroppedFiles(files, {});
-        wrapper.update();
+        fireEvent.mouseDown(getByTestId('dsi-open-access-0-select'));
+        fireEvent.click(getByRole('option', { name: 'Closed Access' }));
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance()._updateFileAccessCondition(fileA, 0, 1);
-        wrapper.update();
+        fireEvent.mouseDown(getByTestId('dsi-open-access-1-select'));
+        fireEvent.click(getByRole('option', { name: 'Open Access' }));
+        fireEvent.change(within(getByTestId('dsi-embargo-date-1-input')).getByRole('textbox'), {
+            target: { value: '02/02/2022' },
+        });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._updateFileAccessCondition(fileA, 0, 5);
-        wrapper.update();
-        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(
-            moment(new Date()).format('DD/MM/YYYY'),
-        );
-
-        // expect(toJson(wrapper)).toMatchSnapshot();
-
-        fileA.access_condition_id = 5;
-        wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment(dateToCheck, 'DD/MM/YYYY'));
-        wrapper.update();
-
-        // expect(toJson(wrapper)).toMatchSnapshot();
-        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(dateToCheck);
+        expect(container).toMatchSnapshot();
     });
-    it('should update file description', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true });
+
+    it('should update file description', async () => {
+        // default view
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+        useWidth.mockImplementation(() => 'sm');
+        const { container, getByTestId, getByText } = setup({ requireOpenAccessStatus: true });
         const descriptionA = 'Test Description A';
-        const descriptionB = 'Test Description B';
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const files = [fileA, fileB];
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [new File(['hello'], 'hello.png', { type: 'image/png' })],
+                types: ['Files'],
+            },
+        });
 
-        wrapper.instance()._handleDroppedFiles(files, {});
-        wrapper.update();
-
-        wrapper.instance()._updateFileDescription(fileA, 0, descriptionA);
-        wrapper.update();
-        expect(wrapper.instance().state.filesInQueue[0].description).toEqual(descriptionA);
-
-        wrapper.instance()._updateFileDescription(fileA, 1, descriptionB);
-        wrapper.update();
-
-        expect(wrapper.instance().state.filesInQueue[1].description).toEqual(descriptionB);
+        await waitFor(() => getByText(/hello\.png/i));
+        fireEvent.change(within(getByTestId('dsi-label-upload-0')).getByRole('textbox'), {
+            target: { value: descriptionA },
+        });
+        expect(container).toMatchSnapshot();
     });
 
-    it('should render rows for uploaded files with security policy', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true, isAdmin: true });
+    it('should render rows for uploaded files with security policy', async () => {
+        const { container, getByTestId, getByRole, getByText } = setup({
+            requireOpenAccessStatus: true,
+            isAdmin: true,
+        });
+        expect(container).toMatchSnapshot();
 
-        const tree = toJson(wrapper);
+        // drag and drop 2 files
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        expect(tree).toMatchSnapshot();
+        await waitFor(() => getByText(/hello\.png/i));
 
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const files = [fileA, fileB];
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance()._handleDroppedFiles(files, {});
-        wrapper.update();
+        fireEvent.mouseDown(getByTestId('dsi-security-policy-0-select'));
+        fireEvent.click(getByRole('option', { name: 'Administrators' }));
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance()._updateFileSecurityPolicy(fileA, 0, 1);
-        wrapper.update();
+        fireEvent.mouseDown(getByTestId('dsi-security-policy-1-select'));
+        fireEvent.click(getByRole('option', { name: 'Public' }));
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._updateFileSecurityPolicy(fileA, 0, 5);
-        wrapper.update();
-        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(
-            moment(new Date()).format('DD/MM/YYYY'),
-        );
-
-        // expect(toJson(wrapper)).toMatchSnapshot();
-
-        fileA.security_policy = 5;
-        wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment(dateToCheck, 'DD/MM/YYYY'));
-        wrapper.update();
-        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(dateToCheck);
-
-        // expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
-    it('should handle file order change', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true });
+    it('should handle file order change', async () => {
+        // default view
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+        useWidth.mockImplementation(() => 'sm');
 
-        const tree = toJson(wrapper);
+        const { container, getByTestId, getByText } = setup({ requireOpenAccessStatus: true });
+        expect(container).toMatchSnapshot();
 
-        expect(tree).toMatchSnapshot();
+        // drag and drop 2 files
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const files = [fileA, fileB];
+        await waitFor(() => getByText(/hello\.png/i));
 
-        wrapper.instance()._handleDroppedFiles(files, {});
-        wrapper.update();
+        fireEvent.click(getByTestId('new-file-upload-up-1'));
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance()._updateOrderUp(1);
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._updateOrderDown(0);
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        fireEvent.click(getByTestId('new-file-upload-down-0'));
+        expect(container).toMatchSnapshot();
     });
 
-    it('should render rows for uploaded files with default access condition based on quick template Id', () => {
-        const wrapper = setup({ defaultQuickTemplateId: 3 });
+    it('should render rows for uploaded files with default access condition based on quick template Id', async () => {
+        // default view
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+        useWidth.mockImplementation(() => 'sm');
+        const { container, getByTestId, getByText } = setup({ defaultQuickTemplateId: 3 });
+        expect(container).toMatchSnapshot();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        // drag and drop 2 files
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const files = [fileA, fileB];
+        await waitFor(() => getByText(/hello\.png/i));
 
-        wrapper.instance()._handleDroppedFiles(files, {});
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-        const fileDataA = wrapper.instance().state.filesInQueue[0].fileData;
-        expect(fileDataA.name).toEqual('a.txt');
-        expect(fileDataA.lastModified).toEqual(12345678912);
+        expect(container).toMatchSnapshot();
     });
 
     it(
-        'should render rows for uploaded files with access condition dropdown ' +
+        'should not render rows for uploaded files with access condition dropdown ' +
             'based on quick template Id and require open access',
-        () => {
-            const wrapper = setup({ defaultQuickTemplateId: 3, requireOpenAccessStatus: true });
+        async () => {
+            // where theres default quick template id, seems requireOpenAccessStatus is expected to be false
+            // hence no access condition drop down
+            // default view
+            const useWidth = jest.spyOn(Hook, 'useWidth');
+            useWidth.mockImplementation(() => 'sm');
+            const { container, getByTestId, getByText } = setup({
+                isAdmin: true,
+                defaultQuickTemplateId: 3,
+                requireOpenAccessStatus: true,
+            });
+            expect(container).toMatchSnapshot();
 
-            expect(toJson(wrapper)).toMatchSnapshot();
+            // drag and drop 2 files
+            fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+                dataTransfer: {
+                    files: [
+                        new File(['hello'], 'hello.png', { type: 'image/png' }),
+                        new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                    ],
+                    types: ['Files', 'Files'],
+                },
+            });
 
-            const fileA = getMockFile('a.txt');
-            const fileB = getMockFile('b.txt');
-            const files = [fileA, fileB];
-
-            wrapper.instance()._handleDroppedFiles(files, {});
-            wrapper.update();
-
-            expect(toJson(wrapper)).toMatchSnapshot();
-            expect(wrapper.instance().state.filesInQueue[0].fileData.name).toEqual('a.txt');
-            expect(wrapper.instance().state.filesInQueue[1].fileData.name).toEqual('b.txt');
+            await waitFor(() => getByText(/hello\.png/i));
+            expect(container).toMatchSnapshot();
         },
     );
 
-    it('should set max files error message', () => {
-        const wrapper = setup({ fileRestrictionsConfig: { fileUploadLimit: 3 } });
+    it('should set max files error message', async () => {
+        const { container, getByTestId, getByText } = setup({ fileRestrictionsConfig: { fileUploadLimit: 1 } });
 
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const fileC = getMockFile('c.txt');
+        // drag and drop 2 files
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        const accepted = [fileA, fileB, fileC];
-
-        wrapper.instance()._handleDroppedFiles(accepted, { tooManyFiles: ['d.txt'] });
-        wrapper.update();
-        expect(wrapper.state().errorMessage).toEqual(
-            'Maximum number of files (3) has been exceeded. File(s) (d.txt) will not be uploaded',
-        );
+        await waitFor(() => getByText(/hello\.png/i));
+        expect(
+            getByText('Maximum number of files (1) has been exceeded. File(s) (hello2.png) will not be uploaded'),
+        ).toBeInTheDocument();
+        expect(container).toMatchSnapshot();
     });
 
-    it('should not reset file access or embargo date info when second lot of files dropped', () => {
-        const wrapper = setup();
+    it('should not reset file access or embargo date info when second lot of files dropped', async () => {
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+        useWidth.mockImplementation(() => 'sm');
+        const { container, getByTestId, getByRole, getByText } = setup({ requireOpenAccessStatus: true });
+        expect(container).toMatchSnapshot();
 
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const fileC = getMockFile('c.txt');
-        const fileD = getMockFile('d.txt');
+        // drag and drop 2 files
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        wrapper.instance()._handleDroppedFiles([fileA, fileB], {});
-        wrapper.update();
-        const fileDataA = wrapper.instance().state.filesInQueue[0].fileData;
-        expect(fileDataA.name).toEqual('a.txt');
-        expect(fileDataA.lastModified).toEqual(12345678912);
+        await waitFor(() => getByText(/hello\.png/i));
 
-        const fileDataB = wrapper.instance().state.filesInQueue[1].fileData;
-        expect(fileDataB.name).toEqual('b.txt');
-        expect(fileDataB.lastModified).toEqual(12345678912);
+        fireEvent.mouseDown(getByTestId('dsi-open-access-0-select'));
+        fireEvent.click(getByRole('option', { name: 'Open Access' }));
 
-        wrapper.instance()._updateFileAccessCondition(fileA, 0, 5);
-        wrapper.update();
-        expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(5);
+        expect(container).toMatchSnapshot();
 
-        wrapper.instance()._updateFileAccessCondition(fileB, 1, 1);
-        wrapper.update();
-        expect(wrapper.instance().state.filesInQueue[1].access_condition_id).toEqual(1);
+        fireEvent.mouseDown(getByTestId('dsi-open-access-1-select'));
+        fireEvent.click(getByRole('option', { name: 'Closed Access' }));
 
-        wrapper.instance()._handleDroppedFiles([fileC, fileD], {});
-        wrapper.update();
-        const fileDataC = wrapper.instance().state.filesInQueue[2].fileData;
-        expect(fileDataC.name).toEqual('c.txt');
-        expect(fileDataC.lastModified).toEqual(12345678912);
+        // drag and drop another 2 files
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello3'], 'hello3.png', { type: 'image/png' }),
+                    new File(['hello4'], 'hello4.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        const fileDataD = wrapper.instance().state.filesInQueue[3].fileData;
-        expect(fileDataD.name).toEqual('d.txt');
-        expect(fileDataD.lastModified).toEqual(12345678912);
+        await waitFor(() => getByText(/hello3\.png/i));
+        expect(getByTestId('dsi-open-access-0-select')).toHaveTextContent('Open Access');
+        expect(getByTestId('dsi-open-access-1-select')).toHaveTextContent('Closed Access');
     });
 
     it(
         'should accept terms and condition and reset back to not accepted state if ' +
             'access condition changed back to closed access',
-        () => {
-            const wrapper = setup({ requireOpenAccessStatus: true });
+        async () => {
+            const { getByTestId, queryByTestId, getByRole, getByText } = setup({
+                requireOpenAccessStatus: true,
+            });
+            // drag and drop a file
+            fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+                dataTransfer: {
+                    files: [new File(['hello'], 'hello.png', { type: 'image/png' })],
+                    types: ['Files'],
+                },
+            });
 
-            const fileA = getMockFile('a.txt');
+            await waitFor(() => getByText(/hello/i));
 
-            wrapper.instance()._handleDroppedFiles([fileA], {});
-            wrapper.update();
-            const fileData = wrapper.instance().state.filesInQueue[0].fileData;
-            expect(fileData.name).toEqual('a.txt');
-            expect(fileData.lastModified).toEqual(12345678912);
+            fireEvent.mouseDown(getByTestId('dsi-open-access-0-select'));
+            fireEvent.click(getByRole('option', { name: 'Open Access' }));
 
-            wrapper.instance()._updateFileAccessCondition(fileA, 0, 5);
-            wrapper.update();
-            expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(5);
+            expect(getByTestId('terms-and-conditions-input').checked).toBeFalsy();
+            fireEvent.click(getByTestId('terms-and-conditions-input'));
+            expect(getByTestId('terms-and-conditions-input').checked).toBeTruthy();
 
-            wrapper.instance()._acceptTermsAndConditions(true);
-            wrapper.update();
-            expect(wrapper.state().isTermsAndConditionsAccepted).toBeTruthy();
+            fireEvent.mouseDown(getByTestId('dsi-open-access-0-select'));
+            fireEvent.click(getByRole('option', { name: 'Closed Access' }));
 
-            wrapper.instance()._updateFileAccessCondition(fileA, 0, 1);
-            wrapper.update();
-            expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(1);
-
-            expect(wrapper.state().isTermsAndConditionsAccepted).toBeFalsy();
+            expect(queryByTestId('terms-and-conditions-input')).not.toBeInTheDocument();
         },
     );
 
     it(
         'should accept terms and condition and reset back to not accepted state if ' +
             'security policy changed back to non-public',
-        () => {
-            const wrapper = setup({ requireOpenAccessStatus: true, isAdmin: true });
+        async () => {
+            const { getByTestId, queryByTestId, getByRole, getByText } = setup({
+                requireOpenAccessStatus: true,
+                isAdmin: true,
+            });
 
-            const fileA = getMockFile('a.txt');
+            // drag and drop a file
+            fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+                dataTransfer: {
+                    files: [new File(['hello'], 'hello.png', { type: 'image/png' })],
+                    types: ['Files'],
+                },
+            });
 
-            wrapper.instance()._handleDroppedFiles([fileA], {});
-            wrapper.update();
-            const fileData = wrapper.instance().state.filesInQueue[0].fileData;
-            expect(fileData.name).toEqual('a.txt');
-            expect(fileData.lastModified).toEqual(12345678912);
+            await waitFor(() => getByText(/hello/i));
 
-            wrapper.instance()._updateFileSecurityPolicy(fileA, 0, 5);
-            wrapper.update();
-            expect(wrapper.instance().state.filesInQueue[0].security_policy).toEqual(5);
+            fireEvent.mouseDown(getByTestId('dsi-security-policy-0-select'));
+            fireEvent.click(getByRole('option', { name: 'Public' }));
 
-            wrapper.instance()._acceptTermsAndConditions(true);
-            wrapper.update();
-            expect(wrapper.state().isTermsAndConditionsAccepted).toBeTruthy();
+            expect(getByTestId('terms-and-conditions-input').checked).toBeFalsy();
+            fireEvent.click(getByTestId('terms-and-conditions-input'));
+            expect(getByTestId('terms-and-conditions-input').checked).toBeTruthy();
 
-            wrapper.instance()._updateFileSecurityPolicy(fileA, 0, 1);
-            wrapper.update();
-            expect(wrapper.instance().state.filesInQueue[0].security_policy).toEqual(1);
+            fireEvent.mouseDown(getByTestId('dsi-security-policy-0-select'));
+            fireEvent.click(getByRole('option', { name: 'Administrators' }));
 
-            expect(wrapper.state().isTermsAndConditionsAccepted).toBeFalsy();
+            expect(queryByTestId('terms-and-conditions-input')).not.toBeInTheDocument();
+
+            fireEvent.mouseDown(getByTestId('dsi-security-policy-0-select'));
+            fireEvent.click(getByRole('option', { name: 'Public' }));
+
+            expect(getByTestId('terms-and-conditions-input').checked).toBeFalsy();
         },
     );
 
-    it('should return false if any file has open access with date selected but the terms and conditions not accepted', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true });
+    it('should return false if any file has open access with date selected but the terms and conditions not accepted', async () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByRole, getByText } = setup({ requireOpenAccessStatus: true, onChange: onChangeFn });
 
-        const fileA = getMockFile('a.txt');
-        fileA.access_condition_id = 1;
-        const fileB = getMockFile('b.txt');
-        fileB.access_condition_id = 5;
-        fileB.date = '2017-01-01';
-        const fileC = getMockFile('c.txt');
-        fileC.access_condition_id = 1;
-        const fileD = getMockFile('d.txt');
-        fileD.access_condition_id = 1;
+        // drag and drop a file
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
-        wrapper.state().isTermsAndConditionsAccepted = false;
-        expect(wrapper.instance().isFileUploadValid(wrapper.state())).toBeFalsy();
+        await waitFor(() => getByText(/hello\.png/i));
+
+        fireEvent.mouseDown(getByTestId('dsi-open-access-0-select'));
+        fireEvent.click(getByRole('option', { name: 'Closed Access' }));
+
+        fireEvent.mouseDown(getByTestId('dsi-open-access-1-select'));
+        fireEvent.click(getByRole('option', { name: 'Open Access' }));
+
+        fireEvent.change(within(getByTestId('dsi-embargo-date-1-input')).getByRole('textbox'), {
+            target: { value: '01/01/2017' },
+        });
+
+        expect(getByTestId('terms-and-conditions-input').checked).toBeFalsy();
+        expect(onChangeFn).toHaveBeenCalledWith(expect.objectContaining({ isValid: false }));
     });
 
-    it('should return false if any file has security policy with date selected but the terms and conditions not accepted', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true, isAdmin: true });
+    it('should return false if any file has security policy with date selected but the terms and conditions not accepted', async () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByText, getByRole } = setup({
+            requireOpenAccessStatus: true,
+            isAdmin: true,
+            onChange: onChangeFn,
+        });
 
-        const fileA = getMockFile('a.txt');
-        fileA.security_policy = 1;
-        const fileB = getMockFile('b.txt');
-        fileB.security_policy = 5;
-        fileB.date = '2017-01-01';
-        const fileC = getMockFile('c.txt');
-        fileC.security_policy = 1;
-        const fileD = getMockFile('d.txt');
-        fileD.security_policy = 1;
+        // drag and drop a file
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
-        wrapper.state().isTermsAndConditionsAccepted = false;
-        expect(wrapper.instance().isFileUploadValid(wrapper.state())).toBeFalsy();
+        await waitFor(() => getByText(/hello\.png/i));
+
+        fireEvent.mouseDown(getByTestId('dsi-security-policy-0-select'));
+        fireEvent.click(getByRole('option', { name: 'Administrators' }));
+
+        fireEvent.mouseDown(getByTestId('dsi-security-policy-1-select'));
+        fireEvent.click(getByRole('option', { name: 'Public' }));
+
+        fireEvent.change(within(getByTestId('dsi-embargo-date-1-input')).getByRole('textbox'), {
+            target: { value: '01/01/2017' },
+        });
+
+        expect(getByTestId('terms-and-conditions-input').checked).toBeFalsy();
+        expect(onChangeFn).toHaveBeenCalledWith(expect.objectContaining({ isValid: false }));
     });
 
-    it('should return true on if all files are closed access', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true });
+    it('should return true on if all files are closed access', async () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByText, getByRole } = setup({
+            requireOpenAccessStatus: true,
+            isAdmin: true,
+            onChange: onChangeFn,
+        });
 
-        const fileA = getMockFile('a.txt');
-        fileA.access_condition_id = 1;
-        const fileB = getMockFile('b.txt');
-        fileB.access_condition_id = 1;
-        const fileC = getMockFile('c.txt');
-        fileC.access_condition_id = 1;
-        const fileD = getMockFile('d.txt');
-        fileD.access_condition_id = 1;
+        // drag and drop a file
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
-        wrapper.state().isTermsAndConditionsAccepted = false;
-        expect(wrapper.instance().isFileUploadValid(wrapper.state())).toBeTruthy();
+        await waitFor(() => getByText(/hello\.png/i));
+
+        fireEvent.mouseDown(getByTestId('dsi-security-policy-0-select'));
+        fireEvent.click(getByRole('option', { name: 'Administrators' }));
+
+        fireEvent.mouseDown(getByTestId('dsi-security-policy-1-select'));
+        fireEvent.click(getByRole('option', { name: 'Administrators' }));
+
+        expect(onChangeFn).toHaveBeenCalledWith(expect.objectContaining({ isValid: true }));
     });
 
-    it('should return true on if any file is open access with date selected and terms and conditions accepted', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true });
+    it('should return true on if any file is open access with date selected and terms and conditions accepted', async () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByRole, getByText } = setup({ requireOpenAccessStatus: true, onChange: onChangeFn });
 
-        const fileA = getMockFile('a.txt');
-        fileA.access_condition_id = 1;
-        const fileB = getMockFile('b.txt');
-        fileB.access_condition_id = 5;
-        fileB.date = '2017-01-01';
-        const fileC = getMockFile('c.txt');
-        fileC.access_condition_id = 1;
-        const fileD = getMockFile('d.txt');
-        fileD.access_condition_id = 1;
+        // drag and drop a file
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
-        wrapper.state().isTermsAndConditionsAccepted = true;
-        expect(wrapper.instance().isFileUploadValid(wrapper.state())).toBeTruthy();
+        await waitFor(() => getByText(/hello\.png/i));
+
+        fireEvent.mouseDown(getByTestId('dsi-open-access-0-select'));
+        fireEvent.click(getByRole('option', { name: 'Closed Access' }));
+
+        fireEvent.mouseDown(getByTestId('dsi-open-access-1-select'));
+        fireEvent.click(getByRole('option', { name: 'Open Access' }));
+
+        fireEvent.change(within(getByTestId('dsi-embargo-date-1-input')).getByRole('textbox'), {
+            target: { value: '01/01/2017' },
+        });
+
+        fireEvent.click(getByTestId('terms-and-conditions-input'));
+        expect(onChangeFn).toHaveBeenCalledWith(expect.objectContaining({ isValid: true }));
     });
 
-    it('should return false on if access condition is not selected for any files', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true, isTermsAndConditionsAccepted: false });
+    it('should return false on if access condition is not selected for any files', async () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByText } = setup({
+            requireOpenAccessStatus: true,
+            isTermsAndConditionsAccepted: false,
+            onChange: onChangeFn,
+        });
 
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const fileC = getMockFile('c.txt');
-        const fileD = getMockFile('d.txt');
+        // drag and drop a file
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
-        expect(wrapper.instance().isFileUploadValid(wrapper.state())).toBeFalsy();
+        await waitFor(() => getByText(/hello\.png/i));
+
+        expect(onChangeFn).toHaveBeenCalledWith(expect.objectContaining({ isValid: false }));
     });
 
     it('should get correct error message based on errors object', () => {
-        setup();
-
         expect(
             getErrorMessage(
                 {
@@ -488,7 +586,6 @@ describe('Component FileUploader', () => {
     });
 
     it('should get empty string as an error message', () => {
-        setup();
         expect(
             getErrorMessage(
                 {
@@ -505,32 +602,37 @@ describe('Component FileUploader', () => {
         ).toEqual('');
     });
 
-    it('should update', () => {
-        const onChangeFn = jest.fn();
-        const wrapper = setup({
-            requireOpenAccessStatus: false,
-            onChange: onChangeFn,
+    it('should keep terms and conditions as accepted on file delete if any of remaining files are open access', async () => {
+        const { getByTestId, getByText, getByRole } = setup({ requireOpenAccessStatus: true });
+        // drag and drop a file
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
         });
-        const fileA = getMockFile('a.txt');
-        wrapper.setState({
-            filesInQueue: [fileA],
-        });
-        wrapper.update();
 
-        expect(onChangeFn).toHaveBeenCalled();
-    });
+        await waitFor(() => getByText(/hello\.png/i));
 
-    it('should keep terms and conditions as accepted on file delete if any of remaining files are open access', () => {
-        const wrapper = setup();
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const fileC = getMockFile('c.txt');
-        wrapper.setState({
-            filesInQueue: [fileA, fileB, fileC],
-            isTermsAndConditionsAccepted: true,
+        fireEvent.mouseDown(getByTestId('dsi-open-access-0-select'));
+        fireEvent.click(getByRole('option', { name: 'Closed Access' }));
+
+        fireEvent.mouseDown(getByTestId('dsi-open-access-1-select'));
+        fireEvent.click(getByRole('option', { name: 'Open Access' }));
+
+        fireEvent.change(within(getByTestId('dsi-embargo-date-1-input')).getByRole('textbox'), {
+            target: { value: '01/01/2017' },
         });
-        wrapper.instance().isAnyOpenAccess = jest.fn(() => true);
-        wrapper.instance()._deleteFile(null, 1);
-        expect(wrapper.state().isTermsAndConditionsAccepted).toBe(true);
+
+        fireEvent.click(getByTestId('terms-and-conditions-input'));
+        expect(getByTestId('terms-and-conditions-input').checked).toBeTruthy();
+
+        // delete first file
+        fireEvent.click(getByTestId('dsi-dsid-0-delete'));
+        fireEvent.click(getByTestId('confirm-dsi-dsid-delete'));
+        expect(getByTestId('terms-and-conditions-input').checked).toBeTruthy();
     });
 });

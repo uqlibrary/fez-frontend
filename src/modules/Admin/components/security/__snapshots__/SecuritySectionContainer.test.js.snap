@@ -41,13 +41,13 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
           id="record-security-card-content"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             >
               <div
-                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
@@ -57,11 +57,11 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                   Inherited security policy details
                 </h6>
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
                   style="margin-top: 8px;"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
                   >
                     <h6
                       class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
@@ -70,7 +70,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                     </h6>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
                   >
                     <h6
                       class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
@@ -79,7 +79,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                     </h6>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
                   >
                     <p
                       class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -91,7 +91,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             />
           </div>
         </div>
@@ -142,19 +142,19 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
           id="record-security-card-content"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             >
               <div
-                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 />
                 <div
-                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
@@ -164,18 +164,18 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                     Current collection level security policy details
                   </h6>
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-85682g-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
                     style="margin-top: 8px;"
                   >
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1sv416d-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1oua83y-MuiGrid2-root"
                     >
                       <b>
                         Name (ID):
                       </b>
                     </div>
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-tnkek8-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-bw3u2n-MuiGrid2-root"
                     >
                       Public (5)
                     </div>
@@ -184,16 +184,16 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             >
               <div
-                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 />
                 <div
-                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-lp0zij-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
@@ -209,18 +209,18 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                     </span>
                   </h6>
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-85682g-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
                     style="margin-top: 8px;"
                   >
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1sv416d-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1oua83y-MuiGrid2-root"
                     >
                       <b>
                         Name (ID):
                       </b>
                     </div>
                     <div
-                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-tnkek8-MuiGrid2-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-bw3u2n-MuiGrid2-root"
                     >
                       Public (5)
                     </div>
@@ -277,13 +277,13 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
           id="record-security-card-content"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x1k7et-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             >
               <div
-                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
@@ -293,11 +293,11 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                   Inherited security policy details
                 </h6>
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
                   style="margin-top: 8px;"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
                   >
                     <h6
                       class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
@@ -306,7 +306,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                     </h6>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
                   >
                     <h6
                       class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
@@ -315,7 +315,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                     </h6>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
                   >
                     <p
                       class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -327,7 +327,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             />
           </div>
         </div>
@@ -369,13 +369,13 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
           id="datastream-security-card-content"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-17w906u-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-8bk111-MuiGrid2-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             >
               <div
-                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
@@ -385,11 +385,11 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                   Inherited datastream security policy details
                 </h6>
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1nkpohe-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
                   style="margin-top: 8px;"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-jsck86-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
                   >
                     <h6
                       class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
@@ -398,7 +398,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                     </h6>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-4zv4kl-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
                   >
                     <h6
                       class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
@@ -407,7 +407,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                     </h6>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-1nstrzj-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
                   >
                     <p
                       class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -419,7 +419,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-qnznoc-MuiGrid2-root"
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             />
           </div>
         </div>

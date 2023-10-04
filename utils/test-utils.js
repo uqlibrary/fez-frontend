@@ -25,6 +25,8 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
 
+import preview from 'jest-preview';
+
 export const AllTheProviders = props => {
     return (
         <MuiThemeProvider theme={mui1theme}>
@@ -202,4 +204,5 @@ module.exports = {
     getDatastreamByFilename,
     withDatastreams,
     createMatchMedia,
+    preview,
 };

@@ -144,7 +144,16 @@ exports[`Component DeleteRecord should display general alert if trying to delete
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
@@ -593,7 +602,16 @@ exports[`Component DeleteRecord should display general alert if trying to delete
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
@@ -895,7 +913,16 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
@@ -1186,7 +1213,16 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
@@ -1662,7 +1698,16 @@ exports[`Component DeleteRecord should render delete record form for records wit
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
@@ -2143,7 +2188,16 @@ exports[`Component DeleteRecord should render delete record form for records wit
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
@@ -2647,7 +2701,16 @@ exports[`Component DeleteRecord should render delete record form with data colle
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
@@ -3151,7 +3214,16 @@ exports[`Component DeleteRecord should render delete record form with deleted da
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
@@ -3654,7 +3726,16 @@ exports[`Component DeleteRecord should render delete record form with deleted re
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
@@ -4058,7 +4139,16 @@ exports[`Component DeleteRecord should render delete record form with record cit
               </div>
             </div>
           </div>
-          <div />
+          <div>
+            <span
+              class="MuiBox-root css-0"
+              data-testid="confirmDialogBox"
+            />
+          </div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >

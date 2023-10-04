@@ -1,11 +1,12 @@
 import React from 'react';
 import PublicationsListSorting, { filterCollectionViewTypes } from './PublicationsListSorting';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
+import { rtlRender, fireEvent, within } from 'test-utils';
 
 jest.mock('../../../../hooks');
 import { userIsAdmin } from 'hooks';
 
-function setup(testProps = {}) {
+function setup(testProps = {}, renderMethod = rtlRender) {
     const props = {
         classes: {},
         pagingData: {
@@ -25,7 +26,7 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(PublicationsListSorting, props);
+    return renderMethod(<PublicationsListSorting {...props} />);
 }
 
 describe('PublicationsListSorting component', () => {
@@ -36,172 +37,153 @@ describe('PublicationsListSorting component', () => {
             total: 0,
             current_page: 1,
         };
-        const wrapper = setup({ pagingData: data });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ pagingData: data });
+        expect(container).toMatchSnapshot();
     });
 
     it('renders with non-empty paging data', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
         // expect(wrapper.find('.publicationsListSorting.empty').length).toBe(0);
         // const pages = wrapper.find('SelectField');
         // expect(pages.length).toBe(3);
     });
 
     it('renders with export dropdown for admin or author', () => {
-        const wrapper = setup({ canUseExport: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        // expect(wrapper.find('ExportPublications').length).toBe(1);
+        const { container } = setup({ canUseExport: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('renders with export dropdown hidden', () => {
-        const wrapper = setup({ canUseExport: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        // expect(wrapper.find('ExportPublications').length).toBe(0);
+        const { container } = setup({ canUseExport: false });
+        expect(container).toMatchSnapshot();
     });
 
     it('renders with all fields disabled', () => {
-        const wrapper = setup({ disabled: true });
-        wrapper.find('Select').forEach(option => {
-            expect(option.props().disabled).toEqual(true);
-        });
+        const { getByTestId } = setup({ disabled: true });
+        expect(within(getByTestId('publication-list-sorting-sort-by')).getByRole('button')).toHaveAttribute(
+            'aria-disabled',
+            'true',
+        );
+        expect(within(getByTestId('publication-list-sorting-sort-order')).getByRole('button')).toHaveAttribute(
+            'aria-disabled',
+            'true',
+        );
+        expect(within(getByTestId('publication-list-sorting-page-size')).getByRole('button')).toHaveAttribute(
+            'aria-disabled',
+            'true',
+        );
     });
 
     it('renders with non-empty paging data, pageChanged called', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onPageSizeChanged: testFn });
-        wrapper
-            .find('#pageSize')
-            .props()
-            .onChange({ target: { value: 50 } });
+        const { getByTestId, getByRole } = setup({ onPageSizeChanged: testFn });
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('button'));
+        fireEvent.click(getByRole('option', { name: '50' }));
         expect(testFn).toBeCalled();
     });
 
     it('renders with non-empty paging data, orderDirectionsChanged called', () => {
         const testFn = jest.fn();
-        const testValue = 'test';
-        const wrapper = setup({ onSortByChanged: testFn });
-        wrapper
-            .find('#sortOrder')
-            .props()
-            .onChange({ target: { value: testValue } });
+        const { getByTestId, getByRole } = setup({ onSortByChanged: testFn });
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-order')).getByRole('button'));
+        fireEvent.click(getByRole('option', { name: 'Asc' }));
         expect(testFn).toBeCalled();
     });
 
     it('renders with non-empty paging data, sortByChanged called', () => {
         const testFn = jest.fn();
-        const testValue = 'test';
-        const wrapper = setup({ onSortByChanged: testFn });
-        wrapper
-            .find('#sortBy')
-            .props()
-            .onChange({ target: { value: testValue } });
+        const { getByTestId, getByRole } = setup({ onSortByChanged: testFn });
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-by')).getByRole('button'));
+        fireEvent.click(getByRole('option', { name: 'Title' }));
         expect(testFn).toBeCalled();
     });
 
     it('renders with non-empty paging data, onExportPublications called', () => {
         const expected = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
         const testFn = jest.fn();
-        const wrapper = setup({ onExportPublications: testFn, canUseExport: true });
-        wrapper
-            .find('ExportPublications')
-            .props()
-            .onChange(expected);
+        const { getByTestId, getByRole } = setup({ onExportPublications: testFn, canUseExport: true });
+        fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('button'));
+        fireEvent.click(getByRole('option', { name: 'Excel File' }));
         expect(testFn).toHaveBeenCalledWith({ exportPublicationsFormat: expected });
     });
 
     it('renders dropdown for displayRecordsAs if assigned prop, onDisplayRecordsAsChanged called', () => {
         const testFn = jest.fn();
-        const testValue = 'test';
-        const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
-        wrapper
-            .find('#displayRecordsAs')
-            .props()
-            .onChange({ target: { value: testValue } });
+        const { getByTestId, getByRole } = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
+        fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('button'));
+        fireEvent.click(getByRole('option', { name: 'Standard' }));
         expect(testFn).toBeCalled();
-    });
-
-    it('renders dropdown for displayRecordsAs if assigned showDisplayAs prop', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
-        expect(wrapper.find('#displayRecordsAs').exists()).toEqual(true);
     });
 
     it('does not render dropdown for displayRecordsAs if not assigned showDisplayAs prop', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: false });
-        expect(wrapper.find('#displayRecordsAs').exists()).toEqual(false);
-    });
-
-    it('renders will set state on receiving new props', () => {
-        const mockUseEffect = jest.spyOn(React, 'useEffect');
-        const wrapper = setup({
-            initPageLength: 5,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        mockUseEffect.mockImplementation(f => f());
-        wrapper.setProps({
-            sortBy: 'Publication date',
-            sortDirection: 'test',
-            pageSize: 5,
-            displayRecordsAs: 'standard',
-            pagingData: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-        mockUseEffect.mockRestore();
+        const { queryByTestId } = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: false });
+        expect(queryByTestId('publication-list-display-records-as')).not.toBeInTheDocument();
     });
 
     it('renders bulk export options when applicable', () => {
         userIsAdmin.mockImplementation(() => true);
-        const wrapper = setup({ canUseExport: true, bulkExportSize: 1000 });
-        expect(wrapper.find('[data-testid="search-export-size-entry-1000"]').text()).toBe('1000');
+        const { getByTestId, getByRole } = setup({ canUseExport: true, bulkExportSize: 1000 });
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('button'));
+        expect(getByRole('option', { name: 'Export Only:' })).toBeInTheDocument();
+        expect(getByRole('option', { name: '1000' })).toBeInTheDocument();
         userIsAdmin.mockRestore();
     });
     it('renders first item in list when an out of range sortby default is provided', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             sortBy: 'test_option',
         });
 
-        expect(wrapper.find('#sortBy').props().value).toEqual('published_date');
+        expect(getByTestId('publication-list-sorting-sort-by')).toHaveTextContent('Published date');
     });
 
     it('renders custom item in page size list when initPageLength is provided', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             initPageLength: 15,
         });
 
-        expect(wrapper.find('#pageSize').props().value).toEqual(15);
+        expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('15');
     });
 
     it('renders first item in list when pageSize is out of range', () => {
-        const wrapper = setup({
+        const { getByTestId } = setup({
             pageSize: 1,
         });
 
-        expect(wrapper.find('#pageSize').props().value).toEqual(5); // 5 was inserted in a previous test
+        expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('10');
+    });
+
+    it('renders first item in list when sort direction is out of range', () => {
+        const { getByTestId } = setup({
+            sortDirection: 'abc',
+        });
+
+        expect(getByTestId('publication-list-sorting-sort-order')).toHaveTextContent('Desc');
     });
 
     it('updates sortBy, sortDirection and pageSize state when they change after render', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-
         mockUseEffect.mockImplementation(f => f());
-        wrapper.setProps({
-            sortBy: 'score',
-            sortDirection: 'Asc',
-            pageSize: 50,
-            displayRecordsAs: 'image-gallery',
-        });
+        const { rerender, container } = setup();
+        expect(container).toMatchSnapshot();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        setup(
+            {
+                sortBy: 'score',
+                sortDirection: 'Asc',
+                pageSize: 50,
+                displayRecordsAs: 'image-gallery',
+            },
+            rerender,
+        );
+
+        expect(container).toMatchSnapshot();
         mockUseEffect.mockRestore();
     });
 
     it('has the correct custom sortby options in the dropdown', () => {
-        const wrapper = setup({
+        const { getByTestId, getAllByRole } = setup({
             sortingData: {
                 sortBy: [
                     { value: 'test_1', label: 'Test Sort 1' },
@@ -212,22 +194,15 @@ describe('PublicationsListSorting component', () => {
             sortDirection: 'Asc',
             sortBy: 'test_2',
         });
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-by')).getByRole('button'));
+
         // Have the correct amount of elements in dropdown
-        expect(wrapper.find('#sortBy').children().length).toEqual(3);
+        expect(getAllByRole('option').length).toEqual(3);
         // Test first and last one
-        expect(
-            wrapper
-                .find('#sortBy')
-                .childAt(0)
-                .props().value,
-        ).toEqual('test_1');
-        expect(
-            wrapper
-                .find('#sortBy')
-                .childAt(2)
-                .props().value,
-        ).toEqual('test_3');
+        expect(getAllByRole('option')[0]).toHaveTextContent('Test Sort 1');
+        expect(getAllByRole('option')[2]).toHaveTextContent('Test Sort 3');
     });
+
     it('renders correctly when set to true', () => {
         const data = {
             from: 1,
@@ -235,9 +210,10 @@ describe('PublicationsListSorting component', () => {
             total: 10,
             current_page: 1,
         };
-        const wrapper = setup({ showDisplayAs: true, canUseExport: true, pagingData: data });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ showDisplayAs: true, canUseExport: true, pagingData: data });
+        expect(container).toMatchSnapshot();
     });
+
     it('renders correctly when set to false', () => {
         const data = {
             from: 0,
@@ -245,22 +221,19 @@ describe('PublicationsListSorting component', () => {
             total: 0,
             current_page: 1,
         };
-        const wrapper = setup({ showDisplayAs: true, canUseExport: false, pagingData: data });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ showDisplayAs: true, canUseExport: false, pagingData: data });
+        expect(container).toMatchSnapshot();
     });
+
     it('has the correct display type options in the dropdown', () => {
-        const wrapper = setup({ showDisplayAs: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container, getAllByRole, getByTestId } = setup({ showDisplayAs: true });
+        expect(container).toMatchSnapshot();
         const selectableCollectionViewType = filterCollectionViewTypes();
+        fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('button'));
+        expect(getAllByRole('option').length).toEqual(selectableCollectionViewType.length);
         // Have the correct amount of elements in dropdown
-        expect(wrapper.find('#displayRecordsAs').children().length).toEqual(selectableCollectionViewType.length);
         selectableCollectionViewType.forEach((viewType, index) => {
-            expect(
-                wrapper
-                    .find('#displayRecordsAs')
-                    .childAt(index)
-                    .text(),
-            ).toEqual(viewType.label);
+            expect(getAllByRole('option')[index]).toHaveTextContent(viewType.label);
         });
     });
 });

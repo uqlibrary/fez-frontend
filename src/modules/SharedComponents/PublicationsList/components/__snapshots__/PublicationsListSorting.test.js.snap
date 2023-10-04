@@ -1,2013 +1,1284 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PublicationsListSorting component has the correct display type options in the dropdown 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
   >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort results by
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-by"
-        disabled={false}
-        id="sortBy"
-        onChange={[Function]}
-        value="published_date"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-0"
-          id="publication-list-sorting-sort-by-option-0"
-          key="0"
-          value="published_date"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Published date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-1"
-          id="publication-list-sorting-sort-by-option-1"
-          key="1"
-          value="score"
+          Sort results by
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-by"
         >
-          Search relevance
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-2"
-          id="publication-list-sorting-sort-by-option-2"
-          key="2"
-          value="title"
-        >
-          Title
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-3"
-          id="publication-list-sorting-sort-by-option-3"
-          key="3"
-          value="created_date"
-        >
-          Created date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-4"
-          id="publication-list-sorting-sort-by-option-4"
-          key="4"
-          value="updated_date"
-        >
-          Updated date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-5"
-          id="publication-list-sorting-sort-by-option-5"
-          key="5"
-          value="altmetric_score"
-        >
-          Altmetric score
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-6"
-          id="publication-list-sorting-sort-by-option-6"
-          key="6"
-          value="scopus_citation_count"
-        >
-          Scopus citation count
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-7"
-          id="publication-list-sorting-sort-by-option-7"
-          key="7"
-          value="thomson_citation_count"
-        >
-          Web of Science citation count
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortBy"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortBy"
+            role="button"
+            tabindex="0"
+          >
+            Published date
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="published_date"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort order
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-order"
-        disabled={false}
-        id="sortOrder"
-        onChange={[Function]}
-        value="Desc"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-0"
-          id="publication-list-sorting-sort-order-option-0"
-          key="0"
-          value="Desc"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Desc
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-1"
-          id="publication-list-sorting-sort-order-option-1"
-          key="1"
-          value="Asc"
+          Sort order
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-order"
         >
-          Asc
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={12}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortOrder"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortOrder"
+            role="button"
+            tabindex="0"
+          >
+            Desc
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="Desc"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Works per page
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-page-size"
-        disabled={false}
-        id="pageSize"
-        onChange={[Function]}
-        value={20}
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-5"
-          id="publication-list-sorting-page-size-option-5"
-          key="records-per-page-5"
-          value={5}
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          5
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-10"
-          id="publication-list-sorting-page-size-option-10"
-          key="records-per-page-10"
-          value={10}
+          Works per page
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-page-size"
         >
-          10
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-15"
-          id="publication-list-sorting-page-size-option-15"
-          key="records-per-page-15"
-          value={15}
-        >
-          15
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-20"
-          id="publication-list-sorting-page-size-option-20"
-          key="records-per-page-20"
-          value={20}
-        >
-          20
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-50"
-          id="publication-list-sorting-page-size-option-50"
-          key="records-per-page-50"
-          value={50}
-        >
-          50
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-100"
-          id="publication-list-sorting-page-size-option-100"
-          key="records-per-page-100"
-          value={100}
-        >
-          100
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={12}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="pageSize"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="pageSize"
+            role="button"
+            tabindex="0"
+          >
+            20
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="20"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Display results
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-display-records-as"
-        disabled={false}
-        id="displayRecordsAs"
-        onChange={[Function]}
-        value="auto"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-display-records-as-option-456849"
-          id="publication-display-records-as-option-456849"
-          key="456849"
-          value="auto"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Auto
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-display-records-as-option-456850"
-          id="publication-display-records-as-option-456850"
-          key="456850"
-          value="standard"
+          Display results
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-display-records-as"
         >
-          Standard
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-display-records-as-option-456851"
-          id="publication-display-records-as-option-456851"
-          key="456851"
-          value="image-gallery"
-        >
-          Image Gallery
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="displayRecordsAs"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="displayRecordsAs"
+            role="button"
+            tabindex="0"
+          >
+            Auto
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="auto"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PublicationsListSorting component renders correctly when set to false 1`] = `
-<span
-  className="publicationsListSorting empty"
-/>
+<div>
+  <span
+    class="publicationsListSorting empty"
+  />
+</div>
 `;
 
 exports[`PublicationsListSorting component renders correctly when set to true 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
   >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort results by
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-by"
-        disabled={false}
-        id="sortBy"
-        onChange={[Function]}
-        value="published_date"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-0"
-          id="publication-list-sorting-sort-by-option-0"
-          key="0"
-          value="published_date"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Published date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-1"
-          id="publication-list-sorting-sort-by-option-1"
-          key="1"
-          value="score"
+          Sort results by
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-by"
         >
-          Search relevance
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-2"
-          id="publication-list-sorting-sort-by-option-2"
-          key="2"
-          value="title"
-        >
-          Title
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-3"
-          id="publication-list-sorting-sort-by-option-3"
-          key="3"
-          value="created_date"
-        >
-          Created date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-4"
-          id="publication-list-sorting-sort-by-option-4"
-          key="4"
-          value="updated_date"
-        >
-          Updated date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-5"
-          id="publication-list-sorting-sort-by-option-5"
-          key="5"
-          value="altmetric_score"
-        >
-          Altmetric score
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-6"
-          id="publication-list-sorting-sort-by-option-6"
-          key="6"
-          value="scopus_citation_count"
-        >
-          Scopus citation count
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-7"
-          id="publication-list-sorting-sort-by-option-7"
-          key="7"
-          value="thomson_citation_count"
-        >
-          Web of Science citation count
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={2}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortBy"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortBy"
+            role="button"
+            tabindex="0"
+          >
+            Published date
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="published_date"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-2 css-wqan3a-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort order
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-order"
-        disabled={false}
-        id="sortOrder"
-        onChange={[Function]}
-        value="Desc"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-0"
-          id="publication-list-sorting-sort-order-option-0"
-          key="0"
-          value="Desc"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Desc
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-1"
-          id="publication-list-sorting-sort-order-option-1"
-          key="1"
-          value="Asc"
+          Sort order
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-order"
         >
-          Asc
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={2}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortOrder"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortOrder"
+            role="button"
+            tabindex="0"
+          >
+            Desc
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="Desc"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-2 css-wqan3a-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Works per page
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-page-size"
-        disabled={false}
-        id="pageSize"
-        onChange={[Function]}
-        value={20}
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-5"
-          id="publication-list-sorting-page-size-option-5"
-          key="records-per-page-5"
-          value={5}
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          5
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-10"
-          id="publication-list-sorting-page-size-option-10"
-          key="records-per-page-10"
-          value={10}
+          Works per page
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-page-size"
         >
-          10
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-15"
-          id="publication-list-sorting-page-size-option-15"
-          key="records-per-page-15"
-          value={15}
-        >
-          15
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-20"
-          id="publication-list-sorting-page-size-option-20"
-          key="records-per-page-20"
-          value={20}
-        >
-          20
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-50"
-          id="publication-list-sorting-page-size-option-50"
-          key="records-per-page-50"
-          value={50}
-        >
-          50
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-100"
-          id="publication-list-sorting-page-size-option-100"
-          key="records-per-page-100"
-          value={100}
-        >
-          100
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={2}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="pageSize"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="pageSize"
+            role="button"
+            tabindex="0"
+          >
+            20
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="20"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-2 css-wqan3a-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Display results
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-display-records-as"
-        disabled={false}
-        id="displayRecordsAs"
-        onChange={[Function]}
-        value="auto"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-display-records-as-option-456849"
-          id="publication-display-records-as-option-456849"
-          key="456849"
-          value="auto"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Auto
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-display-records-as-option-456850"
-          id="publication-display-records-as-option-456850"
-          key="456850"
-          value="standard"
+          Display results
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-display-records-as"
         >
-          Standard
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-display-records-as-option-456851"
-          id="publication-display-records-as-option-456851"
-          key="456851"
-          value="image-gallery"
-        >
-          Image Gallery
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    sx={
-      Object {
-        "display": Object {
-          "sm": "block",
-          "xs": "none",
-        },
-      }
-    }
-  >
-    <ExportPublications
-      disabled={false}
-      exportData={Object {}}
-      onChange={[Function]}
-    />
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
-`;
-
-exports[`PublicationsListSorting component renders will set state on receiving new props 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="displayRecordsAs"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="displayRecordsAs"
+            role="button"
+            tabindex="0"
+          >
+            Auto
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="auto"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-1cz0huv-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort results by
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-by"
-        disabled={false}
-        id="sortBy"
-        onChange={[Function]}
-        value="published_date"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-0"
-          id="publication-list-sorting-sort-by-option-0"
-          key="0"
-          value="published_date"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Published date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-1"
-          id="publication-list-sorting-sort-by-option-1"
-          key="1"
-          value="score"
+          Export page results
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="export-publications-format"
         >
-          Search relevance
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-2"
-          id="publication-list-sorting-sort-by-option-2"
-          key="2"
-          value="title"
-        >
-          Title
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-3"
-          id="publication-list-sorting-sort-by-option-3"
-          key="3"
-          value="created_date"
-        >
-          Created date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-4"
-          id="publication-list-sorting-sort-by-option-4"
-          key="4"
-          value="updated_date"
-        >
-          Updated date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-5"
-          id="publication-list-sorting-sort-by-option-5"
-          key="5"
-          value="altmetric_score"
-        >
-          Altmetric score
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-6"
-          id="publication-list-sorting-sort-by-option-6"
-          key="6"
-          value="scopus_citation_count"
-        >
-          Scopus citation count
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-7"
-          id="publication-list-sorting-sort-by-option-7"
-          key="7"
-          value="thomson_citation_count"
-        >
-          Web of Science citation count
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
-    >
-      <ForwardRef(InputLabel)
-        shrink={true}
-      >
-        Sort order
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-order"
-        disabled={false}
-        id="sortOrder"
-        onChange={[Function]}
-        value="Desc"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-0"
-          id="publication-list-sorting-sort-order-option-0"
-          key="0"
-          value="Desc"
-        >
-          Desc
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-1"
-          id="publication-list-sorting-sort-order-option-1"
-          key="1"
-          value="Asc"
-        >
-          Asc
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={12}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
-    >
-      <ForwardRef(InputLabel)
-        shrink={true}
-      >
-        Works per page
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-page-size"
-        disabled={false}
-        id="pageSize"
-        onChange={[Function]}
-        value={5}
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-5"
-          id="publication-list-sorting-page-size-option-5"
-          key="records-per-page-5"
-          value={5}
-        >
-          5
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-10"
-          id="publication-list-sorting-page-size-option-10"
-          key="records-per-page-10"
-          value={10}
-        >
-          10
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-20"
-          id="publication-list-sorting-page-size-option-20"
-          key="records-per-page-20"
-          value={20}
-        >
-          20
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-50"
-          id="publication-list-sorting-page-size-option-50"
-          key="records-per-page-50"
-          value={50}
-        >
-          50
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-100"
-          id="publication-list-sorting-page-size-option-100"
-          key="records-per-page-100"
-          value={100}
-        >
-          100
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
-`;
-
-exports[`PublicationsListSorting component renders will set state on receiving new props 2`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
-    >
-      <ForwardRef(InputLabel)
-        shrink={true}
-      >
-        Sort results by
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-by"
-        disabled={false}
-        id="sortBy"
-        onChange={[Function]}
-        value="published_date"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-0"
-          id="publication-list-sorting-sort-by-option-0"
-          key="0"
-          value="published_date"
-        >
-          Published date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-1"
-          id="publication-list-sorting-sort-by-option-1"
-          key="1"
-          value="score"
-        >
-          Search relevance
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-2"
-          id="publication-list-sorting-sort-by-option-2"
-          key="2"
-          value="title"
-        >
-          Title
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-3"
-          id="publication-list-sorting-sort-by-option-3"
-          key="3"
-          value="created_date"
-        >
-          Created date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-4"
-          id="publication-list-sorting-sort-by-option-4"
-          key="4"
-          value="updated_date"
-        >
-          Updated date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-5"
-          id="publication-list-sorting-sort-by-option-5"
-          key="5"
-          value="altmetric_score"
-        >
-          Altmetric score
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-6"
-          id="publication-list-sorting-sort-by-option-6"
-          key="6"
-          value="scopus_citation_count"
-        >
-          Scopus citation count
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-7"
-          id="publication-list-sorting-sort-by-option-7"
-          key="7"
-          value="thomson_citation_count"
-        >
-          Web of Science citation count
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
-    >
-      <ForwardRef(InputLabel)
-        shrink={true}
-      >
-        Sort order
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-order"
-        disabled={false}
-        id="sortOrder"
-        onChange={[Function]}
-        value="Desc"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-0"
-          id="publication-list-sorting-sort-order-option-0"
-          key="0"
-          value="Desc"
-        >
-          Desc
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-1"
-          id="publication-list-sorting-sort-order-option-1"
-          key="1"
-          value="Asc"
-        >
-          Asc
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={12}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
-    >
-      <ForwardRef(InputLabel)
-        shrink={true}
-      >
-        Works per page
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-page-size"
-        disabled={false}
-        id="pageSize"
-        onChange={[Function]}
-        value={5}
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-5"
-          id="publication-list-sorting-page-size-option-5"
-          key="records-per-page-5"
-          value={5}
-        >
-          5
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-10"
-          id="publication-list-sorting-page-size-option-10"
-          key="records-per-page-10"
-          value={10}
-        >
-          10
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-20"
-          id="publication-list-sorting-page-size-option-20"
-          key="records-per-page-20"
-          value={20}
-        >
-          20
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-50"
-          id="publication-list-sorting-page-size-option-50"
-          key="records-per-page-50"
-          value={50}
-        >
-          50
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-100"
-          id="publication-list-sorting-page-size-option-100"
-          key="records-per-page-100"
-          value={100}
-        >
-          100
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="exportPublicationsFormat"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            data-testid="export-publications-format-select"
+            id="exportPublicationsFormat"
+            role="button"
+            tabindex="0"
+          >
+            Please select
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            data-testid="export-publications-format-input"
+            tabindex="-1"
+            value="-1"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PublicationsListSorting component renders with empty paging data 1`] = `
-<span
-  className="publicationsListSorting empty"
-/>
+<div>
+  <span
+    class="publicationsListSorting empty"
+  />
+</div>
 `;
 
 exports[`PublicationsListSorting component renders with export dropdown for admin or author 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
   >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort results by
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-by"
-        disabled={false}
-        id="sortBy"
-        onChange={[Function]}
-        value="published_date"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-0"
-          id="publication-list-sorting-sort-by-option-0"
-          key="0"
-          value="published_date"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Published date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-1"
-          id="publication-list-sorting-sort-by-option-1"
-          key="1"
-          value="score"
+          Sort results by
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-by"
         >
-          Search relevance
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-2"
-          id="publication-list-sorting-sort-by-option-2"
-          key="2"
-          value="title"
-        >
-          Title
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-3"
-          id="publication-list-sorting-sort-by-option-3"
-          key="3"
-          value="created_date"
-        >
-          Created date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-4"
-          id="publication-list-sorting-sort-by-option-4"
-          key="4"
-          value="updated_date"
-        >
-          Updated date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-5"
-          id="publication-list-sorting-sort-by-option-5"
-          key="5"
-          value="altmetric_score"
-        >
-          Altmetric score
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-6"
-          id="publication-list-sorting-sort-by-option-6"
-          key="6"
-          value="scopus_citation_count"
-        >
-          Scopus citation count
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-7"
-          id="publication-list-sorting-sort-by-option-7"
-          key="7"
-          value="thomson_citation_count"
-        >
-          Web of Science citation count
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortBy"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortBy"
+            role="button"
+            tabindex="0"
+          >
+            Published date
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="published_date"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort order
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-order"
-        disabled={false}
-        id="sortOrder"
-        onChange={[Function]}
-        value="Desc"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-0"
-          id="publication-list-sorting-sort-order-option-0"
-          key="0"
-          value="Desc"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Desc
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-1"
-          id="publication-list-sorting-sort-order-option-1"
-          key="1"
-          value="Asc"
+          Sort order
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-order"
         >
-          Asc
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortOrder"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortOrder"
+            role="button"
+            tabindex="0"
+          >
+            Desc
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="Desc"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Works per page
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-page-size"
-        disabled={false}
-        id="pageSize"
-        onChange={[Function]}
-        value={20}
-        variant="standard"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+        >
+          Works per page
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-page-size"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="pageSize"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="pageSize"
+            role="button"
+            tabindex="0"
+          >
+            20
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="20"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-1cz0huv-MuiGrid-root"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-10"
-          id="publication-list-sorting-page-size-option-10"
-          key="records-per-page-10"
-          value={10}
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          10
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-20"
-          id="publication-list-sorting-page-size-option-20"
-          key="records-per-page-20"
-          value={20}
+          Export page results
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="export-publications-format"
         >
-          20
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-50"
-          id="publication-list-sorting-page-size-option-50"
-          key="records-per-page-50"
-          value={50}
-        >
-          50
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-100"
-          id="publication-list-sorting-page-size-option-100"
-          key="records-per-page-100"
-          value={100}
-        >
-          100
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    sx={
-      Object {
-        "display": Object {
-          "sm": "block",
-          "xs": "none",
-        },
-      }
-    }
-  >
-    <ExportPublications
-      disabled={false}
-      exportData={Object {}}
-      onChange={[Function]}
-    />
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="exportPublicationsFormat"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            data-testid="export-publications-format-select"
+            id="exportPublicationsFormat"
+            role="button"
+            tabindex="0"
+          >
+            Please select
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            data-testid="export-publications-format-input"
+            tabindex="-1"
+            value="-1"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PublicationsListSorting component renders with export dropdown hidden 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
   >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort results by
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-by"
-        disabled={false}
-        id="sortBy"
-        onChange={[Function]}
-        value="published_date"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-0"
-          id="publication-list-sorting-sort-by-option-0"
-          key="0"
-          value="published_date"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Published date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-1"
-          id="publication-list-sorting-sort-by-option-1"
-          key="1"
-          value="score"
+          Sort results by
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-by"
         >
-          Search relevance
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-2"
-          id="publication-list-sorting-sort-by-option-2"
-          key="2"
-          value="title"
-        >
-          Title
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-3"
-          id="publication-list-sorting-sort-by-option-3"
-          key="3"
-          value="created_date"
-        >
-          Created date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-4"
-          id="publication-list-sorting-sort-by-option-4"
-          key="4"
-          value="updated_date"
-        >
-          Updated date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-5"
-          id="publication-list-sorting-sort-by-option-5"
-          key="5"
-          value="altmetric_score"
-        >
-          Altmetric score
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-6"
-          id="publication-list-sorting-sort-by-option-6"
-          key="6"
-          value="scopus_citation_count"
-        >
-          Scopus citation count
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-7"
-          id="publication-list-sorting-sort-by-option-7"
-          key="7"
-          value="thomson_citation_count"
-        >
-          Web of Science citation count
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortBy"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortBy"
+            role="button"
+            tabindex="0"
+          >
+            Published date
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="published_date"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort order
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-order"
-        disabled={false}
-        id="sortOrder"
-        onChange={[Function]}
-        value="Desc"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-0"
-          id="publication-list-sorting-sort-order-option-0"
-          key="0"
-          value="Desc"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Desc
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-1"
-          id="publication-list-sorting-sort-order-option-1"
-          key="1"
-          value="Asc"
+          Sort order
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-order"
         >
-          Asc
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={12}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortOrder"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortOrder"
+            role="button"
+            tabindex="0"
+          >
+            Desc
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="Desc"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Works per page
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-page-size"
-        disabled={false}
-        id="pageSize"
-        onChange={[Function]}
-        value={20}
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-10"
-          id="publication-list-sorting-page-size-option-10"
-          key="records-per-page-10"
-          value={10}
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          10
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-20"
-          id="publication-list-sorting-page-size-option-20"
-          key="records-per-page-20"
-          value={20}
+          Works per page
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-page-size"
         >
-          20
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-50"
-          id="publication-list-sorting-page-size-option-50"
-          key="records-per-page-50"
-          value={50}
-        >
-          50
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-100"
-          id="publication-list-sorting-page-size-option-100"
-          key="records-per-page-100"
-          value={100}
-        >
-          100
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="pageSize"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="pageSize"
+            role="button"
+            tabindex="0"
+          >
+            20
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="20"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PublicationsListSorting component renders with non-empty paging data 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
   >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort results by
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-by"
-        disabled={false}
-        id="sortBy"
-        onChange={[Function]}
-        value="published_date"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-0"
-          id="publication-list-sorting-sort-by-option-0"
-          key="0"
-          value="published_date"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Published date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-1"
-          id="publication-list-sorting-sort-by-option-1"
-          key="1"
-          value="score"
+          Sort results by
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-by"
         >
-          Search relevance
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-2"
-          id="publication-list-sorting-sort-by-option-2"
-          key="2"
-          value="title"
-        >
-          Title
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-3"
-          id="publication-list-sorting-sort-by-option-3"
-          key="3"
-          value="created_date"
-        >
-          Created date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-4"
-          id="publication-list-sorting-sort-by-option-4"
-          key="4"
-          value="updated_date"
-        >
-          Updated date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-5"
-          id="publication-list-sorting-sort-by-option-5"
-          key="5"
-          value="altmetric_score"
-        >
-          Altmetric score
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-6"
-          id="publication-list-sorting-sort-by-option-6"
-          key="6"
-          value="scopus_citation_count"
-        >
-          Scopus citation count
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-7"
-          id="publication-list-sorting-sort-by-option-7"
-          key="7"
-          value="thomson_citation_count"
-        >
-          Web of Science citation count
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortBy"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortBy"
+            role="button"
+            tabindex="0"
+          >
+            Published date
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="published_date"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort order
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-order"
-        disabled={false}
-        id="sortOrder"
-        onChange={[Function]}
-        value="Desc"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-0"
-          id="publication-list-sorting-sort-order-option-0"
-          key="0"
-          value="Desc"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Desc
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-1"
-          id="publication-list-sorting-sort-order-option-1"
-          key="1"
-          value="Asc"
+          Sort order
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-order"
         >
-          Asc
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={12}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortOrder"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortOrder"
+            role="button"
+            tabindex="0"
+          >
+            Desc
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="Desc"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Works per page
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-page-size"
-        disabled={false}
-        id="pageSize"
-        onChange={[Function]}
-        value={20}
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-10"
-          id="publication-list-sorting-page-size-option-10"
-          key="records-per-page-10"
-          value={10}
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          10
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-20"
-          id="publication-list-sorting-page-size-option-20"
-          key="records-per-page-20"
-          value={20}
+          Works per page
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-page-size"
         >
-          20
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-50"
-          id="publication-list-sorting-page-size-option-50"
-          key="records-per-page-50"
-          value={50}
-        >
-          50
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-100"
-          id="publication-list-sorting-page-size-option-100"
-          key="records-per-page-100"
-          value={100}
-        >
-          100
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="pageSize"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="pageSize"
+            role="button"
+            tabindex="0"
+          >
+            20
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="20"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PublicationsListSorting component updates sortBy, sortDirection and pageSize state when they change after render 1`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
   >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort results by
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-by"
-        disabled={false}
-        id="sortBy"
-        onChange={[Function]}
-        value="published_date"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-0"
-          id="publication-list-sorting-sort-by-option-0"
-          key="0"
-          value="published_date"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Published date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-1"
-          id="publication-list-sorting-sort-by-option-1"
-          key="1"
-          value="score"
+          Sort results by
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-by"
         >
-          Search relevance
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-2"
-          id="publication-list-sorting-sort-by-option-2"
-          key="2"
-          value="title"
-        >
-          Title
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-3"
-          id="publication-list-sorting-sort-by-option-3"
-          key="3"
-          value="created_date"
-        >
-          Created date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-4"
-          id="publication-list-sorting-sort-by-option-4"
-          key="4"
-          value="updated_date"
-        >
-          Updated date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-5"
-          id="publication-list-sorting-sort-by-option-5"
-          key="5"
-          value="altmetric_score"
-        >
-          Altmetric score
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-6"
-          id="publication-list-sorting-sort-by-option-6"
-          key="6"
-          value="scopus_citation_count"
-        >
-          Scopus citation count
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-7"
-          id="publication-list-sorting-sort-by-option-7"
-          key="7"
-          value="thomson_citation_count"
-        >
-          Web of Science citation count
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortBy"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortBy"
+            role="button"
+            tabindex="0"
+          >
+            Published date
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="published_date"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort order
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-order"
-        disabled={false}
-        id="sortOrder"
-        onChange={[Function]}
-        value="Desc"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-0"
-          id="publication-list-sorting-sort-order-option-0"
-          key="0"
-          value="Desc"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Desc
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-1"
-          id="publication-list-sorting-sort-order-option-1"
-          key="1"
-          value="Asc"
+          Sort order
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-order"
         >
-          Asc
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={12}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortOrder"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortOrder"
+            role="button"
+            tabindex="0"
+          >
+            Desc
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="Desc"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Works per page
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-page-size"
-        disabled={false}
-        id="pageSize"
-        onChange={[Function]}
-        value={20}
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-5"
-          id="publication-list-sorting-page-size-option-5"
-          key="records-per-page-5"
-          value={5}
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          5
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-10"
-          id="publication-list-sorting-page-size-option-10"
-          key="records-per-page-10"
-          value={10}
+          Works per page
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-page-size"
         >
-          10
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-15"
-          id="publication-list-sorting-page-size-option-15"
-          key="records-per-page-15"
-          value={15}
-        >
-          15
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-20"
-          id="publication-list-sorting-page-size-option-20"
-          key="records-per-page-20"
-          value={20}
-        >
-          20
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-50"
-          id="publication-list-sorting-page-size-option-50"
-          key="records-per-page-50"
-          value={50}
-        >
-          50
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-100"
-          id="publication-list-sorting-page-size-option-100"
-          key="records-per-page-100"
-          value={100}
-        >
-          100
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="pageSize"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="pageSize"
+            role="button"
+            tabindex="0"
+          >
+            20
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="20"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`PublicationsListSorting component updates sortBy, sortDirection and pageSize state when they change after render 2`] = `
-<ForwardRef(Grid)
-  container={true}
-  spacing={2}
->
-  <ForwardRef(Grid)
-    item={true}
-    md={3}
-    sm={6}
-    xs={12}
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
   >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort results by
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-by"
-        disabled={false}
-        id="sortBy"
-        onChange={[Function]}
-        value="score"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-0"
-          id="publication-list-sorting-sort-by-option-0"
-          key="0"
-          value="published_date"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Published date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-1"
-          id="publication-list-sorting-sort-by-option-1"
-          key="1"
-          value="score"
+          Sort results by
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-by"
         >
-          Search relevance
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-2"
-          id="publication-list-sorting-sort-by-option-2"
-          key="2"
-          value="title"
-        >
-          Title
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-3"
-          id="publication-list-sorting-sort-by-option-3"
-          key="3"
-          value="created_date"
-        >
-          Created date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-4"
-          id="publication-list-sorting-sort-by-option-4"
-          key="4"
-          value="updated_date"
-        >
-          Updated date
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-5"
-          id="publication-list-sorting-sort-by-option-5"
-          key="5"
-          value="altmetric_score"
-        >
-          Altmetric score
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-6"
-          id="publication-list-sorting-sort-by-option-6"
-          key="6"
-          value="scopus_citation_count"
-        >
-          Scopus citation count
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-by-option-7"
-          id="publication-list-sorting-sort-by-option-7"
-          key="7"
-          value="thomson_citation_count"
-        >
-          Web of Science citation count
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={6}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortBy"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortBy"
+            role="button"
+            tabindex="0"
+          >
+            Search relevance
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="score"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Sort order
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-sort-order"
-        disabled={false}
-        id="sortOrder"
-        onChange={[Function]}
-        value="Asc"
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-0"
-          id="publication-list-sorting-sort-order-option-0"
-          key="0"
-          value="Desc"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          Desc
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-sort-order-option-1"
-          id="publication-list-sorting-sort-order-option-1"
-          key="1"
-          value="Asc"
+          Sort order
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-sort-order"
         >
-          Asc
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-  <ForwardRef(Grid)
-    item={true}
-    md={4}
-    sm={12}
-    xs={12}
-  >
-    <ForwardRef(FormControl)
-      fullWidth={true}
-      variant="standard"
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="sortOrder"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="sortOrder"
+            role="button"
+            tabindex="0"
+          >
+            Asc
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="Asc"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
     >
-      <ForwardRef(InputLabel)
-        shrink={true}
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
-        Works per page
-      </ForwardRef(InputLabel)>
-      <ForwardRef(Select)
-        data-testid="publication-list-sorting-page-size"
-        disabled={false}
-        id="pageSize"
-        onChange={[Function]}
-        value={50}
-        variant="standard"
-      >
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-5"
-          id="publication-list-sorting-page-size-option-5"
-          key="records-per-page-5"
-          value={5}
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
         >
-          5
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-10"
-          id="publication-list-sorting-page-size-option-10"
-          key="records-per-page-10"
-          value={10}
+          Works per page
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          data-testid="publication-list-sorting-page-size"
         >
-          10
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-15"
-          id="publication-list-sorting-page-size-option-15"
-          key="records-per-page-15"
-          value={15}
-        >
-          15
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-20"
-          id="publication-list-sorting-page-size-option-20"
-          key="records-per-page-20"
-          value={20}
-        >
-          20
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-50"
-          id="publication-list-sorting-page-size-option-50"
-          key="records-per-page-50"
-          value={50}
-        >
-          50
-        </ForwardRef(MenuItem)>
-        <ForwardRef(MenuItem)
-          data-testid="publication-list-sorting-page-size-option-100"
-          id="publication-list-sorting-page-size-option-100"
-          key="records-per-page-100"
-          value={100}
-        >
-          100
-        </ForwardRef(MenuItem)>
-      </ForwardRef(Select)>
-    </ForwardRef(FormControl)>
-  </ForwardRef(Grid)>
-</ForwardRef(Grid)>
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="pageSize"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            id="pageSize"
+            role="button"
+            tabindex="0"
+          >
+            50
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            tabindex="-1"
+            value="50"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

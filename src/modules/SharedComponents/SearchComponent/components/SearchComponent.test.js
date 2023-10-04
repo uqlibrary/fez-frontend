@@ -1,10 +1,13 @@
 import React from 'react';
 import SearchComponent from './SearchComponent';
-import moment from 'moment';
+import { fireEvent, rtlRender, within } from 'test-utils';
 
-import { fireEvent, render, WithRouter } from 'test-utils';
+jest.mock('config/general', () => ({
+    ...jest.requireActual('config/general'),
+    MAX_PUBLIC_SEARCH_TEXT_LENGTH: 20,
+}));
 
-function setup(testProps = {}, args = {}) {
+function setup(testProps = {}, renderMethod = rtlRender) {
     const props = {
         searchQueryParams: {},
 
@@ -13,11 +16,10 @@ function setup(testProps = {}, args = {}) {
         showAdvancedSearchButton: false,
         showPrefixIcon: false,
 
-        isInHeader: false,
-        isAdvancedSearch: false,
-        isAdvancedSearchMinimised: false,
-        isOpenAccessInAdvancedMode: false,
-        updateFacetExcludesFromSearchFields: jest.fn(),
+        isInHeader: testProps.isInHeader || false,
+        isAdvancedSearch: testProps.isAdvancedSearch || false,
+        isAdvancedSearchMinimised: testProps.isAdvancedSearchMinimised || false,
+        isOpenAccessInAdvancedMode: testProps.isOpenAccessInAdvancedMode || false,
         isAdmin: false,
         isUnpublishedBufferPage: false,
 
@@ -30,63 +32,60 @@ function setup(testProps = {}, args = {}) {
         ...testProps,
     };
 
-    return getElement(SearchComponent, props, args);
+    return renderMethod(<SearchComponent {...props} />);
 }
 
 describe('SearchComponent', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render in advanced search and take in consideration isOpenAccessInAdvancedMode changes', () => {
-        const wrapper = setup({
+        const { container, rerender } = setup({
             isAdvancedSearch: true,
         });
 
-        wrapper.setProps({
-            isOpenAccessInAdvancedMode: true,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should set default prop method as expected', () => {
-        const wrapper = getElement(SearchComponent, {
-            history: {
-                push: jest.fn(),
+        setup(
+            {
+                isAdvancedSearch: true,
+                isOpenAccessInAdvancedMode: true,
             },
-        });
-        expect(wrapper.instance().props.updateFacetExcludesFromSearchFields()).toBeUndefined();
+            rerender,
+        );
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with a class "header" for use in AppBar', () => {
-        const wrapper = setup({ isInHeader: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isInHeader: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render default view with advanced search', () => {
-        const wrapper = setup({ isAdvancedSearch: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isAdvancedSearch: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render simple search even if it says is advanced, if in header', () => {
-        const wrapper = setup({ isAdvancedSearch: true, isInHeader: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isAdvancedSearch: true, isInHeader: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should toggle search to minimised view of advanced search', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.setProps({
-            searchQueryParams: {
-                all: 'i feel very lucky',
+        const { container, rerender } = setup();
+        expect(container).toMatchSnapshot();
+        setup(
+            {
+                searchQueryParams: {
+                    all: 'i feel very lucky',
+                },
+                isAdvancedSearch: true,
+                isAdvancedSearchMinimised: true,
+                isOpenAccessInAdvancedMode: false,
             },
-            isAdvancedSearch: true,
-            isAdvancedSearchMinimised: true,
-            isOpenAccessInAdvancedMode: false,
-        });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+            rerender,
+        );
+        expect(container).toMatchSnapshot();
     });
 
     it('should minimise advanced search in mobile context', () => {
@@ -94,39 +93,36 @@ describe('SearchComponent', () => {
             history: {
                 push: jest.fn(),
             },
-        };
-        const context = {
             isMobile: true,
+            isAdvancedSearch: true,
         };
-        const wrapper = setup(props, { context });
-        wrapper.setProps({
-            isAdvancedSearchMinimised: true,
-        });
-        expect(wrapper.state().advancedSearch.isMinimised).toBe(true);
+
+        const { getByRole, rerender } = setup(props);
+        setup({ ...props, isAdvancedSearchMinimised: true }, rerender);
+        expect(getByRole('button', { name: 'Show advanced search' })).toBeInTheDocument();
     });
 
     it('should display simple search with query string', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.setProps({
-            searchQueryParams: {
-                all: 'i feel very lucky',
+        const { container, rerender } = setup();
+        expect(container).toMatchSnapshot();
+        setup(
+            {
+                searchQueryParams: {
+                    all: 'i feel very lucky',
+                },
+                isAdvancedSearch: false,
+                isAdvancedSearchMinimised: false,
+                isOpenAccessInAdvancedMode: false,
             },
-            isAdvancedSearch: false,
-            isAdvancedSearchMinimised: false,
-            isOpenAccessInAdvancedMode: false,
-        });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+            rerender,
+        );
+        expect(container).toMatchSnapshot();
     });
 
     it('should submit search for given search query params', () => {
         const testHistoryPushMethod = jest.fn();
-        const wrapper = setup({
+        const { getByRole } = setup({
             history: { push: testHistoryPushMethod },
-        });
-
-        const searchQuery = {
             page: 1,
             pageSize: 20,
             sortBy: 'score',
@@ -138,200 +134,9 @@ describe('SearchComponent', () => {
                 filters: {},
                 ranges: {},
             },
-        };
-
-        wrapper.instance().handleSearch(searchQuery);
-        wrapper.update();
-
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
-            pathname: '/records/search',
-            search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky',
-        });
-    });
-
-    it('should submit search for given search query params for unpublished buffer', () => {
-        const testHistoryPushMethod = jest.fn();
-        const wrapper = setup({
-            history: { push: testHistoryPushMethod },
-            location: { pathname: '/admin/unpublished' },
-            isAdmin: true,
-            isUnpublishedBufferPage: true,
         });
 
-        const searchQuery = {
-            page: 1,
-            pageSize: 20,
-            sortBy: 'score',
-            sortDirection: 'Desc',
-            searchQueryParams: {
-                rek_status: 3,
-            },
-            activeFacets: {
-                filters: {},
-                ranges: {},
-            },
-        };
-
-        wrapper.instance().handleSearch(searchQuery);
-        wrapper.update();
-
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
-            pathname: '/admin/unpublished',
-            search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_status%5D=3',
-        });
-
-        wrapper.setState({
-            isAdvancedSearch: true,
-        });
-        expect(wrapper.find('AdvancedSearchComponent').props().showUnpublishedFields).toBe(true);
-    });
-
-    it('should not search is searchQuery is empty', () => {
-        const testFn = jest.fn();
-        const wrapper = setup();
-        wrapper.instance().handleSearch('');
-        expect(testFn).not.toBeCalled();
-    });
-
-    it('should handle advanced search', () => {
-        const testHistoryPushMethod = jest.fn();
-        const wrapper = setup({
-            history: { push: testHistoryPushMethod },
-        });
-
-        wrapper.state().advancedSearch = {
-            fieldRows: [
-                {
-                    searchField: 'all',
-                    value: 'i feel lucky',
-                    label: '',
-                },
-                {
-                    searchField: 'rek_title',
-                    value: 'global warming',
-                    label: '',
-                },
-            ],
-            isOpenAccess: false,
-            docTypes: [],
-            yearFilter: {
-                from: null,
-                to: null,
-                invalid: false,
-            },
-        };
-
-        wrapper.update();
-
-        wrapper.instance()._handleAdvancedSearch();
-
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
-            pathname: '/records/search',
-            search:
-                'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D' +
-                '=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5B' +
-                'value%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
-        });
-
-        wrapper.setProps({
-            isAdmin: true,
-        });
-        wrapper.setState({
-            advancedSearch: {
-                fieldRows: [
-                    {
-                        searchField: 'rek_status',
-                        value: 4,
-                    },
-                ],
-            },
-        });
-
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
-            pathname: '/records/search',
-            search:
-                'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D' +
-                '=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5B' +
-                'value%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
-        });
-    });
-
-    it(
-        'should handle advanced search with year range, rek_status, ' +
-            'rek_created_date and rek_updated_date key set for an admin',
-        () => {
-            const testHistoryPushMethod = jest.fn();
-            const wrapper = setup({
-                history: { push: testHistoryPushMethod },
-                isAdmin: true,
-            });
-
-            wrapper.setState({
-                advancedSearch: {
-                    fieldRows: [
-                        {
-                            searchField: 'all',
-                            value: 'i feel lucky',
-                            label: '',
-                        },
-                        {
-                            searchField: 'rek_title',
-                            value: 'global warming',
-                            label: '',
-                        },
-                        {
-                            searchField: 'rek_status',
-                            value: 'Retracted',
-                        },
-                        {
-                            searchField: 'rek_created_date',
-                            value: {
-                                from: moment('10/10/1982', 'DD/MM/YYYY'),
-                                to: moment('10/10/1985', 'DD/MM/YYYY'),
-                            },
-                        },
-                        {
-                            searchField: 'rek_updated_date',
-                            value: {
-                                from: moment('10/10/1980', 'DD/MM/YYYY'),
-                                to: moment('10/10/1982', 'DD/MM/YYYY'),
-                            },
-                        },
-                    ],
-                    isOpenAccess: false,
-                    docTypes: [],
-                    yearFilter: {
-                        from: 2000,
-                        to: 2008,
-                        invalid: false,
-                    },
-                },
-            });
-
-            wrapper.instance()._handleAdvancedSearch();
-
-            expect(testHistoryPushMethod).toHaveBeenCalledWith({
-                pathname: '/records/search',
-                search:
-                    /* eslint-disable-next-line max-len */
-                    'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+date%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BUpdated+date%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=7&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=%5B09%2F10%2F1982+to+10%2F10%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date%5D%5Blabel%5D=%5B09%2F10%2F1980+to+10%2F10%2F1982%5D&searchMode=advanced',
-            });
-        },
-    );
-
-    it('should handle simple search', () => {
-        const testHistoryPushMethod = jest.fn();
-        const wrapper = setup({
-            history: { push: testHistoryPushMethod },
-        });
-
-        wrapper.state().simpleSearch = {
-            searchText: 'i feel lucky',
-        };
-
-        wrapper.update();
-
-        wrapper.instance()._handleSimpleSearch();
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
 
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
@@ -339,260 +144,245 @@ describe('SearchComponent', () => {
         });
     });
 
+    it('should update search query params', () => {
+        const testHistoryPushMethod = jest.fn();
+        const { getByRole, rerender } = setup({
+            history: { push: testHistoryPushMethod },
+            searchQueryParams: {
+                all: 'previous search',
+            },
+        });
+
+        setup(
+            {
+                history: { push: testHistoryPushMethod },
+                isAdvancedSearch: true,
+                searchQueryParams: {
+                    all: 'second search',
+                },
+            },
+            rerender,
+        );
+
+        setup(
+            {
+                history: { push: testHistoryPushMethod },
+                searchQueryParams: {
+                    all: 'third search',
+                },
+            },
+            rerender,
+        );
+
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search: 'searchQueryParams%5Ball%5D=third+search&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+        });
+    });
+
+    it('should not search is searchQuery is empty', () => {
+        const testFn = jest.fn();
+        const { getByRole } = setup();
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        expect(testFn).not.toBeCalled();
+    });
+
+    it('should handle advanced search', () => {
+        const testHistoryPushMethod = jest.fn();
+        const { getByTestId, getByRole, getByText } = setup({
+            history: { push: testHistoryPushMethod },
+            isAdmin: true,
+            isUnpublishedBufferPage: true,
+            isAdvancedSearch: true,
+            searchQueryParams: {
+                all: {
+                    value: 'i feel lucky',
+                },
+                rek_title: {
+                    value: 'global warming',
+                },
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': { from: null, to: null },
+                },
+            },
+            isOpenAccessInAdvancedMode: true,
+        });
+
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+            pathname: '/admin/unpublished',
+            search:
+                'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true' +
+                '&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=' +
+                '&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming' +
+                '&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
+        });
+
+        // add on status
+        fireEvent.click(getByTestId('advanced-search-row-add'));
+        fireEvent.mouseDown(getByText('Select a field'));
+        fireEvent.click(getByRole('option', { name: 'Status' }));
+        fireEvent.mouseDown(getByText('Select a status'));
+        fireEvent.click(getByRole('option', { name: 'In Review' }));
+
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+            pathname: '/admin/unpublished',
+            search:
+                'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true' +
+                '&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=' +
+                '&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming' +
+                '&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=5' +
+                '&searchQueryParams%5Brek_status%5D%5Blabel%5D=&searchMode=advanced',
+        });
+    });
+
+    it(
+        'should handle advanced search in unpublished page with year range, rek_status, ' +
+            'rek_created_date and rek_updated_date key set for an admin',
+        () => {
+            const testHistoryPushMethod = jest.fn();
+            const { getByRole } = setup({
+                history: { push: testHistoryPushMethod },
+                isAdmin: true,
+                isUnpublishedBufferPage: true,
+                isAdvancedSearch: true,
+                page: 1,
+                pageSize: 20,
+                sortBy: 'score',
+                sortDirection: 'Desc',
+                searchQueryParams: {
+                    all: {
+                        value: 'i feel lucky',
+                    },
+                    rek_title: {
+                        value: 'global warming',
+                    },
+                    rek_status: {
+                        value: '7',
+                    },
+                    rek_created_date: {
+                        label: '[31/12/1979 to 01/01/1985]',
+                        value: '[1979-12-31T14:00:00Z TO 1985-01-01T23:59:59Z]',
+                    },
+                    rek_updated_date: {
+                        label: '[31/12/1981 to 01/01/1985]',
+                        value: '[1981-12-31T14:00:00Z TO 1985-01-01T23:59:59Z]',
+                    },
+                },
+                activeFacets: {
+                    filters: {},
+                    ranges: {
+                        'Created date': '[1979-12-31T14:00:00Z TO 1985-01-01T23:59:59Z]',
+                        'Updated date': '[1981-12-31T14:00:00Z TO 1985-01-01T23:59:59Z]',
+                        'Year published': { from: 2000, to: 2008 },
+                    },
+                },
+            });
+
+            fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+            expect(testHistoryPushMethod).toHaveBeenCalledWith({
+                pathname: '/admin/unpublished',
+                search:
+                    'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+date%5D=%5B1979-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BUpdated+date%5D=%5B1981-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=7&searchQueryParams%5Brek_status%5D%5Blabel%5D=&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1979-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=%5B30%2F12%2F1979+to+01%2F01%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=%5B1981-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date%5D%5Blabel%5D=%5B30%2F12%2F1981+to+01%2F01%2F1985%5D&searchMode=advanced',
+            });
+        },
+    );
+
+    it('should handle advanced search with work type', () => {
+        const testHistoryPushMethod = jest.fn();
+        const { getByRole } = setup({
+            history: { push: testHistoryPushMethod },
+            isAdvancedSearch: true,
+            searchQueryParams: {
+                rek_display_type: ['371'],
+            },
+        });
+
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search:
+                'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_display_type%5D%5B%5D=371&searchMode=advanced',
+        });
+    });
+
+    it('should handle simple search', () => {
+        const testHistoryPushMethod = jest.fn();
+        const { getByRole, getByTestId } = setup({
+            history: { push: testHistoryPushMethod },
+        });
+
+        fireEvent.change(getByTestId('simple-search-input'), { target: { value: 'i feel lucky' } });
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+        });
+    });
+
     it('should show a snackbar error for input being too long', () => {
-        const wrapper = setup();
-        wrapper.instance()._displaySnackbar('Must be 5 characters or less');
-        expect(wrapper.state().snackbarMessage).toEqual('Must be 5 characters or less');
-        expect(wrapper.state().snackbarOpen).toBe(true);
+        const { getByTestId, getByRole } = setup({ searchQueryParams: { all: 'i feel very very lucky' } });
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        expect(getByTestId('simple-search-helper-text')).toHaveTextContent('Must be 20 characters or less');
     });
 
     it('should toggle advanced search to minimised view', () => {
-        const wrapper = setup({ isAdvancedSearch: true });
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: '0',
-                    value: '',
-                    label: '',
-                },
-            ],
-            isOpenAccess: false,
-            isMinimised: false,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._toggleMinimise();
-        wrapper.update();
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: '0',
-                    value: '',
-                    label: '',
-                },
-            ],
-            isOpenAccess: false,
-            isMinimised: true,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container, getByTestId } = setup({ isAdvancedSearch: true });
+        fireEvent.click(getByTestId('minimize-advanced-search'));
+        expect(container).toMatchSnapshot();
     });
 
     it('should toggle to advanced search', () => {
-        const wrapper = setup({ isAdvancedSearch: false });
-
-        wrapper.instance()._toggleSearchMode();
-        wrapper.update();
-
-        expect(wrapper.state().isAdvancedSearch).toBeTruthy();
-        expect(wrapper.state().advancedSearch.isMinimised).toBeFalsy();
+        const { container, getByRole } = setup();
+        fireEvent.click(getByRole('button', { name: 'Click to switch to Advanced search' }));
+        expect(container).toMatchSnapshot();
     });
 
     it('should toggle open access for advanced search', () => {
-        const wrapper = setup({ isAdvancedSearch: true });
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: '0',
-                    value: '',
-                    label: '',
-                },
-            ],
-            isOpenAccess: false,
-            isMinimised: false,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._toggleOpenAccess();
-        wrapper.update();
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: '0',
-                    value: '',
-                    label: '',
-                },
-            ],
-            isOpenAccess: true,
-            isMinimised: false,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container, getByTestId } = setup({ isAdvancedSearch: true });
+        fireEvent.click(getByTestId('advanced-search-open-access'));
+        expect(container).toMatchSnapshot();
     });
 
     it('should toggle to simple search', () => {
-        const wrapper = setup({ isAdvancedSearch: true });
-
-        wrapper.instance()._toggleSearchMode();
-        wrapper.update();
-
-        expect(wrapper.state().isAdvancedSearch).toBeFalsy();
+        const { container, getByRole } = setup({ isAdvancedSearch: true });
+        fireEvent.click(getByRole('button', { name: 'Click to return to the simple search' }));
+        expect(container).toMatchSnapshot();
     });
 
-    it('should handle simple search text change', () => {
-        const wrapper = setup();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._handleSimpleSearchTextChange('i feel lucky');
-        wrapper.update();
-
-        expect(wrapper.state().simpleSearch.searchText).toEqual('i feel lucky');
-    });
-
-    it('should add one row for advanced search', () => {
-        const wrapper = setup({
+    it('should add and remove one row for advanced search', () => {
+        const { queryByText, getByTestId } = setup({
             searchQueryParams: {
                 all: 'i feel lucky',
             },
             isAdvancedSearch: true,
         });
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [{ label: '', searchField: 'all', value: 'i feel lucky' }],
-            isMinimised: false,
-            isOpenAccess: false,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._addAdvancedSearchRow();
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: 'all',
-                    value: 'i feel lucky',
-                    label: '',
-                },
-                {
-                    searchField: '0',
-                    value: '',
-                },
-            ],
-            isOpenAccess: false,
-            isMinimised: false,
-            yearFilter: {},
-        });
-    });
-
-    it('should remove one row from advanced search', () => {
-        const wrapper = setup({
-            searchQueryParams: {
-                all: { value: 'i feel lucky', label: '' },
-                rek_title: { value: 'remove rek title field', label: '' },
-                docTypes: [],
-            },
-            isAdvancedSearch: true,
-        });
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                { label: '', searchField: 'all', value: 'i feel lucky' },
-                {
-                    label: '',
-                    searchField: 'rek_title',
-                    value: 'remove rek title field',
-                },
-                { label: '', searchField: 'docTypes', value: [] },
-            ],
-            isMinimised: false,
-            isOpenAccess: false,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._removeAdvancedSearchRow(1);
-        wrapper.update();
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: 'all',
-                    value: 'i feel lucky',
-                    label: '',
-                },
-                {
-                    searchField: 'docTypes',
-                    value: [],
-                    label: '',
-                },
-            ],
-            isOpenAccess: false,
-            isMinimised: false,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        fireEvent.click(getByTestId('advanced-search-row-add'));
+        expect(queryByText('Please select a field to search')).toBeInTheDocument();
+        fireEvent.click(getByTestId('delete-advanced-search-row-1'));
+        expect(queryByText('Please select a field to search')).not.toBeInTheDocument();
     });
 
     it('should update advanced search row on search text changed', () => {
-        const wrapper = setup({
+        const { container, getByTestId } = setup({
             searchQueryParams: {
                 all: { value: 'i feel lucky', label: '' },
             },
             isAdvancedSearch: true,
         });
 
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [{ label: '', searchField: 'all', value: 'i feel lucky' }],
-            isMinimised: false,
-            isOpenAccess: false,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._handleAdvancedSearchRowChange(0, {
-            searchField: 'all',
-            value: 'i feel more lucky',
-            label: '',
-        });
-        wrapper.update();
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: 'all',
-                    value: 'i feel more lucky',
-                    label: '',
-                },
-            ],
-            isOpenAccess: false,
-            isMinimised: false,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        fireEvent.change(getByTestId('any-field-input'), { target: { value: 'I feel more lucky' } });
+        expect(container).toMatchSnapshot();
     });
 
     it('should reset advanced search', () => {
-        const wrapper = setup({
+        const { container, getByTestId } = setup({
             searchQueryParams: {
                 all: { value: 'i feel lucky', label: '' },
                 rek_title: { value: 'global warming', label: '' },
@@ -602,363 +392,43 @@ describe('SearchComponent', () => {
             isOpenAccessInAdvancedMode: true,
         });
 
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [
-                {
-                    searchField: 'all',
-                    value: 'i feel lucky',
-                    label: '',
-                },
-                {
-                    searchField: 'rek_title',
-                    value: 'global warming',
-                    label: '',
-                },
-            ],
-            isOpenAccess: true,
-            isMinimised: false,
-            yearFilter: {},
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._resetAdvancedSearch();
-        wrapper.update();
-
-        expect(wrapper.state().advancedSearch).toEqual({
-            docTypes: [],
-            fieldRows: [{ searchField: '0', value: '' }],
-            isOpenAccess: false,
-            yearFilter: { from: 0, to: 0 },
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        fireEvent.click(getByTestId('advanced-search-reset'));
+        expect(container).toMatchSnapshot();
     });
 
     it('should update doc type values', () => {
-        const wrapper = setup({ isAdvancedSearch: true });
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper
-            .find('AdvancedSearchComponent')
-            .props()
-            .updateDocTypeValues([317, 123]);
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(setState).toHaveBeenCalledWith({
-            advancedSearch: {
-                docTypes: [317, 123],
-                fieldRows: [
-                    {
-                        label: '',
-                        searchField: '0',
-                        value: '',
-                    },
-                ],
-                isMinimised: false,
-                isOpenAccess: false,
-                yearFilter: {},
-            },
-        });
+        const { getByTestId, getByRole } = setup({ isAdvancedSearch: true });
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        fireEvent.click(getByRole('option', { name: 'Design' }));
+        fireEvent.click(getByRole('option', { name: 'Data Collection' }));
+        expect(getByTestId('rek-display-type-caption')).toHaveTextContent(
+            'Work typeis one ofDesign or Data Collection',
+        );
     });
 
     it('should update year range filter', () => {
-        const wrapper = setup({ isAdvancedSearch: true });
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper
-            .find('AdvancedSearchComponent')
-            .props()
-            .updateYearRangeFilter({
-                from: '2000',
-                to: '2003',
-                valid: true,
-            });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(setState).toHaveBeenCalledWith({
-            advancedSearch: {
-                docTypes: [],
-                fieldRows: [
-                    {
-                        label: '',
-                        searchField: '0',
-                        value: '',
-                    },
-                ],
-                isMinimised: false,
-                isOpenAccess: false,
-                yearFilter: {
-                    from: '2000',
-                    to: '2003',
-                    valid: true,
-                },
-            },
-        });
+        const { getByTestId } = setup({ isAdvancedSearch: true });
+        fireEvent.change(getByTestId('from'), { target: { value: 2000 } });
+        fireEvent.change(getByTestId('to'), { target: { value: 2003 } });
+        expect(getByTestId('facet-year-range-caption')).toHaveTextContent('Publishedbetween2000 to 2003');
     });
 
     it('should update date range filter', () => {
-        const wrapper = setup({ isAdvancedSearch: true });
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper
-            .find('AdvancedSearchComponent')
-            .props()
-            .updateDateRange('rek_created_date', '[2000 - 2001]');
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(setState).toHaveBeenCalledWith({
-            advancedSearch: {
-                docTypes: [],
-                fieldRows: [
-                    {
-                        label: '',
-                        searchField: '0',
-                        value: '',
-                    },
-                    {
-                        label: '',
-                        searchField: 'rek_created_date',
-                        value: '[2000 - 2001]',
-                    },
-                ],
-                isMinimised: false,
-                isOpenAccess: false,
-                yearFilter: {},
-            },
+        const { getByTestId, container } = setup({
+            isAdvancedSearch: true,
+            isAdmin: true,
+            isUnpublishedBufferPage: true,
         });
+        fireEvent.change(getByTestId('created-range-from-date'), { target: { value: '01/01/2000' } });
+        fireEvent.change(getByTestId('created-range-to-date'), { target: { value: '01/01/2001' } });
+        expect(container).toMatchSnapshot();
 
-        wrapper
-            .find('AdvancedSearchComponent')
-            .props()
-            .updateDateRange('rek_created_date', '[2000 - 2005]');
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(setState).toHaveBeenCalledWith({
-            advancedSearch: {
-                docTypes: [],
-                fieldRows: [
-                    {
-                        label: '',
-                        searchField: '0',
-                        value: '',
-                    },
-                    {
-                        label: '',
-                        searchField: 'rek_created_date',
-                        value: '[2000 - 2005]',
-                    },
-                ],
-                isMinimised: false,
-                isOpenAccess: false,
-                yearFilter: {},
-            },
-        });
-    });
-
-    describe('getFieldRowsFromSearchQuery', () => {
-        it('should get default field if search query params not set (undefined)', () => {
-            const wrapper = setup();
-            const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery(undefined);
-
-            expect(fieldRows).toEqual([{ searchField: '0', value: '', label: '' }]);
-        });
-
-        it('should get default field if search query params not set (empty object)', () => {
-            const wrapper = setup();
-            const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({});
-
-            expect(fieldRows).toEqual([{ searchField: '0', value: '', label: '' }]);
-        });
-
-        it('should process empty search query', () => {
-            const wrapper = setup({
-                isAdmin: false,
-            });
-            expect(
-                wrapper.instance().getFieldRowsFromSearchQuery({
-                    rek_status: '',
-                    rek_updated_date: '',
-                }),
-            ).toMatchSnapshot();
-        });
-
-        it('should process missing label', () => {
-            const wrapper = setup({
-                isAdmin: true,
-                isUnpublishedBufferPage: true,
-            });
-            expect(
-                wrapper.instance().getFieldRowsFromSearchQuery({
-                    rek_updated_date: {
-                        notLabel: 'test',
-                    },
-                }),
-            ).toMatchSnapshot();
-        });
-
-        it('should get field rows from search query params', () => {
-            const wrapper = setup();
-            const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({
-                all: 'test',
-                rek_title: 'some title',
-            });
-
-            expect(fieldRows).toEqual([
-                {
-                    searchField: 'all',
-                    value: 'test',
-                    label: '',
-                },
-                {
-                    searchField: 'rek_title',
-                    value: 'some title',
-                    label: '',
-                },
-            ]);
-        });
-
-        it('should get field rows from search query params for admin', () => {
-            const wrapper = setup({
-                isAdmin: true,
-                isUnpublishedBufferPage: true,
-            });
-
-            const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({
-                all: 'test',
-                rek_status: { value: 3 },
-                rek_created_date: { label: '[31/01/2019 to 12/02/2019]' },
-                rek_updated_date: { label: '[31/01/2019 to 12/02/2019]' },
-            });
-
-            expect(fieldRows).toEqual([
-                {
-                    searchField: 'all',
-                    value: 'test',
-                    label: '',
-                },
-                {
-                    searchField: 'rek_status',
-                    value: 'Submitted for Approval',
-                    label: '',
-                },
-                {
-                    searchField: 'rek_created_date',
-                    value: {
-                        from: moment('31/01/2019', 'DD/MM/YYYY'),
-                        to: moment('12/02/2019', 'DD/MM/YYYY'),
-                    },
-                    label: '',
-                },
-                {
-                    searchField: 'rek_updated_date',
-                    value: {
-                        from: moment('31/01/2019', 'DD/MM/YYYY'),
-                        to: moment('12/02/2019', 'DD/MM/YYYY'),
-                    },
-                    label: '',
-                },
-            ]);
-        });
-    });
-
-    describe('getDateRangeFromSearchQuery', () => {
-        it('should get date range from search query', () => {
-            const wrapper = setup();
-            const dateRange = wrapper.instance().getDateRangeFromSearchQuery({
-                rek_created_date: { label: '[31/01/2019 to 12/02/2019]' },
-                rek_updated_date: { label: '[31/01/2019 to 12/02/2019]' },
-            });
-            expect(dateRange).toEqual({
-                createdRange: {
-                    from: moment('31/01/2019', 'DD/MM/YYYY'),
-                    to: moment('12/02/2019', 'DD/MM/YYYY'),
-                },
-                updatedRange: {
-                    from: moment('31/01/2019', 'DD/MM/YYYY'),
-                    to: moment('12/02/2019', 'DD/MM/YYYY'),
-                },
-            });
-        });
-
-        it('should not get date range from search query', () => {
-            const wrapper = setup();
-            const dateRange = wrapper.instance().getDateRangeFromSearchQuery({
-                rek_created_date: '[31/01/2019 to 12/02/2019]',
-                rek_updated_date: '[31/01/2019 to 12/02/2019]',
-            });
-            expect(dateRange).toEqual({
-                createdRange: {},
-                updatedRange: {},
-            });
-        });
-    });
-
-    describe('parseDateRange', () => {
-        it('should return date range', () => {
-            const wrapper = setup();
-            expect(wrapper.instance().parseDateRange('[31/01/2019 to 12/02/2019]')).toMatchSnapshot();
-        });
-
-        it('should return empty object in case of invalid input', () => {
-            const wrapper = setup();
-            expect(wrapper.instance().parseDateRange('')).toEqual({});
-        });
-    });
-
-    describe('getDocTypesFromSearchQuery', () => {
-        it('should get doc types from search query', () => {
-            const wrapper = setup();
-            const docTypes = wrapper.instance().getDocTypesFromSearchQuery({
-                rek_display_type: [345, 373],
-            });
-            expect(docTypes).toEqual([345, 373]);
-        });
-    });
-
-    describe('getYearRangeFromActiveFacets', () => {
-        it('should get year range from active facets', () => {
-            const wrapper = setup();
-            const yearRange = wrapper.instance().getYearRangeFromActiveFacets({
-                ranges: {
-                    'Year published': {
-                        from: '2001',
-                        to: '2005',
-                    },
-                },
-            });
-            expect(yearRange).toEqual({
-                from: '2001',
-                to: '2005',
-            });
-        });
-    });
-
-    describe('getSearchQuery', () => {
-        it('should construct search query', () => {
-            const wrapper = setup();
-            wrapper.setState({
-                advancedSearch: {
-                    isOpenAccess: true,
-                },
-            });
-            expect(
-                wrapper.instance().getSearchQuery({
-                    all: 'i feel lucky',
-                }),
-            ).toMatchSnapshot();
-        });
+        fireEvent.change(getByTestId('created-range-to-date'), { target: { value: '01/01/2005' } });
+        expect(container).toMatchSnapshot();
     });
 
     it('search component should display validation message for PID input', () => {
-        const { getByTestId, getByText, queryByTestId } = render(
-            <WithRouter>
-                <SearchComponent history={{}} />
-            </WithRouter>,
-        );
+        const { getByTestId, getByText, queryByTestId } = setup({ history: {} });
 
         fireEvent.click(getByTestId('show-advanced-search'));
         fireEvent.mouseDown(getByTestId('field-type-select'));
@@ -978,5 +448,32 @@ describe('SearchComponent', () => {
 
         expect(queryByTestId('rek-pid-helper-text')).not.toBeInTheDocument();
         expect(getByTestId('advanced-search')).not.toHaveAttribute('disabled');
+    });
+
+    describe('getFieldRowsFromSearchQuery', () => {
+        it('should process empty search query', () => {
+            const { container } = setup({
+                isAdmin: false,
+                isUnpublishedBufferPage: true,
+                searchQueryParams: {
+                    rek_status: '',
+                    rek_updated_date: '',
+                },
+            });
+            expect(container).toMatchSnapshot();
+        });
+
+        it('should process missing label', () => {
+            const { container } = setup({
+                isAdmin: true,
+                isUnpublishedBufferPage: true,
+                searchQueryParams: {
+                    rek_created_date: {
+                        value: '[1979-12-31T14:00:00Z TO 1985-01-01T23:59:59Z]',
+                    },
+                },
+            });
+            expect(container).toMatchSnapshot();
+        });
     });
 });

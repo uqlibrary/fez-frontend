@@ -1,592 +1,412 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HerdcCodeField component should not render unknown value 1`] = `
-<Memo(NewGenericSelectField)
-  canUnselect={true}
-  error={false}
-  errorText=""
-  genericSelectFieldId="rek-herdc-code"
-  input={
-    Object {
-      "value": "999",
-    }
-  }
-  itemsList={
-    Array [
-      Object {
-        "text": "None",
-        "value": "0",
-      },
-      Object {
-        "text": "A1 Authored Book (Research)",
-        "value": "450001",
-      },
-      Object {
-        "text": "AX Edited Book; Book (Other Public Output)",
-        "value": "450005",
-      },
-      Object {
-        "text": "B1 Book Chapter (Research, Critical Review of Research)",
-        "value": "450006",
-      },
-      Object {
-        "text": "BX Book Chapter (Other Public Output)",
-        "value": "450008",
-      },
-      Object {
-        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
-        "value": "450009",
-      },
-      Object {
-        "text": "CX Journal Article (Other Public Output)",
-        "value": "450013",
-      },
-      Object {
-        "text": "E1 Refereed Conference Paper (Fully Published)",
-        "value": "450014",
-      },
-      Object {
-        "text": "EX Conference Paper (Other Public Output)",
-        "value": "450018",
-      },
-      Object {
-        "text": "CW1 Creative Work",
-        "value": "454028",
-      },
-      Object {
-        "text": "CW2 Live Performance of Creative Work",
-        "value": "454029",
-      },
-      Object {
-        "text": "CW3 Recorded or Rendered Creative Work",
-        "value": "454030",
-      },
-      Object {
-        "text": "CW4 Curated or Produced Exhibition or Event",
-        "value": "454031",
-      },
-      Object {
-        "text": "CW5 Research Report for an External Body",
-        "value": "454032",
-      },
-    ]
-  }
-  locale={
-    Object {
-      "label": undefined,
-    }
-  }
-  value="999"
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="rek-herdc-code-label"
+      id="rek-herdc-code-label"
+    />
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-herdc-code-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-herdc-code-select"
+        id="rek-herdc-code-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        aria-labelledby="rek-herdc-code-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-herdc-code-input"
+        data-testid="rek-herdc-code-input"
+        id="rek-herdc-code-input"
+        tabindex="-1"
+        value="999"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`HerdcCodeField component should render a current value 1`] = `
-<Memo(NewGenericSelectField)
-  canUnselect={true}
-  error={false}
-  errorText=""
-  genericSelectFieldId="rek-herdc-code"
-  input={
-    Object {
-      "value": "454028",
-    }
-  }
-  itemsList={
-    Array [
-      Object {
-        "text": "None",
-        "value": "0",
-      },
-      Object {
-        "text": "A1 Authored Book (Research)",
-        "value": "450001",
-      },
-      Object {
-        "text": "AX Edited Book; Book (Other Public Output)",
-        "value": "450005",
-      },
-      Object {
-        "text": "B1 Book Chapter (Research, Critical Review of Research)",
-        "value": "450006",
-      },
-      Object {
-        "text": "BX Book Chapter (Other Public Output)",
-        "value": "450008",
-      },
-      Object {
-        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
-        "value": "450009",
-      },
-      Object {
-        "text": "CX Journal Article (Other Public Output)",
-        "value": "450013",
-      },
-      Object {
-        "text": "E1 Refereed Conference Paper (Fully Published)",
-        "value": "450014",
-      },
-      Object {
-        "text": "EX Conference Paper (Other Public Output)",
-        "value": "450018",
-      },
-      Object {
-        "text": "CW1 Creative Work",
-        "value": "454028",
-      },
-      Object {
-        "text": "CW2 Live Performance of Creative Work",
-        "value": "454029",
-      },
-      Object {
-        "text": "CW3 Recorded or Rendered Creative Work",
-        "value": "454030",
-      },
-      Object {
-        "text": "CW4 Curated or Produced Exhibition or Event",
-        "value": "454031",
-      },
-      Object {
-        "text": "CW5 Research Report for an External Body",
-        "value": "454032",
-      },
-    ]
-  }
-  locale={
-    Object {
-      "label": undefined,
-    }
-  }
-  value="454028"
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="rek-herdc-code-label"
+      id="rek-herdc-code-label"
+    />
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-herdc-code-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-herdc-code-select"
+        id="rek-herdc-code-select"
+        role="button"
+        tabindex="0"
+      >
+        CW1 Creative Work
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        aria-labelledby="rek-herdc-code-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-herdc-code-input"
+        data-testid="rek-herdc-code-input"
+        id="rek-herdc-code-input"
+        tabindex="-1"
+        value="454028"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`HerdcCodeField component should render a deprecated value 1`] = `
-<Memo(NewGenericSelectField)
-  canUnselect={true}
-  error={false}
-  errorText=""
-  genericSelectFieldId="rek-herdc-code"
-  input={
-    Object {
-      "value": "450033",
-    }
-  }
-  itemsList={
-    Array [
-      Object {
-        "text": "None",
-        "value": "0",
-      },
-      Object {
-        "text": "A1 Authored Book (Research)",
-        "value": "450001",
-      },
-      Object {
-        "text": "AX Edited Book; Book (Other Public Output)",
-        "value": "450005",
-      },
-      Object {
-        "text": "B1 Book Chapter (Research, Critical Review of Research)",
-        "value": "450006",
-      },
-      Object {
-        "text": "BX Book Chapter (Other Public Output)",
-        "value": "450008",
-      },
-      Object {
-        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
-        "value": "450009",
-      },
-      Object {
-        "text": "CX Journal Article (Other Public Output)",
-        "value": "450013",
-      },
-      Object {
-        "text": "E1 Refereed Conference Paper (Fully Published)",
-        "value": "450014",
-      },
-      Object {
-        "text": "EX Conference Paper (Other Public Output)",
-        "value": "450018",
-      },
-      Object {
-        "text": "CW1 Creative Work",
-        "value": "454028",
-      },
-      Object {
-        "text": "CW2 Live Performance of Creative Work",
-        "value": "454029",
-      },
-      Object {
-        "text": "CW3 Recorded or Rendered Creative Work",
-        "value": "454030",
-      },
-      Object {
-        "text": "CW4 Curated or Produced Exhibition or Event",
-        "value": "454031",
-      },
-      Object {
-        "text": "CW5 Research Report for an External Body",
-        "value": "454032",
-      },
-      Object {
-        "text": "J5 Major Creative Works - Recorded Works",
-        "value": "450033",
-      },
-    ]
-  }
-  locale={
-    Object {
-      "label": undefined,
-    }
-  }
-  value="450033"
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="rek-herdc-code-label"
+      id="rek-herdc-code-label"
+    />
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-herdc-code-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-herdc-code-select"
+        id="rek-herdc-code-select"
+        role="button"
+        tabindex="0"
+      >
+        J5 Major Creative Works - Recorded Works
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        aria-labelledby="rek-herdc-code-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-herdc-code-input"
+        data-testid="rek-herdc-code-input"
+        id="rek-herdc-code-input"
+        tabindex="-1"
+        value="450033"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`HerdcCodeField component should render default view 1`] = `
-<Memo(NewGenericSelectField)
-  canUnselect={true}
-  error={false}
-  errorText=""
-  genericSelectFieldId="rek-herdc-code"
-  itemsList={
-    Array [
-      Object {
-        "text": "None",
-        "value": "0",
-      },
-      Object {
-        "text": "A1 Authored Book (Research)",
-        "value": "450001",
-      },
-      Object {
-        "text": "AX Edited Book; Book (Other Public Output)",
-        "value": "450005",
-      },
-      Object {
-        "text": "B1 Book Chapter (Research, Critical Review of Research)",
-        "value": "450006",
-      },
-      Object {
-        "text": "BX Book Chapter (Other Public Output)",
-        "value": "450008",
-      },
-      Object {
-        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
-        "value": "450009",
-      },
-      Object {
-        "text": "CX Journal Article (Other Public Output)",
-        "value": "450013",
-      },
-      Object {
-        "text": "E1 Refereed Conference Paper (Fully Published)",
-        "value": "450014",
-      },
-      Object {
-        "text": "EX Conference Paper (Other Public Output)",
-        "value": "450018",
-      },
-      Object {
-        "text": "CW1 Creative Work",
-        "value": "454028",
-      },
-      Object {
-        "text": "CW2 Live Performance of Creative Work",
-        "value": "454029",
-      },
-      Object {
-        "text": "CW3 Recorded or Rendered Creative Work",
-        "value": "454030",
-      },
-      Object {
-        "text": "CW4 Curated or Produced Exhibition or Event",
-        "value": "454031",
-      },
-      Object {
-        "text": "CW5 Research Report for an External Body",
-        "value": "454032",
-      },
-    ]
-  }
-  locale={
-    Object {
-      "label": undefined,
-    }
-  }
-  value=""
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
+      data-testid="rek-herdc-code-label"
+      id="rek-herdc-code-label"
+    />
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-herdc-code-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-herdc-code-select"
+        id="rek-herdc-code-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        aria-labelledby="rek-herdc-code-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-herdc-code-input"
+        data-testid="rek-herdc-code-input"
+        id="rek-herdc-code-input"
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`HerdcCodeField component should render immutable list as selected value with given field props 1`] = `
-<Memo(NewGenericSelectField)
-  canUnselect={true}
-  error={true}
-  errorText="Test error"
-  genericSelectFieldId="rek-herdc-code"
-  input={
-    Object {
-      "onChange": [MockFunction],
-      "value": Immutable.List [
-        "One",
-        "Two",
-      ],
-    }
-  }
-  itemsList={
-    Array [
-      Object {
-        "text": "None",
-        "value": "0",
-      },
-      Object {
-        "text": "A1 Authored Book (Research)",
-        "value": "450001",
-      },
-      Object {
-        "text": "AX Edited Book; Book (Other Public Output)",
-        "value": "450005",
-      },
-      Object {
-        "text": "B1 Book Chapter (Research, Critical Review of Research)",
-        "value": "450006",
-      },
-      Object {
-        "text": "BX Book Chapter (Other Public Output)",
-        "value": "450008",
-      },
-      Object {
-        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
-        "value": "450009",
-      },
-      Object {
-        "text": "CX Journal Article (Other Public Output)",
-        "value": "450013",
-      },
-      Object {
-        "text": "E1 Refereed Conference Paper (Fully Published)",
-        "value": "450014",
-      },
-      Object {
-        "text": "EX Conference Paper (Other Public Output)",
-        "value": "450018",
-      },
-      Object {
-        "text": "CW1 Creative Work",
-        "value": "454028",
-      },
-      Object {
-        "text": "CW2 Live Performance of Creative Work",
-        "value": "454029",
-      },
-      Object {
-        "text": "CW3 Recorded or Rendered Creative Work",
-        "value": "454030",
-      },
-      Object {
-        "text": "CW4 Curated or Produced Exhibition or Event",
-        "value": "454031",
-      },
-      Object {
-        "text": "CW5 Research Report for an External Body",
-        "value": "454032",
-      },
-    ]
-  }
-  label="Test label"
-  locale={
-    Object {
-      "label": "Test label",
-    }
-  }
-  meta={
-    Object {
-      "error": "Test error",
-    }
-  }
-  onChange={[MockFunction]}
-  placeholder="Test placeholder"
-  value={
-    Immutable.List [
-      "One",
-      "Two",
-    ]
-  }
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="rek-herdc-code-label"
+      id="rek-herdc-code-label"
+    >
+      Test label
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-herdc-code-select"
+        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-herdc-code-select"
+        id="rek-herdc-code-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="true"
+        aria-labelledby="rek-herdc-code-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-herdc-code-input"
+        data-testid="rek-herdc-code-input"
+        id="rek-herdc-code-input"
+        tabindex="-1"
+        value="One,Two"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+    <p
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1d7hrfi-MuiFormHelperText-root"
+      data-testid="rek-herdc-code-helper-text"
+      id="rek-herdc-code-helper-text"
+    >
+      Test error
+    </p>
+  </div>
+</div>
 `;
 
 exports[`HerdcCodeField component should render when given a default value field props 1`] = `
-<Memo(NewGenericSelectField)
-  canUnselect={true}
-  defaultValue="afr"
-  error={false}
-  errorText=""
-  genericSelectFieldId="rek-herdc-code"
-  itemsList={
-    Array [
-      Object {
-        "text": "None",
-        "value": "0",
-      },
-      Object {
-        "text": "A1 Authored Book (Research)",
-        "value": "450001",
-      },
-      Object {
-        "text": "AX Edited Book; Book (Other Public Output)",
-        "value": "450005",
-      },
-      Object {
-        "text": "B1 Book Chapter (Research, Critical Review of Research)",
-        "value": "450006",
-      },
-      Object {
-        "text": "BX Book Chapter (Other Public Output)",
-        "value": "450008",
-      },
-      Object {
-        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
-        "value": "450009",
-      },
-      Object {
-        "text": "CX Journal Article (Other Public Output)",
-        "value": "450013",
-      },
-      Object {
-        "text": "E1 Refereed Conference Paper (Fully Published)",
-        "value": "450014",
-      },
-      Object {
-        "text": "EX Conference Paper (Other Public Output)",
-        "value": "450018",
-      },
-      Object {
-        "text": "CW1 Creative Work",
-        "value": "454028",
-      },
-      Object {
-        "text": "CW2 Live Performance of Creative Work",
-        "value": "454029",
-      },
-      Object {
-        "text": "CW3 Recorded or Rendered Creative Work",
-        "value": "454030",
-      },
-      Object {
-        "text": "CW4 Curated or Produced Exhibition or Event",
-        "value": "454031",
-      },
-      Object {
-        "text": "CW5 Research Report for an External Body",
-        "value": "454032",
-      },
-    ]
-  }
-  label="Test label"
-  locale={
-    Object {
-      "label": "Test label",
-    }
-  }
-  placeholder="Test placeholder"
-  value=""
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
+      data-testid="rek-herdc-code-label"
+      id="rek-herdc-code-label"
+    >
+      Test label
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-herdc-code-select"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-herdc-code-select"
+        id="rek-herdc-code-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        aria-labelledby="rek-herdc-code-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-herdc-code-input"
+        data-testid="rek-herdc-code-input"
+        id="rek-herdc-code-input"
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`HerdcCodeField component should render with given field props 1`] = `
-<Memo(NewGenericSelectField)
-  canUnselect={true}
-  error={true}
-  errorText="Test error"
-  genericSelectFieldId="rek-herdc-code"
-  input={
-    Object {
-      "onChange": [MockFunction],
-      "value": Array [
-        "One",
-        "Two",
-      ],
-    }
-  }
-  itemsList={
-    Array [
-      Object {
-        "text": "None",
-        "value": "0",
-      },
-      Object {
-        "text": "A1 Authored Book (Research)",
-        "value": "450001",
-      },
-      Object {
-        "text": "AX Edited Book; Book (Other Public Output)",
-        "value": "450005",
-      },
-      Object {
-        "text": "B1 Book Chapter (Research, Critical Review of Research)",
-        "value": "450006",
-      },
-      Object {
-        "text": "BX Book Chapter (Other Public Output)",
-        "value": "450008",
-      },
-      Object {
-        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
-        "value": "450009",
-      },
-      Object {
-        "text": "CX Journal Article (Other Public Output)",
-        "value": "450013",
-      },
-      Object {
-        "text": "E1 Refereed Conference Paper (Fully Published)",
-        "value": "450014",
-      },
-      Object {
-        "text": "EX Conference Paper (Other Public Output)",
-        "value": "450018",
-      },
-      Object {
-        "text": "CW1 Creative Work",
-        "value": "454028",
-      },
-      Object {
-        "text": "CW2 Live Performance of Creative Work",
-        "value": "454029",
-      },
-      Object {
-        "text": "CW3 Recorded or Rendered Creative Work",
-        "value": "454030",
-      },
-      Object {
-        "text": "CW4 Curated or Produced Exhibition or Event",
-        "value": "454031",
-      },
-      Object {
-        "text": "CW5 Research Report for an External Body",
-        "value": "454032",
-      },
-    ]
-  }
-  label="Test label"
-  locale={
-    Object {
-      "label": "Test label",
-    }
-  }
-  meta={
-    Object {
-      "error": "Test error",
-    }
-  }
-  onChange={[MockFunction]}
-  placeholder="Test placeholder"
-  value={
-    Array [
-      "One",
-      "Two",
-    ]
-  }
-/>
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      data-testid="rek-herdc-code-label"
+      id="rek-herdc-code-label"
+    >
+      Test label
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="rek-herdc-code-select"
+        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        data-testid="rek-herdc-code-select"
+        id="rek-herdc-code-select"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="true"
+        aria-labelledby="rek-herdc-code-label"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        data-analyticsid="rek-herdc-code-input"
+        data-testid="rek-herdc-code-input"
+        id="rek-herdc-code-input"
+        tabindex="-1"
+        value="One,Two"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+    <p
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1d7hrfi-MuiFormHelperText-root"
+      data-testid="rek-herdc-code-helper-text"
+      id="rek-herdc-code-helper-text"
+    >
+      Test error
+    </p>
+  </div>
+</div>
 `;

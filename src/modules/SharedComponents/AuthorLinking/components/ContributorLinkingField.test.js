@@ -14,7 +14,7 @@ function setup(testProps = {}) {
 
 describe('Component ContributorLinkingField', () => {
     it('should render as expected', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 });

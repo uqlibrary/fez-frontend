@@ -1,1938 +1,2596 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScaleOfSignificanceListEditor tests Should render a list of many items in a scrollable HTML div 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
+exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
+<div>
   <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
+    id="test-list-editor-list-editor"
   >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="one-0"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="two-1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={2}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 2,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="three-2"
-      listRowId="test-list-editor-list-row-2"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={3}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 3,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="four-3"
-      listRowId="test-list-editor-list-row-3"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={4}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 4,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="five-4"
-      listRowId="test-list-editor-list-row-4"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={5}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 5,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="six-5"
-      listRowId="test-list-editor-list-row-5"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={6}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 6,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="seven-6"
-      listRowId="test-list-editor-list-row-6"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={7}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 7,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="eight-7"
-      listRowId="test-list-editor-list-row-7"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={8}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 8,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="nine-8"
-      listRowId="test-list-editor-list-row-8"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={9}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 9,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="ten-9"
-      listRowId="test-list-editor-list-row-9"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests Should render a list of many items inline 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
+    <div
+      class="MuiBox-root css-1l4fxj8"
     >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="one-0"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="two-1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={2}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 2,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="three-2"
-      listRowId="test-list-editor-list-row-2"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={3}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 3,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="four-3"
-      listRowId="test-list-editor-list-row-3"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={4}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 4,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="five-4"
-      listRowId="test-list-editor-list-row-4"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={5}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 5,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="six-5"
-      listRowId="test-list-editor-list-row-5"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={6}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 6,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="seven-6"
-      listRowId="test-list-editor-list-row-6"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={7}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 7,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="eight-7"
-      listRowId="test-list-editor-list-row-7"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={8}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 8,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="nine-8"
-      listRowId="test-list-editor-list-row-8"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={9}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 9,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="ten-9"
-      listRowId="test-list-editor-list-row-9"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests Should render a list of many items inline 2`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="rek-significance-showhidebutton"
+        data-testid="rek-significance-showhidebutton"
+        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
     >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="one-0"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="two-1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={2}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 2,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="three-2"
-      listRowId="test-list-editor-list-row-2"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={3}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 3,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="four-3"
-      listRowId="test-list-editor-list-row-3"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={4}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 4,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="five-4"
-      listRowId="test-list-editor-list-row-4"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={5}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 5,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="six-5"
-      listRowId="test-list-editor-list-row-5"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={6}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 6,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="seven-6"
-      listRowId="test-list-editor-list-row-6"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={7}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 7,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="eight-7"
-      listRowId="test-list-editor-list-row-7"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={8}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 8,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="nine-8"
-      listRowId="test-list-editor-list-row-8"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={9}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 9,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="ten-9"
-      listRowId="test-list-editor-list-row-9"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests should add an object item and set state 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-39 css-ofrcno-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-37 css-k3f0g4-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Reorder items
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-38 css-1ux21pi-MuiGrid-root"
+        >
+          <span
+            aria-label="Remove all items"
+            class=""
+            data-mui-internal-clone-element="true"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test-list-editor"
+              data-testid="delete-all-test-list-editor"
+              id="delete-all-test-list-editor"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list-editor-list"
+      id="test-list-editor-list"
     >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={true}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <ForwardRef(Typography)
-      style={
-        Object {
-          "borderBottom": "1px solid rgba(224, 224, 224, 1)",
-          "fontSize": "0.875rem",
-          "padding": 16,
-          "textAlign": "center",
-        }
-      }
-    >
-      No records to display
-    </ForwardRef(Typography)>
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests should add an object item and set state 2`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={true}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="test"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests should add item and set state 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={true}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <ForwardRef(Typography)
-      style={
-        Object {
-          "borderBottom": "1px solid rgba(224, 224, 224, 1)",
-          "fontSize": "0.875rem",
-          "padding": 16,
-          "textAlign": "center",
-        }
-      }
-    >
-      No records to display
-    </ForwardRef(Typography)>
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests should add item and set state 2`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={true}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": "test",
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="test"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests should move down an item 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="one-0"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="three-1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={2}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 2,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="two-2"
-      listRowId="test-list-editor-list-row-2"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests should move up an item 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="two-0"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="one-1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={2}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 2,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="three-2"
-      listRowId="test-list-editor-list-row-2"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
+      <div
+        data-testid="test-list-editor-list-row-0"
+        id="test-list-editor-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-42 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  First
+                   listed author 
+                  (Test, Tom)
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-0"
+                >
+                  Missing
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-0"
+                >
+                  Missing
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-41 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  aria-label="Move item down the order"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-editor-list-row-0-move-down"
+                    data-testid="test-list-editor-list-row-0-move-down"
+                    id="test-list-editor-list-row-0-move-down"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-0-edit"
+                  data-testid="test-list-editor-list-row-0-edit"
+                  id="test-list-editor-list-row-0-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-41 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-0-delete"
+                data-testid="test-list-editor-list-row-0-delete"
+                id="test-list-editor-list-row-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="test-list-editor-list-row-1"
+        id="test-list-editor-list-row-1"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-42 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  Second
+                   listed author 
+                  
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-1"
+                >
+                  Minor
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-1"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-41 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  aria-label="Move item up the order"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-editor-list-row-1-move-up"
+                    data-testid="test-list-editor-list-row-1-move-up"
+                    id="test-list-editor-list-row-1-move-up"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowUpIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-1-edit"
+                  data-testid="test-list-editor-list-row-1-edit"
+                  id="test-list-editor-list-row-1-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-41 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-1-delete"
+                data-testid="test-list-editor-list-row-1-delete"
+                id="test-list-editor-list-row-1-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ScaleOfSignificanceListEditor tests should process incomplete props without error 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={true}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
+<div>
   <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
+    id="test-list-editor-list-editor"
   >
-    <ForwardRef(Typography)
-      style={
-        Object {
-          "borderBottom": "1px solid rgba(224, 224, 224, 1)",
-          "fontSize": "0.875rem",
-          "padding": 16,
-          "textAlign": "center",
-        }
-      }
+    <div
+      class="MuiBox-root css-1l4fxj8"
     >
-      No records to display
-    </ForwardRef(Typography)>
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="rek-significance-showhidebutton"
+        data-testid="rek-significance-showhidebutton"
+        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-27 css-ofrcno-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-26 css-1ux21pi-MuiGrid-root"
+        >
+          <span
+            aria-label="Remove all items"
+            class=""
+            data-mui-internal-clone-element="true"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test-list-editor"
+              data-testid="delete-all-test-list-editor"
+              id="delete-all-test-list-editor"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list-editor-list"
+      id="test-list-editor-list"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+        style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgba(224, 224, 224, 1);"
+      >
+        No records to display
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
+<div>
+  <div
+    id="test-list-editor-list-editor"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-hckusd-MuiGrid-root"
+      data-testid="rek-significance-form"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="rek-significance-label"
+            id="rek-significance-label"
+          >
+            NoLabel
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="rek-significance-select"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="rek-significance-select"
+              id="rek-significance-select"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="true"
+              aria-labelledby="rek-significance-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="rek-significance-input"
+              data-testid="rek-significance-input"
+              id="rek-significance-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="rek-significance-helper-text"
+            id="rek-significance-helper-text"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="contribution-statement"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="rek-creator-contribution-statement"
+              id="rek-creator-contribution-statement"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-add"
+          data-testid="rek-significance-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        >
+          Add item
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-clear"
+          data-testid="rek-significance-clear"
+          id="clear-items"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-31 css-ofrcno-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-30 css-1ux21pi-MuiGrid-root"
+        >
+          <span
+            aria-label="Remove all items"
+            class=""
+            data-mui-internal-clone-element="true"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test-list-editor"
+              data-testid="delete-all-test-list-editor"
+              id="delete-all-test-list-editor"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list-editor-list"
+      id="test-list-editor-list"
+    >
+      <div
+        data-testid="test-list-editor-list-row-0"
+        id="test-list-editor-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-34 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  First
+                   listed author 
+                  (Test, Tom)
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-0"
+                >
+                  Missing
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-0"
+                >
+                  Missing
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-33 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-0-edit"
+                  data-testid="test-list-editor-list-row-0-edit"
+                  id="test-list-editor-list-row-0-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-33 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-0-delete"
+                data-testid="test-list-editor-list-row-0-delete"
+                id="test-list-editor-list-row-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
+<div>
+  <div
+    id="test-list-editor-list-editor"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-hckusd-MuiGrid-root"
+      data-testid="rek-significance-form"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="rek-significance-label"
+            id="rek-significance-label"
+          >
+            NoLabel
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="rek-significance-select"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="rek-significance-select"
+              id="rek-significance-select"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="true"
+              aria-labelledby="rek-significance-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="rek-significance-input"
+              data-testid="rek-significance-input"
+              id="rek-significance-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="rek-significance-helper-text"
+            id="rek-significance-helper-text"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="contribution-statement"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="rek-creator-contribution-statement"
+              id="rek-creator-contribution-statement"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-add"
+          data-testid="rek-significance-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        >
+          Edit item
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-clear"
+          data-testid="rek-significance-clear"
+          id="clear-items"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-47 css-ofrcno-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-46 css-1ux21pi-MuiGrid-root"
+        >
+          <span
+            aria-label="Remove all items"
+            class=""
+            data-mui-internal-clone-element="true"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test-list-editor"
+              data-testid="delete-all-test-list-editor"
+              id="delete-all-test-list-editor"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list-editor-list"
+      id="test-list-editor-list"
+    >
+      <div
+        data-testid="test-list-editor-list-row-0"
+        id="test-list-editor-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-50 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  First
+                   listed author 
+                  (Test, Tom)
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-0"
+                >
+                  Missing
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-0"
+                >
+                  Missing
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-49 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-0-edit"
+                  data-testid="test-list-editor-list-row-0-edit"
+                  id="test-list-editor-list-row-0-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-49 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-0-delete"
+                data-testid="test-list-editor-list-row-0-delete"
+                id="test-list-editor-list-row-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ScaleOfSignificanceListEditor tests should render full component as disabled 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={true}
-    hideReorder={true}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
+<div>
   <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
+    id="test-list-editor-list-editor"
   >
-    <ForwardRef(Typography)
-      style={
-        Object {
-          "borderBottom": "1px solid rgba(224, 224, 224, 1)",
-          "fontSize": "0.875rem",
-          "padding": 16,
-          "textAlign": "center",
-        }
-      }
+    <div
+      class="MuiBox-root css-1l4fxj8"
     >
-      No records to display
-    </ForwardRef(Typography)>
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="rek-significance-showhidebutton"
+        data-testid="rek-significance-showhidebutton"
+        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-9 css-ofrcno-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-8 css-1ux21pi-MuiGrid-root"
+        >
+          <span
+            aria-label="Remove all items"
+            class=""
+            data-mui-internal-clone-element="true"
+          >
+            <button
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test-list-editor"
+              data-testid="delete-all-test-list-editor"
+              disabled=""
+              id="delete-all-test-list-editor"
+              tabindex="-1"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list-editor-list"
+      id="test-list-editor-list"
+    >
+      <div
+        data-testid="test-list-editor-list-row-0"
+        id="test-list-editor-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-12 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  First
+                   listed author 
+                  (Test, Tom)
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-0"
+                >
+                  Missing
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-0"
+                >
+                  Missing
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-11 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-0-edit"
+                  data-testid="test-list-editor-list-row-0-edit"
+                  disabled=""
+                  id="test-list-editor-list-row-0-edit"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-11 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-0-delete"
+                data-testid="test-list-editor-list-row-0-delete"
+                disabled=""
+                id="test-list-editor-list-row-0-delete"
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ScaleOfSignificanceListEditor tests should render full component with a defined className 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={true}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
+<div>
   <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
+    id="test-list-editor-list-editor"
   >
-    <ForwardRef(Typography)
-      style={
-        Object {
-          "borderBottom": "1px solid rgba(224, 224, 224, 1)",
-          "fontSize": "0.875rem",
-          "padding": 16,
-          "textAlign": "center",
-        }
-      }
+    <div
+      class="MuiBox-root css-1l4fxj8"
     >
-      No records to display
-    </ForwardRef(Typography)>
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="rek-significance-showhidebutton"
+        data-testid="rek-significance-showhidebutton"
+        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-3 css-ofrcno-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-2 css-1ux21pi-MuiGrid-root"
+        >
+          <span
+            aria-label="Remove all items"
+            class=""
+            data-mui-internal-clone-element="true"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test-list-editor"
+              data-testid="delete-all-test-list-editor"
+              id="delete-all-test-list-editor"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list-editor-list"
+      id="test-list-editor-list"
+    >
+      <div
+        data-testid="test-list-editor-list-row-0"
+        id="test-list-editor-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-6 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  First
+                   listed author 
+                  (Test, Tom)
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-0"
+                >
+                  Missing
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-0"
+                >
+                  Missing
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-5 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-0-edit"
+                  data-testid="test-list-editor-list-row-0-edit"
+                  id="test-list-editor-list-row-0-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-5 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-0-delete"
+                data-testid="test-list-editor-list-row-0-delete"
+                id="test-list-editor-list-row-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ScaleOfSignificanceListEditor tests should render input value as itemList 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
+<div>
   <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
+    id="test-list-editor-list-editor"
   >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="test 1-0"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="test 2-1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
+    <div
+      class="MuiBox-root css-1l4fxj8"
+    >
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="rek-significance-showhidebutton"
+        data-testid="rek-significance-showhidebutton"
+        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-15 css-ofrcno-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-13 css-k3f0g4-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Reorder items
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-14 css-1ux21pi-MuiGrid-root"
+        >
+          <span
+            aria-label="Remove all items"
+            class=""
+            data-mui-internal-clone-element="true"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test-list-editor"
+              data-testid="delete-all-test-list-editor"
+              id="delete-all-test-list-editor"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list-editor-list"
+      id="test-list-editor-list"
+    >
+      <div
+        data-testid="test-list-editor-list-row-0"
+        id="test-list-editor-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-18 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  First
+                   listed author 
+                  
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-0"
+                >
+                  Missing
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-0"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-17 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  aria-label="Move item down the order"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-editor-list-row-0-move-down"
+                    data-testid="test-list-editor-list-row-0-move-down"
+                    id="test-list-editor-list-row-0-move-down"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-0-edit"
+                  data-testid="test-list-editor-list-row-0-edit"
+                  id="test-list-editor-list-row-0-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-17 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-0-delete"
+                data-testid="test-list-editor-list-row-0-delete"
+                id="test-list-editor-list-row-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="test-list-editor-list-row-1"
+        id="test-list-editor-list-row-1"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-18 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  Second
+                   listed author 
+                  
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-1"
+                >
+                  Missing
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-1"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-17 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  aria-label="Move item up the order"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-editor-list-row-1-move-up"
+                    data-testid="test-list-editor-list-row-1-move-up"
+                    id="test-list-editor-list-row-1-move-up"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowUpIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-1-edit"
+                  data-testid="test-list-editor-list-row-1-edit"
+                  id="test-list-editor-list-row-1-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-17 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-1-delete"
+                data-testid="test-list-editor-list-row-1-delete"
+                id="test-list-editor-list-row-1-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ScaleOfSignificanceListEditor tests should render input value as itemList for List 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
+<div>
   <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
+    id="test-list-editor-list-editor"
   >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="test 1-0"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="test 2-1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
+    <div
+      class="MuiBox-root css-1l4fxj8"
+    >
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="rek-significance-showhidebutton"
+        data-testid="rek-significance-showhidebutton"
+        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-21 css-ofrcno-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-19 css-k3f0g4-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Reorder items
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-20 css-1ux21pi-MuiGrid-root"
+        >
+          <span
+            aria-label="Remove all items"
+            class=""
+            data-mui-internal-clone-element="true"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test-list-editor"
+              data-testid="delete-all-test-list-editor"
+              id="delete-all-test-list-editor"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list-editor-list"
+      id="test-list-editor-list"
+    >
+      <div
+        data-testid="test-list-editor-list-row-0"
+        id="test-list-editor-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-24 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  First
+                   listed author 
+                  
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-0"
+                >
+                  Missing
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-0"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-23 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  aria-label="Move item down the order"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-editor-list-row-0-move-down"
+                    data-testid="test-list-editor-list-row-0-move-down"
+                    id="test-list-editor-list-row-0-move-down"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-0-edit"
+                  data-testid="test-list-editor-list-row-0-edit"
+                  id="test-list-editor-list-row-0-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-23 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-0-delete"
+                data-testid="test-list-editor-list-row-0-delete"
+                id="test-list-editor-list-row-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="test-list-editor-list-row-1"
+        id="test-list-editor-list-row-1"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-24 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  Second
+                   listed author 
+                  
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-1"
+                >
+                  Missing
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-1"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-23 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  aria-label="Move item up the order"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-editor-list-row-1-move-up"
+                    data-testid="test-list-editor-list-row-1-move-up"
+                    id="test-list-editor-list-row-1-move-up"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowUpIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                      />
+                    </svg>
+                    <span
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-1-edit"
+                  data-testid="test-list-editor-list-row-1-edit"
+                  id="test-list-editor-list-row-1-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-23 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-1-delete"
+                data-testid="test-list-editor-list-row-1-delete"
+                id="test-list-editor-list-row-1-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
-exports[`ScaleOfSignificanceListEditor tests should update an entry with selected index 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
-    >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
+exports[`ScaleOfSignificanceListEditor tests should update an object item in the list 1`] = `
+<div>
   <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
+    id="test-list-editor-list-editor"
   >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": "test 1",
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="test 1"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": "new 1",
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="new 1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`ScaleOfSignificanceListEditor tests should update an item with selected index 1`] = `
-<div
-  id="test-list-editor-list-editor"
->
-  <ForwardRef(Box)
-    alignItems="flex-end"
-    display="flex"
-    justifyContent="flex-end"
-  >
-    <ForwardRef(IconButton)
-      data-analyticsid="rek-significance-showhidebutton"
-      data-testid="rek-significance-showhidebutton"
-      onClick={[Function]}
-      size="small"
-      style={
-        Object {
-          "backgroundColor": "#51247A",
-          "color": "#fff",
-        }
-      }
+    <div
+      class="MuiBox-root css-1l4fxj8"
     >
-      <Memo(ForwardRef(AddIcon)) />
-    </ForwardRef(IconButton)>
-  </ForwardRef(Box)>
-  <Memo(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    listEditorId="test-list-editor"
-    onDeleteAll={[Function]}
-  />
-  <div
-    data-testid="test-list-editor-list"
-    id="test-list-editor-list"
-  >
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={false}
-      disabled={false}
-      hideReorder={false}
-      index={0}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 0,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="one-0"
-      listRowId="test-list-editor-list-row-0"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={true}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={1}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 1,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="four-1"
-      listRowId="test-list-editor-list-row-1"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
-    <Memo(ListRow)
-      canEdit={false}
-      canMoveDown={false}
-      canMoveUp={true}
-      disabled={false}
-      hideReorder={false}
-      index={2}
-      item={
-        Object {
-          "author": Object {
-            "rek_author": null,
-          },
-          "id": 2,
-          "key": undefined,
-          "value": Object {
-            "htmlText": null,
-          },
-        }
-      }
-      itemTemplate={[Function]}
-      key="three-2"
-      listRowId="test-list-editor-list-row-2"
-      onDelete={[Function]}
-      onEdit={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-    />
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="rek-significance-showhidebutton"
+        data-testid="rek-significance-showhidebutton"
+        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-55 css-ofrcno-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-54 css-1ux21pi-MuiGrid-root"
+        >
+          <span
+            aria-label="Remove all items"
+            class=""
+            data-mui-internal-clone-element="true"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="delete-all-test-list-editor"
+              data-testid="delete-all-test-list-editor"
+              id="delete-all-test-list-editor"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list-editor-list"
+      id="test-list-editor-list"
+    >
+      <div
+        data-testid="test-list-editor-list-row-0"
+        id="test-list-editor-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-58 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  style="color: rgba(0, 0, 0, 0.5);"
+                >
+                  First
+                   listed author 
+                  (Test, Tom)
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="scale-item-0"
+                >
+                  Major
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  id="statement-item-0"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-57 css-17o05rx-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+            >
+              <span
+                aria-label="Edit this item"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Edit this item"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-editor-list-row-0-edit"
+                  data-testid="test-list-editor-list-row-0-edit"
+                  id="test-list-editor-list-row-0-edit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-57 css-1ux21pi-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this item"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="test-list-editor-list-row-0-delete"
+                data-testid="test-list-editor-list-row-0-delete"
+                id="test-list-editor-list-row-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

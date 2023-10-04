@@ -96,7 +96,7 @@ export class SimpleSearchComponent extends PureComponent {
 
         onSearch: () => {},
         onToggleSearchMode: () => {},
-        onInvalidSearch: () => {},
+        onInvalidSearch: /* istanbul ignore next */ () => {},
     };
 
     constructor(props) {
@@ -125,7 +125,6 @@ export class SimpleSearchComponent extends PureComponent {
             () => {
                 if (this.state.showMobile) {
                     document.getElementById('mobile-search-input') &&
-                        /* istanbul ignore next */
                         document.getElementById('mobile-search-input').focus();
                 }
             },
@@ -143,9 +142,10 @@ export class SimpleSearchComponent extends PureComponent {
 
     _handleSearch = event => {
         if (event && event.key && event.key !== 'Enter') return;
-        /* istanbul ignore next */
-        if (this.state.searchTerm && this.state.searchTerm.trim().length === 0) return;
 
+        if (this.state.searchTerm && this.state.searchTerm.trim().length === 0) return;
+        // search button is disabled when exceeds the max text length
+        /* istanbul ignore next */
         if (this.props.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             this.props.onInvalidSearch(
                 locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH),
@@ -312,7 +312,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         placeholder={txt.searchBoxHint}
                                         inputProps={ariaLabel}
                                         onChange={this._handleSearchTextChange}
-                                        onKeyPress={this._handleSearch}
+                                        onKeyDown={this._handleSearch}
                                         value={this.props.searchText}
                                         errorText={this.searchTextValidationMessage(this.props.searchText)}
                                     />

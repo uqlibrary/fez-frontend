@@ -857,7 +857,12 @@ exports[`Community form should render form 1`] = `
       class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
     >
       <form>
-        <div />
+        <div>
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+        </div>
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
         >

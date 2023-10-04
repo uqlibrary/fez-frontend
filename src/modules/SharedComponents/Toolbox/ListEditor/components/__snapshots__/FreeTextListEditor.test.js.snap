@@ -4,6 +4,7 @@ exports[`FreeTextListEditor component should render default view 1`] = `
 <div>
   <div
     class="undefined"
+    data-testid="free-text-list-editor-list-editor"
     id="free-text-list-editor-list-editor"
   >
     <div
@@ -17,7 +18,7 @@ exports[`FreeTextListEditor component should render default view 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="free-text-list-editor-input"
             id="free-text-list-editor-input-label"

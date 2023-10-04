@@ -2,6 +2,10 @@
 
 exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <br />
   Step 2 - Select your name from the list below
   <li
@@ -109,6 +113,10 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 
 exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
@@ -199,6 +207,10 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 
 exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
@@ -291,6 +303,10 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 
 exports[`Component ContributorRowHeader header for creator role 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
@@ -393,6 +409,10 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
 
 exports[`Component ContributorRowHeader should display infinite class 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
@@ -506,6 +526,10 @@ Object {
 
 exports[`Component ContributorRowHeader should use extra padding if row is editable 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >
@@ -600,6 +624,10 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
 <div
   aria-hidden="true"
 >
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-container css-oyakqy-MuiListItem-container"
   >

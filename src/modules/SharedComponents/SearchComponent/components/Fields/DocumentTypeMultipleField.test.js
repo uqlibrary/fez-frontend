@@ -1,4 +1,6 @@
+import React from 'react';
 import { DocumentTypeMultipleField, styles } from './DocumentTypeMultipleField';
+import { rtlRender, fireEvent, within } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -10,45 +12,45 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(DocumentTypeMultipleField, props);
+    return rtlRender(<DocumentTypeMultipleField {...props} />);
 }
 
 describe('DocumentTypeMultipleField component', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('ForwardRef(Select)').props().disabled).toBeTruthy();
+        const { container, getByTestId } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
+        expect(getByTestId('document-type-selector')).toHaveClass('Mui-disabled');
+        expect(within(getByTestId('document-type-selector')).getByRole('button')).toHaveAttribute(
+            'aria-disabled',
+            'true',
+        );
     });
 
     it('should render with given document types selected by default', () => {
         const defaultDocTypes = [371, 316];
-        const wrapper = setup({
+        const { container, getByTestId, getByRole } = setup({
             docTypes: defaultDocTypes,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper
-            .find('ForwardRef(MenuItem)')
-            .map(
-                menuItem =>
-                    defaultDocTypes.indexOf(menuItem.props.value) > -1 && expect(menuItem.props.checked).toBeTruthy(),
-            );
+        expect(container).toMatchSnapshot();
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        expect(getByRole('option', { name: 'Design' })).toHaveAttribute('aria-selected', 'true');
+        expect(getByRole('option', { name: 'Data Collection' })).toHaveAttribute('aria-selected', 'true');
     });
 
     it('should handle doc type change event', () => {
         const updateDocTypeValuesFn = jest.fn();
-        const wrapper = setup({
+        const { getByTestId, getByRole } = setup({
             updateDocTypeValues: updateDocTypeValuesFn,
         });
-        wrapper
-            .find('ForwardRef(Select)')
-            .props()
-            .onChange({ target: { value: 316 } });
-        expect(updateDocTypeValuesFn).toHaveBeenCalledWith(316);
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        fireEvent.click(getByRole('option', { name: 'Design' }));
+
+        expect(updateDocTypeValuesFn).toHaveBeenCalledWith([316]);
     });
 
     it('should have a proper style generator', () => {
@@ -76,9 +78,9 @@ describe('DocumentTypeMultipleField component', () => {
     });
 
     it('should have the value "0" if docTypes property is empty', () => {
-        const wrapper = setup({
+        const { container } = setup({
             docTypes: null,
         });
-        expect(wrapper.find('ForwardRef(Select)').prop('value')).toStrictEqual(['0']);
+        expect(container.querySelector('input[name="document-type-selector"]').value).toStrictEqual('0');
     });
 });

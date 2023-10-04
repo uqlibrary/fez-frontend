@@ -1,25 +1,35 @@
 import React from 'react';
 import SecurityCard, { overrideSecurityValueNormalizer, getRecordType, isSame } from './SecurityCard';
-import { shallow } from 'enzyme';
 import { List } from 'immutable';
-
 import { DOCUMENT_TYPE_JOURNAL_ARTICLE, PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
+import { rtlRender } from 'test-utils';
 
 jest.mock('../../../../context');
 import { useFormValuesContext, useRecordContext } from 'context';
 
-/*
-    -   Enzyme doesn't support hooks yet
-    -   Not using `getElement` global function to shallow render functional component
-        because functional component using hooks are tricky to test with current setup.
-    -   Work around is to mock implementation of hooks
-*/
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+            />
+        );
+    },
+}));
+
 function setup(testProps = {}) {
     const props = {
         disabled: false,
         ...testProps,
     };
-    return shallow(<SecurityCard {...props} />);
+    return rtlRender(<SecurityCard {...props} />);
 }
 
 describe('SecurityCard component', () => {
@@ -54,11 +64,12 @@ describe('SecurityCard component', () => {
             },
         }));
 
-        const wrapper = setup();
+        const { container, getAllByText } = setup();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(2);
-        expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(0);
+        expect(container).toMatchSnapshot();
+        expect(getAllByText('Test collection').length).toEqual(2);
+        expect(container.querySelector('field[name="securitySection.rek_security_policy"]')).not.toBeInTheDocument();
+        expect(container.querySelector('field[name="securitySection.rek_datastream_policy"]')).not.toBeInTheDocument();
     });
 
     it('should not render data stream security selector for the record if no datastreams found', () => {
@@ -87,11 +98,12 @@ describe('SecurityCard component', () => {
             },
         }));
 
-        const wrapper = setup();
+        const { container, getAllByText } = setup();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(1);
-        expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(0);
+        expect(container).toMatchSnapshot();
+        expect(getAllByText('Test collection').length).toEqual(1);
+        expect(container.querySelector('field[name="securitySection.rek_security_policy"]')).not.toBeInTheDocument();
+        expect(container.querySelector('field[name="securitySection.rek_datastream_policy"]')).not.toBeInTheDocument();
     });
 
     it('should render security card correctly for record type if user checks override security', () => {
@@ -125,11 +137,11 @@ describe('SecurityCard component', () => {
             },
         }));
 
-        const wrapper = setup();
+        const { container, getAllByText } = setup();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(2);
-        expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(1);
+        expect(container).toMatchSnapshot();
+        expect(getAllByText('Test collection').length).toEqual(2);
+        expect(container.querySelector('field[name="securitySection.rek_security_policy"]')).toBeInTheDocument();
     });
 
     it('should render security card correctly for collection with data stream selector for collection', () => {
@@ -149,11 +161,11 @@ describe('SecurityCard component', () => {
             },
         }));
 
-        const wrapper = setup();
+        const { container } = setup();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(0);
-        expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(2);
+        expect(container).toMatchSnapshot();
+        expect(container.querySelector('field[name="securitySection.rek_security_policy"]')).toBeInTheDocument();
+        expect(container.querySelector('field[name="securitySection.rek_datastream_policy"]')).toBeInTheDocument();
     });
 
     it('should render security card correctly for community', () => {
@@ -172,11 +184,11 @@ describe('SecurityCard component', () => {
             },
         }));
 
-        const wrapper = setup();
+        const { container } = setup();
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(0);
-        expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(1);
+        expect(container).toMatchSnapshot();
+        expect(container.querySelector('field[name="securitySection.rek_security_policy"]')).toBeInTheDocument();
+        expect(container.querySelector('field[name="securitySection.rek_datastream_policy"]')).not.toBeInTheDocument();
     });
 
     it('should render security card with disabled inputs', () => {
@@ -210,11 +222,12 @@ describe('SecurityCard component', () => {
             },
         }));
 
-        const wrapper = setup({ disabled: true });
+        const { container, getAllByText } = setup({ disabled: true });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(2);
-        expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(1);
+        expect(container).toMatchSnapshot();
+        expect(getAllByText('Test collection').length).toEqual(2);
+        expect(container.querySelector('field[name="securitySection.rek_security_policy"]')).toBeInTheDocument();
+        expect(container.querySelector('field[name="securitySection.rek_datastream_policy"]')).not.toBeInTheDocument();
     });
 });
 

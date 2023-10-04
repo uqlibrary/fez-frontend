@@ -1,3 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ContributorLinkingField should render as expected 1`] = `undefined`;
+exports[`Component ContributorLinkingField should render as expected 1`] = `
+<div>
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item makeStyles-infiniteContainer-1 css-13i4rnv-MuiGrid-root"
+        style="height: 120px; overflow-y: auto;"
+      />
+    </div>
+  </div>
+</div>
+`;

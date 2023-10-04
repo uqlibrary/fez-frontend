@@ -16,6 +16,10 @@ exports[`AdminInterface component should disabled button and render alert for fo
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -448,6 +452,10 @@ exports[`AdminInterface component should display job created alert 1`] = `
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -766,6 +774,10 @@ exports[`AdminInterface component should display job created alert 2`] = `
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -1133,6 +1145,10 @@ exports[`AdminInterface component should display successful alert 1`] = `
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -1451,6 +1467,10 @@ exports[`AdminInterface component should display successful alert 2`] = `
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -1818,6 +1838,10 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -2104,6 +2128,10 @@ exports[`AdminInterface component should render default view as a full form view
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -2456,6 +2484,10 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -2786,6 +2818,10 @@ exports[`AdminInterface component should render in create mode 1`] = `
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -3096,6 +3132,10 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -3503,6 +3543,10 @@ exports[`AdminInterface component should render locked info alert 1`] = `
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"
@@ -3918,6 +3962,10 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
           style="margin-top: -24px;"
         >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             style="margin-bottom: 12px;"

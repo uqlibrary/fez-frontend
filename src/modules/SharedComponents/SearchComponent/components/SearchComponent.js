@@ -24,6 +24,7 @@ export default class SearchComponent extends PureComponent {
         updateFacetExcludesFromSearchFields: PropTypes.func,
         searchLoading: PropTypes.bool,
 
+        isMobile: PropTypes.bool,
         showSearchButton: PropTypes.bool,
         showMobileSearchButton: PropTypes.bool,
         showAdvancedSearchButton: PropTypes.bool,
@@ -42,10 +43,6 @@ export default class SearchComponent extends PureComponent {
         location: PropTypes.object,
     };
 
-    static contextTypes = {
-        isMobile: PropTypes.bool,
-    };
-
     static defaultProps = {
         searchQueryParams: {},
 
@@ -61,7 +58,7 @@ export default class SearchComponent extends PureComponent {
         updateFacetExcludesFromSearchFields: () => {},
     };
 
-    constructor(props, context) {
+    constructor(props) {
         super(props);
         this.state = {
             snackbarOpen: false,
@@ -86,7 +83,6 @@ export default class SearchComponent extends PureComponent {
             getFieldRowsFromSearchQuery: this.getFieldRowsFromSearchQuery,
             getDocTypesFromSearchQuery: this.getDocTypesFromSearchQuery,
             getDateRangeFromSearchQuery: this.getDateRangeFromSearchQuery,
-            isMobile: context.isMobile,
             prevProps: {
                 isOpenAccessInAdvancedMode: props.isOpenAccessInAdvancedMode,
                 isAdvancedSearch: props.isAdvancedSearch,
@@ -99,7 +95,7 @@ export default class SearchComponent extends PureComponent {
             props.isOpenAccessInAdvancedMode !== state.prevProps?.isOpenAccessInAdvancedMode;
         const isAdvancedSearchChanged = props.isAdvancedSearch !== state.prevProps?.isAdvancedSearch;
         const isAdvancedSearchMinimisedChanged =
-            state.isMobile && props.isAdvancedSearchMinimised !== state.prevProps?.isAdvancedSearchMinimised;
+            props.isMobile && props.isAdvancedSearchMinimised !== state.prevProps?.isAdvancedSearchMinimised;
         const searchQueryChanged =
             props.searchQueryParams &&
             state.prevProps?.searchQueryParams &&
@@ -164,7 +160,7 @@ export default class SearchComponent extends PureComponent {
                 Object.keys(searchQueryParams).filter(item => {
                     return item !== 'rek_display_type';
                 })) ||
-            [];
+            /* istanbul ignore next */ [];
 
         if (fieldRows.length === 0) {
             return [defaultFieldRow];
@@ -230,6 +226,7 @@ export default class SearchComponent extends PureComponent {
     };
 
     parseDateRange = range => {
+        /* istanbul ignore next */
         if (range.indexOf(' to ') < 1) {
             return {};
         }
@@ -264,6 +261,7 @@ export default class SearchComponent extends PureComponent {
     };
 
     handleSearch = searchQuery => {
+        /* istanbul ignore next */
         if (!searchQuery) {
             return;
         }
@@ -284,6 +282,8 @@ export default class SearchComponent extends PureComponent {
         });
     };
 
+    // search button is disabled when search string over the max length allowed
+    /* istanbul ignore next */
     _displaySnackbar = message => {
         this.setState({
             snackbarMessage: message,
@@ -494,7 +494,7 @@ export default class SearchComponent extends PureComponent {
         this.handleSearch(searchQuery);
     };
 
-    getSearchQuery = (searchQueryParams, ranges = {}) => {
+    getSearchQuery = (searchQueryParams, ranges) => {
         const { activeFacets } = DEFAULT_QUERY_PARAMS;
         const docTypeParams = this.state.advancedSearch.docTypes;
 

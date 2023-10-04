@@ -1,9 +1,12 @@
-import PublicationsListPagingWithStyles, { PublicationsListPaging, paginate } from './PublicationsListPaging';
+import React from 'react';
+import PublicationsListPaging, { paginate } from './PublicationsListPaging';
 import { locale } from 'locale';
+import { rtlRender, fireEvent } from 'test-utils';
 
 // Responsiveness is handled in Cypress tests
 
 const getProps = (testProps = {}) => ({
+    pagingId: 'test',
     classes: {},
     pagingData: {
         from: 0,
@@ -17,20 +20,14 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps = {}, testArgs = {}) {
-    const args = { isShallow: true, ...testArgs };
-    return getElement(PublicationsListPaging, getProps(testProps), args);
+function setup(testProps = {}, renderMethod = rtlRender) {
+    return renderMethod(<PublicationsListPaging {...getProps(testProps)} />);
 }
 
 describe('PublicationsListPaging renders ', () => {
     it('component with empty paging data', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('component with styles', () => {
-        const wrapper = getElement(PublicationsListPagingWithStyles, getProps(), { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('component renders as empty due to currentpage set outside range', () => {
@@ -41,8 +38,8 @@ describe('PublicationsListPaging renders ', () => {
             per_page: 20,
             current_page: 20,
         };
-        const wrapper = setup({ pagingData: data });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ pagingData: data });
+        expect(container).toMatchSnapshot();
     });
 
     it('component with non-empty paging data, first page', () => {
@@ -53,8 +50,8 @@ describe('PublicationsListPaging renders ', () => {
             per_page: 20,
             current_page: 1,
         };
-        const wrapper = setup({ pagingData: data });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ pagingData: data });
+        expect(container).toMatchSnapshot();
     });
 
     it('component with non-empty paging data, second page', () => {
@@ -65,8 +62,8 @@ describe('PublicationsListPaging renders ', () => {
             per_page: 20,
             current_page: 2,
         };
-        const wrapper = setup({ pagingData: data });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ pagingData: data });
+        expect(container).toMatchSnapshot();
     });
 
     it('component with non-empty paging data, last page', () => {
@@ -77,8 +74,8 @@ describe('PublicationsListPaging renders ', () => {
             per_page: 20,
             current_page: 3,
         };
-        const wrapper = setup({ pagingData: data });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ pagingData: data });
+        expect(container).toMatchSnapshot();
     });
 
     it('component with ellipsis paging results', () => {
@@ -89,8 +86,8 @@ describe('PublicationsListPaging renders ', () => {
             per_page: 20,
             current_page: 10,
         };
-        const wrapper = setup({ pagingData: data });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ pagingData: data });
+        expect(container).toMatchSnapshot();
     });
 
     it('component with all fields disabled', () => {
@@ -102,10 +99,10 @@ describe('PublicationsListPaging renders ', () => {
             current_page: 1,
         };
 
-        const wrapper = setup({ disabled: true, pagingData: data });
-        wrapper.find('page').forEach(page => {
-            expect(page.props().disabled).toEqual(true);
-        });
+        const { getByTestId } = setup({ disabled: true, pagingData: data });
+        expect(getByTestId('test-select-page-1')).toBeDisabled();
+        expect(getByTestId('test-select-page-2')).toBeDisabled();
+        expect(getByTestId('test-select-page-3')).toBeDisabled();
     });
 
     it('component with non-empty paging data, pageChanged called', () => {
@@ -117,8 +114,8 @@ describe('PublicationsListPaging renders ', () => {
             current_page: 1,
         };
         const testFunction = jest.fn();
-        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
-        wrapper.instance().pageChanged();
+        const { getByTestId } = setup({ pagingData: data, onPageChanged: testFunction });
+        fireEvent.click(getByTestId('test-select-page-2'));
         expect(testFunction).toBeCalled();
     });
 
@@ -131,11 +128,8 @@ describe('PublicationsListPaging renders ', () => {
             current_page: 1,
         };
         const testFunction = jest.fn();
-        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
-
-        const nextPage = wrapper.find('.paging-next');
-        expect(nextPage.length).toBe(1);
-        nextPage.props().onClick();
+        const { getByRole } = setup({ pagingData: data, onPageChanged: testFunction });
+        fireEvent.click(getByRole('button', { name: 'Next' }));
         expect(testFunction).toBeCalled();
     });
 
@@ -148,15 +142,12 @@ describe('PublicationsListPaging renders ', () => {
             current_page: 2,
         };
         const testFunction = jest.fn();
-        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
-
-        const page = wrapper.find('.paging-previous');
-        expect(page.length).toBe(1);
-        page.props().onClick();
+        const { getByRole } = setup({ pagingData: data, onPageChanged: testFunction });
+        fireEvent.click(getByRole('button', { name: 'Previous' }));
         expect(testFunction).toBeCalled();
     });
 
-    it('component with non-empty paging data, page number is clicked', () => {
+    it('component should update page buttons', () => {
         const data = {
             from: 1,
             to: 20,
@@ -164,39 +155,9 @@ describe('PublicationsListPaging renders ', () => {
             per_page: 20,
             current_page: 1,
         };
-        const testFunction = jest.fn();
-        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
-        const pages = wrapper.find('.paging-button');
-        pages
-            .at(1)
-            .props()
-            .onClick();
-        expect(testFunction).toBeCalled();
-    });
-
-    it('component with non-empty paging data, state is updated', () => {
-        const data = {
-            from: 1,
-            to: 20,
-            total: 60,
-            per_page: 20,
-            current_page: 1,
-        };
-
-        const nextData = {
-            from: 21,
-            to: 40,
-            total: 60,
-            per_page: 20,
-            current_page: 2,
-        };
-        const testFunction = jest.fn();
-        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
-        wrapper.setProps({ pagingData: nextData });
-        expect(JSON.stringify(wrapper.state())).toBe(JSON.stringify(nextData));
-
-        wrapper.setProps({ pagingData: {}, disabled: true });
-        expect(JSON.stringify(wrapper.state())).toBe(JSON.stringify(nextData));
+        const { rerender, container } = setup({ pagingData: data });
+        setup({ pagingData: { ...data, current_page: 2 } }, rerender);
+        expect(container).toMatchSnapshot();
     });
 
     it('method to render buttons appears as expected for 50 pages on page 25', () => {
@@ -207,20 +168,18 @@ describe('PublicationsListPaging renders ', () => {
             per_page: 20,
             current_page: 25,
         };
-        const wrapper = setup({ pagingData: data });
-        wrapper.setState({ ...data });
-        wrapper.update();
-        const pagination = paginate(
-            wrapper.state.total,
-            wrapper.state.current_page,
-            wrapper.state.per_page,
-            locale.components.paging.maxPagesToShow,
-        );
-        const paginationPages = pagination.pages;
+        const { queryByRole } = setup({ pagingData: data });
 
-        expect(wrapper.instance().renderPageButtons(paginationPages).length).toEqual(
-            locale.components.paging.maxPagesToShow,
-        );
+        // rendered page buttons with current page in the middle
+        expect(queryByRole('button', { name: 'Click to select page 1 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 22 of 50 result pages' })).not.toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 23 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 24 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 25 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 26 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 27 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 28 of 50 result pages' })).not.toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 50 of 50 result pages' })).toBeInTheDocument();
     });
 
     it('method to render buttons appears as expected for 50 pages on page 1', () => {
@@ -231,20 +190,15 @@ describe('PublicationsListPaging renders ', () => {
             per_page: 20,
             current_page: 1,
         };
-        const wrapper = setup({ pagingData: data });
-        wrapper.setState({ ...data });
-        wrapper.update();
-        const pagination = paginate(
-            wrapper.state.total,
-            wrapper.state.current_page,
-            wrapper.state.per_page,
-            locale.components.paging.maxPagesToShow,
-        );
-        const paginationPages = pagination.pages;
+        const { queryByRole } = setup({ pagingData: data });
 
-        expect(wrapper.instance().renderPageButtons(paginationPages).length).toEqual(
-            locale.components.paging.maxPagesToShow,
-        );
+        expect(queryByRole('button', { name: 'Click to select page 1 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 2 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 3 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 4 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 5 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 6 of 50 result pages' })).not.toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 50 of 50 result pages' })).toBeInTheDocument();
     });
 
     it('method to render buttons appears as expected for 50 pages on page 50', () => {
@@ -255,28 +209,27 @@ describe('PublicationsListPaging renders ', () => {
             per_page: 20,
             current_page: 50,
         };
-        const wrapper = setup({ pagingData: data });
-        wrapper.setState({ ...data });
-        wrapper.update();
-        const pagination = paginate(
-            wrapper.state.total,
-            wrapper.state.current_page,
-            wrapper.state.per_page,
-            locale.components.paging.maxPagesToShow,
-        );
-        const paginationPages = pagination.pages;
+        const { queryByRole } = setup({ pagingData: data });
 
-        expect(wrapper.instance().renderPageButtons(paginationPages).length).toEqual(
-            locale.components.paging.maxPagesToShow,
-        );
+        expect(queryByRole('button', { name: 'Click to select page 1 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 45 of 50 result pages' })).not.toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 46 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 47 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 48 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 49 of 50 result pages' })).toBeInTheDocument();
+        expect(queryByRole('button', { name: 'Click to select page 50 of 50 result pages' })).toBeInTheDocument();
     });
+
     it('should render buttons with zero total pages', () => {
-        const wrapper = setup();
-        wrapper.setState({
+        const data = {
+            from: 0,
+            to: 0,
             total: null,
-        });
-        expect(wrapper.instance().renderButton('test')).toMatchSnapshot();
-        expect(wrapper.instance().renderPageButtons()).toEqual([]);
+            per_page: 0,
+            current_page: 1,
+        };
+        const { container } = setup({ pagingData: data });
+        expect(container).toMatchSnapshot();
     });
 
     describe('Pagination function', () => {

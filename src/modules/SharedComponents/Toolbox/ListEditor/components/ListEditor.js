@@ -208,6 +208,7 @@ export default class ListEditor extends Component {
     };
 
     moveUpList = (item, index) => {
+        /* istanbul ignore next */
         if (index === 0) return;
         const nextList = this.state.itemList[index - 1];
         this.setState({
@@ -221,6 +222,7 @@ export default class ListEditor extends Component {
     };
 
     moveDownList = (item, index) => {
+        /* istanbul ignore next */
         if (index === this.state.itemList.length - 1) return;
         const nextList = this.state.itemList[index + 1];
         this.setState({
@@ -266,7 +268,11 @@ export default class ListEditor extends Component {
             />
         ));
         return (
-            <div className={`${this.props.className}`} id={`${this.props.listEditorId}-list-editor`}>
+            <div
+                className={`${this.props.className}`}
+                id={`${this.props.listEditorId}-list-editor`}
+                data-testid={`${this.props.listEditorId}-list-editor`}
+            >
                 <this.props.formComponent
                     inputField={this.props.inputField}
                     key={

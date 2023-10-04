@@ -49,1320 +49,165 @@ Object {
 `;
 
 exports[`DocumentTypeMultipleField component should render default view 1`] = `
-<ForwardRef(FormControl)
-  fullWidth={true}
-  variant="standard"
->
-  <ForwardRef(InputLabel)>
-    Work type
-  </ForwardRef(InputLabel)>
-  <ForwardRef(Select)
-    aria-label="Select work types to search on"
-    data-testid="document-type-selector"
-    disabled={false}
-    fullWidth={true}
-    id="document-type-selector"
-    multiple={true}
-    name="document-type-selector"
-    onChange={[Function]}
-    value={Array []}
-    variant="standard"
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
-    <ForwardRef(MenuItem)
-      disabled={true}
-      key="0"
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
     >
-      Select work types
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="1"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={130}
+      Work type
+    </label>
+    <div
+      aria-label="Select work types to search on"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      data-testid="document-type-selector"
     >
-      Conference Paper
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="2"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={174}
-    >
-      Book
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="3"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={177}
-    >
-      Book Chapter
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="4"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={179}
-    >
-      Journal Article
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="5"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={181}
-    >
-      Department Technical Report
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="6"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={183}
-    >
-      Working Paper
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="7"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={185}
-    >
-      Patent
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="8"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={187}
-    >
-      Thesis
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="9"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={189}
-    >
-      Seminar Paper
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="10"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={191}
-    >
-      Newspaper Article
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="11"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={197}
-    >
-      Conference Proceedings
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="12"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={202}
-    >
-      Generic Document
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="13"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={204}
-    >
-      Preprint
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="14"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={228}
-    >
-      Digilib Image
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="15"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={238}
-    >
-      Image
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="16"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={263}
-    >
-      Audio Document
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="17"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={272}
-    >
-      Reference Entry
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="18"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={275}
-    >
-      Research Report
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="19"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={294}
-    >
-      Journal
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="20"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={310}
-    >
-      Video Document
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="21"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={313}
-    >
-      Creative Work
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="22"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={316}
-    >
-      Design
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="23"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={371}
-    >
-      Data Collection
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="24"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={374}
-    >
-      Manuscript
-    </ForwardRef(MenuItem)>
-  </ForwardRef(Select)>
-</ForwardRef(FormControl)>
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="document-type-selector"
+        class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        id="document-type-selector"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        name="document-type-selector"
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
-<ForwardRef(FormControl)
-  fullWidth={true}
-  variant="standard"
->
-  <ForwardRef(InputLabel)>
-    Work type
-  </ForwardRef(InputLabel)>
-  <ForwardRef(Select)
-    aria-label="Select work types to search on"
-    data-testid="document-type-selector"
-    disabled={true}
-    fullWidth={true}
-    id="document-type-selector"
-    multiple={true}
-    name="document-type-selector"
-    onChange={[Function]}
-    value={Array []}
-    variant="standard"
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
-    <ForwardRef(MenuItem)
-      disabled={true}
-      key="0"
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
     >
-      Select work types
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="1"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={130}
+      Work type
+    </label>
+    <div
+      aria-label="Select work types to search on"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      data-testid="document-type-selector"
     >
-      Conference Paper
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="2"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={174}
-    >
-      Book
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="3"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={177}
-    >
-      Book Chapter
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="4"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={179}
-    >
-      Journal Article
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="5"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={181}
-    >
-      Department Technical Report
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="6"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={183}
-    >
-      Working Paper
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="7"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={185}
-    >
-      Patent
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="8"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={187}
-    >
-      Thesis
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="9"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={189}
-    >
-      Seminar Paper
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="10"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={191}
-    >
-      Newspaper Article
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="11"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={197}
-    >
-      Conference Proceedings
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="12"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={202}
-    >
-      Generic Document
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="13"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={204}
-    >
-      Preprint
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="14"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={228}
-    >
-      Digilib Image
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="15"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={238}
-    >
-      Image
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="16"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={263}
-    >
-      Audio Document
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="17"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={272}
-    >
-      Reference Entry
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="18"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={275}
-    >
-      Research Report
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="19"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={294}
-    >
-      Journal
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="20"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={310}
-    >
-      Video Document
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="21"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={313}
-    >
-      Creative Work
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="22"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={316}
-    >
-      Design
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="23"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={371}
-    >
-      Data Collection
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="24"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={374}
-    >
-      Manuscript
-    </ForwardRef(MenuItem)>
-  </ForwardRef(Select)>
-</ForwardRef(FormControl)>
+      <div
+        aria-disabled="true"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="document-type-selector"
+        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiSelect-multiple MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        id="document-type-selector"
+        role="button"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        disabled=""
+        name="document-type-selector"
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`DocumentTypeMultipleField component should render with given document types selected by default 1`] = `
-<ForwardRef(FormControl)
-  fullWidth={true}
-  variant="standard"
->
-  <ForwardRef(InputLabel)>
-    Work type
-  </ForwardRef(InputLabel)>
-  <ForwardRef(Select)
-    aria-label="Select work types to search on"
-    data-testid="document-type-selector"
-    disabled={false}
-    fullWidth={true}
-    id="document-type-selector"
-    multiple={true}
-    name="document-type-selector"
-    onChange={[Function]}
-    value={
-      Array [
-        371,
-        316,
-      ]
-    }
-    variant="standard"
+<div>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
   >
-    <ForwardRef(MenuItem)
-      disabled={true}
-      key="0"
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
     >
-      Select work types
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="1"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={130}
+      Work type
+    </label>
+    <div
+      aria-label="Select work types to search on"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      data-testid="document-type-selector"
     >
-      Conference Paper
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="2"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={174}
-    >
-      Book
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="3"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={177}
-    >
-      Book Chapter
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="4"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={179}
-    >
-      Journal Article
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="5"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={181}
-    >
-      Department Technical Report
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="6"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={183}
-    >
-      Working Paper
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="7"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={185}
-    >
-      Patent
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="8"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={187}
-    >
-      Thesis
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="9"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={189}
-    >
-      Seminar Paper
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="10"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={191}
-    >
-      Newspaper Article
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="11"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={197}
-    >
-      Conference Proceedings
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="12"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={202}
-    >
-      Generic Document
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="13"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={204}
-    >
-      Preprint
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="14"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={228}
-    >
-      Digilib Image
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="15"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={238}
-    >
-      Image
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="16"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={263}
-    >
-      Audio Document
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="17"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={272}
-    >
-      Reference Entry
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="18"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={275}
-    >
-      Research Report
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="19"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={294}
-    >
-      Journal
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="20"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={310}
-    >
-      Video Document
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="21"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={313}
-    >
-      Creative Work
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={true}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="22"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={316}
-    >
-      Design
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={true}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="23"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={371}
-    >
-      Data Collection
-    </ForwardRef(MenuItem)>
-    <ForwardRef(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="24"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={374}
-    >
-      Manuscript
-    </ForwardRef(MenuItem)>
-  </ForwardRef(Select)>
-</ForwardRef(FormControl)>
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="document-type-selector"
+        class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        id="document-type-selector"
+        role="button"
+        tabindex="0"
+      >
+        Design
+        , 
+        Data Collection
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        name="document-type-selector"
+        tabindex="-1"
+        value="371,316"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;

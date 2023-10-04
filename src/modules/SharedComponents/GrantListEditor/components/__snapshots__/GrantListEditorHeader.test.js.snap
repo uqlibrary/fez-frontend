@@ -25,6 +25,10 @@ Object {
 
 exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >
@@ -134,6 +138,10 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 
 exports[`GrantListEditorHeader should render default mobile view 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >
@@ -257,6 +265,10 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
 
 exports[`GrantListEditorHeader should render default mobile view 2`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >
@@ -380,6 +392,10 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
 
 exports[`GrantListEditorHeader should render default view 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >
@@ -505,6 +521,10 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
 <div
   aria-hidden="true"
 >
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >
@@ -628,6 +648,10 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
 
 exports[`GrantListEditorHeader should use width hook 1`] = `
 <div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
   <li
     class="MuiListItem-root Component-header-6 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
   >

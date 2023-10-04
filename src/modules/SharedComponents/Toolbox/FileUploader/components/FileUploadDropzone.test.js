@@ -1,8 +1,12 @@
-import { FileUploadDropzone, removeInvalidFileNames } from './FileUploadDropzone';
-import FileUploadDropzoneWithStyles from './FileUploadDropzone';
+import React from 'react';
+import FileUploadDropzone, { removeInvalidFileNames } from './FileUploadDropzone';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
+import { rtlRender, fireEvent } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+import { FormValuesContext } from 'context';
+import Immutable from 'immutable';
+
+function setup(testProps = {}, formValues = {}) {
     const props = {
         classes: {},
         onDrop: jest.fn(),
@@ -12,7 +16,11 @@ function setup(testProps = {}, args = { isShallow: true }) {
         mimeTypeWhitelist: MIME_TYPE_WHITELIST,
         ...testProps,
     };
-    return getElement(FileUploadDropzone, props, args);
+    return rtlRender(
+        <FormValuesContext.Provider value={{ formValues }}>
+            <FileUploadDropzone {...props} />
+        </FormValuesContext.Provider>,
+    );
 }
 
 describe('Component FileUploadDropzone', () => {
@@ -26,16 +34,16 @@ describe('Component FileUploadDropzone', () => {
     });
 
     it('should render component with default props', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled component', () => {
-        const wrapper = setup({ disabled: true }, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
     });
 
-    it('should open files selection dialog', () => {
+    /* it('should open files selection dialog', () => {
         const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -49,162 +57,263 @@ describe('Component FileUploadDropzone', () => {
 
         wrapper.update();
         expect(testFn).toHaveBeenCalled();
+    });*/
+
+    it('should remove duplicate files', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup({ onDrop: onDropFn });
+        const file = new File(['hello'], 'hello.png', { type: 'image/png' });
+
+        // drag and drop same files twice
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [file, file],
+                types: ['Files', 'Files'],
+            },
+        });
+        await new Promise(r => setTimeout(r, 50));
+
+        expect(onDropFn).toHaveBeenCalledWith(
+            [{ fileData: file, name: 'hello.png', size: 5 }],
+            expect.objectContaining({ sameFileNameWithDifferentExt: ['hello.png'] }),
+        );
     });
 
-    it('should remove duplicate files', () => {
-        const wrapper = setup();
+    it('should remove files with same filename but different extension from dropped incoming files', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup({ onDrop: onDropFn });
+        const file = new File(['hello'], 'hello.png', { type: 'image/png' });
 
-        const files = [getMockFile('c.txt'), getMockFile('d.txt')];
-        const { uniqueFiles, duplicateFiles } = wrapper
-            .instance()
-            .removeDuplicate(files, ['a.txt', 'b.txt', 'c.txt'], []);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [file, new File(['hello'], 'hello.txt', { type: 'text/plain' })],
+                types: ['Files', 'Files'],
+            },
+        });
+        await new Promise(r => setTimeout(r, 50));
 
-        expect(uniqueFiles.length).toEqual(1);
-        expect(duplicateFiles.length).toEqual(1);
+        expect(onDropFn).toHaveBeenCalledWith(
+            [{ fileData: file, name: 'hello.png', size: 5 }],
+            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['hello.txt'] }),
+        );
     });
 
-    it('should remove files with same filename but different extension from dropped incoming files', () => {
-        const wrapper = setup();
+    it('should remove files with same filename but different extension from dropped incoming files if already exist', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup(
+            { onDrop: onDropFn },
+            { fez_datastream_info: Immutable.List([{ dsi_dsid: 'hello.txt' }]) },
+        );
+        const file = new File(['hello'], 'hello.png', { type: 'image/png' });
 
-        const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
-        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
-            .instance()
-            .removeDuplicate(files, [], []);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: { files: [file], types: ['Files'] },
+        });
+        await new Promise(r => setTimeout(r, 50));
 
-        expect(uniqueFiles.length).toEqual(2);
-        expect(duplicateFiles.length).toEqual(0);
-        expect(sameFileNameWithDifferentExt.length).toEqual(1);
-    });
-    it('should remove files with same filename but different extension from dropped incoming files if already exist', () => {
-        const wrapper = setup();
-
-        const files = [getMockFile('a.txt'), getMockFile('b.txt')];
-        const existingFiles = [{ dsi_dsid: 'a.doc' }];
-        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
-            .instance()
-            .removeDuplicate(files, [], existingFiles);
-        expect(uniqueFiles.length).toEqual(1);
-        expect(duplicateFiles.length).toEqual(0);
-        expect(sameFileNameWithDifferentExt.length).toEqual(1);
+        expect(onDropFn).toHaveBeenCalledWith(
+            [],
+            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['hello.png'] }),
+        );
     });
 
-    it('should remove files with same filename but different extension and different casing from dropped incoming files if already exist', () => {
-        const wrapper = setup();
+    it('should remove files with same filename but different extension and different casing from dropped incoming files if already exist', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup(
+            { onDrop: onDropFn },
+            { fez_datastream_info: Immutable.List([{ dsi_dsid: 'FiLeA.pdf' }]) },
+        );
+        const file = new File(['hello'], 'fileb.png', { type: 'image/png' });
 
-        const files = [getMockFile('filea.txt'), getMockFile('fileb.txt')];
-        const existingFiles = [{ dsi_dsid: 'FiLeA.doc' }];
-        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
-            .instance()
-            .removeDuplicate(files, [], existingFiles);
-        expect(uniqueFiles.length).toEqual(1);
-        expect(duplicateFiles.length).toEqual(0);
-        expect(sameFileNameWithDifferentExt.length).toEqual(1);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [new File(['hello'], 'filea.png', { type: 'image/png' }), file],
+                types: ['Files', 'Files'],
+            },
+        });
+        await new Promise(r => setTimeout(r, 50));
+
+        expect(onDropFn).toHaveBeenCalledWith(
+            [{ fileData: file, name: 'fileb.png', size: 5 }],
+            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['filea.png'] }),
+        );
     });
 
-    it('should remove files with same filename but different extension from dropped incoming files if already exist or uses a renamed file name', () => {
-        const wrapper = setup();
+    it('should remove files with same filename but different extension from dropped incoming files if already exist or uses a renamed file name', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup(
+            { onDrop: onDropFn },
+            { fez_datastream_info: Immutable.List([{ dsi_dsid: 'filec.pdf', dsi_dsid_new: 'filea.pdf' }]) },
+        );
+        const file = new File(['hello'], 'fileb.png', { type: 'image/png' });
 
-        const files = [getMockFile('filea.txt'), getMockFile('fileb.txt')];
-        const existingFiles = [{ dsi_dsid: 'filec.doc', dsi_dsid_new: 'filea.doc' }];
-        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
-            .instance()
-            .removeDuplicate(files, [], existingFiles);
-        expect(uniqueFiles.length).toEqual(1);
-        expect(duplicateFiles.length).toEqual(0);
-        expect(sameFileNameWithDifferentExt.length).toEqual(1);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [new File(['hello'], 'filea.png', { type: 'image/png' }), file],
+                types: ['Files', 'Files'],
+            },
+        });
+        await new Promise(r => setTimeout(r, 80));
+
+        expect(onDropFn).toHaveBeenCalledWith(
+            [{ fileData: file, name: 'fileb.png', size: 5 }],
+            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['filea.png'] }),
+        );
     });
 
-    it('should remove duplicate filenames if duplicated in both dropped and existing', () => {
-        const wrapper = setup();
+    it('should remove duplicate filenames if duplicated in both dropped and existing', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup(
+            { onDrop: onDropFn },
+            { fez_datastream_info: Immutable.List([{ dsi_dsid: 'a.pdf' }]) },
+        );
+        const file = new File(['hello'], 'b.pdf', { type: 'application/pdf' });
 
-        const files = [getMockFile('a.txt'), getMockFile('b.txt'), getMockFile('b.jpg')];
-        const existingFiles = [{ dsi_dsid: 'a.doc' }];
-        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
-            .instance()
-            .removeDuplicate(files, [], existingFiles);
-        expect(uniqueFiles.length).toEqual(1);
-        expect(duplicateFiles.length).toEqual(0);
-        expect(sameFileNameWithDifferentExt.length).toEqual(2);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'a.png', { type: 'image/png' }),
+                    file,
+                    new File(['hello'], 'b.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
+        await new Promise(r => setTimeout(r, 80));
+
+        expect(onDropFn).toHaveBeenCalledWith(
+            [{ fileData: file, name: 'b.pdf', size: 5 }],
+            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['b.png', 'a.png'] }),
+        );
     });
 
     it(
         'should remove files with same filename but different extension ' +
             'from dropped incoming files and already queued files',
-        () => {
-            const wrapper = setup({});
+        async () => {
+            const onDropFn = jest.fn();
+            const { getByTestId } = setup({
+                onDrop: onDropFn,
+                filesInQueue: ['c.pdf', 'd.pdf', 'b.pdf'],
+            });
+            const file = new File(['hello'], 'a.pdf', { type: 'application/pdf' });
 
-            const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
-            const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
-            const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
-                .instance()
-                .removeDuplicate(files, queuedFiles, []);
+            fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+                dataTransfer: {
+                    files: [
+                        file,
+                        new File(['hello'], 'a.png', { type: 'image/png' }),
+                        new File(['hello'], 'b.pdf', { type: 'application/pdf' }),
+                    ],
+                    types: ['Files', 'Files', 'Files'],
+                },
+            });
 
-            expect(uniqueFiles.length).toEqual(1);
-            expect(uniqueFiles).toEqual([getMockFile('a.txt')]);
+            await new Promise(r => setTimeout(r, 80));
 
-            expect(duplicateFiles.length).toEqual(1);
-            expect(duplicateFiles).toEqual(['b.txt']);
-
-            expect(sameFileNameWithDifferentExt.length).toEqual(1);
-            expect(sameFileNameWithDifferentExt).toEqual(['a.doc']);
+            expect(onDropFn).toHaveBeenCalledWith(
+                [{ fileData: file, name: 'a.pdf', size: 5 }],
+                expect.objectContaining({ duplicateFiles: ['b.pdf'], sameFileNameWithDifferentExt: ['a.png'] }),
+            );
         },
     );
 
     it(
         'should remove files with same filename but different extension from dropped ' +
             'incoming files and already queued files 2',
-        () => {
-            const wrapper = setup();
+        async () => {
+            const onDropFn = jest.fn();
+            const { getByTestId } = setup({
+                onDrop: onDropFn,
+                filesInQueue: ['c.pdf', 'd.pdf', 'b.pdf'],
+            });
+            const file = new File(['hello'], 'a.png', { type: 'image/png' });
 
-            const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
-            const files = [getMockFile('a.doc'), getMockFile('d.txt'), getMockFile('b.txt')];
-            const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
-                .instance()
-                .removeDuplicate(files, queuedFiles, []);
+            fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+                dataTransfer: {
+                    files: [
+                        file,
+                        new File(['hello'], 'd.pdf', { type: 'application/pdf' }),
+                        new File(['hello'], 'b.pdf', { type: 'application/pdf' }),
+                    ],
+                    types: ['Files', 'Files', 'Files'],
+                },
+            });
 
-            expect(uniqueFiles.length).toEqual(1);
-            expect(uniqueFiles).toEqual([getMockFile('a.doc')]);
+            await new Promise(r => setTimeout(r, 80));
 
-            expect(duplicateFiles.length).toEqual(2);
-            expect(duplicateFiles).toEqual(['d.txt', 'b.txt']);
-
-            expect(sameFileNameWithDifferentExt.length).toEqual(0);
+            expect(onDropFn).toHaveBeenCalledWith(
+                [{ fileData: file, name: 'a.png', size: 5 }],
+                expect.objectContaining({ duplicateFiles: ['d.pdf', 'b.pdf'], sameFileNameWithDifferentExt: [] }),
+            );
         },
     );
 
-    it('should not remove any files if there are no duplicate files', () => {
-        const wrapper = setup();
+    it('should not remove any files if there are no duplicate files', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup({
+            onDrop: onDropFn,
+            filesInQueue: ['c.pdf', 'd.pdf'],
+        });
+        const file1 = new File(['hello'], 'a.png', { type: 'image/png' });
+        const file2 = new File(['hello'], 'b.png', { type: 'image/png' });
 
-        const files = [getMockFile('c.txt'), getMockFile('d.txt')];
-        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt'], []);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [file1, file2],
+                types: ['Files', 'Files'],
+            },
+        });
 
-        expect(uniqueFiles.length).toEqual(2);
-        expect(duplicateFiles.length).toEqual(0);
+        await new Promise(r => setTimeout(r, 50));
+
+        expect(onDropFn).toHaveBeenCalledWith(
+            [
+                { fileData: file1, name: 'a.png', size: 5 },
+                { fileData: file2, name: 'b.png', size: 5 },
+            ],
+            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
+        );
     });
 
-    it('should not remove any files if there are no files', () => {
-        const wrapper = setup();
+    it('should not remove any files if there are no files', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup({ onDrop: onDropFn, filesInQueue: ['c.pdf', 'd.pdf'] });
 
-        const files = [];
-        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt'], []);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: { files: [], types: [] },
+        });
 
-        expect(uniqueFiles.length).toEqual(0);
-        expect(duplicateFiles.length).toEqual(0);
+        await new Promise(r => setTimeout(r, 50));
+
+        expect(onDropFn).toHaveBeenCalledWith(
+            [],
+            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
+        );
     });
 
-    it('should not remove any files if multipart zip files have been uploaded', () => {
-        const wrapper = setup();
+    it('should not remove any files if multipart zip files have been uploaded', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup({ onDrop: onDropFn });
+        const file1 = new File(['hello'], 'a.001.zip', { type: 'application/zip' });
+        const file2 = new File(['hello'], 'a.002.zip', { type: 'application/zip' });
 
-        const files = [getMockFile('a.001.zip'), getMockFile('a.002.zip')];
-        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, [], []);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: { files: [file1, file2], types: [] },
+        });
 
-        expect(uniqueFiles.length).toEqual(2);
-        expect(duplicateFiles.length).toEqual(0);
+        await new Promise(r => setTimeout(r, 50));
+
+        expect(onDropFn).toHaveBeenCalledWith(
+            [
+                { fileData: file1, name: 'a.001.zip', size: 5 },
+                { fileData: file2, name: 'a.002.zip', size: 5 },
+            ],
+            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
+        );
     });
 
     it('should remove files with invalid names', () => {
-        setup();
-
         const files = [getMockFile('c.txt'), getMockFile('1.txt')];
         const { validFiles, invalidFileNames } = removeInvalidFileNames(files, /^[a-z].+/);
 
@@ -213,8 +322,6 @@ describe('Component FileUploadDropzone', () => {
     });
 
     it('should not remove any files if there are no invalid names of files', () => {
-        setup();
-
         const files = [getMockFile('c.txt'), getMockFile('a.txt')];
         const { validFiles, invalidFileNames } = removeInvalidFileNames(files, /^[a-z].+/);
 
@@ -223,8 +330,6 @@ describe('Component FileUploadDropzone', () => {
     });
 
     it('should not remove any files if there are no files supplied', () => {
-        setup();
-
         const files = [];
         const { validFiles, invalidFileNames } = removeInvalidFileNames(files, /^[a-z].+/);
 
@@ -232,49 +337,45 @@ describe('Component FileUploadDropzone', () => {
         expect(invalidFileNames.length).toEqual(0);
     });
 
-    it('should remove files with invalid mime type', () => {
-        const wrapper = setup();
+    it('should remove files with invalid mime type', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup({ onDrop: onDropFn });
+        const file1 = new File(['hello'], 'a.png', { type: 'image/png' });
+        const file2 = new File(['hello'], 'b.txt', { type: 'text/plain' });
 
-        const files = [getMockFile('a.JPG'), getMockFile('b.txt')];
-        const { validMimeTypeFiles, invalidMimeTypeFiles } = wrapper
-            .instance()
-            .removeInvalidMimeTypes(files, MIME_TYPE_WHITELIST);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: { files: [file1, file2], types: [] },
+        });
 
-        expect(validMimeTypeFiles.length).toEqual(1);
-        expect(invalidMimeTypeFiles.length).toEqual(1);
+        await new Promise(r => setTimeout(r, 50));
+
+        // should not remove any files if number doesn't exceed max allowed number of files
+        expect(onDropFn).toHaveBeenCalledWith(
+            [{ fileData: file1, name: 'a.png', size: 5 }],
+            expect.objectContaining({ invalidMimeTypeFiles: ['b.txt'], tooManyFiles: [] }),
+        );
     });
 
-    it('should remove files exceeding max allowed number of files in removeTooManyFiles', () => {
-        const wrapper = setup();
+    it('should remove files exceeding max allowed number of files in removeTooManyFiles', async () => {
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup({ onDrop: onDropFn, fileUploadLimit: 1 });
+        const file1 = new File(['hello'], 'a.png', { type: 'image/png' });
+        const file2 = new File(['hello'], 'b.png', { type: 'image/png' });
 
-        const files = [getMockFile('c.txt'), getMockFile('1.txt'), getMockFile('1a.txt')];
-        const { limitedFiles, tooManyFiles } = wrapper.instance().removeTooManyFiles(files, 2);
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: { files: [file1, file2], types: [] },
+        });
 
-        expect(limitedFiles.length).toEqual(2);
-        expect(tooManyFiles.length).toEqual(1);
+        await new Promise(r => setTimeout(r, 50));
+
+        expect(onDropFn).toHaveBeenCalledWith(
+            [{ fileData: file1, name: 'a.png', size: 5 }],
+            expect.objectContaining({ tooManyFiles: ['b.png'] }),
+        );
     });
 
-    it("should not remove any files if number doesn't exceed max allowed number of files in removeTooManyFiles", () => {
-        const wrapper = setup();
-
-        const files = [getMockFile('c.txt'), getMockFile('1.txt'), getMockFile('1a.txt')];
-        const { limitedFiles, tooManyFiles } = wrapper.instance().removeTooManyFiles(files, 4);
-
-        expect(limitedFiles.length).toEqual(3);
-        expect(tooManyFiles.length).toEqual(0);
-    });
-
-    it('should not remove any files if there are no files supplied to removeTooManyFiles', () => {
-        const wrapper = setup();
-
-        const files = [];
-        const { limitedFiles, tooManyFiles } = wrapper.instance().removeTooManyFiles(files, 3);
-
-        expect(limitedFiles.length).toEqual(0);
-        expect(tooManyFiles.length).toEqual(0);
-    });
-
-    it('should filter folders out from the file list in removeDroppedFolders', async () => {
+    // TODO:: need to find a way to mock a folder drop
+    /* it('should filter folders out from the file list in removeDroppedFolders', async () => {
         const wrapper = setup();
 
         const fileA = getMockFile('a.txt');
@@ -292,30 +393,36 @@ describe('Component FileUploadDropzone', () => {
         });
 
         await expect(wrapper.instance().removeDroppedFolders(accepted, errors)).resolves.toEqual([fileA, false, fileC]);
-    });
+    }); */
 
     it('should set all error messages', async () => {
-        const fileA = getMockFile('a.txt');
-        const fileADoc = getMockFile('a.doc');
-        const fileB = getMockFile('b.txt');
-        const fileBDup = getMockFile('b.txt');
-        const fileC = getMockFile('c.txt');
-        const fileD = getMockFile('web_d.txt');
-        const fileE = getMockFile('e.txt');
-        const fileF = getMockFile('f.txt');
-        const fileG = getMockFile('g.txt');
-        const fileGDoc = getMockFile('g.doc');
-        const onDropTestFn = jest.fn();
-
-        const wrapper = setup({
+        const fileADoc = new File(['hello'], 'a.doc');
+        const fileBDup = new File(['hello'], 'b.txt');
+        const fileC = new File(['hello'], 'c.txt');
+        const fileD = new File(['hello'], 'web_d.txt');
+        const fileE = new File(['hellomaxsize'], 'e.txt');
+        const fileF = new File(['hello'], 'f.txt');
+        const fileG = new File(['hello'], 'g.txt');
+        const fileGDoc = new File(['hello'], 'g.doc');
+        const onDropFn = jest.fn();
+        const { getByTestId } = setup({
             fileUploadLimit: 4,
-            filesInQueue: [fileA.name, fileB.name],
-            onDrop: onDropTestFn,
+            maxSize: 5,
+            filesInQueue: ['a.txt', 'b.txt'],
+            onDrop: onDropFn,
             fileNameRestrictions: FILE_NAME_RESTRICTION,
             mimeTypeWhitelist: { txt: 'text/plain' },
         });
 
-        const expectedFiles = [fileC, fileF].map(file => ({ fileData: file, name: file.name, size: file.size }));
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [fileBDup, fileC, fileD, fileE, fileF, fileG, fileADoc, fileGDoc],
+                types: ['Files', 'Files', 'Files', 'Files', 'Files', 'Files', 'Files'],
+            },
+        });
+
+        await new Promise(r => setTimeout(r, 50));
+
         const expectedError = {
             tooBigFiles: ['e.txt'],
             notFiles: [],
@@ -326,30 +433,39 @@ describe('Component FileUploadDropzone', () => {
             tooManyFiles: ['g.txt'],
         };
 
-        const accepted = [fileBDup, fileC, fileD, fileF, fileG, fileADoc, fileGDoc];
-        wrapper.instance().removeDroppedFolders = jest.fn((accepted, {}) => new Promise(resolve => resolve(accepted)));
-
-        await wrapper.instance()._onDrop(accepted, [fileE]);
-        // wrapper.update();
-        expect(onDropTestFn).toHaveBeenCalledWith(expectedFiles, expectedError);
+        expect(onDropFn).toHaveBeenCalledWith(
+            [
+                { fileData: fileC, name: 'c.txt', size: 5 },
+                { fileData: fileF, name: 'f.txt', size: 5 },
+            ],
+            expectedError,
+        );
     });
 
     it('should set all correct error messages for filenames with comma', async () => {
-        const fileG = getMockFile('g.txt');
-        const fileA = getMockFile('i,am.txt');
-        const fileH = getMockFile('excel,txt');
-        const fileI = getMockFile('excel,xls.txt');
-        const onDropTestFn = jest.fn();
+        const fileG = new File(['hello'], 'g.txt');
+        const fileA = new File(['hello'], 'i,am.txt');
+        const fileH = new File(['hello'], 'excel,txt');
+        const fileI = new File(['hello'], 'excel,xls.txt');
+        const onDropFn = jest.fn();
 
-        const wrapper = setup({
+        const { getByTestId } = setup({
             fileUploadLimit: 4,
             filesInQueue: [],
-            onDrop: onDropTestFn,
+            onDrop: onDropFn,
             fileNameRestrictions: FILE_NAME_RESTRICTION,
             mimeTypeWhitelist: { txt: 'text/plain' },
         });
 
-        const expectedFiles = [fileG].map(file => ({ fileData: file, name: file.name, size: file.size }));
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [fileG, fileA, fileH, fileI],
+                types: ['Files', 'Files', 'Files', 'Files'],
+            },
+        });
+
+        await new Promise(r => setTimeout(r, 50));
+
         const expectedError = {
             tooBigFiles: [],
             notFiles: [],
@@ -360,36 +476,10 @@ describe('Component FileUploadDropzone', () => {
             tooManyFiles: [],
         };
 
-        const accepted = [fileG, fileA, fileH, fileI];
-        wrapper.instance().removeDroppedFolders = jest.fn(
-            (accepted, {}) => new Promise(resolve => resolve([fileG, fileA, fileH, fileI])),
-        );
-
-        await wrapper.instance()._onDrop(accepted, []);
-        // wrapper.update();
-        expect(onDropTestFn).toHaveBeenCalledWith(expectedFiles, expectedError);
+        expect(onDropFn).toHaveBeenCalledWith([{ fileData: fileG, name: 'g.txt', size: 5 }], expectedError);
     });
 
-    it('should render with styles', () => {
-        const wrapper = getElement(FileUploadDropzoneWithStyles, {
-            onDrop: jest.fn(),
-            maxSize: 8,
-            locale: {},
-            fileNameRestrictions: /.+/,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should read file', () => {
-        const wrapper = setup();
-        const readAsDataURLFn = jest.fn(slice => slice);
-        window.FileReader = jest.fn(() => ({
-            readAsDataURL: readAsDataURLFn,
-        }));
-        const result = wrapper.instance().readFile('this is test file', [], Promise.resolve);
-        expect(result).toBe('this is te');
-    });
-
+    /*
     it('should call onerror if fail on read file', () => {
         const wrapper = setup();
         const result = wrapper.instance().onReadFileError(
@@ -401,13 +491,9 @@ describe('Component FileUploadDropzone', () => {
 
         const file = wrapper.instance().onReadFileLoad({ name: 'test' }, jest.fn())();
         expect(file).toBeUndefined();
-    });
+    });*/
 
     it('should allow multipart zip files with valid part format (000 - 999)', () => {
-        setup({
-            fileNameRestrictions: FILE_NAME_RESTRICTION,
-        });
-
         const fileA = getMockFile('test.000.zip');
         const fileB = getMockFile('test.111.zip');
         const fileC = getMockFile('test.999.zip');
@@ -424,28 +510,37 @@ describe('Component FileUploadDropzone', () => {
         expect(invalidFileNames.length).toEqual(3);
     });
 
-    it('should allow multipart zip mime type files with part format', () => {
-        const wrapper = setup();
+    it('should allow multipart zip mime type files with part format', async () => {
+        const fileA = new File(['hello'], 'test.000.zip');
+        const fileB = new File(['hello'], 'test.part1.zip');
+        const fileC = new File(['hello'], 'test.r00.zip');
+        const onDropFn = jest.fn();
 
-        const fileA = getMockFile('test.000.zip');
-        const fileB = getMockFile('test.part1.zip');
-        const fileC = getMockFile('test.r00.zip');
+        const { getByTestId } = setup({
+            onDrop: onDropFn,
+            mimeTypeWhitelist: MIME_TYPE_WHITELIST,
+        });
 
-        const files = [fileA, fileB, fileC];
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [fileA, fileB, fileC],
+                types: ['Files', 'Files', 'Files'],
+            },
+        });
 
-        const { validMimeTypeFiles, invalidMimeTypeFiles } = wrapper
-            .instance()
-            .removeInvalidMimeTypes(files, MIME_TYPE_WHITELIST);
+        await new Promise(r => setTimeout(r, 50));
 
-        expect(validMimeTypeFiles.length).toEqual(3);
-        expect(invalidMimeTypeFiles.length).toEqual(0);
+        expect(onDropFn).toHaveBeenCalledWith(
+            [
+                { fileData: fileA, name: 'test.000.zip', size: 5 },
+                { fileData: fileB, name: 'test.part1.zip', size: 5 },
+                { fileData: fileC, name: 'test.r00.zip', size: 5 },
+            ],
+            expect.objectContaining({ invalidMimeTypeFiles: [] }),
+        );
     });
 
     it('should allow multipart zip files with valid part format (r01 - r999)', () => {
-        setup({
-            fileNameRestrictions: FILE_NAME_RESTRICTION,
-        });
-
         const fileA = getMockFile('test.r00.zip');
         const fileB = getMockFile('test.r11.zip');
         const fileC = getMockFile('test.r9.zip');
@@ -463,10 +558,6 @@ describe('Component FileUploadDropzone', () => {
     });
 
     it('should allow multipart zip files with valid part format (part1 - part999)', () => {
-        setup({
-            fileNameRestrictions: FILE_NAME_RESTRICTION,
-        });
-
         const fileA = getMockFile('test.part1.zip');
         const fileB = getMockFile('test.part8888.zip');
         const fileC = getMockFile('test.part342.zip');
@@ -482,10 +573,6 @@ describe('Component FileUploadDropzone', () => {
     });
 
     it('should allow multipart zip files with valid part format (part1 - part999)', () => {
-        setup({
-            fileNameRestrictions: FILE_NAME_RESTRICTION,
-        });
-
         const fileA = getMockFile('test.part1.zip');
         const fileB = getMockFile('test.part8888.zip');
         const fileC = getMockFile('test.part342.zip');

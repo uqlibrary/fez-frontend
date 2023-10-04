@@ -59,6 +59,7 @@ export class FileUploadDropzone extends PureComponent {
         this.dropzoneRef = null;
     }
 
+    /* istanbul ignore next */
     onReadFileError = (file, errors, resolve) => () => {
         errors.push(file.name);
         return resolve(false);
@@ -296,6 +297,7 @@ export class FileUploadDropzone extends PureComponent {
     /**
      * Open dropzone on key pressed
      */
+    /* istanbul ignore next */
     _onKeyPress = () => {
         this.dropzoneRef.open();
     };

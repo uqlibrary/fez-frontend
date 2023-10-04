@@ -424,6 +424,10 @@ exports[`Application component Should display mobile correctly 1`] = `
           system="espace"
         />
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="MuiGrid-root MuiGrid-container css-m97fgx-MuiGrid-root"
         style="margin-bottom: 12px;"
@@ -961,6 +965,10 @@ exports[`Application component should determine if it has incomplete works from 
           system="espace"
         />
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="MuiGrid-root MuiGrid-container css-m97fgx-MuiGrid-root"
         style="margin-bottom: 12px;"
@@ -1475,6 +1483,10 @@ exports[`Application component should determine if it has incomplete works from 
           system="espace"
         />
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="MuiGrid-root MuiGrid-container css-m97fgx-MuiGrid-root"
         style="margin-bottom: 12px;"
@@ -1989,6 +2001,10 @@ exports[`Application component should render alert if user is not fez author 1`]
           system="espace"
         />
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       <div
         class="MuiGrid-root MuiGrid-container css-m97fgx-MuiGrid-root"
         style="margin-bottom: 12px;"
@@ -2503,6 +2519,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           system="espace"
         />
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -2963,6 +2983,10 @@ exports[`Application component should render app for account with fez author wit
           system="espace"
         />
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -3423,6 +3447,10 @@ exports[`Application component should render application with routing for the us
           system="espace"
         />
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       
       <div
         style="padding: 8px;"
@@ -3713,6 +3741,10 @@ exports[`Application component should render for anon user 1`] = `
           system="espace"
         />
       </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
       
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"

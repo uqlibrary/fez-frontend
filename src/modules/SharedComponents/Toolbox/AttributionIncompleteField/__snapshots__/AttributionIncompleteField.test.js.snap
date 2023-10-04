@@ -11,7 +11,7 @@ exports[`Component AttributionIncompleteField should render default view 1`] = `
     class="MuiFormControlLabel-root AttributionIncomplete-root-1 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary Mui-checked MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root AttributionIncomplete-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
     >
       <input
         checked=""

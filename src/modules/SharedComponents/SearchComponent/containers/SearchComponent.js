@@ -27,6 +27,7 @@ export const mapStateToProps = (state, ownProps) => {
         isAdvancedSearch: isAdvancedSearch,
         isAdvancedSearchMinimised: isAdvancedSearchMinimised,
         isAdmin: ownProps.isAdmin || false,
+        // isMobile: ownProps.isMobile || false,
         isUnpublishedBufferPage: ownProps.isUnpublishedBufferPage || false,
         isOpenAccessInAdvancedMode:
             isAdvancedSearch &&

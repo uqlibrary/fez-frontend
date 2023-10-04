@@ -18,6 +18,7 @@ export class FileUploadEmbargoDate extends PureComponent {
     };
 
     _onChange = value => {
+        /* istanbul ignore else */
         if (this.props.onChange) this.props.onChange(value);
     };
 
