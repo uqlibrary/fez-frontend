@@ -19,7 +19,6 @@ exports[`CitationView test  should render component with correct suffix 1`] = `
   >
      
     Some text.
-    
   </span>
 </div>
 `;
@@ -39,7 +38,6 @@ exports[`CitationView test  should render component with no className 1`] = `
   >
      
     Some text.
-    
   </span>
 </div>
 `;

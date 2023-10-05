@@ -5,7 +5,6 @@ exports[`PageRangeCitationView test  should render endPage only 1`] = `
   <span
     class="citationPageRange"
   >
-    
     <span
       class="citationEndPage"
     >
@@ -32,7 +31,6 @@ exports[`PageRangeCitationView test  should render startPage only 1`] = `
   <span
     class="citationPageRange"
   >
-    
     <span
       class="citationStartPage"
     >
@@ -48,7 +46,6 @@ exports[`PageRangeCitationView test  should render startPage only if end page is
   <span
     class="citationPageRange"
   >
-    
     <span
       class="citationStartPage"
     >
@@ -64,7 +61,6 @@ exports[`PageRangeCitationView test  should render startPage to endPage 1`] = `
   <span
     class="citationPageRange"
   >
-    
     <span
       class="citationStartPage"
     >

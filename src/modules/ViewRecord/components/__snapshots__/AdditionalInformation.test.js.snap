@@ -129,8 +129,6 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-421"
                     data-testid="rek-author-0-link"
@@ -140,13 +138,10 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Azimi, Iman
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -156,13 +151,10 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-421"
                     data-testid="rek-author-2-link"
@@ -172,13 +164,10 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Kaemmerer, Elke
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-421"
                     data-testid="rek-author-3-link"
@@ -188,13 +177,10 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Turner, Dane
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-421"
                     data-testid="rek-author-4-link"
@@ -204,13 +190,10 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Yapa, Kunsala T. D. S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-421"
                     data-testid="rek-author-5-link"
@@ -220,13 +203,10 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -236,13 +216,10 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Thompson, Erik W.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-421"
                     data-testid="rek-author-7-link"
@@ -252,9 +229,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Roberts-Thomson, Sarah J.
-                      
                     </span>
                   </a>
                   , 
@@ -268,13 +243,9 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Monteith, Gregory R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -479,9 +450,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                   <span
                     class="citationDate"
                   >
-                    
                     2017-07-01
-                    
                   </span>
                 </span>
               </span>
@@ -513,9 +482,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>
@@ -987,8 +954,6 @@ exports[`Additional Information Component  should not render map with empty geo 
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -998,13 +963,10 @@ exports[`Additional Information Component  should not render map with empty geo 
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Shutter, Leigh
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -1014,13 +976,10 @@ exports[`Additional Information Component  should not render map with empty geo 
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Arthurs, Andy
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-485"
                     data-testid="rek-author-2-link"
@@ -1030,13 +989,10 @@ exports[`Additional Information Component  should not render map with empty geo 
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Bamford, Greg
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-3-link"
@@ -1046,9 +1002,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       McColl, Mary Rose
-                      
                     </span>
                   </a>
                   , 
@@ -1062,13 +1016,9 @@ exports[`Additional Information Component  should not render map with empty geo 
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Skinner, Peter R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -1165,9 +1115,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                   <span
                     class="citationDate"
                   >
-                    
                     2007
-                    
                   </span>
                 </span>
               </span>
@@ -1199,9 +1147,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                 <span
                   class="citationDate"
                 >
-                  
                   1963-10-17
-                  
                 </span>
               </span>
             </div>
@@ -1534,8 +1480,6 @@ exports[`Additional Information Component  should render component with Attribut
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-78"
                     data-testid="rek-author-0-link"
@@ -1545,13 +1489,10 @@ exports[`Additional Information Component  should render component with Attribut
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Azimi, Iman
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -1561,13 +1502,10 @@ exports[`Additional Information Component  should render component with Attribut
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-78"
                     data-testid="rek-author-2-link"
@@ -1577,13 +1515,10 @@ exports[`Additional Information Component  should render component with Attribut
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Kaemmerer, Elke
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-78"
                     data-testid="rek-author-3-link"
@@ -1593,13 +1528,10 @@ exports[`Additional Information Component  should render component with Attribut
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Turner, Dane
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-78"
                     data-testid="rek-author-4-link"
@@ -1609,13 +1541,10 @@ exports[`Additional Information Component  should render component with Attribut
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Yapa, Kunsala T. D. S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-78"
                     data-testid="rek-author-5-link"
@@ -1625,13 +1554,10 @@ exports[`Additional Information Component  should render component with Attribut
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -1641,13 +1567,10 @@ exports[`Additional Information Component  should render component with Attribut
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Thompson, Erik W.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-78"
                     data-testid="rek-author-7-link"
@@ -1657,9 +1580,7 @@ exports[`Additional Information Component  should render component with Attribut
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Roberts-Thomson, Sarah J.
-                      
                     </span>
                   </a>
                   , 
@@ -1673,13 +1594,9 @@ exports[`Additional Information Component  should render component with Attribut
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Monteith, Gregory R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -1884,9 +1801,7 @@ exports[`Additional Information Component  should render component with Attribut
                   <span
                     class="citationDate"
                   >
-                    
                     2017-07-01
-                    
                   </span>
                 </span>
               </span>
@@ -1918,9 +1833,7 @@ exports[`Additional Information Component  should render component with Attribut
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>
@@ -2683,8 +2596,6 @@ exports[`Additional Information Component  should render component with audio do
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -2694,13 +2605,10 @@ exports[`Additional Information Component  should render component with audio do
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Shutter, Leigh
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -2710,13 +2618,10 @@ exports[`Additional Information Component  should render component with audio do
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Arthurs, Andy
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-65"
                     data-testid="rek-author-2-link"
@@ -2726,13 +2631,10 @@ exports[`Additional Information Component  should render component with audio do
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Bamford, Greg
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-3-link"
@@ -2742,9 +2644,7 @@ exports[`Additional Information Component  should render component with audio do
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       McColl, Mary Rose
-                      
                     </span>
                   </a>
                   , 
@@ -2758,13 +2658,9 @@ exports[`Additional Information Component  should render component with audio do
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Skinner, Peter R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -2861,9 +2757,7 @@ exports[`Additional Information Component  should render component with audio do
                   <span
                     class="citationDate"
                   >
-                    
                     2007
-                    
                   </span>
                 </span>
               </span>
@@ -2895,9 +2789,7 @@ exports[`Additional Information Component  should render component with audio do
                 <span
                   class="citationDate"
                 >
-                  
                   1963-10-17
-                  
                 </span>
               </span>
             </div>
@@ -3203,8 +3095,6 @@ exports[`Additional Information Component  should render component with book 1`]
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -3214,13 +3104,10 @@ exports[`Additional Information Component  should render component with book 1`]
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Teesson, Maree
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-120"
                     data-testid="rek-author-1-link"
@@ -3230,13 +3117,10 @@ exports[`Additional Information Component  should render component with book 1`]
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Hall, Wayne
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-2-link"
@@ -3246,9 +3130,7 @@ exports[`Additional Information Component  should render component with book 1`]
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Proudfoot, Heather
-                      
                     </span>
                   </a>
                   , 
@@ -3262,13 +3144,9 @@ exports[`Additional Information Component  should render component with book 1`]
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Degenhardt, Louisa
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -3396,9 +3274,7 @@ exports[`Additional Information Component  should render component with book 1`]
                   <span
                     class="citationDate"
                   >
-                    
                     2011
-                    
                   </span>
                 </span>
               </span>
@@ -3600,8 +3476,6 @@ exports[`Additional Information Component  should render component with book 1`]
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-0-link"
@@ -3611,13 +3485,10 @@ exports[`Additional Information Component  should render component with book 1`]
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Smith, A
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-1-link"
@@ -3627,9 +3498,7 @@ exports[`Additional Information Component  should render component with book 1`]
                       class="citationAuthor"
                       data-testid="rek-contributor-1"
                     >
-                      
                       Smith, B
-                      
                     </span>
                   </a>
                   , 
@@ -3643,13 +3512,9 @@ exports[`Additional Information Component  should render component with book 1`]
                       class="citationAuthor"
                       data-testid="rek-contributor-2"
                     >
-                      
                       Smith, C
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -3748,8 +3613,6 @@ exports[`Additional Information Component  should render component with book cha
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-130"
                     data-testid="rek-author-0-link"
@@ -3759,13 +3622,10 @@ exports[`Additional Information Component  should render component with book cha
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Sandhu, Gurveen K.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-130"
                     data-testid="rek-author-1-link"
@@ -3775,13 +3635,10 @@ exports[`Additional Information Component  should render component with book cha
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J.G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-2-link"
@@ -3791,13 +3648,10 @@ exports[`Additional Information Component  should render component with book cha
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Wilson, Wesley
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-130"
                     data-testid="rek-author-3-link"
@@ -3807,9 +3661,7 @@ exports[`Additional Information Component  should render component with book cha
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Shewan, Annette M.
-                      
                     </span>
                   </a>
                   , 
@@ -3823,13 +3675,9 @@ exports[`Additional Information Component  should render component with book cha
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -4020,9 +3868,7 @@ exports[`Additional Information Component  should render component with book cha
                   <span
                     class="citationDate"
                   >
-                    
                     2016
-                    
                   </span>
                 </span>
               </span>
@@ -4241,8 +4087,6 @@ exports[`Additional Information Component  should render component with book cha
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-0-link"
@@ -4252,13 +4096,10 @@ exports[`Additional Information Component  should render component with book cha
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Smith, A
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-1-link"
@@ -4268,9 +4109,7 @@ exports[`Additional Information Component  should render component with book cha
                       class="citationAuthor"
                       data-testid="rek-contributor-1"
                     >
-                      
                       Smith, B
-                      
                     </span>
                   </a>
                   , 
@@ -4284,13 +4123,9 @@ exports[`Additional Information Component  should render component with book cha
                       class="citationAuthor"
                       data-testid="rek-contributor-2"
                     >
-                      
                       Smith, C
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -4676,8 +4511,6 @@ exports[`Additional Information Component  should render component with conferen
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -4687,13 +4520,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Larance, Briony
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -4703,13 +4533,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Peacock, Amy
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-2-link"
@@ -4719,13 +4546,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Campbell, Gabrielle
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-3-link"
@@ -4735,13 +4559,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Freckleton, Sarah
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-4-link"
@@ -4751,13 +4572,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Smith, Kimberley
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-5-link"
@@ -4767,13 +4585,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Mattick, Richard
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -4783,13 +4598,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Bruno, Raimondo
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-7-link"
@@ -4799,13 +4611,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Nielsen, Suzanne
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-8-link"
@@ -4815,13 +4624,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Cohen, Milton
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-9-link"
@@ -4831,13 +4637,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-9"
                     >
-                      
                       Lintzeris, Nicholas
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-10-link"
@@ -4847,13 +4650,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-10"
                     >
-                      
                       Shand, Fiona
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-143"
                     data-testid="rek-author-11-link"
@@ -4863,13 +4663,10 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-11"
                     >
-                      
                       Hall, Wayne D.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-12-link"
@@ -4879,9 +4676,7 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-12"
                     >
-                      
                       Farrell, Michael
-                      
                     </span>
                   </a>
                   , 
@@ -4895,13 +4690,9 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-author-13"
                     >
-                      
                       Degenhardt, Louisa
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -5065,7 +4856,6 @@ exports[`Additional Information Component  should render component with conferen
                         Drug and Alcohol Review
                       </span>
                     </a>
-                    
                   </span>
                   <span>
                      
@@ -5192,9 +4982,7 @@ exports[`Additional Information Component  should render component with conferen
                   <span
                     class="citationDate"
                   >
-                    
                     2014
-                    
                   </span>
                 </span>
               </span>
@@ -5611,8 +5399,6 @@ exports[`Additional Information Component  should render component with conferen
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-0-link"
@@ -5622,12 +5408,9 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Frédérique Larrarte
-                      
                     </span>
                   </a>
-                  
                    and 
                   <a
                     class="AuthorsCitationView-authorIdLink-157"
@@ -5638,13 +5421,9 @@ exports[`Additional Information Component  should render component with conferen
                       class="citationAuthor"
                       data-testid="rek-contributor-1"
                     >
-                      
                       Hubert Chanson
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -5901,9 +5680,7 @@ exports[`Additional Information Component  should render component with conferen
                   <span
                     class="citationDate"
                   >
-                    
                     2008
-                    
                   </span>
                 </span>
               </span>
@@ -5935,9 +5712,7 @@ exports[`Additional Information Component  should render component with conferen
                 <span
                   class="citationDate"
                 >
-                  
                   2008
-                  
                 </span>
               </span>
             </div>
@@ -6364,8 +6139,6 @@ exports[`Additional Information Component  should render component with creative
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-195"
                     data-testid="rek-author-0-link"
@@ -6375,13 +6148,9 @@ exports[`Additional Information Component  should render component with creative
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Webster-Mannison, Marci
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -6538,9 +6307,7 @@ exports[`Additional Information Component  should render component with creative
                   <span
                     class="citationDate"
                   >
-                    
                     2006
-                    
                   </span>
                 </span>
               </span>
@@ -6727,8 +6494,6 @@ exports[`Additional Information Component  should render component with creative
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-205"
                     data-testid="rek-author-0-link"
@@ -6738,13 +6503,9 @@ exports[`Additional Information Component  should render component with creative
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Webster-Mannison, Marci
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -6901,9 +6662,7 @@ exports[`Additional Information Component  should render component with creative
                   <span
                     class="citationDate"
                   >
-                    
                     2006
-                    
                   </span>
                 </span>
               </span>
@@ -7090,8 +6849,6 @@ exports[`Additional Information Component  should render component with creative
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-167"
                     data-testid="rek-author-0-link"
@@ -7101,13 +6858,9 @@ exports[`Additional Information Component  should render component with creative
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Webster-Mannison, Marci
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -7314,9 +7067,7 @@ exports[`Additional Information Component  should render component with creative
                   <span
                     class="citationDate"
                   >
-                    
                     2006
-                    
                   </span>
                 </span>
               </span>
@@ -7534,8 +7285,6 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-37"
                     data-testid="rek-contributor-0-link"
@@ -7545,13 +7294,9 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Tyson, Gene W. 
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -7614,8 +7359,6 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-37"
                     data-testid="rek-author-0-link"
@@ -7625,13 +7368,10 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Parks, Donovan H.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-37"
                     data-testid="rek-author-1-link"
@@ -7641,13 +7381,10 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Imelfort, Michael
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-37"
                     data-testid="rek-author-2-link"
@@ -7657,13 +7394,10 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Skennerton, Connor T.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-37"
                     data-testid="rek-author-3-link"
@@ -7673,9 +7407,7 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Hugenholtz, Philip
-                      
                     </span>
                   </a>
                   , 
@@ -7689,13 +7421,9 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Tyson, Gene W.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -8410,9 +8138,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2005-01-05
-                  
                 </span>
               </span>
             </div>
@@ -8443,9 +8169,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2005-01-05
-                  
                 </span>
               </span>
             </div>
@@ -8476,9 +8200,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2001
-                  
                 </span>
               </span>
             </div>
@@ -8509,9 +8231,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2009
-                  
                 </span>
               </span>
             </div>
@@ -8756,9 +8476,7 @@ exports[`Additional Information Component  should render component with data col
                   <span
                     class="citationDate"
                   >
-                    
                     2015
-                    
                   </span>
                 </span>
               </span>
@@ -8917,8 +8635,6 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-360"
                     data-testid="rek-contributor-0-link"
@@ -8928,13 +8644,9 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Roelfsema, Christiaan M. 
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -8997,8 +8709,6 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-360"
                     data-testid="rek-author-0-link"
@@ -9008,13 +8718,10 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Roelfsema, Christiaan M.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-360"
                     data-testid="rek-author-1-link"
@@ -9024,13 +8731,10 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Phinn, Stuart R.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-360"
                     data-testid="rek-author-2-link"
@@ -9040,13 +8744,10 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Jupiter, Stacy
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-3-link"
@@ -9056,9 +8757,7 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Comely, James
-                      
                     </span>
                   </a>
                   , 
@@ -9072,13 +8771,9 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Albert, Simon
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -9469,9 +9164,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2002
-                  
                 </span>
               </span>
             </div>
@@ -9502,9 +9195,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2007
-                  
                 </span>
               </span>
             </div>
@@ -9701,9 +9392,7 @@ exports[`Additional Information Component  should render component with data col
                   <span
                     class="citationDate"
                   >
-                    
                     2015
-                    
                   </span>
                 </span>
               </span>
@@ -9896,8 +9585,6 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-51"
                     data-testid="rek-contributor-0-link"
@@ -9907,13 +9594,9 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Tyson, Gene W. 
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -9976,8 +9659,6 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-51"
                     data-testid="rek-author-0-link"
@@ -9987,13 +9668,10 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Parks, Donovan H.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-51"
                     data-testid="rek-author-1-link"
@@ -10003,13 +9681,10 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Imelfort, Michael
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-51"
                     data-testid="rek-author-2-link"
@@ -10019,13 +9694,10 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Skennerton, Connor T.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-51"
                     data-testid="rek-author-3-link"
@@ -10035,9 +9707,7 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Hugenholtz, Philip
-                      
                     </span>
                   </a>
                   , 
@@ -10051,13 +9721,9 @@ exports[`Additional Information Component  should render component with data col
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Tyson, Gene W.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -10775,9 +10441,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2005-01-05
-                  
                 </span>
               </span>
             </div>
@@ -10808,9 +10472,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2005-01-05
-                  
                 </span>
               </span>
             </div>
@@ -10841,9 +10503,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2001
-                  
                 </span>
               </span>
             </div>
@@ -10874,9 +10534,7 @@ exports[`Additional Information Component  should render component with data col
                 <span
                   class="citationDate"
                 >
-                  
                   2009
-                  
                 </span>
               </span>
             </div>
@@ -11121,9 +10779,7 @@ exports[`Additional Information Component  should render component with data col
                   <span
                     class="citationDate"
                   >
-                    
                     2015
-                    
                   </span>
                 </span>
               </span>
@@ -11223,8 +10879,6 @@ exports[`Additional Information Component  should render component with design d
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-215"
                     data-testid="rek-author-0-link"
@@ -11234,12 +10888,9 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Dickson, Michael
-                      
                     </span>
                   </a>
-                  
                    and 
                   <a
                     class="authorNameLink"
@@ -11250,13 +10901,9 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Francis, Mara
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -11380,9 +11027,7 @@ exports[`Additional Information Component  should render component with design d
                 <span
                   class="citationDate"
                 >
-                  
                   2005-01-05
-                  
                 </span>
               </span>
             </div>
@@ -11413,9 +11058,7 @@ exports[`Additional Information Component  should render component with design d
                 <span
                   class="citationDate"
                 >
-                  
                   2005-01-05
-                  
                 </span>
               </span>
             </div>
@@ -11446,9 +11089,7 @@ exports[`Additional Information Component  should render component with design d
                 <span
                   class="citationDate"
                 >
-                  
                   2008
-                  
                 </span>
               </span>
             </div>
@@ -11544,9 +11185,7 @@ exports[`Additional Information Component  should render component with design d
                   <span
                     class="citationDate"
                   >
-                    
                     2017-10-31
-                    
                   </span>
                 </span>
               </span>
@@ -11613,8 +11252,6 @@ exports[`Additional Information Component  should render component with design d
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-0-link"
@@ -11624,13 +11261,10 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Dickson Francis sia Architects
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-1-link"
@@ -11640,13 +11274,10 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-contributor-1"
                     >
-                      
                       Azimuts sia Surveyors
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-2-link"
@@ -11656,13 +11287,10 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-contributor-2"
                     >
-                      
                       ARB Nams sia Structural consultants
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-3-link"
@@ -11672,13 +11300,10 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-contributor-3"
                     >
-                      
                       Projektshanas birojs a.i.d.e Electrical consultants
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-4-link"
@@ -11688,13 +11313,10 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-contributor-4"
                     >
-                      
                       Telekom serviss sia Low voltage consultants
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-5-link"
@@ -11704,13 +11326,10 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-contributor-5"
                     >
-                      
                       Voteks sia Ventilation consultants
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-6-link"
@@ -11720,13 +11339,10 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-contributor-6"
                     >
-                      
                       HVAC sia Heating, water and sewerage consultants
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-7-link"
@@ -11736,9 +11352,7 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-contributor-7"
                     >
-                      
                       Latinwest sia Swimming pool consultants
-                      
                     </span>
                   </a>
                   , 
@@ -11752,13 +11366,9 @@ exports[`Additional Information Component  should render component with design d
                       class="citationAuthor"
                       data-testid="rek-contributor-8"
                     >
-                      
                       Aleja D sia Landscape consultants
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -12030,9 +11640,7 @@ exports[`Additional Information Component  should render component with digilib 
                 <span
                   class="citationDate"
                 >
-                  
                   1986
-                  
                 </span>
               </span>
             </div>
@@ -12063,9 +11671,7 @@ exports[`Additional Information Component  should render component with digilib 
                 <span
                   class="citationDate"
                 >
-                  
                   2006-07-18
-                  
                 </span>
               </span>
             </div>
@@ -12128,8 +11734,6 @@ exports[`Additional Information Component  should render component with digilib 
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -12139,13 +11743,9 @@ exports[`Additional Information Component  should render component with digilib 
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Keniger, Michael, 1947-
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -12679,9 +12279,7 @@ exports[`Additional Information Component  should render component with generic 
                   <span
                     class="citationDate"
                   >
-                    
                     2011-03-29
-                    
                   </span>
                 </span>
               </span>
@@ -12752,8 +12350,6 @@ exports[`Additional Information Component  should render component with generic 
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-244"
                     data-testid="rek-author-0-link"
@@ -12763,13 +12359,9 @@ exports[`Additional Information Component  should render component with generic 
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Louise Olsen-Kettle
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -12800,8 +12392,6 @@ exports[`Additional Information Component  should render component with generic 
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-0-link"
@@ -12811,12 +12401,9 @@ exports[`Additional Information Component  should render component with generic 
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Dion Weatherley
-                      
                     </span>
                   </a>
-                  
                    and 
                   <a
                     class="authorNameLink"
@@ -12827,13 +12414,9 @@ exports[`Additional Information Component  should render component with generic 
                       class="citationAuthor"
                       data-testid="rek-contributor-1"
                     >
-                      
                       V. E. Boros
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -13025,8 +12608,6 @@ exports[`Additional Information Component  should render component with journal 
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-27"
                     data-testid="rek-contributor-0-link"
@@ -13036,13 +12617,9 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Hakanson, Lars
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -13076,9 +12653,7 @@ exports[`Additional Information Component  should render component with journal 
                   <span
                     class="citationDate"
                   >
-                    
                     2005
-                    
                   </span>
                 </span>
               </span>
@@ -13463,8 +13038,6 @@ exports[`Additional Information Component  should render component with journal 
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-13"
                     data-testid="rek-author-0-link"
@@ -13474,13 +13047,10 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Azimi, Iman
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -13490,13 +13060,10 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-13"
                     data-testid="rek-author-2-link"
@@ -13506,13 +13073,10 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Kaemmerer, Elke
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-13"
                     data-testid="rek-author-3-link"
@@ -13522,13 +13086,10 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Turner, Dane
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-13"
                     data-testid="rek-author-4-link"
@@ -13538,13 +13099,10 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Yapa, Kunsala T. D. S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-13"
                     data-testid="rek-author-5-link"
@@ -13554,13 +13112,10 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -13570,13 +13125,10 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Thompson, Erik W.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-13"
                     data-testid="rek-author-7-link"
@@ -13586,9 +13138,7 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Roberts-Thomson, Sarah J.
-                      
                     </span>
                   </a>
                   , 
@@ -13602,13 +13152,9 @@ exports[`Additional Information Component  should render component with journal 
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Monteith, Gregory R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -13813,9 +13359,7 @@ exports[`Additional Information Component  should render component with journal 
                   <span
                     class="citationDate"
                   >
-                    
                     2017-07-01
-                    
                   </span>
                 </span>
               </span>
@@ -13847,9 +13391,7 @@ exports[`Additional Information Component  should render component with journal 
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>
@@ -14377,8 +13919,6 @@ exports[`Additional Information Component  should render component with manuscri
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -14388,13 +13928,9 @@ exports[`Additional Information Component  should render component with manuscri
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Hayes, Edward Leo, 1889-1967
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -14523,9 +14059,7 @@ exports[`Additional Information Component  should render component with manuscri
                   <span
                     class="citationDate"
                   >
-                    
                     1944-07-15
-                    
                   </span>
                 </span>
               </span>
@@ -14557,9 +14091,7 @@ exports[`Additional Information Component  should render component with manuscri
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>
@@ -14590,8 +14122,6 @@ exports[`Additional Information Component  should render component with manuscri
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-0-link"
@@ -14601,12 +14131,9 @@ exports[`Additional Information Component  should render component with manuscri
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Astley, Thea, 1925-2004
-                      
                     </span>
                   </a>
-                  
                    and 
                   <a
                     class="authorNameLink"
@@ -14617,13 +14144,9 @@ exports[`Additional Information Component  should render component with manuscri
                       class="citationAuthor"
                       data-testid="rek-contributor-1"
                     >
-                      
                       Grano, Paul, 1894-1975
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -14926,8 +14449,6 @@ exports[`Additional Information Component  should render component with newspape
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -14937,13 +14458,10 @@ exports[`Additional Information Component  should render component with newspape
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Wong, Kam Cheong
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -14953,13 +14471,10 @@ exports[`Additional Information Component  should render component with newspape
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Wong, Catherine
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-2-link"
@@ -14969,13 +14484,10 @@ exports[`Additional Information Component  should render component with newspape
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Li, Stephen
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-3-link"
@@ -14985,9 +14497,7 @@ exports[`Additional Information Component  should render component with newspape
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Woo, Kai Hui
-                      
                     </span>
                   </a>
                   , 
@@ -15001,13 +14511,9 @@ exports[`Additional Information Component  should render component with newspape
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Woo, Kai Zhi
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -15176,9 +14682,7 @@ exports[`Additional Information Component  should render component with newspape
                   <span
                     class="citationDate"
                   >
-                    
                     2010-05-01
-                    
                   </span>
                 </span>
               </span>
@@ -15272,8 +14776,6 @@ exports[`Additional Information Component  should render component with newspape
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-0-link"
@@ -15283,13 +14785,9 @@ exports[`Additional Information Component  should render component with newspape
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Li, Stephen
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -15624,8 +15122,6 @@ exports[`Additional Information Component  should render component with patent 1
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-274"
                     data-testid="rek-author-0-link"
@@ -15635,13 +15131,10 @@ exports[`Additional Information Component  should render component with patent 1
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Walsh, Laurence J
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -15651,13 +15144,10 @@ exports[`Additional Information Component  should render component with patent 1
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Ota R
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-2-link"
@@ -15667,9 +15157,7 @@ exports[`Additional Information Component  should render component with patent 1
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Nagao S
-                      
                     </span>
                   </a>
                   , 
@@ -15683,13 +15171,9 @@ exports[`Additional Information Component  should render component with patent 1
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Sato T
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -15789,9 +15273,7 @@ exports[`Additional Information Component  should render component with patent 1
                   <span
                     class="citationDate"
                   >
-                    
                     2008-08-01
-                    
                   </span>
                 </span>
               </span>
@@ -16240,9 +15722,7 @@ exports[`Additional Information Component  should render component with preprint
                   <span
                     class="citationDate"
                   >
-                    
                     2004
-                    
                   </span>
                 </span>
               </span>
@@ -16331,8 +15811,6 @@ exports[`Additional Information Component  should render component with preprint
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-284"
                     data-testid="rek-author-0-link"
@@ -16342,13 +15820,10 @@ exports[`Additional Information Component  should render component with preprint
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Asmussen, S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-284"
                     data-testid="rek-author-1-link"
@@ -16358,9 +15833,7 @@ exports[`Additional Information Component  should render component with preprint
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Kroese, D. P.
-                      
                     </span>
                   </a>
                   , 
@@ -16374,13 +15847,9 @@ exports[`Additional Information Component  should render component with preprint
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Rubinstein, R. Y.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -16606,8 +16075,6 @@ exports[`Additional Information Component  should render component with proceedi
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-374"
                     data-testid="rek-author-0-link"
@@ -16617,13 +16084,10 @@ exports[`Additional Information Component  should render component with proceedi
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Martin, Sally
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-374"
                     data-testid="rek-author-1-link"
@@ -16633,9 +16097,7 @@ exports[`Additional Information Component  should render component with proceedi
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Harper, Callista B.
-                      
                     </span>
                   </a>
                   , 
@@ -16649,13 +16111,9 @@ exports[`Additional Information Component  should render component with proceedi
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Meunier, Frederic A.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -16851,7 +16309,6 @@ exports[`Additional Information Component  should render component with proceedi
                         Toxicon
                       </span>
                     </a>
-                    
                   </span>
                   <span>
                      
@@ -16978,9 +16435,7 @@ exports[`Additional Information Component  should render component with proceedi
                   <span
                     class="citationDate"
                   >
-                    
                     2012
-                    
                   </span>
                 </span>
               </span>
@@ -17012,9 +16467,7 @@ exports[`Additional Information Component  should render component with proceedi
                 <span
                   class="citationDate"
                 >
-                  
                   2012
-                  
                 </span>
               </span>
             </div>
@@ -17456,8 +16909,6 @@ exports[`Additional Information Component  should render component with referenc
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-294"
                     data-testid="rek-author-0-link"
@@ -17467,13 +16918,9 @@ exports[`Additional Information Component  should render component with referenc
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Low, M.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -17632,9 +17079,7 @@ exports[`Additional Information Component  should render component with referenc
                   <span
                     class="citationDate"
                   >
-                    
                     2001-11-29
-                    
                   </span>
                 </span>
               </span>
@@ -17666,8 +17111,6 @@ exports[`Additional Information Component  should render component with referenc
                 <span
                   class="citationEditors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-contributor-0-link"
@@ -17677,12 +17120,9 @@ exports[`Additional Information Component  should render component with referenc
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       Sandra Buckley
-                      
                     </span>
                   </a>
-                  
                    and 
                   <a
                     class="AuthorsCitationView-authorIdLink-294"
@@ -17693,13 +17133,9 @@ exports[`Additional Information Component  should render component with referenc
                       class="citationAuthor"
                       data-testid="rek-contributor-1"
                     >
-                      
                       Low, Morris
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -18058,8 +17494,6 @@ exports[`Additional Information Component  should render component with rek_herd
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-388"
                     data-testid="rek-author-0-link"
@@ -18069,13 +17503,10 @@ exports[`Additional Information Component  should render component with rek_herd
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Azimi, Iman
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -18085,13 +17516,10 @@ exports[`Additional Information Component  should render component with rek_herd
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-388"
                     data-testid="rek-author-2-link"
@@ -18101,13 +17529,10 @@ exports[`Additional Information Component  should render component with rek_herd
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Kaemmerer, Elke
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-388"
                     data-testid="rek-author-3-link"
@@ -18117,13 +17542,10 @@ exports[`Additional Information Component  should render component with rek_herd
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Turner, Dane
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-388"
                     data-testid="rek-author-4-link"
@@ -18133,13 +17555,10 @@ exports[`Additional Information Component  should render component with rek_herd
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Yapa, Kunsala T. D. S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-388"
                     data-testid="rek-author-5-link"
@@ -18149,13 +17568,10 @@ exports[`Additional Information Component  should render component with rek_herd
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -18165,13 +17581,10 @@ exports[`Additional Information Component  should render component with rek_herd
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Thompson, Erik W.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-388"
                     data-testid="rek-author-7-link"
@@ -18181,9 +17594,7 @@ exports[`Additional Information Component  should render component with rek_herd
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Roberts-Thomson, Sarah J.
-                      
                     </span>
                   </a>
                   , 
@@ -18197,13 +17608,9 @@ exports[`Additional Information Component  should render component with rek_herd
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Monteith, Gregory R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -18408,9 +17815,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   <span
                     class="citationDate"
                   >
-                    
                     2017-07-01
-                    
                   </span>
                 </span>
               </span>
@@ -18442,9 +17847,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>
@@ -19068,8 +18471,6 @@ exports[`Additional Information Component  should render component with rek_star
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-402"
                     data-testid="rek-author-0-link"
@@ -19079,13 +18480,9 @@ exports[`Additional Information Component  should render component with rek_star
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Webster-Mannison, Marci
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -19292,9 +18689,7 @@ exports[`Additional Information Component  should render component with rek_star
                   <span
                     class="citationDate"
                   >
-                    
                     2006
-                    
                   </span>
                 </span>
               </span>
@@ -19326,9 +18721,7 @@ exports[`Additional Information Component  should render component with rek_star
                 <span
                   class="citationDate"
                 >
-                  
                   2005-01-05
-                  
                 </span>
               </span>
             </div>
@@ -19359,9 +18752,7 @@ exports[`Additional Information Component  should render component with rek_star
                 <span
                   class="citationDate"
                 >
-                  
                   2005-01-05
-                  
                 </span>
               </span>
             </div>
@@ -19516,8 +18907,6 @@ exports[`Additional Information Component  should render component with research
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-304"
                     data-testid="rek-author-0-link"
@@ -19527,13 +18916,9 @@ exports[`Additional Information Component  should render component with research
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Vishal Asai
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -19629,9 +19014,7 @@ exports[`Additional Information Component  should render component with research
                   <span
                     class="citationDate"
                   >
-                    
                     2017-10-12
-                    
                   </span>
                 </span>
               </span>
@@ -19917,8 +19300,6 @@ exports[`Additional Information Component  should render component with thesis 1
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-317"
                     data-testid="rek-author-0-link"
@@ -19928,13 +19309,9 @@ exports[`Additional Information Component  should render component with thesis 1
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Jennifer Moffatt
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -20093,9 +19470,7 @@ exports[`Additional Information Component  should render component with thesis 1
                   <span
                     class="citationDate"
                   >
-                    
                     2008-06-01
-                    
                   </span>
                 </span>
               </span>
@@ -20374,8 +19749,6 @@ exports[`Additional Information Component  should render component with video do
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -20385,13 +19758,9 @@ exports[`Additional Information Component  should render component with video do
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Walters, S.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -20487,9 +19856,7 @@ exports[`Additional Information Component  should render component with video do
                   <span
                     class="citationDate"
                   >
-                    
                     2002
-                    
                   </span>
                 </span>
               </span>
@@ -20726,8 +20093,6 @@ exports[`Additional Information Component  should render component with working 
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -20737,12 +20102,9 @@ exports[`Additional Information Component  should render component with working 
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Laselle, Laurence
-                      
                     </span>
                   </a>
-                  
                    and 
                   <a
                     class="AuthorsCitationView-authorIdLink-327"
@@ -20753,13 +20115,9 @@ exports[`Additional Information Component  should render component with working 
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Tisdell, Clem
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -21010,9 +20368,7 @@ exports[`Additional Information Component  should render component with working 
                   <span
                     class="citationDate"
                   >
-                    
                     2006-11-01
-                    
                   </span>
                 </span>
               </span>
@@ -21438,8 +20794,6 @@ exports[`Additional Information Component  should render component without Attri
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-92"
                     data-testid="rek-author-0-link"
@@ -21449,13 +20803,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Azimi, Iman
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -21465,13 +20816,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-92"
                     data-testid="rek-author-2-link"
@@ -21481,13 +20829,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Kaemmerer, Elke
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-92"
                     data-testid="rek-author-3-link"
@@ -21497,13 +20842,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Turner, Dane
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-92"
                     data-testid="rek-author-4-link"
@@ -21513,13 +20855,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Yapa, Kunsala T. D. S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-92"
                     data-testid="rek-author-5-link"
@@ -21529,13 +20868,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -21545,13 +20881,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Thompson, Erik W.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-92"
                     data-testid="rek-author-7-link"
@@ -21561,9 +20894,7 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Roberts-Thomson, Sarah J.
-                      
                     </span>
                   </a>
                   , 
@@ -21577,13 +20908,9 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Monteith, Gregory R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -21788,9 +21115,7 @@ exports[`Additional Information Component  should render component without Attri
                   <span
                     class="citationDate"
                   >
-                    
                     2017-07-01
-                    
                   </span>
                 </span>
               </span>
@@ -21822,9 +21147,7 @@ exports[`Additional Information Component  should render component without Attri
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>
@@ -22352,8 +21675,6 @@ exports[`Additional Information Component  should render component without Attri
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-106"
                     data-testid="rek-author-0-link"
@@ -22363,13 +21684,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Azimi, Iman
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -22379,13 +21697,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-106"
                     data-testid="rek-author-2-link"
@@ -22395,13 +21710,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Kaemmerer, Elke
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-106"
                     data-testid="rek-author-3-link"
@@ -22411,13 +21723,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Turner, Dane
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-106"
                     data-testid="rek-author-4-link"
@@ -22427,13 +21736,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Yapa, Kunsala T. D. S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-106"
                     data-testid="rek-author-5-link"
@@ -22443,13 +21749,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -22459,13 +21762,10 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Thompson, Erik W.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-106"
                     data-testid="rek-author-7-link"
@@ -22475,9 +21775,7 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Roberts-Thomson, Sarah J.
-                      
                     </span>
                   </a>
                   , 
@@ -22491,13 +21789,9 @@ exports[`Additional Information Component  should render component without Attri
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Monteith, Gregory R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -22702,9 +21996,7 @@ exports[`Additional Information Component  should render component without Attri
                   <span
                     class="citationDate"
                   >
-                    
                     2017-07-01
-                    
                   </span>
                 </span>
               </span>
@@ -22736,9 +22028,7 @@ exports[`Additional Information Component  should render component without Attri
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>
@@ -23266,8 +22556,6 @@ exports[`Additional Information Component  should render map with geo coordinate
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-0-link"
@@ -23277,13 +22565,10 @@ exports[`Additional Information Component  should render map with geo coordinate
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Shutter, Leigh
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -23293,13 +22578,10 @@ exports[`Additional Information Component  should render map with geo coordinate
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Arthurs, Andy
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-498"
                     data-testid="rek-author-2-link"
@@ -23309,13 +22591,10 @@ exports[`Additional Information Component  should render map with geo coordinate
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Bamford, Greg
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-3-link"
@@ -23325,9 +22604,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       McColl, Mary Rose
-                      
                     </span>
                   </a>
                   , 
@@ -23341,13 +22618,9 @@ exports[`Additional Information Component  should render map with geo coordinate
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Skinner, Peter R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -23444,9 +22717,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                   <span
                     class="citationDate"
                   >
-                    
                     2007
-                    
                   </span>
                 </span>
               </span>
@@ -23478,9 +22749,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                 <span
                   class="citationDate"
                 >
-                  
                   1963-10-17
-                  
                 </span>
               </span>
             </div>
@@ -23820,8 +23089,6 @@ exports[`Additional Information Component  should render oa status value link in
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-350"
                     data-testid="rek-author-0-link"
@@ -23831,13 +23098,9 @@ exports[`Additional Information Component  should render oa status value link in
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Jennifer Moffatt
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -23996,9 +23259,7 @@ exports[`Additional Information Component  should render oa status value link in
                   <span
                     class="citationDate"
                   >
-                    
                     2008-06-01
-                    
                   </span>
                 </span>
               </span>
@@ -24279,8 +23540,6 @@ exports[`Additional Information Component  should render with description only 1
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-471"
                     data-testid="rek-author-0-link"
@@ -24290,13 +23549,10 @@ exports[`Additional Information Component  should render with description only 1
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Azimi, Iman
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -24306,13 +23562,10 @@ exports[`Additional Information Component  should render with description only 1
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-471"
                     data-testid="rek-author-2-link"
@@ -24322,13 +23575,10 @@ exports[`Additional Information Component  should render with description only 1
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Kaemmerer, Elke
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-471"
                     data-testid="rek-author-3-link"
@@ -24338,13 +23588,10 @@ exports[`Additional Information Component  should render with description only 1
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Turner, Dane
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-471"
                     data-testid="rek-author-4-link"
@@ -24354,13 +23601,10 @@ exports[`Additional Information Component  should render with description only 1
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Yapa, Kunsala T. D. S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-471"
                     data-testid="rek-author-5-link"
@@ -24370,13 +23614,10 @@ exports[`Additional Information Component  should render with description only 1
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -24386,13 +23627,10 @@ exports[`Additional Information Component  should render with description only 1
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Thompson, Erik W.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-471"
                     data-testid="rek-author-7-link"
@@ -24402,9 +23640,7 @@ exports[`Additional Information Component  should render with description only 1
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Roberts-Thomson, Sarah J.
-                      
                     </span>
                   </a>
                   , 
@@ -24418,13 +23654,9 @@ exports[`Additional Information Component  should render with description only 1
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Monteith, Gregory R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -24629,9 +23861,7 @@ exports[`Additional Information Component  should render with description only 1
                   <span
                     class="citationDate"
                   >
-                    
                     2017-07-01
-                    
                   </span>
                 </span>
               </span>
@@ -24663,9 +23893,7 @@ exports[`Additional Information Component  should render with description only 1
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>
@@ -25193,8 +24421,6 @@ exports[`Additional Information Component  should render with no formatted abstr
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-443"
                     data-testid="rek-author-0-link"
@@ -25204,13 +24430,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Azimi, Iman
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -25220,13 +24443,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-443"
                     data-testid="rek-author-2-link"
@@ -25236,13 +24456,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Kaemmerer, Elke
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-443"
                     data-testid="rek-author-3-link"
@@ -25252,13 +24469,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Turner, Dane
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-443"
                     data-testid="rek-author-4-link"
@@ -25268,13 +24482,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Yapa, Kunsala T. D. S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-443"
                     data-testid="rek-author-5-link"
@@ -25284,13 +24495,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -25300,13 +24508,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Thompson, Erik W.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-443"
                     data-testid="rek-author-7-link"
@@ -25316,9 +24521,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Roberts-Thomson, Sarah J.
-                      
                     </span>
                   </a>
                   , 
@@ -25332,13 +24535,9 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Monteith, Gregory R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -25512,9 +24711,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   <span
                     class="citationDate"
                   >
-                    
                     2017-07-01
-                    
                   </span>
                 </span>
               </span>
@@ -25546,9 +24743,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>
@@ -26076,8 +25271,6 @@ exports[`Additional Information Component  should render with no formatted abstr
                 <span
                   class="citationAuthors"
                 >
-                  
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-457"
                     data-testid="rek-author-0-link"
@@ -26087,13 +25280,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Azimi, Iman
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-1-link"
@@ -26103,13 +25293,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-457"
                     data-testid="rek-author-2-link"
@@ -26119,13 +25306,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Kaemmerer, Elke
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-457"
                     data-testid="rek-author-3-link"
@@ -26135,13 +25319,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Turner, Dane
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-457"
                     data-testid="rek-author-4-link"
@@ -26151,13 +25332,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Yapa, Kunsala T. D. S.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-457"
                     data-testid="rek-author-5-link"
@@ -26167,13 +25345,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="authorNameLink"
                     data-testid="rek-author-6-link"
@@ -26183,13 +25358,10 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Thompson, Erik W.
-                      
                     </span>
                   </a>
                   , 
-                  
                   <a
                     class="AuthorsCitationView-authorIdLink-457"
                     data-testid="rek-author-7-link"
@@ -26199,9 +25371,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Roberts-Thomson, Sarah J.
-                      
                     </span>
                   </a>
                   , 
@@ -26215,13 +25385,9 @@ exports[`Additional Information Component  should render with no formatted abstr
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Monteith, Gregory R.
-                      
                     </span>
                   </a>
-                  
-                  
                 </span>
               </span>
             </div>
@@ -26426,9 +25592,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   <span
                     class="citationDate"
                   >
-                    
                     2017-07-01
-                    
                   </span>
                 </span>
               </span>
@@ -26460,9 +25624,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                 <span
                   class="citationDate"
                 >
-                  
                   2017
-                  
                 </span>
               </span>
             </div>

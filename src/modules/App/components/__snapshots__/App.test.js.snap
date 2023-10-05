@@ -35,7 +35,6 @@ exports[`Application component Should display mobile correctly 1`] = `
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -499,7 +498,6 @@ exports[`Application component Should display mobile correctly 1`] = `
           </div>
         </div>
       </div>
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -810,7 +808,6 @@ exports[`Application component should determine if it has incomplete works from 
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -1023,7 +1020,6 @@ exports[`Application component should determine if it has incomplete works from 
           </div>
         </div>
       </div>
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -1328,7 +1324,6 @@ exports[`Application component should determine if it has incomplete works from 
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -1541,7 +1536,6 @@ exports[`Application component should determine if it has incomplete works from 
           </div>
         </div>
       </div>
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -1846,7 +1840,6 @@ exports[`Application component should render alert if user is not fez author 1`]
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -2059,7 +2052,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           </div>
         </div>
       </div>
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -2364,7 +2356,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -2523,7 +2514,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -2828,7 +2818,6 @@ exports[`Application component should render app for account with fez author wit
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -2987,7 +2976,6 @@ exports[`Application component should render app for account with fez author wit
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -3292,7 +3280,6 @@ exports[`Application component should render application with routing for the us
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -3451,7 +3438,6 @@ exports[`Application component should render application with routing for the us
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
-      
       <div
         style="padding: 8px;"
       >
@@ -3586,7 +3572,6 @@ exports[`Application component should render for anon user 1`] = `
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -3745,7 +3730,6 @@ exports[`Application component should render for anon user 1`] = `
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >

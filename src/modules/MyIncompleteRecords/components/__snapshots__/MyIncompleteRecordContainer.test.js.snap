@@ -44,9 +44,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -159,7 +156,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         >
                           <a
                             aria-label="Full citation in Google scholar will open in a new window"
-                            class="googleCitationCount CitationCountView-citationCount-99 makeStyles-externalLink-101 makeStyles-externalLink-137"
+                            class="googleCitationCount CitationCountView-citationCount-99 makeStyles-externalLink-101 makeStyles-externalLink-138"
                             data-analyticsid="citation-count-link"
                             data-testid="citation-count-link"
                             href="https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello"
@@ -384,9 +381,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -584,9 +578,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -681,7 +672,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                       class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-quality-indicator-label"
                         id="rek-quality-indicator-label"
@@ -689,19 +680,19 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         Quality indicators
                         <span
                           aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
                         >
                            *
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-quality-indicator-select"
-                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-quality-indicator-select"
                           id="rek-quality-indicator-select"
                           role="button"
@@ -715,7 +706,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         </div>
                         <input
                           aria-hidden="true"
-                          aria-invalid="true"
+                          aria-invalid="false"
                           aria-labelledby="rek-quality-indicator-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                           data-analyticsid="rek-quality-indicator-input"
@@ -737,13 +728,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                           />
                         </svg>
                       </div>
-                      <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
-                        data-testid="rek-quality-indicator-helper-text"
-                        id="rek-quality-indicator-helper-text"
-                      >
-                        This field is required
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -979,9 +963,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -1046,7 +1027,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                           class="MuiListItem-container css-oyakqy-MuiListItem-container"
                         >
                           <div
-                            class="MuiListItem-root ContributorRowHeader-header-144 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+                            class="MuiListItem-root ContributorRowHeader-header-145 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
                           >
                             <div
                               class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -1090,7 +1071,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                 class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
                               >
                                 <span
-                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-143 ContributorRowHeader-paddingRightEdit-145 css-1vklb8l-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-144 ContributorRowHeader-paddingRightEdit-146 css-1vklb8l-MuiTypography-root"
                                 >
                                   Reorder items
                                 </span>
@@ -1238,9 +1219,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                                   />
                                 </svg>
-                                <span
-                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                />
                               </button>
                               <button
                                 aria-label="Remove this item"
@@ -1552,9 +1530,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                                   />
                                 </svg>
-                                <span
-                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                />
                               </button>
                               <button
                                 aria-label="Remove this item"
@@ -1686,9 +1661,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                                     d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                                   />
                                 </svg>
-                                <span
-                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                />
                               </button>
                               <button
                                 aria-label="Remove this item"
@@ -1816,9 +1788,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
               type="button"
             >
               Cancel and return to my incomplete works list
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1885,9 +1854,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -2000,7 +1966,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         >
                           <a
                             aria-label="Full citation in Google scholar will open in a new window"
-                            class="googleCitationCount CitationCountView-citationCount-19 makeStyles-externalLink-21 makeStyles-externalLink-57"
+                            class="googleCitationCount CitationCountView-citationCount-19 makeStyles-externalLink-21 makeStyles-externalLink-58"
                             data-analyticsid="citation-count-link"
                             data-testid="citation-count-link"
                             href="https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello"
@@ -2225,9 +2191,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2425,9 +2388,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2522,7 +2482,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-quality-indicator-label"
                         id="rek-quality-indicator-label"
@@ -2530,19 +2490,19 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         Quality indicators
                         <span
                           aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
                         >
                            *
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-quality-indicator-select"
-                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-quality-indicator-select"
                           id="rek-quality-indicator-select"
                           role="button"
@@ -2556,7 +2516,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </div>
                         <input
                           aria-hidden="true"
-                          aria-invalid="true"
+                          aria-invalid="false"
                           aria-labelledby="rek-quality-indicator-label"
                           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                           data-analyticsid="rek-quality-indicator-input"
@@ -2578,13 +2538,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           />
                         </svg>
                       </div>
-                      <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
-                        data-testid="rek-quality-indicator-helper-text"
-                        id="rek-quality-indicator-helper-text"
-                      >
-                        This field is required
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -2820,9 +2773,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2887,7 +2837,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           class="MuiListItem-container css-oyakqy-MuiListItem-container"
                         >
                           <div
-                            class="MuiListItem-root ContributorRowHeader-header-64 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+                            class="MuiListItem-root ContributorRowHeader-header-65 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
                           >
                             <div
                               class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -2931,7 +2881,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                 class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
                               >
                                 <span
-                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-63 ContributorRowHeader-paddingRightEdit-65 css-1vklb8l-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-64 ContributorRowHeader-paddingRightEdit-66 css-1vklb8l-MuiTypography-root"
                                 >
                                   Reorder items
                                 </span>
@@ -3079,9 +3029,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                                   />
                                 </svg>
-                                <span
-                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                />
                               </button>
                               <button
                                 aria-label="Remove this item"
@@ -3393,9 +3340,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                                   />
                                 </svg>
-                                <span
-                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                />
                               </button>
                               <button
                                 aria-label="Remove this item"
@@ -3527,9 +3471,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                     d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                                   />
                                 </svg>
-                                <span
-                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                />
                               </button>
                               <button
                                 aria-label="Remove this item"
@@ -3657,9 +3598,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               type="button"
             >
               Cancel and return to my incomplete works list
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div

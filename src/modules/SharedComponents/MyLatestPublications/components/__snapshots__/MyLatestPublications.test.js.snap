@@ -58,294 +58,207 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationAuthors"
                   >
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Betts, Joshua A.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Moradi Marjaneh, Mahdi
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Al-Ejeh, Fares
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Lim, Yi Chieh
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Shi, Wei
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Sivakumaran, Haran
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Tropee, Romain
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Patch, Ann.-Marie
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Clark, Michael B.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-9"
                     >
-                      
                       Bartonicek, Nenad
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-10"
                     >
-                      
                       Wiegmans, Adrian P.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-11"
                     >
-                      
                       Hillman, Kristine M.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-12"
                     >
-                      
                       Kaufmann, Susanne
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-13"
                     >
-                      
                       Bain, Amanda L.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-14"
                     >
-                      
                       Gloss, Brian S.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-15"
                     >
-                      
                       Crawford, Joanna
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-16"
                     >
-                      
                       Kazakoff, Stephen
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-17"
                     >
-                      
                       Wani, Shivangi
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-18"
                     >
-                      
                       Wen Shu W.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-19"
                     >
-                      
                       Day, Bryan
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-20"
                     >
-                      
                       Moller, Andreas
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-21"
                     >
-                      
                       Cloonan, Nicole
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-22"
                     >
-                      
                       Pearson,John
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-23"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-24"
                     >
-                      
                       Mercer, Timothy R.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-25"
                     >
-                      
                       Waddell, Nicola
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-26"
                     >
-                      
                       Khanna,  Kum Kum
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-27"
                     >
-                      
                       Dray, Eloise
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-28"
                     >
-                      
                       Dinger, Marcel E.
-                      
                     </span>
                      and 2 more
                      
@@ -391,7 +304,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationPageRange"
                   >
-                    
                     <span
                       class="citationStartPage"
                     >
@@ -403,7 +315,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                     >
                       266
                     </span>
-                    
                   </span>
                   <span>
                     . 
@@ -619,25 +530,18 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationEditors"
                   >
-                    
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       M Brow
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-contributor-1"
                     >
-                      
                       N Brow
-                      
                     </span>
                     , 
                      and 
@@ -645,11 +549,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       class="citationAuthor"
                       data-testid="rek-contributor-2"
                     >
-                      
                       J Brow
-                      
                     </span>
-                    
                      ed. 
                   </span>
                   <span
@@ -822,26 +723,19 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationAuthors"
                   >
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       V. Asai
-                      
                     </span>
-                    
                      and 
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       M Brown
-                      
                     </span>
-                    
                      
                   </span>
                   <span
@@ -996,16 +890,12 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationAuthors"
                   >
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       M Brown
-                      
                     </span>
-                    
                      
                   </span>
                   <span
@@ -1170,174 +1060,123 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationAuthors"
                   >
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Al-Ejeh, Fares
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Saunus, Jodi M.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Northwood, Korinne S.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Bailey, Peter J.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Betts, Joshua A.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       McCart Reed, Amy E.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Nephew, Kenneth P.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Stone, Andrew
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-9"
                     >
-                      
                       Gee, Julia M. W.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-10"
                     >
-                      
                       Dowhan, Dennis H.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-11"
                     >
-                      
                       Dray, Eloise
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-12"
                     >
-                      
                       Shewan, Annette M.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-13"
                     >
-                      
                       French, Juliet D.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-14"
                     >
-                      
                       Edwards, Stacey L.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-15"
                     >
-                      
                       Clark, Susan J.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-16"
                     >
-                      
                       Lakhani, Sunil R.
-                      
                     </span>
                     , 
                      and 
@@ -1345,11 +1184,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       class="citationAuthor"
                       data-testid="rek-author-17"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
-                    
                      
                   </span>
                   <span
@@ -1393,7 +1229,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationPageRange"
                   >
-                    
                     <span
                       class="citationStartPage"
                     >
@@ -1405,7 +1240,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                     >
                       3283
                     </span>
-                    
                   </span>
                   <span>
                     . 

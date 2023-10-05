@@ -88,7 +88,7 @@ export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => 
 
 export const assertTooltipText = async (trigger, tooltipText) => {
     expect(trigger).toBeInTheDocument();
-    await act(async () => await userEvent.hover(trigger));
+    await userEvent.hover(trigger);
     await waitFor(() => {
         expect(screen.getByRole('tooltip', { name: tooltipText, hidden: true })).toBeVisible();
     });

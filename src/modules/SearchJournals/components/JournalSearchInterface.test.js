@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { act, fireEvent, render, waitForElementToBeRemoved, WithReduxStore, WithRouter } from 'test-utils';
 import { id, JournalSearchInterface } from './JournalSearchInterface';
 
 const setup = state => {
@@ -20,7 +20,7 @@ describe('JournalSearchInterface', () => {
         Object.keys(mocks).map(name => mocks[name].mockRestore());
     });
 
-    it('should render when keywords have been changed', () => {
+    it('should render when keywords have been changed', async () => {
         jest.useFakeTimers();
         const keywords = {
             'Keyword-testing': {
@@ -56,7 +56,9 @@ describe('JournalSearchInterface', () => {
         act(() => {
             jest.runAllTimers();
         });
-        expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
+        await waitForElementToBeRemoved(queryByTestId('journal-search-snackbar')).then(() =>
+            expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument(),
+        );
     });
 
     it('should render', () => {

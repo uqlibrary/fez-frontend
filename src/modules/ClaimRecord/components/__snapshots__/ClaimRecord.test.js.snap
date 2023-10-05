@@ -91,26 +91,19 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Smith, A
-                                  
                                 </span>
-                                
                                  and 
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Smith, J
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -158,7 +151,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -170,7 +162,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -633,17 +624,12 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Smith, J
-                                  
                                 </span>
-                                
-                                
                               </span>
                               <span
                                 class="citationDate"
@@ -1064,16 +1050,12 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Smith, J
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -1121,7 +1103,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -1133,7 +1114,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -2019,84 +1999,60 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Azimi, Iman
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Milevskiy, Michael J. G.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Kaemmerer, Elke
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Turner, Dane
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Yapa, Kunsala T. D. S.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-5"
                                 >
-                                  
                                   Brown, Melissa A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-6"
                                 >
-                                  
                                   Thompson, Erik W.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-7"
                                 >
-                                  
                                   Roberts-Thomson, Sarah J.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -2104,11 +2060,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                                   class="citationAuthor"
                                   data-testid="rek-author-8"
                                 >
-                                  
                                   Monteith, Gregory R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -2156,7 +2109,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -2168,7 +2120,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -2692,84 +2643,60 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Azimi, Iman
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Milevskiy, Michael J. G.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Kaemmerer, Elke
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Turner, Dane
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Yapa, Kunsala T. D. S.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-5"
                                 >
-                                  
                                   Brown, Melissa A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-6"
                                 >
-                                  
                                   Thompson, Erik W.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-7"
                                 >
-                                  
                                   Roberts-Thomson, Sarah J.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -2777,11 +2704,8 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                                   class="citationAuthor"
                                   data-testid="rek-author-8"
                                 >
-                                  
                                   Monteith, Gregory R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -2829,7 +2753,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -2841,7 +2764,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -3365,26 +3287,19 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Smith, A
-                                  
                                 </span>
-                                
                                  and 
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Smith, J
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -3432,7 +3347,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -3444,7 +3358,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -3779,84 +3692,60 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Azimi, Iman
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Milevskiy, Michael J. G.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Kaemmerer, Elke
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Turner, Dane
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Yapa, Kunsala T. D. S.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-5"
                                 >
-                                  
                                   Brown, Melissa A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-6"
                                 >
-                                  
                                   Thompson, Erik W.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-7"
                                 >
-                                  
                                   Roberts-Thomson, Sarah J.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -3864,11 +3753,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                                   class="citationAuthor"
                                   data-testid="rek-author-8"
                                 >
-                                  
                                   Monteith, Gregory R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -3916,7 +3802,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -3928,7 +3813,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -4492,84 +4376,60 @@ exports[`Component ClaimRecord  should return and render alert message depending
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Azimi, Iman
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Milevskiy, Michael J. G.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Kaemmerer, Elke
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Turner, Dane
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Yapa, Kunsala T. D. S.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-5"
                                 >
-                                  
                                   Brown, Melissa A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-6"
                                 >
-                                  
                                   Thompson, Erik W.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-7"
                                 >
-                                  
                                   Roberts-Thomson, Sarah J.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -4577,11 +4437,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
                                   class="citationAuthor"
                                   data-testid="rek-author-8"
                                 >
-                                  
                                   Monteith, Gregory R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -4629,7 +4486,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -4641,7 +4497,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -5215,84 +5070,60 @@ exports[`Component ClaimRecord  should return and render alert message depending
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Azimi, Iman
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Milevskiy, Michael J. G.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Kaemmerer, Elke
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Turner, Dane
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Yapa, Kunsala T. D. S.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-5"
                                 >
-                                  
                                   Brown, Melissa A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-6"
                                 >
-                                  
                                   Thompson, Erik W.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-7"
                                 >
-                                  
                                   Roberts-Thomson, Sarah J.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -5300,11 +5131,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
                                   class="citationAuthor"
                                   data-testid="rek-author-8"
                                 >
-                                  
                                   Monteith, Gregory R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -5352,7 +5180,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -5364,7 +5191,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -5928,84 +5754,60 @@ exports[`Component ClaimRecord  should return and render alert message depending
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Azimi, Iman
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Milevskiy, Michael J. G.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Kaemmerer, Elke
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Turner, Dane
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Yapa, Kunsala T. D. S.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-5"
                                 >
-                                  
                                   Brown, Melissa A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-6"
                                 >
-                                  
                                   Thompson, Erik W.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-7"
                                 >
-                                  
                                   Roberts-Thomson, Sarah J.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -6013,11 +5815,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
                                   class="citationAuthor"
                                   data-testid="rek-author-8"
                                 >
-                                  
                                   Monteith, Gregory R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -6065,7 +5864,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -6077,7 +5875,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -6655,84 +6452,60 @@ exports[`Component ClaimRecord  should return and render alert message depending
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Azimi, Iman
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Milevskiy, Michael J. G.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Kaemmerer, Elke
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Turner, Dane
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Yapa, Kunsala T. D. S.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-5"
                                 >
-                                  
                                   Brown, Melissa A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-6"
                                 >
-                                  
                                   Thompson, Erik W.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-7"
                                 >
-                                  
                                   Roberts-Thomson, Sarah J.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -6740,11 +6513,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
                                   class="citationAuthor"
                                   data-testid="rek-author-8"
                                 >
-                                  
                                   Monteith, Gregory R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -6792,7 +6562,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -6804,7 +6573,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -7800,84 +7568,60 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Azimi, Iman
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   Milevskiy, Michael J. G.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Kaemmerer, Elke
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Turner, Dane
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Yapa, Kunsala T. D. S.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-5"
                                 >
-                                  
                                   Brown, Melissa A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-6"
                                 >
-                                  
                                   Thompson, Erik W.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-7"
                                 >
-                                  
                                   Roberts-Thomson, Sarah J.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -7885,11 +7629,8 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                                   class="citationAuthor"
                                   data-testid="rek-author-8"
                                 >
-                                  
                                   Monteith, Gregory R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -7937,7 +7678,6 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -7949,7 +7689,6 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                                 >
                                   2305
                                 </span>
-                                
                               </span>
                               <span>
                                 . 

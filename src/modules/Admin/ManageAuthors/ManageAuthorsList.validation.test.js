@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
-import { render, fireEvent, act, waitFor, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
+import { render, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
 import * as repository from 'repositories';
 
 jest.mock('./helpers', () => ({
@@ -53,7 +53,7 @@ describe('ManageAuthorsList', () => {
 
         const { getByTestId, getByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         fireEvent.click(getByTestId('authors-add-new-author'));
 
@@ -76,12 +76,10 @@ describe('ManageAuthorsList', () => {
             ),
         );
 
-        await act(() =>
-            waitFor(() =>
-                expect(
-                    getByText('The supplied Organisation Username is already on file for another author.'),
-                ).toBeInTheDocument(),
-            ),
+        await waitFor(() =>
+            expect(
+                getByText('The supplied Organisation Username is already on file for another author.'),
+            ).toBeInTheDocument(),
         );
 
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
@@ -104,7 +102,7 @@ describe('ManageAuthorsList', () => {
         });
         const { getByTestId, getByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         fireEvent.click(getByTestId('authors-add-new-author'));
 
@@ -127,12 +125,10 @@ describe('ManageAuthorsList', () => {
             ),
         );
 
-        await act(() =>
-            waitFor(() =>
-                expect(
-                    getByText('The supplied Student username is already on file for another author.'),
-                ).toBeInTheDocument(),
-            ),
+        await waitFor(() =>
+            expect(
+                getByText('The supplied Student username is already on file for another author.'),
+            ).toBeInTheDocument(),
         );
 
         expect(getByTestId('aut-student-username-input')).toHaveAttribute('aria-invalid', 'true');
@@ -155,7 +151,7 @@ describe('ManageAuthorsList', () => {
         });
         const { getByTestId, getByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         fireEvent.click(getByTestId('authors-add-new-author'));
 
@@ -178,12 +174,10 @@ describe('ManageAuthorsList', () => {
             ),
         );
 
-        await act(() =>
-            waitFor(() =>
-                expect(
-                    getByText('The supplied Organisation Staff ID is already on file for another author.'),
-                ).toBeInTheDocument(),
-            ),
+        await waitFor(() =>
+            expect(
+                getByText('The supplied Organisation Staff ID is already on file for another author.'),
+            ).toBeInTheDocument(),
         );
 
         expect(getByTestId('aut-org-staff-id-input')).toHaveAttribute('aria-invalid', 'true');
@@ -206,7 +200,7 @@ describe('ManageAuthorsList', () => {
         });
         const { getByTestId, getByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         fireEvent.click(getByTestId('authors-add-new-author'));
 
@@ -229,12 +223,10 @@ describe('ManageAuthorsList', () => {
             ),
         );
 
-        await act(() =>
-            waitFor(() =>
-                expect(
-                    getByText('The supplied Organisation Student ID is already on file for another author.'),
-                ).toBeInTheDocument(),
-            ),
+        await waitFor(() =>
+            expect(
+                getByText('The supplied Organisation Student ID is already on file for another author.'),
+            ).toBeInTheDocument(),
         );
 
         expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'true');
@@ -333,7 +325,7 @@ describe('ManageAuthorsList', () => {
             onBulkRowDelete: jest.fn(() => Promise.reject({ code: 500 })),
         });
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         const listItem0 = getByTestId('authors-list-row-0');
         expect(listItem0).toBeInTheDocument();
@@ -343,19 +335,17 @@ describe('ManageAuthorsList', () => {
 
         fireEvent.click(getByTestId('select-author-0'));
         fireEvent.click(getByTestId('select-author-1'));
-        act(() => {
-            fireEvent.click(getByTestId('authors-delete-selected-authors'));
-        });
+
+        fireEvent.click(getByTestId('authors-delete-selected-authors'));
+
         fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
-        await act(() =>
-            waitFor(() => {
-                expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
-                expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
-                expect(getByTestId('aut-display-name-1')).toHaveAttribute('value', 'Vishal, Desai');
-                expect(getByTestId('aut-org-username-1')).toHaveAttribute('value', 'uqvdesai');
-            }),
-        );
+        await waitFor(() => {
+            expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
+            expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
+            expect(getByTestId('aut-display-name-1')).toHaveAttribute('value', 'Vishal, Desai');
+            expect(getByTestId('aut-org-username-1')).toHaveAttribute('value', 'uqvdesai');
+        });
     });
 
     it('should validate org username input and leave in invalid state for existing org username even after updating first name and last name', async () => {
@@ -366,7 +356,7 @@ describe('ManageAuthorsList', () => {
 
         const { getByTestId, getByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         fireEvent.click(getByTestId('authors-add-new-author'));
 
@@ -452,15 +442,13 @@ describe('ManageAuthorsList', () => {
             onRowUpdate: jest.fn(() => Promise.reject({ code: 500 })),
         });
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         fireEvent.click(getByTestId('authors-list-row-0'));
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));
 
-        await act(() =>
-            waitFor(() => expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Vishal, Asai')),
-        );
+        await waitFor(() => expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Vishal, Asai'));
     });
 });

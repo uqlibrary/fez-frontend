@@ -2,9 +2,8 @@ import React from 'react';
 import Table from '@mui/material/Table';
 import JournalsListHeaderRow from './JournalsListHeaderRow';
 import { JournalFieldsMap } from './JournalFieldsMap';
-import { WithReduxStore, fireEvent, render } from 'test-utils';
+import { act, WithReduxStore, fireEvent, render } from 'test-utils';
 import Immutable from 'immutable';
-import { act } from 'react-test-renderer';
 import { sanitiseId } from 'helpers/general';
 
 const setup = (state = {}) => {

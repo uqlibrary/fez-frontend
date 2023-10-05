@@ -272,7 +272,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
                 >
                   Second
                    listed author 
-                  
                 </p>
               </div>
               <div
@@ -1695,7 +1694,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   First
                    listed author 
-                  
                 </p>
               </div>
               <div
@@ -1847,7 +1845,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   Second
                    listed author 
-                  
                 </p>
               </div>
               <div
@@ -2099,7 +2096,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   First
                    listed author 
-                  
                 </p>
               </div>
               <div
@@ -2251,7 +2247,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   Second
                    listed author 
-                  
                 </p>
               </div>
               <div

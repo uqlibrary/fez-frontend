@@ -58,7 +58,6 @@ exports[`Grant Information Component  should not break if grant text is not in t
                 >
                   National Health and Medical Research Council
                 </span>
-                
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -222,7 +221,6 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                 >
                   National Health and Medical Research Council
                 </span>
-                
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -258,7 +256,6 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                 >
                   Cancer Council Queensland
                 </span>
-                
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -294,7 +291,6 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                 >
                   National Breast Cancer Foundation
                 </span>
-                
               </p>
               <p
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"

@@ -8,26 +8,19 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Laselle, Laurence
-        
       </span>
-      
        and 
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Tisdell, Clem
-        
       </span>
-      
        
     </span>
     <span
@@ -114,26 +107,19 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Laselle, Laurence
-        
       </span>
-      
        and 
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Tisdell, Clem
-        
       </span>
-      
        
     </span>
     <span

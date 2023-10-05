@@ -13,7 +13,7 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
       <input
         aria-invalid="false"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id="mui-5"
+        id=":r4:"
         placeholder="dd/mm/yyyy"
         type="tel"
         value="01/01/2016"
@@ -62,7 +62,7 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
         aria-invalid="false"
         class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
         disabled=""
-        id="mui-3"
+        id=":r2:"
         placeholder="dd/mm/yyyy"
         type="tel"
         value="01/01/2016"
@@ -108,7 +108,7 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
       <input
         aria-invalid="false"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id="mui-1"
+        id=":r0:"
         placeholder="dd/mm/yyyy"
         type="tel"
         value="01/01/2016"
@@ -156,7 +156,7 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
       <input
         aria-invalid="false"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id="mui-2"
+        id=":r1:"
         placeholder="dd/mm/yyyy"
         type="tel"
         value=""
@@ -204,7 +204,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
       <input
         aria-invalid="false"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id="mui-4"
+        id=":r3:"
         placeholder="dd/mm/yyyy"
         type="tel"
         value="01/01/2016"
@@ -252,7 +252,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
       <input
         aria-invalid="false"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id="mui-4"
+        id=":r3:"
         placeholder="dd/mm/yyyy"
         type="tel"
         value="01/01/2018"

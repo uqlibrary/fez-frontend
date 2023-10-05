@@ -1,6 +1,6 @@
 import React from 'react';
 import { OfflineSnackbar, styles } from './OfflineSnackbar';
-import { rtlRender } from 'test-utils';
+import { act, rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -36,10 +36,12 @@ describe('Component OfflineSnackbar', () => {
         const goOnline = new window.Event('online', { bubbles: true });
         jest.useFakeTimers();
         const { container } = setup();
-        document.dispatchEvent(goOnline);
+        act(() => {
+            document.dispatchEvent(goOnline);
+            // trigger handleRequestClose
+            jest.advanceTimersByTime(5001);
+        });
 
-        // trigger handleRequestClose
-        jest.advanceTimersByTime(5001);
         expect(container).toMatchSnapshot();
     });
 

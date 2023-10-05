@@ -95,44 +95,32 @@ exports[`Component FixRecord should render fix record form 1`] = `
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -140,11 +128,8 @@ exports[`Component FixRecord should render fix record form 1`] = `
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -184,7 +169,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -196,7 +180,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
                                 >
                                   253A
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -747,44 +730,32 @@ exports[`Component FixRecord should render record citation, two actions in selec
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -792,11 +763,8 @@ exports[`Component FixRecord should render record citation, two actions in selec
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -836,7 +804,6 @@ exports[`Component FixRecord should render record citation, two actions in selec
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -848,7 +815,6 @@ exports[`Component FixRecord should render record citation, two actions in selec
                                 >
                                   253A
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -981,7 +947,6 @@ exports[`Component FixRecord should render record citation, two actions in selec
               />
             </button>
           </div>
-          
         </div>
       </form>
     </div>
@@ -1084,44 +1049,32 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -1129,11 +1082,8 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -1173,7 +1123,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -1185,7 +1134,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                                 >
                                   253A
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -1367,7 +1315,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                     </div>
                   </div>
                 </div>
-                
                 <span
                   class="MuiBox-root css-0"
                   data-testid="confirmDialogBox"
@@ -1408,6 +1355,9 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               type="button"
             >
               Submit
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
             </button>
           </div>
         </div>

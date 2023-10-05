@@ -94,34 +94,25 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                     <span
                       class="citationAuthors"
                     >
-                      
                       <span
                         class="citationAuthor"
                         data-testid="rek-author-0"
                       >
-                        
                         Topology
-                        
                       </span>
                       , 
-                      
                       <span
                         class="citationAuthor"
                         data-testid="rek-author-1"
                       >
-                        
                         Davidson, Robert
-                        
                       </span>
                       , 
-                      
                       <span
                         class="citationAuthor"
                         data-testid="rek-author-2"
                       >
-                        
                         Babbage, John
-                        
                       </span>
                       , 
                        and 
@@ -129,11 +120,8 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                         class="citationAuthor"
                         data-testid="rek-author-3"
                       >
-                        
                         The Brodsky Quartet
-                        
                       </span>
-                      
                        
                     </span>
                     <span
@@ -679,7 +667,6 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                 id="standard-card-grant-details-content"
               >
                 <div>
-                  
                   Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
                   <div
                     class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -915,9 +902,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                 >
                   <div
                     class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-                  >
-                    
-                  </div>
+                  />
                 </div>
               </div>
             </div>

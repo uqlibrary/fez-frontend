@@ -49,7 +49,6 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
             >
               <p>
                  - 
-                
               </p>
               <div
                 class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-25 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
@@ -279,7 +278,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                         aria-invalid="false"
                         aria-label="primaryValue"
                         class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                        id="mui-1"
+                        id=":r0:"
                         name="primaryValue"
                         placeholder="Enter one or more UTs separated by a comma e.g. 000455548800001"
                         required=""
@@ -306,7 +305,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                         aria-invalid="false"
                         aria-label="secondaryValue"
                         class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                        id="mui-2"
+                        id=":r1:"
                         name="secondaryValue"
                         placeholder="Enter API key"
                         type="text"
@@ -434,7 +433,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                         aria-invalid="false"
                         aria-label="primaryValue"
                         class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                        id="mui-3"
+                        id=":r2:"
                         name="primaryValue"
                         placeholder="Enter one or more UTs separated by a comma e.g. 000455548800001"
                         required=""
@@ -461,7 +460,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                         aria-invalid="false"
                         aria-label="secondaryValue"
                         class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                        id="mui-4"
+                        id=":r3:"
                         name="secondaryValue"
                         placeholder="Enter API key"
                         type="text"

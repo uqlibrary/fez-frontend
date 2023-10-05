@@ -8,27 +8,19 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
     <span
       class="citationEditors"
     >
-      
-      
       <span
         class="citationAuthor"
         data-testid="rek-contributor-0"
       >
-        
         Frédérique Larrarte
-        
       </span>
-      
        and 
       <span
         class="citationAuthor"
         data-testid="rek-contributor-1"
       >
-        
         Hubert Chanson
-        
       </span>
-      
        ed. 
     </span>
     <span
@@ -95,27 +87,19 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
     <span
       class="citationEditors"
     >
-      
-      
       <span
         class="citationAuthor"
         data-testid="rek-contributor-0"
       >
-        
         Frédérique Larrarte
-        
       </span>
-      
        and 
       <span
         class="citationAuthor"
         data-testid="rek-contributor-1"
       >
-        
         Hubert Chanson
-        
       </span>
-      
        ed. 
     </span>
     <span
