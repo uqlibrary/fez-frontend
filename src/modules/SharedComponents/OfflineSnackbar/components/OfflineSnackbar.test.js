@@ -1,6 +1,7 @@
 import React from 'react';
 import { OfflineSnackbar } from './OfflineSnackbar';
 import { act, rtlRender } from 'test-utils';
+import { waitForElementToBeRemoved } from '@testing-library/react';
 
 function setup(testProps = {}) {
     const props = {
@@ -34,14 +35,14 @@ describe('Component OfflineSnackbar', () => {
     it('renders back online snackbar', async () => {
         Object.defineProperty(navigator, 'onLine', { value: true, writable: true });
         const goOnline = new window.Event('online', { bubbles: true });
-        jest.useFakeTimers();
-        const { container } = setup();
+        const { container, getByRole } = setup();
         act(() => {
             document.dispatchEvent(goOnline);
-            // trigger handleRequestClose
-            jest.advanceTimersByTime(5001);
         });
+        expect(container).toMatchSnapshot();
 
+        // ensure the alert hides after a timeout
+        await waitForElementToBeRemoved(getByRole('presentation'), { timeout: 6000 });
         expect(container).toMatchSnapshot();
     });
 

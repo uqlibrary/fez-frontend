@@ -54,31 +54,34 @@ const StyledGridWiggler = styled(Grid, {
 
 const StyledGridWithIcon = styled(Grid, {
     shouldForwardProp: prop => prop !== 'type',
-})(({ theme, type }) => ({
-    borderRadius: '5px',
-    boxShadow: theme.shadows[1],
-    padding: '12px',
-    marginTop: '5px',
-    '&:first-of-type': {
-        marginTop: 0,
-    },
+})(({ theme, type }) => {
+    const _type = paletteIndex[type] ?? 'error';
+    return {
+        borderRadius: '5px',
+        boxShadow: theme.shadows[1],
+        padding: '12px',
+        marginTop: '5px',
+        '&:first-of-type': {
+            marginTop: 0,
+        },
 
-    '& a:link, & a:hover, & a:visited': {
+        '& a:link, & a:hover, & a:visited': {
+            color: theme.palette.white.main,
+            textDecoration: 'underline',
+        },
+
         color: theme.palette.white.main,
-        textDecoration: 'underline',
-    },
+        backgroundColor: type !== 'done' ? theme.palette[_type].main : theme.palette[_type].light,
 
-    color: theme.palette.white.main,
-    backgroundColor: type !== 'done' ? theme.palette[paletteIndex[type]].main : theme.palette[paletteIndex[type]].light,
-
-    '& .spinner, & .icon, & button.dismiss': {
-        color: theme.palette[paletteIndex[type]].dark,
-    },
-    '& button.action': {
-        color: theme.palette.white.main,
-        backgroundColor: theme.palette[paletteIndex[type]].dark,
-    },
-}));
+        '& .spinner, & .icon, & button.dismiss': {
+            color: theme.palette[_type].dark,
+        },
+        '& button.action': {
+            color: theme.palette.white.main,
+            backgroundColor: theme.palette[_type].dark,
+        },
+    };
+});
 
 const StyledGridTitle = styled(Grid)(({ theme }) => ({
     alignSelf: 'center',
