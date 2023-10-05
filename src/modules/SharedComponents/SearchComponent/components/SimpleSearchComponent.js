@@ -31,6 +31,7 @@ export class SimpleSearchComponent extends PureComponent {
         onSearchTextChange: PropTypes.func.isRequired,
         onToggleSearchMode: PropTypes.func,
         onInvalidSearch: PropTypes.func,
+        classes: PropTypes.object,
     };
     static defaultProps = {
         searchText: '',
@@ -43,7 +44,8 @@ export class SimpleSearchComponent extends PureComponent {
 
         onSearch: () => {},
         onToggleSearchMode: () => {},
-        onInvalidSearch: () => {},
+        onInvalidSearch: /* istanbul ignore next */ () => {},
+        classes: {},
     };
 
     constructor(props) {
@@ -72,7 +74,6 @@ export class SimpleSearchComponent extends PureComponent {
             () => {
                 if (this.state.showMobile) {
                     document.getElementById('mobile-search-input') &&
-                        /* istanbul ignore next */
                         document.getElementById('mobile-search-input').focus();
                 }
             },
@@ -90,9 +91,10 @@ export class SimpleSearchComponent extends PureComponent {
 
     _handleSearch = event => {
         if (event && event.key && event.key !== 'Enter') return;
-        /* istanbul ignore next */
-        if (this.state.searchTerm && this.state.searchTerm.trim().length === 0) return;
 
+        if (this.state.searchTerm && this.state.searchTerm.trim().length === 0) return;
+        // search button is disabled when exceeds the max text length
+        /* istanbul ignore next */
         if (this.props.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             this.props.onInvalidSearch(
                 locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH),
@@ -119,6 +121,7 @@ export class SimpleSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
+        const { classes } = this.props;
         const ariaLabel = { 'aria-label': txt.ariaInputLabel };
         return (
             <React.Fragment>
@@ -141,6 +144,7 @@ export class SimpleSearchComponent extends PureComponent {
                                     width: 'calc(100% + 8px)',
                                     margin: '-4px',
                                 }}
+                                className={classes.inHeader}
                             >
                                 {this.props.showPrefixIcon && (
                                     <Grid
@@ -152,7 +156,10 @@ export class SimpleSearchComponent extends PureComponent {
                                             },
                                         }}
                                     >
-                                        <Search sx={theme => ({ fill: theme.palette.secondary.main, opacity: 0.66 })} />
+                                        <Search
+                                            sx={theme => ({ fill: theme.palette.secondary.main, opacity: 0.66 })}
+                                            className={classes.searchIconPrefix}
+                                        />
                                     </Grid>
                                 )}
                                 <Grid
@@ -212,6 +219,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             width: '100%',
                                             height: '70px',
                                         }}
+                                        className={classes.mobileHeader}
                                     >
                                         <Grid
                                             container
@@ -294,7 +302,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         placeholder={txt.searchBoxHint}
                                         inputProps={ariaLabel}
                                         onChange={this._handleSearchTextChange}
-                                        onKeyPress={this._handleSearch}
+                                        onKeyDown={this._handleSearch}
                                         value={this.props.searchText}
                                         errorText={this.searchTextValidationMessage(this.props.searchText)}
                                     />

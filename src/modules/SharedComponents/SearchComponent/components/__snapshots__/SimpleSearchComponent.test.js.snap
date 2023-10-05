@@ -1,361 +1,478 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SimpleSearchComponent should render default view 1`] = `
-<Fragment>
+<div>
   <form
-    onSubmit={[Function]}
-    style={
-      Object {
-        "margin": 8,
-      }
-    }
+    style="margin: 8px;"
   >
-    <ForwardRef(Grid)
-      alignItems="center"
-      container={true}
-      spacing={2}
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-ofrcno-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={true}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
-        <TextField
-          data-testid={true}
-          errorText={null}
-          fullWidth={true}
-          inputProps={
-            Object {
-              "aria-label": "Enter your search query to search eSpace and then press Enter",
-            }
-          }
-          label="Search eSpace"
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Enter your search query to search all fields in eSpace"
-          textFieldId="simple-search"
-          type="search"
-          value=""
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="simple-search"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="simple-search-label"
+            for="simple-search-input"
+            id="simple-search-label"
+          >
+            Search eSpace
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="Enter your search query to search eSpace and then press Enter"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="simple-search-input"
+              data-testid="simple-search-input"
+              id="simple-search-input"
+              label="Search eSpace"
+              placeholder="Enter your search query to search all fields in eSpace"
+              type="search"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
       >
-        <ForwardRef(Button)
+        <button
           aria-label="Click to search eSpace"
-          color="primary"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
-          disabled={false}
-          fullWidth={true}
           id="simple-search-button"
-          onClick={[Function]}
-          variant="contained"
+          tabindex="0"
+          type="button"
         >
           Search
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
       >
-        <ForwardRef(Button)
+        <button
           aria-label="Click to switch to Advanced search"
-          className="advancedButton"
-          color="default"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
-          fullWidth={true}
           id="show-advanced-search"
-          onClick={[Function]}
-          variant="contained"
+          tabindex="0"
+          type="button"
         >
           Advanced search
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
   </form>
-</Fragment>
+</div>
 `;
 
-exports[`SimpleSearchComponent should render mobile view 1`] = `null`;
-
 exports[`SimpleSearchComponent should render show prefix icon in the search box 1`] = `
-<Fragment>
+<div>
   <form
-    onSubmit={[Function]}
-    style={
-      Object {
-        "margin": 8,
-      }
-    }
+    style="margin: 8px;"
   >
-    <ForwardRef(Grid)
-      alignItems="center"
-      container={true}
-      spacing={2}
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-ofrcno-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={true}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
-        <TextField
-          data-testid={true}
-          errorText={null}
-          fullWidth={true}
-          inputProps={
-            Object {
-              "aria-label": "Enter your search query to search eSpace and then press Enter",
-            }
-          }
-          label="Search eSpace"
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Enter your search query to search all fields in eSpace"
-          textFieldId="simple-search"
-          type="search"
-          value=""
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="simple-search"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="simple-search-label"
+            for="simple-search-input"
+            id="simple-search-label"
+          >
+            Search eSpace
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="Enter your search query to search eSpace and then press Enter"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="simple-search-input"
+              data-testid="simple-search-input"
+              id="simple-search-input"
+              label="Search eSpace"
+              placeholder="Enter your search query to search all fields in eSpace"
+              type="search"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
       >
-        <ForwardRef(Button)
+        <button
           aria-label="Click to search eSpace"
-          color="primary"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
-          disabled={false}
-          fullWidth={true}
           id="simple-search-button"
-          onClick={[Function]}
-          variant="contained"
+          tabindex="0"
+          type="button"
         >
           Search
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
       >
-        <ForwardRef(Button)
+        <button
           aria-label="Click to switch to Advanced search"
-          className="advancedButton"
-          color="default"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
-          fullWidth={true}
           id="show-advanced-search"
-          onClick={[Function]}
-          variant="contained"
+          tabindex="0"
+          type="button"
         >
           Advanced search
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
   </form>
-</Fragment>
+</div>
 `;
 
 exports[`SimpleSearchComponent should render with a class "header" for use in AppBar 1`] = `
-<Fragment>
+<div>
   <form
-    onSubmit={[Function]}
-    style={
-      Object {
-        "margin": 8,
-      }
-    }
+    style="margin: 8px;"
   >
-    <ForwardRef(Grid)
-      alignItems="center"
-      container={true}
-      direction="row"
-      spacing={1}
-      sx={
-        Object {
-          "& input[type=\\"search\\"]::-webkit-search-cancel-button": Object {
-            "display": "none",
-          },
-          "backgroundColor": "white.main",
-          "display": Object {
-            "sm": "flex",
-            "xs": "none",
-          },
-          "margin": "-4px",
-          "width": "calc(100% + 8px)",
-        }
-      }
-      wrap="nowrap"
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        sx={
-          Object {
-            "&.MuiGrid-item": Object {
-              "padding": "4px",
-            },
-          }
-        }
-        xs={true}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
       >
-        <TextField
-          InputProps={
-            Object {
-              "disableUnderline": true,
-            }
-          }
-          autoComplete="search"
-          errorText={null}
-          fullWidth={true}
-          label=""
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Search eSpace"
-          textFieldId="simple-search"
-          type="search"
-          value=""
-        />
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
-    <ForwardRef(Box)
-      sx={
-        Object {
-          "display": Object {
-            "sm": "none",
-            "xs": "block",
-          },
-        }
-      }
-    >
-      <ForwardRef(Tooltip)
-        TransitionComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "propTypes": Object {
-              "addEndListener": [Function],
-              "appear": [Function],
-              "children": [Function],
-              "easing": [Function],
-              "in": [Function],
-              "onEnter": [Function],
-              "onEntered": [Function],
-              "onEntering": [Function],
-              "onExit": [Function],
-              "onExited": [Function],
-              "onExiting": [Function],
-              "style": [Function],
-              "timeout": [Function],
-            },
-            "render": [Function],
-          }
-        }
-        TransitionProps={
-          Object {
-            "timeout": 300,
-          }
-        }
-        placement="bottom-end"
-        title="Search eSpace"
-      >
-        <ForwardRef(IconButton)
-          aria-label="Click to search eSpace"
-          onClick={[Function]}
-          size="large"
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="simple-search"
         >
-          <Memo(ForwardRef(SearchIcon))
-            sx={[Function]}
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label=""
+              autocomplete="search"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="simple-search-input"
+              data-testid="simple-search-input"
+              id="simple-search-input"
+              label=""
+              placeholder="Search eSpace"
+              type="search"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-10q9jzs"
+    >
+      <button
+        aria-label="Click to search eSpace"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+        data-mui-internal-clone-element="true"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
+          data-testid="SearchIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
           />
-        </ForwardRef(IconButton)>
-      </ForwardRef(Tooltip)>
-    </ForwardRef(Box)>
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
   </form>
-</Fragment>
+</div>
+`;
+
+exports[`SimpleSearchComponent should render with default onSearch callback 1`] = `
+<div>
+  <form
+    style="margin: 8px;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-ofrcno-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="simple-search"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            data-testid="simple-search-label"
+            for="simple-search-input"
+            id="simple-search-label"
+          >
+            Search eSpace
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="Enter your search query to search eSpace and then press Enter"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="simple-search-input"
+              data-testid="simple-search-input"
+              id="simple-search-input"
+              label="Search eSpace"
+              placeholder="Enter your search query to search all fields in eSpace"
+              type="search"
+              value="new search value"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      >
+        <button
+          aria-label="Click to search eSpace"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="simple-search-button"
+          data-testid="simple-search-button"
+          id="simple-search-button"
+          tabindex="0"
+          type="button"
+        >
+          Search
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      >
+        <button
+          aria-label="Click to switch to Advanced search"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="show-advanced-search"
+          data-testid="show-advanced-search"
+          id="show-advanced-search"
+          tabindex="0"
+          type="button"
+        >
+          Advanced search
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
 `;
 
 exports[`SimpleSearchComponent should set search value from prop 1`] = `
-<Fragment>
+<div>
   <form
-    onSubmit={[Function]}
-    style={
-      Object {
-        "margin": 8,
-      }
-    }
+    style="margin: 8px;"
   >
-    <ForwardRef(Grid)
-      alignItems="center"
-      container={true}
-      spacing={2}
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-ofrcno-MuiGrid-root"
     >
-      <ForwardRef(Grid)
-        item={true}
-        xs={true}
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
-        <TextField
-          data-testid={true}
-          errorText={null}
-          fullWidth={true}
-          inputProps={
-            Object {
-              "aria-label": "Enter your search query to search eSpace and then press Enter",
-            }
-          }
-          label="Search eSpace"
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Enter your search query to search all fields in eSpace"
-          textFieldId="simple-search"
-          type="search"
-          value="i feel lucky"
-        />
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="simple-search"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            data-testid="simple-search-label"
+            for="simple-search-input"
+            id="simple-search-label"
+          >
+            Search eSpace
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="Enter your search query to search eSpace and then press Enter"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="simple-search-input"
+              data-testid="simple-search-input"
+              id="simple-search-input"
+              label="Search eSpace"
+              placeholder="Enter your search query to search all fields in eSpace"
+              type="search"
+              value="i feel lucky"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
       >
-        <ForwardRef(Button)
+        <button
           aria-label="Click to search eSpace"
-          color="primary"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
-          disabled={false}
-          fullWidth={true}
           id="simple-search-button"
-          onClick={[Function]}
-          variant="contained"
+          tabindex="0"
+          type="button"
         >
           Search
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-      <ForwardRef(Grid)
-        item={true}
-        sm="auto"
-        xs={12}
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
       >
-        <ForwardRef(Button)
+        <button
           aria-label="Click to switch to Advanced search"
-          className="advancedButton"
-          color="default"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
-          fullWidth={true}
           id="show-advanced-search"
-          onClick={[Function]}
-          variant="contained"
+          tabindex="0"
+          type="button"
         >
           Advanced search
-        </ForwardRef(Button)>
-      </ForwardRef(Grid)>
-    </ForwardRef(Grid)>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
   </form>
-</Fragment>
+</div>
 `;
 
-exports[`SimpleSearchComponent should show prefix icon when in header 1`] = `null`;
+exports[`SimpleSearchComponent should show prefix icon when in header 1`] = `
+<div>
+  <form
+    style="margin: 8px;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap headerClass css-44sczy-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium searchIconPrefix css-iu4k2w-MuiSvgIcon-root"
+          data-testid="SearchIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          data-testid="simple-search"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label=""
+              autocomplete="search"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+              data-analyticsid="simple-search-input"
+              data-testid="simple-search-input"
+              id="simple-search-input"
+              label=""
+              placeholder="Search eSpace"
+              type="search"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-10q9jzs"
+    >
+      <button
+        aria-label="Click to search eSpace"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+        data-mui-internal-clone-element="true"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
+          data-testid="SearchIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </form>
+</div>
+`;

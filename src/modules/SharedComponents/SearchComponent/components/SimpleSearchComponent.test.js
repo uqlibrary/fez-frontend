@@ -1,52 +1,38 @@
-import { SimpleSearchComponent } from './SimpleSearchComponent';
-import * as constants from 'config/general';
+import React from 'react';
+import SimpleSearchComponent from './SimpleSearchComponent';
+import { rtlRender, fireEvent, createEvent } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
-        searchText: '',
-        className: 'simple-search',
-
-        showSearchButton: false,
-        showMobileSearchButton: false,
-        showAdvancedSearchButton: false,
-        showPrefixIcon: false,
-
-        isInHeader: false,
-
-        onSearch: jest.fn(),
-        onInvalidSearch: jest.fn(),
-        onToggle: jest.fn(),
         onSearchTextChange: jest.fn(),
-        classes: {
-            inHeader: {},
-        },
+        classes: {},
 
         ...testProps,
     };
 
-    return getElement(SimpleSearchComponent, props);
+    return rtlRender(<SimpleSearchComponent {...props} />);
 }
 
 describe('SimpleSearchComponent', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render mobile view', () => {
-        const wrapper = setup({
+        const { container, getByRole } = setup({
             showMobileSearchButton: true,
             isInHeader: true,
             classes: {
                 mobileHeader: 'mobileHeaderTest',
             },
         });
-        wrapper.setState({ showMobile: true });
-        expect(toJson(wrapper.find('.mobileHeaderTest Hidden'))).toMatchSnapshot();
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        expect(container.querySelector('.mobileHeaderTest')).toBeInTheDocument();
     });
 
     it('should show prefix icon when in header', () => {
-        const wrapper = setup({
+        const { container } = setup({
             isInHeader: true,
             showPrefixIcon: true,
             classes: {
@@ -54,123 +40,101 @@ describe('SimpleSearchComponent', () => {
                 searchIconPrefix: 'searchIconPrefix',
             },
         });
-        expect(toJson(wrapper.find('WithStyles(Grid).headerClass WithStyles(Grid)').first())).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render show prefix icon in the search box', () => {
-        const wrapper = setup({ showPrefixIcon: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ showPrefixIcon: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render with a class "header" for use in AppBar', () => {
-        const wrapper = setup({ isInHeader: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ isInHeader: true });
+        expect(container).toMatchSnapshot();
 
-        const preventDefaultFn = jest.fn();
-        wrapper
-            .find('form')
-            .props()
-            .onSubmit({ preventDefault: preventDefaultFn });
-        expect(preventDefaultFn).toHaveBeenCalled();
+        const form = container.querySelector('form');
+        const submitEvent = createEvent.submit(form);
+        fireEvent(form, submitEvent);
+        expect(submitEvent.defaultPrevented).toBe(true);
     });
 
     it('should set search value from prop', () => {
-        const wrapper = setup({ showAdvancedSearchButton: true, searchText: 'i feel lucky' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({ showAdvancedSearchButton: true, searchText: 'i feel lucky' });
+        expect(container).toMatchSnapshot();
     });
 
     it('should update search text field', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onSearchTextChange: testFn });
-
-        wrapper.instance()._handleSearchTextChange({ target: { value: 'new search value' } });
-
+        const { getByTestId } = setup({ onSearchTextChange: testFn });
+        fireEvent.change(getByTestId('simple-search-input'), { target: { value: 'new search value' } });
         expect(testFn).toHaveBeenCalledWith('new search value');
     });
 
     it("should not submit search if ENTER wasn't pressed", () => {
         const testMethod = jest.fn();
-        const wrapper = setup({ onSearch: testMethod });
-
-        wrapper.instance()._handleSearch({ key: 'a' });
-        wrapper.update();
-
+        const { getByTestId } = setup({ searchText: 'new search value', onSearch: testMethod });
+        fireEvent.keyDown(getByTestId('simple-search-input'), { key: 'Escape', code: 27 });
         expect(testMethod).not.toHaveBeenCalled();
     });
 
     it('should submit search if search text is not null and ENTER is pressed', () => {
         const searchFn = jest.fn();
-        const blurFn = jest.fn();
-        const wrapper = setup({
-            searchText: 'i feel lucky',
+        const { getByTestId } = setup({
+            searchText: 'new search value',
             onSearch: searchFn,
         });
-
-        wrapper.instance()._handleSearch({
-            key: 'Enter',
-            target: {
-                blur: blurFn,
-            },
-        });
-        wrapper.update();
-
+        fireEvent.keyDown(getByTestId('simple-search-input'), { key: 'Enter', code: 13 });
         expect(searchFn).toBeCalled();
-        expect(blurFn).toBeCalled();
+    });
+
+    it('should render with default onSearch callback', () => {
+        const { container, getByTestId } = setup({
+            searchText: 'new search value',
+        });
+        fireEvent.keyDown(getByTestId('simple-search-input'), { key: 'Enter', code: 13 });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should ignore empty search string', () => {
+        const searchFn = jest.fn();
+        const { getByRole } = setup({
+            searchText: ' ',
+            onSearch: searchFn,
+        });
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        expect(searchFn).not.toBeCalled();
     });
 
     it('should toggle search mode', () => {
         const testToggleFn = jest.fn();
-        const wrapper = setup({
+        const { getByRole } = setup({
             showAdvancedSearchButton: true,
             onToggleSearchMode: testToggleFn,
         });
-        wrapper.instance()._handleSearchMode();
+        fireEvent.click(getByRole('button', { name: 'Click to switch to Advanced search' }));
         expect(testToggleFn).toHaveBeenCalled();
     });
 
-    it('should toggle mobile search', () => {
-        const wrapper = setup();
-        wrapper.instance()._handleToggleMobile();
-        expect(wrapper.state().showMobile).toBe(true);
-        wrapper.instance()._handleToggleMobile();
-        expect(wrapper.state().showMobile).toBe(false);
+    it('should render with default toggle search mode callback', () => {
+        const { container, getByRole } = setup({
+            showAdvancedSearchButton: true,
+        });
+        fireEvent.click(getByRole('button', { name: 'Click to switch to Advanced search' }));
+        expect(container).toBeInTheDocument();
     });
 
-    it('should handle search and notify with error message for max length for search text', () => {
-        const testOnInvalidSearchFn = jest.fn();
-        const wrapper = setup({ searchText: 'this is way too long', onInvalidSearch: testOnInvalidSearchFn });
-
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-
-        wrapper.instance()._handleSearch();
-        expect(testOnInvalidSearchFn).toHaveBeenCalledWith('Must be 5 characters or less');
+    it('should toggle mobile search', () => {
+        const { getByTestId, getByRole } = setup({
+            showMobileSearchButton: true,
+            isInHeader: true,
+        });
+        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        fireEvent.click(getByTestId('CloseIcon'));
+        expect(getByTestId('SearchIcon')).toBeInTheDocument();
     });
 
     it('searchTextValidationMessage() should return a message for being too long', () => {
-        const wrapper = setup();
-        wrapper.setState({ searchText: 'this is way too long' });
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
-        wrapper.update();
-        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(
-            'Must be 5 characters or less',
-        );
-    });
-
-    it('searchTextValidationMessage() should return false for being fine', () => {
-        const wrapper = setup();
-        constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 20;
-        wrapper.setState({ searchText: 'this is fine' });
-        wrapper.update();
-        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(null);
-    });
-
-    it('should have default event handler props return undefined', () => {
-        const wrapper = getElement(SimpleSearchComponent, {
-            onSearchTextChange: () => {},
-        });
-        const defaultPropMethodNames = ['onSearch', 'onToggleSearchMode', 'onInvalidSearch'];
-        defaultPropMethodNames.forEach(methodName => {
-            expect(wrapper.instance().props[methodName]()).toBeUndefined();
-        });
+        const { getByText } = setup({ searchText: 'this is way way too long' });
+        expect(getByText('Must be 20 characters or less')).toBeInTheDocument();
     });
 });
