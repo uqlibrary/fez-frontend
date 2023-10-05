@@ -262,7 +262,7 @@ export class ContributorsEditor extends PureComponent {
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
                 required={contributor.required}
-                enableSelect={showContributorAssignment && !isCurrentAuthorSelected}
+                enableSelect={(showContributorAssignment && !isCurrentAuthorSelected) || forceSelectable}
                 showIdentifierLookup={showIdentifierLookup}
                 showRoleInput={showRoleInput}
                 contributorRowId={`${contributorEditorId}-list-row`}

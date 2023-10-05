@@ -109,6 +109,8 @@ export default class JournalArticleForm extends Component {
                                 <Typography>{txt.authors.description}</Typography>
                                 <Field
                                     component={ContributorsEditorField}
+                                    canEdit
+                                    forceSelectable
                                     contributorEditorId="authors"
                                     showContributorAssignment
                                     name="authors"

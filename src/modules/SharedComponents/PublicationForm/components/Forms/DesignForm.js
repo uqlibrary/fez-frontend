@@ -154,6 +154,8 @@ export default class DesignForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
                             contributorEditorId="authors"
                             showContributorAssignment
                             required
@@ -167,6 +169,7 @@ export default class DesignForm extends Component {
                 </Grid>
                 {this.props.isNtro && (
                     <NtroFields
+                        canEdit
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
                         hideIsmn

@@ -140,7 +140,6 @@ export default class ConferenceProceedingsForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
-                            // showIdentifierLookup
                             contributorEditorId="editors"
                             name="editors"
                             locale={txt.editors.field}

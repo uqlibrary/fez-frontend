@@ -150,6 +150,8 @@ export default class BookForm extends Component {
                         <StandardCard title={txt.authors.title} help={txt.authors.help}>
                             <Field
                                 component={ContributorsEditorField}
+                                canEdit
+                                forceSelectable
                                 contributorEditorId="rek-author"
                                 name="authors"
                                 locale={txt.authors.field}
@@ -166,6 +168,8 @@ export default class BookForm extends Component {
                         <StandardCard title={txt.editors.title} help={txt.editors.help}>
                             <Field
                                 component={ContributorsEditorField}
+                                canEdit
+                                forceSelectable
                                 contributorEditorId="rek-contributor"
                                 showContributorAssignment={!authorSelected}
                                 id="editors-name-as-published-field"

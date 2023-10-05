@@ -98,6 +98,8 @@ export default class ImageDocumentForm extends Component {
                         <Typography>{txt.creator.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
                             contributorEditorId="creators"
                             showContributorAssignment
                             required

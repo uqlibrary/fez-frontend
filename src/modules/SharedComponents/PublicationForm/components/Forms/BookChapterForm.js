@@ -144,6 +144,8 @@ export default class BookChapterForm extends Component {
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
                             contributorEditorId="authors"
                             name="authors"
                             locale={txt.authors.field}
@@ -159,6 +161,8 @@ export default class BookChapterForm extends Component {
                     <StandardCard title={txt.editors.title} help={txt.editors.help}>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
                             contributorEditorId="editors"
                             name="editors"
                             locale={txt.editors.field}

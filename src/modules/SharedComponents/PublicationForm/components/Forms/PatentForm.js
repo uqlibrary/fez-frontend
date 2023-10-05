@@ -97,6 +97,8 @@ export default class PatentForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
                             contributorEditorId="authors"
                             showContributorAssignment
                             required
