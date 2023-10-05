@@ -285,13 +285,9 @@ describe('NewViewRecord', () => {
 
     it('should render not found', () => {
         useParams.mockImplementationOnce(() => ({ pid: notFound }));
-        const { queryByText } = setup();
+        const { container, queryByText } = setup();
+        expect(container).toMatchSnapshot();
         expect(queryByText(locale.pages.viewRecord.notFound.title)).toBeInTheDocument();
-        stripHtml(componentToString(locale.pages.viewRecord.notFound.message))
-            .replace(/\n+/, '\n')
-            .split('\n')
-            .filter(line => line.trim())
-            .forEach(line => expect(queryByText(line.trim())).toBeInTheDocument());
         expect(queryByText(globalLocale.global.loginAlert.title)).not.toBeInTheDocument();
     });
 

@@ -8,84 +8,60 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Azimi, Iman
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Milevskiy, Michael J. G.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Kaemmerer, Elke
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Turner, Dane
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Yapa, Kunsala T. D. S.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-5"
       >
-        
         Brown, Melissa A.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-6"
       >
-        
         Thompson, Erik W.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-7"
       >
-        
         Roberts-Thomson, Sarah J.
-        
       </span>
       , 
        and 
@@ -93,11 +69,8 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         class="citationAuthor"
         data-testid="rek-author-8"
       >
-        
         Monteith, Gregory R.
-        
       </span>
-      
        
     </span>
     <span
@@ -145,7 +118,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
     <span
       class="citationPageRange"
     >
-      
       <span
         class="citationStartPage"
       >
@@ -157,7 +129,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       >
         2305
       </span>
-      
     </span>
     <span>
       . 

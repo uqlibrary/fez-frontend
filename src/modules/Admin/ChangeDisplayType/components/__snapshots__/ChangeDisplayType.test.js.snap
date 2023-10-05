@@ -56,24 +56,18 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Memmott, Paul
-                              
                             </span>
                             , 
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-1"
                             >
-                              
                               Birdsall-Jones, Christina
-                              
                             </span>
                             , 
                              and 
@@ -81,11 +75,8 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                               class="citationAuthor"
                               data-testid="rek-author-2"
                             >
-                              
                               Greenop, Kelly
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -334,24 +325,18 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Memmott, Paul
-                              
                             </span>
                             , 
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-1"
                             >
-                              
                               Birdsall-Jones, Christina
-                              
                             </span>
                             , 
                              and 
@@ -359,11 +344,8 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                               class="citationAuthor"
                               data-testid="rek-author-2"
                             >
-                              
                               Greenop, Kelly
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -556,24 +538,18 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Memmott, Paul
-                              
                             </span>
                             , 
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-1"
                             >
-                              
                               Birdsall-Jones, Christina
-                              
                             </span>
                             , 
                              and 
@@ -581,11 +557,8 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                               class="citationAuthor"
                               data-testid="rek-author-2"
                             >
-                              
                               Greenop, Kelly
-                              
                             </span>
-                            
                              
                           </span>
                           <span

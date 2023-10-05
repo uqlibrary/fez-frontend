@@ -396,44 +396,32 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -441,11 +429,8 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -485,7 +470,6 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -497,7 +481,6 @@ exports[`Component DeleteRecord should display general alert if trying to delete
                                 >
                                   253A
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -1465,44 +1448,32 @@ exports[`Component DeleteRecord should render delete record form for records wit
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -1510,11 +1481,8 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -1554,7 +1522,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -1566,7 +1533,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                 >
                                   253A
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -1955,44 +1921,32 @@ exports[`Component DeleteRecord should render delete record form for records wit
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -2000,11 +1954,8 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -2044,7 +1995,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -2056,7 +2006,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
                                 >
                                   253A
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -2494,44 +2443,32 @@ exports[`Component DeleteRecord should render delete record form with data colle
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -2539,12 +2476,8 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
-                                
                               </span>
                               <span
                                 class="citationDate"
@@ -3007,44 +2940,32 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -3052,12 +2973,8 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
-                                
                               </span>
                               <span
                                 class="citationDate"
@@ -3520,44 +3437,32 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -3565,11 +3470,8 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -3609,7 +3511,6 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -3621,7 +3522,6 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                 >
                                   253A
                                 </span>
-                                
                               </span>
                               <span>
                                 . 
@@ -3933,44 +3833,32 @@ exports[`Component DeleteRecord should render delete record form with record cit
                               <span
                                 class="citationAuthors"
                               >
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-0"
                                 >
-                                  
                                   Brown, M. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-1"
                                 >
-                                  
                                   He, Y.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-2"
                                 >
-                                  
                                   Rothnagel, J. A.
-                                  
                                 </span>
                                 , 
-                                
                                 <span
                                   class="citationAuthor"
                                   data-testid="rek-author-3"
                                 >
-                                  
                                   Saunders, N. A.
-                                  
                                 </span>
                                 , 
                                  and 
@@ -3978,11 +3866,8 @@ exports[`Component DeleteRecord should render delete record form with record cit
                                   class="citationAuthor"
                                   data-testid="rek-author-4"
                                 >
-                                  
                                   Smith, R.
-                                  
                                 </span>
-                                
                                  
                               </span>
                               <span
@@ -4022,7 +3907,6 @@ exports[`Component DeleteRecord should render delete record form with record cit
                               <span
                                 class="citationPageRange"
                               >
-                                
                                 <span
                                   class="citationStartPage"
                                 >
@@ -4034,7 +3918,6 @@ exports[`Component DeleteRecord should render delete record form with record cit
                                 >
                                   253A
                                 </span>
-                                
                               </span>
                               <span>
                                 . 

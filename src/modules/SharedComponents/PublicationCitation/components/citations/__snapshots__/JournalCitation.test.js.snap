@@ -8,7 +8,6 @@ exports[`JournalCitation renders with a mock espace record 1`] = `
     <span
       class="citationJournalName"
     >
-      
       Management international review
        
     </span>

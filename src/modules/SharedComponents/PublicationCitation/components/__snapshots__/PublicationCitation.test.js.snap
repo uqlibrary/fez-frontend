@@ -79,7 +79,6 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -91,7 +90,6 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                   >
                     82
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -322,44 +320,32 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -367,11 +353,8 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -411,7 +394,6 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -423,7 +405,6 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -1080,44 +1061,32 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -1125,11 +1094,8 @@ exports[`PublicationCitation  should render component with content indicators 1`
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -1169,7 +1135,6 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -1181,7 +1146,6 @@ exports[`PublicationCitation  should render component with content indicators 1`
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -1354,44 +1318,32 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -1399,11 +1351,8 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -1443,7 +1392,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -1455,7 +1403,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -1650,44 +1597,32 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -1695,11 +1630,8 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -1739,7 +1671,6 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -1751,7 +1682,6 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -1949,84 +1879,60 @@ exports[`PublicationCitation  should render component with default item with ima
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Azimi, Iman
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     Milevskiy, Michael J. G.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Kaemmerer, Elke
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Turner, Dane
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Yapa, Kunsala T. D. S.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-5"
                   >
-                    
                     Brown, Melissa A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-6"
                   >
-                    
                     Thompson, Erik W.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-7"
                   >
-                    
                     Roberts-Thomson, Sarah J.
-                    
                   </span>
                   , 
                    and 
@@ -2034,11 +1940,8 @@ exports[`PublicationCitation  should render component with default item with ima
                     class="citationAuthor"
                     data-testid="rek-author-8"
                   >
-                    
                     Monteith, Gregory R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -2086,7 +1989,6 @@ exports[`PublicationCitation  should render component with default item with ima
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -2098,7 +2000,6 @@ exports[`PublicationCitation  should render component with default item with ima
                   >
                     2305
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -2362,84 +2263,60 @@ exports[`PublicationCitation  should render component with default item with ima
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Azimi, Iman
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     Milevskiy, Michael J. G.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Kaemmerer, Elke
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Turner, Dane
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Yapa, Kunsala T. D. S.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-5"
                   >
-                    
                     Brown, Melissa A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-6"
                   >
-                    
                     Thompson, Erik W.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-7"
                   >
-                    
                     Roberts-Thomson, Sarah J.
-                    
                   </span>
                   , 
                    and 
@@ -2447,11 +2324,8 @@ exports[`PublicationCitation  should render component with default item with ima
                     class="citationAuthor"
                     data-testid="rek-author-8"
                   >
-                    
                     Monteith, Gregory R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -2499,7 +2373,6 @@ exports[`PublicationCitation  should render component with default item with ima
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -2511,7 +2384,6 @@ exports[`PublicationCitation  should render component with default item with ima
                   >
                     2305
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -2736,84 +2608,60 @@ exports[`PublicationCitation  should render component with default item without 
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Azimi, Iman
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     Milevskiy, Michael J. G.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Kaemmerer, Elke
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Turner, Dane
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Yapa, Kunsala T. D. S.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-5"
                   >
-                    
                     Brown, Melissa A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-6"
                   >
-                    
                     Thompson, Erik W.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-7"
                   >
-                    
                     Roberts-Thomson, Sarah J.
-                    
                   </span>
                   , 
                    and 
@@ -2821,11 +2669,8 @@ exports[`PublicationCitation  should render component with default item without 
                     class="citationAuthor"
                     data-testid="rek-author-8"
                   >
-                    
                     Monteith, Gregory R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -2873,7 +2718,6 @@ exports[`PublicationCitation  should render component with default item without 
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -2885,7 +2729,6 @@ exports[`PublicationCitation  should render component with default item without 
                   >
                     2305
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -3106,44 +2949,32 @@ exports[`PublicationCitation  should render component with default item without 
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -3151,11 +2982,8 @@ exports[`PublicationCitation  should render component with default item without 
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -3195,7 +3023,6 @@ exports[`PublicationCitation  should render component with default item without 
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -3207,7 +3034,6 @@ exports[`PublicationCitation  should render component with default item without 
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -3534,44 +3360,32 @@ exports[`PublicationCitation  should render component with default list hiding t
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -3579,11 +3393,8 @@ exports[`PublicationCitation  should render component with default list hiding t
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -3623,7 +3434,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -3635,7 +3445,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -3808,44 +3617,32 @@ exports[`PublicationCitation  should render component with default list hiding t
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -3853,11 +3650,8 @@ exports[`PublicationCitation  should render component with default list hiding t
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -3897,7 +3691,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -3909,7 +3702,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -4082,44 +3874,32 @@ exports[`PublicationCitation  should render component with empty custom actions 
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -4127,11 +3907,8 @@ exports[`PublicationCitation  should render component with empty custom actions 
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -4171,7 +3948,6 @@ exports[`PublicationCitation  should render component with empty custom actions 
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -4183,7 +3959,6 @@ exports[`PublicationCitation  should render component with empty custom actions 
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -4363,44 +4138,32 @@ exports[`PublicationCitation  should render component with publication from mult
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -4408,11 +4171,8 @@ exports[`PublicationCitation  should render component with publication from mult
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -4452,7 +4212,6 @@ exports[`PublicationCitation  should render component with publication from mult
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -4464,7 +4223,6 @@ exports[`PublicationCitation  should render component with publication from mult
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -4661,44 +4419,32 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -4706,11 +4452,8 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -4750,7 +4493,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -4762,7 +4504,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -5010,84 +4751,60 @@ exports[`PublicationCitation  should render component without image if whitelist
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Azimi, Iman
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     Milevskiy, Michael J. G.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Kaemmerer, Elke
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Turner, Dane
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Yapa, Kunsala T. D. S.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-5"
                   >
-                    
                     Brown, Melissa A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-6"
                   >
-                    
                     Thompson, Erik W.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-7"
                   >
-                    
                     Roberts-Thomson, Sarah J.
-                    
                   </span>
                   , 
                    and 
@@ -5095,11 +4812,8 @@ exports[`PublicationCitation  should render component without image if whitelist
                     class="citationAuthor"
                     data-testid="rek-author-8"
                   >
-                    
                     Monteith, Gregory R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -5147,7 +4861,6 @@ exports[`PublicationCitation  should render component without image if whitelist
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -5159,7 +4872,6 @@ exports[`PublicationCitation  should render component without image if whitelist
                   >
                     2305
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -5384,44 +5096,32 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -5429,11 +5129,8 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -5473,7 +5170,6 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -5485,7 +5181,6 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -5725,44 +5420,32 @@ exports[`PublicationCitation  should render publication citation metric with cou
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -5770,11 +5453,8 @@ exports[`PublicationCitation  should render publication citation metric with cou
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -5814,7 +5494,6 @@ exports[`PublicationCitation  should render publication citation metric with cou
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -5826,7 +5505,6 @@ exports[`PublicationCitation  should render publication citation metric with cou
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -6040,44 +5718,32 @@ exports[`PublicationCitation  should render publication citation metric without 
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -6085,11 +5751,8 @@ exports[`PublicationCitation  should render publication citation metric without 
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -6129,7 +5792,6 @@ exports[`PublicationCitation  should render publication citation metric without 
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -6141,7 +5803,6 @@ exports[`PublicationCitation  should render publication citation metric without 
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 
@@ -6314,44 +5975,32 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 <span
                   class="citationAuthors"
                 >
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-0"
                   >
-                    
                     Brown, M. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-1"
                   >
-                    
                     He, Y.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-2"
                   >
-                    
                     Rothnagel, J. A.
-                    
                   </span>
                   , 
-                  
                   <span
                     class="citationAuthor"
                     data-testid="rek-author-3"
                   >
-                    
                     Saunders, N. A.
-                    
                   </span>
                   , 
                    and 
@@ -6359,11 +6008,8 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                     class="citationAuthor"
                     data-testid="rek-author-4"
                   >
-                    
                     Smith, R.
-                    
                   </span>
-                  
                    
                 </span>
                 <span
@@ -6403,7 +6049,6 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 <span
                   class="citationPageRange"
                 >
-                  
                   <span
                     class="citationStartPage"
                   >
@@ -6415,7 +6060,6 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   >
                     253A
                   </span>
-                  
                 </span>
                 <span>
                   . 

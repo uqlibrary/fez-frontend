@@ -13,7 +13,7 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
         class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation6 MuiSnackbarContent-root css-o3qg8z-MuiPaper-root-MuiSnackbarContent-root"
         direction="up"
         role="alert"
-        style="opacity: 0; transform: scale(0.75, 0.5625); transition: opacity 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 130ms cubic-bezier(0.4, 0, 0.2, 1) 65ms;"
+        style="opacity: 1; transform: scale(1, 1); transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
       >
         <div
           class="MuiSnackbarContent-message css-1exqwzz-MuiSnackbarContent-message"

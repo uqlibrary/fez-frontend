@@ -8,24 +8,18 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Asmussen, S.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Kroese, D. P.
-        
       </span>
       , 
        and 
@@ -33,11 +27,8 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Rubinstein, R. Y.
-        
       </span>
-      
        
     </span>
     <span

@@ -3,7 +3,6 @@
 exports[`GrantListEditor should add grant to the list 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -500,7 +499,6 @@ exports[`GrantListEditor should add grant to the list 1`] = `
 exports[`GrantListEditor should delete all grants 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -1170,7 +1168,6 @@ exports[`GrantListEditor should delete all grants 1`] = `
 exports[`GrantListEditor should delete all grants 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -1350,7 +1347,6 @@ exports[`GrantListEditor should delete all grants 2`] = `
 exports[`GrantListEditor should delete grant 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -2022,7 +2018,6 @@ exports[`GrantListEditor should delete grant 2`] = `
   aria-hidden="true"
 >
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -2517,7 +2512,6 @@ exports[`GrantListEditor should delete grant 2`] = `
 exports[`GrantListEditor should move the grant down 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -3187,7 +3181,6 @@ exports[`GrantListEditor should move the grant down 1`] = `
 exports[`GrantListEditor should move the grant down 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -3857,7 +3850,6 @@ exports[`GrantListEditor should move the grant down 2`] = `
 exports[`GrantListEditor should move the grant up 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -4527,7 +4519,6 @@ exports[`GrantListEditor should move the grant up 1`] = `
 exports[`GrantListEditor should move the grant up 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -5197,7 +5188,6 @@ exports[`GrantListEditor should move the grant up 2`] = `
 exports[`GrantListEditor should not move the grant up at index 0 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -5692,7 +5682,6 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
 exports[`GrantListEditor should not move the grant up at index 0 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -6187,7 +6176,6 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
 exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -6853,7 +6841,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
 exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -7519,7 +7506,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
 exports[`GrantListEditor should render default view 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -7699,7 +7685,6 @@ exports[`GrantListEditor should render default view 1`] = `
 exports[`GrantListEditor should render error from props 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -7884,7 +7869,6 @@ exports[`GrantListEditor should render error from props 1`] = `
 exports[`GrantListEditor should render error from props as children 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -8074,7 +8058,6 @@ exports[`GrantListEditor should render error from props as children 1`] = `
 exports[`GrantListEditor should render scroll class if grants are more than 3 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -9094,7 +9077,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
 exports[`GrantListEditor should render string error from props 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -9279,7 +9261,6 @@ exports[`GrantListEditor should render string error from props 1`] = `
 exports[`GrantListEditor should render with default given value 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -9774,7 +9755,6 @@ exports[`GrantListEditor should render with default given value 1`] = `
 exports[`GrantListEditor should render with default given value is Immutable List 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -10269,7 +10249,6 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
 exports[`GrantListEditor should update on receiving new props 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"

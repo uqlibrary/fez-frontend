@@ -8,44 +8,32 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Parks, Donovan H.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Imelfort, Michael
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Skennerton, Connor T.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Hugenholtz, Philip
-        
       </span>
       , 
        and 
@@ -53,12 +41,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Tyson, Gene W.
-        
       </span>
-      
-      
     </span>
     <span
       class="citationDate"
@@ -130,44 +114,32 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Parks, Donovan H.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Imelfort, Michael
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Skennerton, Connor T.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Hugenholtz, Philip
-        
       </span>
       , 
        and 
@@ -175,12 +147,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Tyson, Gene W.
-        
       </span>
-      
-      
     </span>
     <span
       class="citationDate empty"
@@ -248,44 +216,32 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Parks, Donovan H.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Imelfort, Michael
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Skennerton, Connor T.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Hugenholtz, Philip
-        
       </span>
       , 
        and 
@@ -293,12 +249,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Tyson, Gene W.
-        
       </span>
-      
-      
     </span>
     <span
       class="citationDate"
@@ -436,44 +388,32 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Parks, Donovan H.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Imelfort, Michael
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Skennerton, Connor T.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Hugenholtz, Philip
-        
       </span>
       , 
        and 
@@ -481,12 +421,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Tyson, Gene W.
-        
       </span>
-      
-      
     </span>
     <span
       class="citationDate"
@@ -554,44 +490,32 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Parks, Donovan H.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Imelfort, Michael
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Skennerton, Connor T.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Hugenholtz, Philip
-        
       </span>
       , 
        and 
@@ -599,12 +523,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Tyson, Gene W.
-        
       </span>
-      
-      
     </span>
     <span
       class="citationDate"
@@ -649,44 +569,32 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Parks, Donovan H.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Imelfort, Michael
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Skennerton, Connor T.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Hugenholtz, Philip
-        
       </span>
       , 
        and 
@@ -694,12 +602,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Tyson, Gene W.
-        
       </span>
-      
-      
     </span>
     <span
       class="citationDate"

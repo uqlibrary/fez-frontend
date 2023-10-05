@@ -221,16 +221,12 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Frazer, Ian H.
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -274,7 +270,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <span
                             class="citationPageRange"
                           >
-                            
                             <span
                               class="citationStartPage"
                             >
@@ -286,7 +281,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             >
                               4011
                             </span>
-                            
                           </span>
                           <span>
                             . 
@@ -584,24 +578,18 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Stanley, Margaret
-                              
                             </span>
                             , 
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-1"
                             >
-                              
                               Lowy, Douglas R.
-                              
                             </span>
                             , 
                              and 
@@ -609,11 +597,8 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="citationAuthor"
                               data-testid="rek-author-2"
                             >
-                              
                               Frazer, Ian
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -657,7 +642,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <span
                             class="citationPageRange"
                           >
-                            
                             <span
                               class="citationStartPage"
                             >
@@ -669,7 +653,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             >
                               S113
                             </span>
-                            
                           </span>
                           <span>
                             . 
@@ -967,16 +950,12 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Frazer, Ian H.
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -1020,7 +999,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <span
                             class="citationPageRange"
                           >
-                            
                             <span
                               class="citationStartPage"
                             >
@@ -1032,7 +1010,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             >
                               4011
                             </span>
-                            
                           </span>
                           <span>
                             . 

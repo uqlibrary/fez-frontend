@@ -701,7 +701,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-3"
+                        id=":r9:"
                         type="text"
                         value=" to "
                       />
@@ -1164,7 +1164,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-1"
+                        id=":r3:"
                         type="text"
                         value=" to "
                       />
@@ -1780,7 +1780,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-21"
+                        id=":r2q:"
                         type="text"
                         value=" to "
                       />
@@ -2318,7 +2318,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-17"
+                        id=":r27:"
                         type="text"
                         value=" to "
                       />
@@ -2887,7 +2887,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-5"
+                        id=":rg:"
                         type="text"
                         value=" to "
                       />
@@ -3350,7 +3350,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-16"
+                        id=":r23:"
                         type="text"
                         value=" to "
                       />
@@ -3895,7 +3895,7 @@ exports[`SearchComponent should update advanced search row on search text change
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-20"
+                        id=":r2l:"
                         type="text"
                         value=" to "
                       />
@@ -4386,7 +4386,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-24"
+                        id=":r37:"
                         type="text"
                         value=" to "
                       />
@@ -4498,7 +4498,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-25"
+                        id=":r3a:"
                         type="text"
                         value=" to "
                       />
@@ -4632,7 +4632,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-26"
+                        id=":r3d:"
                         type="text"
                         value=" to "
                       />
@@ -5145,7 +5145,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-24"
+                        id=":r37:"
                         type="text"
                         value=" to "
                       />
@@ -5257,7 +5257,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-25"
+                        id=":r3a:"
                         type="text"
                         value=" to "
                       />
@@ -5391,7 +5391,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="mui-26"
+                        id=":r3d:"
                         type="text"
                         value=" to "
                       />

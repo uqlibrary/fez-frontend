@@ -8,16 +8,12 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Keniger, Michael, 1947-
-        
       </span>
-      
        
     </span>
     <span

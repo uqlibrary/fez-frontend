@@ -242,11 +242,8 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 <h6
                   class="MuiTypography-root MuiTypography-h6 css-s0bjcf-MuiTypography-root"
                 >
-                  
                    
-                  
                    
-                  
                 </h6>
               </div>
               <div

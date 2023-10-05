@@ -9,7 +9,6 @@ exports[`ContributorsEditorField should render default component 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >

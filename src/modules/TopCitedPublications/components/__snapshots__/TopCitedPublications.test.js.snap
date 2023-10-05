@@ -273,16 +273,12 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Frazer, Ian H.
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -326,7 +322,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           <span
                             class="citationPageRange"
                           >
-                            
                             <span
                               class="citationStartPage"
                             >
@@ -338,7 +333,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                             >
                               4011
                             </span>
-                            
                           </span>
                           <span>
                             . 
@@ -747,16 +741,12 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Frazer, Ian H.
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -800,7 +790,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           <span
                             class="citationPageRange"
                           >
-                            
                             <span
                               class="citationStartPage"
                             >
@@ -812,7 +801,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                             >
                               4011
                             </span>
-                            
                           </span>
                           <span>
                             . 

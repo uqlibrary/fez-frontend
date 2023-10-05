@@ -2970,7 +2970,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id="mui-53"
+                  id=":r24:"
                   placeholder="dd/mm/yyyy"
                   type="tel"
                   value="01/01/2020"
@@ -7031,7 +7031,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id="mui-13"
+                  id=":rg:"
                   placeholder="dd/mm/yyyy"
                   type="tel"
                   value="02/02/2022"
@@ -10102,7 +10102,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id="mui-24"
+                  id=":ru:"
                   placeholder="dd/mm/yyyy"
                   type="tel"
                   value="01/01/2020"

@@ -9,7 +9,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -134,7 +133,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -443,9 +441,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -805,7 +801,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -908,7 +903,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -1475,9 +1469,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -1873,9 +1865,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -2221,9 +2211,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -2571,7 +2559,6 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
     <div
       class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ig9rso-MuiToolbar-root"
     >
-      
       <div
         class="MuiBox-root css-15k1nh5"
       />
@@ -2778,7 +2765,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -2881,7 +2867,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -6232,9 +6217,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -6458,7 +6441,6 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -6561,7 +6543,6 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -6618,7 +6599,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -6721,7 +6701,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -6779,7 +6758,6 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
     <div
       class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ig9rso-MuiToolbar-root"
     >
-      
       <div
         class="MuiBox-root css-15k1nh5"
       />
@@ -6987,7 +6965,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
     <div
       class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ig9rso-MuiToolbar-root"
     >
-      
       <div
         class="MuiBox-root css-15k1nh5"
       />
@@ -7366,7 +7343,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -7525,7 +7501,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                     />
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -7566,7 +7541,6 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -7654,7 +7628,6 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -7755,7 +7728,6 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
                     />
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -7796,7 +7768,6 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -7876,7 +7847,6 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
                     value=""
                   />
                 </div>
-                
               </div>
             </div>
           </div>
@@ -7917,7 +7887,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -8314,7 +8283,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -8711,7 +8679,6 @@ exports[`ContributorsEditor should render error as html 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -8806,7 +8773,6 @@ exports[`ContributorsEditor should render error as one child 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -8899,7 +8865,6 @@ exports[`ContributorsEditor should show validation error 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >

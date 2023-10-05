@@ -14,16 +14,12 @@ exports[`EditorsCitationView test  should render component with one contributor 
     class="citationEditors"
   >
      Edited by 
-    
     <span
       class="citationAuthor"
       data-testid="rek-contributor-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
-    
     . 
   </span>
 </div>
@@ -35,24 +31,18 @@ exports[`EditorsCitationView test  should render component with three contributo
     class="citationEditors"
   >
      Edited by 
-    
     <span
       class="citationAuthor"
       data-testid="rek-contributor-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-contributor-1"
     >
-      
       Smith, J
-      
     </span>
     , 
      and 
@@ -60,11 +50,8 @@ exports[`EditorsCitationView test  should render component with three contributo
       class="citationAuthor"
       data-testid="rek-contributor-2"
     >
-      
       Andersen, J
-      
     </span>
-    
     . 
   </span>
 </div>
@@ -76,26 +63,19 @@ exports[`EditorsCitationView test  should render component with two contributors
     class="citationEditors"
   >
      Edited by 
-    
     <span
       class="citationAuthor"
       data-testid="rek-contributor-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
-    
      and 
     <span
       class="citationAuthor"
       data-testid="rek-contributor-1"
     >
-      
       Smith, J
-      
     </span>
-    
     . 
   </span>
 </div>

@@ -1,11 +1,10 @@
 import React from 'react';
-import { rtlRender, fireEvent, createMatchMedia } from 'test-utils';
+import { assertTooltipText, rtlRender, fireEvent, createMatchMedia } from 'test-utils';
 import FileName from './FileName';
 import { screen } from '@testing-library/react';
 
 import { journalArticle } from 'mock/data/testing/records';
 import { CURRENT_LICENCES } from 'config/general';
-import { assertTooltipText } from '../../../../../utils/test-utils';
 
 const id = 'test-file-name';
 
@@ -42,7 +41,7 @@ describe('File Name Component ', () => {
         expect(container.querySelector('p[class*="disabled"]')).not.toBeInTheDocument();
     });
 
-    test('should render component and display file name only with tooltip', async () => {
+    test('should render component and display file name only with tooltip', () => {
         const tooltipText = 'tooltip text';
         const { queryByTestId, getByText } = setup({ downloadLicence: {}, tooltip: tooltipText });
 
@@ -52,7 +51,7 @@ describe('File Name Component ', () => {
         assertTooltipText(screen.getByText('UQ676287_OA.pdf'), tooltipText);
     });
 
-    test('should render component and display file name only when disabled', async () => {
+    test('should render component and display file name only when disabled', () => {
         const { queryByTestId, getByText, container } = setup({ downloadLicence: {}, disabled: true });
         expect(queryByTestId('test-file-name')).toBeInTheDocument();
         expect(getByText('UQ676287_OA.pdf')).toBeInTheDocument();

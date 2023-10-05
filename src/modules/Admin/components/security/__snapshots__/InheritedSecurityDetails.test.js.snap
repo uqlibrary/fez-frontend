@@ -189,9 +189,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
       >
         <p
           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-        >
-          
-        </p>
+        />
       </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
@@ -216,9 +214,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
       >
         <p
           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-        >
-          
-        </p>
+        />
       </div>
     </div>
   </div>
@@ -264,9 +260,7 @@ exports[`InheritedSecurityDetails component should render collections for record
       >
         <p
           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-        >
-          
-        </p>
+        />
       </div>
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
@@ -291,9 +285,7 @@ exports[`InheritedSecurityDetails component should render collections for record
       >
         <p
           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-        >
-          
-        </p>
+        />
       </div>
     </div>
   </div>

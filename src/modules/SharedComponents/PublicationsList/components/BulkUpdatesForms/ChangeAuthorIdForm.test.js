@@ -1,6 +1,6 @@
 import React from 'react';
 import ChangeAuthorIdForm from './ChangeAuthorIdForm';
-import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
@@ -73,7 +73,7 @@ describe('ChangeAuthorIdForm', () => {
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        await act(() => waitFor(() => getByTestId('search-author-by-options')));
+        await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author name'));
 
         expect(getByTestId('search-by-rek-author-helper-text')).toBeInTheDocument();
@@ -120,7 +120,7 @@ describe('ChangeAuthorIdForm', () => {
         expect(getByTestId('change-author-id-submit')).toHaveAttribute('disabled');
 
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        await act(() => waitFor(() => getByTestId('search-author-by-options')));
+        await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author name'));
 
         expect(getByTestId('search-by-rek-author-helper-text')).toBeInTheDocument();
@@ -166,7 +166,7 @@ describe('ChangeAuthorIdForm', () => {
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        await act(() => waitFor(() => getByTestId('search-author-by-options')));
+        await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author ID'));
 
         expect(getByTestId('search-by-rek-author-id-helper-text')).toBeInTheDocument();
@@ -215,7 +215,7 @@ describe('ChangeAuthorIdForm', () => {
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        await act(() => waitFor(() => getByTestId('search-author-by-options')));
+        await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author ID'));
 
         expect(getByTestId('search-by-rek-author-id-helper-text')).toBeInTheDocument();
@@ -251,7 +251,7 @@ describe('ChangeAuthorIdForm', () => {
         const { getByTestId, getByText, getAllByTitle } = setup();
 
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        await act(() => waitFor(() => getByTestId('search-author-by-options')));
+        await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author ID'));
 
         expect(getByTestId('search-by-rek-author-id-helper-text')).toBeInTheDocument();

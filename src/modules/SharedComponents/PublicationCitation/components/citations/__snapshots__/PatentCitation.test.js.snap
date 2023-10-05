@@ -8,34 +8,25 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Walsh, Laurence J
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Ota R
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Nagao S
-        
       </span>
       , 
        and 
@@ -43,11 +34,8 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Sato T
-        
       </span>
-      
        
     </span>
     <span

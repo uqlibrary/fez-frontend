@@ -964,7 +964,6 @@ exports[`PartialDateForm component should handle partial values with year only 1
               />
             </div>
           </div>
-          
         </div>
         <div
           class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
@@ -1091,7 +1090,6 @@ exports[`PartialDateForm component should load existing values 1`] = `
               />
             </div>
           </div>
-          
         </div>
         <div
           class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
@@ -1218,7 +1216,6 @@ exports[`PartialDateForm component should load existing values from input value 
               />
             </div>
           </div>
-          
         </div>
         <div
           class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
@@ -1345,7 +1342,6 @@ exports[`PartialDateForm component should render comp 1`] = `
               />
             </div>
           </div>
-          
         </div>
         <div
           class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"

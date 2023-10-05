@@ -1,10 +1,9 @@
 import React from 'react';
 import FileAvStateIcon, { getTestId, UTCDateToCurrentTZDate } from './FileAvStateIcon';
-import { render } from 'test-utils';
-import { locale } from '../../../../locale';
-import { AV_CHECK_STATE_CLEAN, AV_CHECK_STATE_INFECTED, AV_CHECK_STATE_UNSCANNABLE } from '../../../../config/general';
+import { assertTooltipText, render } from 'test-utils';
+import { locale } from 'locale';
+import { AV_CHECK_STATE_CLEAN, AV_CHECK_STATE_INFECTED, AV_CHECK_STATE_UNSCANNABLE } from 'config/general';
 import moment from 'moment-timezone';
-import { assertTooltipText } from '../../../../../utils/test-utils';
 
 const txt = locale.components.fileAvStateIcon;
 const checkedAt = '2000-01-01 00:00:00';
@@ -22,26 +21,26 @@ describe('FileAvStateIcon component', () => {
         expect(UTCDateToCurrentTZDate(checkedAt)).toEqual(localTzDateFormatted);
     });
 
-    it('default', async () => {
+    it('default', () => {
         const { getByTestId } = setup();
-        await assertTooltipText(getByTestId(getTestId(undefined, id)), txt.description.map.default());
+        assertTooltipText(getByTestId(getTestId(undefined, id)), txt.description.map.default());
     });
 
-    it('clean', async () => {
+    it('clean', () => {
         const state = AV_CHECK_STATE_CLEAN;
         const { getByTestId } = setup({ state, checkedAt });
-        await assertTooltipText(getByTestId(getTestId(state, id)), txt.description.map[state](localTzDateFormatted));
+        assertTooltipText(getByTestId(getTestId(state, id)), txt.description.map[state](localTzDateFormatted));
     });
 
-    it('infected', async () => {
+    it('infected', () => {
         const state = AV_CHECK_STATE_INFECTED;
         const { getByTestId } = setup({ state, checkedAt });
-        await assertTooltipText(getByTestId(getTestId(state, id)), txt.description.map[state](localTzDateFormatted));
+        assertTooltipText(getByTestId(getTestId(state, id)), txt.description.map[state](localTzDateFormatted));
     });
 
-    it('unscannable', async () => {
+    it('unscannable', () => {
         const state = AV_CHECK_STATE_UNSCANNABLE;
         const { getByTestId } = setup({ state, checkedAt });
-        await assertTooltipText(getByTestId(getTestId(state, id)), txt.description.map[state](localTzDateFormatted));
+        assertTooltipText(getByTestId(getTestId(state, id)), txt.description.map[state](localTzDateFormatted));
     });
 });
