@@ -81,6 +81,7 @@ export default class PreprintForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="authors"
                             showContributorAssignment
                             required

@@ -99,6 +99,7 @@ export default class PatentForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="authors"
                             showContributorAssignment
                             required

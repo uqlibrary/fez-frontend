@@ -171,6 +171,7 @@ export default class ResearchReportForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="authors"
                             name="authors"
                             isNtro={this.props.isNtro}

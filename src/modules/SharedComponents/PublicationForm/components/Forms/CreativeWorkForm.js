@@ -152,6 +152,7 @@ export default class CreativeWorkForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="authors"
                             disabled={this.props.submitting}
                             isNtro={this.props.isNtro}

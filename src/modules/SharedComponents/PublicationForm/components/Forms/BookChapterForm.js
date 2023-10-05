@@ -146,6 +146,7 @@ export default class BookChapterForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="authors"
                             name="authors"
                             locale={txt.authors.field}
@@ -163,6 +164,7 @@ export default class BookChapterForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="editors"
                             name="editors"
                             locale={txt.editors.field}

@@ -108,6 +108,7 @@ export default class SeminarPaperForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="authors"
                             showContributorAssignment
                             required

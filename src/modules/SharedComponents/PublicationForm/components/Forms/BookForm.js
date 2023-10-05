@@ -152,6 +152,7 @@ export default class BookForm extends Component {
                                 component={ContributorsEditorField}
                                 canEdit
                                 forceSelectable
+                                hideUqIDFields
                                 contributorEditorId="rek-author"
                                 name="authors"
                                 locale={txt.authors.field}
@@ -170,6 +171,7 @@ export default class BookForm extends Component {
                                 component={ContributorsEditorField}
                                 canEdit
                                 forceSelectable
+                                hideUqIDFields
                                 contributorEditorId="rek-contributor"
                                 showContributorAssignment={!authorSelected}
                                 id="editors-name-as-published-field"

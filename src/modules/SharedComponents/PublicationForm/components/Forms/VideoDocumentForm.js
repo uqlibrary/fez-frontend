@@ -119,6 +119,7 @@ export default class VideoDocumentForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="creators"
                             showContributorAssignment={!editorSelected}
                             required
@@ -135,6 +136,7 @@ export default class VideoDocumentForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="contributors"
                             showContributorAssignment={!authorSelected}
                             name="editors"

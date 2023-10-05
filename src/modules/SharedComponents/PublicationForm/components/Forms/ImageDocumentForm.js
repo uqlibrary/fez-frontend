@@ -100,6 +100,7 @@ export default class ImageDocumentForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            hideUqIDFields
                             contributorEditorId="creators"
                             showContributorAssignment
                             required
