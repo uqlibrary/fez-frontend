@@ -31,6 +31,7 @@ export class SimpleSearchComponent extends PureComponent {
         onSearchTextChange: PropTypes.func.isRequired,
         onToggleSearchMode: PropTypes.func,
         onInvalidSearch: PropTypes.func,
+        classes: PropTypes.object,
     };
     static defaultProps = {
         searchText: '',
@@ -44,6 +45,7 @@ export class SimpleSearchComponent extends PureComponent {
         onSearch: () => {},
         onToggleSearchMode: () => {},
         onInvalidSearch: /* istanbul ignore next */ () => {},
+        classes: {},
     };
 
     constructor(props) {
@@ -119,6 +121,7 @@ export class SimpleSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
+        const { classes } = this.props;
         const ariaLabel = { 'aria-label': txt.ariaInputLabel };
         return (
             <React.Fragment>
@@ -141,6 +144,7 @@ export class SimpleSearchComponent extends PureComponent {
                                     width: 'calc(100% + 8px)',
                                     margin: '-4px',
                                 }}
+                                className={classes.inHeader}
                             >
                                 {this.props.showPrefixIcon && (
                                     <Grid
@@ -152,7 +156,10 @@ export class SimpleSearchComponent extends PureComponent {
                                             },
                                         }}
                                     >
-                                        <Search sx={theme => ({ fill: theme.palette.secondary.main, opacity: 0.66 })} />
+                                        <Search
+                                            sx={theme => ({ fill: theme.palette.secondary.main, opacity: 0.66 })}
+                                            className={classes.searchIconPrefix}
+                                        />
                                     </Grid>
                                 )}
                                 <Grid
@@ -212,6 +219,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             width: '100%',
                                             height: '70px',
                                         }}
+                                        className={classes.mobileHeader}
                                     >
                                         <Grid
                                             container
