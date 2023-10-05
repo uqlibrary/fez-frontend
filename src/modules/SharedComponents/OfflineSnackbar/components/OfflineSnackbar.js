@@ -46,12 +46,8 @@ export class OfflineSnackbar extends PureComponent {
         );
     };
 
-    handleRequestClose = reason => {
-        // MUI hack to prevent the snackbar from being hidden by clicking/touchTapping away
-        /* istanbul ignore else */
-        if (reason !== 'clickaway') {
-            this.setState({ open: false });
-        }
+    handleRequestClose = () => {
+        this.setState({ open: false });
     };
 
     render() {
@@ -77,6 +73,12 @@ export class OfflineSnackbar extends PureComponent {
                     onClose={this.handleRequestClose}
                     message={snackbarProps.message}
                     autoHideDuration={snackbarProps.autoHideDuration}
+                    ClickAwayListenerProps={{
+                        onClickAway: /* istanbul ignore next */ () => {
+                            /* istanbul ignore next */
+                            return false;
+                        },
+                    }}
                 />
             </div>
         );

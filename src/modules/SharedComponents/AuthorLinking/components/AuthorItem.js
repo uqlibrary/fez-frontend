@@ -9,14 +9,6 @@ import RadioButtonUnchecked from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonChecked from '@mui/icons-material/RadioButtonChecked';
 import Link from '@mui/icons-material/Link';
 
-export const styles = theme => ({
-    authorLinkIcon: {
-        marginRight: theme.spacing(),
-    },
-    buttonBase: {},
-    authorOrder: {},
-});
-
 export class AuthorItem extends PureComponent {
     static propTypes = {
         authorItemId: PropTypes.string,

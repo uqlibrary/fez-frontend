@@ -592,8 +592,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 onClick={event => props.action.onClick(event, props.data)}
                             />
                         );
-                    } else {
+                    } /* istanbul ignore next */ else {
                         // Catch for erronious "Buttons" on rows after editing
+                        /* istanbul ignore next */
                         return <React.Fragment />;
                     }
                 },

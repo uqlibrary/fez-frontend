@@ -56,6 +56,14 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
 </div>
 `;
 
+exports[`Component OfflineSnackbar renders back online snackbar 2`] = `
+<div>
+  <div
+    class="offlineSnackbar"
+  />
+</div>
+`;
+
 exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
 <div>
   <div
