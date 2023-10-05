@@ -138,7 +138,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
     >
       <a
         aria-label="Open this DOI in an new window"
-        class="citationDoiLink makeStyles-externalLink-3 makeStyles-externalLink-5"
+        class="citationDoiLink css-1oqhn84"
         data-analyticsid="citation-doi-link"
         data-testid="citation-doi-link"
         href="https://doi.org/10.1242/jcs.196659"
@@ -150,7 +150,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-4 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="citation-doi-link-new-window-icon"

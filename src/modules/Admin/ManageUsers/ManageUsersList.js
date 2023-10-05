@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import makeStyles from '@mui/styles/makeStyles';
 import MaterialTable, { MTableAction, MTableBodyRow } from '@material-table/core';
 import { tableIcons } from './ManageUsersListIcons';
 
@@ -21,14 +20,6 @@ import { BULK_DELETE_USER_SUCCESS } from 'config/general';
 import UserDetailsRow from './partials/UserDetailsRow';
 import UserDetailsHeader from './partials/UserDetailsHeader';
 
-export const useStyles = makeStyles(() => ({
-    backdrop: {
-        position: 'absolute',
-        zIndex: 9999,
-        color: 'rgba(0, 0, 0, 0.2)',
-    },
-}));
-
 export const getColumns = () => {
     return [
         {
@@ -42,7 +33,6 @@ export const getColumns = () => {
 
 export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowDelete }) => {
     const dispatch = useDispatch();
-    const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const materialTableRef = React.createRef();
@@ -196,7 +186,11 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 components={{
                     Container: props => <div {...props} id="users-list" data-testid="users-list" />,
                     OverlayLoading: props => (
-                        <Backdrop {...props} open className={classes.backdrop}>
+                        <Backdrop
+                            {...props}
+                            open
+                            sx={{ position: 'absolute', zIndex: 9999, color: 'rgba(0, 0, 0, 0.2)' }}
+                        >
                             <StandardCard noHeader standardCardId="loading-users">
                                 <InlineLoader message={loadingText} />
                             </StandardCard>

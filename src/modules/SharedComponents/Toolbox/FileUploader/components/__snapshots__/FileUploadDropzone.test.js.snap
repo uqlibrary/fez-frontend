@@ -18,27 +18,27 @@ exports[`Component FileUploadDropzone should render component with default props
           style="position: relative; padding: 0px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container FileUploadDropzoneStaticContent-dropzone-2 css-11lq3yg-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body1 FileUploadDropzoneStaticContent-heading-3 css-u1nwny-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
               />
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column FileUploadDropzoneStaticContent-instructions-4 css-l6hioc-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium FileUploadDropzoneStaticContent-cloudIcon-5 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
                     data-testid="CloudUploadIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -89,27 +89,27 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
           style="position: relative; padding: 0px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container FileUploadDropzoneStaticContent-dropzone-7 css-11lq3yg-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body1 FileUploadDropzoneStaticContent-heading-8 css-u1nwny-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
               />
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column FileUploadDropzoneStaticContent-instructions-9 css-l6hioc-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium FileUploadDropzoneStaticContent-cloudIcon-10 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
                     data-testid="CloudUploadIcon"
                     focusable="false"
                     viewBox="0 0 24 24"

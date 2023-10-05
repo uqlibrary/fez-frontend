@@ -10,8 +10,6 @@ describe('Journal Fields Map', () => {
     it('should show correct information for Open Access translateFn and toolTipLabel', () => {
         const testData = { ...mockData.data[0] };
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj')[0];
-        expect(testFieldMap.translateFn(testData).props.style.color).toEqual('#e5e5e5');
-        expect(testFieldMap.translateFn(testData).props.style.marginTop).toEqual(12);
         !!testData.fez_journal_doaj
             ? expect(testFieldMap.toolTipLabel(testData)).toEqual('Open access journal')
             : expect(testFieldMap.toolTipLabel(testData)).toEqual('Use filters to find alternate pathways');
@@ -22,7 +20,6 @@ describe('Journal Fields Map', () => {
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj')[0];
         // Allow open access
         testData.fez_journal_doaj = true;
-        expect(testFieldMap.translateFn(testData).props.style.color).toEqual('orange');
         expect(testFieldMap.toolTipLabel(testData)).toEqual('Open access journal');
     });
 

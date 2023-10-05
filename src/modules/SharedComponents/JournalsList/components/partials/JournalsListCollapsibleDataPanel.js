@@ -11,15 +11,15 @@ import { useIsMobileView } from 'hooks';
 
 import JournalsListCollapsibleDataPanelContent from './JournalsListCollapsibleDataPanelContent';
 
-const JournalsListCollapsibleDataPanel = ({ row, index, classes, open }) => {
+const JournalsListCollapsibleDataPanel = ({ row, index, open }) => {
     const isXsDown = useIsMobileView();
     const dataItems = JournalFieldsMap.filter(item => !item.compactView);
 
     return (
-        <TableRow className={classes?.collapsibleRow}>
+        <TableRow sx={{ backgroundColor: '#F5F5F5' }}>
             <TableCell
                 colSpan={2}
-                className={!open ? classes?.collapsedCell : classes?.expandedCell}
+                sx={{ ...(!open ? { padding: 0, borderBottom: 0 } : { padding: 1 }) }}
                 data-testid={`collapsible-cell-${open ? 'open' : 'closed'}-${index}`}
                 id={`collapsible-cell-${open ? 'open' : 'closed'}-${index}`}
                 size="small"
@@ -41,7 +41,6 @@ const JournalsListCollapsibleDataPanel = ({ row, index, classes, open }) => {
                                             item={item}
                                             index={index}
                                             data={itemData}
-                                            classes={classes}
                                             {...((isXsDown && itemIndex === 0) || (!isXsDown && itemIndex <= 1)
                                                 ? { isFirstRow: true }
                                                 : /* istanbul ignore next */ {})}

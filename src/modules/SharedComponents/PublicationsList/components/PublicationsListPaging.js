@@ -1,61 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import { locale } from 'locale';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import ChevronRight from '@mui/icons-material/ChevronRight';
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
-import withStyles from '@mui/styles/withStyles';
-import classNames from 'classnames';
 import Box from '@mui/material/Box';
 
-const styles = theme => ({
-    pageButton: {
-        flex: '1 0 auto',
-        height: 32,
-        minWidth: 32,
-        minHeight: 32,
-        margin: '0 2px',
-    },
-    current: {
-        fontWeight: 900,
-        fontSize: '1.2rem',
-    },
-    nextPrevButtons: {
-        flex: '0 1 auto',
-        height: 32,
-        minHeight: 32,
-        maxHeight: 32,
-        minWidth: 'auto',
-        overflow: 'hidden',
-        [theme.breakpoints.down('lg')]: {
-            paddingLeft: 0,
-            paddingRight: 0,
-            '& > span': {
-                lineHeight: '0.875rem',
-            },
-        },
-        '&.paging-previous': {
-            justifyContent: 'flex-start',
-        },
-        '&.paging-next': {
-            justifyContent: 'flex-end',
+const StyledPrevNextButton = styled(Button)(({ theme }) => ({
+    flex: '0 1 auto',
+    height: '32px',
+    minHeight: '32px',
+    maxHeight: '32px',
+    minWidth: 'auto',
+    overflow: 'hidden',
+    [theme.breakpoints.down('lg')]: {
+        paddingLeft: 0,
+        paddingRight: 0,
+        '& > span': {
+            lineHeight: '0.875rem',
         },
     },
-    nextPrevIcons: {
-        fontSize: '1rem',
+    '&.paging-previous': {
+        justifyContent: 'flex-start',
     },
-    fakeDisabled: {
-        backgroundColor: theme.palette.primary.main,
+    '&.paging-next': {
+        justifyContent: 'flex-end',
     },
-    gridContainer: {
-        flexWrap: 'nowrap',
-        justifyContent: 'space-between',
-    },
-    paginationGridContainer: {
-        textAlign: 'center',
-    },
-});
+}));
 
 export const paginate = (totalItems, currentPage = 1, pageSize = 10, maxPages = 10) => {
     let currPage = currentPage;
@@ -120,7 +94,6 @@ export const paginate = (totalItems, currentPage = 1, pageSize = 10, maxPages = 
 
 export class PublicationsListPaging extends Component {
     static propTypes = {
-        classes: PropTypes.object,
         onPageChanged: PropTypes.func,
         disabled: PropTypes.bool,
         pagingData: PropTypes.shape({
@@ -162,10 +135,15 @@ export class PublicationsListPaging extends Component {
                 variant={'text'}
                 key={key}
                 size={'small'}
-                className={`${classNames(
-                    this.props.classes.pageButton,
-                    isCurrentPage && this.props.classes.current,
-                )} paging-button`}
+                sx={{
+                    flex: '1 0 auto',
+                    height: '32px',
+                    minWidth: '32px',
+                    minHeight: '32px',
+                    margin: '0 2px',
+                    ...(isCurrentPage && { fontWeight: 900, fontSize: '1.2rem' }),
+                }}
+                className={'paging-button'}
                 onClick={() => {
                     this.pageChanged(key);
                 }}
@@ -189,7 +167,6 @@ export class PublicationsListPaging extends Component {
     };
 
     render() {
-        const { classes } = this.props;
         const txt = locale.components.paging;
         const maxPagesToShow = locale.components.paging.maxPagesToShow;
         const pagination = paginate(this.state.total, this.state.current_page, this.state.per_page, maxPagesToShow);
@@ -205,27 +182,26 @@ export class PublicationsListPaging extends Component {
         return (
             <div data-testid={this.props.pagingId} id={this.props.pagingId}>
                 {totalPages > 1 && (
-                    <Grid container spacing={0} className={classes.gridContainer}>
+                    <Grid container spacing={0} sx={{ flexWrap: 'nowrap', justifyContent: 'space-between' }}>
                         {currentPage >= 1 && (
                             <Grid item xs={'auto'}>
-                                <Button
+                                <StyledPrevNextButton
                                     variant={'text'}
-                                    className={`${classes.nextPrevButtons} paging-previous`}
+                                    className={'paging-previous'}
                                     onClick={() => {
                                         this.pageChanged(currentPage - 1);
                                     }}
                                     disabled={this.props.disabled || currentPage === 1}
                                 >
-                                    <ChevronLeft className={classes.nextPrevIcons} />
+                                    <ChevronLeft sx={{ fontSize: '1rem' }} />
                                     {txt.previousPage}
-                                </Button>
+                                </StyledPrevNextButton>
                             </Grid>
                         )}
                         <Grid
                             item
                             sm={'auto'}
-                            className={classes.paginationGridContainer}
-                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                            sx={{ display: { xs: 'none', sm: 'block' }, textAlign: 'center' }}
                             data-analyticsid={`${this.props.pagingId}-desktop-controls`}
                             data-testid={`${this.props.pagingId}-desktop-controls`}
                             id={`${this.props.pagingId}-desktop-controls`}
@@ -245,9 +221,8 @@ export class PublicationsListPaging extends Component {
                             id={`${this.props.pagingId}-mobile-controls`}
                         >
                             <Box textAlign={'center'} paddingLeft={1} paddingRight={1}>
-                                <Button
+                                <StyledPrevNextButton
                                     variant={'text'}
-                                    className={classes.nextPrevButtons}
                                     children={txt.pageOf
                                         .replace('[currentPage]', currentPage)
                                         .replace('[totalPages]', totalPages)}
@@ -256,17 +231,17 @@ export class PublicationsListPaging extends Component {
                         </Grid>
                         {currentPage <= totalPages && (
                             <Grid item xs={'auto'}>
-                                <Button
+                                <StyledPrevNextButton
                                     variant={'text'}
-                                    className={`${classes.nextPrevButtons} paging-next`}
+                                    className={'paging-next'}
                                     onClick={() => {
                                         this.pageChanged(currentPage + 1);
                                     }}
                                     disabled={this.props.disabled || currentPage === totalPages}
                                 >
                                     {txt.nextPage}
-                                    <ChevronRight className={classes.nextPrevIcons} />
-                                </Button>
+                                    <ChevronRight sx={{ fontSize: '1rem' }} />
+                                </StyledPrevNextButton>
                             </Grid>
                         )}
                     </Grid>
@@ -276,4 +251,4 @@ export class PublicationsListPaging extends Component {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(PublicationsListPaging);
+export default PublicationsListPaging;

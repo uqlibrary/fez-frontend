@@ -4,13 +4,13 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-288 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-287 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -37,7 +37,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-294  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             J. Smith
           </p>
@@ -57,19 +57,19 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-294  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root   MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-298"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -108,13 +108,13 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-301 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-300 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -141,7 +141,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-307  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             J. Smith
           </p>
@@ -161,19 +161,19 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-307  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root   MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-311"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -212,13 +212,13 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 <div>
   <li
     aria-label="Select this record (A. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-2 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-1 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -245,7 +245,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-8  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             A. Smith
           </p>
@@ -257,7 +257,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-12"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -296,13 +296,13 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 <div>
   <li
     aria-label="Select this record (A. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-28 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-27 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -329,7 +329,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-34  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             A. Smith
           </p>
@@ -341,7 +341,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-38"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -380,13 +380,13 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-119 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-118 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -413,7 +413,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-125  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             J. Smith
           </p>
@@ -433,19 +433,19 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-125  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root   MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-129"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -534,17 +534,17 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-41 makeStyles-rowSelected-44 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-40 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root makeStyles-selected-45 css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
@@ -567,19 +567,19 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-47 makeStyles-selected-45 MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root makeStyles-selected-45 MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
           >
             First  listed contributor
           </span>
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-51"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -595,7 +595,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root makeStyles-selected-45 MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
             data-testid="DeleteIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -618,17 +618,17 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-80 makeStyles-rowSelected-83 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-79 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root makeStyles-selected-84 css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
@@ -651,19 +651,19 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-86 makeStyles-selected-84 MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root makeStyles-selected-84 MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
           >
             First  listed contributor
           </span>
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-90"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -679,7 +679,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root makeStyles-selected-84 MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
             data-testid="DeleteIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -702,13 +702,13 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-106 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-105 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -735,7 +735,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-112  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             J. Smith
           </p>
@@ -755,19 +755,19 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-112  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root   MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-116"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -806,17 +806,17 @@ exports[`Component ContributorRow a row with index and creator with creator role
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-67 makeStyles-rowSelected-70 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-66 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root makeStyles-selected-71 css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
@@ -839,12 +839,12 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-73 makeStyles-selected-71 MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root makeStyles-selected-71 MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -859,14 +859,14 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root css-tlelie-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-73 makeStyles-selected-71 MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
           >
             Investigator
           </p>
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-77"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -882,7 +882,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root makeStyles-selected-71 MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
             data-testid="DeleteIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -905,17 +905,17 @@ exports[`Component ContributorRow a row with index and creator with creator role
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-93 makeStyles-rowSelected-96 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-92 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root makeStyles-selected-97 css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
@@ -938,12 +938,12 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-99 makeStyles-selected-97 MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root makeStyles-selected-97 MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -958,14 +958,14 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root css-tlelie-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-99 makeStyles-selected-97 MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
           >
             Investigator
           </p>
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-103"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -981,7 +981,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root makeStyles-selected-97 MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
             data-testid="DeleteIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1004,13 +1004,13 @@ exports[`Component ContributorRow should handle edits 1`] = `
 <div>
   <li
     aria-label="Select this record (A. Smith) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-249 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
     data-testid="test-list-row-2"
     id="test-list-row-2"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-248 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1037,7 +1037,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-255  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             A. Smith
           </p>
@@ -1049,7 +1049,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-259"
+        class="css-rxds9v"
         data-testid="test-list-row-2-actions"
         id="test-list-row-2-actions"
       >
@@ -1113,13 +1113,13 @@ exports[`Component ContributorRow should render a row with a disabled contributo
 <div>
   <li
     aria-label="Select this record (undefined) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-54 makeStyles-disabledListItem-55 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-oq4and-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="-1"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-53 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1155,7 +1155,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-64"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -1194,13 +1194,13 @@ exports[`Component ContributorRow should render contributor row linked class for
 <div>
   <li
     aria-label="Select this record (Test) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-353 makeStyles-highlighted-355 makeStyles-contributorLinked-362 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1oz0d3v-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-352 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1228,7 +1228,7 @@ exports[`Component ContributorRow should render contributor row linked class for
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-359  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             Test
           </p>
@@ -1240,7 +1240,7 @@ exports[`Component ContributorRow should render contributor row linked class for
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-363"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -1304,13 +1304,13 @@ exports[`Component ContributorRow should render row as required 1`] = `
 <div>
   <li
     aria-label="Select this record (Test) to assign it to you"
-    class="MuiListItem-root makeStyles-listItem-340 makeStyles-highlighted-342 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1iaanil-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-339 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1337,7 +1337,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-346  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             Test
           </p>
@@ -1349,7 +1349,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-350"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >
@@ -1388,13 +1388,13 @@ exports[`Component ContributorRow should render with missing aria label if selec
 <div>
   <li
     aria-label=""
-    class="MuiListItem-root makeStyles-listItem-15 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container makeStyles-listContainer-14 css-11lq3yg-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1421,7 +1421,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root makeStyles-primary-21  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
           >
             A. Smith
           </p>
@@ -1433,7 +1433,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
         </div>
       </div>
       <div
-        class="makeStyles-actionsContainer-25"
+        class="css-rxds9v"
         data-testid="test-list-row-0-actions"
         id="test-list-row-0-actions"
       >

@@ -9,7 +9,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-4 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -18,7 +18,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       </h2>
     </div>
     <div
-      class="Page-helpIcon-5"
+      class="MuiBox-root css-m2cr7m"
     >
       <button
         aria-label="Click for more information"
@@ -31,7 +31,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -53,12 +53,13 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-3 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="publicationCitation"
       >
         <div
+          class="css-0"
           data-testid="publication-citation-parent-UQ:352045"
           id="publication-citation-parent-UQ:352045"
         >
@@ -76,7 +77,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                   style="min-width: 1px;"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-8 css-1uywuy6-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                   >
                     <a
                       href="/view/UQ:352045"
@@ -86,7 +87,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                   </h6>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-9 css-1idn90j-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                 >
                   <div
                     class="citationContent citationCreativeWork"
@@ -153,8 +154,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                     class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-10 css-1wrgmsj-MuiGrid-root"
-                      style="flex-grow: 1;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                     >
                       <div
                         class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -164,7 +164,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                         >
                           <a
                             aria-label="Full citation in Google scholar will open in a new window"
-                            class="googleCitationCount CitationCountView-citationCount-19 makeStyles-externalLink-21 makeStyles-externalLink-23"
+                            class="googleCitationCount css-si3g8d"
                             data-analyticsid="citation-count-link"
                             data-testid="citation-count-link"
                             href="https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello"
@@ -198,7 +198,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
           </div>
         </div>
         <hr
-          class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-7 css-9mgopn-MuiDivider-root"
+          class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
         />
       </div>
       <form>
@@ -219,7 +219,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-27 MuiGrid-container makeStyles-info_outline-42 makeStyles-common-28 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -228,7 +228,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-31 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -244,7 +244,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-32 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Missing data - 
@@ -260,18 +260,18 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-type-&-collection"
               id="standard-card-type-&-collection"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-type-&-collection-header"
                     id="standard-card-type-&-collection-header"
                   >
@@ -286,7 +286,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                 id="standard-card-type-&-collection-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridType-1 css-1pi8xg4-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1hyny61-MuiGrid2-root"
                 >
                   <div
                     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1324l67-MuiGrid2-root"
@@ -312,7 +312,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                   </div>
                 </div>
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridSubType-2 css-1pi8xg4-MuiGrid2-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-19srln5-MuiGrid2-root"
                 >
                   <div
                     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1324l67-MuiGrid2-root"
@@ -344,18 +344,18 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-author/creator-research-statement"
               id="standard-card-author/creator-research-statement"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-author/creator-research-statement-header"
                     id="standard-card-author/creator-research-statement-header"
                   >
@@ -376,7 +376,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -497,18 +497,18 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-ntro-data"
               id="standard-card-ntro-data"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-ntro-data-header"
                     id="standard-card-ntro-data-header"
                   >
@@ -529,7 +529,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -641,18 +641,18 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-grant-details"
               id="standard-card-grant-details"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-grant-details-header"
                     id="standard-card-grant-details-header"
                   >
@@ -822,18 +822,18 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-authors"
               id="standard-card-authors"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-authors-header"
                     id="standard-card-authors-header"
                   >
@@ -854,7 +854,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -911,18 +911,18 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-notes"
               id="standard-card-notes"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-notes-header"
                     id="standard-card-notes-header"
                   >

@@ -12,7 +12,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-1 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           eSpace
         </p>
@@ -49,7 +49,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-1 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           Web of science
         </p>
@@ -58,7 +58,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap PublicationListLoadingProgressClass-copy-1 css-1u0miaw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
         >
           5
            
@@ -73,7 +73,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-1 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           Scopus
         </p>
@@ -82,7 +82,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap PublicationListLoadingProgressClass-copy-1 css-1u0miaw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
         >
           0
            
@@ -97,7 +97,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-1 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           PubMed
         </p>
@@ -106,7 +106,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap PublicationListLoadingProgressClass-copy-1 css-1u0miaw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
         >
           0
            
@@ -121,7 +121,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-1 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           Crossref
         </p>
@@ -130,7 +130,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap PublicationListLoadingProgressClass-copy-1 css-1u0miaw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
         >
           0
            
@@ -166,7 +166,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-3 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           eSpace
         </p>
@@ -203,7 +203,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-3 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           Web of science
         </p>
@@ -240,7 +240,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-3 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           Scopus
         </p>
@@ -277,7 +277,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-3 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           PubMed
         </p>
@@ -314,7 +314,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-3 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           Crossref
         </p>
@@ -372,7 +372,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-2 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           eSpace
         </p>
@@ -409,7 +409,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-2 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           Web of science
         </p>
@@ -418,7 +418,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap PublicationListLoadingProgressClass-copy-2 css-1u0miaw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
         >
           5
            
@@ -433,7 +433,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-2 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           Scopus
         </p>
@@ -442,7 +442,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap PublicationListLoadingProgressClass-copy-2 css-1u0miaw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
         >
           4
            
@@ -457,7 +457,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-2 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           PubMed
         </p>
@@ -466,7 +466,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap PublicationListLoadingProgressClass-copy-2 css-1u0miaw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
         >
           12
            
@@ -481,7 +481,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 PublicationListLoadingProgressClass-copy-2 css-u1nwny-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
         >
           Crossref
         </p>

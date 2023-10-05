@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import makeStyles from '@mui/styles/makeStyles';
 
 import BooleanTemplate from './BooleanTemplate';
 import DateTimeTemplate from './DateTimeTemplate';
@@ -80,19 +79,7 @@ export const useTemplate = (template, props) => {
     }
 };
 
-const useStyles = makeStyles(theme => ({
-    gridRow: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-        padding: theme.spacing(1),
-        height: '100%',
-    },
-    heading: {
-        fontWeight: 400,
-    },
-}));
-
 export const ViewField = ({ fieldConfig, headerColumnWidth }) => {
-    const classes = useStyles();
     const {
         fieldId,
         heading,
@@ -109,13 +96,20 @@ export const ViewField = ({ fieldConfig, headerColumnWidth }) => {
 
     if (!!data || !!staticData || template === 'BooleanTemplate') {
         return (
-            <Grid container className={classes.gridRow}>
+            <Grid
+                container
+                sx={theme => ({
+                    borderBottom: `1px solid ${theme.palette.secondary.light}`,
+                    padding: theme.spacing(1),
+                    height: '100%',
+                })}
+            >
                 <Grid item xs={12} sm={headerColumnWidth}>
                     <Typography
                         variant="body2"
                         id={`${fieldId}-header`}
                         data-testid={`${fieldId}-header`}
-                        className={classes.heading}
+                        fontWeight={400}
                     >
                         {heading}
                     </Typography>

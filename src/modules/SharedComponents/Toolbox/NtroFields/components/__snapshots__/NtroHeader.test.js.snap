@@ -10,7 +10,7 @@ exports[`Component NtroHeader should render default view 1`] = `
       style="margin-top: 5px;"
     >
       <div
-        class="MuiGrid-root makeStyles-root-1 MuiGrid-container makeStyles-info_outline-16 makeStyles-common-2 css-1k6h6af-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
@@ -19,7 +19,7 @@ exports[`Component NtroHeader should render default view 1`] = `
             class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item makeStyles-icon-5 alert-icon  css-13i4rnv-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
@@ -35,7 +35,7 @@ exports[`Component NtroHeader should render default view 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-6 alert-text css-1vd824g-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
             >
               <b>
                 Non-traditional research output (NTRO) requirements - 

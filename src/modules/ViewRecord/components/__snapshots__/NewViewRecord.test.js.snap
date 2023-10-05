@@ -9,7 +9,7 @@ exports[`NewViewRecord should render not found 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-826 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -21,10 +21,10 @@ exports[`NewViewRecord should render not found 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-825 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-marginVariableTop-824 css-1pi8xg4-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-vdigti-MuiGrid2-root"
         data-testid="notFoundGridContainer"
         id="notFoundGridContainer"
       >

@@ -159,7 +159,7 @@ describe('Alert', () => {
         const dismissfn = jest.fn();
         const { container, getByTestId } = setup({
             dismissAction: dismissfn,
-            type: null,
+            type: 'error',
         });
 
         fireEvent.click(getByTestId('dismiss'));

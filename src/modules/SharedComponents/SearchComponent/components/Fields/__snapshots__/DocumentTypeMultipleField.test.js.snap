@@ -1,53 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DocumentTypeMultipleField component should have a proper style generator 1`] = `
-Object {
-  "selectedMenuItem": Object {
-    "backgroundColor": "test2 !important",
-    "color": "test3",
-  },
-  "title": Object {
-    "0": "t",
-    "1": "e",
-    "2": "s",
-    "3": "t",
-    "4": "1",
-  },
-}
-`;
-
-exports[`DocumentTypeMultipleField component should have a proper style generator 2`] = `
-Object {
-  "selectedMenuItem": Object {
-    "backgroundColor": " !important",
-    "color": "",
-  },
-  "title": Object {
-    "0": "t",
-    "1": "e",
-    "2": "s",
-    "3": "t",
-    "4": "1",
-  },
-}
-`;
-
-exports[`DocumentTypeMultipleField component should have a proper style generator 3`] = `
-Object {
-  "selectedMenuItem": Object {
-    "backgroundColor": " !important",
-    "color": "",
-  },
-  "title": Object {
-    "0": "t",
-    "1": "e",
-    "2": "s",
-    "3": "t",
-    "4": "1",
-  },
-}
-`;
-
 exports[`DocumentTypeMultipleField component should render default view 1`] = `
 <div>
   <div

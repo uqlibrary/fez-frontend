@@ -14,7 +14,7 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
             padding={0}
             id={`journal-list-data-col-2-min-${index}`}
             data-testid={`journal-list-data-col-2-min-${index}`}
-            style={{ borderBottom: '1px dashed #e6e6e6' }}
+            sx={{ borderBottom: '1px dashed #e6e6e6' }}
         >
             {JournalFieldsMap.slice(1)
                 .filter(item => item.compactView)
@@ -25,14 +25,14 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                         <Grid
                             key={`${item.key}-${index}`}
                             item
-                            style={{
+                            sx={{
                                 width: item.size,
-                                height: 43,
+                                height: '43px',
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                                 borderRight: '1px dashed #e6e6e6',
                                 marginBottom: 0,
-                                paddingLeft: 12,
+                                paddingLeft: '12px',
                             }}
                             id={id}
                             data-testid={id}
@@ -51,7 +51,7 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                             >
                                 <Typography
                                     variant="body1"
-                                    style={{
+                                    sx={{
                                         whiteSpace: 'nowrap',
                                         overflow: 'hidden',
                                         textOverflow: 'ellipsis',

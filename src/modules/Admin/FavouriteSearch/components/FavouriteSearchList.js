@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction, MTableToolbar } from '@material-table/core';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import makeStyles from '@mui/styles/makeStyles';
+import Box from '@mui/material/Box';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -14,11 +14,11 @@ import locale from 'locale/global';
 import { APP_URL, PATH_PREFIX } from 'config';
 import componentsLocale from 'locale/components';
 
-export const useStyles = makeStyles(() => ({
+const classes = {
     text: {
         fontSize: 13,
     },
-}));
+};
 
 export const getColumns = classes => {
     const {
@@ -47,7 +47,7 @@ export const getColumns = classes => {
                 <Typography
                     data-testid={`fvs-description-${rowData.tableData.id}`}
                     id={`fvs-description-${rowData.tableData.id}`}
-                    className={classes.text}
+                    sx={{ ...classes.text }}
                 >
                     {rowData.fvs_description}
                 </Typography>
@@ -82,7 +82,9 @@ export const getColumns = classes => {
                     href={`${APP_URL}${PATH_PREFIX}${rowData.fvs_alias}`}
                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
                 >
-                    <span className={classes.text}>{rowData.fvs_alias}</span>
+                    <Box component={'span'} sx={{ ...classes.text }}>
+                        {rowData.fvs_alias}
+                    </Box>
                 </ExternalLink>
             ),
         },
@@ -91,13 +93,14 @@ export const getColumns = classes => {
             field: 'fvs_alias',
             render: rowData => (
                 <Typography>
-                    <span
-                        className={classes.text}
+                    <Box
+                        component={'span'}
+                        sx={{ ...classes.text }}
                         data-testid={`fvs-alias-${rowData.tableData.id}`}
                         id={`fvs-alias-${rowData.tableData.id}`}
                     >
                         {rowData.fvs_alias}
-                    </span>
+                    </Box>
                 </Typography>
             ),
             editComponent: props => (
@@ -125,7 +128,6 @@ export const getColumns = classes => {
 };
 
 export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) => {
-    const classes = useStyles();
     const {
         components: { favouriteSearchList },
     } = componentsLocale;
@@ -146,7 +148,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 Row: props => (
                     <MTableBodyRow
                         {...props}
-                        className={classes.text}
+                        sx={{ ...classes.text }}
                         id={`favourite-search-list-item-${props.index}`}
                         data-testid={`favourite-search-list-item-${props.index}`}
                     />

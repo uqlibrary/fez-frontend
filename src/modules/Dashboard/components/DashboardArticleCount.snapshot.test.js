@@ -1,5 +1,5 @@
 import React from 'react';
-import { DashboardArticleCount, styles } from './DashboardArticleCount';
+import { DashboardArticleCount } from './DashboardArticleCount';
 import { currentAuthorStats, authorDetails } from 'mock/data';
 import { rtlRender } from 'test-utils';
 
@@ -31,20 +31,5 @@ describe('Dashboard Article Count test', () => {
             articleCount,
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it('should have a style generator', () => {
-        const theme = {
-            palette: {
-                white: {
-                    main: '#fff',
-                },
-            },
-            typography: {
-                fontWeightLight: '600',
-            },
-        };
-
-        expect(styles(theme)).toMatchSnapshot();
     });
 });

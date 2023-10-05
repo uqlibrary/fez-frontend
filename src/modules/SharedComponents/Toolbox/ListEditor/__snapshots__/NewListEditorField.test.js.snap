@@ -61,7 +61,7 @@ exports[`NewListEditorField component should render new list editor component wi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-13 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
@@ -73,7 +73,7 @@ exports[`NewListEditorField component should render new list editor component wi
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-11 css-k3f0g4-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-1olnuyg-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
@@ -82,7 +82,7 @@ exports[`NewListEditorField component should render new list editor component wi
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-12 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -126,7 +126,7 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-16 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -138,7 +138,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </p>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-15 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -179,7 +179,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-15 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -219,7 +219,7 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-16 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -231,7 +231,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </p>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-15 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -272,7 +272,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-15 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -377,7 +377,7 @@ exports[`NewListEditorField component should render new list editor component wi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-5 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
@@ -389,7 +389,7 @@ exports[`NewListEditorField component should render new list editor component wi
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-3 css-k3f0g4-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-1olnuyg-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
@@ -398,7 +398,7 @@ exports[`NewListEditorField component should render new list editor component wi
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-4 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -442,7 +442,7 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-8 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -454,7 +454,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </p>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-7 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -495,7 +495,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-7 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -535,7 +535,7 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-8 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -547,7 +547,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </p>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-7 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -588,7 +588,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-7 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"

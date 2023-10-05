@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as menuLocale } from 'locale/menu';
 
-// MUI 1
+import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -13,87 +15,34 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
-import withStyles from '@mui/styles/withStyles';
 
-const styles = theme => {
-    return {
-        paper: {
-            width: 260,
-        },
-        docked: {
-            '& $paper': {
-                '-webkit-box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)',
-                'box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)',
-            },
-        },
-        paperAnchorDockedLeft: {
-            border: 'none',
-        },
-        header: {
-            backgroundColor: theme.palette.primary.main,
-            height: '70px',
-            boxShadow:
-                '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), ' +
-                '0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
-            textAlign: 'center',
-            '& img': {
-                maxHeight: '45px',
-            },
-        },
-        skipNav: {
-            width: '100%',
-            height: '90%',
-            position: 'absolute',
-            zIndex: 998,
-            left: '-2000px',
-            outline: 'none',
-            background:
-                'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 78%,' +
-                'rgba(255,255,255,0) 100%)',
-            filter:
-                'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", ' +
-                'endColorstr="#00ffffff",GradientType=0 )',
-            '&:focus': {
-                left: 0,
-            },
-            '& .skipNavButton': {
-                position: 'absolute',
-                top: '25%',
-                left: 'calc(50% - 90px)',
-                textAlign: 'center',
-                width: '160px',
-                whiteSpace: 'normal',
-                overflow: 'visible',
-                zIndex: 999,
-            },
-        },
-        mainMenu: {
-            outline: 'none',
-            flexGrow: 1,
-            paddingTop: 0,
-        },
-        ListItemTextPrimary: {
-            ...theme.typography.body2,
-            whiteSpace: 'nowrap',
-            fontWeight: theme.typography.fontWeightMedium,
-        },
-        ListItemTextSecondary: {
-            ...theme.typography.caption,
-            textOverflow: 'ellipsis',
-            overflowX: 'hidden',
-            whiteSpace: 'nowrap',
-        },
-        mainMenuFooter: {
-            textAlign: 'center',
-            paddingBottom: '12px',
-            fontSize: theme.typography.caption.fontSize,
-            color: theme.palette.secondary.main,
-        },
-        iconButton: {
-            color: theme.palette.white.main,
-        },
-    };
-};
+const StyledSkipNav = styled('div')(() => ({
+    width: '100%',
+    height: '90%',
+    position: 'absolute',
+    zIndex: 998,
+    left: '-2000px',
+    outline: 'none',
+    background:
+        'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 78%,' +
+        'rgba(255,255,255,0) 100%)',
+    filter:
+        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", ' +
+        'endColorstr="#00ffffff",GradientType=0 )',
+    '&:focus': {
+        left: 0,
+    },
+    '& .skipNavButton': {
+        position: 'absolute',
+        top: '25%',
+        left: 'calc(50% - 90px)',
+        textAlign: 'center',
+        width: '160px',
+        whiteSpace: 'normal',
+        overflow: 'visible',
+        zIndex: 999,
+    },
+}));
 
 export class MenuDrawer extends Component {
     static propTypes = {
@@ -110,7 +59,6 @@ export class MenuDrawer extends Component {
             skipNavAriaLabel: PropTypes.string,
             closeMenuLabel: PropTypes.string,
         }),
-        classes: PropTypes.object,
         hasIncompleteWorks: PropTypes.bool,
     };
 
@@ -163,13 +111,21 @@ export class MenuDrawer extends Component {
                         button
                         onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}
                         id={`menu-item-${index}`}
-                        className={this.props.classes.ListItem}
                     >
                         <ListItemText
-                            classes={{
-                                primary: this.props.classes.ListItemTextPrimary,
-                                secondary: this.props.classes.ListItemTextSecondary,
-                            }}
+                            sx={theme => ({
+                                '& .MuiListItemText-primary': {
+                                    ...theme.typography.body2,
+                                    whiteSpace: 'nowrap',
+                                    fontWeight: 'fontWeightMedium',
+                                },
+                                '& .MuiListItemText-secondary': {
+                                    ...theme.typography.caption,
+                                    textOverflow: 'ellipsis',
+                                    overflowX: 'hidden',
+                                    whiteSpace: 'nowrap',
+                                },
+                            })}
                             primary={menuItem.primaryText}
                             secondary={menuItem.secondaryText}
                             id={`menu-itemText-${menuItem.elementId ?? index}`}
@@ -180,7 +136,6 @@ export class MenuDrawer extends Component {
         );
 
     render() {
-        const { classes } = this.props;
         const txt = menuLocale.footer;
         const { menuItems, onToggleDrawer, drawerOpen, docked, logoImage, logoText, logoLink, locale } = this.props;
         if (drawerOpen && !docked) {
@@ -189,10 +144,15 @@ export class MenuDrawer extends Component {
         }
         return (
             <Drawer
-                classes={{
-                    docked: classes.docked,
-                    paper: classes.paper,
-                    paperAnchorDockedLeft: classes.paperAnchorDockedLeft,
+                sx={{
+                    '& .MuiDrawer-paper': {
+                        width: '260px',
+                        WebkitBoxShadow: '5px 0 5px -2px rgba(0,0,0,0.15)',
+                        boxShadow: '5px 0 5px -2px rgba(0,0,0,0.15)',
+                    },
+                    '& .MuiDrawer-paperAnchorDockedLeft': {
+                        border: 'none',
+                    },
                 }}
                 id="menudrawer"
                 variant={docked ? 'permanent' : 'temporary'}
@@ -202,14 +162,31 @@ export class MenuDrawer extends Component {
             >
                 {drawerOpen && (
                     <Fragment>
-                        <List component="nav" id="mainMenu" className={classes.mainMenu} tabIndex={-1}>
+                        <List
+                            component="nav"
+                            id="mainMenu"
+                            sx={{ outline: 'none', flexGrow: 1, paddingTop: 0 }}
+                            tabIndex={-1}
+                        >
                             <Grid
                                 container
                                 spacing={0}
                                 wrap={'nowrap'}
                                 alignContent={'center'}
                                 alignItems={'center'}
-                                classes={{ container: classes.header }}
+                                sx={{
+                                    '&.MuiGrid-container': {
+                                        backgroundColor: 'primary.main',
+                                        height: '70px',
+                                        boxShadow:
+                                            '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), ' +
+                                            '0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
+                                        textAlign: 'center',
+                                        '& img': {
+                                            maxHeight: '45px',
+                                        },
+                                    },
+                                }}
                             >
                                 <Grid item xs={10} sm={12} zeroMinWidth>
                                     {logoImage && logoLink && logoText && (
@@ -235,15 +212,14 @@ export class MenuDrawer extends Component {
                                         aria-label={locale.closeMenuLabel}
                                         size="small"
                                     >
-                                        <KeyboardArrowLeft className={classes.iconButton} />
+                                        <KeyboardArrowLeft sx={{ color: 'white.main' }} />
                                     </IconButton>
                                 </Grid>
                             </Grid>
                             {// Skip nav section
                             docked && (
-                                <div
+                                <StyledSkipNav
                                     type="button"
-                                    className={classes.skipNav}
                                     id="skipNav"
                                     onClick={this.skipMenuItems}
                                     onKeyPress={this.skipMenuItems}
@@ -258,12 +234,19 @@ export class MenuDrawer extends Component {
                                         children={locale.skipNavTitle}
                                         tabIndex={-1}
                                     />
-                                </div>
+                                </StyledSkipNav>
                             )}
                             {this.renderMenuItems(menuItems)}
                         </List>
                         <div id="afterMenuDrawer" data-testid="after-menu-drawer" tabIndex={-1} />
-                        <div className={classes.mainMenuFooter}>
+                        <Box
+                            sx={theme => ({
+                                textAlign: 'center',
+                                paddingBottom: '12px',
+                                fontSize: theme.typography.caption.fontSize,
+                                color: 'secondary.main',
+                            })}
+                        >
                             {txt.cricos.prefix}
                             <ExternalLink
                                 href={txt.cricos.link}
@@ -273,7 +256,7 @@ export class MenuDrawer extends Component {
                             >
                                 {txt.cricos.number}
                             </ExternalLink>
-                        </div>
+                        </Box>
                     </Fragment>
                 )}
             </Drawer>
@@ -281,4 +264,4 @@ export class MenuDrawer extends Component {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(MenuDrawer);
+export default MenuDrawer;

@@ -10,8 +10,7 @@ import Grid from '@mui/material/Grid';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import Checkbox from '@mui/material/Checkbox';
-
-import makeStyles from '@mui/styles/makeStyles';
+import Box from '@mui/material/Box';
 
 import { ScrollToSection } from 'modules/SharedComponents/Toolbox/ScrollToSection';
 import ColumnData from './ColumnData';
@@ -27,12 +26,12 @@ import { default as locale } from 'locale/components';
 import { FORM_NAME, DEBOUNCE_VALUE } from './manageAuthorConfig';
 import { checkForExisting } from '../helpers';
 
-const useStyles = makeStyles(theme => ({
+const classes = {
     background: {
-        backgroundColor: theme.palette.secondary.light,
-        padding: theme.spacing(2),
+        backgroundColor: 'secondary.light',
+        padding: 2,
     },
-}));
+};
 
 export const FullAuthorDetails = ({
     disabled,
@@ -42,7 +41,6 @@ export const FullAuthorDetails = ({
     onEditingCanceled,
     submitting,
 }) => {
-    const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
@@ -82,7 +80,7 @@ export const FullAuthorDetails = ({
                     <TableCell colSpan={4}>
                         <ScrollToSection scrollToSection>
                             <form>
-                                <div className={classes.background}>
+                                <Box sx={{ ...classes.background }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             <NameData />
@@ -133,7 +131,7 @@ export const FullAuthorDetails = ({
                                             </Grid>
                                         </Grid>
                                     </Grid>
-                                </div>
+                                </Box>
                             </form>
                         </ScrollToSection>
                     </TableCell>
@@ -144,7 +142,7 @@ export const FullAuthorDetails = ({
                     onKeyDown={handleKeyPress}
                     id="author-delete-row"
                     data-testid="author-delete-row"
-                    className={classes.background}
+                    sx={{ ...classes.background }}
                 >
                     <ConfirmationBox
                         confirmationBoxId="authors-delete-this-author-confirmation"

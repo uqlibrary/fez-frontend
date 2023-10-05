@@ -1,43 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import makeStyles from '@mui/styles/makeStyles';
+import Box from '@mui/material/Box';
 
 import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
 import { locale } from 'locale';
 import { userIsAdmin } from 'hooks';
 
 import AddFavouriteSearchIcon from './AddFavouriteSearchIcon';
-
-const useStyles = makeStyles(
-    theme => ({
-        and: {
-            ...theme.typography.caption,
-            marginLeft: 4,
-            marginRight: 4,
-        },
-        title: {
-            ...theme.typography.caption,
-            marginRight: 2,
-        },
-        combiner: {
-            ...theme.typography.caption,
-            fontStyle: 'italic',
-            marginLeft: 2,
-            marginRight: 2,
-        },
-        value: {
-            ...theme.typography.caption,
-            fontWeight: 'bold',
-            marginLeft: 2,
-        },
-        captions: {
-            wordBreak: 'break-all',
-        },
-    }),
-    { withTheme: true },
-);
-
 const getCleanValue = item => {
     // Receives an object in format {title: string, combiner: string, value: string||array}
     if (Array.isArray(item.value)) {
@@ -111,7 +81,6 @@ const updateStateData = ({ fieldRows, docTypes, isOpenAccess, yearFilter }) => {
 };
 
 export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenAccess }) => {
-    const classes = useStyles();
     const isUserAdmin = userIsAdmin();
     const [captionData, setCaptionData] = React.useState(
         updateStateData({ fieldRows, docTypes, yearFilter, isOpenAccess }),
@@ -129,30 +98,48 @@ export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenA
                 const fieldId = item.field.replace(/_/g, '-');
                 return (
                     <span key={index} data-testid={`${fieldId}-caption`}>
-                        {index !== 0 && <span className={classes.and}>{'AND'}</span>}
+                        {index !== 0 && (
+                            <Box
+                                component={'span'}
+                                sx={theme => ({ ...theme.typography.caption, marginLeft: '4px', marginRight: '4px' })}
+                            >
+                                {'AND'}
+                            </Box>
+                        )}
                         {item.title !== '' && (
-                            <span
+                            <Box
+                                component={'span'}
                                 data-testid={`${fieldId}-caption-title`}
                                 id={`${fieldId}-caption-title`}
-                                className={classes.title}
+                                sx={theme => ({
+                                    ...theme.typography.caption,
+                                    marginRight: '2px',
+                                })}
                             >
                                 {item.title}
-                            </span>
+                            </Box>
                         )}
-                        <span
+                        <Box
+                            component={'span'}
                             data-testid={`${fieldId}-caption-combiner`}
                             id={`${fieldId}-caption-combiner`}
-                            className={classes.combiner}
+                            sx={theme => ({
+                                ...theme.typography.caption,
+                                fontStyle: 'italic',
+                                marginLeft: '2px',
+                                marginRight: '2px',
+                            })}
                         >
                             {item.combiner}
-                        </span>
-                        <span
+                        </Box>
+                        <Box
+                            component={'span'}
                             data-testid={`${fieldId}-caption-value`}
                             id={`${fieldId}-caption-value`}
-                            className={classes.value}
+                            sx={theme => ({ ...theme.typography.caption, fontWeight: 'bold', marginLeft: '2px' })}
                         >
                             {item.value}
-                        </span>
+                        </Box>
                     </span>
                 );
             });
@@ -161,9 +148,9 @@ export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenA
     const captions = renderCaptions(captionData);
     return (
         <div data-testid="advanced-search-caption">
-            <span data-testid="advanced-search-caption-container" className={classes.captions}>
+            <Box component={'span'} data-testid="advanced-search-caption-container" sx={{ wordBreak: 'break-all' }}>
                 {captions}
-            </span>
+            </Box>
             {!!isUserAdmin && captions.length > 0 && <AddFavouriteSearchIcon />}
         </div>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
+import { useTheme } from '@mui/material/styles';
 
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -9,17 +9,14 @@ import { useHistory } from 'react-router';
 
 import { handleKeyboardPressActivate } from 'helpers/general';
 
-import makeStyles from '@mui/styles/makeStyles';
-
 import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItemImage from './ImageGalleryItemImage';
 
-const useStyles = makeStyles(theme => ({
+const internalClasses = {
     imageListItemRoot: {
         backgroundColor: '#fff',
         border: '1px solid #d7d1cc',
     },
-    imageListItemItem: {},
     imageListItemWithLink: {
         cursor: 'pointer',
     },
@@ -43,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     imageListItemBarTitleWrap: {
         margin: 0,
     },
-    imageGalleryItemImage: {
+    imageGalleryItemImage: theme => ({
         aspectRatio: 1,
         minWidth: '100px',
         minHeight: '100px',
@@ -53,7 +50,7 @@ const useStyles = makeStyles(theme => ({
             minWidth: '150px',
             minHeight: '150px',
         },
-    },
+    }),
     imageListAlertBarRoot: {
         background: 'none',
         backgroundColor: '#4085c6',
@@ -69,7 +66,7 @@ const useStyles = makeStyles(theme => ({
         lineHeight: 'normal',
         whiteSpace: 'normal',
     },
-}));
+};
 
 const viewRecord = (history, url) => {
     history.push(url);
@@ -97,7 +94,7 @@ const ImageGalleryItem = ({
     security,
     ...rest
 }) => {
-    const internalClasses = useStyles();
+    const theme = useTheme();
     const [restricted, setRestricted] = React.useState(false);
     const [advisory, setAdvisory] = React.useState(false);
     const [unavailable, setUnavailable] = React.useState(false);
@@ -128,11 +125,14 @@ const ImageGalleryItem = ({
         <ImageListItem
             id={`image-gallery-item-${item.rek_pid}`}
             data-testid={`image-gallery-item-${item.rek_pid}`}
-            classes={{
-                root: `${internalClasses.imageListItemRoot} ${classes?.imageListItem?.root ?? ''}`,
-                item: `${internalClasses.imageListItemItem} ${classes?.imageListItem?.item ?? ''} ${
-                    !!clickLink.onClick ? internalClasses.imageListItemWithLink : ''
-                }`,
+            sx={{
+                ...internalClasses.imageListItemRoot,
+                ...(!!classes && classes?.imageListItem?.root),
+                '& .MuiImageListItem-item': {
+                    ...internalClasses.imageListItemItem,
+                    ...(!!classes && classes?.imageListItem?.item),
+                    ...(!!clickLink.onClick && internalClasses.imageListItemWithLink),
+                },
             }}
             tabIndex={0}
             onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(historyObject, url))}
@@ -147,7 +147,10 @@ const ImageGalleryItem = ({
                 width={itemWidth}
                 height={itemHeight}
                 loading={lazyLoading ? 'lazy' : 'eager'}
-                className={`${internalClasses.imageGalleryItemImage} ${classes?.imageListItemImage ?? ''}`}
+                classes={{
+                    ...internalClasses.imageGalleryItemImage(theme),
+                    ...(!!classes && classes?.imageListItemImage),
+                }}
                 setRestricted={setRestricted}
                 setAdvisory={setAdvisory}
                 setUnavailable={setUnavailable}
@@ -155,11 +158,17 @@ const ImageGalleryItem = ({
             {withTitle && (
                 <ImageListItemBar
                     title={item.rek_title}
-                    classes={{
-                        root: `${internalClasses.imageListItemBarRoot} ${classes?.imageListItemBar?.root ?? ''}`,
-                        title: `${internalClasses.imageListItemBarTitle} ${classes?.imageListItemBar?.title ?? ''}`,
-                        titleWrap: `${internalClasses.imageListItemBarTitleWrap} ${classes?.imageListItemBar
-                            ?.titleWrap ?? ''}`,
+                    sx={{
+                        ...internalClasses.imageListItemBarRoot,
+                        ...(!!classes && classes?.imageListItemBar?.root),
+                        '& .MuiImageListItemBar-title': {
+                            ...internalClasses.imageListItemBarTitle,
+                            ...(!!classes && classes?.imageListItemBar?.title),
+                        },
+                        '& .MuiImageListItemBar-titleWrap': {
+                            ...internalClasses.imageListItemBarTitleWrap,
+                            ...(!!classes && classes?.imageListItemBar?.titleWrap),
+                        },
                     }}
                     id={`image-gallery-item-${item.rek_pid}-title`}
                     data-testid={`image-gallery-item-${item.rek_pid}-title`}
@@ -169,11 +178,17 @@ const ImageGalleryItem = ({
                 <ImageListItemBar
                     title={alertMessage}
                     position="top"
-                    classes={{
-                        root: `${internalClasses.imageListAlertBarRoot} ${classes?.imageListAlertBar?.root ?? ''}`,
-                        title: `${internalClasses.imageListAlertBarTitle} ${classes?.imageListAlertBar?.title ?? ''}`,
-                        titleWrap: `${internalClasses.imageListAlertBarWrap} ${classes?.imageListAlertBar?.titleWrap ??
-                            ''}`,
+                    sx={{
+                        ...internalClasses.imageListAlertBarRoot,
+                        ...(!!classes && classes?.imageListAlertBar?.root),
+                        '& .MuiImageListItemBar-title': {
+                            ...internalClasses.imageListAlertBarTitle,
+                            ...(!!classes && classes?.imageListAlertBar?.title),
+                        },
+                        '& .MuiImageListItemBar-titleWrap': {
+                            ...internalClasses.imageListAlertBarWrap,
+                            ...(!!classes && classes?.imageListAlertBar?.titleWrap),
+                        },
                     }}
                     id={`image-gallery-item-${item.rek_pid}-alert`}
                     data-testid={`image-gallery-item-${item.rek_pid}-alert`}
@@ -192,10 +207,10 @@ ImageGalleryItem.propTypes = {
     security: PropTypes.object,
     classes: PropTypes.shape({
         imageListItem: PropTypes.shape({
-            root: PropTypes.string,
-            item: PropTypes.string,
+            root: PropTypes.object,
+            item: PropTypes.object,
         }),
-        imageListItemImage: PropTypes.string,
+        imageListItemImage: PropTypes.object,
         imageListItemBar: PropTypes.object,
         imageListAlertBar: PropTypes.object,
     }),
