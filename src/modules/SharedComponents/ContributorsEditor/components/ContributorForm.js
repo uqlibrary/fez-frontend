@@ -275,7 +275,7 @@ export const ContributorForm = ({
                 </Grid>
                 {(((showIdentifierLookup || isNtro) &&
                     (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
-                    (!isNtro && canEdit) ||
+                    (!isNtro && canEdit && showIdentifierLookup) ||
                     (showIdentifierLookup && canEdit)) && (
                     <Grid item xs={12} sm={3}>
                         {renderUqIdField()}

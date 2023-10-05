@@ -120,6 +120,8 @@ export const ContributorRow = ({
     const width = useWidth();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
+    console.log('Can Move', canMoveUp, canMoveDown);
+
     const _onDelete = React.useCallback(() => {
         /* istanbul ignore else */
         if (!disabled && onDelete) {
@@ -128,23 +130,35 @@ export const ContributorRow = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [contributor, index]);
 
-    const _onMoveUp = React.useCallback(() => {
-        /* istanbul ignore else */
-        if (!disabled && onMoveUp) {
-            onMoveUp(contributor, index);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [contributor, index]);
+    const _onMoveUp = React.useCallback(
+        e => {
+            e.preventDefault();
+            e.stopPropagation();
 
-    const _onMoveDown = React.useCallback(() => {
-        /* istanbul ignore else */
-        if (!disabled && onMoveDown) {
-            onMoveDown(contributor, index);
-        }
+            /* istanbul ignore else */
+            if (!disabled && onMoveUp) {
+                onMoveUp(contributor, index);
+            }
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [contributor, index]);
+        [contributor, index],
+    );
+
+    const _onMoveDown = React.useCallback(
+        e => {
+            /* istanbul ignore else */
+            if (!disabled && onMoveDown) {
+                e.preventDefault();
+                e.stopPropagation();
+                onMoveDown(contributor, index);
+            }
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [contributor, index],
+    );
 
     const _select = React.useCallback(() => {
+        console.log('Contributor Row On Select PROPS', disabled, !!onSelect, enableSelect);
         if (!disabled && !!onSelect && enableSelect) {
             onSelect(index);
         }
@@ -159,6 +173,7 @@ export const ContributorRow = ({
 
     const _onSelect = React.useCallback(
         event => {
+            console.log('Test');
             _select();
             event && event.currentTarget.blur();
         },
@@ -166,10 +181,15 @@ export const ContributorRow = ({
         [index],
     );
 
-    const _handleEdit = React.useCallback(() => {
-        canEdit && !!onEdit && onEdit(index);
+    const _handleEdit = React.useCallback(
+        e => {
+            e.preventDefault();
+            e.stopPropagation();
+            canEdit && !!onEdit && onEdit(index);
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [index]);
+        [index],
+    );
 
     const getRowIcon = () => {
         if (parseInt(contributor.uqIdentifier, 10)) {
@@ -203,6 +223,8 @@ export const ContributorRow = ({
     contributor.disabled && listClasses.push(classes.disabledListItem);
     canEdit && parseInt(contributor.uqIdentifier, 10) && listClasses.push(classes.contributorLinked);
 
+    console.log('ROW');
+
     return (
         <Fragment>
             <ConfirmationBox
@@ -228,7 +250,6 @@ export const ContributorRow = ({
                     <ListItemIcon classes={{ root: selectedClass }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {getRowIcon()}
                     </ListItemIcon>
-
                     <ContributorRowText
                         index={index}
                         canEdit={canEdit}
@@ -381,6 +402,8 @@ export default React.memo(ContributorRow, (pp, np) => {
         pp.index === np.index &&
         !np.contributor.selected &&
         !pp.contributor.selected &&
-        pp.contributor.nameAsPublished === np.contributor.nameAsPublished
+        pp.contributor.nameAsPublished === np.contributor.nameAsPublished &&
+        pp.canMoveUp === np.canMoveUp &&
+        pp.canMoveDown === np.canMoveDown
     );
 });

@@ -19,6 +19,7 @@ export class ContributorsEditor extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
         canEdit: PropTypes.bool,
+        forceSelectable: PropTypes.bool,
         classes: PropTypes.object,
         contributorEditorId: PropTypes.string.isRequired,
         disabled: PropTypes.bool,
@@ -41,6 +42,7 @@ export class ContributorsEditor extends PureComponent {
 
     static defaultProps = {
         canEdit: false,
+        forceSelectable: false,
         editMode: false,
         hideDelete: false,
         hideReorder: false,
@@ -230,6 +232,7 @@ export class ContributorsEditor extends PureComponent {
         const {
             contributorEditorId,
             canEdit,
+            forceSelectable,
             disabled,
             hideDelete,
             hideReorder,
@@ -253,7 +256,7 @@ export class ContributorsEditor extends PureComponent {
                 index={index}
                 className={'ContributorRow'}
                 key={`ContributorRow_${index}`}
-                onSelect={!canEdit ? this.assignContributor : null}
+                onSelect={!canEdit || forceSelectable ? this.assignContributor : null}
                 onEdit={this.selectContributor}
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
