@@ -194,9 +194,6 @@ export default {
     rek_description: {
         getValue: record => getValueSearchKeyCKEditor(record, 'rek_description', 'rek_formatted_abstract'),
     },
-    rek_herdc_notes: {
-        getValue: record => getValueSearchKeyCKEditor(record, 'rek_herdc_notes', 'rek_herdc_notes'),
-    },
     internalNotes: {
         getValue: record =>
             getValueSearchKeyCKEditor(record, 'fez_internal_notes.ain_detail', 'fez_internal_notes.ain_detail'),

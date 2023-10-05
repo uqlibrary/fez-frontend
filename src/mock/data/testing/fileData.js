@@ -35,8 +35,6 @@ export default {
     "rek_subtype_xsdmf_id": null,
     "rek_subtype": null,
     "rek_scopus_citation_count": null,
-    "rek_herdc_notes_xsdmf_id": null,
-    "rek_herdc_notes": null,
     "rek_scopus_doc_type_xsdmf_id": null,
     "rek_scopus_doc_type": null,
     "rek_wok_doc_type_xsdmf_id": null,
