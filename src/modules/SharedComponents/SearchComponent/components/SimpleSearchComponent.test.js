@@ -1,6 +1,11 @@
 import React from 'react';
-import SimpleSearchComponent from './SimpleSearchComponent';
+import { SimpleSearchComponent } from './SimpleSearchComponent';
 import { rtlRender, fireEvent, createEvent } from 'test-utils';
+
+jest.mock('config/general', () => ({
+    ...jest.requireActual('config/general'),
+    MAX_PUBLIC_SEARCH_TEXT_LENGTH: 20,
+}));
 
 function setup(testProps = {}) {
     const props = {
