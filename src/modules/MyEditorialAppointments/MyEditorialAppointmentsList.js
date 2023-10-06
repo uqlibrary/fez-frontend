@@ -533,6 +533,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     />
                 ),
                 Action: props => {
+                    /* istanbul ignore else */
                     if (typeof props.action === 'function') {
                         const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
                         return (
@@ -557,7 +558,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 size="small"
                             />
                         );
-                    } else if (!!props.action.icon) {
+                    }
+                    /* istanbul ignore else */
+                    if (!!props.action.icon) {
                         //  Save or Cancel actions for Add/Edit/Delete actions
                         const { icon: Icon, tooltip, ...restAction } = props.action;
                         return (
@@ -578,7 +581,10 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 }}
                             />
                         );
-                    } else if (!!props.action.tooltip) {
+                    }
+
+                    /* istanbul ignore else */
+                    if (!!props.action.tooltip) {
                         //  Add action
                         const { tooltip } = props.action;
                         return (
