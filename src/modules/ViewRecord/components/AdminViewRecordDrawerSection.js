@@ -38,7 +38,7 @@ export const AdminRecordDrawerSection = ({ section, index, copyToClipboard, vari
 AdminRecordDrawerSection.propTypes = {
     section: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
     index: PropTypes.number.isRequired,
-    copyToClipboard: PropTypes.func.isRequired,
+    copyToClipboard: PropTypes.func,
     variant: PropTypes.oneOf(['Desktop', 'Mobile']),
 };
 

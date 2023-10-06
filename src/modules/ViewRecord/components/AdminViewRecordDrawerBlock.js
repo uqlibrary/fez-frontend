@@ -53,7 +53,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     {block.value}
                     {block.value && block.value !== '-' && (
                         <IconButton
-                            onClick={e => copyToClipboard(e, block.value)}
+                            onClick={e => copyToClipboard?.(e, block.value)}
                             id={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
                             data-analyticsid={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
                             data-testid={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
@@ -103,7 +103,7 @@ AdminRecordDrawerBlock.propTypes = {
     block: PropTypes.object.isRequired,
     parentIndex: PropTypes.number,
     index: PropTypes.number.isRequired,
-    copyToClipboard: PropTypes.func.isRequired,
+    copyToClipboard: PropTypes.func,
     variant: PropTypes.oneOf(['Desktop', 'Mobile']),
 };
 

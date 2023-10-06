@@ -3,16 +3,10 @@ import PropTypes from 'prop-types';
 import { styled, useTheme } from '@mui/material/styles';
 
 import Snackbar from '@mui/material/Snackbar';
-import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Typography';
-import Toolbar from '@mui/material/Toolbar';
 import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import locale from 'locale/pages';
-import AdminRecordDrawerSection from './AdminViewRecordDrawerSection';
+import AdminViewRecordDrawerContent from './AdminViewRecordDrawerContent';
 
 const drawerPaperStyles = theme => ({
     '& .MuiDrawer-paper': {
@@ -36,76 +30,6 @@ const StyledMobileDrawer = styled(Drawer)(({ theme }) => ({
     },
     ...drawerPaperStyles(theme),
 }));
-const StyledDrawerContent = styled('div')(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    justifyContent: 'flex-start',
-}));
-
-export const DrawerContent = ({ title, content, actions = {}, themeDirection = 'ltr', variant = 'Desktop' }) => {
-    return (
-        <div
-            key="drawContainer1"
-            id={`adminDrawerContentContainer${variant}`}
-            data-testid={`adminDrawerContentContainer${variant}`}
-        >
-            <Toolbar sx={{ height: '74px', display: { xs: 'none', md: 'block' } }} key="toolbarMobile" />
-
-            <StyledDrawerContent key="mainHeader">
-                <Typography variant={'h6'} tabIndex="0">
-                    <IconButton
-                        onClick={actions?.handleDrawerToggle}
-                        id={`adminRecordDrawerCloseBtn${variant}`}
-                        data-analyticsid={`btnAdminRecordDrawerCloseBtn${variant}`}
-                        data-testid={`btnAdminRecordDrawerCloseBtn${variant}`}
-                        aria-label="Close admin record drawer"
-                        size="large"
-                    >
-                        {/* istanbul ignore next */
-                        themeDirection === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                    </IconButton>
-                    {title}
-                </Typography>
-            </StyledDrawerContent>
-            <Divider key="headerDivider" />
-            {content?.sections?.map((section, sectionIndex) => (
-                <AdminRecordDrawerSection
-                    section={section}
-                    index={sectionIndex}
-                    copyToClipboard={actions?.writeText}
-                    key={`Drawer-Section-${sectionIndex}`}
-                    variant={variant}
-                />
-            ))}
-        </div>
-    );
-};
-DrawerContent.propTypes = {
-    title: PropTypes.string.isRequired,
-    content: PropTypes.shape({
-        sections: PropTypes.arrayOf(
-            PropTypes.oneOfType([
-                PropTypes.arrayOf(
-                    PropTypes.shape({
-                        type: PropTypes.string.isRequired,
-                        value: PropTypes.any.isRequired,
-                        scrollable: PropTypes.bool,
-                        key: PropTypes.string,
-                        clipboard: PropTypes.bool,
-                    }),
-                ),
-                PropTypes.shape({
-                    type: PropTypes.oneOf(['divider']).isRequired,
-                }),
-            ]).isRequired,
-        ).isRequired,
-    }).isRequired,
-    actions: PropTypes.object,
-    themeDirection: PropTypes.string,
-    variant: PropTypes.oneOf(['Desktop', 'Mobile']),
-};
 
 export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = false, mobileOpen = false }) => {
     const theme = useTheme();
@@ -150,7 +74,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 data-testid="adminViewRecordDrawerDesktop"
                 sx={{ display: { xs: 'none', md: 'block' } }}
             >
-                <DrawerContent
+                <AdminViewRecordDrawerContent
                     title={txt.drawer.title}
                     content={content}
                     themeDirection={theme.direction}
@@ -172,7 +96,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 data-testid="adminViewRecordDrawerMobile"
                 sx={{ display: { xs: 'block', sm: 'none' } }}
             >
-                <DrawerContent
+                <AdminViewRecordDrawerContent
                     title={txt.drawer.title}
                     content={content}
                     variant="Mobile"
