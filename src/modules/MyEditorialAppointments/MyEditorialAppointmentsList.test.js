@@ -289,14 +289,17 @@ describe('MyEditorialAppointmentsList', () => {
 
         fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-delete-this-editorial-appointment'));
 
-        act(() => {
+        await act(() => {
             fireEvent.click(getByTestId('my-editorial-appointments-delete-save'));
         });
+        await act(async () => {
+            // coverage: allow time for the promise's timeout to update state
+            await new Promise(res => setTimeout(res, 1100));
+        });
+        const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
 
-        // const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
-
-        // expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
-        // expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Editor');
+        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Editor');
     });
 
     it('should display "Current" for "eap_end_year" column if the year is same as current year', () => {
@@ -359,8 +362,10 @@ describe('MyEditorialAppointmentsList', () => {
     });
 
     describe('coverage', () => {
-        it('should show mobile cell style', () => {
+        beforeEach(() => {
             window.matchMedia = createMatchMedia(800);
+        });
+        it('should show mobile cell style', () => {
             const { getByTestId } = setup({
                 list: [
                     {

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { act, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import { mui1theme } from 'config/theme';

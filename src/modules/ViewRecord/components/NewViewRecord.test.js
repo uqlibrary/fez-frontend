@@ -11,7 +11,6 @@ import { useParams } from 'react-router';
 import { recordVersionLegacy } from 'mock/data';
 import locale from 'locale/pages';
 import { notFound } from 'config/routes';
-import { stripHtml } from 'helpers/general';
 import globalLocale from 'locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
