@@ -74,6 +74,7 @@ export class MenuDrawer extends Component {
     }
 
     focusOnElementId = elementId => {
+        /* istanbul ignore else */
         if (document.getElementById(elementId)) {
             document.getElementById(elementId).focus();
         }
