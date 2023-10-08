@@ -120,8 +120,6 @@ export const ContributorRow = ({
     const width = useWidth();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
-    console.log('Can Move', canMoveUp, canMoveDown);
-
     const _onDelete = React.useCallback(() => {
         /* istanbul ignore else */
         if (!disabled && onDelete) {
@@ -158,7 +156,6 @@ export const ContributorRow = ({
     );
 
     const _select = React.useCallback(() => {
-        console.log('Contributor Row On Select PROPS', disabled, !!onSelect, enableSelect);
         if (!disabled && !!onSelect && enableSelect) {
             onSelect(index);
         }
@@ -173,7 +170,6 @@ export const ContributorRow = ({
 
     const _onSelect = React.useCallback(
         event => {
-            console.log('Test');
             _select();
             event && event.currentTarget.blur();
         },
@@ -222,8 +218,6 @@ export const ContributorRow = ({
     contributor.selected && listClasses.push(classes.rowSelected);
     contributor.disabled && listClasses.push(classes.disabledListItem);
     canEdit && parseInt(contributor.uqIdentifier, 10) && listClasses.push(classes.contributorLinked);
-
-    console.log('ROW');
 
     return (
         <Fragment>
