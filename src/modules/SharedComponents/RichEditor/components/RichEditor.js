@@ -48,7 +48,7 @@ const RichEditor = fieldProps => {
         let dataForEditor = '';
         if (fieldProps.input?.value?.get) {
             dataForEditor = fieldProps.input.value.get('htmlText');
-        } else if (!!fieldProps && (fieldProps.hasOwnProperty('value') || fieldProps.value)) {
+        } else if (!!fieldProps && fieldProps.hasOwnProperty('value')) {
             if (!!fieldProps.value.get && !!fieldProps.value.get('htmlText')) {
                 dataForEditor = fieldProps.value.get('htmlText');
             } else if (!!fieldProps.value.htmlText) {
@@ -60,9 +60,6 @@ const RichEditor = fieldProps => {
         return dataForEditor;
     }
 
-    function handleEditorReady(editor) {
-        !!editor && editor.hasOwnProperty('setData') && editor.setData(getContent());
-    }
     let error = null;
     const inputLength =
         (fieldProps.value && fieldProps.value.plainText && fieldProps.value.plainText.length) ||
@@ -87,7 +84,6 @@ const RichEditor = fieldProps => {
             id={fieldProps.richEditorId}
             data-testid={fieldProps.richEditorId}
             data-analyticsid={fieldProps.richEditorId}
-            style={!!fieldProps.hidden ? { display: 'none' } : null}
         >
             <span>
                 {fieldProps.title && (
@@ -107,10 +103,6 @@ const RichEditor = fieldProps => {
                 editor={ClassicExtended}
                 config={getCkEditorConfig()}
                 data={getContent()}
-                // ref={fieldProps.inputRef}
-                onReady={editor => {
-                    handleEditorReady(editor);
-                }}
                 onChange={(event, editor) => {
                     handleEditorDataChange(event, editor);
                 }}
@@ -147,7 +139,6 @@ const RichEditor = fieldProps => {
 
 RichEditor.prototypes = {
     className: PropTypes.string,
-    hidden: PropTypes.bool,
     input: PropTypes.object,
     inputRef: PropTypes.any,
     instructions: PropTypes.any,
@@ -164,7 +155,6 @@ RichEditor.defaultProps = {
     className: '',
     disabled: false,
     required: false,
-    hidden: false,
     value: '',
 };
 

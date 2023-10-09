@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/Grid';
@@ -18,13 +18,12 @@ export const handleSignificanceCallbackFactory = setSignificance => {
     return [callback, [setSignificance]];
 };
 
-export const resetFormCallbackFactory = (contributionStatementEditor, setSignificance, showForm) => {
+export const resetFormCallbackFactory = (setSignificance, showForm) => {
     const callback = () => {
         setSignificance(null);
-        !!contributionStatementEditor.current && contributionStatementEditor.current.setData(null);
         showForm(false);
     };
-    return [callback, [contributionStatementEditor, setSignificance]];
+    return [callback, [setSignificance]];
 };
 
 export const saveCallbackFactory = (disabled, significance, contributionStatement, saveChangeToItem, resetForm) => {
@@ -58,19 +57,15 @@ export const ScaleOfSignificanceForm = ({
 }) => {
     const [significance, setSignificance] = useState(null);
     const [contributionStatement, setContributionStatement] = useState(null);
-    const contributionStatementInput = useRef(null);
-    const contributionStatementEditor = useRef(null);
 
     React.useEffect(() => {
+        /* istanbul ignore else */
         if (itemIndexSelectedToEdit !== null && formMode === 'edit') {
             setSignificance(itemSelectedToEdit.key);
             setContributionStatement(itemSelectedToEdit.value);
-            !!contributionStatementEditor.current &&
-                contributionStatementEditor.current.setData(itemSelectedToEdit.value.htmlText);
         } else {
             setSignificance(null);
             setContributionStatement('');
-            !!contributionStatementEditor.current && contributionStatementEditor.current.setData('');
         }
     }, [itemIndexSelectedToEdit, itemSelectedToEdit, formMode]);
 
@@ -81,7 +76,7 @@ export const ScaleOfSignificanceForm = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleSignificance = useCallback(...handleSignificanceCallbackFactory(setSignificance));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const resetForm = useCallback(...resetFormCallbackFactory(contributionStatementEditor, setSignificance, showForm));
+    const resetForm = useCallback(...resetFormCallbackFactory(setSignificance, showForm));
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const saveChanges = useCallback(
         ...saveCallbackFactory(disabled, significance, contributionStatement, saveChangeToItem, resetForm),
@@ -138,8 +133,6 @@ export const ScaleOfSignificanceForm = ({
                     onKeyPress={saveChanges}
                     error={!!errorText}
                     disabled={disabled}
-                    inputRef={contributionStatementInput}
-                    instanceRef={contributionStatementEditor}
                     title={contributionStatementInputFieldLabel}
                     titleProps={{
                         variant: 'caption',

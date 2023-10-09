@@ -57,11 +57,7 @@ describe('ScaleOfSignificanceForm callback factories', () => {
         };
         const setSignificance = jest.fn();
         const showScaleAdditionForm = jest.fn();
-        const callback = resetFormCallbackFactory(
-            contributionStatementEditor,
-            setSignificance,
-            showScaleAdditionForm,
-        )[0];
+        const callback = resetFormCallbackFactory(setSignificance, showScaleAdditionForm)[0];
         callback();
         expect(setSignificance).toHaveBeenCalledWith(null);
         expect(testFn).toHaveBeenCalledWith(null);
