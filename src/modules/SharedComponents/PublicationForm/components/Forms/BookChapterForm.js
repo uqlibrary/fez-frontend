@@ -174,6 +174,7 @@ export default class BookChapterForm extends Component {
                 </Grid>
                 {this.props.isNtro && (
                     <NtroFields
+                        canEdit
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
                         hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}

@@ -188,7 +188,7 @@ export class GrantListEditorRow extends PureComponent {
                     locale={deleteRecordConfirmation}
                 />
                 <ListItem divider style={{ padding: '8px 0 8px 0' }} aria-label={ariaLabel}>
-                    <Grid container spacing={0}>
+                    <Grid container spacing={0} data-testid={`grant-list-row-${this.props.index}`}>
                         <Grid item xs={10} sm={11} md={9}>
                             {this.getGrantRowText(selectedClass)}
                         </Grid>
@@ -215,6 +215,7 @@ export class GrantListEditorRow extends PureComponent {
                                                     disabled={disabled || !canMoveUp}
                                                     aria-label={moveUpHint}
                                                     size="large"
+                                                    data-testid={`grant-list-move-up=${this.props.index}`}
                                                 >
                                                     <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
                                                 </IconButton>
@@ -232,6 +233,7 @@ export class GrantListEditorRow extends PureComponent {
                                                     disabled={disabled || !canMoveDown}
                                                     aria-label={moveDownHint}
                                                     size="large"
+                                                    data-testid={`grant-list-move-down=${this.props.index}`}
                                                 >
                                                     <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
                                                 </IconButton>

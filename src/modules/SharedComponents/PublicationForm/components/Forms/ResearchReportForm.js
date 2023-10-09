@@ -185,6 +185,7 @@ export default class ResearchReportForm extends Component {
                 </Grid>
                 {this.props.isNtro && (
                     <NtroFields
+                        canEdit
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
                         hideIsmn
