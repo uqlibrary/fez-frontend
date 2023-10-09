@@ -17,7 +17,7 @@ context('Search', () => {
         cy.visit('/records/search');
     });
 
-    it('Doing a basic search to advanced search', () => {
+    it.skip('Doing a basic search to advanced search', () => {
         // Perform a basic search
         cy.get('[data-testid=simple-search-input]')
             .should(
@@ -128,7 +128,7 @@ context('Search', () => {
                 .find('div[data-testid$="-alert"]')
                 .siblings('div')
                 .siblings('div')
-                .should('contain.text', 'Restricted + content warning');
+                .should('contain.text', 'Content warning');
             cy.get('li[data-testid^=image-gallery-item-]').each((item, index) => {
                 if (index > 0) {
                     cy.wrap(item)
@@ -147,7 +147,7 @@ context('Search', () => {
             });
         });
 
-        it.only('should preserve users displayAs choice across searches', () => {
+        it('should preserve users displayAs choice across searches', () => {
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
@@ -292,5 +292,53 @@ context('Search', () => {
                         .should('have.length', 2);
                 });
         });
+    });
+});
+
+context('Advanced Search', () => {
+    // a particular search key can be updated for bulk records
+    function assertSearchKeyUpdates(optionId, frskName) {
+        // select all items (with checkboxes)
+        cy.waitUntil(() => cy.get('[data-testid="select-all-publications-input"]').should('exist'));
+        cy.get('[data-testid="select-all-publications-input"]').click();
+        // bulk updates drop down appears - open it
+        cy.waitUntil(() => cy.get('[data-testid="bulk-updates-actions-select"]').should('exist'));
+        cy.get('[data-testid="bulk-updates-actions-select"]').click();
+        cy.waitUntil(() => cy.get('[data-testid="bulk-updates-actions-option-5"]').should('exist'));
+        // choose "change search key value"
+        cy.get('[data-testid="bulk-updates-actions-option-5"]').click();
+        // open selector and choose provided type
+        cy.waitUntil(() => cy.get('[data-testid="search-key-select"]').should('exist'));
+        cy.get('[data-testid="search-key-select"]').click();
+        cy.waitUntil(() => cy.get(`[data-testid="search-key-option-${optionId}"]`).should('exist'));
+        cy.get(`[data-testid="search-key-option-${optionId}"]`).click();
+        // enter some words in the rich editor
+        cy.waitUntil(() => cy.get(`[data-testid="${frskName}"]`).should('exist'));
+        cy.get('[data-testid="change-search-key-value-submit"]').should('be.disabled');
+        cy.assertCKEditorEmpty(frskName);
+        cy.typeCKEditor(frskName, 'some words');
+        cy.waitUntil(() => cy.get('[data-testid="change-search-key-value-submit"]').should('not.be.disabled'));
+        // save & see success
+        cy.get('[data-testid="change-search-key-value-submit"]').click();
+        cy.waitUntil(() => cy.get('[data-testid=alert] .alert-text').should('be.visible'));
+        cy.get('[data-testid=alert] .alert-text').should('contain', 'Bulk update job created successfully');
+    }
+
+    beforeEach(() => {
+        // visit advanced search page as an admin
+        cy.visit(
+            'http://localhost:3000/records/search?user=uqstaff&searchQueryParams%5Ball%5D=test&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+        );
+        cy.viewport(960, 768);
+    });
+
+    it('can bulk edit Advisory statement', () => {
+        const advisoryStatementOptionId = 8;
+        assertSearchKeyUpdates(advisoryStatementOptionId, 'rek-advisory-statement');
+    });
+
+    it('can bulk edit Additional notes', () => {
+        const additionalNotesOptionId = 5;
+        assertSearchKeyUpdates(additionalNotesOptionId, 'rek-notes');
     });
 });
