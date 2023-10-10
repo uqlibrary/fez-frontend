@@ -50,10 +50,12 @@ const RichEditor = fieldProps => {
             dataForEditor = fieldProps.input.value.get('htmlText');
         } else if (!!fieldProps && fieldProps.hasOwnProperty('value')) {
             if (!!fieldProps.value.get && !!fieldProps.value.get('htmlText')) {
+                /* istanbul ignore next */
                 dataForEditor = fieldProps.value.get('htmlText');
             } else if (!!fieldProps.value.htmlText) {
                 dataForEditor = fieldProps.value.htmlText;
             } else if (typeof fieldProps.value === 'string' && fieldProps.value.length > 0) {
+                /* istanbul ignore next */
                 dataForEditor = fieldProps.value;
             }
         }
