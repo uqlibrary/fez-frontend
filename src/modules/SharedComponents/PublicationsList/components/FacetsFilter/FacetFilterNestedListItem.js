@@ -11,16 +11,16 @@ import Typography from '@mui/material/Typography';
 import { sanitiseId } from 'helpers/general';
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
-    '& .MuiListItem-gutters': {
-        paddingLeft: theme.spacing(),
-        paddingRight: theme.spacing(),
+    '&.MuiListItem-gutters': {
+        paddingLeft: theme.spacing(1),
+        paddingRight: theme.spacing(1),
     },
 }));
 
 const StyledListItemText = styled(ListItemText)(({ theme }) => ({
     ...theme.typography.body2,
-    '& .MuiListItemText-inset': {
-        '&:first-child': {
+    '&.MuiListItemText-inset': {
+        '&:first-child ': {
             paddingLeft: theme.spacing(2),
         },
     },

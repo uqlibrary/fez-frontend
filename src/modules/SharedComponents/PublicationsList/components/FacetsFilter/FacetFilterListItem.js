@@ -10,9 +10,9 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import Typography from '@mui/material/Typography';
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
-    '& .MuiListItem-gutters': {
-        paddingLeft: theme.spacing(),
-        paddingRight: theme.spacing(),
+    '&.MuiListItem-gutters': {
+        paddingLeft: theme.spacing(1),
+        paddingRight: theme.spacing(1),
     },
 }));
 
