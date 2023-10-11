@@ -1,7 +1,7 @@
 import React from 'react';
 import RecordsSearchResults from './RecordsSearchResults';
 import { accounts } from 'mock/data/account';
-import { render, WithReduxStore, WithRouter, waitFor, fireEvent, cleanup } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, fireEvent } from 'test-utils';
 import { SEARCH_EXTERNAL_RECORDS_API } from 'repositories/routes';
 
 function setup(testProps = {}, renderMethod = render) {
@@ -26,7 +26,6 @@ describe('Search record results', () => {
 
     afterEach(() => {
         mockApi.reset();
-        // cleanup();
     });
 
     it('should render stepper and no results', () => {
