@@ -145,7 +145,7 @@ export default class ClaimRecord extends PureComponent {
             return (
                 <StandardPage>
                     <Grid container>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <InlineLoader message={txt.publicationLoading} />
                         </Grid>
                     </Grid>
@@ -182,7 +182,7 @@ export default class ClaimRecord extends PureComponent {
             <React.Fragment>
                 {this.props.publicationToClaimFileUploadingError && (
                     <Grid container>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <Alert pushToTop {...txt.successWorkflowConfirmation.fileFailConfirmationAlert} />
                         </Grid>
                     </Grid>
@@ -217,7 +217,7 @@ export default class ClaimRecord extends PureComponent {
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
                     <form onSubmit={this._handleDefaultSubmit}>
                         <Grid container spacing={3}>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
                                     <PublicationCitation publication={publication} citationStyle={'header'} />
                                 </StandardCard>
@@ -239,7 +239,7 @@ export default class ClaimRecord extends PureComponent {
                                     {publication.fez_record_search_key_author &&
                                         publication.fez_record_search_key_author.length > 0 &&
                                         !authorLinked && (
-                                            <Grid item xs={12}>
+                                            <Grid xs={12}>
                                                 <StandardCard
                                                     title={txt.authorLinking.title}
                                                     help={txt.authorLinking.help}
@@ -263,7 +263,7 @@ export default class ClaimRecord extends PureComponent {
                                         publication.fez_record_search_key_contributor &&
                                         publication.fez_record_search_key_contributor.length > 0 &&
                                         !contributorLinked && (
-                                            <Grid item xs={12}>
+                                            <Grid xs={12}>
                                                 <StandardCard
                                                     title={txt.contributorLinking.title}
                                                     help={txt.contributorLinking.help}
@@ -287,10 +287,10 @@ export default class ClaimRecord extends PureComponent {
                                                 </StandardCard>
                                             </Grid>
                                         )}
-                                    <Grid item xs={12}>
+                                    <Grid xs={12}>
                                         <StandardCard title={txt.comments.title} help={txt.comments.help}>
                                             <Grid container spacing={2}>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <Field
                                                         component={TextField}
                                                         textFieldId="claim-comments"
@@ -303,7 +303,7 @@ export default class ClaimRecord extends PureComponent {
                                                         label={txt.comments.fieldLabels.comments}
                                                     />
                                                 </Grid>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <Field
                                                         component={TextField}
                                                         textFieldId="claim-link"
@@ -319,16 +319,16 @@ export default class ClaimRecord extends PureComponent {
                                         </StandardCard>
                                     </Grid>
                                     {showContentIndicatorsField(publication) && (
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <StandardCard
                                                 title={txt.contentIndicators.title}
                                                 help={txt.contentIndicators.help}
                                             >
                                                 <Grid container spacing={3}>
-                                                    <Grid item xs={12}>
+                                                    <Grid xs={12}>
                                                         <Typography>{txt.contentIndicators.description}</Typography>
                                                     </Grid>
-                                                    <Grid item xs={12}>
+                                                    <Grid xs={12}>
                                                         <Field
                                                             component={ContentIndicatorsField}
                                                             displayType={publication.rek_display_type}
@@ -344,7 +344,7 @@ export default class ClaimRecord extends PureComponent {
                                             </StandardCard>
                                         </Grid>
                                     )}
-                                    <Grid item xs={12}>
+                                    <Grid xs={12}>
                                         <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
                                             <Field
                                                 name="files"
@@ -358,14 +358,14 @@ export default class ClaimRecord extends PureComponent {
                                 </React.Fragment>
                             )}
                             {alertProps && (
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <Alert pushToTop {...alertProps} />
                                 </Grid>
                             )}
                         </Grid>
                         <Grid container spacing={3}>
-                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+                            <Grid xs={12} sm={'auto'}>
                                 <Button
                                     variant={'contained'}
                                     fullWidth
@@ -377,7 +377,7 @@ export default class ClaimRecord extends PureComponent {
                             </Grid>
                             {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
                                 !(!publication.rek_pid && this.props.submitFailed) && (
-                                    <Grid item xs={12} sm={'auto'}>
+                                    <Grid xs={12} sm={'auto'}>
                                         <Button
                                             variant={'contained'}
                                             color={'primary'}
