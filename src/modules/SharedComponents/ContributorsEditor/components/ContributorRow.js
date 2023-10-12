@@ -125,21 +125,32 @@ export const ContributorRow = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [contributor, index]);
 
-    const _onMoveUp = React.useCallback(() => {
-        /* istanbul ignore else */
-        if (!disabled && onMoveUp) {
-            onMoveUp(contributor, index);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [contributor, index]);
+    const _onMoveUp = React.useCallback(
+        e => {
+            e.preventDefault();
+            e.stopPropagation();
 
-    const _onMoveDown = React.useCallback(() => {
-        /* istanbul ignore else */
-        if (!disabled && onMoveDown) {
-            onMoveDown(contributor, index);
-        }
+            /* istanbul ignore else */
+            if (!disabled && onMoveUp) {
+                onMoveUp(contributor, index);
+            }
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [contributor, index]);
+        [contributor, index],
+    );
+
+    const _onMoveDown = React.useCallback(
+        e => {
+            /* istanbul ignore else */
+            if (!disabled && onMoveDown) {
+                e.preventDefault();
+                e.stopPropagation();
+                onMoveDown(contributor, index);
+            }
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [contributor, index],
+    );
 
     const _select = React.useCallback(() => {
         if (!disabled && !!onSelect && enableSelect) {
@@ -163,10 +174,15 @@ export const ContributorRow = ({
         [index],
     );
 
-    const _handleEdit = React.useCallback(() => {
-        canEdit && !!onEdit && onEdit(index);
+    const _handleEdit = React.useCallback(
+        e => {
+            e.preventDefault();
+            e.stopPropagation();
+            canEdit && !!onEdit && onEdit(index);
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [index]);
+        [index],
+    );
 
     const getRowIcon = () => {
         if (parseInt(contributor.uqIdentifier, 10)) {
@@ -224,7 +240,6 @@ export const ContributorRow = ({
                     <ListItemIcon sx={{ display: { xs: 'none', sm: 'block' }, ...selectedClass }}>
                         {getRowIcon()}
                     </ListItemIcon>
-
                     <ContributorRowText
                         index={index}
                         canEdit={canEdit}
@@ -376,6 +391,8 @@ export default React.memo(ContributorRow, (pp, np) => {
         pp.index === np.index &&
         !np.contributor.selected &&
         !pp.contributor.selected &&
-        pp.contributor.nameAsPublished === np.contributor.nameAsPublished
+        pp.contributor.nameAsPublished === np.contributor.nameAsPublished &&
+        pp.canMoveUp === np.canMoveUp &&
+        pp.canMoveDown === np.canMoveDown
     );
 });

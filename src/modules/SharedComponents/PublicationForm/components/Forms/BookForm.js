@@ -150,6 +150,9 @@ export default class BookForm extends Component {
                         <StandardCard title={txt.authors.title} help={txt.authors.help}>
                             <Field
                                 component={ContributorsEditorField}
+                                canEdit
+                                forceSelectable
+                                hideUqIDFields
                                 contributorEditorId="rek-author"
                                 name="authors"
                                 locale={txt.authors.field}
@@ -166,6 +169,9 @@ export default class BookForm extends Component {
                         <StandardCard title={txt.editors.title} help={txt.editors.help}>
                             <Field
                                 component={ContributorsEditorField}
+                                canEdit
+                                forceSelectable
+                                hideUqIDFields
                                 contributorEditorId="rek-contributor"
                                 showContributorAssignment={!authorSelected}
                                 id="editors-name-as-published-field"
@@ -178,6 +184,7 @@ export default class BookForm extends Component {
                 )}
                 {this.props.isNtro && (
                     <NtroFields
+                        canEdit
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
                         hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}

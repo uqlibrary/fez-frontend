@@ -169,6 +169,9 @@ export default class ResearchReportForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            hideUqIDFields
                             contributorEditorId="authors"
                             name="authors"
                             isNtro={this.props.isNtro}
@@ -177,12 +180,12 @@ export default class ResearchReportForm extends Component {
                             required
                             validate={[validation.authorRequired]}
                             disabled={this.props.submitting}
-                            isNtro={this.props.isNtro}
                         />
                     </StandardCard>
                 </Grid>
                 {this.props.isNtro && (
                     <NtroFields
+                        canEdit
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
                         hideIsmn

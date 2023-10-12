@@ -12,6 +12,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      data-testid="grant-list-row-0"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
@@ -92,6 +93,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                 <button
                   aria-label="Move entry up the order"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-up=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -118,6 +120,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                 <button
                   aria-label="Move entry down the order"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-down=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -188,6 +191,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      data-testid="grant-list-row-0"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
@@ -268,6 +272,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
                 <button
                   aria-label="Move entry up the order"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-up=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -294,6 +299,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
                 <button
                   aria-label="Move entry down the order"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-down=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -365,6 +371,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      data-testid="grant-list-row-0"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
@@ -447,6 +454,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                 <button
                   aria-label="Move up"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-up=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -473,6 +481,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                 <button
                   aria-label="Move down"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-down=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -544,6 +553,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      data-testid="grant-list-row-0"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
@@ -622,6 +632,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                 <button
                   aria-label="Move up"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-up=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -648,6 +659,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                 <button
                   aria-label="Move down"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-down=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -720,6 +732,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      data-testid="grant-list-row-0"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
@@ -800,6 +813,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                 <button
                   aria-label="Move entry up the order"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-up=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -826,6 +840,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                 <button
                   aria-label="Move entry down the order"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-down=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -896,6 +911,7 @@ exports[`GrantListEditorRow should use width hook 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      data-testid="grant-list-row-0"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
@@ -974,6 +990,7 @@ exports[`GrantListEditorRow should use width hook 1`] = `
                 <button
                   aria-label="Move entry up the order"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-up=0"
                   disabled=""
                   tabindex="-1"
                   type="button"
@@ -1000,6 +1017,7 @@ exports[`GrantListEditorRow should use width hook 1`] = `
                 <button
                   aria-label="Move entry down the order"
                   class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-testid="grant-list-move-down=0"
                   disabled=""
                   tabindex="-1"
                   type="button"

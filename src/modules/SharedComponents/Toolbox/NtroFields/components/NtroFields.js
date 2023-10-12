@@ -21,6 +21,7 @@ import { AUDIENCE_SIZE, SIGNIFICANCE, LANGUAGE, QUALITY_INDICATORS } from 'confi
 
 export default class NtroFields extends React.PureComponent {
     static propTypes = {
+        canEdit: PropTypes.bool,
         submitting: PropTypes.bool,
         locale: PropTypes.object,
         hideIsmn: PropTypes.bool,
@@ -43,6 +44,7 @@ export default class NtroFields extends React.PureComponent {
     };
 
     static defaultProps = {
+        canEdit: false,
         hideIsmn: false,
         hideIsrc: false,
         hideVolume: false,
@@ -469,11 +471,13 @@ export default class NtroFields extends React.PureComponent {
                         </StandardCard>
                     </Grid>
                 )}
+                {console.log('Can edit?', this.props.canEdit)}
                 {!this.props.hideGrants && (
                     <Grid item xs={12}>
                         <StandardCard title={grantEditor.title}>
                             <Field
                                 component={GrantListEditorField}
+                                canEdit={this.props.canEdit}
                                 name="grants"
                                 disabled={this.props.submitting}
                                 disableDeleteAllGrants={this.props.disableDeleteAllGrants}

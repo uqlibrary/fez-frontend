@@ -128,6 +128,9 @@ export default class ThesisForm extends Component {
                     <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            hideUqIDFields
                             contributorEditorId="supervisors"
                             required
                             name="supervisors"

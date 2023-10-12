@@ -31,6 +31,7 @@ const initialContributorState = {
 
 export const ContributorForm = ({
     canEdit,
+    hideUqIDFields,
     contributor: initialContributor,
     contributorFormId,
     disabled,
@@ -265,7 +266,7 @@ export const ContributorForm = ({
                 </Grid>
                 {(((showIdentifierLookup || isNtro) &&
                     (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
-                    (!isNtro && canEdit) ||
+                    (!isNtro && canEdit && !hideUqIDFields) ||
                     (showIdentifierLookup && canEdit)) && (
                     <Grid item xs={12} sm={3}>
                         {renderUqIdField()}
@@ -358,6 +359,7 @@ export const ContributorForm = ({
 
 ContributorForm.propTypes = {
     canEdit: PropTypes.bool,
+    hideUqIDFields: PropTypes.bool,
     contributor: PropTypes.object,
     contributorFormId: PropTypes.string,
     disabled: PropTypes.bool,
@@ -376,6 +378,7 @@ ContributorForm.propTypes = {
 
 ContributorForm.defaultProps = {
     canEdit: false,
+    hideUqIDFields: false,
     contributor: initialContributorState,
     displayCancel: false,
     disableNameAsPublished: false,

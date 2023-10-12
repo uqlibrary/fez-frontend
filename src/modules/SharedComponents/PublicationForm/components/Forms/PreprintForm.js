@@ -79,6 +79,9 @@ export default class PreprintForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            hideUqIDFields
                             contributorEditorId="authors"
                             showContributorAssignment
                             required
