@@ -711,7 +711,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 >
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-ysuh30-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-1dskgw9-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-display-type"
                     id="clickable-facet-category-display-type"
                     role="button"
@@ -746,7 +746,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   </div>
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-ysuh30-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-1dskgw9-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-keywords"
                     id="clickable-facet-category-keywords"
                     role="button"
@@ -781,7 +781,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   </div>
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-ysuh30-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-1dskgw9-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-date-range"
                     id="clickable-facet-category-date-range"
                     role="button"
