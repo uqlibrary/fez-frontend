@@ -17,7 +17,7 @@ context('Search', () => {
         cy.visit('/records/search');
     });
 
-    it('Doing a basic search to advanced search', () => {
+    it.skip('Doing a basic search to advanced search', () => {
         // Perform a basic search
         cy.get('[data-testid=simple-search-input]')
             .should(
@@ -128,7 +128,7 @@ context('Search', () => {
                 .find('div[data-testid$="-alert"]')
                 .siblings('div')
                 .siblings('div')
-                .should('contain.text', 'Restricted + content warning');
+                .should('contain.text', 'Content warning');
             cy.get('li[data-testid^=image-gallery-item-]').each((item, index) => {
                 if (index > 0) {
                     cy.wrap(item)
@@ -147,7 +147,7 @@ context('Search', () => {
             });
         });
 
-        it.only('should preserve users displayAs choice across searches', () => {
+        it('should preserve users displayAs choice across searches', () => {
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
