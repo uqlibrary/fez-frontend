@@ -989,7 +989,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                 >
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-ysuh30-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-1dskgw9-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-keywords"
                     id="clickable-facet-category-keywords"
                     role="button"
@@ -1024,7 +1024,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   </div>
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-ysuh30-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-1dskgw9-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-date-range"
                     id="clickable-facet-category-date-range"
                     role="button"
@@ -1059,7 +1059,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   </div>
                   <div
                     aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-ysuh30-MuiButtonBase-root-MuiListItem-root"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-1dskgw9-MuiButtonBase-root-MuiListItem-root"
                     data-testid="clickable-facet-category-open-access"
                     id="clickable-facet-category-open-access"
                     role="button"
