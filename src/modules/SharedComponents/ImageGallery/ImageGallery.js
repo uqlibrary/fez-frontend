@@ -10,6 +10,9 @@ import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItem from './ImageGalleryItem';
 
 const internalClasses = {
+    imageListRoot: {
+        overflow: 'hidden',
+    },
     imageListItemRoot: {
         height: '100% !important',
     },
