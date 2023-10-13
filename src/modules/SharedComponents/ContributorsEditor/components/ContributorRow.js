@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
 
 import locale from 'locale/global';
@@ -36,12 +37,12 @@ const classes = {
     highlighted: {
         borderLeft: '5px solid red',
     },
-    rowSelected: {
-        backgroundColor: 'accent.main !important',
+    rowSelected: theme => ({
+        backgroundColor: `${theme.palette.accent.main} !important`,
         '& svg': {
             color: 'white !important',
         },
-    },
+    }),
     contributorLinked: {
         color: 'primary.main',
         backgroundColor: 'secondary.light',
@@ -114,6 +115,7 @@ export const ContributorRow = ({
     enableSelect,
     showRoleInput,
 }) => {
+    const theme = useTheme();
     const width = useWidth();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
@@ -197,7 +199,7 @@ export const ContributorRow = ({
     const listClasses = {
         ...classes.listItem,
         ...(required && classes.highlighted),
-        ...(contributor.selected && classes.rowSelected),
+        ...(contributor.selected && classes.rowSelected(theme)),
         ...(contributor.disabled && classes.disabledListItem),
         ...(canEdit && parseInt(contributor.uqIdentifier, 10) && classes.contributorLinked),
     };
