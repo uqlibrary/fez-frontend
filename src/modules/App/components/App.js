@@ -291,7 +291,7 @@ export class AppClass extends PureComponent {
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent,
         });
-        const titleStyle = this.state.docked && !isThesisSubmissionPage ? { paddingLeft: 284 } : { paddingLeft: 0 };
+        const titleOffset = this.state.docked && !isThesisSubmissionPage ? 284 : 0;
         const isIndex = this.props.history.location.pathname === '/';
         const isAdminPage = () => {
             return window?.location?.pathname?.startsWith('/admin') || false;
@@ -333,8 +333,8 @@ export class AppClass extends PureComponent {
                             <Grid
                                 item
                                 xs
-                                sx={{
-                                    ...titleStyle,
+                                style={{
+                                    paddingLeft: titleOffset,
                                     whiteSpace: 'nowrap',
                                     overflow: 'hidden',
                                     textOverflow: 'ellipsis',
