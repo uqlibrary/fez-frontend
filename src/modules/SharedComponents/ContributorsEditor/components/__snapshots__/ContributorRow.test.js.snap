@@ -534,7 +534,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
@@ -618,7 +618,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
@@ -806,7 +806,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
@@ -905,7 +905,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
