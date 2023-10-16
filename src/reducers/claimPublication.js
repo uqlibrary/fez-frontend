@@ -12,6 +12,7 @@ export const initialState = {
     loadingPossiblePublicationsList: true,
     loadingPossibleCounts: true,
     publicationsClaimedInProgress: [],
+    fullPublicationToClaimLoading: true,
 };
 
 const handlers = {

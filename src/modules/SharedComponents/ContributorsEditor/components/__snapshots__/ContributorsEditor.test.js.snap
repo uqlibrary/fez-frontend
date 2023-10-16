@@ -683,7 +683,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
           </li>
           <li
             aria-label="Select this contributor (test 2) to assign it as you"
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
@@ -1990,7 +1990,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
         >
           <li
             aria-label="Select this contributor (test 1) to assign it as you"
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
@@ -2440,7 +2440,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
           </li>
           <li
             aria-label="Select this contributor (test 2) to assign it as you"
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-te0nw5-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
