@@ -290,7 +290,7 @@ export const isValidDate = date => {
 };
 
 export const isDateEqualOrGreaterThan = (date, anotherDate, format = 'YYYY-MM-DD') =>
-    moment(moment(date).format(format)).isSameOrAfter(moment(anotherDate).format(format));
+    moment(date).isSameOrAfter(moment(anotherDate).format(format));
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
 
