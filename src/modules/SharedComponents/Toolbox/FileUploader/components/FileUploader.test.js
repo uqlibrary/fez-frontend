@@ -6,6 +6,8 @@ import locale from '../locale';
 import { render, WithReduxStore, fireEvent, waitFor, within } from 'test-utils';
 
 import * as Hook from 'hooks/useWidth';
+import moment from 'moment';
+import { GENERIC_DATE_FORMAT } from '../../../../../config/general';
 
 const getProps = (testProps = {}) => ({
     clearFileUpload: testProps.clearFileUpload || jest.fn(),
@@ -532,11 +534,42 @@ describe('Component FileUploader', () => {
         fireEvent.click(getByRole('option', { name: 'Open Access' }));
 
         fireEvent.change(within(getByTestId('dsi-embargo-date-1-input')).getByRole('textbox'), {
-            target: { value: '01/01/2017' },
+            target: { value: moment().format(GENERIC_DATE_FORMAT) },
         });
 
         fireEvent.click(getByTestId('terms-and-conditions-input'));
         expect(onChangeFn).toHaveBeenCalledWith(expect.objectContaining({ isValid: true }));
+    });
+
+    it('should return false on if any file is open access with invalid date selected and terms and conditions accepted', async () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByRole, getByText } = setup({ requireOpenAccessStatus: true, onChange: onChangeFn });
+
+        // drag and drop a file
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
+
+        await waitFor(() => getByText(/hello\.png/i));
+
+        fireEvent.mouseDown(getByTestId('dsi-open-access-0-select'));
+        fireEvent.click(getByRole('option', { name: 'Closed Access' }));
+
+        fireEvent.mouseDown(getByTestId('dsi-open-access-1-select'));
+        fireEvent.click(getByRole('option', { name: 'Open Access' }));
+
+        fireEvent.change(within(getByTestId('dsi-embargo-date-1-input')).getByRole('textbox'), {
+            target: { value: '01/01/1111' },
+        });
+
+        fireEvent.click(getByTestId('terms-and-conditions-input'));
+        expect(onChangeFn).toHaveBeenCalledWith(expect.objectContaining({ isValid: false }));
     });
 
     it('should return false on if access condition is not selected for any files', async () => {
