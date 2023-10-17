@@ -20,7 +20,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { default as locale } from 'locale/components';
-import { loadAuthorList } from 'actions';
+import { loadAuthorList, dismissAppAlert } from 'actions';
 import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/general';
 
@@ -67,6 +67,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     columns.current = getColumns();
 
     const [pageSize, setPageSize] = React.useState(20);
+
+    React.useEffect(() => {
+        return () => dispatch(dismissAppAlert());
+    }, [dispatch]);
 
     const {
         loadingText,

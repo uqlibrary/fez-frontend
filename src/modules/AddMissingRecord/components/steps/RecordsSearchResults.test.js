@@ -1,7 +1,7 @@
 import React from 'react';
 import RecordsSearchResults from './RecordsSearchResults';
 import { accounts } from 'mock/data/account';
-import { render, WithReduxStore, WithRouter, waitFor, fireEvent, cleanup } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, fireEvent } from 'test-utils';
 import { SEARCH_EXTERNAL_RECORDS_API } from 'repositories/routes';
 
 function setup(testProps = {}, renderMethod = render) {
@@ -26,7 +26,6 @@ describe('Search record results', () => {
 
     afterEach(() => {
         mockApi.reset();
-        // cleanup();
     });
 
     it('should render stepper and no results', () => {
@@ -186,7 +185,7 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
 
-            await waitFor(() => getByTestId('publication-citation-parent-UQ:795469'));
+            await waitFor(() => getByTestId('publication-citation-parent-UQ:795469'), { timeout: 2000, delay: 1000 });
 
             fireEvent.click(getByRole('button', { name: 'Claim this work' }));
 
