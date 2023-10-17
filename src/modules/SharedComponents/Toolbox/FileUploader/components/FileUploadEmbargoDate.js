@@ -42,7 +42,18 @@ export class FileUploadEmbargoDate extends PureComponent {
                     onChange={this._onChange}
                     disabled={this.props.disabled}
                     InputProps={inputProps}
-                    renderInput={params => <TextField {...params} variant="standard" />}
+                    renderInput={params => {
+                        return (
+                            <TextField
+                                {...params}
+                                variant="standard"
+                                inputProps={{
+                                    ...params.inputProps,
+                                    ...(params.error ? { style: { color: '#d32f2f' } } : {}),
+                                }}
+                            />
+                        );
+                    }}
                 />
             </LocalizationProvider>
         );
