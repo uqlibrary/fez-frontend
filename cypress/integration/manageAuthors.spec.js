@@ -19,7 +19,12 @@ context('manageAuthors', () => {
         cy.get('[role=button]')
             .contains('My works')
             .click();
-        cy.contains('Delete author').should('not.exist');
+        cy.contains('An author has been successfully deleted.').should('not.exist');
+        // nav back
+        cy.get('[role=button]')
+            .contains('Manage authors')
+            .click();
+        cy.contains('An author has been successfully deleted.').should('not.exist');
     });
 
     context('coverage', () => {

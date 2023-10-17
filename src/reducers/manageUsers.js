@@ -89,6 +89,17 @@ const handlers = {
         ...state,
         bulkUserDeleteMessages: action.payload,
     }),
+
+    [actions.USER_CLEAR_ALERTS]: state => ({
+        ...state,
+        userAddSuccess: false,
+        userAddError: null,
+        userListItemUpdateSuccess: false,
+        userListItemUpdateError: null,
+        userListItemDeleteSuccess: false,
+        userListItemDeleteError: null,
+        bulkUserDeleteMessages: null,
+    }),
 };
 
 export default function manageUsersReducer(state = initialState, action) {
