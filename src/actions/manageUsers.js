@@ -1,4 +1,5 @@
 import {
+    APP_ALERT_HIDE,
     BULK_USER_ITEMS_DELETE_FAILED,
     BULK_USER_ITEMS_DELETE_SUCCESS,
     BULK_USER_ITEMS_DELETING,
@@ -9,6 +10,7 @@ import {
     USER_ADD_FAILED,
     USER_ADD_SUCCESS,
     USER_ADDING,
+    USER_CLEAR_ALERTS,
     USER_ITEM_DELETE_FAILED,
     USER_ITEM_DELETE_SUCCESS,
     USER_ITEM_DELETING,
@@ -202,5 +204,11 @@ export function checkForExistingUser(search, searchField, id, validation, asyncE
 
                 return Promise.reject(e);
             });
+    };
+}
+export function clearUserAlerts() {
+    return dispatch => {
+        dispatch({ type: USER_CLEAR_ALERTS });
+        dispatch({ type: APP_ALERT_HIDE });
     };
 }

@@ -19,6 +19,7 @@ import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_USER_SUCCESS } from 'config/general';
 import UserDetailsRow from './partials/UserDetailsRow';
 import UserDetailsHeader from './partials/UserDetailsHeader';
+import { clearAlerts } from './helpers';
 
 export const getColumns = () => {
     return [
@@ -40,6 +41,12 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     columns.current = getColumns();
 
     const [pageSize, setPageSize] = React.useState(20);
+
+    React.useEffect(() => {
+        return () => {
+            clearAlerts(dispatch);
+        };
+    }, [dispatch]);
 
     const {
         loadingText,

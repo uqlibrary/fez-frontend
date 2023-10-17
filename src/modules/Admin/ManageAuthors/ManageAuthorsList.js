@@ -20,9 +20,10 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { default as locale } from 'locale/components';
-import { loadAuthorList, dismissAppAlert } from 'actions';
+import { loadAuthorList } from 'actions';
 import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/general';
+import { clearAlerts } from './helpers';
 
 export const getColumns = () => {
     const {
@@ -69,7 +70,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     const [pageSize, setPageSize] = React.useState(20);
 
     React.useEffect(() => {
-        return () => dispatch(dismissAppAlert());
+        return () => clearAlerts(dispatch);
     }, [dispatch]);
 
     const {
