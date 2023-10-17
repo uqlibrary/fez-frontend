@@ -6,6 +6,7 @@ import { GENERIC_DATE_FORMAT } from 'config/general';
 import TextField from '@mui/material/TextField';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { red } from '@mui/material/colors';
 
 export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
@@ -49,7 +50,8 @@ export class FileUploadEmbargoDate extends PureComponent {
                                 variant="standard"
                                 inputProps={{
                                     ...params.inputProps,
-                                    ...(params.error ? { style: { color: '#d32f2f' } } : {}),
+                                    // as per docs https://mui.com/material-ui/customization/how-to-customize/#the-sx-prop
+                                    ...(params.error ? { sx: { color: red[700] } } : {}),
                                 }}
                             />
                         );

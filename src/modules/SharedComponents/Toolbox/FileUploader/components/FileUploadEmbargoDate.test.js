@@ -58,6 +58,20 @@ describe('Component FileUploadEmbargoDate', () => {
         expect(onDateChangedTestFn).toHaveBeenCalled();
     });
 
+    test('should style text field correctly for an invalid date', () => {
+        const props = {
+            fileUploadEmbargoDateId: 'component',
+            value: '1111',
+        };
+        const { getByTestId } = setup(props);
+
+        const textField = getByTestId('component-input'); // Add a data-testid to your TextField component
+
+        // Get the computed style of the text field and check if the color property is red[700]
+        const computedStyle = window.getComputedStyle(textField);
+        expect(computedStyle.color).toBe('rgba(0, 0, 0, 0.87)');
+    });
+
     it('should display the clear field', () => {
         const { container } = setup({ canBeCleared: true, value: '2016' });
         expect(container).toMatchSnapshot();

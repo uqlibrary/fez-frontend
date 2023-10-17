@@ -6,14 +6,14 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root FileUploadEmbargoDate-input-5 MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root FileUploadEmbargoDate-input-6 MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
       <input
         aria-invalid="false"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id="mui-5"
+        id="mui-6"
         placeholder="dd/mm/yyyy"
         type="tel"
         value="01/01/2016"
