@@ -199,9 +199,9 @@ export const ContributorRow = ({
     const listClasses = {
         ...classes.listItem,
         ...(required && classes.highlighted),
-        ...(contributor.selected && classes.rowSelected(theme)),
         ...(contributor.disabled && classes.disabledListItem),
         ...(canEdit && parseInt(contributor.uqIdentifier, 10) && classes.contributorLinked),
+        ...(contributor.selected && classes.rowSelected(theme)),
     };
     return (
         <Fragment>
