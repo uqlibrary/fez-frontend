@@ -129,7 +129,7 @@ export default class ThesisForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             canEdit
-                            forceSelectable
+                            // forceSelectable
                             hideUqIDFields
                             contributorEditorId="supervisors"
                             required

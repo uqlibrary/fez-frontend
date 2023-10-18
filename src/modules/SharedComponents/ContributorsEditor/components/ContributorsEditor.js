@@ -94,6 +94,7 @@ export class ContributorsEditor extends PureComponent {
     };
 
     addContributor = contributor => {
+        console.log('Adding a contributor', contributor);
         const index =
             this.state.contributorIndexSelectedToEdit !== null
                 ? this.state.contributorIndexSelectedToEdit
@@ -128,7 +129,7 @@ export class ContributorsEditor extends PureComponent {
             contributors: [
                 ...this.state.contributors.slice(0, index).map(contrib => ({
                     ...contrib,
-                    selected: isContributorACurrentAuthor ? false : contrib.selected,
+                    selected: contrib.selected,
                     authorId:
                         isContributorACurrentAuthor && contrib.authorId === this.props.author.aut_id
                             ? null
@@ -138,13 +139,13 @@ export class ContributorsEditor extends PureComponent {
                     ...contributor,
                     disabled:
                         this.props.editMode && !isContributorACurrentAuthor && !!parseInt(contributor.uqIdentifier, 10),
-                    selected: !this.props.editMode && isContributorACurrentAuthor,
+                    selected: contributor.selected,
                     authorId: isContributorACurrentAuthor ? this.props.author.aut_id : null,
                     required: contributor.required || false,
                 },
                 ...this.state.contributors.slice(index + 1).map(contrib => ({
                     ...contrib,
-                    selected: isContributorACurrentAuthor ? false : contrib.selected,
+                    selected: contrib.selected,
                     authorId:
                         isContributorACurrentAuthor && contrib.authorId === this.props.author.aut_id
                             ? null
@@ -219,11 +220,11 @@ export class ContributorsEditor extends PureComponent {
     };
 
     selectContributor = index => {
-        this.setState(prevState => ({
-            contributors: prevState.contributors.map((contributor, itemIndex) => ({
-                ...contributor,
-                selected: index === itemIndex,
-            })),
+        this.setState(() => ({
+            // contributors: prevState.contributors.map((contributor, itemIndex) => ({
+            //     ...contributor,
+            //     // selected: index === itemIndex,
+            // })),
             contributorIndexSelectedToEdit: index,
         }));
     };
