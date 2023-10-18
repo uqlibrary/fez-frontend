@@ -303,7 +303,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
         >
           <li
             aria-label="Select this contributor (Researcher, J) to assign it as you"
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-4rhcmb-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1jmcy1d-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
