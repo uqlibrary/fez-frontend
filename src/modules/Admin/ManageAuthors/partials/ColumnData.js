@@ -1,23 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Typography from '@mui/material/Typography';
+
 import Copy from '@mui/icons-material/FileCopyOutlined';
 import Snackbar from '@mui/material/Snackbar';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
 import InputAdornment from '@mui/material/InputAdornment';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles(() => ({
-    columnData: {
-        fontSize: 14,
-        fontWeight: 400,
-    },
-}));
 
 export const ColumnData = ({ columnDataId, data, copiable }) => {
-    const classes = useStyles();
     const [copied, setCopied] = React.useState(false);
 
     const handleCopy = event => {
@@ -35,7 +26,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                 inputProps={{
                     'data-testid': columnDataId,
                 }}
-                className={classes.columnData}
+                sx={{ fontSize: '14px', fontWeight: 400 }}
                 value={!!data ? data : ''}
                 readOnly
                 {...(!!copiable

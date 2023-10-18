@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import { default as global } from 'locale/global';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import { general } from 'config';
 import { parseHtmlToJSX } from 'helpers/general';
 import {
@@ -16,38 +16,27 @@ import {
     DOCUMENT_TYPE_RESEARCH_REPORT,
 } from 'config/general';
 
-const styles = theme => ({
-    gridRow: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    },
-    richTextParagraphFix: {
-        '& p:first-of-type': {
-            marginTop: 0,
-        },
-    },
-    containerPadding: {
-        padding: `${theme.spacing(1)} 0`,
-        [theme.breakpoints.up('sm')]: {
-            padding: theme.spacing(1),
-        },
-    },
-});
-
-export class NtroDetailsClass extends PureComponent {
+export class NtroDetails extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object,
         account: PropTypes.object,
     };
 
-    ViewNtroRow = ({ heading, subheading, className, data, rowId }) => (
-        <div className={this.props.classes.containerPadding}>
-            <Grid container spacing={2} padding={0} className={this.props.classes.gridRow} alignItems="flex-start">
+    ViewNtroRow = ({ heading, subheading, sx = {}, data, rowId }) => (
+        <Box sx={theme => ({ padding: { xs: `${theme.spacing(1)} 0`, sm: theme.spacing(1) } })}>
+            <Grid
+                container
+                spacing={2}
+                padding={0}
+                sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                alignItems="flex-start"
+            >
                 <Grid item xs={12} sm={3} data-testid={`${rowId}-label`}>
                     <Typography
                         variant="body2"
                         component={'span'}
-                        classes={{ root: this.props.classes.header }}
+                        classes={{ root: this.props.classes?.header }}
                         data-testid={`${rowId}-label-0`}
                     >
                         {heading}
@@ -56,20 +45,20 @@ export class NtroDetailsClass extends PureComponent {
                         <Typography
                             variant="caption"
                             component={'span'}
-                            classes={{ root: this.props.classes.header }}
+                            classes={{ root: this.props.classes?.header }}
                             data-testid={`${rowId}-label-1`}
                         >
                             {subheading}
                         </Typography>
                     )}
                 </Grid>
-                <Grid item xs={12} sm={9} className={this.props.classes.data}>
-                    <Typography variant="body2" component={'span'} className={className} data-testid={rowId}>
+                <Grid item xs={12} sm={9}>
+                    <Typography variant="body2" component={'span'} sx={{ ...sx }} data-testid={rowId}>
                         {data}
                     </Typography>
                 </Grid>
             </Grid>
-        </div>
+        </Box>
     );
 
     render() {
@@ -134,7 +123,11 @@ export class NtroDetailsClass extends PureComponent {
                             ) {
                                 return (
                                     <this.ViewNtroRow
-                                        className={this.props.classes.richTextParagraphFix}
+                                        sx={{
+                                            '& p:first-of-type': {
+                                                marginTop: 0,
+                                            },
+                                        }}
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
                                         subheading={
@@ -167,7 +160,11 @@ export class NtroDetailsClass extends PureComponent {
                     {(!!publication.rek_formatted_abstract || !!publication.rek_description) &&
                         (!!publication.rek_formatted_abstract ? (
                             <this.ViewNtroRow
-                                className={this.props.classes.richTextParagraphFix}
+                                sx={{
+                                    '& p:first-of-type': {
+                                        marginTop: 0,
+                                    },
+                                }}
                                 heading={locale.viewRecord.headings.NTRO.ntroAbstract}
                                 data={parseHtmlToJSX(publication.rek_formatted_abstract)}
                                 rowId="rek-formatted-abstract"
@@ -339,6 +336,4 @@ export class NtroDetailsClass extends PureComponent {
     }
 }
 
-const StyledNtroDetailsClass = withStyles(styles, { withTheme: true })(NtroDetailsClass);
-const NtroDetails = props => <StyledNtroDetailsClass {...props} />;
 export default NtroDetails;

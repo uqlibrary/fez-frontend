@@ -1,6 +1,6 @@
 import React from 'react';
 import MyEditorialAppointmentsList from './MyEditorialAppointmentsList';
-import { render, fireEvent, act, waitFor, WithReduxStore } from 'test-utils';
+import { render, fireEvent, act, waitFor, WithReduxStore, createMatchMedia, within } from 'test-utils';
 
 import { default as locale } from 'locale/components';
 
@@ -77,7 +77,6 @@ describe('MyEditorialAppointmentsList', () => {
         const { getByTestId, getByText } = setup({
             list: [],
         });
-
         fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
 
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
@@ -290,14 +289,17 @@ describe('MyEditorialAppointmentsList', () => {
 
         fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-delete-this-editorial-appointment'));
 
-        act(() => {
+        await act(() => {
             fireEvent.click(getByTestId('my-editorial-appointments-delete-save'));
         });
+        await act(async () => {
+            // coverage: allow time for the promise's timeout to update state
+            await new Promise(res => setTimeout(res, 1100));
+        });
+        const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
 
-        // const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
-
-        // expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
-        // expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Editor');
+        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Editor');
     });
 
     it('should display "Current" for "eap_end_year" column if the year is same as current year', () => {
@@ -357,5 +359,42 @@ describe('MyEditorialAppointmentsList', () => {
         // expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
         // expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
         // expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
+    });
+
+    describe('coverage', () => {
+        beforeEach(() => {
+            window.matchMedia = createMatchMedia(800);
+        });
+        it('should show mobile cell style', () => {
+            const { getByTestId } = setup({
+                list: [
+                    {
+                        eap_id: 1,
+                        eap_journal_name: 'test',
+                        eap_jnl_id: 1234,
+                        eap_role_cvo_id: '454148',
+                        eap_start_year: '2006',
+                        eap_end_year: '2026',
+                        eap_role_name: 'Guest Editor',
+                    },
+                ],
+            });
+            const row = getByTestId('my-editorial-appointments-list-row-0');
+            expect(
+                within(row)
+                    .getByText('test')
+                    .closest('td'),
+            ).toHaveStyle('width: 100%');
+            expect(
+                within(row)
+                    .getByText('test')
+                    .closest('td'),
+            ).toHaveStyle('display: block');
+            expect(
+                within(row)
+                    .getByText('test')
+                    .closest('td'),
+            ).toHaveStyle('box-sizing: border-box');
+        });
     });
 });

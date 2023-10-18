@@ -47,7 +47,7 @@ exports[`FormViewToggler component should render default view 1`] = `
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-1 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
           data-testid="KeyboardIcon"
           focusable="false"
           role="img"
@@ -117,7 +117,7 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-2 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
           data-testid="KeyboardIcon"
           focusable="false"
           role="img"

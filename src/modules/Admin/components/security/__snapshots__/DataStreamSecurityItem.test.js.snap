@@ -3,7 +3,7 @@
 exports[`DataStreamSecurityItem component should render default view with inherited security 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 dataStreamFileName css-y6fwcd-MuiGrid2-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1f8i35a-MuiGrid2-root"
   >
     <a
       class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
@@ -90,7 +90,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
 exports[`DataStreamSecurityItem component should render default view with overridden security 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 dataStreamFileName css-y6fwcd-MuiGrid2-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1f8i35a-MuiGrid2-root"
   >
     <a
       class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
@@ -177,7 +177,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
 exports[`DataStreamSecurityItem component should render view for a subsequent file 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 dataStreamFileName css-y6fwcd-MuiGrid2-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-1f8i35a-MuiGrid2-root"
   >
     <a
       class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"

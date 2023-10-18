@@ -246,13 +246,15 @@ describe('Search Journals Facets component', () => {
             '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing';
         const path = pathConfig.journals.search;
         const testHistory = createMemoryHistory({ initialEntries: [path] });
-        testHistory.push({
-            path,
-            search: testQueryPart,
-            state: {
-                source: 'code',
-            },
-        });
+        act(() =>
+            testHistory.push({
+                path,
+                search: testQueryPart,
+                state: {
+                    source: 'code',
+                },
+            }),
+        );
 
         const mockActiveFiltersRef = jest.spyOn(hooks, 'useActiveFacetFilters');
         const nestedClearButtonId = 'clear-facet-filter-nested-item';
@@ -269,13 +271,15 @@ describe('Search Journals Facets component', () => {
             'Listed in': ['CWTS'],
         });
 
-        testHistory.push({
-            path,
-            search: testQueryPartNoKeywords,
-            state: {
-                source: 'code',
-            },
-        });
+        act(() =>
+            testHistory.push({
+                path,
+                search: testQueryPartNoKeywords,
+                state: {
+                    source: 'code',
+                },
+            }),
+        );
 
         // Probably a bug in the codebase, but right now the custom hook will be called twice at this point
         // due to rerender and we're only interested in the second call to determine active facets have been cleared

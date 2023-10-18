@@ -3,10 +3,10 @@
 exports[`Component FileUploadTermsAndConditions should render checked if terms and conditions accepted 1`] = `
 <div>
   <label
-    class="MuiFormControlLabel-root FileUploadTermsAndConditions-root-5 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-7 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-7 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked FileUploadTermsAndConditions-checkboxChecked-8 MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-7 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2capx-MuiButtonBase-root-MuiCheckbox-root"
     >
       <input
         checked=""
@@ -33,7 +33,7 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
       />
     </span>
     <p
-      class="MuiTypography-root FileUploadTermsAndConditions-label-6 MuiTypography-body1 css-1e55ibb-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1qz58uz-MuiTypography-root"
     />
   </label>
 </div>
@@ -42,10 +42,10 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
 exports[`Component FileUploadTermsAndConditions should render default view 1`] = `
 <div>
   <label
-    class="MuiFormControlLabel-root FileUploadTermsAndConditions-root-1 MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root FileUploadTermsAndConditions-checkboxRoot-3 MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2capx-MuiButtonBase-root-MuiCheckbox-root"
     >
       <input
         class="PrivateSwitchBase-input css-1m9pwf3"
@@ -71,7 +71,7 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
       />
     </span>
     <p
-      class="MuiTypography-root FileUploadTermsAndConditions-label-2 MuiTypography-body1 css-v0lc22-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-hpta27-MuiTypography-root"
     />
   </label>
 </div>

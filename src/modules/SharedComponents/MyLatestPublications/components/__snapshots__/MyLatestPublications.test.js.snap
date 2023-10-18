@@ -1,17 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component MyLatestPublications should have a proper style generator 1`] = `
-Object {
-  "blueButton": Object {
-    "&:hover": Object {
-      "backgroundColor": "test2",
-    },
-    "backgroundColor": "test1",
-    "color": "test3",
-  },
-}
-`;
-
 exports[`Component MyLatestPublications should render latest publications 1`] = `
 <div>
   <div
@@ -23,6 +11,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
       class="publicationCitation"
     >
       <div
+        class="css-0"
         data-testid="publication-citation-parent-UQ:678947"
         id="publication-citation-parent-UQ:678947"
       >
@@ -40,7 +29,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-4 css-1uywuy6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:678947"
@@ -50,7 +39,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-5 css-1idn90j-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -58,294 +47,207 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationAuthors"
                   >
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Betts, Joshua A.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Moradi Marjaneh, Mahdi
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Al-Ejeh, Fares
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Lim, Yi Chieh
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Shi, Wei
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Sivakumaran, Haran
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       Tropee, Romain
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Patch, Ann.-Marie
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Clark, Michael B.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-9"
                     >
-                      
                       Bartonicek, Nenad
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-10"
                     >
-                      
                       Wiegmans, Adrian P.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-11"
                     >
-                      
                       Hillman, Kristine M.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-12"
                     >
-                      
                       Kaufmann, Susanne
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-13"
                     >
-                      
                       Bain, Amanda L.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-14"
                     >
-                      
                       Gloss, Brian S.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-15"
                     >
-                      
                       Crawford, Joanna
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-16"
                     >
-                      
                       Kazakoff, Stephen
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-17"
                     >
-                      
                       Wani, Shivangi
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-18"
                     >
-                      
                       Wen Shu W.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-19"
                     >
-                      
                       Day, Bryan
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-20"
                     >
-                      
                       Moller, Andreas
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-21"
                     >
-                      
                       Cloonan, Nicole
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-22"
                     >
-                      
                       Pearson,John
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-23"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-24"
                     >
-                      
                       Mercer, Timothy R.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-25"
                     >
-                      
                       Waddell, Nicola
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-26"
                     >
-                      
                       Khanna,  Kum Kum
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-27"
                     >
-                      
                       Dray, Eloise
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-28"
                     >
-                      
                       Dinger, Marcel E.
-                      
                     </span>
                      and 2 more
                      
@@ -391,7 +293,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationPageRange"
                   >
-                    
                     <span
                       class="citationStartPage"
                     >
@@ -403,7 +304,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                     >
                       266
                     </span>
-                    
                   </span>
                   <span>
                     . 
@@ -413,7 +313,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-16"
+                      class="citationDoiLink css-1oqhn84"
                       data-analyticsid="citation-doi-link"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1016/j.ajhg.2017.07.007"
@@ -425,7 +325,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-15 css-i4bv87-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -447,8 +347,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-6 css-1wrgmsj-MuiGrid-root"
-                    style="flex-grow: 1;"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                   >
                     <div
                       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -458,7 +357,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-20"
+                          class="wosCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000406854800009"
@@ -472,14 +371,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-19"
+                            class="MuiBox-root css-19k1sqg"
                           >
                             0
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-21"
+                          class="scopusCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026769370%26origin%3Dinward"
@@ -493,14 +392,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-19"
+                            class="MuiBox-root css-19k1sqg"
                           >
                             0
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-22"
+                          class="altmetricCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/23460021"
@@ -514,14 +413,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-19"
+                            class="MuiBox-root css-19k1sqg"
                           >
                             3
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-23"
+                          class="googleCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Long%20noncoding%20RNAs%20CUPID1%20and%20CUPID2%20mediate%20breast%20cancer%20risk%20at%2011q13%20by%20modulating%20the%20response%20to%20DNA%20damage"
@@ -554,7 +453,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-7 css-a5rdam-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -577,13 +476,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-3 css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
       />
     </div>
     <div
       class="publicationCitation"
     >
       <div
+        class="css-0"
         data-testid="publication-citation-parent-UQ:792104"
         id="publication-citation-parent-UQ:792104"
       >
@@ -601,7 +501,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-4 css-1uywuy6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:792104"
@@ -611,7 +511,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-5 css-1idn90j-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
                 <div
                   class="citationContent citationDesign"
@@ -619,25 +519,18 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationEditors"
                   >
-                    
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-contributor-0"
                     >
-                      
                       M Brow
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-contributor-1"
                     >
-                      
                       N Brow
-                      
                     </span>
                     , 
                      and 
@@ -645,11 +538,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       class="citationAuthor"
                       data-testid="rek-contributor-2"
                     >
-                      
                       J Brow
-                      
                     </span>
-                    
                      ed. 
                   </span>
                   <span
@@ -713,8 +603,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-6 css-1wrgmsj-MuiGrid-root"
-                    style="flex-grow: 1;"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                   >
                     <div
                       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -724,7 +613,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-26"
+                          class="googleCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Conf%20A%20proceedings"
@@ -757,7 +646,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-7 css-a5rdam-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -780,13 +669,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-3 css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
       />
     </div>
     <div
       class="publicationCitation"
     >
       <div
+        class="css-0"
         data-testid="publication-citation-parent-UQ:792110"
         id="publication-citation-parent-UQ:792110"
       >
@@ -804,7 +694,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-4 css-1uywuy6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:792110"
@@ -814,7 +704,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-5 css-1idn90j-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
                 <div
                   class="citationContent citationBook"
@@ -822,26 +712,19 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationAuthors"
                   >
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       V. Asai
-                      
                     </span>
-                    
                      and 
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       M Brown
-                      
                     </span>
-                    
                      
                   </span>
                   <span
@@ -887,8 +770,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-6 css-1wrgmsj-MuiGrid-root"
-                    style="flex-grow: 1;"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                   >
                     <div
                       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -898,7 +780,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-28"
+                          class="googleCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Testing%20book%20with%20cache"
@@ -931,7 +813,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-7 css-a5rdam-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -954,13 +836,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-3 css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
       />
     </div>
     <div
       class="publicationCitation"
     >
       <div
+        class="css-0"
         data-testid="publication-citation-parent-UQ:792111"
         id="publication-citation-parent-UQ:792111"
       >
@@ -978,7 +861,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-4 css-1uywuy6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:792111"
@@ -988,7 +871,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-5 css-1idn90j-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
                 <div
                   class="citationContent citationConferencePaper"
@@ -996,16 +879,12 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationAuthors"
                   >
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       M Brown
-                      
                     </span>
-                    
                      
                   </span>
                   <span
@@ -1061,8 +940,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-6 css-1wrgmsj-MuiGrid-root"
-                    style="flex-grow: 1;"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                   >
                     <div
                       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -1072,7 +950,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-30"
+                          class="googleCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Conference%20paper%20with%20caching"
@@ -1105,7 +983,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-7 css-a5rdam-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -1128,13 +1006,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-3 css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
       />
     </div>
     <div
       class="publicationCitation"
     >
       <div
+        class="css-0"
         data-testid="publication-citation-parent-UQ:396321"
         id="publication-citation-parent-UQ:396321"
       >
@@ -1152,7 +1031,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-4 css-1uywuy6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:396321"
@@ -1162,7 +1041,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-5 css-1idn90j-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -1170,174 +1049,123 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationAuthors"
                   >
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-0"
                     >
-                      
                       Milevskiy, Michael J. G.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-1"
                     >
-                      
                       Al-Ejeh, Fares
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-2"
                     >
-                      
                       Saunus, Jodi M.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-3"
                     >
-                      
                       Northwood, Korinne S.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-4"
                     >
-                      
                       Bailey, Peter J.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-5"
                     >
-                      
                       Betts, Joshua A.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-6"
                     >
-                      
                       McCart Reed, Amy E.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-7"
                     >
-                      
                       Nephew, Kenneth P.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-8"
                     >
-                      
                       Stone, Andrew
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-9"
                     >
-                      
                       Gee, Julia M. W.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-10"
                     >
-                      
                       Dowhan, Dennis H.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-11"
                     >
-                      
                       Dray, Eloise
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-12"
                     >
-                      
                       Shewan, Annette M.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-13"
                     >
-                      
                       French, Juliet D.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-14"
                     >
-                      
                       Edwards, Stacey L.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-15"
                     >
-                      
                       Clark, Susan J.
-                      
                     </span>
                     , 
-                    
                     <span
                       class="citationAuthor"
                       data-testid="rek-author-16"
                     >
-                      
                       Lakhani, Sunil R.
-                      
                     </span>
                     , 
                      and 
@@ -1345,11 +1173,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       class="citationAuthor"
                       data-testid="rek-author-17"
                     >
-                      
                       Brown, Melissa A.
-                      
                     </span>
-                    
                      
                   </span>
                   <span
@@ -1393,7 +1218,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationPageRange"
                   >
-                    
                     <span
                       class="citationStartPage"
                     >
@@ -1405,7 +1229,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                     >
                       3283
                     </span>
-                    
                   </span>
                   <span>
                     . 
@@ -1415,7 +1238,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-14 makeStyles-externalLink-32"
+                      class="citationDoiLink css-1oqhn84"
                       data-analyticsid="citation-doi-link"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1093/hmg/ddw177"
@@ -1427,7 +1250,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-15 css-i4bv87-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -1449,8 +1272,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-6 css-1wrgmsj-MuiGrid-root"
-                    style="flex-grow: 1;"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                   >
                     <div
                       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -1460,7 +1282,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-33"
+                          class="wosCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000393077300011"
@@ -1474,14 +1296,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-19"
+                            class="MuiBox-root css-19k1sqg"
                           >
                             23
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-34"
+                          class="scopusCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85014391875%26origin%3Dinward"
@@ -1495,14 +1317,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-19"
+                            class="MuiBox-root css-19k1sqg"
                           >
                             26
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-35"
+                          class="altmetricCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/9271343"
@@ -1516,14 +1338,14 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-19"
+                            class="MuiBox-root css-19k1sqg"
                           >
                             3
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-18 makeStyles-externalLink-14 makeStyles-externalLink-36"
+                          class="googleCitationCount css-si3g8d"
                           data-analyticsid="citation-count-link"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Long-range%20regulators%20of%20the%20lncRNA%20HOTAIR%20enhance%20its%20prognostic%20potential%20in%20breast%20cancer"
@@ -1562,18 +1384,18 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               data-testid="rek-content-indicator"
               id="rek-content-indicator"
             >
-              <span
-                class="PublicationCitation-contentIndicatorTitle-8"
+              <div
+                class="MuiBox-root css-w4835h"
               >
                 Content Indicators
                 :
-              </span>
+              </div>
               Scholarship of Teaching and Learning, Protocol
             </span>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 PublicationCitation-buttonMargin-7 css-a5rdam-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
@@ -1596,7 +1418,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-3 css-9mgopn-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
       />
     </div>
   </div>
@@ -1610,7 +1432,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium blueButton css-hlhs94-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium css-3x0jif-MuiButtonBase-root-MuiButton-root"
         tabindex="0"
         type="button"
       >

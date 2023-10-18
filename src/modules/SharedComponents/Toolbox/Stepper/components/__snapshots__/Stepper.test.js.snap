@@ -3,13 +3,13 @@
 exports[`Add record stepper tests should properly detect if component needs update 1`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
   >
     <div
       class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
@@ -50,7 +50,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
@@ -101,7 +101,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -148,13 +148,13 @@ exports[`Add record stepper tests should properly detect if component needs upda
 exports[`Add record stepper tests should properly detect if component needs update 2`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
   >
     <div
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
@@ -205,7 +205,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -256,7 +256,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -303,13 +303,13 @@ exports[`Add record stepper tests should properly detect if component needs upda
 exports[`Add record stepper tests should properly detect if component needs update 3`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
   >
     <div
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
@@ -360,7 +360,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -407,13 +407,13 @@ exports[`Add record stepper tests should properly detect if component needs upda
 exports[`Add record stepper tests should render steps with specific active step 1`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
   >
     <div
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
@@ -464,7 +464,7 @@ exports[`Add record stepper tests should render steps with specific active step 
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -515,7 +515,7 @@ exports[`Add record stepper tests should render steps with specific active step 
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -562,13 +562,13 @@ exports[`Add record stepper tests should render steps with specific active step 
 exports[`Add record stepper tests should render steps with specific active step 2`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
   >
     <div
       class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
@@ -609,7 +609,7 @@ exports[`Add record stepper tests should render steps with specific active step 
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
@@ -660,7 +660,7 @@ exports[`Add record stepper tests should render steps with specific active step 
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
@@ -707,13 +707,13 @@ exports[`Add record stepper tests should render steps with specific active step 
 exports[`Add record stepper tests should render steps with specific active step 3`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
   >
     <div
       class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
@@ -754,7 +754,7 @@ exports[`Add record stepper tests should render steps with specific active step 
       class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
@@ -795,7 +795,7 @@ exports[`Add record stepper tests should render steps with specific active step 
       class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
       >
         <span
           class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"

@@ -16,26 +16,10 @@ import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
 import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
-import withStyles from '@mui/styles/withStyles';
-import Grid from '@mui/material/Unstable_Grid2';
-import Typography from '@mui/material/Typography';
 
-const styles = theme => ({
-    gridRow: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    },
-    list: {
-        listStyleType: 'none',
-        padding: 0,
-        margin: 0,
-    },
-    containerPadding: {
-        padding: `${theme.spacing(1)} 0`,
-        [theme.breakpoints.up('sm')]: {
-            padding: theme.spacing(1),
-        },
-    },
-});
+import Grid from '@mui/material/Unstable_Grid2';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 export const renderAuthors = (publication, props = {}) => {
     const componentProps = {
@@ -59,43 +43,45 @@ export const formatPublicationDate = (publicationDate, displayTypeLookup) => {
     return formatDate(publicationDate, viewRecordsConfig.publicationDateFormat[displayTypeLookup]);
 };
 
-export class AdditionalInformationClass extends PureComponent {
+export class AdditionalInformation extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object,
         isNtro: PropTypes.bool,
     };
 
     renderRow = (heading, data, index, field) => {
         const labelTestId = `${field.replace(/_/g, '-')}-label`;
         return (
-            <div className={this.props.classes.containerPadding} key={index}>
+            <Box
+                sx={theme => ({
+                    padding: { xs: `${theme.spacing(1)} 0`, sm: 1 },
+                })}
+                key={index}
+            >
                 <Grid
                     container
                     spacing={2}
                     padding={0}
                     key={`additional-info-${heading}`}
-                    className={this.props.classes.gridRow}
+                    sx={{
+                        borderBottom: '1px solid',
+                        borderBottomColor: 'secondary.light',
+                    }}
                     alignItems="flex-start"
                 >
                     <Grid item xs={12} sm={3}>
-                        <Typography
-                            variant="body2"
-                            component={'span'}
-                            classes={{ root: this.props.classes.header }}
-                            data-testid={labelTestId}
-                        >
+                        <Typography variant="body2" component={'span'} data-testid={labelTestId}>
                             {heading}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm={9} className={this.props.classes.data}>
+                    <Grid item xs={12} sm={9}>
                         <Typography variant="body2" component={'span'}>
                             {data}
                         </Typography>
                     </Grid>
                 </Grid>
-            </div>
+            </Box>
         );
     };
 
@@ -110,7 +96,7 @@ export class AdditionalInformationClass extends PureComponent {
     renderList = (list, subkey, getLink) => {
         const testId = subkey.replace(/_/g, '-');
         return (
-            <ul key={subkey} className={this.props.classes.list}>
+            <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
                 {list.map((item, index) => (
                     <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
                         {(() => {
@@ -123,7 +109,7 @@ export class AdditionalInformationClass extends PureComponent {
                         })()}
                     </li>
                 ))}
-            </ul>
+            </Box>
         );
     };
 
@@ -448,6 +434,4 @@ export class AdditionalInformationClass extends PureComponent {
     }
 }
 
-const StyledAdditionalInformation = withStyles(styles, { withTheme: true })(AdditionalInformationClass);
-const AdditionalInformation = props => <StyledAdditionalInformation {...props} />;
 export default AdditionalInformation;

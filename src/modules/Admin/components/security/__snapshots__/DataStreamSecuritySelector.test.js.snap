@@ -9,10 +9,10 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 DataStreamSecuritySelector-dataStreamFileBlock-7 dataStreamFileBlock css-h296zj-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 css-mqdkjr-MuiGrid2-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 DataStreamSecuritySelector-dataStreamFileName-8 dataStreamFileName css-y6fwcd-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-10dv3g5-MuiGrid2-root"
       >
         <a
           class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
@@ -116,10 +116,10 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock css-h296zj-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 css-mqdkjr-MuiGrid2-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 DataStreamSecuritySelector-dataStreamFileName-2 dataStreamFileName css-y6fwcd-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-10dv3g5-MuiGrid2-root"
       >
         <a
           class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
@@ -214,10 +214,10 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 DataStreamSecuritySelector-dataStreamFileBlock-9 dataStreamFileBlock css-h296zj-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 css-mqdkjr-MuiGrid2-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 DataStreamSecuritySelector-dataStreamFileName-10 dataStreamFileName css-y6fwcd-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-10dv3g5-MuiGrid2-root"
       >
         <a
           class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"

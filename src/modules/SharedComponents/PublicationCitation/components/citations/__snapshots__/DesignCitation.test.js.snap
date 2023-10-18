@@ -8,26 +8,19 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Dickson, Michael
-        
       </span>
-      
        and 
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Francis, Mara
-        
       </span>
-      
        
     </span>
     <span
@@ -59,26 +52,19 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Dickson, Michael
-        
       </span>
-      
        and 
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Francis, Mara
-        
       </span>
-      
        
     </span>
     <span

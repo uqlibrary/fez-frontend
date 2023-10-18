@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
+
 import locale from 'locale/global';
 import Grid from '@mui/material/Grid';
 
-import makeStyles from '@mui/styles/makeStyles';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Tooltip from '@mui/material/Tooltip';
@@ -20,10 +22,7 @@ import { ContributorRowText } from './ContributorRowText';
 import { useConfirmationState, useWidth } from 'hooks';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
-export const useStyles = makeStyles(theme => ({
-    listContainer: {
-        padding: '0',
-    },
+const classes = {
     listItem: {
         borderLeft: '5px solid transparent',
         cursor: 'pointer',
@@ -38,52 +37,52 @@ export const useStyles = makeStyles(theme => ({
     highlighted: {
         borderLeft: '5px solid red',
     },
-    rowSelected: {
-        backgroundColor: `${(theme.palette.accent || /* istanbul ignore next */ {}).main} !important`,
+    rowSelected: theme => ({
+        backgroundColor: `${theme.palette.accent.main} !important`,
         '& svg': {
             color: 'white !important',
         },
-    },
-    selected: {
-        color: 'white !important',
-        fontWeight: theme.typography.fontWeightMedium,
-    },
-    hideIcon: {
-        display: 'none',
-    },
-    primary: {
-        fontSize: theme.typography.body2.fontSize,
-    },
-    identifierName: {
-        fontSize: theme.typography.caption.fontSize,
-        marginTop: 8,
-    },
-    identifierSubtitle: {
-        fontSize: theme.typography.caption.fontSize,
-    },
+    }),
     contributorLinked: {
-        color: theme.palette.primary.main,
-        backgroundColor: theme.palette.secondary.light,
+        color: 'primary.main',
+        backgroundColor: 'secondary.light',
         '& p': {
             fontWeight: 500,
         },
         '& svg': {
-            color: theme.palette.primary.main,
+            color: 'primary.main',
         },
     },
-    actionsContainer: {
-        display: 'flex',
-        [theme.breakpoints.up('md')]: {
-            marginLeft: 'auto',
-        },
-        [theme.breakpoints.down('md')]: {
-            width: '100%',
-            borderTopColor: '#ddd',
-            borderTopStyle: 'dashed',
-            borderTopWidth: 1,
-            marginTop: 10,
-            marginBottom: -8,
-        },
+    selected: {
+        color: 'white !important',
+        fontWeight: 'fontWeightMedium',
+    },
+
+    // styles below used in ContributorRowText
+    primary: {
+        fontSize: 'body2.fontSize',
+    },
+    identifierName: {
+        fontSize: 'caption.fontSize',
+        marginTop: 1,
+    },
+    identifierSubtitle: {
+        fontSize: 'caption.fontSize',
+    },
+};
+
+const StyledActionsContainer = styled('div')(({ theme }) => ({
+    display: 'flex',
+    [theme.breakpoints.up('md')]: {
+        marginLeft: 'auto',
+    },
+    [theme.breakpoints.down('md')]: {
+        width: '100%',
+        borderTopColor: '#ddd',
+        borderTopStyle: 'dashed',
+        borderTopWidth: '1px',
+        marginTop: '10px',
+        marginBottom: '-8px',
     },
 }));
 
@@ -116,7 +115,7 @@ export const ContributorRow = ({
     enableSelect,
     showRoleInput,
 }) => {
-    const classes = useStyles();
+    const theme = useTheme();
     const width = useWidth();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
@@ -189,7 +188,7 @@ export const ContributorRow = ({
         }
     };
 
-    const selectedClass = contributor.selected ? classes.selected : '';
+    const selectedClass = contributor.selected ? classes.selected : {};
 
     const ariaLabel =
         (!disabled &&
@@ -197,12 +196,13 @@ export const ContributorRow = ({
                 ''}`.trim()) ||
         '';
 
-    const listClasses = [classes.listItem];
-    required && listClasses.push(classes.highlighted);
-    contributor.selected && listClasses.push(classes.rowSelected);
-    contributor.disabled && listClasses.push(classes.disabledListItem);
-    canEdit && parseInt(contributor.uqIdentifier, 10) && listClasses.push(classes.contributorLinked);
-
+    const listClasses = {
+        ...classes.listItem,
+        ...(required && classes.highlighted),
+        ...(contributor.disabled && classes.disabledListItem),
+        ...(canEdit && parseInt(contributor.uqIdentifier, 10) && classes.contributorLinked),
+        ...(contributor.selected && classes.rowSelected(theme)),
+    };
     return (
         <Fragment>
             <ConfirmationBox
@@ -214,9 +214,7 @@ export const ContributorRow = ({
             />
             <ListItem
                 divider
-                classes={{
-                    root: listClasses.join(' '),
-                }}
+                sx={{ ...listClasses }}
                 onClick={_onSelect}
                 tabIndex={contributor.disabled || disabled ? -1 : 0}
                 onKeyDown={!contributor.disabled ? _onSelectKeyboard : () => {}}
@@ -224,8 +222,8 @@ export const ContributorRow = ({
                 id={`${contributorRowId}-${index}`}
                 data-testid={`${contributorRowId}-${index}`}
             >
-                <Grid container classes={{ container: classes.listContainer }} id="contributor-row">
-                    <ListItemIcon classes={{ root: selectedClass }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Grid container p={0} id="contributor-row">
+                    <ListItemIcon sx={{ display: { xs: 'none', sm: 'block' }, ...selectedClass }}>
                         {getRowIcon()}
                     </ListItemIcon>
 
@@ -241,8 +239,7 @@ export const ContributorRow = ({
                         contributorRowId={`${contributorRowId}-${index}`}
                     />
 
-                    <div
-                        className={classes.actionsContainer}
+                    <StyledActionsContainer
                         id={`${contributorRowId}-${index}-actions`}
                         data-testid={`${contributorRowId}-${index}-actions`}
                     >
@@ -262,7 +259,7 @@ export const ContributorRow = ({
                                     aria-label={moveUpHint}
                                     size="large"
                                 >
-                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
+                                    <KeyboardArrowUp sx={{ ...selectedClass }} />
                                 </IconButton>
                             </Tooltip>
                         )}
@@ -282,7 +279,7 @@ export const ContributorRow = ({
                                     aria-label={moveDownHint}
                                     size="large"
                                 >
-                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
+                                    <KeyboardArrowDown sx={{ ...selectedClass }} />
                                 </IconButton>
                             </Tooltip>
                         )}
@@ -302,7 +299,7 @@ export const ContributorRow = ({
                                     data-testid={`${contributorRowId}-${index}-edit`}
                                     size="large"
                                 >
-                                    <Edit classes={{ root: `${selectedClass}` }} />
+                                    <Edit sx={{ ...selectedClass }} />
                                 </IconButton>
                             </Tooltip>
                         )}
@@ -321,10 +318,10 @@ export const ContributorRow = ({
                                 data-testid={`${contributorRowId}-${index}-delete`}
                                 size="large"
                             >
-                                <Delete classes={{ root: `${selectedClass}` }} />
+                                <Delete sx={{ ...selectedClass }} />
                             </IconButton>
                         </Tooltip>
-                    </div>
+                    </StyledActionsContainer>
                 </Grid>
             </ListItem>
         </Fragment>

@@ -7,17 +7,16 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
     data-testid="confirmDialogBox"
   />
   <div
-    class="FileUploadRowDefaultView-row-3"
-    style="flex-grow: 1; padding: 4px;"
+    class="MuiBox-root css-moxgk8"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainer-9 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-10 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-up-0"
           data-testid="new-file-upload-up-0"
           disabled=""
@@ -87,7 +86,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root FileUploadRowDefaultView-placeholder-6 MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl FileUploadRowDefaultView-selector-4 css-ydg547-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
               aria-expanded="false"
@@ -126,7 +125,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required FileUploadRowDefaultView-error-8 css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1gwxeva-MuiFormHelperText-root"
             data-testid="dsi-open-access-0-helper-text"
             id="dsi-open-access-0-helper-text"
           >
@@ -145,7 +144,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-icon-2 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -181,10 +180,10 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 FileUploadRowDefaultView-upDownArrowContainerBottom-11 css-u78q51-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium FileUploadRowDefaultView-upDownArrow-10 css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="new-file-upload-down-0"
           data-testid="new-file-upload-down-0"
           id="new-file-upload-down-0"
@@ -219,10 +218,10 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
     data-testid="confirmDialogBox"
   />
   <ul
-    class="MuiList-root FileUploadRowMobileView-root-116 MuiList-padding css-h4y409-MuiList-root"
+    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
   >
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-117 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -257,7 +256,7 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
       </div>
     </li>
     <li
-      class="MuiListItem-root FileUploadRowMobileView-listItem-117 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
     >
       <div
         class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -342,7 +341,7 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
       class="MuiListItem-container css-oyakqy-MuiListItem-container"
     >
       <div
-        class="MuiListItem-root FileUploadRowMobileView-listItem-117 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-15z8t9h-MuiListItem-root"
       >
         <div
           class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
@@ -380,7 +379,7 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root FileUploadRowMobileView-secondaryAction-118 css-518kzi-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-inawym-MuiListItemSecondaryAction-root"
       >
         <span
           aria-label="Remove this file"

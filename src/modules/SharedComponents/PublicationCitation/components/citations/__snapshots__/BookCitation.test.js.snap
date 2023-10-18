@@ -8,34 +8,25 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Teesson, Maree
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Hall, Wayne
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Proudfoot, Heather
-        
       </span>
       , 
        and 
@@ -43,11 +34,8 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Degenhardt, Louisa
-        
       </span>
-      
        
     </span>
     <span
@@ -100,25 +88,18 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
     <span
       class="citationEditors"
     >
-      
-      
       <span
         class="citationAuthor"
         data-testid="rek-contributor-0"
       >
-        
         Smith, A
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-contributor-1"
       >
-        
         Smith, B
-        
       </span>
       , 
        and 
@@ -126,11 +107,8 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
         class="citationAuthor"
         data-testid="rek-contributor-2"
       >
-        
         Smith, C
-        
       </span>
-      
        ed.
     </span>
     <span
@@ -220,25 +198,18 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
     <span
       class="citationEditors"
     >
-      
-      
       <span
         class="citationAuthor"
         data-testid="rek-contributor-0"
       >
-        
         Smith, A
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-contributor-1"
       >
-        
         Smith, B
-        
       </span>
       , 
        and 
@@ -246,11 +217,8 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
         class="citationAuthor"
         data-testid="rek-contributor-2"
       >
-        
         Smith, C
-        
       </span>
-      
        ed.
     </span>
     <span

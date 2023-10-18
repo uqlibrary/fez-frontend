@@ -7,10 +7,10 @@ exports[`UnpublishedBufferCitationView test button click sets value should rende
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-      style="flex-grow: 1;"
+      style="flex-grow: 1; width: 100%;"
     >
-      <span
-        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      <div
+        class="MuiTypography-root MuiTypography-caption css-em36z4-MuiTypography-root"
       >
         <i>
           <span
@@ -23,7 +23,7 @@ exports[`UnpublishedBufferCitationView test button click sets value should rende
         <span
           class="citationDate empty"
         />
-      </span>
+      </div>
     </div>
   </div>
 </div>

@@ -3673,6 +3673,7 @@ export default {
         },
         manageUsers: {
             loadingText: 'Loading users',
+            title: 'User information',
             header: {
                 columns: {
                     id: {

@@ -13,7 +13,7 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
         class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation6 MuiSnackbarContent-root css-o3qg8z-MuiPaper-root-MuiSnackbarContent-root"
         direction="up"
         role="alert"
-        style="opacity: 0; transform: scale(0.75, 0.5625); transition: opacity 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 130ms cubic-bezier(0.4, 0, 0.2, 1) 65ms;"
+        style="opacity: 1; transform: scale(1, 1); transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
       >
         <div
           class="MuiSnackbarContent-message css-1exqwzz-MuiSnackbarContent-message"
@@ -30,7 +30,7 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-194g3cw-MuiSvgIcon-root"
                 data-testid="LinkIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -53,6 +53,14 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
       </div>
     </div>
   </div>
+</div>
+`;
+
+exports[`Component OfflineSnackbar renders back online snackbar 2`] = `
+<div>
+  <div
+    class="offlineSnackbar"
+  />
 </div>
 `;
 
@@ -94,7 +102,7 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vgc25c-MuiSvgIcon-root"
                 data-testid="LinkOffIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -118,37 +126,4 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
     </div>
   </div>
 </div>
-`;
-
-exports[`Component OfflineSnackbar should have a proper style generator 1`] = `
-Object {
-  "error": Object {
-    "color": "test2",
-  },
-  "success": Object {
-    "color": "test1",
-  },
-}
-`;
-
-exports[`Component OfflineSnackbar should have a proper style generator 2`] = `
-Object {
-  "error": Object {
-    "color": undefined,
-  },
-  "success": Object {
-    "color": undefined,
-  },
-}
-`;
-
-exports[`Component OfflineSnackbar should have a proper style generator 3`] = `
-Object {
-  "error": Object {
-    "color": undefined,
-  },
-  "success": Object {
-    "color": undefined,
-  },
-}
 `;

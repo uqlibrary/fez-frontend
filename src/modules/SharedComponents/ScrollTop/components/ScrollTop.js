@@ -1,24 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Fab from '@mui/material/Fab';
-import withStyles from '@mui/styles/withStyles';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-
-export const styles = () => ({
-    scrollTop: {
-        opacity: 0,
-        position: 'absolute',
-        right: 32,
-        bottom: 16,
-        '-webkit-transition': 'opacity 0.5s',
-        transition: 'opacity 0.3s',
-        '&hover:': {
-            '-webkit-transition': 'opacity 0.5s',
-            transition: 'opacity 0.3s',
-            opacity: 0.9,
-        },
-    },
-});
 
 /* istanbul ignore next */
 const scrollWindowToTop = event => {
@@ -26,7 +9,7 @@ const scrollWindowToTop = event => {
     document.getElementById('content-container').scrollTop = 0;
 };
 
-export const ScrollTop = ({ show, showAfter, classes }) => {
+export const ScrollTop = ({ show, showAfter }) => {
     /* istanbul ignore next */
     const scrollableContainer = document.getElementById('content-container');
     /* istanbul ignore next */
@@ -57,11 +40,23 @@ export const ScrollTop = ({ show, showAfter, classes }) => {
             <Fab
                 color="secondary"
                 aria-label="Scroll to top of page"
-                classes={{ root: classes.scrollTop }}
                 id="scrolltopbtn"
                 title="Scroll to top of page"
                 onClick={scrollWindowToTop}
-                sx={{ display: { xs: 'none', md: 'inline-flex' } }}
+                sx={{
+                    display: { xs: 'none', md: 'inline-flex' },
+                    opacity: 0,
+                    position: 'absolute',
+                    right: '32px',
+                    bottom: '16px',
+                    WebkitTransition: 'opacity 0.5s',
+                    transition: 'opacity 0.3s',
+                    '&hover:': {
+                        WebkitTransition: 'opacity 0.5s',
+                        transition: 'opacity 0.3s',
+                        opacity: 0.9,
+                    },
+                }}
             >
                 <ArrowUpwardIcon />
             </Fab>
@@ -74,7 +69,6 @@ export const ScrollTop = ({ show, showAfter, classes }) => {
 ScrollTop.propTypes = {
     show: PropTypes.bool,
     showAfter: PropTypes.number,
-    classes: PropTypes.object,
 };
 
 ScrollTop.defaultProps = {
@@ -82,4 +76,4 @@ ScrollTop.defaultProps = {
     showAfter: 100,
 };
 
-export default withStyles(styles, { withTheme: false })(ScrollTop);
+export default ScrollTop;

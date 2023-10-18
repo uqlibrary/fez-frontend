@@ -1,7 +1,6 @@
 import React from 'react';
 import BulkUpdatesActions from './BulkUpdatesActions';
-import { render, fireEvent, WithReduxStore, waitFor } from 'test-utils';
-import { act } from 'react-dom/test-utils';
+import { render, fireEvent, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -30,7 +29,7 @@ describe('BulkUpdatesActions', () => {
         expect(queryByTestId('bulk-updates-actions-select')).not.toBeInTheDocument();
     });
 
-    it('should render confirmation box on action selected', async () => {
+    it('should render confirmation box on action selected', () => {
         const { location } = window;
         delete window.location;
         window.location = { reload: jest.fn() };
@@ -38,13 +37,10 @@ describe('BulkUpdatesActions', () => {
         const { getByTestId, getByText, queryByTestId } = setup();
 
         fireEvent.mouseDown(getByTestId('bulk-updates-actions-select'));
-        act(() => {
-            fireEvent.click(getByText('Change display type'));
-        });
+        fireEvent.click(getByText('Change display type'));
 
         expect(getByTestId('change-display-type-form')).toBeInTheDocument();
 
-        await waitFor(() => getByTestId('change-display-type-cancel'));
         fireEvent.click(getByTestId('change-display-type-cancel'));
 
         expect(queryByTestId('change-display-type-form')).not.toBeInTheDocument();
@@ -52,7 +48,7 @@ describe('BulkUpdatesActions', () => {
         window.location = location;
     });
 
-    it('should render confirmation box on action selected', async () => {
+    it('should render confirmation box on action selected', () => {
         const { location } = window;
         delete window.location;
         window.location = { reload: jest.fn() };
@@ -67,13 +63,10 @@ describe('BulkUpdatesActions', () => {
         });
 
         fireEvent.mouseDown(getByTestId('bulk-updates-actions-select'));
-        act(() => {
-            fireEvent.click(getByText('Remove from collection'));
-        });
+        fireEvent.click(getByText('Remove from collection'));
 
         expect(getByTestId('remove-from-collection-form')).toBeInTheDocument();
 
-        await waitFor(() => getByTestId('remove-from-collection-cancel'));
         fireEvent.click(getByTestId('remove-from-collection-cancel'));
 
         expect(queryByTestId('remove-from-collection-form')).not.toBeInTheDocument();

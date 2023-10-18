@@ -1,7 +1,7 @@
 import React from 'react';
 import FileUploadDropzone, { removeInvalidFileNames } from './FileUploadDropzone';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
-import { rtlRender, fireEvent } from 'test-utils';
+import { rtlRender, fireEvent, waitFor } from 'test-utils';
 
 import { FormValuesContext } from 'context';
 import Immutable from 'immutable';
@@ -62,6 +62,7 @@ describe('Component FileUploadDropzone', () => {
     it('should remove duplicate files', async () => {
         const onDropFn = jest.fn();
         const { getByTestId } = setup({ onDrop: onDropFn });
+
         const file = new File(['hello'], 'hello.png', { type: 'image/png' });
 
         // drag and drop same files twice
@@ -71,12 +72,13 @@ describe('Component FileUploadDropzone', () => {
                 types: ['Files', 'Files'],
             },
         });
-        await new Promise(r => setTimeout(r, 50));
 
-        expect(onDropFn).toHaveBeenCalledWith(
-            [{ fileData: file, name: 'hello.png', size: 5 }],
-            expect.objectContaining({ sameFileNameWithDifferentExt: ['hello.png'] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [{ fileData: file, name: 'hello.png', size: 5 }],
+                expect.objectContaining({ sameFileNameWithDifferentExt: ['hello.png'] }),
+            );
+        });
     });
 
     it('should remove files with same filename but different extension from dropped incoming files', async () => {
@@ -90,12 +92,13 @@ describe('Component FileUploadDropzone', () => {
                 types: ['Files', 'Files'],
             },
         });
-        await new Promise(r => setTimeout(r, 50));
 
-        expect(onDropFn).toHaveBeenCalledWith(
-            [{ fileData: file, name: 'hello.png', size: 5 }],
-            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['hello.txt'] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [{ fileData: file, name: 'hello.png', size: 5 }],
+                expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['hello.txt'] }),
+            );
+        });
     });
 
     it('should remove files with same filename but different extension from dropped incoming files if already exist', async () => {
@@ -109,12 +112,13 @@ describe('Component FileUploadDropzone', () => {
         fireEvent.drop(getByTestId('fez-datastream-info-input'), {
             dataTransfer: { files: [file], types: ['Files'] },
         });
-        await new Promise(r => setTimeout(r, 50));
 
-        expect(onDropFn).toHaveBeenCalledWith(
-            [],
-            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['hello.png'] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [],
+                expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['hello.png'] }),
+            );
+        });
     });
 
     it('should remove files with same filename but different extension and different casing from dropped incoming files if already exist', async () => {
@@ -131,12 +135,13 @@ describe('Component FileUploadDropzone', () => {
                 types: ['Files', 'Files'],
             },
         });
-        await new Promise(r => setTimeout(r, 50));
 
-        expect(onDropFn).toHaveBeenCalledWith(
-            [{ fileData: file, name: 'fileb.png', size: 5 }],
-            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['filea.png'] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [{ fileData: file, name: 'fileb.png', size: 5 }],
+                expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['filea.png'] }),
+            );
+        });
     });
 
     it('should remove files with same filename but different extension from dropped incoming files if already exist or uses a renamed file name', async () => {
@@ -153,12 +158,13 @@ describe('Component FileUploadDropzone', () => {
                 types: ['Files', 'Files'],
             },
         });
-        await new Promise(r => setTimeout(r, 80));
 
-        expect(onDropFn).toHaveBeenCalledWith(
-            [{ fileData: file, name: 'fileb.png', size: 5 }],
-            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['filea.png'] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [{ fileData: file, name: 'fileb.png', size: 5 }],
+                expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['filea.png'] }),
+            );
+        });
     });
 
     it('should remove duplicate filenames if duplicated in both dropped and existing', async () => {
@@ -179,12 +185,13 @@ describe('Component FileUploadDropzone', () => {
                 types: ['Files', 'Files'],
             },
         });
-        await new Promise(r => setTimeout(r, 80));
 
-        expect(onDropFn).toHaveBeenCalledWith(
-            [{ fileData: file, name: 'b.pdf', size: 5 }],
-            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['b.png', 'a.png'] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [{ fileData: file, name: 'b.pdf', size: 5 }],
+                expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: ['b.png', 'a.png'] }),
+            );
+        });
     });
 
     it(
@@ -209,12 +216,12 @@ describe('Component FileUploadDropzone', () => {
                 },
             });
 
-            await new Promise(r => setTimeout(r, 80));
-
-            expect(onDropFn).toHaveBeenCalledWith(
-                [{ fileData: file, name: 'a.pdf', size: 5 }],
-                expect.objectContaining({ duplicateFiles: ['b.pdf'], sameFileNameWithDifferentExt: ['a.png'] }),
-            );
+            await waitFor(() => {
+                expect(onDropFn).toHaveBeenCalledWith(
+                    [{ fileData: file, name: 'a.pdf', size: 5 }],
+                    expect.objectContaining({ duplicateFiles: ['b.pdf'], sameFileNameWithDifferentExt: ['a.png'] }),
+                );
+            });
         },
     );
 
@@ -240,12 +247,15 @@ describe('Component FileUploadDropzone', () => {
                 },
             });
 
-            await new Promise(r => setTimeout(r, 80));
-
-            expect(onDropFn).toHaveBeenCalledWith(
-                [{ fileData: file, name: 'a.png', size: 5 }],
-                expect.objectContaining({ duplicateFiles: ['d.pdf', 'b.pdf'], sameFileNameWithDifferentExt: [] }),
-            );
+            await waitFor(() => {
+                expect(onDropFn).toHaveBeenCalledWith(
+                    [{ fileData: file, name: 'a.png', size: 5 }],
+                    expect.objectContaining({
+                        duplicateFiles: ['d.pdf', 'b.pdf'],
+                        sameFileNameWithDifferentExt: [],
+                    }),
+                );
+            });
         },
     );
 
@@ -265,15 +275,15 @@ describe('Component FileUploadDropzone', () => {
             },
         });
 
-        await new Promise(r => setTimeout(r, 50));
-
-        expect(onDropFn).toHaveBeenCalledWith(
-            [
-                { fileData: file1, name: 'a.png', size: 5 },
-                { fileData: file2, name: 'b.png', size: 5 },
-            ],
-            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [
+                    { fileData: file1, name: 'a.png', size: 5 },
+                    { fileData: file2, name: 'b.png', size: 5 },
+                ],
+                expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
+            );
+        });
     });
 
     it('should not remove any files if there are no files', async () => {
@@ -284,12 +294,12 @@ describe('Component FileUploadDropzone', () => {
             dataTransfer: { files: [], types: [] },
         });
 
-        await new Promise(r => setTimeout(r, 50));
-
-        expect(onDropFn).toHaveBeenCalledWith(
-            [],
-            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [],
+                expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
+            );
+        });
     });
 
     it('should not remove any files if multipart zip files have been uploaded', async () => {
@@ -302,15 +312,15 @@ describe('Component FileUploadDropzone', () => {
             dataTransfer: { files: [file1, file2], types: [] },
         });
 
-        await new Promise(r => setTimeout(r, 50));
-
-        expect(onDropFn).toHaveBeenCalledWith(
-            [
-                { fileData: file1, name: 'a.001.zip', size: 5 },
-                { fileData: file2, name: 'a.002.zip', size: 5 },
-            ],
-            expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [
+                    { fileData: file1, name: 'a.001.zip', size: 5 },
+                    { fileData: file2, name: 'a.002.zip', size: 5 },
+                ],
+                expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
+            );
+        });
     });
 
     it('should remove files with invalid names', () => {
@@ -347,13 +357,13 @@ describe('Component FileUploadDropzone', () => {
             dataTransfer: { files: [file1, file2], types: [] },
         });
 
-        await new Promise(r => setTimeout(r, 50));
-
-        // should not remove any files if number doesn't exceed max allowed number of files
-        expect(onDropFn).toHaveBeenCalledWith(
-            [{ fileData: file1, name: 'a.png', size: 5 }],
-            expect.objectContaining({ invalidMimeTypeFiles: ['b.txt'], tooManyFiles: [] }),
-        );
+        await waitFor(() => {
+            // should not remove any files if number doesn't exceed max allowed number of files
+            expect(onDropFn).toHaveBeenCalledWith(
+                [{ fileData: file1, name: 'a.png', size: 5 }],
+                expect.objectContaining({ invalidMimeTypeFiles: ['b.txt'], tooManyFiles: [] }),
+            );
+        });
     });
 
     it('should remove files exceeding max allowed number of files in removeTooManyFiles', async () => {
@@ -366,12 +376,12 @@ describe('Component FileUploadDropzone', () => {
             dataTransfer: { files: [file1, file2], types: [] },
         });
 
-        await new Promise(r => setTimeout(r, 50));
-
-        expect(onDropFn).toHaveBeenCalledWith(
-            [{ fileData: file1, name: 'a.png', size: 5 }],
-            expect.objectContaining({ tooManyFiles: ['b.png'] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [{ fileData: file1, name: 'a.png', size: 5 }],
+                expect.objectContaining({ tooManyFiles: ['b.png'] }),
+            );
+        });
     });
 
     // TODO:: need to find a way to mock a folder drop
@@ -421,8 +431,6 @@ describe('Component FileUploadDropzone', () => {
             },
         });
 
-        await new Promise(r => setTimeout(r, 50));
-
         const expectedError = {
             tooBigFiles: ['e.txt'],
             notFiles: [],
@@ -433,13 +441,15 @@ describe('Component FileUploadDropzone', () => {
             tooManyFiles: ['g.txt'],
         };
 
-        expect(onDropFn).toHaveBeenCalledWith(
-            [
-                { fileData: fileC, name: 'c.txt', size: 5 },
-                { fileData: fileF, name: 'f.txt', size: 5 },
-            ],
-            expectedError,
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [
+                    { fileData: fileC, name: 'c.txt', size: 5 },
+                    { fileData: fileF, name: 'f.txt', size: 5 },
+                ],
+                expectedError,
+            );
+        });
     });
 
     it('should set all correct error messages for filenames with comma', async () => {
@@ -464,8 +474,6 @@ describe('Component FileUploadDropzone', () => {
             },
         });
 
-        await new Promise(r => setTimeout(r, 50));
-
         const expectedError = {
             tooBigFiles: [],
             notFiles: [],
@@ -476,7 +484,9 @@ describe('Component FileUploadDropzone', () => {
             tooManyFiles: [],
         };
 
-        expect(onDropFn).toHaveBeenCalledWith([{ fileData: fileG, name: 'g.txt', size: 5 }], expectedError);
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith([{ fileData: fileG, name: 'g.txt', size: 5 }], expectedError);
+        });
     });
 
     /*
@@ -528,16 +538,16 @@ describe('Component FileUploadDropzone', () => {
             },
         });
 
-        await new Promise(r => setTimeout(r, 50));
-
-        expect(onDropFn).toHaveBeenCalledWith(
-            [
-                { fileData: fileA, name: 'test.000.zip', size: 5 },
-                { fileData: fileB, name: 'test.part1.zip', size: 5 },
-                { fileData: fileC, name: 'test.r00.zip', size: 5 },
-            ],
-            expect.objectContaining({ invalidMimeTypeFiles: [] }),
-        );
+        await waitFor(() => {
+            expect(onDropFn).toHaveBeenCalledWith(
+                [
+                    { fileData: fileA, name: 'test.000.zip', size: 5 },
+                    { fileData: fileB, name: 'test.part1.zip', size: 5 },
+                    { fileData: fileC, name: 'test.r00.zip', size: 5 },
+                ],
+                expect.objectContaining({ invalidMimeTypeFiles: [] }),
+            );
+        });
     });
 
     it('should allow multipart zip files with valid part format (r01 - r999)', () => {

@@ -1,7 +1,8 @@
 import React from 'react';
-import { AuthorsCitationView, styles } from './AuthorsCitationView';
+import { AuthorsCitationView } from './AuthorsCitationView';
 import { pathConfig } from 'config/pathConfig';
 import { render, WithRouter } from 'test-utils';
+import { mui1theme } from 'config/theme';
 
 function setup(testProps = {}) {
     const props = {
@@ -11,6 +12,7 @@ function setup(testProps = {}) {
         suffix: testProps.suffix,
         className: testProps.className || '',
         showLink: testProps.showLink || false,
+        theme: mui1theme,
         ...testProps,
     };
     return render(
@@ -24,17 +26,6 @@ describe('AuthorsCitationView', () => {
     it('should render component with no authors', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
-    });
-
-    it('should have helper to generated styles', () => {
-        const themeObject = {
-            palette: {
-                success: {
-                    main: '#fff',
-                },
-            },
-        };
-        expect(styles(themeObject).authorIdLink.color).toBe('#fff');
     });
 
     it('should set class on component with no authors', () => {

@@ -7,8 +7,7 @@ exports[`Component ContributorLinkingField should render as expected 1`] = `
       class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item makeStyles-infiniteContainer-1 css-13i4rnv-MuiGrid-root"
-        style="height: 120px; overflow-y: auto;"
+        class="MuiGrid-root MuiGrid-item css-wi9evz-MuiGrid-root"
       />
     </div>
   </div>

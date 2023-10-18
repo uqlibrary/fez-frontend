@@ -5,25 +5,6 @@ import Select from '@mui/material/Select';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
-import makeStyles from '@mui/styles/makeStyles';
-
-const useStyles = makeStyles(
-    theme => ({
-        root: {
-            whiteSpace: 'unset',
-            wordBreak: 'break-word',
-            display: 'block',
-            // 1200px is the width of pages on the App. This is static
-            // so there is no need to make the style property dynamic at this stage
-            maxWidth: '1200px',
-        },
-        selectedMenuItem: {
-            backgroundColor: `${theme.palette.accent.main} !important`,
-            color: theme.palette.white.main,
-        },
-    }),
-    { withTheme: true },
-);
 
 /**
  * 'canUnselect' prop allows the editing user to 'unselect' the entry in the dropdown
@@ -55,7 +36,6 @@ export const NewGenericSelectField = ({
     style,
     value,
 }) => {
-    const classes = useStyles();
     const [selectValue, setSelectValue] = React.useState(multiple ? [] : '');
     const [inputError, setInputError] = React.useState(!!error);
     const [inputErrorText, setInputErrorText] = React.useState(errorText || error || null);
@@ -133,7 +113,18 @@ export const NewGenericSelectField = ({
             itemsList.map((item, index) => {
                 return (
                     <MenuItem
-                        classes={{ root: classes.root, selected: classes.selectedMenuItem }}
+                        sx={{
+                            whiteSpace: 'unset',
+                            wordBreak: 'break-word',
+                            display: 'block',
+                            // 1200px is the width of pages on the App. This is static
+                            // so there is no need to make the style property dynamic at this stage
+                            maxWidth: '1200px',
+                            '&.Mui-selected': {
+                                backgroundColor: 'accent.main',
+                                color: 'white.main',
+                            },
+                        }}
                         selected={(multiple && selectValue.includes(item.value)) || undefined}
                         value={item.value}
                         key={index + 1}

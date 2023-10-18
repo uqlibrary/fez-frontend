@@ -3,7 +3,6 @@
 exports[`GrantListEditor should add grant to the list 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -190,7 +189,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-38 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -259,7 +258,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-37 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -314,7 +313,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -342,7 +341,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-46  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test
                       </p>
@@ -359,7 +358,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-47  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -376,7 +375,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-47  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         Government
                       </p>
@@ -398,8 +397,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -455,8 +453,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -502,7 +499,6 @@ exports[`GrantListEditor should add grant to the list 1`] = `
 exports[`GrantListEditor should delete all grants 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -689,7 +685,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-122 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -758,7 +754,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-121 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -813,7 +809,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -841,7 +837,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-130  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -858,7 +854,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-131  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -875,7 +871,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-131  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -895,8 +891,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -954,8 +949,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -1016,7 +1010,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-130  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -1033,7 +1027,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-131  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -1050,7 +1044,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-131  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -1070,8 +1064,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -1129,8 +1122,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -1176,7 +1168,6 @@ exports[`GrantListEditor should delete all grants 1`] = `
 exports[`GrantListEditor should delete all grants 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -1356,7 +1347,6 @@ exports[`GrantListEditor should delete all grants 2`] = `
 exports[`GrantListEditor should delete grant 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -1543,7 +1533,7 @@ exports[`GrantListEditor should delete grant 1`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-110 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -1612,7 +1602,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-109 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -1667,7 +1657,7 @@ exports[`GrantListEditor should delete grant 1`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -1695,7 +1685,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-118  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -1712,7 +1702,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-119  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -1729,7 +1719,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-119  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -1749,8 +1739,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -1808,8 +1797,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -1870,7 +1858,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-118  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -1887,7 +1875,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-119  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -1904,7 +1892,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-119  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -1924,8 +1912,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -1983,8 +1970,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -2032,7 +2018,6 @@ exports[`GrantListEditor should delete grant 2`] = `
   aria-hidden="true"
 >
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -2219,7 +2204,7 @@ exports[`GrantListEditor should delete grant 2`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-110 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -2288,7 +2273,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-109 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -2343,7 +2328,7 @@ exports[`GrantListEditor should delete grant 2`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -2371,7 +2356,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-118  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -2388,7 +2373,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-119  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -2405,7 +2390,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-119  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -2425,8 +2410,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -2482,8 +2466,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -2526,23 +2509,9 @@ exports[`GrantListEditor should delete grant 2`] = `
 </div>
 `;
 
-exports[`GrantListEditor should have a proper style generator 1`] = `
-Object {
-  "list": Object {
-    "maxHeight": 200,
-    "overflow": "hidden",
-    "width": "100%",
-  },
-  "scroll": Object {
-    "overflowY": "scroll",
-  },
-}
-`;
-
 exports[`GrantListEditor should move the grant down 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -2729,7 +2698,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-98 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -2798,7 +2767,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-97 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -2853,7 +2822,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -2881,7 +2850,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-106  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -2898,7 +2867,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-107  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -2915,7 +2884,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-107  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -2935,8 +2904,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -2994,8 +2962,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -3056,7 +3023,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-106  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -3073,7 +3040,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-107  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -3090,7 +3057,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-107  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -3110,8 +3077,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -3169,8 +3135,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -3216,7 +3181,6 @@ exports[`GrantListEditor should move the grant down 1`] = `
 exports[`GrantListEditor should move the grant down 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -3403,7 +3367,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-98 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -3472,7 +3436,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-97 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -3527,7 +3491,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -3555,7 +3519,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-106  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -3572,7 +3536,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-107  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -3589,7 +3553,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-107  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -3609,8 +3573,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -3668,8 +3631,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -3730,7 +3692,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-106  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -3747,7 +3709,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-107  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -3764,7 +3726,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-107  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -3784,8 +3746,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -3843,8 +3804,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -3890,7 +3850,6 @@ exports[`GrantListEditor should move the grant down 2`] = `
 exports[`GrantListEditor should move the grant up 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -4077,7 +4036,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-62 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -4146,7 +4105,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-61 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -4201,7 +4160,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -4229,7 +4188,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-70  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -4246,7 +4205,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-71  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -4263,7 +4222,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-71  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -4283,8 +4242,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -4342,8 +4300,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -4404,7 +4361,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-70  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -4421,7 +4378,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-71  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -4438,7 +4395,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-71  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -4458,8 +4415,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -4517,8 +4473,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -4564,7 +4519,6 @@ exports[`GrantListEditor should move the grant up 1`] = `
 exports[`GrantListEditor should move the grant up 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -4751,7 +4705,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-62 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -4820,7 +4774,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-61 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -4875,7 +4829,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -4903,7 +4857,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-70  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -4920,7 +4874,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-71  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -4937,7 +4891,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-71  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -4957,8 +4911,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -5016,8 +4969,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -5078,7 +5030,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-70  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -5095,7 +5047,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-71  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -5112,7 +5064,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-71  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -5132,8 +5084,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -5191,8 +5142,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -5238,7 +5188,6 @@ exports[`GrantListEditor should move the grant up 2`] = `
 exports[`GrantListEditor should not move the grant up at index 0 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -5425,7 +5374,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-74 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -5494,7 +5443,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-73 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -5549,7 +5498,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -5577,7 +5526,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-82  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -5594,7 +5543,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-83  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -5611,7 +5560,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-83  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -5631,8 +5580,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -5688,8 +5636,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -5735,7 +5682,6 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
 exports[`GrantListEditor should not move the grant up at index 0 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -5922,7 +5868,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-74 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -5991,7 +5937,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-73 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -6046,7 +5992,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -6074,7 +6020,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-82  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -6091,7 +6037,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-83  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -6108,7 +6054,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-83  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -6128,8 +6074,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -6185,8 +6130,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -6232,7 +6176,6 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
 exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -6419,7 +6362,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-86 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -6488,7 +6431,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-85 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -6543,7 +6486,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -6571,7 +6514,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-94  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -6588,7 +6531,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-95  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -6605,7 +6548,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-95  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -6625,8 +6568,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -6682,8 +6624,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -6742,7 +6683,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-94  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -6759,7 +6700,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-95  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -6776,7 +6717,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-95  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -6796,8 +6737,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -6855,8 +6795,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -6902,7 +6841,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
 exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -7089,7 +7027,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-86 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -7158,7 +7096,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-85 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -7213,7 +7151,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -7241,7 +7179,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-94  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -7258,7 +7196,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-95  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -7275,7 +7213,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-95  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -7295,8 +7233,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -7352,8 +7289,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -7412,7 +7348,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-94  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -7429,7 +7365,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-95  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -7446,7 +7382,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-95  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -7466,8 +7402,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -7525,8 +7460,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -7572,7 +7506,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
 exports[`GrantListEditor should render default view 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -7752,7 +7685,6 @@ exports[`GrantListEditor should render default view 1`] = `
 exports[`GrantListEditor should render error from props 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -7937,7 +7869,6 @@ exports[`GrantListEditor should render error from props 1`] = `
 exports[`GrantListEditor should render error from props as children 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -8127,7 +8058,6 @@ exports[`GrantListEditor should render error from props as children 1`] = `
 exports[`GrantListEditor should render scroll class if grants are more than 3 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -8314,7 +8244,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-50 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -8383,7 +8313,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-49 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -8438,7 +8368,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined scroll-class MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-i91ho5-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -8466,7 +8396,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-58  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 1
                       </p>
@@ -8483,7 +8413,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-59  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         123
                       </p>
@@ -8500,7 +8430,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-59  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -8520,8 +8450,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -8579,8 +8508,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -8641,7 +8569,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-58  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 2
                       </p>
@@ -8658,7 +8586,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-59  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -8675,7 +8603,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-59  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -8695,8 +8623,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -8756,8 +8683,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -8818,7 +8744,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-58  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 3
                       </p>
@@ -8835,7 +8761,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-59  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -8852,7 +8778,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-59  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -8872,8 +8798,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -8933,8 +8858,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -8995,7 +8919,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-58  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Test 4
                       </p>
@@ -9012,7 +8936,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-59  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         456
                       </p>
@@ -9029,7 +8953,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-59  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -9049,8 +8973,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -9108,8 +9031,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -9155,7 +9077,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
 exports[`GrantListEditor should render string error from props 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -9340,7 +9261,6 @@ exports[`GrantListEditor should render string error from props 1`] = `
 exports[`GrantListEditor should render with default given value 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -9527,7 +9447,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-2 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -9596,7 +9516,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-1 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -9651,7 +9571,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -9679,7 +9599,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-10  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Testing
                       </p>
@@ -9696,7 +9616,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-11  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         1234
                       </p>
@@ -9713,7 +9633,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-11  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -9733,8 +9653,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -9790,8 +9709,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -9837,7 +9755,6 @@ exports[`GrantListEditor should render with default given value 1`] = `
 exports[`GrantListEditor should render with default given value is Immutable List 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -10024,7 +9941,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-14 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -10093,7 +10010,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-13 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -10148,7 +10065,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -10176,7 +10093,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-22  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Testing
                       </p>
@@ -10193,7 +10110,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-23  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         1234
                       </p>
@@ -10210,7 +10127,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-23  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -10230,8 +10147,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -10287,8 +10203,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"
@@ -10334,7 +10249,6 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
 exports[`GrantListEditor should update on receiving new props 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -10521,7 +10435,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
             data-testid="confirmDialogBox"
           />
           <li
-            class="MuiListItem-root Component-header-26 MuiListItem-gutters MuiListItem-padding css-8ayve7-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -10590,7 +10504,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
                     >
                       <div
-                        class="MuiListItemText-root Component-right-25 css-tlelie-MuiListItemText-root"
+                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
                         style="padding: 0px;"
                       >
                         <span
@@ -10645,7 +10559,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
         style="margin-top: -8px;"
       >
         <ul
-          class="MuiList-root undefined  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
           data-testid="rek-grant-list"
         >
           <span
@@ -10673,7 +10587,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-primary-34  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                       >
                         Testing
                       </p>
@@ -10690,7 +10604,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-35  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       >
                         1234
                       </p>
@@ -10707,7 +10621,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                       style="padding: 0px;"
                     >
                       <p
-                        class="MuiTypography-root Component-identifierName-35  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
                       />
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -10727,8 +10641,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                     class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
                     >
                       <div
                         aria-label="Move entry up the order"
@@ -10784,8 +10697,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
                     >
                       <div
                         aria-label="Remove this entry"

@@ -5,16 +5,6 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/icons-material/Link';
 import LinkOff from '@mui/icons-material/LinkOff';
 import locale from 'locale/global';
-import withStyles from '@mui/styles/withStyles';
-
-export const styles = theme => ({
-    success: {
-        color: ((theme.palette || {}).success || {}).light,
-    },
-    error: {
-        color: ((theme.palette || {}).error || {}).light,
-    },
-});
 
 export class OfflineSnackbar extends PureComponent {
     static propTypes = {
@@ -56,22 +46,20 @@ export class OfflineSnackbar extends PureComponent {
         );
     };
 
-    handleRequestClose = reason => {
-        // MUI hack to prevent the snackbar from being hidden by clicking/touchTapping away
-        /* istanbul ignore else */
-        if (reason !== 'clickaway') {
-            this.setState({ open: false });
-        }
+    handleRequestClose = () => {
+        this.setState({ open: false });
     };
 
     render() {
-        const { classes } = this.props;
         const txt = locale.global.offlineSnackbar;
         const snackbarProps = this.state.online
-            ? { ...txt.online, message: this.renderMessage(txt.online.message, <Link className={classes.success} />) }
+            ? {
+                  ...txt.online,
+                  message: this.renderMessage(txt.online.message, <Link sx={{ color: 'success.light' }} />),
+              }
             : {
                   ...txt.offline,
-                  message: this.renderMessage(txt.offline.message, <LinkOff className={classes.error} />),
+                  message: this.renderMessage(txt.offline.message, <LinkOff sx={{ color: 'error.light' }} />),
               };
 
         return (
@@ -85,10 +73,16 @@ export class OfflineSnackbar extends PureComponent {
                     onClose={this.handleRequestClose}
                     message={snackbarProps.message}
                     autoHideDuration={snackbarProps.autoHideDuration}
+                    ClickAwayListenerProps={{
+                        onClickAway: /* istanbul ignore next */ () => {
+                            /* istanbul ignore next */
+                            return false;
+                        },
+                    }}
                 />
             </div>
         );
     }
 }
 
-export default withStyles(styles, { withTheme: true })(OfflineSnackbar);
+export default OfflineSnackbar;

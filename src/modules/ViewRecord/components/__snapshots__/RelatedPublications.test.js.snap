@@ -6,18 +6,18 @@ exports[`Related publications Component  should not render data with empty looku
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-10 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-"
       id="standard-card-"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-15 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card--header"
             id="standard-card--header"
           />
@@ -30,7 +30,7 @@ exports[`Related publications Component  should not render data with empty looku
         id="standard-card--content"
       >
         <ul
-          class="RelatedPublicationsClass-list-9 list publicationList"
+          class="publicationList MuiBox-root css-dpoqzr"
         >
           <li>
             <p
@@ -69,18 +69,18 @@ exports[`Related publications Component  should render component 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-2 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-title"
       id="standard-card-title"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-7 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-title-header"
             id="standard-card-title-header"
           >
@@ -95,7 +95,7 @@ exports[`Related publications Component  should render component 1`] = `
         id="standard-card-title-content"
       >
         <ul
-          class="RelatedPublicationsClass-list-1 list publicationList"
+          class="publicationList MuiBox-root css-dpoqzr"
         >
           <li>
             <p
@@ -134,18 +134,18 @@ exports[`Related publications Component  should render with a publication title 
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-17 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-a-test-title"
       id="standard-card-a-test-title"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-22 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-a-test-title-header"
             id="standard-card-a-test-title-header"
           >
@@ -160,7 +160,7 @@ exports[`Related publications Component  should render with a publication title 
         id="standard-card-a-test-title-content"
       >
         <ul
-          class="RelatedPublicationsClass-list-16 list publicationList"
+          class="publicationList MuiBox-root css-dpoqzr"
         >
           <li>
             <p
@@ -210,18 +210,18 @@ exports[`Related publications Component  should render without a child search ke
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-24 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-title"
       id="standard-card-title"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-29 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-title-header"
             id="standard-card-title-header"
           >
@@ -236,7 +236,7 @@ exports[`Related publications Component  should render without a child search ke
         id="standard-card-title-content"
       >
         <ul
-          class="RelatedPublicationsClass-list-23 list publicationList"
+          class="publicationList MuiBox-root css-dpoqzr"
         >
           <li>
             <p
@@ -275,18 +275,18 @@ exports[`Related publications Component  should render without a parent search k
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-31 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-title"
       id="standard-card-title"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-36 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-title-header"
             id="standard-card-title-header"
           >
@@ -301,7 +301,7 @@ exports[`Related publications Component  should render without a parent search k
         id="standard-card-title-content"
       >
         <ul
-          class="RelatedPublicationsClass-list-30 list publicationList"
+          class="publicationList MuiBox-root css-dpoqzr"
         >
           <li>
             <p

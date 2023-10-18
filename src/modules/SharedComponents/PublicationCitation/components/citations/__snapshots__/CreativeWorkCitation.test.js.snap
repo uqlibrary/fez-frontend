@@ -8,16 +8,12 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Webster-Mannison, Marci
-        
       </span>
-      
        
     </span>
     <span

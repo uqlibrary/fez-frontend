@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 
 import IconButton from '@mui/material/IconButton';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
@@ -8,23 +9,18 @@ import StarIcon from '@mui/icons-material/Star';
 import Tooltip from '@mui/material/Tooltip';
 import Icon from '@mui/material/Icon';
 
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles(theme => ({
-    iconButton: {
-        verticalAlign: 'top',
-    },
-    iconButtonSvg: {
-        [theme.breakpoints.up('sm')]: {
-            width: '1.4em',
-            height: '1.4em',
+const StyledIcon = styled(Icon)(({ theme }) => ({
+    [theme.breakpoints.up('sm')]: {
+        width: '1.4em',
+        height: '1.4em',
+        '& .favourite-icon': {
+            width: '100%',
+            height: '100%',
         },
     },
 }));
 
 const TitleWithFavouriteButton = props => {
-    const classes = useStyles();
-
     const { journal, tooltips, actions, handlers } = props;
     const [isBusy, setIsBusy] = React.useState(false);
     const [active, setActive] = React.useState(!!journal.is_favourite === true);
@@ -61,18 +57,17 @@ const TitleWithFavouriteButton = props => {
                     onClick={!isBusy ? () => onClickFavouriteButtonHandler(!active) : undefined}
                     size="small"
                     disabled={isBusy}
-                    className={classes.iconButton}
+                    sx={{ verticalAlign: 'top' }}
                     aria-label={active ? tooltips.favourite : tooltips.notFavourite}
                 >
-                    <Icon
+                    <StyledIcon
                         id={`favourite-icon-${active ? 'saved' : 'notsaved'}`}
                         data-testid={`favourite-icon-${active ? 'saved' : 'notsaved'}`}
                         color="primary"
-                        className={classes.iconButtonSvg}
                     >
-                        {active && <StarIcon className={classes.iconButtonSvg} />}
-                        {!active && <StarBorderIcon className={classes.iconButtonSvg} />}
-                    </Icon>
+                        {active && <StarIcon className={'favourite-icon'} />}
+                        {!active && <StarBorderIcon className={'favourite-icon'} />}
+                    </StyledIcon>
                 </IconButton>
             </Tooltip>
         </>

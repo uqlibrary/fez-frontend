@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 
 import { OrcidSyncContext } from 'context';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Grid from '@mui/material/Grid';
-import withStyles from '@mui/styles/withStyles';
 
 import {
     AuthorsPublicationsPerYearChart,
@@ -28,25 +28,23 @@ import locale from 'locale/pages';
 import { mui1theme as theme } from 'config';
 import { withIsMobileView } from '../../../hooks';
 
-export const styles = theme => ({
-    tabs: {
-        [theme.breakpoints.up('sm')]: {
-            margin: '-16px -16px',
-        },
-        [theme.breakpoints.down('sm')]: {
-            margin: -16,
-        },
-        backgroundColor: theme.palette.primary.main,
-        borderRadius: '4px 4px 0px 0px',
+const StyledTabs = styled(Tabs)(({ theme }) => ({
+    [theme.breakpoints.up('sm')]: {
+        margin: '-16px -16px',
     },
-    tab: {
-        color: theme.palette.white.main,
+    [theme.breakpoints.down('sm')]: {
+        margin: -16,
     },
-    tabIndicator: {
+    backgroundColor: theme.palette.primary.main,
+    borderRadius: '4px 4px 0px 0px',
+    '& .MuiTabs-indicator': {
         height: 4,
         backgroundColor: theme.palette.accent.main,
     },
-});
+}));
+const StyledTab = styled(Tab)(({ theme }) => ({
+    color: theme.palette.white.main,
+}));
 
 /**
  * Returns the Fibonacci number for given iteration.
@@ -104,7 +102,6 @@ export class DashboardClass extends PureComponent {
         // navigations, app actions
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
-        classes: PropTypes.object,
 
         // orcid sync
         loadingOrcidSyncStatus: PropTypes.bool,
@@ -227,7 +224,6 @@ export class DashboardClass extends PureComponent {
     };
 
     render() {
-        const { classes } = this.props;
         const txt = locale.pages.dashboard;
         const loading =
             // nothing to load for non author users
@@ -440,9 +436,7 @@ export class DashboardClass extends PureComponent {
                         (this.props.showLatestPublicationsTab || this.props.showTrendingPublicationsTab) && (
                             <Grid item xs={12}>
                                 <StandardCard noHeader>
-                                    <Tabs
-                                        className={classes.tabs}
-                                        classes={{ indicator: classes.tabIndicator }}
+                                    <StyledTabs
                                         value={this.state.dashboardPubsTabs}
                                         onChange={this.handleTabChange}
                                         variant="fullWidth"
@@ -451,22 +445,12 @@ export class DashboardClass extends PureComponent {
                                         textColor="inherit"
                                     >
                                         {this.props.showLatestPublicationsTab && (
-                                            <Tab
-                                                className={classes.tab}
-                                                key={1}
-                                                label={txt.myLatestPublications.title}
-                                                value={1}
-                                            />
+                                            <StyledTab key={1} label={txt.myLatestPublications.title} value={1} />
                                         )}
                                         {this.props.showTrendingPublicationsTab && (
-                                            <Tab
-                                                className={classes.tab}
-                                                key={2}
-                                                label={txt.myTrendingPublications.title}
-                                                value={2}
-                                            />
+                                            <StyledTab key={2} label={txt.myTrendingPublications.title} value={2} />
                                         )}
-                                    </Tabs>
+                                    </StyledTabs>
                                     <Grid container spacing={3} style={{ marginTop: 24 }}>
                                         {this.props.showLatestPublicationsTab && (
                                             <Grid
@@ -500,5 +484,5 @@ DashboardClass.defaultProps = {
     loadOrcidSyncDelay: 5,
 };
 
-const Dashboard = withStyles(styles, { withTheme: true })(withIsMobileView()(DashboardClass));
+const Dashboard = withIsMobileView()(DashboardClass);
 export default Dashboard;

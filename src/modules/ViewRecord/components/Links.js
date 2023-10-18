@@ -7,7 +7,6 @@ import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
-import withStyles from '@mui/styles/withStyles';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
@@ -17,35 +16,22 @@ import { openAccessConfig } from 'config';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 import moment from 'moment';
 
-const styles = theme => ({
-    header: {
-        padding: `${theme.spacing(1)} 0`,
-        [theme.breakpoints.up('sm')]: {
-            padding: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
-        },
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    },
-    description: {
-        whiteSpace: 'nowrap',
-        textOverflow: 'ellipsis',
-        overflowX: 'hidden',
-    },
-    body2: {
-        ...theme.typography.body2,
-    },
-});
-
-export class LinksClass extends PureComponent {
+export class Links extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object,
     };
 
     LinkRow = ({ link, linkId, description, openAccessStatus }) => (
         <Grid
             container
             spacing={2}
-            className={this.props.classes.header}
+            sx={theme => ({
+                padding: {
+                    xs: `${theme.spacing(1)} 0`,
+                    sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+                },
+                borderBottom: `1px solid ${theme.palette.secondary.light}`,
+            })}
             alignItems={'center'}
             alignContent={'center'}
             justifyContent={'center'}
@@ -59,7 +45,9 @@ export class LinksClass extends PureComponent {
                 item
                 xs={11}
                 sm={4}
-                className={this.props.classes.description}
+                whiteSpace={'nowrap'}
+                textOverflow={'ellipsis'}
+                overflowX={'hidden'}
                 data-analyticsid={`${linkId}-description`}
                 data-testid={`${linkId}-description`}
             >
@@ -68,7 +56,7 @@ export class LinksClass extends PureComponent {
                 </Typography>
             </Grid>
             <Grid item xs={1} sm={2} style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`}>
-                <OpenAccessIcon {...openAccessStatus} style={{ marginBottom: -5 }} />
+                <OpenAccessIcon {...openAccessStatus} style={{ marginBottom: '-5px' }} />
             </Grid>
         </Grid>
     );
@@ -229,7 +217,13 @@ export class LinksClass extends PureComponent {
                         alignItems="center"
                         spacing={2}
                         padding={0}
-                        className={this.props.classes.header}
+                        sx={theme => ({
+                            padding: {
+                                xs: `${theme.spacing(1)} 0`,
+                                sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+                            },
+                            borderBottom: `1px solid ${theme.palette.secondary.light}`,
+                        })}
                     >
                         <Grid item sm={6} data-testid="link-label">
                             <Typography variant="caption" gutterBottom>
@@ -280,6 +274,4 @@ export class LinksClass extends PureComponent {
     }
 }
 
-const StyledLinksClass = withStyles(styles, { withTheme: true })(LinksClass);
-const Links = props => <StyledLinksClass {...props} />;
 export default Links;

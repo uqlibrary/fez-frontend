@@ -7,18 +7,8 @@ import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
 import InputAdornment from '@mui/material/InputAdornment';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles(() => ({
-    columnData: {
-        fontSize: 14,
-        fontWeight: 400,
-        width: '100%',
-    },
-}));
 
 export const ColumnData = ({ columnDataId, data, copiable }) => {
-    const classes = useStyles();
     const [copied, setCopied] = React.useState(false);
 
     const handleCopy = event => {
@@ -36,7 +26,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                 inputProps={{
                     'data-testid': columnDataId,
                 }}
-                className={classes.columnData}
+                sx={{ fontSize: 14, fontWeight: 400, width: '100%' }}
                 value={!!data ? data : ''}
                 readOnly
                 fullWidth

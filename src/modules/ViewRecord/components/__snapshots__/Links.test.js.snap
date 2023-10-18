@@ -6,18 +6,18 @@ exports[`Component Links  Full mount render 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-47 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-52 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -32,7 +32,7 @@ exports[`Component Links  Full mount render 1`] = `
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-44 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -66,7 +66,7 @@ exports[`Component Links  Full mount render 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-44 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -77,7 +77,7 @@ exports[`Component Links  Full mount render 1`] = `
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
-                class="pubmedCentralLinkUrl makeStyles-externalLink-53 makeStyles-externalLink-55"
+                class="pubmedCentralLinkUrl css-1oqhn84"
                 data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345678"
@@ -89,7 +89,7 @@ exports[`Component Links  Full mount render 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-54 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="pubmed-central-link-new-window-icon"
@@ -104,9 +104,10 @@ exports[`Component Links  Full mount render 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-45 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -122,7 +123,7 @@ exports[`Component Links  Full mount render 1`] = `
             <svg
               aria-hidden="true"
               aria-label="Open Access - PMC - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-56 makeStyles-svg-57 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -135,7 +136,7 @@ exports[`Component Links  Full mount render 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-44 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -149,7 +150,7 @@ exports[`Component Links  Full mount render 1`] = `
               >
                 <a
                   aria-label="Open this DOI in an new window"
-                  class="citationDoiLink makeStyles-externalLink-53 makeStyles-externalLink-58"
+                  class="citationDoiLink css-1oqhn84"
                   data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1093/hmg/ddw177"
@@ -161,7 +162,7 @@ exports[`Component Links  Full mount render 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-54 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                     data-testid="OpenInNewIcon"
                     focusable="false"
                     id="citation-doi-link-new-window-icon"
@@ -177,9 +178,10 @@ exports[`Component Links  Full mount render 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-45 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -199,7 +201,7 @@ exports[`Component Links  Full mount render 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-44 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -209,7 +211,7 @@ exports[`Component Links  Full mount render 1`] = `
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-53 makeStyles-externalLink-60"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -221,7 +223,7 @@ exports[`Component Links  Full mount render 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-54 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -236,9 +238,10 @@ exports[`Component Links  Full mount render 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-45 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -254,7 +257,7 @@ exports[`Component Links  Full mount render 1`] = `
             <svg
               aria-hidden="true"
               aria-label="Open Access - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-56 makeStyles-svg-61 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -267,7 +270,7 @@ exports[`Component Links  Full mount render 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-44 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -277,7 +280,7 @@ exports[`Component Links  Full mount render 1`] = `
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-53 makeStyles-externalLink-62"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -289,7 +292,7 @@ exports[`Component Links  Full mount render 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-54 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-1-link-new-window-icon"
@@ -304,9 +307,10 @@ exports[`Component Links  Full mount render 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-45 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -322,7 +326,7 @@ exports[`Component Links  Full mount render 1`] = `
             <svg
               aria-hidden="true"
               aria-label="Open Access - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-56 makeStyles-svg-63 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -346,18 +350,18 @@ exports[`Component Links  Rendering due to a doi 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-21 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-26 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -372,7 +376,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-18 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -406,7 +410,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-18 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -420,7 +424,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
               >
                 <a
                   aria-label="Open this DOI in an new window"
-                  class="citationDoiLink makeStyles-externalLink-27 makeStyles-externalLink-29"
+                  class="citationDoiLink css-1oqhn84"
                   data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/12345"
@@ -432,7 +436,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-28 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                     data-testid="OpenInNewIcon"
                     focusable="false"
                     id="citation-doi-link-new-window-icon"
@@ -448,9 +452,10 @@ exports[`Component Links  Rendering due to a doi 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-19 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -481,18 +486,18 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-7 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-12 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -507,7 +512,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-4 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -541,7 +546,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-4 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -552,7 +557,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
-                class="pubmedCentralLinkUrl makeStyles-externalLink-13 makeStyles-externalLink-15"
+                class="pubmedCentralLinkUrl css-1oqhn84"
                 data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/12345"
@@ -564,7 +569,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-14 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="pubmed-central-link-new-window-icon"
@@ -579,9 +584,10 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-5 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -597,7 +603,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             <svg
               aria-hidden="true"
               aria-label="Open Access - PMC - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-16 makeStyles-svg-17 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -621,18 +627,18 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-38 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-43 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -647,7 +653,7 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-35 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -696,18 +702,18 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-81 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-86 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -722,7 +728,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-78 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -756,7 +762,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-78 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -766,7 +772,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-87 makeStyles-externalLink-89"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -778,7 +784,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-88 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -793,9 +799,10 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-79 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -811,7 +818,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             <svg
               aria-hidden="true"
               aria-label="Open Access - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-90 makeStyles-svg-91 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -824,7 +831,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-78 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -834,7 +841,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-87 makeStyles-externalLink-92"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -846,7 +853,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-88 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-1-link-new-window-icon"
@@ -861,9 +868,10 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-79 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -879,7 +887,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             <svg
               aria-hidden="true"
               aria-label="Open Access - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-90 makeStyles-svg-93 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -892,7 +900,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-78 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -902,7 +910,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-87 makeStyles-externalLink-94"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -914,7 +922,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-88 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-2-link-new-window-icon"
@@ -929,9 +937,10 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-79 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -947,7 +956,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             <svg
               aria-hidden="true"
               aria-label="Open Access - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-90 makeStyles-svg-95 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -971,18 +980,18 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-119 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-124 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -997,7 +1006,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-116 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -1031,7 +1040,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-116 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1042,7 +1051,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
-                class="pubmedCentralLinkUrl makeStyles-externalLink-125 makeStyles-externalLink-127"
+                class="pubmedCentralLinkUrl css-1oqhn84"
                 data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
@@ -1054,7 +1063,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-126 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="pubmed-central-link-new-window-icon"
@@ -1069,9 +1078,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-117 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1087,7 +1097,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             <svg
               aria-hidden="true"
               aria-label="Open Access - PMC - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-128 makeStyles-svg-129 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -1100,7 +1110,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-116 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1114,7 +1124,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               >
                 <a
                   aria-label="Open this DOI in an new window"
-                  class="citationDoiLink makeStyles-externalLink-125 makeStyles-externalLink-130"
+                  class="citationDoiLink css-1oqhn84"
                   data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
@@ -1126,7 +1136,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-126 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                     data-testid="OpenInNewIcon"
                     focusable="false"
                     id="citation-doi-link-new-window-icon"
@@ -1142,9 +1152,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-117 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1160,7 +1171,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             <svg
               aria-hidden="true"
               aria-label="Open Access - DOI - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-128 makeStyles-svg-131 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -1173,7 +1184,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-116 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1183,7 +1194,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-125 makeStyles-externalLink-132"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -1195,7 +1206,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-126 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -1210,9 +1221,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-117 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1232,7 +1244,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-116 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1242,7 +1254,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-125 makeStyles-externalLink-134"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -1254,7 +1266,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-126 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-1-link-new-window-icon"
@@ -1269,9 +1281,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-117 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1291,7 +1304,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-116 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1301,7 +1314,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-125 makeStyles-externalLink-136"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -1313,7 +1326,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-126 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-2-link-new-window-icon"
@@ -1328,9 +1341,10 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-117 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1361,18 +1375,18 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-183 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-188 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -1387,7 +1401,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-180 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -1421,7 +1435,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-180 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1432,7 +1446,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
-                class="pubmedCentralLinkUrl makeStyles-externalLink-189 makeStyles-externalLink-191"
+                class="pubmedCentralLinkUrl css-1oqhn84"
                 data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
@@ -1444,7 +1458,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-190 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="pubmed-central-link-new-window-icon"
@@ -1459,9 +1473,10 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-181 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1477,7 +1492,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             <svg
               aria-hidden="true"
               aria-label="Open Access - PMC - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-192 makeStyles-svg-193 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -1490,7 +1505,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-180 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1504,7 +1519,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               >
                 <a
                   aria-label="Open this DOI in an new window"
-                  class="citationDoiLink makeStyles-externalLink-189 makeStyles-externalLink-194"
+                  class="citationDoiLink css-1oqhn84"
                   data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
@@ -1516,7 +1531,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-190 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                     data-testid="OpenInNewIcon"
                     focusable="false"
                     id="citation-doi-link-new-window-icon"
@@ -1532,9 +1547,10 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-181 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1554,7 +1570,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-180 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1564,7 +1580,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-189 makeStyles-externalLink-196"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -1576,7 +1592,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-190 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -1591,9 +1607,10 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-181 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1613,7 +1630,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-180 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1623,7 +1640,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-189 makeStyles-externalLink-198"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -1635,7 +1652,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-190 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-1-link-new-window-icon"
@@ -1650,9 +1667,10 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-181 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1672,7 +1690,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-180 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1682,7 +1700,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-189 makeStyles-externalLink-200"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -1694,7 +1712,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-190 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-2-link-new-window-icon"
@@ -1709,9 +1727,10 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-181 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1742,18 +1761,18 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-141 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-146 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -1768,7 +1787,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-138 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -1802,7 +1821,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-138 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1813,7 +1832,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
-                class="pubmedCentralLinkUrl makeStyles-externalLink-147 makeStyles-externalLink-149"
+                class="pubmedCentralLinkUrl css-1oqhn84"
                 data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
@@ -1825,7 +1844,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-148 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="pubmed-central-link-new-window-icon"
@@ -1840,9 +1859,10 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-139 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1858,7 +1878,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             <svg
               aria-hidden="true"
               aria-label="Open Access - PMC - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-150 makeStyles-svg-151 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -1871,7 +1891,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-138 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1881,7 +1901,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-147 makeStyles-externalLink-152"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -1893,7 +1913,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-148 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -1908,9 +1928,10 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-139 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1930,7 +1951,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-138 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1940,7 +1961,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-147 makeStyles-externalLink-154"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -1952,7 +1973,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-148 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-1-link-new-window-icon"
@@ -1967,9 +1988,10 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-139 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1989,7 +2011,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-138 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -1999,7 +2021,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-147 makeStyles-externalLink-156"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -2011,7 +2033,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-148 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-2-link-new-window-icon"
@@ -2026,9 +2048,10 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-139 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2059,18 +2082,18 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-161 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-166 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -2085,7 +2108,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-158 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -2119,7 +2142,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-158 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2130,7 +2153,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
-                class="pubmedCentralLinkUrl makeStyles-externalLink-167 makeStyles-externalLink-169"
+                class="pubmedCentralLinkUrl css-1oqhn84"
                 data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
@@ -2142,7 +2165,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-168 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="pubmed-central-link-new-window-icon"
@@ -2157,9 +2180,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-159 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2175,7 +2199,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             <svg
               aria-hidden="true"
               aria-label="Open Access - PMC - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-170 makeStyles-svg-171 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -2188,7 +2212,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-158 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2202,7 +2226,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               >
                 <a
                   aria-label="Open this DOI in an new window"
-                  class="citationDoiLink makeStyles-externalLink-167 makeStyles-externalLink-172"
+                  class="citationDoiLink css-1oqhn84"
                   data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
@@ -2214,7 +2238,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-168 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                     data-testid="OpenInNewIcon"
                     focusable="false"
                     id="citation-doi-link-new-window-icon"
@@ -2230,9 +2254,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-159 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2252,7 +2277,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-158 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2262,7 +2287,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-167 makeStyles-externalLink-174"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -2274,7 +2299,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-168 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -2289,9 +2314,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-159 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2311,7 +2337,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-158 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2321,7 +2347,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-167 makeStyles-externalLink-176"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -2333,7 +2359,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-168 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-1-link-new-window-icon"
@@ -2348,9 +2374,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-159 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2370,7 +2397,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-158 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2380,7 +2407,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-167 makeStyles-externalLink-178"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -2392,7 +2419,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-168 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-2-link-new-window-icon"
@@ -2407,9 +2434,10 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-159 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2440,18 +2468,18 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-205 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-210 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -2466,7 +2494,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-202 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -2500,7 +2528,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-202 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2511,7 +2539,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
-                class="pubmedCentralLinkUrl makeStyles-externalLink-211 makeStyles-externalLink-213"
+                class="pubmedCentralLinkUrl css-1oqhn84"
                 data-analyticsid="pubmed-central-link"
                 data-testid="pubmed-central-link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
@@ -2523,7 +2551,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-212 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="pubmed-central-link-new-window-icon"
@@ -2538,9 +2566,10 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-203 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2556,7 +2585,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             <svg
               aria-hidden="true"
               aria-label="Open Access - PMC - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-214 makeStyles-svg-215 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -2569,7 +2598,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-202 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2583,7 +2612,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               >
                 <a
                   aria-label="Open this DOI in an new window"
-                  class="citationDoiLink makeStyles-externalLink-211 makeStyles-externalLink-216"
+                  class="citationDoiLink css-1oqhn84"
                   data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
@@ -2595,7 +2624,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-212 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                     data-testid="OpenInNewIcon"
                     focusable="false"
                     id="citation-doi-link-new-window-icon"
@@ -2611,9 +2640,10 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-203 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2633,7 +2663,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-202 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2643,7 +2673,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-211 makeStyles-externalLink-218"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -2655,7 +2685,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-212 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -2670,9 +2700,10 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-203 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2692,7 +2723,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-202 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2702,7 +2733,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-211 makeStyles-externalLink-220"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -2714,7 +2745,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-212 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-1-link-new-window-icon"
@@ -2729,9 +2760,10 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-203 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2751,7 +2783,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-202 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2761,7 +2793,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-211 makeStyles-externalLink-222"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -2773,7 +2805,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-212 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-2-link-new-window-icon"
@@ -2788,9 +2820,10 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-203 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2821,18 +2854,18 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-99 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-104 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -2847,7 +2880,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-96 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -2881,7 +2914,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-96 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2895,7 +2928,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               >
                 <a
                   aria-label="Open this DOI in an new window"
-                  class="citationDoiLink makeStyles-externalLink-105 makeStyles-externalLink-107"
+                  class="citationDoiLink css-1oqhn84"
                   data-analyticsid="citation-doi-link"
                   data-testid="citation-doi-link"
                   href="https://doi.org/10.1016/j.pnsc.2012.12.004"
@@ -2907,7 +2940,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-106 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                     data-testid="OpenInNewIcon"
                     focusable="false"
                     id="citation-doi-link-new-window-icon"
@@ -2923,9 +2956,10 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-97 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2941,7 +2975,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             <svg
               aria-hidden="true"
               aria-label="DOI - Open access after 24th December 2020"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-108 makeStyles-svg-109 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="embargoed-oa-icon"
               focusable="false"
@@ -2954,7 +2988,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-96 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -2964,7 +2998,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-105 makeStyles-externalLink-110"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -2976,7 +3010,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-106 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -2991,9 +3025,10 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-97 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3013,7 +3048,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-96 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -3023,7 +3058,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-105 makeStyles-externalLink-112"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -3035,7 +3070,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-106 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-1-link-new-window-icon"
@@ -3050,9 +3085,10 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-97 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3072,7 +3108,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-96 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -3082,7 +3118,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-105 makeStyles-externalLink-114"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -3094,7 +3130,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-106 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-2-link-new-window-icon"
@@ -3109,9 +3145,10 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-97 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3142,18 +3179,18 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-243 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-248 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3168,7 +3205,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-240 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -3202,7 +3239,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-240 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -3212,7 +3249,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-249 makeStyles-externalLink-251"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -3224,7 +3261,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-250 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -3239,9 +3276,10 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-241 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3262,7 +3300,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
             <svg
               aria-hidden="true"
               aria-label="Open Access - Open access after 2100-01-01"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-252 makeStyles-svg-253 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="embargoed-oa-icon"
               focusable="false"
@@ -3286,18 +3324,18 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-257 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-262 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3312,7 +3350,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-254 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -3346,7 +3384,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-254 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -3356,7 +3394,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-263 makeStyles-externalLink-265"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -3368,7 +3406,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-264 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -3383,9 +3421,10 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-255 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3416,18 +3455,18 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-299 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-304 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3442,7 +3481,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-296 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -3476,7 +3515,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-296 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -3486,7 +3525,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-305 makeStyles-externalLink-307"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://google.com"
@@ -3498,7 +3537,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-306 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -3513,9 +3552,10 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-297 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3531,7 +3571,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             <svg
               aria-hidden="true"
               aria-label="Open Access - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-308 makeStyles-svg-309 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -3555,18 +3595,18 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-271 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-276 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3581,7 +3621,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-268 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -3615,7 +3655,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-268 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -3625,7 +3665,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-277 makeStyles-externalLink-279"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -3637,7 +3677,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-278 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -3652,9 +3692,10 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-269 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3670,7 +3711,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             <svg
               aria-hidden="true"
               aria-label="Open Access - Open Access - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-280 makeStyles-svg-281 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -3694,18 +3735,18 @@ exports[`Component Links  should render oa icon for past embargo date open acces
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-285 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-290 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3720,7 +3761,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-282 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -3754,7 +3795,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-282 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -3764,7 +3805,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-291 makeStyles-externalLink-293"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -3776,7 +3817,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-292 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -3791,9 +3832,10 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-283 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3809,7 +3851,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             <svg
               aria-hidden="true"
               aria-label="Open Access - Open Access - Free to read"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-294 makeStyles-svg-295 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-88h592-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
@@ -3833,18 +3875,18 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-67 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-72 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3859,7 +3901,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-64 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -3893,7 +3935,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-64 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -3903,7 +3945,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-73 makeStyles-externalLink-75"
+                class=" css-1oqhn84"
                 data-analyticsid="google-scholar-link"
                 data-testid="google-scholar-link"
                 href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
@@ -3915,7 +3957,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-74 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="google-scholar-link-new-window-icon"
@@ -3930,9 +3972,10 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-65 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-title-description"
             data-testid="rek-title-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3963,18 +4006,18 @@ exports[`Component Links  should use special default description if the link has
     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-227 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-232 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3989,7 +4032,7 @@ exports[`Component Links  should use special default description if the link has
         id="standard-card-links-content"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-224 css-zl5zqp-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1qabzdg-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-6 css-12x0ddz-MuiGrid2-root"
@@ -4023,7 +4066,7 @@ exports[`Component Links  should use special default description if the link has
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-224 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -4033,7 +4076,7 @@ exports[`Component Links  should use special default description if the link has
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-233 makeStyles-externalLink-235"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -4045,7 +4088,7 @@ exports[`Component Links  should use special default description if the link has
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-234 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-0-link-new-window-icon"
@@ -4060,9 +4103,10 @@ exports[`Component Links  should use special default description if the link has
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-225 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -4082,7 +4126,7 @@ exports[`Component Links  should use special default description if the link has
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 LinksClass-header-224 css-sof12a-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-j7rh7r-MuiGrid2-root"
         >
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
@@ -4092,7 +4136,7 @@ exports[`Component Links  should use special default description if the link has
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class="makeStyles-externalLink-233 makeStyles-externalLink-238"
+                class=" css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -4104,7 +4148,7 @@ exports[`Component Links  should use special default description if the link has
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-234 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                   data-testid="OpenInNewIcon"
                   focusable="false"
                   id="publication-1-link-new-window-icon"
@@ -4119,9 +4163,10 @@ exports[`Component Links  should use special default description if the link has
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 LinksClass-description-225 css-2jh05v-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
+            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"

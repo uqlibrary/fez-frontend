@@ -13,7 +13,7 @@ import MockAdapter from 'axios-mock-adapter';
 import { mui1theme } from 'config';
 import { api, sessionApi } from 'config/axios';
 import { StyledEngineProvider } from '@mui/material/styles';
-import ThemeProvider from '@mui/styles/ThemeProvider';
+import ThemeProvider from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import prettyFormat from 'pretty-format';
 import TestRenderer from 'react-test-renderer';

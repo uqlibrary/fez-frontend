@@ -5,38 +5,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import makeStyles from '@mui/styles/makeStyles';
 import { useWidth } from 'hooks';
-
-const useStyles = makeStyles(
-    theme => ({
-        infiniteContainer: {
-            border: '1px solid',
-            borderColor: theme.palette.secondary.light,
-            margin: '16px 0px',
-            padding: '8px 0px',
-            width: '100%',
-        },
-        root: {
-            alignItems: 'flex-start',
-            margin: 0,
-        },
-        label: {
-            textAlign: 'justify',
-            fontSize: 16,
-            fontWeight: 300,
-            lineHeight: '30px',
-            paddingTop: 10,
-        },
-        checkboxRoot: {
-            color: theme.palette.error.light,
-        },
-        checkboxChecked: {
-            color: `${theme.palette.primary.main} !important`,
-        },
-    }),
-    { withTheme: true },
-);
 
 export const AuthorLinking = ({
     authorLinkingId,
@@ -49,7 +18,6 @@ export const AuthorLinking = ({
     onChange,
     searchKey,
 }) => {
-    const classes = useStyles();
     const width = useWidth();
     const [selectedAuthor, setSelectedAuthor] = React.useState(null);
     const [authorLinkingConfirmed, confirmAuthorLinking] = React.useState(false);
@@ -214,25 +182,32 @@ export const AuthorLinking = ({
             <Grid container>
                 <Grid
                     item
-                    className={classes.infiniteContainer}
-                    style={{ height: scrollHeight(), overflowY: overflowType() }}
+                    sx={{
+                        border: '1px solid',
+                        borderColor: 'secondary.light',
+                        margin: '16px 0px',
+                        padding: '8px 0px',
+                        width: '100%',
+                        height: scrollHeight(),
+                        overflowY: overflowType(),
+                    }}
                 >
                     {authorsToRender}
                 </Grid>
             </Grid>
             {selectedAuthor !== null && (
                 <FormControlLabel
-                    classes={{
-                        root: classes.root,
-                    }}
+                    sx={{ alignItems: 'flex-start', margin: 0 }}
                     disabled={disabled}
                     control={
                         <Checkbox
                             checked={authorLinkingConfirmed}
                             onChange={_acceptAuthorLinkingTermsAndConditions}
-                            classes={{
-                                root: classes.checkboxRoot,
-                                checked: classes.checkboxChecked,
+                            sx={{
+                                color: 'error.light',
+                                '& .Mui-checked': {
+                                    color: 'primary.main',
+                                },
                             }}
                             id="authorAcceptDeclaration"
                             inputProps={{
@@ -244,9 +219,11 @@ export const AuthorLinking = ({
                     }
                     label={
                         <Typography
-                            classes={{
-                                root: classes.label,
-                            }}
+                            textAlign={'justify'}
+                            fontSize={'16px'}
+                            fontWeight={300}
+                            lineHeight={'30px'}
+                            paddingTop={'10px'}
                             color={!authorLinkingConfirmed ? 'error' : 'secondary'}
                         >
                             {confirmation}

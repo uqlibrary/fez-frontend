@@ -8,134 +8,95 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Larance, Briony
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Peacock, Amy
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Campbell, Gabrielle
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         Freckleton, Sarah
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Smith, Kimberley
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-5"
       >
-        
         Mattick, Richard
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-6"
       >
-        
         Bruno, Raimondo
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-7"
       >
-        
         Nielsen, Suzanne
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-8"
       >
-        
         Cohen, Milton
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-9"
       >
-        
         Lintzeris, Nicholas
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-10"
       >
-        
         Shand, Fiona
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-11"
       >
-        
         Hall, Wayne D.
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-12"
       >
-        
         Farrell, Michael
-        
       </span>
       , 
        and 
@@ -143,11 +104,8 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         class="citationAuthor"
         data-testid="rek-author-13"
       >
-        
         Degenhardt, Louisa
-        
       </span>
-      
        
     </span>
     <span
@@ -204,7 +162,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
     >
       <a
         aria-label="Open this DOI in an new window"
-        class="citationDoiLink makeStyles-externalLink-3 makeStyles-externalLink-5"
+        class="citationDoiLink css-1oqhn84"
         data-analyticsid="citation-doi-link"
         data-testid="citation-doi-link"
         href="https://doi.org/10.1111/dar.12222"
@@ -216,7 +174,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-4 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="citation-doi-link-new-window-icon"

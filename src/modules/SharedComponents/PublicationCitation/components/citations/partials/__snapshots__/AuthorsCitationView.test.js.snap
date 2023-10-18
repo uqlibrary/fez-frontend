@@ -13,34 +13,25 @@ exports[`AuthorsCitationView should render a header correctly when all authors a
   <span
     class=""
   >
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-1"
     >
-      
       Smith, J
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-2"
     >
-      
       Andersen, J
-      
     </span>
     , 
      and 
@@ -48,11 +39,8 @@ exports[`AuthorsCitationView should render a header correctly when all authors a
       class="citationAuthor"
       data-testid="rek-author-3"
     >
-      
       Andersen, J A
-      
     </span>
-    
      
   </span>
 </div>
@@ -63,24 +51,18 @@ exports[`AuthorsCitationView should render a header correctly when too many auth
   <span
     class=""
   >
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-1"
     >
-      
       Smith, J
-      
     </span>
     , 
      ... 
@@ -88,11 +70,8 @@ exports[`AuthorsCitationView should render a header correctly when too many auth
       class="citationAuthor"
       data-testid="rek-author-2"
     >
-      
       Andersen, J A
-      
     </span>
-    
      
   </span>
 </div>
@@ -103,34 +82,25 @@ exports[`AuthorsCitationView should render a list with ellipsis when elasticsear
   <span
     class=""
   >
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-1"
     >
-      
       Smith, J
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-2"
     >
-      
       Andersen, J
-      
     </span>
      and 5 more
      
@@ -143,16 +113,12 @@ exports[`AuthorsCitationView should render component with 1 author 1`] = `
   <span
     class=""
   >
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
-    
      
   </span>
 </div>
@@ -163,26 +129,19 @@ exports[`AuthorsCitationView should render component with 2 authors 1`] = `
   <span
     class=""
   >
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
-    
      and 
     <span
       class="citationAuthor"
       data-testid="rek-author-1"
     >
-      
       Smith, J
-      
     </span>
-    
      
   </span>
 </div>
@@ -193,36 +152,33 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
   <span
     class=""
   >
-    
     <a
+      class=""
       data-testid="rek-author-0-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Pedroso, Marcelo Monteiro
-        
       </span>
     </a>
-    
      and 
     <a
+      class=""
       data-testid="rek-author-1-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Smith, J
-        
       </span>
     </a>
-    
      
   </span>
 </div>
@@ -233,7 +189,6 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
   <span
     class=""
   >
-    
     <a
       class="authorNameLink"
       data-testid="rek-author-0-link"
@@ -243,12 +198,9 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Pedroso, Marcelo Monteiro
-        
       </span>
     </a>
-    
      and 
     <a
       class="authorNameLink"
@@ -259,12 +211,9 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Smith, J
-        
       </span>
     </a>
-    
      
   </span>
 </div>
@@ -275,24 +224,18 @@ exports[`AuthorsCitationView should render component with 3 authors 1`] = `
   <span
     class=""
   >
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-1"
     >
-      
       Smith, J
-      
     </span>
     , 
      and 
@@ -300,11 +243,8 @@ exports[`AuthorsCitationView should render component with 3 authors 1`] = `
       class="citationAuthor"
       data-testid="rek-author-2"
     >
-      
       Andersen, J
-      
     </span>
-    
      
   </span>
 </div>
@@ -315,51 +255,48 @@ exports[`AuthorsCitationView should render component with 3 authors for publicat
   <span
     class=""
   >
-    
     <a
+      class=""
       data-testid="rek-author-0-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Pedroso, Marcelo Monteiro
-        
       </span>
     </a>
     , 
-    
     <a
+      class=""
       data-testid="rek-author-1-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Smith, J
-        
       </span>
     </a>
     , 
      and 
     <a
+      class=""
       data-testid="rek-author-2-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Smith, J
-        
       </span>
     </a>
-    
      
   </span>
 </div>
@@ -371,24 +308,18 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
     class=""
   >
     Authored by: 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-1"
     >
-      
       Smith, J
-      
     </span>
     , 
      and 
@@ -396,11 +327,8 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
       class="citationAuthor"
       data-testid="rek-author-2"
     >
-      
       Andersen, J
-      
     </span>
-    
      people.
   </span>
 </div>
@@ -412,24 +340,18 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
     class=""
   >
     Authored by: 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-1"
     >
-      
       Smith, J
-      
     </span>
     , 
      and 
@@ -437,11 +359,8 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
       class="citationAuthor"
       data-testid="rek-author-2"
     >
-      
       Andersen, J
-      
     </span>
-    
      people.
   </span>
 </div>
@@ -453,114 +372,81 @@ exports[`AuthorsCitationView should render component with 10 authors and show mo
     class=""
   >
     Authored by: 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-1"
     >
-      
       Smith, J
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-2"
     >
-      
       Andersen, J
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-3"
     >
-      
       Andersen, J A
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-4"
     >
-      
       Andersen, J B
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-5"
     >
-      
       Andersen, J C
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-6"
     >
-      
       Andersen, J D
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-7"
     >
-      
       Andersen, J E
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-8"
     >
-      
       Andersen, J F
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-9"
     >
-      
       Andersen, J G
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-10"
     >
-      
       Andersen, J H
-      
     </span>
     , 
      and 
@@ -568,11 +454,8 @@ exports[`AuthorsCitationView should render component with 10 authors and show mo
       class="citationAuthor"
       data-testid="rek-author-11"
     >
-      
       Andersen, J J
-      
     </span>
-    
      people.
   </span>
 </div>
@@ -584,94 +467,67 @@ exports[`AuthorsCitationView should render component with exactly 10 authors 1`]
     class=""
   >
     Authored by: 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-0"
     >
-      
       Pedroso, Marcelo Monteiro
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-1"
     >
-      
       Smith, J
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-2"
     >
-      
       Andersen, J
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-3"
     >
-      
       Andersen, J A
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-4"
     >
-      
       Andersen, J B
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-5"
     >
-      
       Andersen, J C
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-6"
     >
-      
       Andersen, J D
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-7"
     >
-      
       Andersen, J E
-      
     </span>
     , 
-    
     <span
       class="citationAuthor"
       data-testid="rek-author-8"
     >
-      
       Andersen, J F
-      
     </span>
     , 
      and 
@@ -679,11 +535,8 @@ exports[`AuthorsCitationView should render component with exactly 10 authors 1`]
       class="citationAuthor"
       data-testid="rek-author-9"
     >
-      
       Andersen, J G
-      
     </span>
-    
      people.
   </span>
 </div>
@@ -694,21 +547,19 @@ exports[`AuthorsCitationView should render component with link containing contri
   <span
     class=""
   >
-    
     <a
+      class=""
       data-testid="rek-contributor-0-link"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_contributor_id%5D%5Bvalue%5D=74066&searchQueryParams%5Brek_contributor_id%5D%5Blabel%5D=74066+(Fitzgerald%2C+Lisa)&searchMode=advanced"
+      style="color: rgb(0, 114, 0);"
     >
       <span
         class="citationAuthor"
         data-testid="rek-contributor-0"
       >
-        
         Fitzgerald, Lisa
-        
       </span>
     </a>
-    
      
   </span>
 </div>

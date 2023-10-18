@@ -2,7 +2,7 @@ import React from 'react';
 import FixRecord from './FixRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
 import Immutable from 'immutable';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { act, render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
 /* eslint-disable react/prop-types */
 jest.mock('redux-form/immutable', () => ({
@@ -119,14 +119,14 @@ describe('Component FixRecord', () => {
 
     it('should render fix record form', () => {
         const { container } = setup({ recordToFix: mockRecordToFix });
-        mockOnChange(undefined, 'fix');
+        act(() => mockOnChange(undefined, 'fix'));
         expect(container).toMatchSnapshot();
         expect(container.getElementsByTagName('field').length).toEqual(5);
     });
 
     it('should render unclaim form', () => {
         const { container } = setup({ recordToFix: mockRecordToFix });
-        mockOnChange(undefined, 'unclaim');
+        act(() => mockOnChange(undefined, 'unclaim'));
         expect(container).toMatchSnapshot();
         expect(container.getElementsByTagName('field').length).toEqual(1);
     });
@@ -152,7 +152,7 @@ describe('Component FixRecord', () => {
         const { getByText, getByTestId, rerender } = setup({
             recordToFix: mockRecordToFix,
         });
-        mockOnChange(undefined, 'unclaim');
+        act(() => mockOnChange(undefined, 'unclaim'));
 
         const pushMock = jest.fn();
         setup(
@@ -173,7 +173,7 @@ describe('Component FixRecord', () => {
         const { getByTestId, rerender } = setup({
             recordToFix: mockRecordToFix,
         });
-        mockOnChange(undefined, 'unclaim');
+        act(() => mockOnChange(undefined, 'unclaim'));
 
         const goBackMock = jest.fn();
         setup(
@@ -193,7 +193,7 @@ describe('Component FixRecord', () => {
         const { getByTestId, rerender } = setup({
             recordToFix: mockRecordToFix,
         });
-        mockOnChange(undefined, 'fix');
+        act(() => mockOnChange(undefined, 'fix'));
 
         const pushMock = jest.fn();
         setup(
@@ -213,7 +213,7 @@ describe('Component FixRecord', () => {
         const { getByText, rerender } = setup({
             recordToFix: mockRecordToFix,
         });
-        mockOnChange(undefined, 'fix');
+        act(() => mockOnChange(undefined, 'fix'));
 
         setup(
             {
