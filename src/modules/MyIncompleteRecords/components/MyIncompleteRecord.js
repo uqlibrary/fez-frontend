@@ -125,7 +125,7 @@ export const MyIncompleteRecord = props => {
                                     }}
                                 >
                                     {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
-                                        <Grid container alignItems="flex-start">
+                                        <Grid container alignItems="flex-start" width={'100%'}>
                                             <Grid item xs={12} sm={3}>
                                                 <Typography>
                                                     {
@@ -150,7 +150,7 @@ export const MyIncompleteRecord = props => {
                                     }}
                                 >
                                     {!!recordToFix && !!recordToFix.rek_subtype && (
-                                        <Grid container alignItems="flex-start">
+                                        <Grid container alignItems="flex-start" width={'100%'}>
                                             <Grid item xs={12} sm={3}>
                                                 <Typography>
                                                     {
