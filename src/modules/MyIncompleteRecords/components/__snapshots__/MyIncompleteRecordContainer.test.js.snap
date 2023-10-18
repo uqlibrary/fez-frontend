@@ -18,7 +18,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
       </h2>
     </div>
     <div
-      class="MuiBox-root css-m2cr7m"
+      class="MuiBox-root css-3hnp8m"
     >
       <button
         aria-label="Click for more information"
@@ -281,7 +281,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1hyny61-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1324l67-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1lvbu4c-MuiGrid2-root"
                   >
                     <div
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-3k8wg2-MuiGrid2-root"
@@ -307,7 +307,7 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-19srln5-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1324l67-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1lvbu4c-MuiGrid2-root"
                   >
                     <div
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-3k8wg2-MuiGrid2-root"
@@ -1828,7 +1828,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
       </h2>
     </div>
     <div
-      class="MuiBox-root css-m2cr7m"
+      class="MuiBox-root css-3hnp8m"
     >
       <button
         aria-label="Click for more information"
@@ -2091,7 +2091,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1hyny61-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1324l67-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1lvbu4c-MuiGrid2-root"
                   >
                     <div
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-3k8wg2-MuiGrid2-root"
@@ -2117,7 +2117,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-19srln5-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1324l67-MuiGrid2-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1lvbu4c-MuiGrid2-root"
                   >
                     <div
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-3k8wg2-MuiGrid2-root"
