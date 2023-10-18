@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router';
 import Cookies from 'js-cookie';
+import { styled } from '@mui/material/styles';
 import {
     APP_URL,
     AUTH_URL_LOGIN,
@@ -28,7 +29,7 @@ import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import * as pages from './pages';
 import { AccountContext } from 'context';
-// MUI1
+
 import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
 import AppBar from '@mui/material/AppBar';
@@ -37,49 +38,35 @@ import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/icons-material/Menu';
-import withStyles from '@mui/styles/withStyles';
 
-const styles = theme => ({
-    appBG: {
-        ...theme.palette.primary.main,
-    },
-    layoutCard: {
-        maxWidth: '1200px',
-        margin: '24px auto',
-        width: '90%',
-        padding: 0,
-        [theme.breakpoints.down('md')]: {
-            margin: '0 auto 24px auto',
-        },
-    },
-    layoutFill: {
-        margin: 0,
-        padding: 0,
-        maxHeight: '100%',
-        height: '100%',
-    },
-    titleLink: {
-        textOverflow: 'ellipsis',
-        overflow: 'hidden',
-        color: theme.palette.common.white,
-        '& a': {
-            textOverflow: 'ellipsis',
-            overflow: 'hidden',
-            textDecoration: 'none',
-            '&:hover': {
-                textDecoration: 'underline',
-            },
-        },
-    },
-    nowrap: {
-        whiteSpace: 'nowrap',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-    },
-    toolbar: {
-        height: '70px',
-    },
+const StyledGrid = styled(Grid)({
+    margin: 0,
+    padding: 0,
+    maxHeight: '100%',
+    height: '100%',
 });
+const StyledGridCard = styled(Grid)(({ theme }) => ({
+    maxWidth: '1200px',
+    margin: '0 auto',
+    width: '90%',
+    padding: 0,
+    [theme.breakpoints.down('md')]: {
+        margin: '0 auto 24px auto',
+    },
+}));
+const StyledAppTitle = styled(Typography)(({ theme }) => ({
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    color: theme.palette.common.white,
+    '& a': {
+        textOverflow: 'ellipsis',
+        overflow: 'hidden',
+        textDecoration: 'none',
+        '&:hover': {
+            textDecoration: 'underline',
+        },
+    },
+}));
 
 export class AppClass extends PureComponent {
     static propTypes = {
@@ -93,7 +80,6 @@ export class AppClass extends PureComponent {
         actions: PropTypes.object,
         location: PropTypes.object,
         history: PropTypes.object.isRequired,
-        classes: PropTypes.object,
         // incomplete Records
         loadingIncompleteRecordData: PropTypes.bool,
         incompleteRecordList: PropTypes.object,
@@ -206,10 +192,9 @@ export class AppClass extends PureComponent {
     };
 
     render() {
-        const { classes } = this.props;
         if (this.props.accountLoading) {
             return (
-                <Grid container className={classes.layoutFill}>
+                <StyledGrid container>
                     <Grid zeroMinWidth item xs={12}>
                         <AppLoader
                             title={locale.global.title}
@@ -217,7 +202,7 @@ export class AppClass extends PureComponent {
                             logoText={locale.global.logo.label}
                         />
                     </Grid>
-                </Grid>
+                </StyledGrid>
             );
         }
 
@@ -313,10 +298,10 @@ export class AppClass extends PureComponent {
         };
 
         return (
-            <Grid container className={classes.layoutFill}>
+            <StyledGrid container>
                 <Meta routesConfig={routesConfig} />
                 <AppBar className="AppBar" color="primary" position="fixed">
-                    <Toolbar classes={{ root: classes.toolbar }}>
+                    <Toolbar sx={{ height: '70px' }}>
                         <Grid
                             container
                             spacing={1}
@@ -345,7 +330,16 @@ export class AppClass extends PureComponent {
                                     </Tooltip>
                                 </Grid>
                             )}
-                            <Grid item xs style={titleStyle} className={classes.nowrap}>
+                            <Grid
+                                item
+                                xs
+                                sx={{
+                                    ...titleStyle,
+                                    whiteSpace: 'nowrap',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                }}
+                            >
                                 <Grid
                                     container
                                     spacing={2}
@@ -361,9 +355,9 @@ export class AppClass extends PureComponent {
                                         </Grid>
                                     )}
                                     <Grid item xs={'auto'} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                        <Typography variant="h5" component={'h1'} noWrap className={classes.titleLink}>
+                                        <StyledAppTitle variant="h5" component={'h1'} noWrap>
                                             {locale.global.appTitle}
-                                        </Typography>
+                                        </StyledAppTitle>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -441,9 +435,9 @@ export class AppClass extends PureComponent {
                             alignItems="center"
                             style={{ marginBottom: 12 }}
                         >
-                            <Grid item className={classes.layoutCard} style={{ marginTop: 0, marginBottom: 0 }}>
+                            <StyledGridCard item>
                                 <Alert {...userStatusAlert} />
-                            </Grid>
+                            </StyledGridCard>
                         </Grid>
                     )}
                     <AppAlertContainer />
@@ -467,9 +461,9 @@ export class AppClass extends PureComponent {
                 </div>
                 <HelpDrawer />
                 <OfflineSnackbar />
-            </Grid>
+            </StyledGrid>
         );
     }
 }
 
-export default withStyles(styles, { withTheme: true })(AppClass);
+export default AppClass;

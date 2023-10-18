@@ -11,7 +11,6 @@ import { useParams } from 'react-router';
 import { recordVersionLegacy } from 'mock/data';
 import locale from 'locale/pages';
 import { notFound } from 'config/routes';
-import { stripHtml } from 'helpers/general';
 import globalLocale from 'locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
@@ -285,13 +284,9 @@ describe('NewViewRecord', () => {
 
     it('should render not found', () => {
         useParams.mockImplementationOnce(() => ({ pid: notFound }));
-        const { queryByText } = setup();
+        const { container, queryByText } = setup();
+        expect(container).toMatchSnapshot();
         expect(queryByText(locale.pages.viewRecord.notFound.title)).toBeInTheDocument();
-        stripHtml(componentToString(locale.pages.viewRecord.notFound.message))
-            .replace(/\n+/, '\n')
-            .split('\n')
-            .filter(line => line.trim())
-            .forEach(line => expect(queryByText(line.trim())).toBeInTheDocument());
         expect(queryByText(globalLocale.global.loginAlert.title)).not.toBeInTheDocument();
     });
 

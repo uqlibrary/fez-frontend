@@ -36,7 +36,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-39 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
@@ -48,7 +48,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-37 css-k3f0g4-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-1olnuyg-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
@@ -57,7 +57,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-38 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -101,7 +101,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-42 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -144,7 +144,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-41 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -215,7 +215,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-41 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -255,7 +255,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-42 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -272,7 +272,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
                 >
                   Second
                    listed author 
-                  
                 </p>
               </div>
               <div
@@ -296,7 +295,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-41 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -367,7 +366,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-41 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -442,7 +441,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-27 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
@@ -454,7 +453,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-26 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -655,7 +654,7 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-31 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
@@ -667,7 +666,7 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-30 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -711,7 +710,7 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-34 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -754,7 +753,7 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-33 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -792,7 +791,7 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-33 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -983,7 +982,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-47 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
@@ -995,7 +994,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-46 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -1039,7 +1038,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-50 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -1082,7 +1081,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-49 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -1120,7 +1119,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-49 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1195,7 +1194,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-9 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
@@ -1207,7 +1206,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-8 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -1249,7 +1248,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-12 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -1292,7 +1291,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-11 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -1328,7 +1327,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-11 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1401,7 +1400,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-3 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
@@ -1413,7 +1412,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-2 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -1457,7 +1456,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-6 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -1500,7 +1499,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-5 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -1538,7 +1537,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-5 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1613,7 +1612,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-15 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
@@ -1625,7 +1624,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-13 css-k3f0g4-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-1olnuyg-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
@@ -1634,7 +1633,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-14 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -1678,7 +1677,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-18 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -1695,7 +1694,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   First
                    listed author 
-                  
                 </p>
               </div>
               <div
@@ -1719,7 +1717,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-17 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -1790,7 +1788,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-17 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1830,7 +1828,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-18 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -1847,7 +1845,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   Second
                    listed author 
-                  
                 </p>
               </div>
               <div
@@ -1871,7 +1868,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-17 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -1942,7 +1939,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-17 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2017,7 +2014,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-21 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
@@ -2029,7 +2026,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-19 css-k3f0g4-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-1olnuyg-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
@@ -2038,7 +2035,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-20 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -2082,7 +2079,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-24 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -2099,7 +2096,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   First
                    listed author 
-                  
                 </p>
               </div>
               <div
@@ -2123,7 +2119,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-23 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -2194,7 +2190,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-23 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2234,7 +2230,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-24 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -2251,7 +2247,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   Second
                    listed author 
-                  
                 </p>
               </div>
               <div
@@ -2275,7 +2270,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-23 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -2346,7 +2341,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-23 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2421,7 +2416,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-55 css-ofrcno-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
@@ -2433,7 +2428,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-54 css-1ux21pi-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -2477,7 +2472,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-58 css-7ldjcq-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
@@ -2518,7 +2513,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-57 css-17o05rx-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
@@ -2556,7 +2551,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-57 css-1ux21pi-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"

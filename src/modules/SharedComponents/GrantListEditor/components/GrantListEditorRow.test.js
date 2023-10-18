@@ -1,5 +1,5 @@
 import React from 'react';
-import GrantListEditorRowWithWidth, { GrantListEditorRow, styles } from './GrantListEditorRow';
+import GrantListEditorRowWithWidth, { GrantListEditorRow } from './GrantListEditorRow';
 import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -13,7 +13,6 @@ function setup(testProps = {}) {
         onDelete: jest.fn(),
         // locale: {},
         disabled: false,
-        classes: {},
         width: 'md',
         ...testProps,
     };
@@ -104,32 +103,6 @@ describe('GrantListEditorRow', () => {
         const { getByRole } = setup({ canMoveDown: true, onMoveDown: onMoveDownFn });
         fireEvent.click(getByRole('button', { name: 'Move entry down the order' }));
         expect(onMoveDownFn).toHaveBeenCalled();
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            palette: {
-                accent: {
-                    light: 'test1',
-                },
-            },
-            typography: {
-                fontWeightMedium: 'test2',
-                body2: {
-                    fontSize: 'test3',
-                },
-                caption: {
-                    fontSize: 'test4',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette.accent;
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
     });
 
     it('should not call certain event handlers if row is disabled', () => {

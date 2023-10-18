@@ -111,7 +111,6 @@ export const FacetsFilter = ({
     showOpenAccessFilter,
     onFacetsChanged,
 }) => {
-    const [isFacetFilterClicked, setIsFacetFilterClicked] = useState(false);
     const [activeFacetsFilters, setActiveFacetsFilters] = useState({
         ...activeFacets.filters,
         ...((initialFacets || {}).filters || {}),
@@ -133,18 +132,14 @@ export const FacetsFilter = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeFacets.filters]);
 
-    useEffect(() => {
-        if (isFacetFilterClicked) {
-            onFacetsChanged({
-                filters: activeFacetsFilters,
-                ranges: activeFacetsRanges,
-                showOpenAccessOnly: showOpenAccessOnly,
-            });
-        }
-
-        return () => setIsFacetFilterClicked(false);
-    }, [isFacetFilterClicked, activeFacetsFilters, activeFacetsRanges, showOpenAccessOnly, onFacetsChanged]);
-
+    const onFacetClick = props => {
+        onFacetsChanged({
+            filters: activeFacetsFilters,
+            ranges: activeFacetsRanges,
+            showOpenAccessOnly: showOpenAccessOnly,
+            ...props,
+        });
+    };
     const {
         yearPublishedCategory,
         yearPublishedFacet,
@@ -169,19 +164,25 @@ export const FacetsFilter = ({
         } else {
             newActiveFacetsFilters[category] = facet;
         }
-        setIsFacetFilterClicked(true);
+
         setActiveFacetsFilters(newActiveFacetsFilters);
         setHasActiveFilters(
             getHasActiveFilters(newActiveFacetsFilters, activeFacetsRanges, showOpenAccessOnly, excludeFacetsList),
         );
+        onFacetClick({
+            filters: newActiveFacetsFilters,
+        });
     };
 
     const _handleOpenAccessFilter = isActive => {
-        setIsFacetFilterClicked(true);
         setShowOpenAccessOnly(!!isActive);
         setHasActiveFilters(
             getHasActiveFilters(activeFacetsFilters, activeFacetsRanges, !!isActive, excludeFacetsList),
         );
+
+        onFacetClick({
+            showOpenAccessOnly: !!isActive,
+        });
     };
 
     const _handleYearPublishedRangeFacet = (category, range, isActive) => {
@@ -193,21 +194,31 @@ export const FacetsFilter = ({
             newActiveFacetsRanges[category] = range;
         }
 
-        setIsFacetFilterClicked(true);
         setActiveFacetsRanges(newActiveFacetsRanges);
         setHasActiveFilters(
             getHasActiveFilters(activeFacetsFilters, newActiveFacetsRanges, !!showOpenAccessOnly, excludeFacetsList),
         );
+
+        onFacetClick({
+            ranges: newActiveFacetsRanges,
+        });
     };
 
     const _handleResetClick = () => {
         setActiveFacetsFilters({
             ...((initialFacets || {}).filters || {}),
         });
-        setIsFacetFilterClicked(true);
         setActiveFacetsRanges({});
         setShowOpenAccessOnly(false);
         setHasActiveFilters(false);
+
+        onFacetClick({
+            filters: {
+                ...((initialFacets || {}).filters || {}),
+            },
+            ranges: {},
+            showOpenAccessOnly: false,
+        });
     };
 
     if (facetsToDisplay.length === 0 && !hasActiveFilters) {

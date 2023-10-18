@@ -1,10 +1,11 @@
 import React from 'react';
 import ManageUsers from './index';
-import { act, render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
+import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
 import * as repository from 'repositories';
 
 jest.mock('./helpers', () => ({
     checkForExisting: jest.fn(),
+    clearAlerts: jest.fn(),
 }));
 
 import { checkForExisting } from './helpers';
@@ -74,9 +75,7 @@ describe('ManageUsers', () => {
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        act(() => {
-            fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
-        });
+        fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
 
         expect(getByTestId('usr-full-name-input')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-email-input')).toHaveAttribute('value', 't.user@library.uq.edu.au');
@@ -94,10 +93,8 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-email-input'), { target: { value: 'test@uq.edu.au' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtest' } });
 
-        await act(() =>
-            waitFor(() =>
-                expect(getByText('The supplied Username is already on file for another user.')).toBeInTheDocument(),
-            ),
+        await waitFor(() =>
+            expect(getByText('The supplied Username is already on file for another user.')).toBeInTheDocument(),
         );
 
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve({})));

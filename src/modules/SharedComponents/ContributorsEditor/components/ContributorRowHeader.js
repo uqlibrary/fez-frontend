@@ -10,7 +10,6 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
 import DeleteForever from '@mui/icons-material/DeleteForever';
 import People from '@mui/icons-material/People';
-import withStyles from '@mui/styles/withStyles';
 
 export class ContributorRowHeader extends PureComponent {
     static propTypes = {
@@ -90,12 +89,12 @@ export class ContributorRowHeader extends PureComponent {
                         {descriptionStep2}
                     </Fragment>
                 )}
-                <ListItem classes={{ root: classes.header }}>
+                <ListItem sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.2)', marginTop: 1 }}>
                     <ListItemIcon sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <People />
                     </ListItemIcon>
 
-                    <Grid container classes={{ container: classes.listContainer }}>
+                    <Grid container classes={{ container: classes?.listContainer }}>
                         <Grid item xs={10} sm={5} md={3}>
                             <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }} />
                         </Grid>
@@ -118,21 +117,19 @@ export class ContributorRowHeader extends PureComponent {
                             )}
                         </Grid>
                     </Grid>
-                    <ListItemSecondaryAction classes={{ root: classes.paddingRight64 }}>
+                    <ListItemSecondaryAction classes={{ root: classes?.paddingRight64 }}>
                         <ListItemText
                             secondary={reorderColumn}
                             secondaryTypographyProps={{ variant: 'caption' }}
-                            classes={{
-                                secondary: `${classes.right} ${
-                                    // eslint-disable-next-line no-nested-ternary
-                                    isInfinite
-                                        ? classes.infinitePaddingRight
-                                        : canEdit
-                                        ? classes.paddingRightEdit
-                                        : classes.paddingRight
-                                }`,
+                            sx={{
+                                display: { xs: 'none', sm: 'block' },
+                                '& .MuiListItemText-secondary': {
+                                    textAlign: 'right',
+                                    paddingRight: '40px',
+                                    ...(isInfinite && { paddingRight: '36px' }),
+                                    ...(canEdit && { paddingRight: '78px' }),
+                                },
                             }}
-                            sx={{ display: { xs: 'none', sm: 'block' } }}
                         />
                     </ListItemSecondaryAction>
                     <ListItemSecondaryAction>
@@ -160,21 +157,4 @@ export class ContributorRowHeader extends PureComponent {
     }
 }
 
-export const styles = () => ({
-    right: {
-        textAlign: 'right',
-    },
-    header: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
-        marginTop: 8,
-    },
-    paddingRightEdit: {
-        paddingRight: 78,
-    },
-    paddingRight: { paddingRight: 40 },
-    infinitePaddingRight: {
-        paddingRight: 36,
-    },
-});
-
-export default withStyles(styles)(ContributorRowHeader);
+export default ContributorRowHeader;

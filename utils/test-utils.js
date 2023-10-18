@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { act, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import { mui1theme } from 'config/theme';
@@ -24,7 +24,6 @@ const mime = require('mime-types');
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
-
 import preview from 'jest-preview';
 
 export const AllTheProviders = props => {
@@ -88,7 +87,7 @@ export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => 
 
 export const assertTooltipText = async (trigger, tooltipText) => {
     expect(trigger).toBeInTheDocument();
-    await act(async () => await userEvent.hover(trigger));
+    await userEvent.hover(trigger);
     await waitFor(() => {
         expect(screen.getByRole('tooltip', { name: tooltipText, hidden: true })).toBeVisible();
     });

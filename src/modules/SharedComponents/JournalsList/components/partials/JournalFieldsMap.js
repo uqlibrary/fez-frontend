@@ -79,14 +79,16 @@ export const JournalFieldsMap = [
                         <Box display="flex" alignItems="flex-end" key={data.key}>
                             <Typography
                                 variant="body1"
-                                className={classes?.inputLabel}
+                                sx={{ ...classes?.inputLabel }}
                                 component="span"
                                 id={sanitiseId(`journal-list-header-${data.key}-${index}`)}
                                 data-testid={sanitiseId(`journal-list-header-${data.key}-${index}`)}
                             >
                                 {data.label}
                                 {/* istanbul ignore next */ !!data.subLabel && (
-                                    <span className={classes?.subLabel}>{data.subLabel}</span>
+                                    <Box component={'span'} sx={{ ...classes?.subLabel }}>
+                                        {data.subLabel}
+                                    </Box>
                                 )}
                             </Typography>
                             {!!data.titleHelp && (
@@ -142,15 +144,9 @@ export const JournalFieldsMap = [
         },
         translateFn: (data, classes) => {
             return data.fez_journal_doaj ? (
-                <LockOpenIcon
-                    className={classes?.iconOpen ?? ''}
-                    style={!!!classes ? { color: 'orange', marginTop: 12 } : /* istanbul ignore next */ {}}
-                />
+                <LockOpenIcon sx={{ ...(classes?.iconOpen ?? { color: 'orange', marginTop: '12px' }) }} />
             ) : (
-                <LockOutlinedIcon
-                    className={classes?.iconClosed ?? ''}
-                    style={!!!classes ? { color: '#e5e5e5', marginTop: 12 } : /* istanbul ignore next */ {}}
-                />
+                <LockOutlinedIcon sx={{ ...(classes?.iconClosed ?? { color: '#e5e5e5', marginTop: '12px' }) }} />
             );
         },
     },
@@ -177,13 +173,17 @@ export const JournalFieldsMap = [
                         <Box display="flex" alignItems="flex-end" key={data.key}>
                             <Typography
                                 variant="body1"
-                                className={classes.inputLabel}
+                                sx={{ ...classes?.inputLabel }}
                                 component="span"
                                 id={sanitiseId(`journal-list-header-${data.key}-${index}`)}
                                 data-testid={sanitiseId(`journal-list-header-${data.key}-${index}`)}
                             >
                                 {data.label}
-                                {!!data.subLabel && <span className={classes.subLabel}>{data.subLabel}</span>}
+                                {!!data.subLabel && (
+                                    <Box component={'span'} sx={{ ...classes?.subLabel }}>
+                                        {data.subLabel}
+                                    </Box>
+                                )}
                             </Typography>
                             {!!data.titleHelp && (
                                 <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />

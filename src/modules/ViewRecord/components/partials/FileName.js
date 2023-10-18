@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled, useTheme } from '@mui/material/styles';
 
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import GetAppIcon from '@mui/icons-material/GetApp';
-import { makeStyles } from '@mui/styles';
 
 import AudioPlayer from './AudioPlayer';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
@@ -15,27 +15,18 @@ import { pathConfig } from 'config/pathConfig';
 import componentsLocale from 'locale/components';
 import Tooltip from '@mui/material/Tooltip';
 
-export const useStyles = makeStyles(
-    theme => ({
-        filenameParent: {
-            overflow: 'hidden',
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
-        },
-        filename: {
-            ...theme.typography.body2,
-            cursor: 'pointer',
-            placeSelf: 'center',
-        },
-        disabled: {
-            cursor: 'not-allowed',
-        },
-        fileDownloadIcon: {
-            textAlign: 'right',
-        },
-    }),
-    { withTheme: true },
-);
+const classes = {
+    filenameParent: {
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        textOverflow: 'ellipsis',
+    },
+};
+const StyledWithBody2 = styled('div')(({ theme }) => ({
+    ...theme.typography.body2,
+    cursor: 'pointer',
+    placeSelf: 'center',
+}));
 
 export const getDownloadLinkTestId = id => `${id}-download`;
 export const getPreviewLinkTestId = id => `${id}-preview`;
@@ -56,8 +47,7 @@ const FileName = ({
     tooltip,
     disabled,
 }) => {
-    const classes = useStyles();
-
+    const theme = useTheme();
     const isAudio = mimeType => {
         return mimeType.indexOf('audio') >= 0;
     };
@@ -113,7 +103,12 @@ const FileName = ({
                     <ExternalLink
                         href={downloadUrl}
                         title={fileName}
-                        className={`${classes.filename} ${classes.filenameParent}`}
+                        sx={{
+                            ...theme.typography.body2,
+                            cursor: 'pointer',
+                            placeSelf: 'center',
+                            ...classes.filenameParent,
+                        }}
                         openInNewIcon
                         data-testid={getDownloadLinkTestId(id)}
                         id={getDownloadLinkTestId(id)}
@@ -122,38 +117,37 @@ const FileName = ({
                     </ExternalLink>
                 )}
                 {allowDownload && !downloadLicence && canShowPreview(mimeType) && (
-                    <Typography variant="body2" className={classes.filenameParent}>
-                        <a
+                    <Typography variant="body2" sx={{ ...classes.filenameParent }}>
+                        <StyledWithBody2
+                            as={'a'}
                             onClick={showPreview}
                             onKeyPress={showPreview}
-                            className={classes.filename}
                             data-testid={getPreviewLinkTestId(id)}
                             id={getPreviewLinkTestId(id)}
                         >
                             {fileName}
-                        </a>
+                        </StyledWithBody2>
                     </Typography>
                 )}
                 {(!allowDownload || !!downloadLicence) && (
                     <Grid container>
-                        <Grid item xs className={classes.filename}>
+                        <StyledWithBody2 as={Grid} item xs>
                             <Tooltip
                                 title={!!tooltip ? tooltip : ''}
                                 id={`${id}-tooltip`}
                                 data-testid={`${id}-tooltip`}
                             >
-                                <Typography
-                                    variant="body2"
-                                    className={`${classes.filename} ${disabled ? classes.disabled : ''} ${
-                                        classes.filenameParent
-                                    }`}
+                                <StyledWithBody2
+                                    as={'p'}
+                                    sx={{ ...(disabled ? { cursor: 'not-allowed' } : {}), ...classes.filenameParent }}
+                                    className={disabled && 'disabled'}
                                 >
                                     {fileName}
-                                </Typography>
+                                </StyledWithBody2>
                             </Tooltip>
-                        </Grid>
+                        </StyledWithBody2>
                         {!disabled && !!downloadLicence && (
-                            <Grid item xs="auto" className={classes.fileDownloadIcon}>
+                            <Grid item xs="auto" sx={{ textAlign: 'right' }}>
                                 <IconButton
                                     aria-label={txt.downloadButtonLabel}
                                     onClick={showConfirmation}

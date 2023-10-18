@@ -1,12 +1,13 @@
 import React from 'react';
 import ManageAuthors from './index';
-import { act, render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
+import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
 import * as repository from 'repositories';
 
 jest.mock('./helpers', () => ({
     checkForExisting: jest.fn(),
+    clearAlerts: jest.fn(),
 }));
 import { checkForExisting } from './helpers';
 
@@ -39,7 +40,7 @@ describe('ManageAuthors', () => {
         });
         const { getByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         expect(getByText('No records to display')).toBeInTheDocument();
     });
@@ -92,11 +93,11 @@ describe('ManageAuthors', () => {
 
         const { getByText, getByTestId } = setup({});
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         expect(loadAuthorListFn).toBeCalled();
 
-        await act(() => waitFor(() => expect(getByTestId('authors-list')).toBeInTheDocument()));
+        await waitFor(() => expect(getByTestId('authors-list')).toBeInTheDocument());
 
         // Expect table column titles
         expect(getByText('ID')).toBeInTheDocument();
@@ -112,8 +113,8 @@ describe('ManageAuthors', () => {
             .replyOnce(500);
 
         const { getByText } = setup({});
-        await act(() => waitFor(() => expect(getByText('No records to display')).toBeInTheDocument()));
-        await act(() => waitFor(() => expect(showAppAlert).toHaveBeenCalled()));
+        await waitFor(() => expect(getByText('No records to display')).toBeInTheDocument());
+        await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
     });
 
     it('should change call an api with updated page size', async () => {
@@ -359,15 +360,10 @@ describe('ManageAuthors', () => {
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
         expect(getByTestId('authors-list-row-19')).toBeInTheDocument();
 
-        act(() => {
-            fireEvent.mouseDown(getByText('20 rows'));
-        });
+        fireEvent.mouseDown(getByText('20 rows'));
+        fireEvent.click(getByText('50'));
 
-        act(() => {
-            fireEvent.click(getByText('50'));
-        });
-
-        await act(() => waitFor(() => getByTestId('authors-list-row-22')));
+        await waitFor(() => getByTestId('authors-list-row-22'));
 
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
         expect(getByTestId('authors-list-row-22')).toBeInTheDocument();
@@ -420,12 +416,10 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
         fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
-        await act(() =>
-            waitFor(() => {
-                expect(queryByTestId('authors-list-row-0')).not.toBeInTheDocument();
-                expect(queryByTestId('authors-list-row-2')).not.toBeInTheDocument();
-            }),
-        );
+        await waitFor(() => {
+            expect(queryByTestId('authors-list-row-0')).not.toBeInTheDocument();
+            expect(queryByTestId('authors-list-row-2')).not.toBeInTheDocument();
+        });
     });
 
     it('should fail to bulk delete all authors', async () => {
@@ -471,13 +465,11 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
         fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
-        await act(() =>
-            waitFor(() => {
-                expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
-                expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
-                expect(showAppAlert).toHaveBeenCalled();
-            }),
-        );
+        await waitFor(() => {
+            expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+            expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+            expect(showAppAlert).toHaveBeenCalled();
+        });
     });
 
     it('should exit from editing author mode', async () => {
@@ -528,7 +520,7 @@ describe('ManageAuthors', () => {
             .reply(200, { data: [], total: 0 });
         const { getByTestId, getByText, queryByTestId, queryByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
 
@@ -574,7 +566,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('aut-is-scopus-id-authenticated'));
         fireEvent.click(getByTestId('authors-add-this-author-save'));
 
-        await act(() => waitFor(() => expect(showAppAlert).toHaveBeenCalled()));
+        await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
         expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
     });
@@ -603,7 +595,7 @@ describe('ManageAuthors', () => {
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.click(getByTestId('authors-add-this-author-save'));
 
-        await act(() => waitFor(() => expect(showAppAlert).toHaveBeenCalled()));
+        await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
         expect(queryByTestId('aut-display-name-0')).not.toBeInTheDocument();
     });
@@ -690,7 +682,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));
 
-        await act(() => waitFor(() => expect(showAppAlert).toHaveBeenCalled()));
+        await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
         expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
         expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
@@ -767,9 +759,9 @@ describe('ManageAuthors', () => {
 
         fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
         fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
-        act(() => {
-            fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-543' } });
-        });
+        // act(() => {
+        fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-543' } });
+        // });
         fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '1234564' } });
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
 
@@ -780,7 +772,7 @@ describe('ManageAuthors', () => {
 
         await waitFor(() => getByTestId('authors-list-row-0'));
 
-        await act(() => waitFor(() => expect(showAppAlert).toHaveBeenCalled()));
+        await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
         expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', '');
         expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', '');
@@ -872,7 +864,7 @@ describe('ManageAuthors', () => {
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
         const { getByTestId, getByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         const listItem0 = getByTestId('authors-list-row-0');
         expect(listItem0).toBeInTheDocument();
@@ -883,7 +875,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
         fireEvent.click(getByTestId('confirm-authors-delete-this-author-confirmation'));
 
-        await act(() => waitFor(() => expect(showAppAlert).toHaveBeenCalled()));
+        await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
         // expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Vishal, Desai');
         // expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqvdesai');
@@ -989,7 +981,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
         fireEvent.click(getByTestId('confirm-authors-delete-this-author-confirmation'));
 
-        await act(() => waitFor(() => expect(showAppAlert).toHaveBeenCalled()));
+        await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
         expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
         expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
@@ -1050,13 +1042,13 @@ describe('ManageAuthors', () => {
 
         const { getByTestId, getByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
         fireEvent.click(getByTestId('aut-id-0-copy-text'));
 
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith(2011);
 
-        waitFor(() => getByTestId('copied-text-snackbar'));
+        await waitFor(() => getByTestId('copied-text-snackbar'));
     });
 
     it('should trigger scopus ingest for the author', async () => {
@@ -1196,12 +1188,10 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('authors-list-row-0-ingest-from-scopus'));
         fireEvent.click(getByTestId('confirm-scopus-ingest-confirmation'));
 
-        await act(() =>
-            waitFor(() => {
-                expect(showAppAlert).toHaveBeenCalledTimes(2);
-                expect(set).toHaveBeenCalledWith('SCOPUS_INGESTED_AUTHORS_2000003831', 2000003831, { expires: 7 });
-            }),
-        );
+        await waitFor(() => {
+            expect(showAppAlert).toHaveBeenCalledTimes(2);
+            expect(set).toHaveBeenCalledWith('SCOPUS_INGESTED_AUTHORS_2000003831', 2000003831, { expires: 7 });
+        });
     });
 
     it('should fail to trigger scopus ingest for the author', async () => {
@@ -1266,11 +1256,9 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('authors-list-row-0-ingest-from-scopus'));
         fireEvent.click(getByTestId('confirm-scopus-ingest-confirmation'));
 
-        await act(() =>
-            waitFor(() => {
-                expect(showAppAlert).toHaveBeenCalledTimes(2);
-                expect(set).not.toHaveBeenCalled();
-            }),
-        );
+        await waitFor(() => {
+            expect(showAppAlert).toHaveBeenCalledTimes(2);
+            expect(set).not.toHaveBeenCalled();
+        });
     });
 });

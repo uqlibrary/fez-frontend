@@ -1,50 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import { makeStyles } from '@mui/styles';
 import Clear from '@mui/icons-material/Clear';
 import Typography from '@mui/material/Typography';
+
 import { sanitiseId } from 'helpers/general';
 
-const useStyles = makeStyles(
-    theme => ({
-        listItemGutters: {
-            paddingLeft: theme.spacing(),
-            paddingRight: theme.spacing(),
+const StyledListItem = styled(ListItem)(({ theme }) => ({
+    '&.MuiListItem-gutters': {
+        paddingLeft: theme.spacing(1),
+        paddingRight: theme.spacing(1),
+    },
+}));
+
+const StyledListItemText = styled(ListItemText)(({ theme }) => ({
+    ...theme.typography.body2,
+    '&.MuiListItemText-inset': {
+        '&:first-child ': {
+            paddingLeft: theme.spacing(2),
         },
-        listText: {
-            ...theme.typography.body2,
-        },
-        inset: {
-            '&:first-child': {
-                paddingLeft: theme.spacing(2),
-            },
-        },
-        selectedFacet: {
-            color: theme.palette.primary.main,
-        },
-    }),
-    { withTheme: true },
-);
+    },
+}));
 
 export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, facet, primaryText, isActive }) {
-    const classes = useStyles();
     const itemText = primaryText.indexOf('(') > 0 ? primaryText.slice(0, primaryText.indexOf('(')) : primaryText;
     const idText = sanitiseId(`${facet}-${itemText}`);
     return (
-        <ListItem
+        <StyledListItem
             id={`facet-filter-nested-item-${idText}`}
             data-testid={`facet-filter-nested-item-${idText}`}
             key={`facet-filter-nested-item-${index}`}
             button
             onClick={onFacetClick}
             disabled={disabled}
-            classes={{
-                gutters: classes.listItemGutters,
-            }}
             aria-label={!isActive ? `${primaryText} add filter` : `${primaryText} remove filter`}
         >
             {isActive && (
@@ -56,17 +48,12 @@ export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, face
                     />
                 </ListItemIcon>
             )}
-            <ListItemText
-                {...(!isActive ? { inset: true } : { inset: false })}
-                className={classes.listText}
-                disableTypography
-                classes={{ inset: classes.inset }}
-            >
+            <StyledListItemText {...(!isActive ? { inset: true } : { inset: false })} disableTypography>
                 <Typography variant={'body2'} color={isActive ? 'primary' : 'inherit'}>
                     {primaryText}
                 </Typography>
-            </ListItemText>
-        </ListItem>
+            </StyledListItemText>
+        </StyledListItem>
     );
 }
 

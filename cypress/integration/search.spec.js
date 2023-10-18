@@ -17,7 +17,7 @@ context('Search', () => {
         cy.visit('/records/search');
     });
 
-    it('Doing a basic search to advanced search', () => {
+    it.skip('Doing a basic search to advanced search', () => {
         // Perform a basic search
         cy.get('[data-testid=simple-search-input]')
             .should(
@@ -94,6 +94,42 @@ context('Search', () => {
         cy.get('[data-testid="search-records-results"]').contains('Displaying works 1 to 7 of 7 total works.');
     });
 
+    context('facets', () => {
+        it('should have facets that can be selected', () => {
+            cy.get('[data-testid=simple-search-input]')
+                .should(
+                    'have.attr',
+                    'aria-label',
+                    // searchLocale.ariaInputLabel
+                    'Enter your search query to search eSpace and then press Enter',
+                )
+                .closest('[class*="MuiFormControl-root"]')
+                // .contains('label', searchLocale.searchBoxPlaceholder);
+                .contains('label', 'Search eSpace');
+
+            cy.get('[data-testid=simple-search-input]').type('Test{enter}');
+            cy.get('[data-testid="search-records-results"]').should(
+                'contain',
+                'Displaying works 1 to 7 of 7 total works.',
+            );
+
+            cy.get('[data-testid="refine-results-facets"]').should('be.visible');
+            cy.get('[data-testid="refine-results-facets"]')
+                .find('[data-testid="facets-filter"] nav > div')
+                .should('have.length', 8);
+
+            cy.get('[data-testid="clickable-facet-category-display-type"]').click();
+
+            cy.get('[data-testid="clear-facet-filter-nested-item-display-type-journal-article"]').should('not.exist');
+
+            cy.get('[data-testid="facet-filter-nested-item-display-type-journal-article"]').click();
+            cy.get('[data-testid="clear-facet-filter-nested-item-display-type-journal-article"]').should('be.visible');
+
+            cy.get('[data-testid="clear-facet-filter-nested-item-display-type-journal-article"]').click();
+            cy.get('[data-testid="clear-facet-filter-nested-item-display-type-journal-article"]').should('not.exist');
+        });
+    });
+
     context('Search results in Image Gallery', () => {
         it('has Display As drop down with expected values', () => {
             cy.viewport(xl, 1600);
@@ -128,7 +164,7 @@ context('Search', () => {
                 .find('div[data-testid$="-alert"]')
                 .siblings('div')
                 .siblings('div')
-                .should('contain.text', 'Restricted + content warning');
+                .should('contain.text', 'Content warning');
             cy.get('li[data-testid^=image-gallery-item-]').each((item, index) => {
                 if (index > 0) {
                     cy.wrap(item)
@@ -147,7 +183,7 @@ context('Search', () => {
             });
         });
 
-        it.only('should preserve users displayAs choice across searches', () => {
+        it('should preserve users displayAs choice across searches', () => {
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',

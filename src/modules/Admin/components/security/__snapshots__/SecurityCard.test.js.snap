@@ -9,18 +9,18 @@ exports[`SecurityCard component should not render data stream security selector 
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-7 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
         data-testid="record-security-card"
         id="record-security-card"
       >
         <div
-          class="MuiCardHeader-root makeStyles-cardHeaderAccent-10 css-185gdzj-MuiCardHeader-root"
+          class="MuiCardHeader-root css-lq5pfj-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-12 css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -117,18 +117,18 @@ exports[`SecurityCard component should render security card correctly for collec
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-19 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
         data-testid="record-security-card"
         id="record-security-card"
       >
         <div
-          class="MuiCardHeader-root makeStyles-cardHeaderAccent-22 css-185gdzj-MuiCardHeader-root"
+          class="MuiCardHeader-root css-lq5pfj-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-24 css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -264,18 +264,18 @@ exports[`SecurityCard component should render security card correctly for commun
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-25 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
         data-testid="record-security-card"
         id="record-security-card"
       >
         <div
-          class="MuiCardHeader-root makeStyles-cardHeaderAccent-28 css-185gdzj-MuiCardHeader-root"
+          class="MuiCardHeader-root css-lq5pfj-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-30 css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -360,18 +360,18 @@ exports[`SecurityCard component should render security card correctly for record
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
         data-testid="record-security-card"
         id="record-security-card"
       >
         <div
-          class="MuiCardHeader-root makeStyles-cardHeaderAccent-4 css-185gdzj-MuiCardHeader-root"
+          class="MuiCardHeader-root css-lq5pfj-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -459,18 +459,18 @@ exports[`SecurityCard component should render security card correctly for record
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
         data-testid="datastream-security-card"
         id="datastream-security-card"
       >
         <div
-          class="MuiCardHeader-root makeStyles-cardHeaderAccent-4 css-185gdzj-MuiCardHeader-root"
+          class="MuiCardHeader-root css-lq5pfj-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -566,18 +566,18 @@ exports[`SecurityCard component should render security card correctly for record
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-13 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
         data-testid="record-security-card"
         id="record-security-card"
       >
         <div
-          class="MuiCardHeader-root makeStyles-cardHeaderAccent-16 css-185gdzj-MuiCardHeader-root"
+          class="MuiCardHeader-root css-lq5pfj-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-18 css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -710,18 +710,18 @@ exports[`SecurityCard component should render security card correctly for record
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-13 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
         data-testid="datastream-security-card"
         id="datastream-security-card"
       >
         <div
-          class="MuiCardHeader-root makeStyles-cardHeaderAccent-16 css-185gdzj-MuiCardHeader-root"
+          class="MuiCardHeader-root css-lq5pfj-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-18 css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -817,18 +817,18 @@ exports[`SecurityCard component should render security card with disabled inputs
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-31 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
         data-testid="record-security-card"
         id="record-security-card"
       >
         <div
-          class="MuiCardHeader-root makeStyles-cardHeaderAccent-34 css-185gdzj-MuiCardHeader-root"
+          class="MuiCardHeader-root css-lq5pfj-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-36 css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -961,18 +961,18 @@ exports[`SecurityCard component should render security card with disabled inputs
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-31 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
         data-testid="datastream-security-card"
         id="datastream-security-card"
       >
         <div
-          class="MuiCardHeader-root makeStyles-cardHeaderAccent-34 css-185gdzj-MuiCardHeader-root"
+          class="MuiCardHeader-root css-lq5pfj-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-36 css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >

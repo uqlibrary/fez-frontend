@@ -1,5 +1,5 @@
 import React from 'react';
-import { DocumentTypeMultipleField, styles } from './DocumentTypeMultipleField';
+import { DocumentTypeMultipleField } from './DocumentTypeMultipleField';
 import { rtlRender, fireEvent, within } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -51,30 +51,6 @@ describe('DocumentTypeMultipleField component', () => {
         fireEvent.click(getByRole('option', { name: 'Design' }));
 
         expect(updateDocTypeValuesFn).toHaveBeenCalledWith([316]);
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            typography: {
-                caption: 'test1',
-            },
-            palette: {
-                accent: {
-                    main: 'test2',
-                },
-                white: {
-                    main: 'test3',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette.accent;
-        delete theme.palette.white;
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
     });
 
     it('should have the value "0" if docTypes property is empty', () => {

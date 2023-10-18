@@ -1,5 +1,5 @@
 import React from 'react';
-import GrantListEditorHeaderWithWidth, { GrantListEditorHeader, styles } from './GrantListEditorHeader';
+import GrantListEditorHeaderWithWidth, { GrantListEditorHeader } from './GrantListEditorHeader';
 import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -7,7 +7,6 @@ function setup(testProps = {}) {
         onDeleteAll: jest.fn(),
         // locale: {},
         disabled: false,
-        classes: {},
         width: '',
         hideType: false,
         ...testProps,
@@ -34,10 +33,6 @@ describe('GrantListEditorHeader', () => {
     it('should hide grant agency type input', () => {
         const { container } = setup({ hideType: true });
         expect(container).toMatchSnapshot();
-    });
-
-    it('should have a proper style generator', () => {
-        expect(styles()).toMatchSnapshot();
     });
 
     it('should use width hook', () => {

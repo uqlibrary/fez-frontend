@@ -42,6 +42,18 @@ describe('Alert', () => {
         expect(getByTestId('ErrorIcon')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
+    it('should render error type of alert by default', () => {
+        const { container, getByText, getByTestId } = setup({
+            title: 'This is an error title',
+            type: 'invalid-type',
+            message: 'This is an error message',
+        });
+
+        expect(getByText(/This is an error title*/)).toBeInTheDocument();
+        expect(getByText('This is an error message')).toBeInTheDocument();
+        expect(getByTestId('ErrorIcon')).toBeInTheDocument();
+        expect(container).toMatchSnapshot();
+    });
 
     it('should render custom alert', () => {
         const { container, getByText } = setup({
@@ -159,7 +171,7 @@ describe('Alert', () => {
         const dismissfn = jest.fn();
         const { container, getByTestId } = setup({
             dismissAction: dismissfn,
-            type: null,
+            type: 'error',
         });
 
         fireEvent.click(getByTestId('dismiss'));

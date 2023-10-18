@@ -6,17 +6,6 @@ import PropTypes from 'prop-types';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
-import withStyles from '@mui/styles/withStyles';
-
-export const styles = theme => ({
-    title: {
-        ...theme.typography.caption,
-    },
-    selectedMenuItem: {
-        backgroundColor: `${((theme.palette || {}).accent || {}).main || ''} !important`,
-        color: ((theme.palette || {}).white || {}).main || '',
-    },
-});
 
 /**
  * allow the user to select MULTIPLE document types
@@ -28,7 +17,6 @@ export class DocumentTypeMultipleField extends PureComponent {
         updateDocTypeValues: PropTypes.func,
         className: PropTypes.string,
         disabled: PropTypes.bool,
-        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -47,7 +35,6 @@ export class DocumentTypeMultipleField extends PureComponent {
     };
 
     render() {
-        const { classes } = this.props;
         const txt = locale.components.searchComponent;
         const docTypeItems = [
             <MenuItem key={0} disabled>
@@ -56,8 +43,10 @@ export class DocumentTypeMultipleField extends PureComponent {
             ...this.publicationTypes.map((item, index) => {
                 return (
                     <MenuItem
-                        classes={{ selected: classes.selectedMenuItem }}
-                        style={{ display: 'block' }}
+                        sx={{
+                            display: 'block',
+                            '&.Mui-selected': { backgroundColor: 'accent.main', color: 'white.main' },
+                        }}
                         checked={
                             this.props.docTypes &&
                             this.props.docTypes.length > 0 &&
@@ -91,4 +80,4 @@ export class DocumentTypeMultipleField extends PureComponent {
         );
     }
 }
-export default withStyles(styles, { withTheme: true })(DocumentTypeMultipleField);
+export default DocumentTypeMultipleField;

@@ -12,7 +12,7 @@ exports[`PubmedCentralLink test  should render component with pubmedCentralId 1`
 <div>
   <a
     aria-label="Full text via Pubmed Central (open access)"
-    class="pubmedCentralLinkUrl makeStyles-externalLink-1 makeStyles-externalLink-3"
+    class="pubmedCentralLinkUrl css-1oqhn84"
     data-analyticsid="pubmed-central-link"
     data-testid="pubmed-central-link"
     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
@@ -24,7 +24,7 @@ exports[`PubmedCentralLink test  should render component with pubmedCentralId 1`
   >
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-2 css-i4bv87-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
       data-testid="OpenInNewIcon"
       focusable="false"
       id="pubmed-central-link-new-window-icon"

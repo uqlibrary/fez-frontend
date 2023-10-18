@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
-import { useRecordsSelector } from 'hooks';
+import { styled } from '@mui/material/styles';
 
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -10,21 +9,15 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import { makeStyles } from '@mui/styles';
-
+import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
+import { useRecordsSelector } from 'hooks';
 import BulkUpdatesActions from './BulkUpdatesActions';
 import locale from 'locale/components';
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        alignItems: 'center',
-        margin: 0,
-    },
-    bulkActionContainer: {
-        [theme.breakpoints.down('sm')]: {
-            paddingLeft: `${theme.spacing(2)} !important`,
-            marginBottom: theme.spacing(2),
-        },
+const StyledBulkActionContainer = styled(Grid)(({ theme }) => ({
+    [theme.breakpoints.down('sm')]: {
+        paddingLeft: `${theme.spacing(2)} !important`,
+        marginBottom: theme.spacing(2),
     },
 }));
 
@@ -53,7 +46,6 @@ export const PublicationsList = ({
         handleSelectAll,
     } = useRecordsSelector();
 
-    const classes = useStyles();
     const renderPublicationCitation = (index, publication) => {
         return (
             <PublicationCitation
@@ -98,9 +90,7 @@ export const PublicationsList = ({
             <Grid item xs={12} sm>
                 <Box display="flex" alignItems="center" height="100%">
                     <FormControlLabel
-                        classes={{
-                            root: classes.root,
-                        }}
+                        sx={{ alignItems: 'center', margin: 0 }}
                         control={
                             <Checkbox
                                 inputProps={{
@@ -121,12 +111,11 @@ export const PublicationsList = ({
                     />
                 </Box>
             </Grid>
-            <Grid
+            <StyledBulkActionContainer
                 item
                 xs={12}
                 sm
-                className={classes.bulkActionContainer}
-                style={{ display: Object.keys(recordsSelected).length > 0 ? '' : 'none' }}
+                sx={{ display: Object.keys(recordsSelected).length > 0 ? '' : 'none' }}
             >
                 <Box display="flex" alignItems="center" height="100%">
                     <BulkUpdatesActions
@@ -134,7 +123,7 @@ export const PublicationsList = ({
                         recordsSelected={recordsSelected}
                     />
                 </Box>
-            </Grid>
+            </StyledBulkActionContainer>
             <Grid item xs={12}>
                 {publicationsList.map((publication, index) => (
                     <Grid container spacing={0} alignItems="flex-start" key={`publication-${index}`}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 import { OrcidSyncContext } from 'context';
 
 import DashboardOrcidSync from '../containers/DashboardOrcidSync';
@@ -9,32 +10,29 @@ import locale from 'locale/pages';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
-import withStyles from '@mui/styles/withStyles';
 
-export const styles = theme => ({
-    researcherIDlink: {
-        '&:hover': {
-            cursor: 'pointer',
-        },
-        '& .error': {
-            '-webkit-filter': 'grayscale(1)',
-            filter: 'grayscale(1)',
-        },
+const StyledResearchedLink = styled('div')({
+    '&:hover': {
+        cursor: 'pointer',
     },
-    orcidSyncBadge: {
-        '& button': {
-            padding: 0,
-            position: 'relative',
-            top: -15,
-        },
-        '& svg': {
-            color: theme.palette.white.main,
-        },
-    },
-    orcidLink: {
-        color: theme.palette.white.main,
+    '& .error': {
+        WebkitFilter: 'grayscale(1)',
+        filter: 'grayscale(1)',
     },
 });
+const StyledOrcidBadge = styled('span')(({ theme }) => ({
+    '& button': {
+        padding: 0,
+        position: 'relative',
+        top: -15,
+    },
+    '& svg': {
+        color: theme.palette.white.main,
+    },
+}));
+const StyledOrcidLink = styled(Typography)(({ theme }) => ({
+    color: theme.palette.white.main,
+}));
 
 export const renderIcon = (title, className) => {
     return (
@@ -45,7 +43,7 @@ export const renderIcon = (title, className) => {
 };
 
 export const renderButton = args => {
-    const { item, index, navHandler, values, authenticated, classes, txt, link } = args;
+    const { item, index, navHandler, values, authenticated, txt, link } = args;
     const isLinkedExternal = values[item] && link.linkedUrl[item].indexOf('http') !== -1;
     const isUnlinkedExternal = !values[item] && link.notLinkedUrl[item].indexOf('http') !== -1;
     const isInternal = !values[item] && link.notLinkedUrl[item].indexOf('http') === -1;
@@ -64,18 +62,13 @@ export const renderButton = args => {
                 {({ showSyncUI, orcidSyncProps }) =>
                     (isLinkedExternal || isUnlinkedExternal) && (
                         <React.Fragment>
-                            <ExternalLink
-                                id={item}
-                                openInNewIcon={false}
-                                className={classes.researcherIDlink}
-                                href={url}
-                            >
+                            <StyledResearchedLink as={ExternalLink} id={item} openInNewIcon={false} href={url}>
                                 {renderIcon(title, externalIconClassName)}
-                            </ExternalLink>
+                            </StyledResearchedLink>
                             {item === 'orcid' && showSyncUI && (
-                                <span className={classes.orcidSyncBadge}>
+                                <StyledOrcidBadge>
                                     <DashboardOrcidSync {...orcidSyncProps} />
-                                </span>
+                                </StyledOrcidBadge>
                             )}
                         </React.Fragment>
                     )
@@ -84,17 +77,17 @@ export const renderButton = args => {
 
             {/* Internal URLs - will be non-linked IDs only */}
             {isInternal && (
-                <a
+                <StyledResearchedLink
+                    as={'a'}
                     id={item}
                     data-testid={item}
                     tabIndex={0}
                     onClick={navHandler}
-                    className={classes.researcherIDlink}
                     onKeyPress={navHandler}
                     title={title}
                 >
                     <div title={title} className={internalIconClassName} />
-                </a>
+                </StyledResearchedLink>
             )}
         </Grid>
     );
@@ -115,7 +108,6 @@ export class DashboardResearcherIdsClass extends React.Component {
             orcid: PropTypes.bool,
         }),
         history: PropTypes.object.isRequired,
-        classes: PropTypes.object,
     };
 
     navigateToRoute = (event, item) => {
@@ -124,7 +116,7 @@ export class DashboardResearcherIdsClass extends React.Component {
     };
 
     render() {
-        const { values, classes } = this.props;
+        const { values } = this.props;
         const txt = locale.pages.dashboard.header.dashboardResearcherIds;
         const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
 
@@ -146,9 +138,9 @@ export class DashboardResearcherIdsClass extends React.Component {
                             title={txt.orcidlinkLabel}
                             tabIndex={0}
                         >
-                            <Typography variant={'caption'} className={classes.orcidLink}>
+                            <StyledOrcidLink variant={'caption'}>
                                 {`${txt.orcidLinkPrefix}${values.orcid}`}
-                            </Typography>
+                            </StyledOrcidLink>
                         </a>
                     </Grid>
                 )}
@@ -156,6 +148,5 @@ export class DashboardResearcherIdsClass extends React.Component {
         );
     }
 }
-
-const DashboardResearcherIds = withStyles(styles, { withTheme: true })(DashboardResearcherIdsClass);
+const DashboardResearcherIds = props => <DashboardResearcherIdsClass {...props} />;
 export default DashboardResearcherIds;

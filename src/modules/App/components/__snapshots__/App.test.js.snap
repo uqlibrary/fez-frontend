@@ -3,20 +3,19 @@
 exports[`Application component Should display mobile correctly 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container AppClass-layoutFill-1576 css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
     >
       <div
-        class="MuiToolbar-root AppClass-toolbar-1579 MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true AppClass-nowrap-1578 css-1vd824g-MuiGrid-root"
-            style="padding-left: 284px;"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-kuk15j-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -26,7 +25,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap AppClass-titleLink-1577 css-fvpmtz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -35,7 +34,6 @@ exports[`Application component Should display mobile correctly 1`] = `
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -48,14 +46,14 @@ exports[`Application component Should display mobile correctly 1`] = `
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-1581 css-13e2t53-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-1586 MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconPrefix-1580 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -66,7 +64,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-1586 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -104,7 +102,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-1582 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -135,7 +133,7 @@ exports[`Application component Should display mobile correctly 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-iconButton-1587 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="PersonOutlineIcon"
                   focusable="false"
                   id="logged-out-icon"
@@ -155,25 +153,25 @@ exports[`Application component Should display mobile correctly 1`] = `
       </div>
     </header>
     <div
-      class="MuiDrawer-root MuiDrawer-docked MenuDrawer-docked-1589 css-7ik032-MuiDrawer-docked"
+      class="MuiDrawer-root MuiDrawer-docked css-wg9x4s-MuiDrawer-docked"
       id="menudrawer"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MenuDrawer-paper-1588 MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft MenuDrawer-paperAnchorDockedLeft-1590 css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
       >
         <nav
-          class="MuiList-root MuiList-padding MenuDrawer-mainMenu-1593 css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-fv1two-MuiList-root"
           id="mainMenu"
           tabindex="-1"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MenuDrawer-header-1591 MuiGrid-wrap-xs-nowrap css-vmtq44-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-1rv48rz-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1soofh4-MuiGrid-root"
             >
               <a
-                class="noHover makeStyles-externalLink-1636 makeStyles-externalLink-1638"
+                class="noHover css-1oqhn84"
                 data-analyticsid="main-menu-logo-link"
                 data-testid="main-menu-logo-link"
                 href="http://www.uq.edu.au"
@@ -202,7 +200,7 @@ exports[`Application component Should display mobile correctly 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MenuDrawer-iconButton-1597 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="KeyboardArrowLeftIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -219,7 +217,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           </div>
           <div
             aria-label="Click to skip, or tab to progress to the navigation"
-            class="MenuDrawer-skipNav-1592"
+            class="css-16sk7k9"
             id="skipNav"
             tabindex="1"
             type="button"
@@ -245,11 +243,11 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
                 id="menu-itemText-0"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary MenuDrawer-ListItemTextPrimary-1594 css-17xnwrf-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
                 >
                   Home
                 </span>
@@ -269,16 +267,16 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
                 id="menu-itemText-1"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary MenuDrawer-ListItemTextPrimary-1594 css-17xnwrf-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
                 >
                   Search eSpace
                 </span>
                 <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary MenuDrawer-ListItemTextSecondary-1595 css-yw73va-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
                 />
               </div>
               <span
@@ -296,11 +294,11 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
                 id="menu-itemText-2"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary MenuDrawer-ListItemTextPrimary-1594 css-17xnwrf-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
                 >
                   Browse
                 </span>
@@ -320,11 +318,11 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
                 id="menu-itemText-3"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary MenuDrawer-ListItemTextPrimary-1594 css-17xnwrf-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
                 >
                   Help
                 </span>
@@ -344,16 +342,16 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
                 id="menu-itemText-4"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary MenuDrawer-ListItemTextPrimary-1594 css-17xnwrf-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
                 >
                   About
                 </span>
                 <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary MenuDrawer-ListItemTextSecondary-1595 css-yw73va-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
                 />
               </div>
               <span
@@ -368,11 +366,11 @@ exports[`Application component Should display mobile correctly 1`] = `
           tabindex="-1"
         />
         <div
-          class="MenuDrawer-mainMenuFooter-1596"
+          class="MuiBox-root css-n5zwdn"
         >
           CRICOS Provider No: 
           <a
-            class="makeStyles-externalLink-1636 makeStyles-externalLink-1639"
+            class=" css-1oqhn84"
             data-analyticsid="cricos-link"
             data-testid="cricos-link"
             href="http://www.uq.edu.au/about/cricos-link"
@@ -394,7 +392,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root ScrollTop-scrollTop-1598 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root ScrollTop-scrollTop-1598 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -433,27 +431,26 @@ exports[`Application component Should display mobile correctly 1`] = `
         style="margin-bottom: 12px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-item AppClass-layoutCard-1575 css-13i4rnv-MuiGrid-root"
-          style="margin-top: 0px; margin-bottom: 0px;"
+          class="MuiGrid-root MuiGrid-item css-1wzz5s-MuiGrid-root"
         >
           <div
             data-testid="alert"
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root makeStyles-root-1600 MuiGrid-container makeStyles-info_outline-1615 makeStyles-common-1601 css-1k6h6af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
               data-analyticsid="login"
               data-testid="login"
               id="login"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true makeStyles-linked-1608 css-cyocdy-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-yrmeox-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item makeStyles-icon-1604 alert-icon  css-13i4rnv-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -469,7 +466,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-1605 alert-text css-1vd824g-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                   >
                     <b>
                       You are not logged in - 
@@ -479,7 +476,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto makeStyles-actionButton-1606 css-11gq09b-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
               >
                 <button
                   class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
@@ -499,7 +496,6 @@ exports[`Application component Should display mobile correctly 1`] = `
           </div>
         </div>
       </div>
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -507,7 +503,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item Page-layoutCard-1617 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -590,18 +586,18 @@ exports[`Application component Should display mobile correctly 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1623 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-1625 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-1628 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -629,18 +625,18 @@ exports[`Application component Should display mobile correctly 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1623 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-1625 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-1628 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -671,18 +667,18 @@ exports[`Application component Should display mobile correctly 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1623 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-1625 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-1628 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -697,11 +693,11 @@ exports[`Application component Should display mobile correctly 1`] = `
                       id="standard-card-open-to-collaborate-content"
                     >
                       <div
-                        class="makeStyles-culturalNoticeParent-1629"
+                        class="css-ki8537"
                       >
                         <img
                           alt="Open to Collaborate"
-                          class="makeStyles-culturalNoticeImage-1630"
+                          class="css-rd2owr"
                           src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
                         />
                         <p
@@ -737,13 +733,13 @@ exports[`Application component redirects user to login if going to a secure file
 exports[`Application component should determine if it has incomplete works from props and hide menu item 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container AppClass-layoutFill-1386 css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
     >
       <div
-        class="MuiToolbar-root AppClass-toolbar-1389 MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
@@ -779,8 +775,7 @@ exports[`Application component should determine if it has incomplete works from 
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true AppClass-nowrap-1388 css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px;"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -801,7 +796,7 @@ exports[`Application component should determine if it has incomplete works from 
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap AppClass-titleLink-1387 css-fvpmtz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -810,7 +805,6 @@ exports[`Application component should determine if it has incomplete works from 
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -823,14 +817,14 @@ exports[`Application component should determine if it has incomplete works from 
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-1391 css-13e2t53-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-1396 MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconPrefix-1390 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -841,7 +835,7 @@ exports[`Application component should determine if it has incomplete works from 
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-1396 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -879,7 +873,7 @@ exports[`Application component should determine if it has incomplete works from 
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-1392 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -910,7 +904,7 @@ exports[`Application component should determine if it has incomplete works from 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-iconButton-1397 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -935,7 +929,7 @@ exports[`Application component should determine if it has incomplete works from 
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root ScrollTop-scrollTop-1408 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root ScrollTop-scrollTop-1408 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -974,15 +968,14 @@ exports[`Application component should determine if it has incomplete works from 
         style="margin-bottom: 12px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-item AppClass-layoutCard-1385 css-13i4rnv-MuiGrid-root"
-          style="margin-top: 0px; margin-bottom: 0px;"
+          class="MuiGrid-root MuiGrid-item css-1wzz5s-MuiGrid-root"
         >
           <div
             data-testid="alert"
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root makeStyles-root-1410 MuiGrid-container makeStyles-info_outline-1425 makeStyles-common-1411 css-1k6h6af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
               data-analyticsid="not-registered-author"
               data-testid="not-registered-author"
               id="not-registered-author"
@@ -994,7 +987,7 @@ exports[`Application component should determine if it has incomplete works from 
                   class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item makeStyles-icon-1414 alert-icon  css-13i4rnv-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -1010,7 +1003,7 @@ exports[`Application component should determine if it has incomplete works from 
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-1415 alert-text css-1vd824g-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                   >
                     <b>
                       You are not registered in UQ eSpace as an author - 
@@ -1023,7 +1016,6 @@ exports[`Application component should determine if it has incomplete works from 
           </div>
         </div>
       </div>
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -1031,7 +1023,7 @@ exports[`Application component should determine if it has incomplete works from 
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item Page-layoutCard-1427 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -1114,18 +1106,18 @@ exports[`Application component should determine if it has incomplete works from 
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1433 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-1435 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-1438 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -1153,18 +1145,18 @@ exports[`Application component should determine if it has incomplete works from 
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1433 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-1435 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-1438 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -1195,18 +1187,18 @@ exports[`Application component should determine if it has incomplete works from 
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1433 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-1435 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-1438 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -1221,11 +1213,11 @@ exports[`Application component should determine if it has incomplete works from 
                       id="standard-card-open-to-collaborate-content"
                     >
                       <div
-                        class="makeStyles-culturalNoticeParent-1439"
+                        class="css-ki8537"
                       >
                         <img
                           alt="Open to Collaborate"
-                          class="makeStyles-culturalNoticeImage-1440"
+                          class="css-rd2owr"
                           src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
                         />
                         <p
@@ -1255,13 +1247,13 @@ exports[`Application component should determine if it has incomplete works from 
 exports[`Application component should determine if it has incomplete works from props and show menu item 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container AppClass-layoutFill-1448 css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
     >
       <div
-        class="MuiToolbar-root AppClass-toolbar-1451 MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
@@ -1297,8 +1289,7 @@ exports[`Application component should determine if it has incomplete works from 
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true AppClass-nowrap-1450 css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px;"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -1319,7 +1310,7 @@ exports[`Application component should determine if it has incomplete works from 
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap AppClass-titleLink-1449 css-fvpmtz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -1328,7 +1319,6 @@ exports[`Application component should determine if it has incomplete works from 
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -1341,14 +1331,14 @@ exports[`Application component should determine if it has incomplete works from 
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-1453 css-13e2t53-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-1458 MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconPrefix-1452 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1359,7 +1349,7 @@ exports[`Application component should determine if it has incomplete works from 
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-1458 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -1397,7 +1387,7 @@ exports[`Application component should determine if it has incomplete works from 
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-1454 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1428,7 +1418,7 @@ exports[`Application component should determine if it has incomplete works from 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-iconButton-1459 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -1453,7 +1443,7 @@ exports[`Application component should determine if it has incomplete works from 
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root ScrollTop-scrollTop-1470 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root ScrollTop-scrollTop-1470 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -1492,15 +1482,14 @@ exports[`Application component should determine if it has incomplete works from 
         style="margin-bottom: 12px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-item AppClass-layoutCard-1447 css-13i4rnv-MuiGrid-root"
-          style="margin-top: 0px; margin-bottom: 0px;"
+          class="MuiGrid-root MuiGrid-item css-1wzz5s-MuiGrid-root"
         >
           <div
             data-testid="alert"
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root makeStyles-root-1472 MuiGrid-container makeStyles-info_outline-1487 makeStyles-common-1473 css-1k6h6af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
               data-analyticsid="not-registered-author"
               data-testid="not-registered-author"
               id="not-registered-author"
@@ -1512,7 +1501,7 @@ exports[`Application component should determine if it has incomplete works from 
                   class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item makeStyles-icon-1476 alert-icon  css-13i4rnv-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -1528,7 +1517,7 @@ exports[`Application component should determine if it has incomplete works from 
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-1477 alert-text css-1vd824g-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                   >
                     <b>
                       You are not registered in UQ eSpace as an author - 
@@ -1541,7 +1530,6 @@ exports[`Application component should determine if it has incomplete works from 
           </div>
         </div>
       </div>
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -1549,7 +1537,7 @@ exports[`Application component should determine if it has incomplete works from 
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item Page-layoutCard-1489 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -1632,18 +1620,18 @@ exports[`Application component should determine if it has incomplete works from 
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1495 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-1497 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-1500 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -1671,18 +1659,18 @@ exports[`Application component should determine if it has incomplete works from 
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1495 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-1497 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-1500 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -1713,18 +1701,18 @@ exports[`Application component should determine if it has incomplete works from 
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1495 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-1497 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-1500 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -1739,11 +1727,11 @@ exports[`Application component should determine if it has incomplete works from 
                       id="standard-card-open-to-collaborate-content"
                     >
                       <div
-                        class="makeStyles-culturalNoticeParent-1501"
+                        class="css-ki8537"
                       >
                         <img
                           alt="Open to Collaborate"
-                          class="makeStyles-culturalNoticeImage-1502"
+                          class="css-rd2owr"
                           src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
                         />
                         <p
@@ -1773,13 +1761,13 @@ exports[`Application component should determine if it has incomplete works from 
 exports[`Application component should render alert if user is not fez author 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container AppClass-layoutFill-106 css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
     >
       <div
-        class="MuiToolbar-root AppClass-toolbar-109 MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
@@ -1815,8 +1803,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true AppClass-nowrap-108 css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px;"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -1837,7 +1824,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap AppClass-titleLink-107 css-fvpmtz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -1846,7 +1833,6 @@ exports[`Application component should render alert if user is not fez author 1`]
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -1859,14 +1845,14 @@ exports[`Application component should render alert if user is not fez author 1`]
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-111 css-13e2t53-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-116 MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconPrefix-110 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1877,7 +1863,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-116 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -1915,7 +1901,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-112 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1946,7 +1932,7 @@ exports[`Application component should render alert if user is not fez author 1`]
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-iconButton-117 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -1971,7 +1957,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root ScrollTop-scrollTop-128 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root ScrollTop-scrollTop-128 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2010,15 +1996,14 @@ exports[`Application component should render alert if user is not fez author 1`]
         style="margin-bottom: 12px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-item AppClass-layoutCard-105 css-13i4rnv-MuiGrid-root"
-          style="margin-top: 0px; margin-bottom: 0px;"
+          class="MuiGrid-root MuiGrid-item css-1wzz5s-MuiGrid-root"
         >
           <div
             data-testid="alert"
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root makeStyles-root-130 MuiGrid-container makeStyles-info_outline-145 makeStyles-common-131 css-1k6h6af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
               data-analyticsid="not-registered-author"
               data-testid="not-registered-author"
               id="not-registered-author"
@@ -2030,7 +2015,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item makeStyles-icon-134 alert-icon  css-13i4rnv-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -2046,7 +2031,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-135 alert-text css-1vd824g-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                   >
                     <b>
                       You are not registered in UQ eSpace as an author - 
@@ -2059,7 +2044,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           </div>
         </div>
       </div>
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -2067,7 +2051,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item Page-layoutCard-147 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -2150,18 +2134,18 @@ exports[`Application component should render alert if user is not fez author 1`]
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-153 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-155 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-158 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -2189,18 +2173,18 @@ exports[`Application component should render alert if user is not fez author 1`]
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-153 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-155 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-158 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -2231,18 +2215,18 @@ exports[`Application component should render alert if user is not fez author 1`]
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-153 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-155 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-158 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -2257,11 +2241,11 @@ exports[`Application component should render alert if user is not fez author 1`]
                       id="standard-card-open-to-collaborate-content"
                     >
                       <div
-                        class="makeStyles-culturalNoticeParent-159"
+                        class="css-ki8537"
                       >
                         <img
                           alt="Open to Collaborate"
-                          class="makeStyles-culturalNoticeImage-160"
+                          class="css-rd2owr"
                           src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
                         />
                         <p
@@ -2291,13 +2275,13 @@ exports[`Application component should render alert if user is not fez author 1`]
 exports[`Application component should render app for HDR with ORCID ID 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container AppClass-layoutFill-275 css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
     >
       <div
-        class="MuiToolbar-root AppClass-toolbar-278 MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
@@ -2333,8 +2317,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true AppClass-nowrap-277 css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px;"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -2355,7 +2338,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap AppClass-titleLink-276 css-fvpmtz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -2364,7 +2347,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -2377,14 +2359,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-280 css-13e2t53-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-285 MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconPrefix-279 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2395,7 +2377,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-285 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -2433,7 +2415,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-281 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2464,7 +2446,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-iconButton-286 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -2489,7 +2471,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root ScrollTop-scrollTop-297 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root ScrollTop-scrollTop-297 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2523,7 +2505,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -2531,7 +2512,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item Page-layoutCard-299 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -2614,18 +2595,18 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-322 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-324 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-327 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -2653,18 +2634,18 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-322 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-324 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-327 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -2695,18 +2676,18 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-322 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-324 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-327 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -2721,11 +2702,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       id="standard-card-open-to-collaborate-content"
                     >
                       <div
-                        class="makeStyles-culturalNoticeParent-328"
+                        class="css-ki8537"
                       >
                         <img
                           alt="Open to Collaborate"
-                          class="makeStyles-culturalNoticeImage-329"
+                          class="css-rd2owr"
                           src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
                         />
                         <p
@@ -2755,13 +2736,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
 exports[`Application component should render app for account with fez author with ORCID ID 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container AppClass-layoutFill-168 css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
     >
       <div
-        class="MuiToolbar-root AppClass-toolbar-171 MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
@@ -2797,8 +2778,7 @@ exports[`Application component should render app for account with fez author wit
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true AppClass-nowrap-170 css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px;"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -2819,7 +2799,7 @@ exports[`Application component should render app for account with fez author wit
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap AppClass-titleLink-169 css-fvpmtz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -2828,7 +2808,6 @@ exports[`Application component should render app for account with fez author wit
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -2841,14 +2820,14 @@ exports[`Application component should render app for account with fez author wit
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-173 css-13e2t53-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-178 MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconPrefix-172 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2859,7 +2838,7 @@ exports[`Application component should render app for account with fez author wit
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-178 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -2897,7 +2876,7 @@ exports[`Application component should render app for account with fez author wit
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-174 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2928,7 +2907,7 @@ exports[`Application component should render app for account with fez author wit
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-iconButton-179 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -2953,7 +2932,7 @@ exports[`Application component should render app for account with fez author wit
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root ScrollTop-scrollTop-190 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root ScrollTop-scrollTop-190 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2987,7 +2966,6 @@ exports[`Application component should render app for account with fez author wit
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -2995,7 +2973,7 @@ exports[`Application component should render app for account with fez author wit
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item Page-layoutCard-192 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -3078,18 +3056,18 @@ exports[`Application component should render app for account with fez author wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-215 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-217 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-220 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -3117,18 +3095,18 @@ exports[`Application component should render app for account with fez author wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-215 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-217 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-220 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -3159,18 +3137,18 @@ exports[`Application component should render app for account with fez author wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-215 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-217 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-220 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -3185,11 +3163,11 @@ exports[`Application component should render app for account with fez author wit
                       id="standard-card-open-to-collaborate-content"
                     >
                       <div
-                        class="makeStyles-culturalNoticeParent-221"
+                        class="css-ki8537"
                       >
                         <img
                           alt="Open to Collaborate"
-                          class="makeStyles-culturalNoticeImage-222"
+                          class="css-rd2owr"
                           src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
                         />
                         <p
@@ -3219,13 +3197,13 @@ exports[`Application component should render app for account with fez author wit
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container AppClass-layoutFill-75 css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
     >
       <div
-        class="MuiToolbar-root AppClass-toolbar-78 MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
@@ -3261,8 +3239,7 @@ exports[`Application component should render application with routing for the us
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true AppClass-nowrap-77 css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px;"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -3283,7 +3260,7 @@ exports[`Application component should render application with routing for the us
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap AppClass-titleLink-76 css-fvpmtz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -3292,7 +3269,6 @@ exports[`Application component should render application with routing for the us
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -3305,14 +3281,14 @@ exports[`Application component should render application with routing for the us
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-80 css-13e2t53-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-85 MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconPrefix-79 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -3323,7 +3299,7 @@ exports[`Application component should render application with routing for the us
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-85 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -3361,7 +3337,7 @@ exports[`Application component should render application with routing for the us
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-81 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -3392,7 +3368,7 @@ exports[`Application component should render application with routing for the us
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-iconButton-86 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -3417,7 +3393,7 @@ exports[`Application component should render application with routing for the us
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root ScrollTop-scrollTop-97 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root ScrollTop-scrollTop-97 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -3451,7 +3427,6 @@ exports[`Application component should render application with routing for the us
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
-      
       <div
         style="padding: 8px;"
       >
@@ -3513,13 +3488,13 @@ exports[`Application component should render application with routing for the us
 exports[`Application component should render for anon user 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container AppClass-layoutFill-13 css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
     >
       <div
-        class="MuiToolbar-root AppClass-toolbar-16 MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
@@ -3555,8 +3530,7 @@ exports[`Application component should render for anon user 1`] = `
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true AppClass-nowrap-15 css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px;"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -3577,7 +3551,7 @@ exports[`Application component should render for anon user 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap AppClass-titleLink-14 css-fvpmtz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -3586,7 +3560,6 @@ exports[`Application component should render for anon user 1`] = `
                     title="Click to return to the eSpace home page"
                   >
                     UQ eSpace 
-                    
                   </a>
                 </h1>
               </div>
@@ -3599,14 +3572,14 @@ exports[`Application component should render for anon user 1`] = `
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap SimpleSearchComponent-inHeader-18 css-13e2t53-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-23 MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconPrefix-17 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -3617,7 +3590,7 @@ exports[`Application component should render for anon user 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item SimpleSearchComponent-searchHeaderContainerPadding-23 MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -3655,7 +3628,7 @@ exports[`Application component should render for anon user 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium SimpleSearchComponent-searchIconMobile-19 css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -3686,7 +3659,7 @@ exports[`Application component should render for anon user 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-iconButton-24 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="PersonOutlineIcon"
                   focusable="false"
                   id="logged-out-icon"
@@ -3711,7 +3684,7 @@ exports[`Application component should render for anon user 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root ScrollTop-scrollTop-35 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root ScrollTop-scrollTop-35 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -3745,7 +3718,6 @@ exports[`Application component should render for anon user 1`] = `
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
-      
       <div
         class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
       >
@@ -3753,7 +3725,7 @@ exports[`Application component should render for anon user 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item Page-layoutCard-37 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -3836,18 +3808,18 @@ exports[`Application component should render for anon user 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-60 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-62 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-65 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -3875,18 +3847,18 @@ exports[`Application component should render for anon user 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-60 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-62 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-65 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -3917,18 +3889,18 @@ exports[`Application component should render for anon user 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-60 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                   >
                     <div
-                      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-62 css-185gdzj-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-65 css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -3943,11 +3915,11 @@ exports[`Application component should render for anon user 1`] = `
                       id="standard-card-open-to-collaborate-content"
                     >
                       <div
-                        class="makeStyles-culturalNoticeParent-66"
+                        class="css-ki8537"
                       >
                         <img
                           alt="Open to Collaborate"
-                          class="makeStyles-culturalNoticeImage-67"
+                          class="css-rd2owr"
                           src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
                         />
                         <p
@@ -3977,19 +3949,19 @@ exports[`Application component should render for anon user 1`] = `
 exports[`Application component should render loading screen while account is loading 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container AppClass-layoutFill-3 css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-12 css-12pd4t8-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column AppLoader-appLoader-7 css-1ewlecp-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container css-asygwg-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item AppLoader-spaceBetween-9 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
         >
           <span
-            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary AppLoader-white-8 css-u4ps4u-MuiCircularProgress-root"
+            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jvygfr-MuiCircularProgress-root"
             role="progressbar"
             style="width: 80px; height: 80px;"
           >
@@ -4009,18 +3981,18 @@ exports[`Application component should render loading screen while account is loa
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item AppLoader-spaceBetween-9 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
         >
           <div
             alt="The University of Queensland"
-            class="largeLogo AppLoader-logo-10"
+            class="largeLogo MuiBox-root css-1domaf0"
           />
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item AppLoader-spaceBetween-9 css-13i4rnv-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 AppLoader-white-8 css-1uywuy6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-1cgw6ig-MuiTypography-root"
           >
             UQ eSpace 
           </h6>

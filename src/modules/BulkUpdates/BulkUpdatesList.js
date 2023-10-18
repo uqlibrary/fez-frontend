@@ -6,17 +6,16 @@ import moment from 'moment';
 import MaterialTable, { MTableBodyRow } from '@material-table/core';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import makeStyles from '@mui/styles/makeStyles';
 
 import { tableIcons } from './BulkUpdatesListIcons';
 
 import componentsLocale from 'locale/components';
 
-export const useStyles = makeStyles(() => ({
+const classes = {
     text: {
         fontSize: 13,
     },
-}));
+};
 
 export const getColumns = classes => {
     const {
@@ -37,7 +36,7 @@ export const getColumns = classes => {
             field: 'buj_created_at',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-created-at" id="buj-created-at" className={classes.text}>
+                <Typography data-testid="buj-created-at" id="buj-created-at" sx={{ ...classes.text }}>
                     {getDateTime(rowData.buj_created_at)}
                 </Typography>
             ),
@@ -47,7 +46,7 @@ export const getColumns = classes => {
             field: 'buj_started_at',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-started-at" id="buj-started-at" className={classes.text}>
+                <Typography data-testid="buj-started-at" id="buj-started-at" sx={{ ...classes.text }}>
                     {getDateTime(rowData.buj_started_at)}
                 </Typography>
             ),
@@ -57,7 +56,7 @@ export const getColumns = classes => {
             field: 'buj_finished_at',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-finished-at" id="buj-finished-at" className={classes.text}>
+                <Typography data-testid="buj-finished-at" id="buj-finished-at" sx={{ ...classes.text }}>
                     {getDateTime(rowData.buj_finished_at)}
                 </Typography>
             ),
@@ -67,7 +66,7 @@ export const getColumns = classes => {
             field: 'fez_user',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="fez-user-username" id="fez-user-username" className={classes.text}>
+                <Typography data-testid="fez-user-username" id="fez-user-username" sx={{ ...classes.text }}>
                     {rowData.fez_user.usr_username}
                 </Typography>
             ),
@@ -77,7 +76,7 @@ export const getColumns = classes => {
             field: 'fez_user',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="fez-user-fullname" id="fez-user-fullname" className={classes.text}>
+                <Typography data-testid="fez-user-fullname" id="fez-user-fullname" sx={{ ...classes.text }}>
                     {rowData.fez_user.usr_full_name}
                 </Typography>
             ),
@@ -87,7 +86,7 @@ export const getColumns = classes => {
             field: 'buj_status',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-status" id="buj-status" className={classes.text}>
+                <Typography data-testid="buj-status" id="buj-status" sx={{ ...classes.text }}>
                     {rowData.buj_status}
                 </Typography>
             ),
@@ -97,7 +96,7 @@ export const getColumns = classes => {
             field: 'buj_failed_records',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-failed-records" id="buj-failed-records" className={classes.text}>
+                <Typography data-testid="buj-failed-records" id="buj-failed-records" sx={{ ...classes.text }}>
                     {rowData.buj_failed_records}
                 </Typography>
             ),
@@ -107,7 +106,7 @@ export const getColumns = classes => {
             field: 'buj_processed_count',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-processed-count" id="buj-processed-count" className={classes.text}>
+                <Typography data-testid="buj-processed-count" id="buj-processed-count" sx={{ ...classes.text }}>
                     {rowData.buj_processed_count}
                 </Typography>
             ),
@@ -117,7 +116,7 @@ export const getColumns = classes => {
             field: 'buj_total_count',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-total-count" id="buj-total-count" className={classes.text}>
+                <Typography data-testid="buj-total-count" id="buj-total-count" sx={{ ...classes.text }}>
                     {rowData.buj_total_count}
                 </Typography>
             ),
@@ -126,7 +125,6 @@ export const getColumns = classes => {
 };
 
 export const BulkUpdatesList = ({ list }) => {
-    const classes = useStyles();
     const {
         components: { bulkUpdatesList },
     } = componentsLocale;
@@ -147,7 +145,7 @@ export const BulkUpdatesList = ({ list }) => {
                     Row: props => (
                         <MTableBodyRow
                             {...props}
-                            className={classes.text}
+                            sx={{ ...classes.text }}
                             id={`bulk-updates-list-item-${props.index}`}
                             data-testid={`bulk-updates-list-item-${props.index}`}
                         />

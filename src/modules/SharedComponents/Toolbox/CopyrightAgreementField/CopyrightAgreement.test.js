@@ -1,5 +1,5 @@
 import React from 'react';
-import { CopyrightAgreement, styles } from './CopyrightAgreement';
+import { CopyrightAgreement } from './CopyrightAgreement';
 import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps) {
@@ -43,23 +43,5 @@ describe('Component CopyrightAgreement', () => {
         const { getByRole } = setup({ isCopyrightAgreementAccepted: true, onChange: testFn });
         fireEvent.click(getByRole('checkbox', { name: 'test deposit agreement' }));
         expect(testFn).toHaveBeenCalledWith('off');
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            status: {
-                danger: 'test1',
-            },
-            palette: {
-                primary: {
-                    main: 'test2',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.status;
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
     });
 });

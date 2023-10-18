@@ -1,24 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import { locale } from 'locale';
 import OpenInNew from '@mui/icons-material/OpenInNew';
-import makeStyles from '@mui/styles/makeStyles';
 
-export const useStyles = makeStyles(() => ({
-    externalLink: inline => ({
-        ...(!inline && {
-            overflow: 'hidden',
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
-            overflowWrap: 'break-word',
-            wordBreak: 'break-all',
-            display: 'inline-block',
-        }),
-        maxWidth: '100% !important',
-        minWidth: 0,
-        verticalAlign: 'bottom',
-        cursor: 'pointer',
+const StyledLink = styled('a', {
+    shouldForwardProp: prop => prop !== 'inline' && prop !== 'sx',
+})(({ inline }) => ({
+    ...(!inline && {
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        textOverflow: 'ellipsis',
+        overflowWrap: 'break-word',
+        wordBreak: 'break-all',
+        display: 'inline-block',
     }),
+    maxWidth: '100%',
+    minWidth: 0,
+    verticalAlign: 'bottom',
+    cursor: 'pointer',
+}));
+
+const internalClasses = {
     externalLinkIcon: {
         color: 'inherit',
         fontSize: '0.66rem',
@@ -26,11 +30,9 @@ export const useStyles = makeStyles(() => ({
         float: 'right',
         marginLeft: '0.25rem',
     },
-}));
+};
 
 const ExternalLink = ({ children, className = '', height, openInNewIcon = true, width, inline = false, ...rest }) => {
-    const classes = useStyles(inline);
-
     const openInSizedWindow = (link, width, height) => () =>
         window.open(
             link,
@@ -51,37 +53,42 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
     }
 
     return (
-        <a
-            {...{
-                ...rest,
-                id: `${rest.id}-link`,
-            }}
-            data-analyticsid={`${rest.id}-link`}
-            data-testid={`${rest.id}-link`}
+        <StyledLink
+            {...rest}
             tabIndex={0}
             title={
                 rest.title ||
                 (openInNewIcon && locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)) ||
                 undefined
             }
-            className={[className, classes.externalLink].filter(Boolean).join(' ')}
+            inline={inline}
+            className={className}
+            id={`${rest.id}-link`}
+            data-analyticsid={`${rest.id}-link`}
+            data-testid={`${rest.id}-link`}
         >
             {!!inline ? (
                 <>
                     {!!children && children}
                     {openInNewIcon && (
-                        <OpenInNew className={classes.externalLinkIcon} id={`${rest.id}-link-new-window-icon`} />
+                        <OpenInNew
+                            sx={{ ...internalClasses.externalLinkIcon }}
+                            id={`${rest.id}-link-new-window-icon`}
+                        />
                     )}
                 </>
             ) : (
                 <>
                     {openInNewIcon && (
-                        <OpenInNew className={classes.externalLinkIcon} id={`${rest.id}-link-new-window-icon`} />
+                        <OpenInNew
+                            sx={{ ...internalClasses.externalLinkIcon }}
+                            id={`${rest.id}-link-new-window-icon`}
+                        />
                     )}
                     {!!children && children}
                 </>
             )}
-        </a>
+        </StyledLink>
     );
 };
 

@@ -3,7 +3,6 @@
 exports[`GrantListEditorField should render default component 1`] = `
 <div>
   <div>
-    
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"

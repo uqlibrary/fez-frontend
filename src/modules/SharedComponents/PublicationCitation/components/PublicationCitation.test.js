@@ -1,5 +1,7 @@
 import React from 'react';
-import { PublicationCitation, styles } from './PublicationCitation';
+import { mui1theme } from 'config/theme';
+
+import { PublicationCitation } from './PublicationCitation';
 import { mockRecordToFix, journalArticle } from 'mock/data/testing/records';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
@@ -13,6 +15,7 @@ function setup(testProps = {}) {
         },
         hideLinks: false,
         citationStyle: 'header',
+        theme: mui1theme,
         ...testProps,
     };
     return render(
@@ -64,22 +67,6 @@ describe('PublicationCitation ', () => {
             publication: { ...journalArticle, rek_display_type_lookup: 'Image', fez_datastream_info: [] },
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            typography: {
-                caption: 'test1',
-                body2: {
-                    color: 'test2',
-                },
-            },
-            breakpoints: {
-                down: jest.fn(() => '@media (max-width:959.95px)'),
-                up: jest.fn(() => '@media (min-width:959.95px)'),
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
     });
 
     it('should render component with default item without links to title and doi', () => {

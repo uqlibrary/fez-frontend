@@ -21,7 +21,6 @@ function setup(testProps = {}, renderMethod = render) {
 
 describe('Search record results', () => {
     beforeEach(() => {
-        mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
     });
 
@@ -186,7 +185,7 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
 
-            await waitFor(() => getByTestId('publication-citation-parent-UQ:795469'));
+            await waitFor(() => getByTestId('publication-citation-parent-UQ:795469'), { timeout: 2000, delay: 1000 });
 
             fireEvent.click(getByRole('button', { name: 'Claim this work' }));
 

@@ -3,18 +3,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImageList from '@mui/material/ImageList';
 import { useTheme } from '@mui/material/styles';
-import makeStyles from '@mui/styles/makeStyles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { pathConfig } from 'config/pathConfig';
 import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItem from './ImageGalleryItem';
 
-const useStyles = makeStyles(() => ({
+const internalClasses = {
+    imageListRoot: {
+        overflow: 'hidden',
+    },
     imageListItemRoot: {
         height: '100% !important',
     },
-}));
+};
 
 export const getItemUrl = pid => {
     return pathConfig.records.view(pid);
@@ -37,8 +39,6 @@ const ImageGallery = ({
     security,
     ...rest
 }) => {
-    const internalClasses = useStyles();
-
     const theme = useTheme();
     const sm = useMediaQuery(theme.breakpoints.up('sm'));
     const md = useMediaQuery(theme.breakpoints.up('md'));
@@ -49,7 +49,7 @@ const ImageGallery = ({
         <ImageList
             rowHeight={itemHeight}
             cols={cols}
-            classes={{ root: `${internalClasses.imageListRoot} ${classes?.imageList?.root ?? ''}` }}
+            sx={{ ...internalClasses.imageListRoot, ...(!!classes && classes?.imageList?.root) }}
             id={'image-gallery'}
             data-testid={'image-gallery'}
             {...rest}

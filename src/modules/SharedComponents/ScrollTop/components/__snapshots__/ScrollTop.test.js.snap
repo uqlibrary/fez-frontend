@@ -20,7 +20,7 @@ exports[`Component ScrollTop should render component 1`] = `
 <div>
   <button
     aria-label="Scroll to top of page"
-    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
     id="scrolltopbtn"
     tabindex="0"
     title="Scroll to top of page"
@@ -48,7 +48,7 @@ exports[`Component ScrollTop should render component 2`] = `
 <div>
   <button
     aria-label="Scroll to top of page"
-    class="MuiButtonBase-root MuiFab-root ScrollTop-scrollTop-1 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root ScrollTop-scrollTop-1 MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ad0ba2-MuiButtonBase-root-MuiFab-root"
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
     id="scrolltopbtn"
     tabindex="0"
     title="Scroll to top of page"

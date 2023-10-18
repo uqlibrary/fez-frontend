@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { setupStoreForMount } from 'test.setup';
-import DashboardResearcherIds, { DashboardResearcherIdsClass, styles } from './DashboardResearcherIds';
+import DashboardResearcherIds, { DashboardResearcherIdsClass } from './DashboardResearcherIds';
 
 import { AllTheProviders, render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 
@@ -92,18 +92,6 @@ describe('Dashboard Researcher IDs test', () => {
         };
         const { container } = setup(testValues);
         expect(container).toMatchSnapshot();
-    });
-
-    it('should have a style generator', () => {
-        const theme = {
-            palette: {
-                white: {
-                    main: '#fff',
-                },
-            },
-        };
-
-        expect(styles(theme)).toMatchSnapshot();
     });
 
     it('should show orcid sync UI', () => {

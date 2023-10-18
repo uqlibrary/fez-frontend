@@ -25,7 +25,7 @@ context('Claim possible work', () => {
                 .should('contain', 'Claim possible works');
 
             cy.get('.StandardCard h6[class*="PublicationCitation-citationTitle"] > a').should('have.length', 8);
-            cy.get('[class*="StandardRighthandCard-title"] div')
+            cy.get('[class*="StandardRighthandCard-title"]')
                 .should('have.length', 1)
                 .should('contain', 'Refine results');
             cy.get('[class*="MuiGrid-grid-sm-3"] .facetsFilter [class*="MuiListItem-root"]').should('have.length', 6);

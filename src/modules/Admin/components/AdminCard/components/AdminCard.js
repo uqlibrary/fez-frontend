@@ -1,47 +1,45 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import withStyles from '@mui/styles/withStyles';
-
-export const styles = theme => ({
-    card: {
-        marginTop: 8,
-    },
-    titlePortion: {
-        marginLeft: -4,
-    },
-    title: {
-        opacity: 0.85,
-        color: theme.palette.primary.main,
-        fontSize: theme.typography.fontSize,
-        fontWeight: 500,
-    },
-    divider: {
-        opacity: 0.1,
-        border: 0,
-        borderTop: `1px solid ${theme.palette.primary.main}`,
-    },
-});
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 export class Cards extends Component {
     static propTypes = {
         title: PropTypes.any,
         children: PropTypes.any,
-        classes: PropTypes.object.isRequired,
+        classes: PropTypes.object,
     };
     render() {
-        const { classes, title, children } = this.props;
+        const { title, classes, children } = this.props;
         return (
-            <Grid container spacing={0} className={`${classes.card} AdminCard`}>
+            <Grid container spacing={0} sx={{ mt: '8px' }} className={`${classes?.card} AdminCard`}>
                 <Grid item xs={12}>
                     <Grid item xs={12}>
                         <Grid container spacing={1}>
                             <Grid item xs>
-                                <hr className={classes.divider} />
+                                <Box
+                                    component={'hr'}
+                                    sx={{
+                                        opacity: 0.1,
+                                        border: 0,
+                                        borderTop: '1px solid',
+                                        borderTopColor: 'primary.main',
+                                    }}
+                                    className={classes?.divider}
+                                />
                             </Grid>
-                            <Grid item xs={'auto'} className={classes.titlePortion}>
-                                <Typography component={'h4'} color={'primary'} className={classes.title}>
+                            <Grid item xs={'auto'} sx={{ ml: '-4px' }} className={classes?.titlePortion}>
+                                <Typography
+                                    component={'h4'}
+                                    sx={{
+                                        opacity: 0.85,
+                                        color: 'primary.main',
+                                        fontSize: 'fontSize',
+                                        fontWeight: 500,
+                                    }}
+                                    className={classes?.title}
+                                >
                                     &nbsp;{title}
                                 </Typography>
                             </Grid>
@@ -56,6 +54,5 @@ export class Cards extends Component {
     }
 }
 
-const StyledCard = withStyles(styles, { withTheme: true })(Cards);
-export const AdminCard = props => <StyledCard {...props} />;
+export const AdminCard = props => <Cards {...props} />;
 export default AdminCard;

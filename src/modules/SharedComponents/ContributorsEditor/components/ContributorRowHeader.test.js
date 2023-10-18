@@ -1,6 +1,6 @@
 import React from 'react';
 import { rtlRender, fireEvent, waitFor } from 'test-utils';
-import { ContributorRowHeader, styles } from './ContributorRowHeader';
+import { ContributorRowHeader } from './ContributorRowHeader';
 
 function setup(testProps = {}) {
     const props = {
@@ -10,14 +10,6 @@ function setup(testProps = {}) {
         showContributorAssignment: false,
         disabled: false,
         canEdit: false,
-        classes: {
-            right: 'right',
-            header: 'header',
-            text: 'text',
-            infinitePaddingRight: 'paddingRight36',
-            paddingRight: 'paddingRight40',
-            paddingRightEdit: 'paddingRight78',
-        },
         ...testProps,
     };
     return rtlRender(<ContributorRowHeader {...props} />);
@@ -69,9 +61,5 @@ describe('Component ContributorRowHeader', () => {
             },
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it('should have a proper style generator', () => {
-        expect(styles()).toMatchSnapshot();
     });
 });
