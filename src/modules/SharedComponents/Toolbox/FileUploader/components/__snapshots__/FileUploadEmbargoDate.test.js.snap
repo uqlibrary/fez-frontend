@@ -13,7 +13,7 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
       <input
         aria-invalid="false"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id=":r4:"
+        id=":r5:"
         placeholder="dd/mm/yyyy"
         type="tel"
         value="01/01/2016"

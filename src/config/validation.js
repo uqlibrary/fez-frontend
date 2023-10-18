@@ -281,15 +281,16 @@ export const dateRange = (value, values) => {
     }
 };
 
-export const fullDate = state => {
-    const valid = moment(state).isValid();
-
-    if (!valid) {
-        return 'date is not valid';
+export const isValidDate = date => {
+    try {
+        return moment(date).isValid();
+    } catch (e) {
+        return false;
     }
-
-    return '';
 };
+
+export const isDateEqualOrGreaterThan = (date, anotherDate) =>
+    moment(date).isSameOrAfter(moment(anotherDate).format('YYYY-MM-DD'));
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
 

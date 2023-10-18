@@ -356,3 +356,23 @@ describe('checkDigit ', () => {
         });
     });
 });
+
+describe('isValidDate ', () => {
+    it('should return true for valid date', () => {
+        expect(validation.isValidDate('2000-01-01 00:00:00')).toBeTruthy();
+    });
+
+    it('should return false for invalid date', () => {
+        expect(validation.isValidDate('2000-13-01 00:00:00')).toBeFalsy();
+    });
+});
+
+describe('isDateEqualOrGreaterThan ', () => {
+    it('should return true when the first given date is equal or after the second given date', () => {
+        expect(validation.isDateEqualOrGreaterThan('2000-01-01', '2000-01-01')).toBeTruthy();
+    });
+
+    it('should return false when the first given date is before the second given date', () => {
+        expect(validation.isDateEqualOrGreaterThan('1999-12-31', '2000-01-01')).toBeFalsy();
+    });
+});

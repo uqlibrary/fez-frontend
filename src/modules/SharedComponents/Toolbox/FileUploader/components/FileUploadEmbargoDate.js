@@ -5,6 +5,7 @@ import { GENERIC_DATE_FORMAT } from 'config/general';
 import TextField from '@mui/material/TextField';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { red } from '@mui/material/colors';
 
 export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
@@ -40,7 +41,13 @@ export class FileUploadEmbargoDate extends PureComponent {
                         <TextField
                             {...params}
                             variant="standard"
-                            sx={{ '& .MuiInput-input': { fontSize: 14, fontWeight: 400 } }}
+                            sx={{
+                                '& .MuiInput-input': {
+                                    fontSize: 14,
+                                    fontWeight: 400,
+                                    ...(params.error ? { color: red[700] } : {}),
+                                },
+                            }}
                         />
                     )}
                 />

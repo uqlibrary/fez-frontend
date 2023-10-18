@@ -784,7 +784,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
             class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-hkwwb9-MuiFormControl-root-MuiTextField-root"
             >
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
