@@ -138,7 +138,7 @@
         "@mui/material": "^5.11.4",
         "@mui/system": "^5.14.8",
         "@mui/x-date-pickers": "^5.0.15",
-        "@react-google-maps/api": "^2.2.0",
+        "@react-google-maps/api": "^2.19.2",
         "@sentry/react": "^7.15.0",
         "@sentry/tracing": "^7.15.0",
         "axios": "^0.26.0",

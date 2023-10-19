@@ -5,8 +5,6 @@ const converter = require('number-to-words');
 
 const getKeyValue = value => (process.env.NODE_ENV === 'production' ? `?key=${value}&` : '?');
 
-export const USER_COUNTRY = 'AU'; // moved from content object in App, which never changed value.
-
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
