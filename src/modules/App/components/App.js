@@ -84,10 +84,6 @@ export class AppClass extends PureComponent {
         loadingIncompleteRecordData: PropTypes.bool,
         incompleteRecordList: PropTypes.object,
     };
-    static childContextTypes = {
-        userCountry: PropTypes.any,
-        selectFieldMobileOverrides: PropTypes.object,
-    };
 
     constructor(props) {
         super(props);
@@ -96,24 +92,6 @@ export class AppClass extends PureComponent {
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
-        };
-    }
-
-    getChildContext() {
-        return {
-            userCountry: 'AU', // this.state.userCountry,
-            selectFieldMobileOverrides: {
-                style: !this.state.isMobile ? { width: '100%' } : {},
-                autoWidth: !this.state.isMobile,
-                fullWidth: this.state.isMobile,
-                menuItemStyle: this.state.isMobile
-                    ? {
-                          whiteSpace: 'normal',
-                          lineHeight: '18px',
-                          paddingBottom: '8px',
-                      }
-                    : {},
-            },
         };
     }
 
@@ -446,7 +424,11 @@ export class AppClass extends PureComponent {
                     {!isAuthorLoading && !isAuthorDetailsLoading && (
                         <AccountContext.Provider
                             value={{
-                                account: { ...this.props.account, ...this.props.author, ...this.props.authorDetails },
+                                account: {
+                                    ...this.props.account,
+                                    ...this.props.author,
+                                    ...this.props.authorDetails,
+                                },
                             }}
                         >
                             <React.Suspense fallback={<ContentLoader message="Loading content" />}>

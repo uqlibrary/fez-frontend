@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { USER_COUNTRY } from 'config/general';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
 import { parseHtmlToJSX } from 'helpers/general';
@@ -62,10 +63,6 @@ export default class AddDataCollection extends Component {
         actions: PropTypes.object,
         isSessionValid: PropTypes.bool,
         resetForm: PropTypes.any,
-    };
-
-    static contextTypes = {
-        userCountry: PropTypes.any,
     };
 
     componentDidUpdate(prevProps) {
@@ -545,7 +542,7 @@ export default class AddDataCollection extends Component {
                                     </Typography>
                                     <Field
                                         component={GeoCoordinatesField}
-                                        country={this.context.userCountry}
+                                        country={USER_COUNTRY}
                                         disabled={this.props.submitting}
                                         name="geographicArea"
                                     />

@@ -47,10 +47,6 @@ export default class FixRecord extends PureComponent {
         errors: PropTypes.object,
     };
 
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object,
-    };
-
     constructor(props) {
         super(props);
 
