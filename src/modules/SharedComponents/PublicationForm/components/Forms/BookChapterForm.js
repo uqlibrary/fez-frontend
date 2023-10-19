@@ -146,6 +146,7 @@ export default class BookChapterForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
+                            maintainSelected
                             hideUqIDFields
                             contributorEditorId="authors"
                             name="authors"
@@ -163,6 +164,7 @@ export default class BookChapterForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             canEdit
+                            maintainSelected
                             // forceSelectable
                             hideUqIDFields
                             contributorEditorId="editors"

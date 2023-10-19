@@ -157,6 +157,7 @@ export default class DesignForm extends Component {
                             canEdit
                             forceSelectable
                             hideUqIDFields
+                            maintainSelected
                             contributorEditorId="authors"
                             showContributorAssignment
                             required

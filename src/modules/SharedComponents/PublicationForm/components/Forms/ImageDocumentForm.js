@@ -103,6 +103,7 @@ export default class ImageDocumentForm extends Component {
                             hideUqIDFields
                             contributorEditorId="creators"
                             showContributorAssignment
+                            maintainSelected
                             required
                             name="authors"
                             locale={txt.creator.field}

@@ -100,6 +100,7 @@ export default class NewspaperArticleForm extends Component {
                             canEdit
                             forceSelectable
                             hideUqIDFields
+                            maintainSelected
                             contributorEditorId="authors"
                             name="authors"
                             locale={txt.authors.field}

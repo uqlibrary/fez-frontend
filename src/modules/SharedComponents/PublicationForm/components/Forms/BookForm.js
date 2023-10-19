@@ -153,6 +153,7 @@ export default class BookForm extends Component {
                                 canEdit
                                 forceSelectable
                                 hideUqIDFields
+                                maintainSelected
                                 contributorEditorId="rek-author"
                                 name="authors"
                                 locale={txt.authors.field}

@@ -141,6 +141,7 @@ export default class ConferenceProceedingsForm extends Component {
                             canEdit
                             forceSelectable
                             hideUqIDFields
+                            maintainSelected
                             contributorEditorId="editors"
                             name="editors"
                             locale={txt.editors.field}
