@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import { Router } from 'react-router';
 import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -13,17 +13,15 @@ import { ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToTop';
 const Root = ({ history }) => {
     return (
         <Router history={history}>
-            <StrictMode>
-                <ScrollToTop>
-                    <StyledEngineProvider injectFirst>
-                        <ThemeProvider theme={mui1theme}>
-                            <Switch>
-                                <Route component={App} />
-                            </Switch>
-                        </ThemeProvider>
-                    </StyledEngineProvider>
-                </ScrollToTop>
-            </StrictMode>
+            <ScrollToTop>
+                <StyledEngineProvider injectFirst>
+                    <ThemeProvider theme={mui1theme}>
+                        <Switch>
+                            <Route component={App} />
+                        </Switch>
+                    </ThemeProvider>
+                </StyledEngineProvider>
+            </ScrollToTop>
         </Router>
     );
 };

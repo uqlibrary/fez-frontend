@@ -160,11 +160,15 @@ export const AutoCompleteAsynchronousField = ({
                 {...((!!allowFreeText && { freeSolo: true }) || {})}
                 {...((!!OptionTemplate && {
                     // eslint-disable-next-line react/prop-types
-                    renderOption: (props, option) => (
-                        <li {...props}>
-                            <OptionTemplate option={option} />
-                        </li>
-                    ),
+                    renderOption: (props, option) => {
+                        console.log(props, option);
+                        return (
+                            // eslint-disable-next-line react/prop-types
+                            <li {...props} key={option.id ?? option.key ?? props.id ?? props.key ?? ''}>
+                                <OptionTemplate option={option} />
+                            </li>
+                        );
+                    },
                 }) ||
                     {})}
             />
