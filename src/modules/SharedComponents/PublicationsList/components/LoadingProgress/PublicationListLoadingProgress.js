@@ -6,23 +6,15 @@ import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
 import LinearProgress from '@mui/material/LinearProgress';
 import locale from 'locale/pages';
-import withStyles from '@mui/styles/withStyles';
 
-const styles = theme => ({
-    copy: {
-        fontSize: theme.typography.caption.fontSize,
-    },
-});
-
-export class PublicationListLoadingProgressClass extends PureComponent {
+export class PublicationListLoadingProgress extends PureComponent {
     static propTypes = {
         loadingPublicationSources: PropTypes.object.isRequired,
-        classes: PropTypes.object,
     };
 
     render() {
         const txt = locale.pages.addRecord.step2.searchResults.searchDashboard;
-        const { loadingPublicationSources, classes } = this.props;
+        const { loadingPublicationSources } = this.props;
 
         return (
             <React.Fragment>
@@ -30,13 +22,23 @@ export class PublicationListLoadingProgressClass extends PureComponent {
                     {txt.repositories.map((item, index) => (
                         <Grid container spacing={1} key={index}>
                             <Grid item xs>
-                                <Typography variant={'body1'} className={classes.copy}>
+                                <Typography
+                                    variant={'body1'}
+                                    sx={theme => ({
+                                        fontSize: theme.typography.caption.fontSize,
+                                    })}
+                                >
                                     {item.title}
                                 </Typography>
                             </Grid>
                             {loadingPublicationSources && loadingPublicationSources[item.id] ? (
                                 <Grid item>
-                                    <Typography className={classes.copy} noWrap>
+                                    <Typography
+                                        sx={theme => ({
+                                            fontSize: theme.typography.caption.fontSize,
+                                        })}
+                                        noWrap
+                                    >
                                         {loadingPublicationSources[`${item.id}Count`]} {txt.recordSuffix}
                                     </Typography>
                                 </Grid>
@@ -72,8 +74,4 @@ export class PublicationListLoadingProgressClass extends PureComponent {
     }
 }
 
-const StyledPublicationListLoadingProgressClass = withStyles(styles, { withTheme: true })(
-    PublicationListLoadingProgressClass,
-);
-const PublicationListLoadingProgress = props => <StyledPublicationListLoadingProgressClass {...props} />;
 export default PublicationListLoadingProgress;

@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Grid';
 
 import ContributorRowHeader from './ContributorRowHeader';
@@ -306,7 +305,6 @@ export class ContributorsEditor extends PureComponent {
 
     render() {
         const {
-            classes,
             contributorEditorId,
             disabled,
             canEdit,
@@ -390,10 +388,20 @@ export class ContributorsEditor extends PureComponent {
                                 id={`${contributorEditorId}-list`}
                                 data-analyticsid={`${contributorEditorId}-list`}
                                 data-testid={`${contributorEditorId}-list`}
+                                sx={theme => ({
+                                    width: '100%',
+                                    margin: '0',
+                                    maxHeight: '225px',
+                                    overflowX: 'hidden',
+                                    overflowY: 'hidden',
+                                    marginBottom: 2,
+                                    [theme.breakpoints.down('md')]: {
+                                        overflowY: 'scroll',
+                                    },
+                                    ...(contributors.length > 3 && { overflowY: 'scroll' }),
+                                })}
                                 classes={{
-                                    root: `ContributorList ${classes.list} ${
-                                        contributors.length > 3 ? classes.scroll : ''
-                                    }`,
+                                    root: 'ContributorList',
                                 }}
                             >
                                 {this.renderContributorRows()}
@@ -424,21 +432,4 @@ export const mapStateToProps = state => ({
     record: state && state.get('viewRecordReducer') ? state.get('viewRecordReducer').recordToView : null,
 });
 
-export const styles = theme => ({
-    list: {
-        width: '100%',
-        margin: '0',
-        maxHeight: 225,
-        overflowX: 'hidden',
-        overflowY: 'hidden',
-        marginBottom: 16,
-        [theme.breakpoints.down('md')]: {
-            overflowY: 'scroll',
-        },
-    },
-    scroll: {
-        overflowY: 'scroll',
-    },
-});
-
-export default withStyles(styles)(connect(mapStateToProps)(ContributorsEditor));
+export default connect(mapStateToProps)(ContributorsEditor);

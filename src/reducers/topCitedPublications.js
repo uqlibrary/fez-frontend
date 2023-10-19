@@ -15,15 +15,15 @@ const handlers = {
     },
 
     [`${actions.TOP_CITED_PUBLICATIONS_LOADED}@`]: (state, action) => {
+        const topCitedPublicationsList = [...state.topCitedPublicationsList];
         const source = actions.getActionSuffix(action.type);
-
-        const topCitedPublicationsList = [
-            ...state.topCitedPublicationsList,
-            {
-                key: source,
-                values: action.payload.data,
-            },
-        ];
+        const index = topCitedPublicationsList.findIndex(s => s.key === source);
+        index > -1
+            ? (topCitedPublicationsList[index].values = action.payload.data)
+            : topCitedPublicationsList.push({
+                  key: source,
+                  values: action.payload.data,
+              });
 
         return {
             ...state,

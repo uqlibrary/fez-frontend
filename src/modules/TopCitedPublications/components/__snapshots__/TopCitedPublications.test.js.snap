@@ -72,7 +72,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
 exports[`Component TopCitedPublications should render tabs larger than xs width properly 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-40 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
     data-testid="standard-card"
     id="standard-card"
   >
@@ -83,7 +83,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
       id="standard-card-content"
     >
       <div
-        class="MuiTabs-root Component-tabs-37 css-1ujnqem-MuiTabs-root"
+        class="MuiTabs-root css-1g4qssd-MuiTabs-root"
       >
         <div
           class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -95,7 +95,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
           >
             <button
               aria-selected="true"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected Component-tab-38 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-uk6zre-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="0"
               type="button"
@@ -109,7 +109,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Component-tab-38 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-uk6zre-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -123,7 +123,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Component-tab-38 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-uk6zre-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -137,7 +137,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             </button>
           </div>
           <span
-            class="MuiTabs-indicator Component-tabIndicator-39 css-14t6lgd-MuiTabs-indicator"
+            class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
             style="left: 0px; width: 0px;"
           />
         </div>
@@ -173,7 +173,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-46 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -205,6 +205,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
               class="publicationCitation"
             >
               <div
+                class="css-0"
                 data-testid="publication-citation-parent-UQ:330391"
                 id="publication-citation-parent-UQ:330391"
               >
@@ -222,7 +223,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-50 css-1uywuy6-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:330391"
@@ -236,7 +237,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="makeStyles-externalLink-59 makeStyles-externalLink-61"
+                          class=" css-1oqhn84"
                           data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
@@ -264,7 +265,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-51 css-1idn90j-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -272,16 +273,12 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Frazer, Ian H.
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -325,7 +322,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           <span
                             class="citationPageRange"
                           >
-                            
                             <span
                               class="citationStartPage"
                             >
@@ -337,7 +333,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                             >
                               4011
                             </span>
-                            
                           </span>
                           <span>
                             . 
@@ -347,7 +342,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           >
                             <a
                               aria-label="Open this DOI in an new window"
-                              class="citationDoiLink makeStyles-externalLink-59 makeStyles-externalLink-63"
+                              class="citationDoiLink css-1oqhn84"
                               data-analyticsid="citation-doi-link"
                               data-testid="citation-doi-link"
                               href="https://doi.org/10.4049/jimmunol.1490012"
@@ -359,7 +354,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-60 css-i4bv87-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -381,8 +376,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-52 css-1wrgmsj-MuiGrid-root"
-                            style="flex-grow: 1;"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                           >
                             <div
                               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -392,7 +386,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-67"
+                                  class="wosCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
@@ -406,14 +400,14 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                     class="fez-icon wos large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-66"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     12
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-68"
+                                  class="scopusCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
@@ -427,14 +421,14 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                     class="fez-icon scopus large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-66"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     13
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-69"
+                                  class="altmetricCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
@@ -448,14 +442,14 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                     class="fez-icon altmetric large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-66"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     5
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount CitationCountView-citationCount-65 makeStyles-externalLink-59 makeStyles-externalLink-70"
+                                  class="googleCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
@@ -489,7 +483,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-49 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
               />
             </div>
           </div>
@@ -507,7 +501,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root makeStyles-root-79 MuiGrid-container makeStyles-error-88 makeStyles-common-80 css-1k6h6af-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
       data-analyticsid="alert-error"
       data-testid="alert-error"
       id="alert-error"
@@ -519,7 +513,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
           class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item makeStyles-icon-83 alert-icon  css-13i4rnv-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
@@ -535,7 +529,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-84 alert-text css-1vd824g-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
           >
             <b>
               There has been an error - 
@@ -552,7 +546,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
 exports[`Component TopCitedPublications should render top cited publications with default width xs 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-4 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
     data-testid="standard-card"
     id="standard-card"
   >
@@ -563,7 +557,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
       id="standard-card-content"
     >
       <div
-        class="MuiTabs-root Component-tabs-1 css-1ujnqem-MuiTabs-root"
+        class="MuiTabs-root css-1g4qssd-MuiTabs-root"
       >
         <div
           class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
@@ -575,7 +569,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
           >
             <button
               aria-selected="true"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected Component-tab-2 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-uk6zre-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="0"
               type="button"
@@ -587,7 +581,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Component-tab-2 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-uk6zre-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -599,7 +593,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Component-tab-2 css-1wgfscv-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-uk6zre-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -611,7 +605,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             </button>
           </div>
           <span
-            class="MuiTabs-indicator Component-tabIndicator-3 css-14t6lgd-MuiTabs-indicator"
+            class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
             style="left: 0px; width: 0px;"
           />
         </div>
@@ -647,7 +641,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-10 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -679,6 +673,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
               class="publicationCitation"
             >
               <div
+                class="css-0"
                 data-testid="publication-citation-parent-UQ:330391"
                 id="publication-citation-parent-UQ:330391"
               >
@@ -696,7 +691,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-14 css-1uywuy6-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:330391"
@@ -710,7 +705,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="makeStyles-externalLink-23 makeStyles-externalLink-25"
+                          class=" css-1oqhn84"
                           data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
@@ -738,7 +733,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-15 css-1idn90j-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -746,16 +741,12 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Frazer, Ian H.
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -799,7 +790,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           <span
                             class="citationPageRange"
                           >
-                            
                             <span
                               class="citationStartPage"
                             >
@@ -811,7 +801,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                             >
                               4011
                             </span>
-                            
                           </span>
                           <span>
                             . 
@@ -821,7 +810,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           >
                             <a
                               aria-label="Open this DOI in an new window"
-                              class="citationDoiLink makeStyles-externalLink-23 makeStyles-externalLink-27"
+                              class="citationDoiLink css-1oqhn84"
                               data-analyticsid="citation-doi-link"
                               data-testid="citation-doi-link"
                               href="https://doi.org/10.4049/jimmunol.1490012"
@@ -833,7 +822,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-24 css-i4bv87-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -855,8 +844,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-16 css-1wrgmsj-MuiGrid-root"
-                            style="flex-grow: 1;"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
                           >
                             <div
                               class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
@@ -866,7 +854,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-31"
+                                  class="wosCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
@@ -880,14 +868,14 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                     class="fez-icon wos large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-30"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     12
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-32"
+                                  class="scopusCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
@@ -901,14 +889,14 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                     class="fez-icon scopus large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-30"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     13
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-33"
+                                  class="altmetricCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
@@ -922,14 +910,14 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                     class="fez-icon altmetric large"
                                   />
                                   <span
-                                    class="CitationCountView-citationCountNumber-30"
+                                    class="MuiBox-root css-19k1sqg"
                                   >
                                     5
                                   </span>
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount CitationCountView-citationCount-29 makeStyles-externalLink-23 makeStyles-externalLink-34"
+                                  class="googleCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
@@ -963,7 +951,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-13 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
               />
             </div>
           </div>

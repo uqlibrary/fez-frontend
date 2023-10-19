@@ -3,7 +3,7 @@
 exports[`PublicationStats component should render 1 for hindex because they round up to 1 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1mdr3lr-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -36,7 +36,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -72,7 +72,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -108,7 +108,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -144,7 +144,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -180,7 +180,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -218,7 +218,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
 exports[`PublicationStats component should render N/A for hindex because it is null 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1mdr3lr-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -251,7 +251,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -287,7 +287,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -323,7 +323,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -359,7 +359,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -395,7 +395,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -433,7 +433,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
 exports[`PublicationStats component should render N/A for hindex because it is undefined 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1mdr3lr-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -466,7 +466,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -502,7 +502,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -538,7 +538,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -574,7 +574,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -610,7 +610,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -648,7 +648,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
 exports[`PublicationStats component should render N/A for hindex because they equal zero 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1mdr3lr-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -681,7 +681,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -717,7 +717,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -753,7 +753,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -789,7 +789,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -825,7 +825,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -871,7 +871,7 @@ exports[`PublicationStats component should render an empty component 1`] = `
 exports[`PublicationStats component should render statistics with table and data 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-1mdr3lr-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -904,7 +904,7 @@ exports[`PublicationStats component should render statistics with table and data
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -940,7 +940,7 @@ exports[`PublicationStats component should render statistics with table and data
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -976,7 +976,7 @@ exports[`PublicationStats component should render statistics with table and data
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -1012,7 +1012,7 @@ exports[`PublicationStats component should render statistics with table and data
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -1048,7 +1048,7 @@ exports[`PublicationStats component should render statistics with table and data
     class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-1ic19cg-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"

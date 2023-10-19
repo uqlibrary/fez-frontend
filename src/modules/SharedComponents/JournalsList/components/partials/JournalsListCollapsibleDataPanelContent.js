@@ -7,14 +7,32 @@ import Box from '@mui/material/Box';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import { sanitiseId } from 'helpers/general';
 
-const JournalsListCollapsibleDataPanelContent = ({
-    item,
-    index,
-    data,
-    classes,
-    isFirstRow = false,
-    isLastRow = false,
-}) => {
+const classes = {
+    inputLabel: {
+        color: 'rgba(0, 0, 0, 0.54)',
+        padding: 0,
+        overflow: 'hidden',
+        fontSize: '0.75rem',
+        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        lineHeight: 1.1,
+        whiteSpace: 'normal',
+        textOverflow: 'ellipsis',
+        fontWeight: 600,
+    },
+    subLabel: {
+        display: 'block',
+        fontWeight: 400,
+    },
+    collapsibleContainerDataRowTop: {
+        paddingTop: 2,
+    },
+    collapsibleContainerDataRowBottom: {
+        paddingBottom: 1,
+        borderBottom: '1px solid rgba(224, 224, 224, 1)',
+    },
+};
+
+const JournalsListCollapsibleDataPanelContent = ({ item, index, data, isFirstRow = false, isLastRow = false }) => {
     const id = sanitiseId(item.key);
     return (
         <Grid
@@ -22,20 +40,25 @@ const JournalsListCollapsibleDataPanelContent = ({
             sm={6}
             item
             size="small"
-            className={`${!isFirstRow ? classes?.collapsibleContainerDataRowTop : ''} ${
-                !isLastRow ? classes?.collapsibleContainerDataRowBottom : ''
-            }`}
+            sx={{
+                ...(!isFirstRow ? classes.collapsibleContainerDataRowTop : {}),
+                ...(!isLastRow ? classes.collapsibleContainerDataRowBottom : {}),
+            }}
         >
             <Box display="flex" alignItems="flex-end" key={item.key}>
                 <Typography
                     variant="body1"
-                    className={classes?.inputLabel}
+                    sx={{ ...classes.inputLabel }}
                     component="span"
                     id={`journal-list-header-${id}-${index}`}
                     data-testid={`journal-list-header-${id}-${index}`}
                 >
                     {item.label}
-                    {!!item.subLabel && <span className={classes?.subLabel}>{item.subLabel}</span>}
+                    {!!item.subLabel && (
+                        <Box component={'span'} sx={{ ...classes.subLabel }}>
+                            {item.subLabel}
+                        </Box>
+                    )}
                 </Typography>
                 {!!item.titleHelp && (
                     <HelpIcon {...item.titleHelp} testId={`${item.key}-${index}`} iconSize={'small'} />
@@ -60,6 +83,5 @@ JournalsListCollapsibleDataPanelContent.propTypes = {
     data: PropTypes.any.isRequired,
     isFirstRow: PropTypes.bool,
     isLastRow: PropTypes.bool,
-    classes: PropTypes.object,
 };
 export default React.memo(JournalsListCollapsibleDataPanelContent);

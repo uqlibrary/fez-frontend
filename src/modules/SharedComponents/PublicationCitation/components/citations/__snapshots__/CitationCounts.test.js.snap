@@ -10,7 +10,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
     >
       <a
         aria-label="Full citation in Web of science will open in a new window"
-        class="wosCitationCount CitationCountView-citationCount-28 makeStyles-externalLink-30 makeStyles-externalLink-32"
+        class="wosCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D12345"
@@ -24,14 +24,14 @@ exports[`CitationCounts should not render View full statistics link on public pa
           class="fez-icon wos large"
         />
         <span
-          class="CitationCountView-citationCountNumber-29"
+          class="MuiBox-root css-19k1sqg"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Scopus will open in a new window"
-        class="scopusCitationCount CitationCountView-citationCount-28 makeStyles-externalLink-30 makeStyles-externalLink-33"
+        class="scopusCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D12345%26origin%3Dinward"
@@ -45,14 +45,14 @@ exports[`CitationCounts should not render View full statistics link on public pa
           class="fez-icon scopus large"
         />
         <span
-          class="CitationCountView-citationCountNumber-29"
+          class="MuiBox-root css-19k1sqg"
         >
           0
         </span>
       </a>
       <a
         aria-label="Full citation in Altmetric will open in a new window"
-        class="altmetricCitationCount CitationCountView-citationCount-28 makeStyles-externalLink-30 makeStyles-externalLink-34"
+        class="altmetricCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://queensland.altmetric.com/details/12345"
@@ -66,14 +66,14 @@ exports[`CitationCounts should not render View full statistics link on public pa
           class="fez-icon altmetric large"
         />
         <span
-          class="CitationCountView-citationCountNumber-29"
+          class="MuiBox-root css-19k1sqg"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Google scholar will open in a new window"
-        class="googleCitationCount CitationCountView-citationCount-28 makeStyles-externalLink-30 makeStyles-externalLink-35"
+        class="googleCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -87,7 +87,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
           class="fez-icon google large"
         />
         <span
-          class="CitationCountView-citationCountNumber-29"
+          class="MuiBox-root css-19k1sqg"
         >
           1
         </span>
@@ -117,7 +117,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
     >
       <a
         aria-label="Full citation in Scopus will open in a new window"
-        class="scopusCitationCount CitationCountView-citationCount-5 makeStyles-externalLink-7 makeStyles-externalLink-9"
+        class="scopusCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
@@ -131,14 +131,14 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
           class="fez-icon scopus large"
         />
         <span
-          class="CitationCountView-citationCountNumber-6"
+          class="MuiBox-root css-19k1sqg"
         >
           0
         </span>
       </a>
       <a
         aria-label="Full citation in Altmetric will open in a new window"
-        class="altmetricCitationCount CitationCountView-citationCount-5 makeStyles-externalLink-7 makeStyles-externalLink-10"
+        class="altmetricCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://queensland.altmetric.com/details/23535331"
@@ -152,14 +152,14 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
           class="fez-icon altmetric large"
         />
         <span
-          class="CitationCountView-citationCountNumber-6"
+          class="MuiBox-root css-19k1sqg"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Google scholar will open in a new window"
-        class="googleCitationCount CitationCountView-citationCount-5 makeStyles-externalLink-7 makeStyles-externalLink-11"
+        class="googleCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
@@ -182,7 +182,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="CitationCounts-statsLink-4 makeStyles-externalLink-7 makeStyles-externalLink-14"
+        class=" css-4v7cvf"
         data-analyticsid="full-statistics-link"
         data-testid="full-statistics-link"
         href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
@@ -194,7 +194,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-8 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="full-statistics-link-new-window-icon"
@@ -224,7 +224,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
     >
       <a
         aria-label="Full citation in Web of science will open in a new window"
-        class="wosCitationCount CitationCountView-citationCount-16 makeStyles-externalLink-18 makeStyles-externalLink-20"
+        class="wosCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D12345"
@@ -238,14 +238,14 @@ exports[`CitationCounts should render component with all metrics 1`] = `
           class="fez-icon wos large"
         />
         <span
-          class="CitationCountView-citationCountNumber-17"
+          class="MuiBox-root css-19k1sqg"
         >
           0
         </span>
       </a>
       <a
         aria-label="Full citation in Scopus will open in a new window"
-        class="scopusCitationCount CitationCountView-citationCount-16 makeStyles-externalLink-18 makeStyles-externalLink-21"
+        class="scopusCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D12345%26origin%3Dinward"
@@ -259,14 +259,14 @@ exports[`CitationCounts should render component with all metrics 1`] = `
           class="fez-icon scopus large"
         />
         <span
-          class="CitationCountView-citationCountNumber-17"
+          class="MuiBox-root css-19k1sqg"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Altmetric will open in a new window"
-        class="altmetricCitationCount CitationCountView-citationCount-16 makeStyles-externalLink-18 makeStyles-externalLink-22"
+        class="altmetricCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://queensland.altmetric.com/details/12345"
@@ -280,14 +280,14 @@ exports[`CitationCounts should render component with all metrics 1`] = `
           class="fez-icon altmetric large"
         />
         <span
-          class="CitationCountView-citationCountNumber-17"
+          class="MuiBox-root css-19k1sqg"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Google scholar will open in a new window"
-        class="googleCitationCount CitationCountView-citationCount-16 makeStyles-externalLink-18 makeStyles-externalLink-23"
+        class="googleCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -301,7 +301,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
           class="fez-icon google large"
         />
         <span
-          class="CitationCountView-citationCountNumber-17"
+          class="MuiBox-root css-19k1sqg"
         >
           1
         </span>
@@ -315,7 +315,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="CitationCounts-statsLink-15 makeStyles-externalLink-18 makeStyles-externalLink-26"
+        class=" css-4v7cvf"
         data-analyticsid="full-statistics-link"
         data-testid="full-statistics-link"
         href="https://app.library.uq.edu.au/#/authors/view/pid:111"
@@ -327,7 +327,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-19 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="full-statistics-link-new-window-icon"
@@ -380,7 +380,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
     >
       <a
         aria-label="Full citation in Scopus will open in a new window"
-        class="scopusCitationCount CitationCountView-citationCount-39 makeStyles-externalLink-41 makeStyles-externalLink-43"
+        class="scopusCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
@@ -394,14 +394,14 @@ exports[`CitationCounts should render open access icon when required 1`] = `
           class="fez-icon scopus large"
         />
         <span
-          class="CitationCountView-citationCountNumber-40"
+          class="MuiBox-root css-19k1sqg"
         >
           0
         </span>
       </a>
       <a
         aria-label="Full citation in Altmetric will open in a new window"
-        class="altmetricCitationCount CitationCountView-citationCount-39 makeStyles-externalLink-41 makeStyles-externalLink-44"
+        class="altmetricCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://queensland.altmetric.com/details/23535331"
@@ -415,14 +415,14 @@ exports[`CitationCounts should render open access icon when required 1`] = `
           class="fez-icon altmetric large"
         />
         <span
-          class="CitationCountView-citationCountNumber-40"
+          class="MuiBox-root css-19k1sqg"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Google scholar will open in a new window"
-        class="googleCitationCount CitationCountView-citationCount-39 makeStyles-externalLink-41 makeStyles-externalLink-45"
+        class="googleCitationCount css-si3g8d"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
@@ -445,7 +445,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class="CitationCounts-statsLink-38 makeStyles-externalLink-41 makeStyles-externalLink-48"
+        class=" css-4v7cvf"
         data-analyticsid="full-statistics-link"
         data-testid="full-statistics-link"
         href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
@@ -457,7 +457,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-externalLinkIcon-42 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="full-statistics-link-new-window-icon"

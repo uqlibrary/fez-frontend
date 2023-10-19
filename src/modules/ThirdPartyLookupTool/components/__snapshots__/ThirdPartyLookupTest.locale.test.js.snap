@@ -9,7 +9,7 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-23 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -21,7 +21,7 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-22 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -30,12 +30,12 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-25 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
           >
             <div
-              class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
@@ -49,21 +49,20 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
             >
               <p>
                  - 
-                
               </p>
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-25 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-results"
                 id="standard-card-results"
               >
                 <div
-                  class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
                 >
                   <div
                     class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-30 css-1hzv55z-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                       data-testid="standard-card-results-header"
                       id="standard-card-results-header"
                     >
@@ -113,7 +112,7 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-20 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -125,7 +124,7 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-19 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         style="padding: 8px;"
@@ -191,7 +190,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-2 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -203,7 +202,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-1 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -212,7 +211,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-4 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
           >
@@ -279,7 +278,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                         aria-invalid="false"
                         aria-label="primaryValue"
                         class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                        id="mui-1"
+                        id=":r0:"
                         name="primaryValue"
                         placeholder="Enter one or more UTs separated by a comma e.g. 000455548800001"
                         required=""
@@ -306,7 +305,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                         aria-invalid="false"
                         aria-label="secondaryValue"
                         class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                        id="mui-2"
+                        id=":r1:"
                         name="secondaryValue"
                         placeholder="Enter API key"
                         type="text"
@@ -346,7 +345,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-11 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -358,7 +357,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-10 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
@@ -367,7 +366,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-13 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
           >
@@ -434,7 +433,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                         aria-invalid="false"
                         aria-label="primaryValue"
                         class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                        id="mui-3"
+                        id=":r2:"
                         name="primaryValue"
                         placeholder="Enter one or more UTs separated by a comma e.g. 000455548800001"
                         required=""
@@ -461,7 +460,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                         aria-invalid="false"
                         aria-label="secondaryValue"
                         class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                        id="mui-4"
+                        id=":r3:"
                         name="secondaryValue"
                         placeholder="Enter API key"
                         type="text"

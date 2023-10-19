@@ -3,18 +3,18 @@
 exports[`PublicationSearchForm renders  component 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
     data-testid="standard-card-search-for-your-publication"
     id="standard-card-search-for-your-publication"
   >
     <div
-      class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+      class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
           data-testid="standard-card-search-for-your-publication-header"
           id="standard-card-search-for-your-publication-header"
         >
@@ -76,18 +76,18 @@ exports[`PublicationSearchForm renders  component 1`] = `
 exports[`PublicationSearchForm renders  should display with skip search option 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-7 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
     data-testid="standard-card-search-for-your-publication"
     id="standard-card-search-for-your-publication"
   >
     <div
-      class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+      class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-12 css-1hzv55z-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
           data-testid="standard-card-search-for-your-publication-header"
           id="standard-card-search-for-your-publication-header"
         >

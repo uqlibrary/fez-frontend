@@ -3,7 +3,6 @@ import AuthorsListWithAffiliates from './AuthorsListWithAffiliates';
 import { act, render, fireEvent, WithReduxStore, within, waitFor } from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
-import { getByLabelText } from '@testing-library/dom';
 
 const props = {
     contributorEditorId: 'rek-author',

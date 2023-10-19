@@ -1,4 +1,5 @@
 import {
+    APP_ALERT_HIDE,
     AUTHOR_ADD_FAILED,
     AUTHOR_ADD_SUCCESS,
     AUTHOR_ADDING,
@@ -11,6 +12,7 @@ import {
     AUTHOR_LIST_FAILED,
     AUTHOR_LIST_LOADED,
     AUTHOR_LIST_LOADING,
+    AUTHOR_CLEAR_ALERTS,
     BULK_AUTHOR_ITEMS_DELETE_FAILED,
     BULK_AUTHOR_ITEMS_DELETE_SUCCESS,
     BULK_AUTHOR_ITEMS_DELETING,
@@ -214,5 +216,11 @@ export function ingestFromScopus(autId) {
 
             return Promise.reject(e);
         }
+    };
+}
+export function clearAuthorAlerts() {
+    return dispatch => {
+        dispatch({ type: AUTHOR_CLEAR_ALERTS });
+        dispatch({ type: APP_ALERT_HIDE });
     };
 }

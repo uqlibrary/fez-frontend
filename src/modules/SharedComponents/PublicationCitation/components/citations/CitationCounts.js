@@ -1,23 +1,17 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { withTheme } from 'helpers/withTheme';
 import { locale } from 'locale';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
 import Grid from '@mui/material/Grid';
-import withStyles from '@mui/styles/withStyles';
-
-const styles = theme => ({
-    statsLink: {
-        ...theme.typography.caption,
-    },
-});
 
 export class CitationCounts extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         hideViewFullStatisticsLink: PropTypes.bool,
-        classes: PropTypes.object,
+        theme: PropTypes.any,
     };
 
     getTitle = title => locale.components.publicationCitation.linkWillOpenInNewWindow.replace('[destination]', title);
@@ -25,7 +19,7 @@ export class CitationCounts extends PureComponent {
     render() {
         const txt = locale.components.publicationCitation.citationCounts;
         const { sources } = locale.global;
-        const { publication, hideViewFullStatisticsLink, classes } = this.props;
+        const { publication, hideViewFullStatisticsLink, theme } = this.props;
         const counts = {
             wos: publication.hasOwnProperty('rek_thomson_citation_count')
                 ? publication.rek_thomson_citation_count
@@ -84,7 +78,7 @@ export class CitationCounts extends PureComponent {
                         {...(this.props.publication.calculateOpenAccess
                             ? this.props.publication.calculateOpenAccess()
                             : {})}
-                        style={{ marginBottom: -5 }}
+                        style={{ marginBottom: '-5px' }}
                     />
                 </Grid>
                 <Grid item>
@@ -95,7 +89,7 @@ export class CitationCounts extends PureComponent {
                                 id="full-statistics"
                                 href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`}
                                 title={publication.rek_title}
-                                className={classes.statsLink}
+                                sx={{ ...theme.typography.caption }}
                             >
                                 {txt.statsLabel}
                             </ExternalLink>
@@ -107,4 +101,4 @@ export class CitationCounts extends PureComponent {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(CitationCounts);
+export default withTheme()(CitationCounts);

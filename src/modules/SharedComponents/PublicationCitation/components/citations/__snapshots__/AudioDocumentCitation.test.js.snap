@@ -8,44 +8,32 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Shutter, Leigh
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Arthurs, Andy
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Bamford, Greg
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         McColl, Mary Rose
-        
       </span>
       , 
        and 
@@ -53,11 +41,8 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Skinner, Peter R.
-        
       </span>
-      
        
     </span>
     <span
@@ -99,44 +84,32 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Shutter, Leigh
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-1"
       >
-        
         Arthurs, Andy
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-2"
       >
-        
         Bamford, Greg
-        
       </span>
       , 
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-3"
       >
-        
         McColl, Mary Rose
-        
       </span>
       , 
        and 
@@ -144,11 +117,8 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
         class="citationAuthor"
         data-testid="rek-author-4"
       >
-        
         Skinner, Peter R.
-        
       </span>
-      
        
     </span>
     <span

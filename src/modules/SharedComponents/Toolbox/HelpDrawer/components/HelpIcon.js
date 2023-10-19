@@ -3,27 +3,12 @@ import PropTypes from 'prop-types';
 
 // MUI 1
 import IconButton from '@mui/material/IconButton';
-import makeStyles from '@mui/styles/makeStyles';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
 import { sanitiseId } from 'helpers/general';
 
-const useStyles = makeStyles(
-    theme => ({
-        helpIcon: {
-            color: theme.palette.secondary.main,
-            opacity: 0.66,
-            '&:hover': {
-                opacity: 0.87,
-            },
-        },
-    }),
-    { withTheme: true },
-);
-
 export const HelpIcon = ({ title, text, buttonLabel, iconSize, style, tooltip, onClick, IconComponent, testId }) => {
-    const classes = useStyles();
     const setDrawerContent = () => {
         onClick(title, text, buttonLabel);
     };
@@ -40,7 +25,17 @@ export const HelpIcon = ({ title, text, buttonLabel, iconSize, style, tooltip, o
                 size={iconSize}
                 style={style}
             >
-                <IconComponent className={classes.helpIcon} fontSize={iconSize} titleAccess={tooltip} />
+                <IconComponent
+                    sx={{
+                        color: 'secondary.main',
+                        opacity: 0.66,
+                        '&:hover': {
+                            opacity: 0.87,
+                        },
+                    }}
+                    fontSize={iconSize}
+                    titleAccess={tooltip}
+                />
             </IconButton>
         </Tooltip>
     );

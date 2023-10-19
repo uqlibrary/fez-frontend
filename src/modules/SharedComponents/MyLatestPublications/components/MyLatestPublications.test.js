@@ -1,6 +1,6 @@
 import React from 'react';
 import { latestPubsPayload } from 'mock/data/testing/latestPublications';
-import { MyLatestPublications, styles } from './MyLatestPublications';
+import { MyLatestPublications } from './MyLatestPublications';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -53,20 +53,5 @@ describe('Component MyLatestPublications', () => {
         fireEvent.click(getByRole('button', { name: /View all/i }));
         // wrapper.instance()._viewMyResearch();
         expect(testFn).toHaveBeenCalledWith('/records/mine');
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            palette: {
-                accent: {
-                    main: 'test1',
-                    dark: 'test2',
-                },
-                white: {
-                    main: 'test3',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
     });
 });

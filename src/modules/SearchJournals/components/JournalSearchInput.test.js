@@ -2,6 +2,7 @@ import React from 'react';
 import { fireEvent, render, WithReduxStore } from 'test-utils';
 import { JournalSearchInput } from './JournalSearchInput';
 import locale from 'locale/components';
+import { act } from '@testing-library/react';
 
 const setup = state => {
     return render(
@@ -28,14 +29,14 @@ describe('JournalSearchInput', () => {
         expect(queryByTestId('clear-journal-search-keywords')).not.toHaveAttribute('aria-disabled', 'true');
     });
 
-    it('should allow to enter text', () => {
+    it('should allow to enter text', async () => {
         jest.useFakeTimers();
         global.dataLayer = { push: jest.fn() };
         const input = 'abc';
         const { queryByTestId } = setup();
         fireEvent.change(queryByTestId('journal-search-keywords-input'), { target: { value: input } });
         expect(queryByTestId('journal-search-keywords-input').value).toBe(input);
-        jest.runAllTimers();
+        await act(() => jest.advanceTimersByTime(2000));
         expect(global.dataLayer.push).toHaveBeenCalledTimes(1);
     });
 

@@ -8,16 +8,12 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Jennifer Moffatt
-        
       </span>
-      
        
     </span>
     <span
@@ -70,16 +66,12 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Jennifer Moffatt
-        
       </span>
-      
        
     </span>
     <span

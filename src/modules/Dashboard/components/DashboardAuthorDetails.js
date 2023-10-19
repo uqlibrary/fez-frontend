@@ -1,14 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
 
-export const styles = theme => ({
-    authorDetails: {
-        color: theme.palette.white.main,
-    },
-});
+const StyledTypography = styled(Typography)(({ theme }) => ({
+    color: theme.palette.white.main,
+}));
 
 export class DashboardAuthorDetails extends PureComponent {
     static propTypes = {
@@ -17,7 +15,6 @@ export class DashboardAuthorDetails extends PureComponent {
         givenName: PropTypes.string,
         orgUnits: PropTypes.array,
         positions: PropTypes.array,
-        classes: PropTypes.object,
     };
 
     constructor(props) {
@@ -46,14 +43,13 @@ export class DashboardAuthorDetails extends PureComponent {
     }
 
     render() {
-        const { classes } = this.props;
         const areAllCasualPositions = this.areAllCasualPositions(this.props.positions);
         return (
             <Grid container spacing={1}>
                 <Grid item xs={12}>
-                    <Typography variant={'h6'} className={classes.authorDetails}>
+                    <StyledTypography variant={'h6'}>
                         {this.props.title}&nbsp;{this.props.givenName}&nbsp;{this.props.familyName}
-                    </Typography>
+                    </StyledTypography>
                 </Grid>
                 {/* Author Name/Positions/OrgUnits */}
                 <Grid item xs={12}>
@@ -62,18 +58,13 @@ export class DashboardAuthorDetails extends PureComponent {
                         this.props.positions.map(
                             (item, index) =>
                                 ((!areAllCasualPositions && !this.isCasualPosition(item)) || areAllCasualPositions) && (
-                                    <Typography
-                                        key={index}
-                                        variant={'caption'}
-                                        component={'span'}
-                                        className={classes.authorDetails}
-                                    >
+                                    <StyledTypography key={index} variant={'caption'} component={'span'}>
                                         <b>{item}</b>
                                         {this.props.orgUnits &&
                                             this.props.orgUnits.length > 0 &&
                                             this.props.orgUnits[index] &&
                                             `, ${this.props.orgUnits[index]}`}
-                                    </Typography>
+                                    </StyledTypography>
                                 ),
                         )}
                 </Grid>
@@ -82,4 +73,4 @@ export class DashboardAuthorDetails extends PureComponent {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(DashboardAuthorDetails);
+export default DashboardAuthorDetails;

@@ -3,21 +3,21 @@
 exports[`Component NtroFields should call componentDidUpdate 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-29 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-34 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -38,7 +38,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-35 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -64,10 +64,10 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
         id="standard-card-ntro-data-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -76,7 +76,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -84,7 +84,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -92,7 +92,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -101,7 +101,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -110,7 +110,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -120,7 +120,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -129,7 +129,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -138,7 +138,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -152,21 +152,21 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-29 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-34 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -193,21 +193,21 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
 exports[`Component NtroFields should not show NTRO data card in the Ntro fields 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-64 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-69 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -228,7 +228,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-70 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -254,10 +254,10 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
         id="standard-card-author/creator-research-statement-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -283,21 +283,21 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-64 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-69 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -324,21 +324,21 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
 exports[`Component NtroFields should render all fields as disabled 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-15 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-20 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -359,7 +359,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-21 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -385,10 +385,10 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         id="standard-card-author/creator-research-statement-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -410,7 +410,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             style="margin-top: 24px;"
           >
             <field
@@ -425,21 +425,21 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-15 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-20 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -460,7 +460,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-21 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -486,10 +486,10 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         id="standard-card-ntro-data-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -498,7 +498,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -506,7 +506,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -514,7 +514,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -523,7 +523,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -532,7 +532,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -541,7 +541,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -550,7 +550,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -559,7 +559,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -569,7 +569,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -578,7 +578,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -588,7 +588,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -597,7 +597,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -611,21 +611,21 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-15 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-20 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -652,21 +652,21 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
 exports[`Component NtroFields should render contribution statement fields as well 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-8 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-13 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -687,7 +687,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-14 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -713,10 +713,10 @@ exports[`Component NtroFields should render contribution statement fields as wel
         id="standard-card-author/creator-research-statement-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -738,7 +738,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             style="margin-top: 24px;"
           >
             <field
@@ -753,21 +753,21 @@ exports[`Component NtroFields should render contribution statement fields as wel
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-8 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-13 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -788,7 +788,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-14 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -814,10 +814,10 @@ exports[`Component NtroFields should render contribution statement fields as wel
         id="standard-card-ntro-data-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -826,7 +826,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -834,7 +834,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -842,7 +842,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -851,7 +851,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -860,7 +860,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -869,7 +869,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -878,7 +878,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -887,7 +887,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -897,7 +897,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -906,7 +906,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -916,7 +916,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -925,7 +925,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -939,21 +939,21 @@ exports[`Component NtroFields should render contribution statement fields as wel
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-8 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-13 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -980,21 +980,21 @@ exports[`Component NtroFields should render contribution statement fields as wel
 exports[`Component NtroFields should render default view 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -1015,7 +1015,7 @@ exports[`Component NtroFields should render default view 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-7 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1041,10 +1041,10 @@ exports[`Component NtroFields should render default view 1`] = `
         id="standard-card-ntro-data-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1053,7 +1053,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1061,7 +1061,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1069,7 +1069,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1078,7 +1078,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1087,7 +1087,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1096,7 +1096,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1105,7 +1105,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1114,7 +1114,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1124,7 +1124,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1133,7 +1133,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1143,7 +1143,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1152,7 +1152,7 @@ exports[`Component NtroFields should render default view 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1166,21 +1166,21 @@ exports[`Component NtroFields should render default view 1`] = `
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-1 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-6 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >
@@ -1207,21 +1207,21 @@ exports[`Component NtroFields should render default view 1`] = `
 exports[`Component NtroFields should render with grants component hidden 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-22 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-27 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -1242,7 +1242,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-28 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1268,10 +1268,10 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         id="standard-card-author/creator-research-statement-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -1293,7 +1293,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
             style="margin-top: 24px;"
           >
             <field
@@ -1308,21 +1308,21 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-22 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-27 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -1343,7 +1343,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-28 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1369,10 +1369,10 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         id="standard-card-ntro-data-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1381,7 +1381,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1389,7 +1389,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1397,7 +1397,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1406,7 +1406,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1415,7 +1415,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1424,7 +1424,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1433,7 +1433,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1442,7 +1442,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1452,7 +1452,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1461,7 +1461,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1471,7 +1471,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1480,7 +1480,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1499,21 +1499,21 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
 exports[`Component NtroFields should show significance field even if contribution field isnt empty 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-57 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-author/creator-research-statement"
       id="standard-card-author/creator-research-statement"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-62 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-author/creator-research-statement-header"
             id="standard-card-author/creator-research-statement-header"
           >
@@ -1534,7 +1534,7 @@ exports[`Component NtroFields should show significance field even if contributio
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-63 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1560,10 +1560,10 @@ exports[`Component NtroFields should show significance field even if contributio
         id="standard-card-author/creator-research-statement-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -1589,21 +1589,21 @@ exports[`Component NtroFields should show significance field even if contributio
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-57 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-ntro-data"
       id="standard-card-ntro-data"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-62 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-ntro-data-header"
             id="standard-card-ntro-data-header"
           >
@@ -1624,7 +1624,7 @@ exports[`Component NtroFields should show significance field even if contributio
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-63 css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -1650,10 +1650,10 @@ exports[`Component NtroFields should show significance field even if contributio
         id="standard-card-ntro-data-content"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1662,7 +1662,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1670,7 +1670,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1678,7 +1678,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1687,7 +1687,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1696,7 +1696,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1705,7 +1705,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1714,7 +1714,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1723,7 +1723,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1733,7 +1733,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1742,7 +1742,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1752,7 +1752,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1761,7 +1761,7 @@ exports[`Component NtroFields should show significance field even if contributio
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 css-1t6acoz-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -1775,21 +1775,21 @@ exports[`Component NtroFields should show significance field even if contributio
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-57 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-details"
       id="standard-card-grant-details"
     >
       <div
-        class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-62 css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
             data-testid="standard-card-grant-details-header"
             id="standard-card-grant-details-header"
           >

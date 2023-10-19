@@ -10,7 +10,6 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 import { default as globalLocale } from 'locale/global';
-import makeStyles from '@mui/styles/makeStyles';
 import { validation } from 'config';
 
 import {
@@ -19,14 +18,6 @@ import {
     DATA_COLLECTION_CREATOR_ROLES,
     ORG_TYPE_ID_UNIVERSITY,
 } from 'config/general';
-
-const useStyles = makeStyles(theme => ({
-    contributorFormButton: {
-        [theme.breakpoints.down('sm')]: {
-            height: '100%',
-        },
-    },
-}));
 
 const initialContributorState = {
     nameAsPublished: '',
@@ -55,7 +46,6 @@ export const ContributorForm = ({
     showIdentifierLookup: initialShowIdentifierLookup,
     showRoleInput,
 }) => {
-    const classes = useStyles();
     const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
     const [clearRoleInput, setClearRoleInput] = useState(true);
     const [showIdentifierLookup, setShowIdentifierLookup] = useState(initialShowIdentifierLookup);
@@ -332,7 +322,11 @@ export const ContributorForm = ({
                         id={`${contributorFormId}-add`}
                         data-analyticsid={`${contributorFormId}-add`}
                         data-testid={`${contributorFormId}-add`}
-                        className={classes.contributorFormButton}
+                        sx={theme => ({
+                            [theme.breakpoints.down('sm')]: {
+                                height: '100%',
+                            },
+                        })}
                     >
                         {addButtonLabel}
                     </Button>
@@ -348,7 +342,11 @@ export const ContributorForm = ({
                             id={`${contributorFormId}-cancel`}
                             data-analyticsid={`${contributorFormId}-cancel`}
                             data-testid={`${contributorFormId}-cancel`}
-                            className={classes.contributorFormButton}
+                            sx={theme => ({
+                                [theme.breakpoints.down('sm')]: {
+                                    height: '100%',
+                                },
+                            })}
                         >
                             {locale.cancelButton || 'Cancel'}
                         </Button>

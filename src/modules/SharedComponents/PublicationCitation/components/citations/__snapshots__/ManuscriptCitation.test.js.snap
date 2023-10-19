@@ -8,16 +8,12 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationAuthors"
     >
-      
       <span
         class="citationAuthor"
         data-testid="rek-author-0"
       >
-        
         Hayes, Edward Leo, 1889-1967
-        
       </span>
-      
        
     </span>
     <span

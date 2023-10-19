@@ -4,7 +4,6 @@ import * as actions from 'actions';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
-import makeStyles from '@mui/styles/makeStyles';
 import { pathConfig } from 'config';
 import { parseHtmlToJSX } from 'helpers/general';
 import AdminActions from './AdminActions';
@@ -22,9 +21,18 @@ import Grid from '@mui/material/Grid';
 
 const moment = require('moment');
 
-const returnDateField = (date, conf, className) => {
+const classes = {
+    dateField: {
+        paddingRight: '5px',
+    },
+    centerAlign: {
+        textAlign: 'center',
+    },
+};
+
+const returnDateField = (date, conf, classes) => {
     return (
-        <Grid item xs={2} className={className} sx={{ display: { xs: 'none', md: 'block' } }}>
+        <Grid item xs={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
             <Typography variant="body2">
                 {moment(date)
                     .local()
@@ -33,58 +41,6 @@ const returnDateField = (date, conf, className) => {
         </Grid>
     );
 };
-
-const useStyles = makeStyles(theme => ({
-    adminButton: {
-        marginBottom: 10,
-        backgroundColor: '#51247A',
-        color: 'white',
-        '&:hover': {
-            backgroundColor: '#51247A',
-            color: 'white',
-        },
-    },
-    primaryHeader: {
-        fontWeight: 400,
-        padding: '15px 0px',
-    },
-    collectionBase: {
-        backgroundColor: '#eee',
-        padding: 20,
-        boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
-        [theme.breakpoints.down('lg')]: {},
-    },
-    collectionContainer: {
-        minHeight: 200,
-        backgroundColor: 'white',
-        padding: 10,
-    },
-    collectionCountTitle: {
-        fontWeight: 600,
-        marginBottom: 10,
-        display: 'block',
-    },
-    dateField: {
-        paddingRight: 5,
-    },
-    centerAlign: {
-        textAlign: 'center',
-    },
-    collectionRow: {
-        boxSizing: 'border-box',
-        boxShadow: '0 -1px 0 #eaeaea',
-        padding: '15px 0px',
-    },
-    responsiveMin: {
-        minWidth: 0,
-    },
-    autoOverflow: {
-        overflow: 'auto',
-    },
-    italic: {
-        fontStyle: 'italic',
-    },
-}));
 export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, open }) => {
     const dispatch = useDispatch();
     const [sortDirection, setSortDirection] = React.useState('Asc');
@@ -114,8 +70,6 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
     );
     const exportingCollectionsPid = useSelector(state => state.get('exportCollectionsReducer').exportingCollectionsPid);
     const isLoadingOrExporting = collectionListLoading || exportCollectionsLoading;
-
-    const classes = useStyles();
 
     const filteredData = collectionList.filter(obj => obj.parent === pid);
     const finalList = filteredData.length > 0 ? filteredData[0].data : { data: [] };
@@ -192,30 +146,36 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                 </div>
             )}
             {loadingCollectionsPid !== pid && (
-                <div
-                    className={classes.collectionBase}
+                <Box
+                    sx={{
+                        backgroundColor: '#eee',
+                        padding: '20px',
+                        boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
+                    }}
                     data-testid={`collection-records-${pid}`}
                     id={`collection-records-${pid}`}
                 >
                     {!!adminUser && (
                         <Button
-                            className={classes.adminButton}
                             component={Link}
-                            variant="outlined"
                             to={`${pathConfig.admin.collection}?pid=${pid}&name=${title}`}
                             id={`admin-add-community-button-${pid}`}
                             data-testid={`admin-add-community-button-${pid}`}
                             startIcon={<Add />}
+                            variant={'contained'}
+                            color={'primary'}
+                            sx={{ marginBottom: '10px' }}
                         >
                             {communityCollectionsConfig.addNewCollectionText}
                         </Button>
                     )}
                     {finalList.data.length > 0 && (
                         <Collapse in={open} timeout={200} unmountOnExit>
-                            <Box className={classes.collectionContainer}>
+                            <Box sx={{ minHeight: 200, backgroundColor: '#FFF', padding: '10px' }}>
                                 <Typography
                                     variant="caption"
-                                    className={classes.collectionCountTitle}
+                                    component={'div'}
+                                    sx={{ fontWeight: 600, marginBottom: '10px' }}
                                     id={`total-collections-${pid}`}
                                     data-testid={`total-collections-${pid}`}
                                 >
@@ -259,19 +219,19 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                 )}
                                 {exportingCollectionsPid !== pid && (
                                     <Grid container>
-                                        <Grid container className={classes.responsiveMin}>
+                                        <Grid container sx={{ minWidth: 0 }}>
                                             <Grid
                                                 container
                                                 data-testid="embedded-collections-primary-header"
                                                 spacing={0}
-                                                className={classes.primaryHeader}
+                                                sx={{ fontWeight: 400, padding: '15px 0px' }}
                                             >
                                                 <Grid
                                                     item
                                                     xs={10}
                                                     sm={adminUser ? 8 : 9}
                                                     md={adminUser ? 6 : 7}
-                                                    className={classes.dateField}
+                                                    sx={{ ...classes.dateField }}
                                                 >
                                                     {labels.title}
                                                 </Grid>
@@ -279,24 +239,24 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                     item
                                                     sm={2}
                                                     md={1}
-                                                    className={classes.centerAlign}
-                                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                    sx={{
+                                                        ...classes.centerAlign,
+                                                        display: { xs: 'none', sm: 'block' },
+                                                    }}
                                                 >
                                                     {communityCollectionsConfig.viewCommunityTitle}
                                                 </Grid>
                                                 <Grid
                                                     item
                                                     xs={2}
-                                                    className={classes.dateField}
-                                                    sx={{ display: { xs: 'none', md: 'block' } }}
+                                                    sx={{ ...classes.dateField, display: { xs: 'none', md: 'block' } }}
                                                 >
                                                     {labels.creation_date}
                                                 </Grid>
                                                 <Grid
                                                     item
                                                     xs={2}
-                                                    className={classes.dateField}
-                                                    sx={{ display: { xs: 'none', md: 'block' } }}
+                                                    sx={{ ...classes.dateField, display: { xs: 'none', md: 'block' } }}
                                                 >
                                                     {labels.updated_date}
                                                 </Grid>
@@ -305,8 +265,11 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         item
                                                         xs={2}
                                                         md={1}
-                                                        className={`${classes.dateField} ${classes.centerAlign}`}
-                                                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                        sx={{
+                                                            ...classes.dateField,
+                                                            ...classes.centerAlign,
+                                                            display: { xs: 'none', sm: 'block' },
+                                                        }}
                                                     >
                                                         {labels.actions}
                                                     </Grid>
@@ -314,8 +277,10 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                 <Grid
                                                     item
                                                     xs={2}
-                                                    className={classes.centerAlign}
-                                                    sx={{ display: { xs: 'block', sm: 'none' } }}
+                                                    sx={{
+                                                        ...classes.centerAlign,
+                                                        display: { xs: 'block', sm: 'none' },
+                                                    }}
                                                 >
                                                     View
                                                 </Grid>
@@ -323,7 +288,11 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                             <Grid container data-testid="embedded-collections-primary-body">
                                                 {finalList.data.map(row => (
                                                     <Grid
-                                                        className={classes.collectionRow}
+                                                        sx={{
+                                                            boxSizing: 'border-box',
+                                                            boxShadow: '0 -1px 0 #eaeaea',
+                                                            padding: '15px 0px',
+                                                        }}
                                                         container
                                                         key={row.rek_pid}
                                                         id={`row-${row.rek_pid}`}
@@ -334,7 +303,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                             xs={10}
                                                             sm={adminUser ? 8 : 9}
                                                             md={adminUser ? 6 : 7}
-                                                            className={classes.dateField}
+                                                            sx={{ ...classes.dateField }}
                                                         >
                                                             <Typography variant="body2">
                                                                 <Link
@@ -353,7 +322,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                                                                 <Typography
                                                                     variant="caption"
-                                                                    className={classes.italic}
+                                                                    sx={{ fontStyle: 'italic' }}
                                                                 >
                                                                     {communityCollectionsConfig.formatCreationDate(
                                                                         moment(row.rek_created_date)
@@ -367,10 +336,12 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                         <br />
                                                                     </Box>
                                                                     <Typography
-                                                                        sx={{ display: { xs: 'none', sm: 'inline' } }}
+                                                                        sx={{
+                                                                            fontStyle: 'italic',
+                                                                            display: { xs: 'none', sm: 'inline' },
+                                                                        }}
                                                                         component="span"
                                                                         variant="caption"
-                                                                        className={classes.italic}
                                                                     >
                                                                         {' / '}
                                                                     </Typography>
@@ -386,8 +357,10 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                             item
                                                             xs={2}
                                                             md={1}
-                                                            className={classes.centerAlign}
-                                                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                            sx={{
+                                                                ...classes.centerAlign,
+                                                                display: { xs: 'none', sm: 'block' },
+                                                            }}
                                                         >
                                                             <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
                                                                 {communityCollectionsConfig.viewCommunityText}
@@ -399,8 +372,10 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         <Grid
                                                             item
                                                             xs={2}
-                                                            className={classes.centerAlign}
-                                                            sx={{ display: { xs: 'block', sm: 'none' } }}
+                                                            sx={{
+                                                                ...classes.centerAlign,
+                                                                display: { xs: 'block', sm: 'none' },
+                                                            }}
                                                         >
                                                             <div>
                                                                 <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
@@ -420,8 +395,11 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                 item
                                                                 xs={2}
                                                                 md={1}
-                                                                className={`${classes.dateField} ${classes.centerAlign}`}
-                                                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                                sx={{
+                                                                    ...classes.dateField,
+                                                                    ...classes.centerAlign,
+                                                                    display: { xs: 'none', sm: 'block' },
+                                                                }}
                                                             >
                                                                 <AdminActions
                                                                     record={row.rek_pid}
@@ -452,7 +430,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                             <Typography variant="caption">{conf.loading.noCollections}</Typography>
                         </div>
                     )}
-                </div>
+                </Box>
             )}
         </div>
     );

@@ -6,25 +6,24 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import { BULK_UPDATES_ACTIONS } from 'config/bulkUpdates';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
+import { useTheme } from '@mui/material/styles';
 
 import { locale } from 'locale';
 
 import BulkUpdatesForm from './BulkUpdatesForm';
-import makeStyles from '@mui/styles/makeStyles';
 
-const useStyles = makeStyles(
-    theme => ({
-        paper: {
+const classes = {
+    paper: theme => ({
+        '& .MuiDialog-paper': {
             [theme.breakpoints.down('sm')]: {
                 margin: theme.spacing(1),
             },
         },
     }),
-    { withTheme: true },
-);
+};
 
 export const BulkUpdatesActions = ({ recordsSelected, shouldDisplay }) => {
-    const classes = useStyles();
+    const theme = useTheme();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const [selectedAction, setSelectedAction] = React.useState(null);
 
@@ -65,7 +64,7 @@ export const BulkUpdatesActions = ({ recordsSelected, shouldDisplay }) => {
                             onCancel={handleHideConfirmation}
                         />
                     )}
-                    classes={classes}
+                    classes={classes.paper(theme)}
                 />
             )}
             <NewGenericSelectField

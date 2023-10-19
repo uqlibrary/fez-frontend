@@ -1,6 +1,5 @@
 import React from 'react';
 import { HelpDrawer } from './HelpDrawer';
-import HelpDrawerWithStyles from './HelpDrawer';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -47,13 +46,6 @@ describe('HelpDrawer snapshots tests', () => {
             title: 'HelpDrawer title',
             text: <span>Test text</span>,
         });
-        expect(baseElement).toMatchSnapshot();
-    });
-
-    it('should render with styles', () => {
-        const { baseElement } = rtlRender(
-            <HelpDrawerWithStyles open title={'Test title'} text={'Test text'} hide={jest.fn()} />,
-        );
         expect(baseElement).toMatchSnapshot();
     });
 });

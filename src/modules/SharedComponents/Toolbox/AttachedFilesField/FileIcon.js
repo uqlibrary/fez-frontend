@@ -8,7 +8,7 @@ import Image from '@mui/icons-material/Image';
 import Videocam from '@mui/icons-material/Videocam';
 import Thumbnail from 'modules/ViewRecord/components/partials/Thumbnail';
 
-import { getUrl, useStyles } from './AttachedFiles';
+import { getUrl } from './AttachedFiles';
 
 export const FileIcon = ({
     pid,
@@ -21,7 +21,6 @@ export const FileIcon = ({
     securityStatus,
     showPreview,
 }) => {
-    const classes = useStyles();
     if (allowDownload && thumbnailFileName) {
         const thumbnailProps = {
             mimeType,
@@ -36,15 +35,15 @@ export const FileIcon = ({
         };
         return <Thumbnail {...thumbnailProps} />;
     } else if (mimeType.indexOf('audio') >= 0) {
-        return <VolumeUp className={classes.fileIcon} color="secondary" />;
+        return <VolumeUp sx={{ opacity: 0.5 }} color="secondary" />;
     } else if (mimeType.indexOf('pdf') >= 0) {
-        return <PictureAsPdf className={classes.fileIcon} color="secondary" />;
+        return <PictureAsPdf sx={{ opacity: 0.5 }} color="secondary" />;
     } else if (mimeType.indexOf('image') >= 0) {
-        return <Image className={classes.fileIcon} color="secondary" />;
+        return <Image sx={{ opacity: 0.5 }} color="secondary" />;
     } else if (mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf') {
-        return <Videocam className={classes.fileIcon} color="secondary" />;
+        return <Videocam sx={{ opacity: 0.5 }} color="secondary" />;
     } else {
-        return <InsertDriveFile className={classes.fileIcon} color="secondary" />;
+        return <InsertDriveFile sx={{ opacity: 0.5 }} color="secondary" />;
     }
 };
 

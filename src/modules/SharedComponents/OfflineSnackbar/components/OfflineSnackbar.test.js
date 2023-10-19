@@ -1,6 +1,7 @@
 import React from 'react';
-import { OfflineSnackbar, styles } from './OfflineSnackbar';
-import { rtlRender } from 'test-utils';
+import { OfflineSnackbar } from './OfflineSnackbar';
+import { act, rtlRender } from 'test-utils';
+import { waitForElementToBeRemoved } from '@testing-library/react';
 
 function setup(testProps = {}) {
     const props = {
@@ -34,12 +35,14 @@ describe('Component OfflineSnackbar', () => {
     it('renders back online snackbar', async () => {
         Object.defineProperty(navigator, 'onLine', { value: true, writable: true });
         const goOnline = new window.Event('online', { bubbles: true });
-        jest.useFakeTimers();
-        const { container } = setup();
-        document.dispatchEvent(goOnline);
+        const { container, getByRole } = setup();
+        act(() => {
+            document.dispatchEvent(goOnline);
+        });
+        expect(container).toMatchSnapshot();
 
-        // trigger handleRequestClose
-        jest.advanceTimersByTime(5001);
+        // ensure the alert hides after a timeout
+        await waitForElementToBeRemoved(getByRole('presentation'), { timeout: 6000 });
         expect(container).toMatchSnapshot();
     });
 
@@ -48,26 +51,5 @@ describe('Component OfflineSnackbar', () => {
         const { unmount } = setup();
         unmount();
         expect(removeEventListenerFn).toHaveBeenCalled();
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            palette: {
-                success: {
-                    light: 'test1',
-                },
-                error: {
-                    light: 'test2',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette.success;
-        delete theme.palette.error;
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
     });
 });

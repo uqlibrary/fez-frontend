@@ -21,18 +21,18 @@ exports[`Add new record should render stepper and a publication form 1`] = `
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-2 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-work-type"
           id="standard-card-work-type"
         >
           <div
-            class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-7 css-1hzv55z-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
                 data-testid="standard-card-work-type-header"
                 id="standard-card-work-type-header"
               >
@@ -53,7 +53,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                 type="button"
               >
                 <svg
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-8 css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
                   data-testid="HelpOutlineIcon"
                   focusable="false"
                   role="img"

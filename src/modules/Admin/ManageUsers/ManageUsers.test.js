@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageUsers from './index';
-import { act, render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent, screen } from 'test-utils';
+import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
 import * as ManageUsersActions from 'actions/manageUsers';
 import * as repository from 'repositories';
 import * as AppActions from 'actions/app';
@@ -376,13 +376,8 @@ describe('ManageUsers', () => {
         expect(getByTestId('users-list-row-0')).toBeInTheDocument();
         expect(getByTestId('users-list-row-19')).toBeInTheDocument();
 
-        act(() => {
-            fireEvent.mouseDown(getByText('20 rows'));
-        });
-
-        act(() => {
-            fireEvent.click(getByText('50'));
-        });
+        fireEvent.mouseDown(getByText('20 rows'));
+        fireEvent.click(getByText('50'));
 
         // await waitFor(() => getByTestId('users-list-row-22'));
 
@@ -493,9 +488,7 @@ describe('ManageUsers', () => {
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        act(() => {
-            fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
-        });
+        fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
 
         expect(getByTestId('usr-full-name-input')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-email-input')).toHaveAttribute('value', 't.user@library.uq.edu.au');
@@ -550,16 +543,10 @@ describe('ManageUsers', () => {
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        // act(() => {
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
-        // });
-
         fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
-
-        // act(() => {
         fireEvent.click(getByTestId('users-update-this-user-save'));
-        // });
 
         await waitFor(() => getByTestId('users-list-row-0'));
 
@@ -773,12 +760,10 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('users-delete-selected-users'));
         fireEvent.click(getByTestId('confirm-bulk-delete-users-confirmation'));
 
-        await act(() =>
-            waitFor(() => {
-                expect(queryByTestId('users-list-row-0')).not.toBeInTheDocument();
-                expect(queryByTestId('users-list-row-2')).not.toBeInTheDocument();
-            }),
-        );
+        await waitFor(() => {
+            expect(queryByTestId('users-list-row-0')).not.toBeInTheDocument();
+            expect(queryByTestId('users-list-row-2')).not.toBeInTheDocument();
+        });
     });
 
     it('should fail to bulk delete all users', async () => {
@@ -887,12 +872,8 @@ describe('ManageUsers', () => {
 
         expect(getByTestId('users-list-row-0')).toBeInTheDocument();
 
-        act(() => {
-            fireEvent.click(getByTestId('users-list-row-0'));
-        });
-        act(() => {
-            fireEvent.keyDown(getByTestId('user-edit-row'), { key: 'Escape' });
-        });
+        fireEvent.click(getByTestId('users-list-row-0'));
+        fireEvent.keyDown(getByTestId('user-edit-row'), { key: 'Escape' });
 
         expect(queryByTestId('user-edit-row')).not.toBeInTheDocument();
         expect(queryByText('Name information')).not.toBeInTheDocument();
@@ -938,12 +919,12 @@ describe('ManageUsers', () => {
 
         const { getByTestId, getByText } = setup();
 
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading users')));
+        await waitForElementToBeRemoved(() => getByText('Loading users'));
 
         fireEvent.click(getByTestId('usr-username-0-copy-text'));
 
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith('uqvasai');
 
-        waitFor(() => getByTestId('copied-text-snackbar'));
+        await waitFor(() => getByTestId('copied-text-snackbar'));
     });
 });

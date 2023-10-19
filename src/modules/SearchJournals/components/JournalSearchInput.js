@@ -43,7 +43,7 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
 
     React.useEffect(() => {
         if (journalSearchInput && journalSearchInput.length > 2 && throttledLoadSuggestions) {
-            const timeOutId = setTimeout(() => {
+            setTimeout(() => {
                 throttledLoadSuggestions.current(journalSearchInput);
                 window.dataLayer.push({
                     event: 'Typed',
@@ -52,13 +52,11 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
                     'data-testid': 'journal-search-keywords-input',
                 });
             }, 1000);
-            return () => clearTimeout(timeOutId);
         } else {
             // dispatch fires when component remounts i.e. from results page back to search input
             /* istanbul ignore next */
             !isInit && dispatch(clearJournalSearchKeywords());
             isInit.current = false;
-            return null;
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [journalSearchInput]);

@@ -9,7 +9,7 @@ exports[`Thumbnail component should render component 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-ez3bwd-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
       data-testid="LockIcon"
       focusable="false"
       viewBox="0 0 24 24"

@@ -2,21 +2,9 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import Grid from '@mui/material/Grid';
-import withStyles from '@mui/styles/withStyles';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 import { FormValuesContext } from 'context';
-
-const styles = () => ({
-    hideLabel: {
-        position: 'absolute',
-        left: -10000,
-        top: 'auto',
-        width: 1,
-        height: 1,
-        overflow: 'hidden',
-    },
-});
 
 /**
  * Remove invalid file names
@@ -44,7 +32,6 @@ export class FileUploadDropzone extends PureComponent {
         filesInQueue: PropTypes.array,
         fileUploadLimit: PropTypes.number,
         disabled: PropTypes.bool,
-        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -337,4 +324,4 @@ export class FileUploadDropzone extends PureComponent {
 
 FileUploadDropzone.contextType = FormValuesContext;
 
-export default withStyles(styles)(FileUploadDropzone);
+export default FileUploadDropzone;

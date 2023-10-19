@@ -4,25 +4,10 @@ import { numberToWords } from 'config';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
+
 import RadioButtonUnchecked from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonChecked from '@mui/icons-material/RadioButtonChecked';
 import Link from '@mui/icons-material/Link';
-
-export const styles = theme => ({
-    authorLinkIcon: {
-        marginRight: theme.spacing(),
-    },
-    buttonBase: {
-        justifyContent: 'flex-start',
-        marginBottom: theme.spacing(-1),
-        marginTop: theme.spacing(1),
-    },
-    authorOrder: {
-        marginLeft: theme.spacing(5),
-        marginBottom: theme.spacing(2),
-    },
-});
 
 export class AuthorItem extends PureComponent {
     static propTypes = {
@@ -35,7 +20,6 @@ export class AuthorItem extends PureComponent {
         onAuthorSelected: PropTypes.func,
         locale: PropTypes.object,
         index: PropTypes.number,
-        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -62,11 +46,11 @@ export class AuthorItem extends PureComponent {
      */
     getAuthorItemStatusIcon = (linked, selected) => {
         if (!linked && !selected) {
-            return <RadioButtonUnchecked className={this.props.classes.authorLinkIcon} color="secondary" />;
+            return <RadioButtonUnchecked sx={{ marginRight: 1 }} color="secondary" />;
         } else if (linked) {
-            return <Link className={this.props.classes.authorLinkIcon} />;
+            return <Link sx={{ marginRight: 1 }} />;
         } else {
-            return <RadioButtonChecked className={this.props.classes.authorLinkIcon} color="primary" />;
+            return <RadioButtonChecked sx={{ marginRight: 1 }} color="primary" />;
         }
     };
 
@@ -84,7 +68,7 @@ export class AuthorItem extends PureComponent {
                     onClick={!linked && !selected ? this._selectAuthor : undefined}
                     fullWidth
                     disabled={disabled}
-                    className={this.props.classes.buttonBase}
+                    sx={{ justifyContent: 'flex-start', marginBottom: -1, marginTop: 1 }}
                     startIcon={icon}
                     children={
                         <Typography
@@ -102,7 +86,7 @@ export class AuthorItem extends PureComponent {
                 />
                 <Typography
                     variant="caption"
-                    className={this.props.classes.authorOrder}
+                    sx={{ marginLeft: 5, marginBottom: 2 }}
                     id={`${this.props.authorItemId}-order`}
                     data-testid={`${this.props.authorItemId}-order`}
                 >
@@ -113,4 +97,4 @@ export class AuthorItem extends PureComponent {
     }
 }
 
-export default withStyles(styles)(AuthorItem);
+export default AuthorItem;

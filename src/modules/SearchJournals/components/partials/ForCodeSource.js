@@ -1,57 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import makeStyles from '@mui/styles/makeStyles';
-
 import Typography from '@mui/material/Typography';
 import { sanitiseId } from 'helpers/general';
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        textTransform: 'uppercase',
-        padding: 3,
-        fontSize: 10,
-        marginLeft: 5,
-    },
+const codeStyles = {
     asic: {
-        backgroundColor: theme.palette.error?.main,
-        color: theme.palette.white?.main,
+        backgroundColor: 'error.main',
+        color: 'white.main',
     },
     abdc: {
-        backgroundColor: theme.palette.accent?.main,
-        color: theme.palette.white?.main,
+        backgroundColor: 'accent.main',
+        color: 'white.main',
     },
     era: {
-        backgroundColor: theme.palette.success?.main,
-        color: theme.palette.white?.main,
+        backgroundColor: 'success.main',
+        color: 'white.main',
     },
     wosssci: {
-        backgroundColor: theme.palette.primary?.dark,
-        color: theme.palette.white?.main,
+        backgroundColor: 'primary.dark',
+        color: 'white.main',
     },
     wosscie: {
-        backgroundColor: theme.palette.primary?.dark,
-        color: theme.palette.white?.main,
+        backgroundColor: 'primary.dark',
+        color: 'white.main',
     },
     wosesci: {
-        backgroundColor: theme.palette.primary?.dark,
-        color: theme.palette.white?.main,
+        backgroundColor: 'primary.dark',
+        color: 'white.main',
     },
     citescore: {
-        backgroundColor: theme.palette.accent?.main,
-        color: theme.palette.white?.main,
+        backgroundColor: 'accent.main',
+        color: 'white.main',
     },
-}));
+};
 
 export const ForCodeSource = ({ source, index }) => {
-    const classes = useStyles();
     const id = sanitiseId(`journal-search-item-subject-source-${source}-${index}`);
     return (
         <Typography
             variant="caption"
             component="span"
-            classes={{ root: classes.root }}
-            className={classes[source]}
+            sx={{
+                textTransform: 'uppercase',
+                padding: '3px',
+                fontSize: '10px',
+                marginLeft: '5px',
+                ...codeStyles[source],
+            }}
             id={id}
             data-testid={id}
             noWrap

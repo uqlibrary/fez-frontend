@@ -19,7 +19,6 @@ exports[`CitationTitleView partial should render properly with a suffix that equ
   >
      
     values
-    
   </span>
 </div>
 `;

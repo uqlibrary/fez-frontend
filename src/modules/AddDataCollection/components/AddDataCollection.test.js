@@ -1,7 +1,7 @@
 import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
 import Immutable from 'immutable';
-import { render, WithReduxStore, WithRouter, fireEvent, screen, preview } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, screen } from 'test-utils';
 
 /* eslint-disable react/prop-types */
 jest.mock('redux-form/immutable', () => ({
@@ -124,7 +124,6 @@ describe('AddDataCollection test', () => {
             },
             rerender,
         );
-        preview.debug();
         fireEvent.click(screen.getByTestId('confirm-dialog-box'));
 
         expect(clearNewRecordFn).toHaveBeenCalled();

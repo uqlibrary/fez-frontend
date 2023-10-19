@@ -1,5 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { styled } from '@mui/material/styles';
+
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -14,251 +16,129 @@ import Help from '@mui/icons-material/Help';
 import HelpOutline from '@mui/icons-material/HelpOutline';
 import Done from '@mui/icons-material/Done';
 import Grid from '@mui/material/Grid';
-import { makeStyles } from '@mui/styles';
 
-const classNames = require('classnames');
+const icon = {
+    '& .icon': {
+        fontSize: '48px',
+        marginRight: '16px',
+        marginBottom: '-6px',
+    },
+    '& .spinner': {
+        margin: '8px 24px 0 6px',
+    },
+};
+const paletteIndex = {
+    error: 'error',
+    error_outline: 'error',
+    warning: 'warning',
+    help: 'secondary',
+    help_outline: 'secondary',
+    info: 'accent',
+    info_outline: 'accent',
+    done: 'success',
+};
 
-const useStyles = makeStyles(
-    theme => ({
-        root: {
-            padding: 12,
-            marginTop: 5,
-            '&:first-child': {
-                marginTop: 0,
-            },
-        },
-        common: {
-            borderRadius: 5,
-            boxShadow: theme.shadows[1],
-        },
-        '@keyframes wiggle': {
-            from: { transform: 'rotate(-30deg)', transformOrigin: '40% 50%' },
-            to: { transform: 'rotate(15deg)', transformOrigin: '40% 50%' },
-        },
-        wiggler: {
-            animationName: '$wiggle',
-            animationDuration: '0.3s',
-            animationIterationCount: 20,
-            animationDirection: 'alternate',
-            animationTimingFunction: 'ease-in-out',
-        },
-        icon: {
-            '& .icon': {
-                fontSize: 48,
-                marginRight: 16,
-                marginBottom: -6,
-            },
-            '& .spinner': {
-                margin: '8px 24px 0 6px',
-            },
-        },
-        text: {
-            alignSelf: 'center',
-            padding: '6px 0',
-            textShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
+const StyledGridWiggler = styled(Grid, {
+    shouldForwardProp: prop => prop !== 'wiggle',
+})(({ wiggle }) => ({
+    '@keyframes wiggle': {
+        from: { transform: 'rotate(-30deg)', transformOrigin: '40% 50%' },
+        to: { transform: 'rotate(15deg)', transformOrigin: '40% 50%' },
+    },
+    ...(!!wiggle
+        ? {
+              animation: 'wiggle 0.3s 20 alternate ease-in-out',
+          }
+        : {}),
+}));
 
-            '& ul, & ol': {
-                [theme.breakpoints.down('sm')]: {
-                    paddingInlineStart: 0,
-                },
-            },
+const StyledGridWithIcon = styled(Grid, {
+    shouldForwardProp: prop => prop !== 'type',
+})(({ theme, type }) => {
+    const _type = paletteIndex[type] ?? 'error';
+    return {
+        borderRadius: '5px',
+        boxShadow: theme.shadows[1],
+        padding: '12px',
+        marginTop: '5px',
+        '&:first-of-type': {
+            marginTop: 0,
         },
-        actionButton: {
-            '& .action': {
-                [theme.breakpoints.up('xs')]: {
-                    marginTop: 6,
-                },
-                [theme.breakpoints.down('sm')]: {
-                    marginRight: 12,
-                },
-            },
-        },
-        dismissButton: {
-            '& .dismiss': {
-                [theme.breakpoints.up('xs')]: {
-                    marginTop: 0,
-                },
-                [theme.breakpoints.down('sm')]: {
-                    marginRight: -12,
-                },
-            },
-        },
-        linked: {
-            '&:hover': {
-                cursor: 'pointer',
-            },
-        },
-        error: {
+
+        '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
-            backgroundColor: theme.palette.error.main,
-            '& a:link, & a:hover, & a:visited': {
-                color: theme.palette.white.main,
-                textDecoration: 'underline',
-            },
-            '& .spinner': {
-                color: theme.palette.error.dark,
-            },
-            '& .icon': {
-                color: theme.palette.error.dark,
-            },
-            '& .dismiss': {
-                color: theme.palette.error.dark,
-            },
-            '& .action': {
-                color: theme.palette.white.main,
-                backgroundColor: theme.palette.error.dark,
-            },
+            textDecoration: 'underline',
         },
-        error_outline: {
+
+        color: theme.palette.white.main,
+        backgroundColor: type !== 'done' ? theme.palette[_type].main : theme.palette[_type].light,
+
+        '& .spinner, & .icon, & button.dismiss': {
+            color: theme.palette[_type].dark,
+        },
+        '& button.action': {
             color: theme.palette.white.main,
-            backgroundColor: theme.palette.error.main,
-            '& a:link, & a:hover, & a:visited': {
-                color: theme.palette.white.main,
-                textDecoration: 'underline',
-            },
-            '& .spinner': {
-                color: theme.palette.error.dark,
-            },
-            '& .icon': {
-                color: theme.palette.error.dark,
-            },
-            '& .dismiss': {
-                color: theme.palette.error.dark,
-            },
-            '& .action': {
-                color: theme.palette.white.main,
-                backgroundColor: theme.palette.error.dark,
-            },
+            backgroundColor: theme.palette[_type].dark,
         },
-        warning: {
-            color: theme.palette.white.main,
-            backgroundColor: theme.palette.warning.main,
-            '& a:link, & a:hover, & a:visited': {
-                color: theme.palette.white.main,
-                textDecoration: 'underline',
-            },
-            '& .spinner': {
-                color: theme.palette.warning.dark,
-            },
-            '& .icon': {
-                color: theme.palette.warning.dark,
-            },
-            '& .dismiss': {
-                color: theme.palette.warning.dark,
-            },
-            '& .action': {
-                color: theme.palette.white.main,
-                backgroundColor: theme.palette.warning.dark,
-            },
+    };
+});
+
+const StyledGridTitle = styled(Grid)(({ theme }) => ({
+    alignSelf: 'center',
+    padding: '6px 0',
+    textShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
+
+    '& ul, & ol': {
+        [theme.breakpoints.down('sm')]: {
+            paddingInlineStart: 0,
         },
-        help: {
-            color: theme.palette.white.main,
-            backgroundColor: theme.palette.secondary.main,
-            '& a:link, & a:hover, & a:visited': {
-                color: theme.palette.white.main,
-                textDecoration: 'underline',
-            },
-            '& .spinner': {
-                color: theme.palette.secondary.dark,
-            },
-            '& .icon': {
-                color: theme.palette.secondary.dark,
-            },
-            '& .dismiss': {
-                color: theme.palette.secondary.dark,
-            },
-            '& .action': {
-                color: theme.palette.white.main,
-                backgroundColor: theme.palette.secondary.dark,
-            },
+    },
+}));
+
+const StyledGridActionButton = styled(Grid)(({ theme }) => ({
+    '& .action': {
+        [theme.breakpoints.up('xs')]: {
+            marginTop: '6px',
         },
-        help_outline: {
-            color: theme.palette.white.main,
-            backgroundColor: theme.palette.secondary.main,
-            '& a:link, & a:hover, & a:visited': {
-                color: theme.palette.white.main,
-                textDecoration: 'underline',
-            },
-            '& .spinner': {
-                color: theme.palette.secondary.dark,
-            },
-            '& .icon': {
-                color: theme.palette.secondary.dark,
-            },
-            '& .dismiss': {
-                color: theme.palette.secondary.dark,
-            },
-            '& .action': {
-                color: theme.palette.white.main,
-                backgroundColor: theme.palette.secondary.dark,
-            },
+        [theme.breakpoints.down('sm')]: {
+            marginRight: '12px',
         },
-        info: {
-            color: theme.palette.white.main,
-            backgroundColor: theme.palette.accent.main,
-            '& a:link, & a:hover, & a:visited': {
-                color: theme.palette.white.main,
-                textDecoration: 'underline',
-            },
-            '& .spinner': {
-                color: theme.palette.accent.dark,
-            },
-            '& .icon': {
-                color: theme.palette.accent.dark,
-            },
-            '& .dismiss': {
-                color: theme.palette.accent.dark,
-            },
-            '& .action': {
-                color: theme.palette.white.main,
-                backgroundColor: theme.palette.accent.dark,
-            },
+    },
+}));
+
+const StyledGridDismissButton = styled(Grid)(({ theme }) => ({
+    '& .dismiss': {
+        [theme.breakpoints.up('xs')]: {
+            marginTop: 0,
         },
-        info_outline: {
-            color: theme.palette.white.main,
-            backgroundColor: theme.palette.accent.main,
-            '& a:link, & a:hover, & a:visited': {
-                color: theme.palette.white.main,
-                textDecoration: 'underline',
-            },
-            '& .spinner': {
-                color: theme.palette.accent.dark,
-            },
-            '& .icon': {
-                color: theme.palette.accent.dark,
-            },
-            '& .dismiss': {
-                color: theme.palette.accent.dark,
-            },
-            '& .action': {
-                color: theme.palette.white.main,
-                backgroundColor: theme.palette.accent.dark,
-            },
+        [theme.breakpoints.down('sm')]: {
+            marginRight: '-12px',
         },
-        done: {
-            color: theme.palette.white.main,
-            backgroundColor: theme.palette.success.light,
-            '& a:link, & a:hover, & a:visited': {
-                color: theme.palette.white.main,
-                textDecoration: 'underline',
-            },
-            '& .spinner': {
-                color: theme.palette.success.dark,
-            },
-            '& .icon': {
-                color: theme.palette.success.dark,
-            },
-            '& .dismiss': {
-                color: theme.palette.success.dark,
-            },
-            '& .action': {
-                color: theme.palette.white.main,
-                backgroundColor: theme.palette.success.dark,
-            },
-        },
-    }),
-    { withTheme: true },
-);
+    },
+}));
+
+export const renderIcon = type => {
+    switch (type) {
+        case 'error':
+            return <Error id="error-icon" className="icon" />;
+        case 'error_outline':
+            return <ErrorOutline id="error-outline-icon" className="icon" />;
+        case 'warning':
+            return <Warning id="warning-icon" className="icon" />;
+        case 'info':
+            return <Info id="info-icon" className="icon" />;
+        case 'info_outline':
+            return <InfoOutlined id="info-outline-icon" className="icon" />;
+        case 'help':
+            return <Help id="help-icon" className="icon" />;
+        case 'help_outline':
+            return <HelpOutline id="help-outline-icon" className="icon" />;
+        case 'done':
+            return <Done id="done-icon" className="icon" />;
+        default:
+            return <Error id="error-icon" className="icon" />;
+    }
+};
 
 export const Alert = ({
     action,
@@ -276,50 +156,40 @@ export const Alert = ({
     type,
     wiggle,
 }) => {
-    const classes = useStyles();
-    const renderIcon = type => {
-        switch (type) {
-            case 'custom':
-                return customIcon;
-            case 'error':
-                return <Error id="error-icon" className="icon" />;
-            case 'error_outline':
-                return <ErrorOutline id="error-outline-icon" className="icon" />;
-            case 'warning':
-                return <Warning id="warning-icon" className="icon" />;
-            case 'info':
-                return <Info id="info-icon" className="icon" />;
-            case 'info_outline':
-                return <InfoOutlined id="info-outline-icon" className="icon" />;
-            case 'help':
-                return <Help id="help-icon" className="icon" />;
-            case 'help_outline':
-                return <HelpOutline id="help-outline-icon" className="icon" />;
-            case 'done':
-                return <Done id="done-icon" className="icon" />;
-            default:
-                return <Error id="error-icon" className="icon" />;
-        }
-    };
-
+    const renderedIcon = type !== 'custom' ? renderIcon(type) : customIcon;
     return (
         <div data-testid="alert" style={{ marginTop: '5px' }}>
-            <Grid
+            <StyledGridWithIcon
                 container
-                className={classNames(classes[!!customIcon ? customType : type], classes.common)}
+                type={!!customIcon ? customType : type}
                 justifyContent="center"
                 alignItems="flex-start"
                 alignContent="center"
                 id={alertId}
                 data-analyticsid={alertId}
                 data-testid={alertId}
-                classes={{ root: classes.root }}
+                sx={{}}
             >
-                <Grid item xs={12} sm className={(action && !disableAlertClick && classes.linked) || ''}>
+                <Grid
+                    item
+                    xs={12}
+                    sm
+                    sx={{
+                        ...(action && !disableAlertClick
+                            ? {
+                                  '&:hover': {
+                                      cursor: 'pointer',
+                                  },
+                              }
+                            : {}),
+                    }}
+                >
                     <Grid container justifyContent="center" alignItems="flex-start" alignContent="center">
-                        <Grid
+                        <StyledGridWiggler
                             item
-                            className={`${classes.icon} alert-icon ${wiggle ? classes.wiggler : ''}`}
+                            sx={{ ...icon }}
+                            className={'alert-icon'}
+                            wiggle={!!wiggle ? 'true' : null}
                             onClick={(!disableAlertClick && action) || undefined}
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
@@ -332,21 +202,21 @@ export const Alert = ({
                                     thickness={3}
                                 />
                             ) : (
-                                renderIcon(type)
+                                renderedIcon
                             )}
-                        </Grid>
-                        <Grid
+                        </StyledGridWiggler>
+                        <StyledGridTitle
                             item
                             xs
-                            className={`${classes.text} alert-text`}
+                            className={'alert-text'}
                             onClick={(!disableAlertClick && action) || undefined}
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
                             <b>{title && `${title} - `}</b>
                             {message}
-                        </Grid>
+                        </StyledGridTitle>
                         {allowDismiss && dismissAction && (
-                            <Grid item className={classes.dismissButton} sx={{ display: { xs: 'block', sm: 'none' } }}>
+                            <StyledGridDismissButton item sx={{ display: { xs: 'block', sm: 'none' } }}>
                                 <IconButton
                                     onClick={dismissAction}
                                     title={dismissTitle}
@@ -358,12 +228,12 @@ export const Alert = ({
                                 >
                                     <Close className="dismiss" />
                                 </IconButton>
-                            </Grid>
+                            </StyledGridDismissButton>
                         )}
                     </Grid>
                 </Grid>
                 {action && actionButtonLabel && (
-                    <Grid item xs sm="auto" className={classes.actionButton}>
+                    <StyledGridActionButton item xs sm="auto">
                         <Button
                             variant="text"
                             children={actionButtonLabel}
@@ -375,10 +245,10 @@ export const Alert = ({
                             data-testid="action-button"
                             disabled={showLoader}
                         />
-                    </Grid>
+                    </StyledGridActionButton>
                 )}
                 {allowDismiss && dismissAction && (
-                    <Grid item className={classes.dismissButton} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <StyledGridDismissButton item sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <IconButton
                             onClick={dismissAction}
                             title={dismissTitle}
@@ -390,9 +260,9 @@ export const Alert = ({
                         >
                             <Close className="dismiss" />
                         </IconButton>
-                    </Grid>
+                    </StyledGridDismissButton>
                 )}
-            </Grid>
+            </StyledGridWithIcon>
         </div>
     );
 };

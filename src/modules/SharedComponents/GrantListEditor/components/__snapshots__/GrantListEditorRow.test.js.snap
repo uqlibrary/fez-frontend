@@ -1,98 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GrantListEditorRow should have a proper style generator 1`] = `
-Object {
-  "hideIcon": Object {
-    "display": "none",
-  },
-  "identifierName": Object {
-    "&:before": Object {
-      "content": "\\"UQ Id: \\"",
-    },
-    "fontSize": "test4",
-    "marginTop": 8,
-  },
-  "identifierSubtitle": Object {
-    "&:before": Object {
-      "content": "\\"UQ Username: \\"",
-    },
-    "fontSize": "test4",
-  },
-  "primary": Object {
-    "fontSize": "test3",
-  },
-  "rowSelected": Object {
-    "backgroundColor": "test1",
-  },
-  "selected": Object {
-    "color": "white !important",
-    "fontWeight": "test2",
-  },
-}
-`;
-
-exports[`GrantListEditorRow should have a proper style generator 2`] = `
-Object {
-  "hideIcon": Object {
-    "display": "none",
-  },
-  "identifierName": Object {
-    "&:before": Object {
-      "content": "\\"UQ Id: \\"",
-    },
-    "fontSize": "test4",
-    "marginTop": 8,
-  },
-  "identifierSubtitle": Object {
-    "&:before": Object {
-      "content": "\\"UQ Username: \\"",
-    },
-    "fontSize": "test4",
-  },
-  "primary": Object {
-    "fontSize": "test3",
-  },
-  "rowSelected": Object {
-    "backgroundColor": undefined,
-  },
-  "selected": Object {
-    "color": "white !important",
-    "fontWeight": "test2",
-  },
-}
-`;
-
-exports[`GrantListEditorRow should have a proper style generator 3`] = `
-Object {
-  "hideIcon": Object {
-    "display": "none",
-  },
-  "identifierName": Object {
-    "&:before": Object {
-      "content": "\\"UQ Id: \\"",
-    },
-    "fontSize": "test4",
-    "marginTop": 8,
-  },
-  "identifierSubtitle": Object {
-    "&:before": Object {
-      "content": "\\"UQ Username: \\"",
-    },
-    "fontSize": "test4",
-  },
-  "primary": Object {
-    "fontSize": "test3",
-  },
-  "rowSelected": Object {
-    "backgroundColor": undefined,
-  },
-  "selected": Object {
-    "color": "white !important",
-    "fontWeight": "test2",
-  },
-}
-`;
-
 exports[`GrantListEditorRow should render default mobile view 1`] = `
 <div>
   <span
@@ -121,7 +28,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               >
                 Agency name
               </p>
@@ -138,7 +45,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
               >
                 1234
               </p>
@@ -155,7 +62,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
               />
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -175,8 +82,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
             class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
             >
               <div
                 aria-label="Move entry up the order"
@@ -234,8 +140,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
             >
               <div
                 aria-label="Remove this entry"
@@ -302,7 +207,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               >
                 Agency name
               </p>
@@ -319,7 +224,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               >
                 1234
               </p>
@@ -336,7 +241,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               />
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -356,8 +261,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
             class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
             >
               <div
                 aria-label="Move entry up the order"
@@ -415,8 +319,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-ym3k52-MuiGrid-root"
             >
               <div
                 aria-label="Remove this entry"
@@ -484,7 +387,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined selected-grant MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
               >
                 testing
               </p>
@@ -501,7 +404,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined selected-grant MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
               >
                 1234
               </p>
@@ -518,7 +421,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined selected-grant MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
               >
                 Government
               </p>
@@ -540,8 +443,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
             class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
             >
               <div
                 aria-label="Move up"
@@ -559,7 +461,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root selected-grant MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="KeyboardArrowUpIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -586,7 +488,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root selected-grant MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="KeyboardArrowDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -599,8 +501,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-ym3k52-MuiGrid-root"
             >
               <div
                 aria-label="Delete hint"
@@ -668,7 +569,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               />
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -683,7 +584,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               >
                 undefined
               </p>
@@ -700,7 +601,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               />
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -720,8 +621,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
             class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
             >
               <div
                 aria-label="Move up"
@@ -779,8 +679,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-ym3k52-MuiGrid-root"
             >
               <div
                 aria-label="Delete hint"
@@ -849,7 +748,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               >
                 Agency name
               </p>
@@ -866,7 +765,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               >
                 1234
               </p>
@@ -883,7 +782,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root undefined  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               />
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -903,8 +802,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
             class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
             >
               <div
                 aria-label="Move entry up the order"
@@ -962,8 +860,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-ym3k52-MuiGrid-root"
             >
               <div
                 aria-label="Remove this entry"
@@ -1030,7 +927,7 @@ exports[`GrantListEditorRow should use width hook 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root Component-primary-6  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
               />
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -1045,7 +942,7 @@ exports[`GrantListEditorRow should use width hook 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root Component-identifierName-7  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
               >
                 undefined
               </p>
@@ -1062,7 +959,7 @@ exports[`GrantListEditorRow should use width hook 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root Component-identifierName-7  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
               />
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
@@ -1082,8 +979,7 @@ exports[`GrantListEditorRow should use width hook 1`] = `
             class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
             >
               <div
                 aria-label="Move entry up the order"
@@ -1141,8 +1037,7 @@ exports[`GrantListEditorRow should use width hook 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-              style="text-align: right;"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
             >
               <div
                 aria-label="Remove this entry"

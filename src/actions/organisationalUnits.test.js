@@ -4,6 +4,8 @@ import * as ExportCommCollActions from './exportCommunitiesCollections';
 import * as viewRecordActions from './viewCommunitiesCollections';
 import * as mockData from 'mock/data';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
+import { loadOrganisationalUnits, loadSuggestedOrganisationalUnitByAuthorId } from './organisationalUnits';
+
 // import { locale } from 'locale';
 
 describe('View communities and collections actions', () => {
@@ -151,6 +153,40 @@ describe('View communities and collections actions', () => {
 
             viewRecordActions.exportCollectionRecords(testRequest);
             expect(exportCommColl).toHaveBeenCalledWith(repositories.routes.COLLECTION_LIST_API(testRequest, 'export'));
+        });
+    });
+
+    describe('coverage', () => {
+        beforeEach(() => {
+            mockActionsStore = setupStoreForActions();
+            mockApi = setupMockAdapter();
+            mockApi.onAny().reply(500);
+        });
+
+        afterEach(() => {
+            mockApi.reset();
+        });
+        it('loadOrganisationalUnits receives failed dispatch event on API error', async () => {
+            await mockActionsStore.dispatch(loadOrganisationalUnits());
+
+            const expectedActions = [
+                actions.ORGANISATIONAL_UNITS_LOADING,
+                actions.APP_ALERT_SHOW,
+                actions.ORGANISATIONAL_UNITS_FAILED,
+            ];
+
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+        it('loadSuggestedOrganisationalUnitByAuthorId receives failed dispatch event on API error', async () => {
+            await mockActionsStore.dispatch(loadSuggestedOrganisationalUnitByAuthorId(1));
+
+            const expectedActions = [
+                actions.SUGGESTED_ORGANISATIONAL_UNITS_LOADING,
+                actions.APP_ALERT_SHOW,
+                actions.SUGGESTED_ORGANISATIONAL_UNITS_FAILED,
+            ];
+
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 });

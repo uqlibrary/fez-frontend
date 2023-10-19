@@ -28,11 +28,6 @@
 //         authorDetails: {
 //             username: 'uqstaff',
 //         },
-//         classes: {
-//             helpIcon: 'helpicon',
-//             tabIndicator: 'tabindicator',
-//             badgeMargin: 'badgemargin',
-//         },
 //         match: {
 //             params: {
 //                 pid: 'UQ:111111',
@@ -133,11 +128,6 @@ describe('AdminContainer component', () => {
     //     const wrapper = getElement(
     //         MemoizedAdminContainer,
     //         {
-    //             classes: {
-    //                 helpIcon: 'helpicon',
-    //                 tabIndicator: 'tabindicator',
-    //                 badgeMargin: 'badgemargin',
-    //             },
     //             authorDetails: {
     //                 username: 'uqstaff',
     //             },

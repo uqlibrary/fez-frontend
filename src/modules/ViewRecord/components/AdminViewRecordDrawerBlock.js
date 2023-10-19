@@ -1,46 +1,20 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import FileCopyOutlinedIcon from '@mui/icons-material/FileCopyOutlined';
 import Typography from '@mui/material/Typography';
-import makeStyles from '@mui/styles/makeStyles';
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 
-const useStyles = makeStyles({
-    contentTitle: {
-        textTransform: 'uppercase',
-        fontWeight: 500,
-    },
-    notesField: {
-        maxHeight: '40vh',
-        overflowY: 'auto',
-    },
-    cursor: {
-        cursor: 'pointer',
-    },
-    contentTitleError: {
-        textTransform: 'uppercase',
-        fontWeight: 500,
-        color: '#d32f2f',
-    },
-    errorIcon: {
-        verticalAlign: 'middle',
-        display: 'inline-flex',
-        paddingRight: 5,
-        paddingBottom: 3,
-        color: '#d32f2f',
-    },
-});
-
 export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard, variant }) => {
-    const classes = useStyles();
     if (block.type === 'header') {
         return (
             <Typography
                 variant={'subtitle2'}
-                className={block.error ? classes.contentTitleError : classes.contentTitle}
+                sx={{
+                    textTransform: 'uppercase',
+                    fontWeight: 500,
+                    ...(block.error ? { color: '#d32f2f' } : {}),
+                }}
                 key={`header-${parentIndex}-${index}`}
                 id={`drawer-${variant}-header-${parentIndex}-${index}`}
                 data-testid={`drawer-${variant}-header-${parentIndex}-${index}`}
@@ -50,7 +24,13 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     <ErrorOutlineOutlinedIcon
                         data-testid="affiliation_error_drawer_indicator"
                         id="affiliation_error_drawer_indicator"
-                        className={classes.errorIcon}
+                        sx={{
+                            verticalAlign: 'middle',
+                            display: 'inline-flex',
+                            paddingRight: '5px',
+                            paddingBottom: '3px',
+                            color: '#d32f2f',
+                        }}
                         fontSize="inherit"
                     />
                 )}
@@ -73,7 +53,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     {block.value}
                     {block.value && block.value !== '-' && (
                         <IconButton
-                            onClick={e => copyToClipboard(e, block.value)}
+                            onClick={e => copyToClipboard?.(e, block.value)}
                             id={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
                             data-analyticsid={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
                             data-testid={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
@@ -90,7 +70,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                 <Typography
                     variant={'body2'}
                     component={'div'}
-                    className={classes.notesField}
+                    sx={{ maxHeight: '40vh', overflowY: 'auto' }}
                     key={`content-scrollable-${parentIndex}-${index}`}
                     id={`drawer-${variant}-content-scrollable-${parentIndex}-${index}`}
                     data-testid={`drawer-${variant}-content-scrollable-${parentIndex}-${index}`}
@@ -123,7 +103,7 @@ AdminRecordDrawerBlock.propTypes = {
     block: PropTypes.object.isRequired,
     parentIndex: PropTypes.number,
     index: PropTypes.number.isRequired,
-    copyToClipboard: PropTypes.func.isRequired,
+    copyToClipboard: PropTypes.func,
     variant: PropTypes.oneOf(['Desktop', 'Mobile']),
 };
 

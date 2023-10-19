@@ -9,7 +9,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -17,7 +17,9 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
         Test
       </h2>
     </div>
-    <div>
+    <div
+      class="MuiBox-root css-3hnp8m"
+    >
       <button
         aria-label="Click for more information"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
@@ -29,7 +31,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-1 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -51,7 +53,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       Test
     </div>
@@ -68,7 +70,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -80,7 +82,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     />
   </div>
 </div>
@@ -95,7 +97,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage without 
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     />
   </div>
 </div>
@@ -110,7 +112,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-3 css-14y2kic-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -119,7 +121,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
       </h2>
     </div>
     <div
-      class="Page-helpIcon-4"
+      class="MuiBox-root css-3hnp8m"
     >
       <button
         aria-label="Click for more information"
@@ -132,7 +134,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-5 css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -154,7 +156,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item Page-layoutCard-2 css-13i4rnv-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       Test
     </div>

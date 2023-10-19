@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from '@mui/styles/withStyles';
+
 import Grid from '@mui/material/Grid';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -20,35 +20,22 @@ const withWidth = () => WrappedComponent => props => {
     const width = useWidth();
     return <WrappedComponent {...props} width={width} />;
 };
-
-export const styles = theme => ({
-    rowSelected: {
-        backgroundColor: ((theme.palette || {}).accent || {}).light,
-    },
+const classes = {
     selected: {
         color: 'white !important',
-        fontWeight: theme.typography.fontWeightMedium,
-    },
-    hideIcon: {
-        display: 'none',
+        fontWeight: 'fontWeightMedium',
     },
     primary: {
-        fontSize: theme.typography.body2.fontSize,
+        fontSize: 'body2.fontSize',
     },
     identifierName: {
-        fontSize: theme.typography.caption.fontSize,
-        marginTop: 8,
+        fontSize: 'caption.fontSize',
+        marginTop: 1,
         '&:before': {
             content: '"UQ Id: "',
         },
     },
-    identifierSubtitle: {
-        fontSize: theme.typography.caption.fontSize,
-        '&:before': {
-            content: '"UQ Username: "',
-        },
-    },
-});
+};
 
 export class GrantListEditorRow extends PureComponent {
     static propTypes = {
@@ -63,7 +50,6 @@ export class GrantListEditorRow extends PureComponent {
         onEdit: PropTypes.func,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        classes: PropTypes.object,
         width: PropTypes.string,
     };
 
@@ -125,12 +111,12 @@ export class GrantListEditorRow extends PureComponent {
             style={{ padding: 0 }}
             disableTypography
             primary={
-                <Typography noWrap variant="body2" classes={{ root: primaryClass }}>
+                <Typography noWrap variant="body2" sx={{ ...primaryClass }}>
                     {primaryText}
                 </Typography>
             }
             secondary={
-                <Typography noWrap variant="caption" classes={{ root: secondaryClass }}>
+                <Typography noWrap variant="caption" sx={{ ...secondaryClass }}>
                     {secondaryText}
                 </Typography>
             }
@@ -138,26 +124,31 @@ export class GrantListEditorRow extends PureComponent {
     );
 
     getGrantRowText = selectedClass => {
-        const { grant, classes, width } = this.props;
+        const { grant, width } = this.props;
         return (
             <Grid container spacing={0} alignContent={'center'} alignItems={'stretch'}>
                 <Grid item xs={12} sm={5}>
-                    {this.getListItemTypoGraphy(grant.grantAgencyName, '', `${classes.primary} ${selectedClass}`, '')}
+                    {this.getListItemTypoGraphy(
+                        grant.grantAgencyName,
+                        '',
+                        { ...classes.primary, ...selectedClass },
+                        {},
+                    )}
                 </Grid>
                 <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {this.getListItemTypoGraphy(
                         `${grant.grantId}`,
                         '',
-                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                        '',
+                        { ...(width === 'xs' ? classes.identifierName : classes.primary), ...selectedClass },
+                        {},
                     )}
                 </Grid>
                 <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {this.getListItemTypoGraphy(
                         `${ORG_TYPES_LOOKUP[grant.grantAgencyType] ? ORG_TYPES_LOOKUP[grant.grantAgencyType] : ''}`,
                         '',
-                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                        '',
+                        { ...(width === 'xs' ? classes.identifierName : classes.primary), ...selectedClass },
+                        {},
                     )}
                 </Grid>
             </Grid>
@@ -174,12 +165,12 @@ export class GrantListEditorRow extends PureComponent {
             selectHint,
             editButtonId,
         } = this.props.locale;
-        const { grant, canMoveDown, canMoveUp, disabled, classes, canEdit, index } = this.props;
+        const { grant, canMoveDown, canMoveUp, disabled, canEdit, index } = this.props;
         const ariaLabel =
             selectHint && selectHint.indexOf('[name]') > -1
                 ? selectHint.replace('[name]', grant.nameAsPublished)
                 : null;
-        const selectedClass = grant.selected ? classes.selected : '';
+        const selectedClass = grant.selected ? classes.selected : {};
         return (
             <Fragment>
                 <ConfirmDialogBox
@@ -197,12 +188,7 @@ export class GrantListEditorRow extends PureComponent {
                                 style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}
                             >
                                 <Grid container spacing={0}>
-                                    <Grid
-                                        item
-                                        xs={8}
-                                        style={{ textAlign: 'right' }}
-                                        sx={{ display: { xs: 'none', md: 'block' } }}
-                                    >
+                                    <Grid item xs={8} sx={{ textAlign: 'right', display: { xs: 'none', md: 'block' } }}>
                                         <Tooltip
                                             title={moveUpHint}
                                             disableFocusListener={disabled || !canMoveUp}
@@ -217,7 +203,7 @@ export class GrantListEditorRow extends PureComponent {
                                                     size="large"
                                                     data-testid={`grant-list-move-up=${this.props.index}`}
                                                 >
-                                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
+                                                    <KeyboardArrowUp sx={{ ...selectedClass }} />
                                                 </IconButton>
                                             </div>
                                         </Tooltip>
@@ -235,7 +221,7 @@ export class GrantListEditorRow extends PureComponent {
                                                     size="large"
                                                     data-testid={`grant-list-move-down=${this.props.index}`}
                                                 >
-                                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
+                                                    <KeyboardArrowDown sx={{ ...selectedClass }} />
                                                 </IconButton>
                                             </div>
                                         </Tooltip>
@@ -264,7 +250,7 @@ export class GrantListEditorRow extends PureComponent {
                                     <Grid
                                         item
                                         xs={this.props.width === 'sm' || this.props.width === 'xs' ? 12 : 4}
-                                        style={{ textAlign: 'right' }}
+                                        sx={{ textAlign: 'right' }}
                                     >
                                         <Tooltip
                                             title={deleteHint}
@@ -294,4 +280,4 @@ export class GrantListEditorRow extends PureComponent {
     }
 }
 
-export default withStyles(styles)(withWidth()(GrantListEditorRow));
+export default withWidth()(GrantListEditorRow);

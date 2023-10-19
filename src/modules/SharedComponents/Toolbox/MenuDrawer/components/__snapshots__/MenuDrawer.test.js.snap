@@ -14,7 +14,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
     aria-hidden="true"
   />
   <div
-    class="MuiDrawer-root MuiDrawer-modal MuiModal-root css-1u2w381-MuiModal-root-MuiDrawer-root"
+    class="MuiDrawer-root MuiDrawer-modal MuiModal-root css-fgtof9-MuiModal-root-MuiDrawer-root"
     id="menudrawer"
     role="presentation"
   >
@@ -32,18 +32,18 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       tabindex="-1"
     >
       <nav
-        class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+        class="MuiList-root MuiList-padding css-fv1two-MuiList-root"
         id="mainMenu"
         tabindex="-1"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-vmtq44-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-1rv48rz-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1soofh4-MuiGrid-root"
           >
             <a
-              class="noHover makeStyles-externalLink-1 makeStyles-externalLink-3"
+              class="noHover css-1oqhn84"
               data-analyticsid="main-menu-logo-link"
               data-testid="main-menu-logo-link"
               href="test"
@@ -72,7 +72,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                 data-testid="KeyboardArrowLeftIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -97,7 +97,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+              class="MuiListItemText-root MuiListItemText-multiline css-df9giy-MuiListItemText-root"
               id="menu-itemText-0"
             >
               <span
@@ -129,7 +129,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+              class="MuiListItemText-root MuiListItemText-multiline css-df9giy-MuiListItemText-root"
               id="menu-itemText-2"
             >
               <span
@@ -154,10 +154,12 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
         id="afterMenuDrawer"
         tabindex="-1"
       />
-      <div>
+      <div
+        class="MuiBox-root css-n5zwdn"
+      >
         CRICOS Provider No: 
         <a
-          class="makeStyles-externalLink-1 makeStyles-externalLink-4"
+          class=" css-1oqhn84"
           data-analyticsid="cricos-link"
           data-testid="cricos-link"
           href="http://www.uq.edu.au/about/cricos-link"
@@ -185,25 +187,25 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
 >
   <div>
     <div
-      class="MuiDrawer-root MuiDrawer-docked css-7ik032-MuiDrawer-docked"
+      class="MuiDrawer-root MuiDrawer-docked css-wg9x4s-MuiDrawer-docked"
       id="menudrawer"
     >
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
       >
         <nav
-          class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root MuiList-padding css-fv1two-MuiList-root"
           id="mainMenu"
           tabindex="-1"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-vmtq44-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-1rv48rz-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1soofh4-MuiGrid-root"
             >
               <a
-                class="noHover makeStyles-externalLink-5 makeStyles-externalLink-7"
+                class="noHover css-1oqhn84"
                 data-analyticsid="main-menu-logo-link"
                 data-testid="main-menu-logo-link"
                 href="test"
@@ -232,7 +234,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
                   data-testid="KeyboardArrowLeftIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -249,6 +251,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           </div>
           <div
             aria-label="Skip navigation"
+            class="css-16sk7k9"
             id="skipNav"
             tabindex="1"
             type="button"
@@ -274,7 +277,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+                class="MuiListItemText-root MuiListItemText-multiline css-df9giy-MuiListItemText-root"
                 id="menu-itemText-0"
               >
                 <span
@@ -306,7 +309,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+                class="MuiListItemText-root MuiListItemText-multiline css-df9giy-MuiListItemText-root"
                 id="menu-itemText-2"
               >
                 <span
@@ -331,10 +334,12 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           id="afterMenuDrawer"
           tabindex="-1"
         />
-        <div>
+        <div
+          class="MuiBox-root css-n5zwdn"
+        >
           CRICOS Provider No: 
           <a
-            class="makeStyles-externalLink-5 makeStyles-externalLink-8"
+            class=" css-1oqhn84"
             data-analyticsid="cricos-link"
             data-testid="cricos-link"
             href="http://www.uq.edu.au/about/cricos-link"

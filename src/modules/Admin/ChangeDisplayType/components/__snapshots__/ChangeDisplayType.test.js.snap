@@ -12,7 +12,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       />
       <div
-        class="MuiGrid-root MuiGrid-item Page-layoutCard-88 css-13i4rnv-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -31,6 +31,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               class="publicationCitation"
             >
               <div
+                class="css-0"
                 data-testid="publication-citation-parent-UQ:284280"
                 id="publication-citation-parent-UQ:284280"
               >
@@ -47,7 +48,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-93 css-1idn90j-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
                         <div
                           class="citationContent citationResearchReport"
@@ -55,24 +56,18 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Memmott, Paul
-                              
                             </span>
                             , 
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-1"
                             >
-                              
                               Birdsall-Jones, Christina
-                              
                             </span>
                             , 
                              and 
@@ -80,11 +75,8 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                               class="citationAuthor"
                               data-testid="rek-author-2"
                             >
-                              
                               Greenop, Kelly
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -128,7 +120,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-91 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
               />
             </div>
           </div>
@@ -136,12 +128,12 @@ exports[`ChangeDisplayType form should display confirmation box after successful
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-103 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
@@ -179,7 +171,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root makeStyles-root-109 MuiGrid-container makeStyles-done-125 makeStyles-common-110 css-1k6h6af-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
                 data-analyticsid="change-display-type-submit-status"
                 data-testid="change-display-type-submit-status"
                 id="change-display-type-submit-status"
@@ -191,7 +183,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                     class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item makeStyles-icon-113 alert-icon  css-13i4rnv-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -207,7 +199,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-114 alert-text css-1vd824g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                     >
                       <b>
                         Success - 
@@ -289,7 +281,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       />
       <div
-        class="MuiGrid-root MuiGrid-item Page-layoutCard-25 css-13i4rnv-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -308,6 +300,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
               class="publicationCitation"
             >
               <div
+                class="css-0"
                 data-testid="publication-citation-parent-UQ:284280"
                 id="publication-citation-parent-UQ:284280"
               >
@@ -324,7 +317,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-30 css-1idn90j-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
                         <div
                           class="citationContent citationResearchReport"
@@ -332,24 +325,18 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Memmott, Paul
-                              
                             </span>
                             , 
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-1"
                             >
-                              
                               Birdsall-Jones, Christina
-                              
                             </span>
                             , 
                              and 
@@ -357,11 +344,8 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                               class="citationAuthor"
                               data-testid="rek-author-2"
                             >
-                              
                               Greenop, Kelly
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -405,7 +389,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-28 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
               />
             </div>
           </div>
@@ -413,12 +397,12 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-40 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
@@ -510,7 +494,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       />
       <div
-        class="MuiGrid-root MuiGrid-item Page-layoutCard-46 css-13i4rnv-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -529,6 +513,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
               class="publicationCitation"
             >
               <div
+                class="css-0"
                 data-testid="publication-citation-parent-UQ:284280"
                 id="publication-citation-parent-UQ:284280"
               >
@@ -545,7 +530,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-51 css-1idn90j-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
                         <div
                           class="citationContent citationResearchReport"
@@ -553,24 +538,18 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                           <span
                             class="citationAuthors"
                           >
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-0"
                             >
-                              
                               Memmott, Paul
-                              
                             </span>
                             , 
-                            
                             <span
                               class="citationAuthor"
                               data-testid="rek-author-1"
                             >
-                              
                               Birdsall-Jones, Christina
-                              
                             </span>
                             , 
                              and 
@@ -578,11 +557,8 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                               class="citationAuthor"
                               data-testid="rek-author-2"
                             >
-                              
                               Greenop, Kelly
-                              
                             </span>
-                            
                              
                           </span>
                           <span
@@ -626,7 +602,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-49 css-9mgopn-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
               />
             </div>
           </div>
@@ -634,12 +610,12 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-61 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
             >
               <div
-                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"

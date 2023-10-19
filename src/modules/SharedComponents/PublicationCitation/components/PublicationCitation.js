@@ -1,14 +1,17 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+import { withTheme } from 'helpers/withTheme';
+
 import { parseHtmlToJSX } from 'helpers/general';
 import { Link } from 'react-router-dom';
 
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
 
 import { locale } from 'locale';
 import { publicationTypes, pathConfig } from 'config';
@@ -49,86 +52,65 @@ import { default as imageConfig } from 'config/imageGalleryConfig';
 
 import { getWhiteListed } from 'modules/SharedComponents/ImageGallery/Utils';
 
-export const styles = theme => ({
-    divider: {
-        marginBottom: 12,
-        marginTop: 12,
-        clear: 'both',
+const StyledGridActionButtons = styled(Grid)(({ theme }) => ({
+    [theme.breakpoints.down('md')]: {
+        marginTop: '12px',
     },
-    citationTitle: {
-        overflowWrap: 'break-word !important',
-        lineHeight: 1,
-        letterSpacing: 0,
-        marginBottom: 6,
-        marginRight: 12,
+}));
+
+const StyledPublicationImageWrapper = styled('div')(({ theme }) => ({
+    display: 'inline-block',
+    marginRight: '10px',
+    marginBottom: '15px ',
+    aspectRatio: 1,
+    minWidth: 0,
+    minHeight: 0,
+
+    [theme.breakpoints.down('md')]: {
+        width: '100%',
+        height: '100%',
+        float: 'none',
+        display: 'block',
+        minWidth: '100%',
+        minHeight: '100%',
     },
-    citationText: {
-        ...theme.typography.caption,
-        color: theme.typography.body2.color,
-        marginBottom: 6,
-    },
-    citationCounts: {
-        whiteSpace: 'nowrap',
-    },
-    buttonMargin: {
-        [theme.breakpoints.down('md')]: {
-            marginTop: 12,
-        },
-    },
-    contentIndicatorTitle: {
-        fontWeight: 400,
-        marginRight: '0.5ex',
-    },
-    publicationImage: {
-        display: 'inline-block',
-        marginRight: 10,
-        marginBottom: 15,
-        aspectRatio: 1,
+    [theme.breakpoints.up('sm')]: {
+        width: '100px !important',
+        height: '100px',
+
+        float: 'left',
+        marginRight: '10px',
         minWidth: 0,
         minHeight: 0,
-
-        [theme.breakpoints.down('md')]: {
-            width: '50vw',
-            height: '50vw',
-            float: 'none',
-            display: 'block',
-            margin: 'auto auto 15px',
-            minWidth: '50vw',
-            minHeight: '50vw',
-        },
-        [theme.breakpoints.up('sm')]: {
-            width: '100px !important',
-            height: 100,
-
-            float: 'left',
-            marginRight: 10,
-            minWidth: 0,
-            minHeight: 0,
-        },
-        [theme.breakpoints.up('md')]: {
-            width: '125px !important',
-            height: 125,
-            minHeight: 125,
-
-            float: 'left',
-        },
-        [theme.breakpoints.up('lg')]: {
-            width: '130px !important',
-            height: 130,
-            minHeight: 130,
-            float: 'left',
-        },
     },
-    citationContainer: {
+    [theme.breakpoints.up('md')]: {
+        width: '125px !important',
+        height: '125px',
+        minHeight: '125px',
+
+        float: 'left',
+    },
+    [theme.breakpoints.up('lg')]: {
+        width: '130px !important',
+        height: '130px',
+        minHeight: '130px',
+        float: 'left',
+    },
+}));
+
+const StyledCitationContainer = styled('div', {
+    shouldForwardProp: prop => prop !== 'renderThumbnails',
+})(({ theme, renderThumbnails }) => ({
+    ...(renderThumbnails && {
         display: 'inline-block',
         float: 'left',
         [theme.breakpoints.down('md')]: {
             width: '100%',
-            marginBottom: 10,
+            marginBottom: '10px',
         },
         [theme.breakpoints.up('sm')]: {
             width: 'calc(100% - 130px)',
-            minWidth: 280,
+            minWidth: '280px',
         },
         [theme.breakpoints.up('md')]: {
             width: 'calc(100% - 135px)',
@@ -136,46 +118,42 @@ export const styles = theme => ({
         [theme.breakpoints.up('lg')]: {
             width: 'calc(100% - 140px)',
         },
-    },
-    imageListItemRoot: {
+    }),
+}));
+
+const classes = {
+    imageListItemRoot: theme => ({
         [theme.breakpoints.down('lg')]: {
             width: '100% !important',
         },
-    },
-    imageListItemImage: {
-        [theme.breakpoints.down('md')]: {
-            width: '50vw !important',
-            height: '50vw !important',
-            minWidth: '50vw',
-            minHeight: '50vw',
-        },
+    }),
+    imageListItemImage: theme => ({
         [theme.breakpoints.up('sm')]: {
             width: '100px !important',
             height: '100px !important',
-            minHeight: 100,
-            minWidth: 100,
+            minHeight: '100px',
+            minWidth: '100px',
         },
         [theme.breakpoints.up('md')]: {
             width: '125px !important',
             height: '125px !important',
-            minHeight: 125,
-            minWidth: 125,
+            minHeight: '125px',
+            minWidth: '125px',
         },
         [theme.breakpoints.up('lg')]: {
-            width: '130px !important',
+            width: '130px !important ',
             height: '130px !important',
-            minHeight: 130,
-            minWidth: 130,
+            minHeight: '130px',
+            minWidth: '130px',
         },
-    },
-});
+    }),
+};
 
 export class PublicationCitation extends PureComponent {
     static propTypes = {
         actions: PropTypes.object.isRequired,
         citationStyle: PropTypes.string,
         className: PropTypes.string,
-        classes: PropTypes.object,
         customActions: PropTypes.array,
         hideCitationCounts: PropTypes.bool,
         hideCitationText: PropTypes.bool,
@@ -198,6 +176,7 @@ export class PublicationCitation extends PureComponent {
         showUnpublishedBufferFields: PropTypes.bool,
         showImageThumbnails: PropTypes.bool,
         security: PropTypes.object,
+        theme: PropTypes.any,
     };
     static defaultProps = {
         citationStyle: 'notset',
@@ -273,10 +252,9 @@ export class PublicationCitation extends PureComponent {
         );
     };
 
-    renderPublicationImage = (publication, security) => {
+    renderPublicationImage = (theme, publication, security) => {
         return (
-            <div
-                className={this.props.classes.publicationImage}
+            <StyledPublicationImageWrapper
                 id={`publication-image-parent-${publication.rek_pid}`}
                 data-testid={`publication-image-parent-${publication.rek_pid}`}
             >
@@ -287,14 +265,14 @@ export class PublicationCitation extends PureComponent {
                     itemWidth={imageConfig.thumbnailImage.defaultWidth}
                     itemHeight={imageConfig.thumbnailImage.defaultHeight}
                     classes={{
-                        imageListItem: { root: this.props.classes.imageListItemRoot },
-                        imageListItemImage: this.props.classes.imageListItemImage,
+                        imageListItem: { root: classes.imageListItemRoot(theme) },
+                        imageListItemImage: classes.imageListItemImage(theme),
                     }}
                     security={security}
                     component="div"
                     withTitle={false}
                 />
-            </div>
+            </StyledPublicationImageWrapper>
         );
     };
 
@@ -363,7 +341,7 @@ export class PublicationCitation extends PureComponent {
                                   {!!publicationsLoading && (
                                       <CircularProgress
                                           size={12}
-                                          style={{ marginLeft: 12, marginTop: -2 }}
+                                          sx={{ marginLeft: '12px', marginTop: '-2px' }}
                                           thickness={3}
                                           color={'secondary'}
                                           variant={'indeterminate'}
@@ -383,7 +361,7 @@ export class PublicationCitation extends PureComponent {
                                   {!!publicationsLoading && (
                                       <CircularProgress
                                           size={12}
-                                          style={{ marginLeft: 12, marginTop: -2 }}
+                                          sx={{ marginLeft: '12px', marginTop: '-2px' }}
                                           thickness={3}
                                           color={'secondary'}
                                           variant={'indeterminate'}
@@ -426,7 +404,6 @@ export class PublicationCitation extends PureComponent {
 
     render() {
         const {
-            classes,
             customActions,
             hideCitationCounts,
             hideCitationText,
@@ -446,24 +423,36 @@ export class PublicationCitation extends PureComponent {
             isPublicationDeleted,
             showImageThumbnails,
             security,
+            theme,
         } = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
         const renderThumbnails = this.showPublicationImage(showImageThumbnails);
         return (
             <div className="publicationCitation">
-                {renderThumbnails && this.renderPublicationImage(publication, security)}
-                <div
+                {renderThumbnails && this.renderPublicationImage(theme, publication, security)}
+                <StyledCitationContainer
                     id={`publication-citation-parent-${publication.rek_pid}`}
                     data-testid={`publication-citation-parent-${publication.rek_pid}`}
-                    className={renderThumbnails ? classes.citationContainer : null}
+                    renderThumbnails={renderThumbnails}
                 >
                     <Grid container spacing={0}>
                         <Grid item xs>
                             <Grid container spacing={0}>
                                 {!hideTitle ? (
                                     <Grid item xs style={{ minWidth: 1 }}>
-                                        <Typography variant="h6" component="h6" className={classes.citationTitle}>
+                                        <Typography
+                                            variant="h6"
+                                            component="h6"
+                                            lineHeight={1}
+                                            letterSpacing={0}
+                                            mb={'6px'}
+                                            mr={'12px'}
+                                            sx={{
+                                                overflowWrap: 'break-word !important',
+                                            }}
+                                            className={'PublicationCitation-citationTitle'}
+                                        >
                                             {this.renderTitle()}
                                         </Typography>
                                     </Grid>
@@ -520,7 +509,15 @@ export class PublicationCitation extends PureComponent {
                                     </Grid>
                                 )}
                                 {!hideCitationText && (
-                                    <Grid item xs={12} className={classes.citationText}>
+                                    <Grid
+                                        item
+                                        xs={12}
+                                        sx={theme => ({
+                                            ...theme.typography.caption,
+                                            color: theme.typography.body2.color,
+                                            marginBottom: '6px',
+                                        })}
+                                    >
                                         {this.renderCitation(publication.rek_display_type)}
                                     </Grid>
                                 )}
@@ -536,8 +533,7 @@ export class PublicationCitation extends PureComponent {
                                                 <Grid
                                                     item
                                                     xs="auto"
-                                                    className={classes.citationCounts}
-                                                    style={{ flexGrow: 1 }}
+                                                    sx={{ '&.MuiGrid-root': { flexGrow: 1, whiteSpace: 'nowrap' } }}
                                                 >
                                                     <CitationCounts
                                                         publication={publication}
@@ -578,9 +574,9 @@ export class PublicationCitation extends PureComponent {
                                         id="rek-content-indicator"
                                         data-testid="rek-content-indicator"
                                     >
-                                        <span className={classes.contentIndicatorTitle}>
+                                        <Box sx={{ fontWeight: 400, marginRight: '0.5px' }}>
                                             {locale.components.contentIndicators.label}:
-                                        </span>
+                                        </Box>
                                         {publication.fez_record_search_key_content_indicator
                                             .map(item => item.rek_content_indicator_lookup)
                                             .join(locale.components.contentIndicators.divider)}
@@ -589,17 +585,17 @@ export class PublicationCitation extends PureComponent {
                             )}
                     </Grid>
                     {(showDefaultActions || customActions) && (
-                        <Grid container spacing={1} className={classes.buttonMargin}>
+                        <StyledGridActionButtons container spacing={1}>
                             <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
 
                             {this.renderActions(showDefaultActions ? this.defaultActions : customActions)}
-                        </Grid>
+                        </StyledGridActionButtons>
                     )}
-                </div>
-                <Divider className={classes.divider} />
+                </StyledCitationContainer>
+                <Divider sx={{ marginBottom: '12px', marginTop: '12px', clear: 'both' }} />
             </div>
         );
     }
 }
 
-export default withStyles(styles, { withTheme: true })(PublicationCitation);
+export default withTheme()(PublicationCitation);

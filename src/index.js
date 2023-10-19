@@ -3,7 +3,7 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
@@ -54,7 +54,8 @@ if (process.env.ENABLE_LOG) {
 }
 
 const render = () => {
-    ReactDOM.render(
+    const root = createRoot(document.getElementById('react-root'));
+    root.render(
         <AppErrorBoundary>
             <Provider store={store}>
                 <LocalizationProvider dateAdapter={MomentUtils}>
@@ -62,7 +63,6 @@ const render = () => {
                 </LocalizationProvider>
             </Provider>
         </AppErrorBoundary>,
-        document.getElementById('react-root'),
     );
 };
 

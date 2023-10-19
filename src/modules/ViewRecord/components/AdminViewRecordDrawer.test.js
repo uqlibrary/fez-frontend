@@ -8,25 +8,26 @@ import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
 
 const txt = locale.pages.viewRecord;
-const setup = (props = {}, renderer = render) => {
+const setup = (testProps = {}, renderer = render) => {
     const content =
-        props.content ??
+        testProps.content ??
         createDefaultDrawerDescriptorObject(
             txt.adminRecordData.drawer.sectionTitles,
             recordWithAuthorAffiliates,
             fields.viewRecord.adminViewRecordDrawerFields,
         );
-    const obj = {
+    const props = {
         content: content,
         handleDrawerToggle: jest.fn(),
         open: false,
         mobileOpen: false,
-        ...props,
+        ...testProps,
     };
+
     return renderer(
         <WithRouter>
             <WithReduxStore>
-                <AdminViewRecordDrawer {...obj} />
+                <AdminViewRecordDrawer {...props} />
             </WithReduxStore>
         </WithRouter>,
     );
