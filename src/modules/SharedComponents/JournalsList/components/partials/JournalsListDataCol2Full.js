@@ -23,7 +23,6 @@ const JournalsListDataCol2Full = ({ journal, index }) => {
                 return (
                     <Grid
                         key={`${item.key}-${index}`}
-                        item
                         style={{
                             height: 43,
                             overflow: 'hidden',

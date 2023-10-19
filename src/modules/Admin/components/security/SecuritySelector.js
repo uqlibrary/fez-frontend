@@ -10,13 +10,13 @@ import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescripti
 export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName, securitySelectorId }) => (
     <Grid container spacing={1}>
         {!!text.description && (
-            <Grid item xs={12}>
+            <Grid xs={12}>
                 <Typography variant="body2" component="p">
                     {text.description}
                 </Typography>
             </Grid>
         )}
-        <Grid item xs={12}>
+        <Grid xs={12}>
             <Field
                 component={PolicyDropdown}
                 name={fieldName}

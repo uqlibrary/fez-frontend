@@ -276,14 +276,14 @@ export class PartialDateForm extends PureComponent {
         const isError = this.errors.date || this.props.hasError || '';
         return (
             <Grid container spacing={0} padding={0} id={this.props.partialDateFormId}>
-                <Grid item xs={12}>
+                <Grid xs={12}>
                     <InputLabel error={!!isError} shrink required={this.props.required}>
                         {this.props.floatingTitle}
                     </InputLabel>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid xs={12}>
                     <Grid container spacing={2} padding={0} style={{ marginTop: -12 }}>
-                        <Grid item xs={4}>
+                        <Grid xs={4}>
                             <TextField
                                 variant="standard"
                                 name="day"
@@ -307,7 +307,7 @@ export class PartialDateForm extends PureComponent {
                             />
                             {isError && <FormHelperText error>{isError}</FormHelperText>}
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid xs={4}>
                             <Select
                                 variant="standard"
                                 style={{ width: '100%' }}
@@ -342,7 +342,7 @@ export class PartialDateForm extends PureComponent {
                                 {renderMonths}
                             </Select>
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid xs={4}>
                             <TextField
                                 variant="standard"
                                 name="year"

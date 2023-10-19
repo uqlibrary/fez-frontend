@@ -63,7 +63,7 @@ const StyledResponsiveWrapper = styled('div')(({ theme }) => ({
             display: 'block',
             marginBlockEnd: '12px',
 
-            '& > div:first-child': {
+            '& > div:first-of-type': {
                 display: 'none',
             },
         },

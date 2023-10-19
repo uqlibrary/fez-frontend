@@ -336,7 +336,7 @@ export const AttachedFiles = ({
     };
 
     return (
-        <Grid item xs={12}>
+        <Grid xs={12}>
             <StandardCard title={locale.title} subCard>
                 {/* eslint-disable-next-line camelcase */}
                 {!!record.fez_record_search_key_advisory_statement && (
@@ -360,16 +360,13 @@ export const AttachedFiles = ({
                         spacing={2}
                         sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                     >
-                        <Grid item xs={1}>
-                            &nbsp;
-                        </Grid>
-                        <Grid item sm={3} xs={6}>
+                        <Grid xs={1}>&nbsp;</Grid>
+                        <Grid sm={3} xs={6}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.fileName}
                             </Typography>
                         </Grid>
                         <Grid
-                            item
                             md={isAdminEditing ? 3 : 5}
                             sm={isAdminEditing ? 3 : 7}
                             sx={{ display: { xs: 'none', sm: 'block' } }}
@@ -378,13 +375,13 @@ export const AttachedFiles = ({
                                 {locale.description}
                             </Typography>
                         </Grid>
-                        <Grid item md={2} sx={{ display: { xs: 'none', md: 'block' } }}>
+                        <Grid md={2} sx={{ display: { xs: 'none', md: 'block' } }}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.size}
                             </Typography>
                         </Grid>
                         {isAdminEditing && (
-                            <Grid item md={3} sm={4} sx={{ textAlign: 'center' }}>
+                            <Grid md={3} sm={4} sx={{ textAlign: 'center' }}>
                                 <Typography variant="caption" gutterBottom>
                                     {locale.embargoDateLabel || 'Embargo date'}
                                 </Typography>
@@ -415,14 +412,14 @@ export const AttachedFiles = ({
                                     </Grid>
                                 </Grid>
                                 <Grid container direction="row" alignItems="center" spacing={2}>
-                                    <Grid item xs={1} sx={{ textAlign: 'center' }}>
+                                    <Grid xs={1} sx={{ textAlign: 'center' }}>
                                         <FileIcon
                                             {...item.iconProps}
                                             showPreview={showPreview}
                                             id={`file-icon-${index}`}
                                         />
                                     </Grid>
-                                    <Grid item sm={3} xs={6} sx={{ ...classes.dataWrapper }}>
+                                    <Grid sm={3} xs={6} sx={{ ...classes.dataWrapper }}>
                                         {isAdminEditing ? (
                                             <EditableFileName
                                                 {...item}
@@ -450,7 +447,6 @@ export const AttachedFiles = ({
                                         )}
                                     </Grid>
                                     <Grid
-                                        item
                                         md={isAdminEditing ? 3 : 5}
                                         sm={isAdminEditing ? 3 : 7}
                                         sx={{ display: { xs: 'none', sm: 'block' }, ...classes.dataWrapper }}
@@ -473,19 +469,15 @@ export const AttachedFiles = ({
                                             </Typography>
                                         )}
                                     </Grid>
-                                    <Grid
-                                        item
-                                        md={2}
-                                        sx={{ display: { xs: 'none', md: 'block' }, ...classes.dataWrapper }}
-                                    >
+                                    <Grid md={2} sx={{ display: { xs: 'none', md: 'block' }, ...classes.dataWrapper }}>
                                         <Typography variant="body2" noWrap>
                                             {item.calculatedSize}
                                         </Typography>
                                     </Grid>
                                     {isAdminEditing && (
-                                        <Grid item md={3} sm={4}>
+                                        <Grid md={3} sm={4}>
                                             <Grid container wrap="nowrap">
-                                                <Grid item xs={3}>
+                                                <Grid xs={3}>
                                                     <Box
                                                         sx={{
                                                             display: { xs: 'none', md: 'block' },
@@ -508,7 +500,6 @@ export const AttachedFiles = ({
                                                     </Box>
                                                 </Grid>
                                                 <Grid
-                                                    item
                                                     xs={7}
                                                     id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
                                                     sx={{ marginLeft: 1, flexGrow: 1 }}
@@ -527,7 +518,7 @@ export const AttachedFiles = ({
                                                         />
                                                     )}
                                                 </Grid>
-                                                <Grid item xs={2} sx={{ marginTop: '-10px', textAlign: 'right' }}>
+                                                <Grid xs={2} sx={{ marginTop: '-10px', textAlign: 'right' }}>
                                                     <Tooltip title={deleteHint}>
                                                         <span>
                                                             <IconButton
@@ -547,7 +538,7 @@ export const AttachedFiles = ({
                                         </Grid>
                                     )}
                                     {!isAdminEditing && (
-                                        <Grid item md={3} sm={4} sx={{ textAlign: 'right' }}>
+                                        <Grid md={3} sm={4} sx={{ textAlign: 'right' }}>
                                             <Box sx={{ whiteSpace: 'nowrap' }}>
                                                 <Box component={'span'} paddingRight={1}>
                                                     <FileAvStateIcon
@@ -578,8 +569,8 @@ export const AttachedFiles = ({
                                             justifyContent={'flex-end'}
                                             sx={{ marginTop: '4px' }}
                                         >
-                                            <Grid item xs={6} />
-                                            <Grid item xs={6}>
+                                            <Grid xs={6} />
+                                            <Grid xs={6}>
                                                 <Typography sx={{ color: mui1theme.palette.warning.main }}>
                                                     <WarningIcon
                                                         fontSize={'small'}
@@ -618,7 +609,7 @@ export const AttachedFiles = ({
                 )}
                 {/* istanbul ignore next*/
                 errorMessage.length > 0 && (
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                         <Alert alertId="alert-files" title={errorTitle} message={errorMessage} type="error" />
                     </Grid>
                 )}

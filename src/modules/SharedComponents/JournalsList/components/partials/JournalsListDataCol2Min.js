@@ -24,7 +24,6 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                     return (
                         <Grid
                             key={`${item.key}-${index}`}
-                            item
                             sx={{
                                 width: item.size,
                                 height: '43px',

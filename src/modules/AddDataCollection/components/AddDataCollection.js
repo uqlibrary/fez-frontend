@@ -118,7 +118,7 @@ export default class AddDataCollection extends Component {
         const saveConfirmationLocale = { ...locale.pages.addDataset.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <Grid container spacing={3}>
-                <Grid item xs={12}>
+                <Grid xs={12}>
                     {this.props.newRecordFileUploadingOrIssueError && (
                         <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />
                     )}
@@ -172,10 +172,10 @@ export default class AddDataCollection extends Component {
                             txt={txt.cancelWorkflowConfirmation}
                         />
                         <Grid container spacing={3} className={'DataCollection'}>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard title={txt.information.agreement.title}>
                                     <Grid container spacing={3} padding={0}>
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={DepositAgreementField}
                                                 depositAgreement={txt.information.agreement.text}
@@ -189,10 +189,10 @@ export default class AddDataCollection extends Component {
                                     </Grid>
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard title={txt.information.dataset.title}>
                                     <Grid container spacing={3} padding={0}>
-                                        <Grid item xs={12} sm={12}>
+                                        <Grid xs={12} sm={12}>
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
@@ -206,7 +206,7 @@ export default class AddDataCollection extends Component {
                                                 validate={[validation.required]}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={12}>
+                                        <Grid xs={12} sm={12}>
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
@@ -220,7 +220,7 @@ export default class AddDataCollection extends Component {
                                                 validate={[validation.required]}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={6}>
+                                        <Grid xs={12} sm={6}>
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
@@ -232,7 +232,7 @@ export default class AddDataCollection extends Component {
                                                 validate={[validation.required]}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={6}>
+                                        <Grid xs={12} sm={6}>
                                             <Field
                                                 id="contact-name-id-auto-complete"
                                                 component={AuthorIdField}
@@ -245,7 +245,7 @@ export default class AddDataCollection extends Component {
                                                 authorIdFieldId="rek-contributor-id"
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={12}>
+                                        <Grid xs={12} sm={12}>
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
@@ -257,7 +257,7 @@ export default class AddDataCollection extends Component {
                                                 validate={[validation.required, validation.email]}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={12}>
+                                        <Grid xs={12} sm={12}>
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
@@ -269,7 +269,7 @@ export default class AddDataCollection extends Component {
                                                 validate={[validation.doi]}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={6}>
+                                        <Grid xs={12} sm={6}>
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
@@ -280,7 +280,7 @@ export default class AddDataCollection extends Component {
                                                 {...txt.information.dataset.fieldLabels.publisher}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={6}>
+                                        <Grid xs={12} sm={6}>
                                             <Field
                                                 component={PartialDateField}
                                                 disabled={this.props.submitting}
@@ -296,7 +296,7 @@ export default class AddDataCollection extends Component {
                                     </Grid>
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard
                                     title={txt.information.dataset.fieldLabels.fieldOfResearchCodes.title}
                                     help={txtFoR.help}
@@ -315,7 +315,7 @@ export default class AddDataCollection extends Component {
                                     />
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12} className={'Creators'}>
+                            <Grid xs={12} className={'Creators'}>
                                 <StandardCard title={txt.information.creator.title}>
                                     <Field
                                         component={ContributorsEditorField}
@@ -330,13 +330,13 @@ export default class AddDataCollection extends Component {
                                     />
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard
                                     title={txt.information.accessAndLicensing.title}
                                     help={getLicenceHelp(txt.information.accessAndLicensing.help)}
                                 >
                                     <Grid container spacing={3} padding={0}>
-                                        <Grid item xs={12} sm={12} md={4}>
+                                        <Grid xs={12} sm={12} md={4}>
                                             <Field
                                                 component={NewGenericSelectField}
                                                 id="data-collection-access-selector"
@@ -349,7 +349,7 @@ export default class AddDataCollection extends Component {
                                                 {...txt.information.accessAndLicensing.fieldLabels.accessConditions}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={12} md={4}>
+                                        <Grid xs={12} sm={12} md={4}>
                                             <Field
                                                 component={NewGenericSelectField}
                                                 genericSelectFieldId="rek-license"
@@ -362,7 +362,7 @@ export default class AddDataCollection extends Component {
                                                 {...selectFields.license}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={12} md={4}>
+                                        <Grid xs={12} sm={12} md={4}>
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
@@ -376,10 +376,10 @@ export default class AddDataCollection extends Component {
                                     </Grid>
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard title={txt.information.project.title}>
                                     <Grid container spacing={3} padding={0}>
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
@@ -394,7 +394,7 @@ export default class AddDataCollection extends Component {
                                                 validate={[validation.required]}
                                             />
                                         </Grid>
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
@@ -410,7 +410,7 @@ export default class AddDataCollection extends Component {
                                             />
                                         </Grid>
 
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={NewListEditorField}
                                                 listEditorId="rek-grant-agency"
@@ -424,7 +424,7 @@ export default class AddDataCollection extends Component {
                                                 disabled={this.props.submitting}
                                             />
                                         </Grid>
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={NewListEditorField}
                                                 listEditorId="rek-grant-id"
@@ -438,10 +438,10 @@ export default class AddDataCollection extends Component {
                                     </Grid>
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard title={txt.information.optionalDatasetDetails.title}>
                                     <Grid container spacing={3} padding={0}>
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={NewListEditorField}
                                                 listEditorId="rek-type-of-data"
@@ -455,10 +455,10 @@ export default class AddDataCollection extends Component {
                                                 disabled={this.props.submitting}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
+                                        <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                             <Divider />
                                         </Grid>
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={NewListEditorField}
                                                 listEditorId="rek-software-required"
@@ -472,10 +472,10 @@ export default class AddDataCollection extends Component {
                                                 disabled={this.props.submitting}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
+                                        <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                             <Divider />
                                         </Grid>
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={NewListEditorField}
                                                 listEditorId="rek-keywords"
@@ -487,10 +487,10 @@ export default class AddDataCollection extends Component {
                                                 ListEditorForm={KeywordsForm}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
+                                        <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                             <Divider />
                                         </Grid>
-                                        <Grid item xs={12} sm={6}>
+                                        <Grid xs={12} sm={6}>
                                             <Field
                                                 component={PartialDateField}
                                                 partialDateFieldId="rek-start-date"
@@ -507,7 +507,7 @@ export default class AddDataCollection extends Component {
                                                 hasError={dateError}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={6}>
+                                        <Grid xs={12} sm={6}>
                                             <Field
                                                 component={PartialDateField}
                                                 partialDateFieldId="rek-end-date"
@@ -527,7 +527,7 @@ export default class AddDataCollection extends Component {
                                     </Grid>
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard
                                     title={
                                         txt.information.optionalDatasetDetails.fieldLabels.geographicCoordinates.label
@@ -546,7 +546,7 @@ export default class AddDataCollection extends Component {
                                     />
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard
                                     title={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets.title}
                                 >
@@ -561,10 +561,10 @@ export default class AddDataCollection extends Component {
                                     />
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard title={txt.information.additionalNotes.title}>
                                     <Grid container spacing={2} padding={0}>
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={TextField}
                                                 name="fez_record_search_key_additional_notes.rek_additional_notes"
@@ -576,7 +576,7 @@ export default class AddDataCollection extends Component {
                                                 {...txt.information.additionalNotes.fieldLabels.notes}
                                             />
                                         </Grid>
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={TextField}
                                                 name="rek_link"
@@ -591,7 +591,7 @@ export default class AddDataCollection extends Component {
                                     </Grid>
                                 </StandardCard>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard title={txt.fileUpload.title}>
                                     <Field
                                         name="files"
@@ -605,14 +605,14 @@ export default class AddDataCollection extends Component {
                             </Grid>
 
                             {alertProps && !this.props.submitSucceeded && (
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <Alert {...alertProps} />
                                 </Grid>
                             )}
                         </Grid>
                         <Grid container spacing={2}>
-                            <Grid item xs={false} sm />
-                            <Grid item xs={12} sm="auto">
+                            <Grid xs={false} sm />
+                            <Grid xs={12} sm="auto">
                                 <Button
                                     variant="contained"
                                     fullWidth
@@ -623,7 +623,7 @@ export default class AddDataCollection extends Component {
                                     color={'default'}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm="auto">
+                            <Grid xs={12} sm="auto">
                                 <Button
                                     id="submit-data-collection"
                                     variant="contained"
