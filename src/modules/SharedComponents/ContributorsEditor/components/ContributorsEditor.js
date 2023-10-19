@@ -93,7 +93,6 @@ export class ContributorsEditor extends PureComponent {
     };
 
     addContributor = contributor => {
-        console.log('Adding a contributor', contributor);
         const index =
             this.state.contributorIndexSelectedToEdit !== null
                 ? this.state.contributorIndexSelectedToEdit

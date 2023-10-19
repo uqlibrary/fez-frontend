@@ -9,7 +9,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -134,7 +133,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -148,7 +146,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-112 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               id="test-add"
@@ -166,7 +164,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-112 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               id="test-cancel"
@@ -200,7 +198,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-114 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -254,10 +252,10 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-3n6t5b-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-113 ContributorRowHeader-paddingRightEdit-115 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -298,24 +296,24 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this contributor (Researcher, J) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-120 makeStyles-rowSelected-123 makeStyles-contributorLinked-129 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1cm6cr6-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-119 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root makeStyles-selected-124 css-12l3zot-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
@@ -339,12 +337,12 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-126 makeStyles-selected-124 MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     Researcher, J
                   </p>
                   <span
-                    class="MuiTypography-root makeStyles-selected-124 MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -359,19 +357,19 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-identifierName-127 makeStyles-selected-124 MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1fw85uj-MuiTypography-root"
                   >
                     Professor J Researcher
                   </p>
                   <span
-                    class="MuiTypography-root makeStyles-identifierSubtitle-128 makeStyles-selected-124 MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1xtrhxz-MuiTypography-root"
                   >
                     The University of Queensland (uqresearcher - 410)
                   </span>
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-130"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -387,7 +385,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root makeStyles-selected-124 MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -412,7 +410,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root makeStyles-selected-124 MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
                     data-testid="DeleteIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -443,9 +441,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -478,7 +474,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-133 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -532,10 +528,10 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-564e8j-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-132 ContributorRowHeader-paddingRight-135 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -576,20 +572,20 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this contributor (test 1) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-139 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-138 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -616,7 +612,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-145  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     test 1
                   </p>
@@ -628,7 +624,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-149"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -687,17 +683,17 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
           </li>
           <li
             aria-label="Select this contributor (test 2) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-139 makeStyles-rowSelected-142 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-138 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root makeStyles-selected-143 css-12l3zot-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
@@ -720,19 +716,19 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-145 makeStyles-selected-143 MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
                   >
                     test 2
                   </p>
                   <span
-                    class="MuiTypography-root makeStyles-selected-143 MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-149"
+                class="css-rxds9v"
                 data-testid="test-list-row-1-actions"
                 id="test-list-row-1-actions"
               >
@@ -748,7 +744,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root makeStyles-selected-143 MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="KeyboardArrowUpIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -773,7 +769,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root makeStyles-selected-143 MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="DeleteIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -805,7 +801,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -908,7 +903,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -922,7 +916,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-247 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -938,7 +932,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-247 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -970,7 +964,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-249 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -1024,10 +1018,10 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-3n6t5b-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-248 ContributorRowHeader-paddingRightEdit-250 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder records
                   </span>
@@ -1068,20 +1062,20 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this record (test) to assign it to you"
-            class="MuiListItem-root makeStyles-listItem-255 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-254 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1108,7 +1102,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-261  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     test
                   </p>
@@ -1120,7 +1114,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-265"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -1204,13 +1198,13 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
           </li>
           <li
             aria-label="Select this record (Test 2) to assign it to you"
-            class="MuiListItem-root makeStyles-listItem-255 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-254 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1237,7 +1231,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-261  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     Test 2
                   </p>
@@ -1249,7 +1243,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-265"
+                class="css-rxds9v"
                 data-testid="test-list-row-1-actions"
                 id="test-list-row-1-actions"
               >
@@ -1358,13 +1352,13 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
           </li>
           <li
             aria-label="Select this record (EditedContributorAuthorIdNOTInTheList) to assign it to you"
-            class="MuiListItem-root makeStyles-listItem-255 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-2"
             id="test-list-row-2"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-254 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1391,7 +1385,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-261  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     EditedContributorAuthorIdNOTInTheList
                   </p>
@@ -1403,7 +1397,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-265"
+                class="css-rxds9v"
                 data-testid="test-list-row-2-actions"
                 id="test-list-row-2-actions"
               >
@@ -1500,9 +1494,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -1535,7 +1527,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-305 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -1576,10 +1568,10 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-3n6t5b-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-304 ContributorRowHeader-paddingRightEdit-306 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -1620,20 +1612,20 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this contributor (test 1) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-311 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-310 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1660,7 +1652,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-317  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     test 1
                   </p>
@@ -1672,7 +1664,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-321"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -1756,13 +1748,13 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           </li>
           <li
             aria-label="Select this contributor (test 2) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-311 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-310 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1789,7 +1781,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-317  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     test 2
                   </p>
@@ -1801,7 +1793,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-321"
+                class="css-rxds9v"
                 data-testid="test-list-row-1-actions"
                 id="test-list-row-1-actions"
               >
@@ -1898,9 +1890,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -1933,7 +1923,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-229 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -1974,10 +1964,10 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-564e8j-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-228 ContributorRowHeader-paddingRight-231 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -2018,20 +2008,20 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this contributor (test 2) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-235 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-234 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2058,7 +2048,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-241  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     test 2
                   </p>
@@ -2070,7 +2060,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-245"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -2129,13 +2119,13 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
           </li>
           <li
             aria-label="Select this contributor (test 1) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-235 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-234 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2162,7 +2152,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-241  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     test 1
                   </p>
@@ -2174,7 +2164,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-245"
+                class="css-rxds9v"
                 data-testid="test-list-row-1-actions"
                 id="test-list-row-1-actions"
               >
@@ -2246,9 +2236,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -2281,7 +2269,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-210 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -2322,10 +2310,10 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-564e8j-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-209 ContributorRowHeader-paddingRight-212 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -2366,20 +2354,20 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this contributor (test 2) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-216 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-215 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2406,7 +2394,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-222  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     test 2
                   </p>
@@ -2418,7 +2406,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-226"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -2477,13 +2465,13 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
           </li>
           <li
             aria-label="Select this contributor (test 1) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-216 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-215 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2510,7 +2498,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-222  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     test 1
                   </p>
@@ -2522,7 +2510,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-226"
+                class="css-rxds9v"
                 data-testid="test-list-row-1-actions"
                 id="test-list-row-1-actions"
               >
@@ -2596,7 +2584,6 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
     <div
       class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ig9rso-MuiToolbar-root"
     >
-      
       <div
         class="MuiBox-root css-15k1nh5"
       />
@@ -2678,8 +2665,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
-                          style="align-self: center;"
+                          class="MuiGrid-root MuiGrid-item css-i1djz7-MuiGrid-root"
                         >
                           <svg
                             aria-hidden="true"
@@ -2804,7 +2790,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -2907,7 +2892,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -2921,7 +2905,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-363 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -2937,7 +2921,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-363 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -2969,7 +2953,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-365 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -3010,10 +2994,10 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-3n6t5b-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-364 ContributorRowHeader-infinitePaddingRight-368 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -3054,20 +3038,20 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list scroll MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-18zj4z3-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this contributor (1) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3094,7 +3078,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     1
                   </p>
@@ -3106,7 +3090,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -3190,13 +3174,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (2) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3223,7 +3207,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     2
                   </p>
@@ -3235,7 +3219,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-1-actions"
                 id="test-list-row-1-actions"
               >
@@ -3344,13 +3328,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (3) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-2"
             id="test-list-row-2"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3377,7 +3361,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     3
                   </p>
@@ -3389,7 +3373,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-2-actions"
                 id="test-list-row-2-actions"
               >
@@ -3498,13 +3482,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (4) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-3"
             id="test-list-row-3"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3531,7 +3515,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     4
                   </p>
@@ -3543,7 +3527,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-3-actions"
                 id="test-list-row-3-actions"
               >
@@ -3652,13 +3636,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (5) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-4"
             id="test-list-row-4"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3685,7 +3669,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     5
                   </p>
@@ -3697,7 +3681,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-4-actions"
                 id="test-list-row-4-actions"
               >
@@ -3806,13 +3790,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (6) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-5"
             id="test-list-row-5"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3839,7 +3823,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     6
                   </p>
@@ -3851,7 +3835,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-5-actions"
                 id="test-list-row-5-actions"
               >
@@ -3960,13 +3944,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (7) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-6"
             id="test-list-row-6"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3993,7 +3977,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     7
                   </p>
@@ -4005,7 +3989,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-6-actions"
                 id="test-list-row-6-actions"
               >
@@ -4114,13 +4098,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (8) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-7"
             id="test-list-row-7"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4147,7 +4131,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     8
                   </p>
@@ -4159,7 +4143,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-7-actions"
                 id="test-list-row-7-actions"
               >
@@ -4268,13 +4252,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (9) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-8"
             id="test-list-row-8"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4301,7 +4285,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     9
                   </p>
@@ -4313,7 +4297,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-8-actions"
                 id="test-list-row-8-actions"
               >
@@ -4422,13 +4406,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (10) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-9"
             id="test-list-row-9"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4455,7 +4439,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     10
                   </p>
@@ -4467,7 +4451,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-9-actions"
                 id="test-list-row-9-actions"
               >
@@ -4576,13 +4560,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (11) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-10"
             id="test-list-row-10"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4609,7 +4593,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     11
                   </p>
@@ -4621,7 +4605,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-10-actions"
                 id="test-list-row-10-actions"
               >
@@ -4730,13 +4714,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (12) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-11"
             id="test-list-row-11"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4763,7 +4747,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     12
                   </p>
@@ -4775,7 +4759,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-11-actions"
                 id="test-list-row-11-actions"
               >
@@ -4884,13 +4868,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (3) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-12"
             id="test-list-row-12"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4917,7 +4901,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     3
                   </p>
@@ -4929,7 +4913,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-12-actions"
                 id="test-list-row-12-actions"
               >
@@ -5038,13 +5022,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (14) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-13"
             id="test-list-row-13"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5071,7 +5055,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     14
                   </p>
@@ -5083,7 +5067,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-13-actions"
                 id="test-list-row-13-actions"
               >
@@ -5192,13 +5176,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (15) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-14"
             id="test-list-row-14"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5225,7 +5209,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     15
                   </p>
@@ -5237,7 +5221,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-14-actions"
                 id="test-list-row-14-actions"
               >
@@ -5346,13 +5330,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (16) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-15"
             id="test-list-row-15"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5379,7 +5363,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     16
                   </p>
@@ -5391,7 +5375,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-15-actions"
                 id="test-list-row-15-actions"
               >
@@ -5500,13 +5484,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (17) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-16"
             id="test-list-row-16"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5533,7 +5517,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     17
                   </p>
@@ -5545,7 +5529,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-16-actions"
                 id="test-list-row-16-actions"
               >
@@ -5654,13 +5638,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (18) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-17"
             id="test-list-row-17"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5687,7 +5671,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     18
                   </p>
@@ -5699,7 +5683,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-17-actions"
                 id="test-list-row-17-actions"
               >
@@ -5808,13 +5792,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (19) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-18"
             id="test-list-row-18"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5841,7 +5825,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     19
                   </p>
@@ -5853,7 +5837,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-18-actions"
                 id="test-list-row-18-actions"
               >
@@ -5962,13 +5946,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (20) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-19"
             id="test-list-row-19"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5995,7 +5979,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     20
                   </p>
@@ -6007,7 +5991,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-19-actions"
                 id="test-list-row-19-actions"
               >
@@ -6116,13 +6100,13 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </li>
           <li
             aria-label="Select this contributor (21) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-371 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-20"
             id="test-list-row-20"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-370 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6149,7 +6133,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root makeStyles-primary-377  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     21
                   </p>
@@ -6161,7 +6145,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-381"
+                class="css-rxds9v"
                 data-testid="test-list-row-20-actions"
                 id="test-list-row-20-actions"
               >
@@ -6258,9 +6242,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      
-    </div>
+    />
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
@@ -6279,7 +6261,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-13 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -6320,10 +6302,10 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-3n6t5b-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-12 ContributorRowHeader-paddingRightEdit-14 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder records
                   </span>
@@ -6364,20 +6346,20 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this record (undefined) to assign it to you"
-            class="MuiListItem-root makeStyles-listItem-19 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-18 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6411,7 +6393,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-29"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -6484,7 +6466,6 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -6587,7 +6568,6 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -6601,7 +6581,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-11 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -6617,7 +6597,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-11 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -6644,7 +6624,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -6747,7 +6726,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -6761,7 +6739,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-6 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -6777,7 +6755,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-6 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -6805,7 +6783,6 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
     <div
       class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ig9rso-MuiToolbar-root"
     >
-      
       <div
         class="MuiBox-root css-15k1nh5"
       />
@@ -6887,8 +6864,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                         class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
                       >
                         <div
-                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-zoodok-MuiGrid2-root"
-                          style="align-self: center;"
+                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-dgvogl-MuiGrid2-root"
                         >
                           <svg
                             aria-hidden="true"
@@ -7014,7 +6990,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
     <div
       class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ig9rso-MuiToolbar-root"
     >
-      
       <div
         class="MuiBox-root css-15k1nh5"
       />
@@ -7096,8 +7071,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                         class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
                       >
                         <div
-                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-zoodok-MuiGrid2-root"
-                          style="align-self: center;"
+                          class="MuiGrid2-root MuiGrid2-direction-xs-row css-dgvogl-MuiGrid2-root"
                         >
                           <svg
                             aria-hidden="true"
@@ -7226,8 +7200,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                       class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
                     >
                       <div
-                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-zoodok-MuiGrid2-root"
-                        style="align-self: center;"
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-dgvogl-MuiGrid2-root"
                       >
                         <svg
                           aria-hidden="true"
@@ -7243,15 +7216,15 @@ exports[`ContributorsEditor renders full component for admin user with record af
                         </svg>
                       </div>
                       <div
-                        class="MuiGrid2-root MuiGrid2-direction-xs-row makeStyles-linked-9 css-27y2fm-MuiGrid2-root"
+                        class="MuiGrid2-root MuiGrid2-direction-xs-row css-bouc6a-MuiGrid2-root"
                       >
                         <p
-                          class="MuiTypography-root MuiTypography-body2 makeStyles-linked-9 css-1omq3q2-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-5rzrlx-MuiTypography-root"
                           data-testid="test-list-row-0-name-as-published"
                           id="test-list-row-0-name-as-published"
                         />
                         <span
-                          class="MuiTypography-root MuiTypography-caption makeStyles-linked-9 css-1e4ju4k-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-13fvs2x-MuiTypography-root"
                         >
                           First  listed contributor
                         </span>
@@ -7263,7 +7236,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                     style="box-sizing: border-box; font-family: inherit; font-weight: inherit; vertical-align: top;"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 makeStyles-problem-10 css-1omq3q2-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1sdh29w-MuiTypography-root"
                       data-testid="test-list-row-0-uq-identifiers"
                       id="test-list-row-0-uq-identifiers"
                     />
@@ -7395,7 +7368,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -7554,7 +7526,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                     />
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -7568,7 +7539,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-4 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7595,7 +7566,6 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -7656,7 +7626,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-1 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7683,7 +7653,6 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -7784,7 +7753,6 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
                     />
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -7798,7 +7766,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-2 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7825,7 +7793,6 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -7905,7 +7872,6 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
                     value=""
                   />
                 </div>
-                
               </div>
             </div>
           </div>
@@ -7919,7 +7885,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-3 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7946,7 +7912,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -8007,7 +7972,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-405 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8039,7 +8004,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-407 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -8080,10 +8045,10 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-564e8j-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-406 ContributorRowHeader-paddingRight-409 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -8124,20 +8089,20 @@ exports[`ContributorsEditor should get contributors from props and input value s
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this contributor (undefined) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-413 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-412 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -8171,7 +8136,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-423"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -8230,13 +8195,13 @@ exports[`ContributorsEditor should get contributors from props and input value s
           </li>
           <li
             aria-label="Select this contributor (undefined) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-413 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-412 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -8270,7 +8235,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-423"
+                class="css-rxds9v"
                 data-testid="test-list-row-1-actions"
                 id="test-list-row-1-actions"
               >
@@ -8343,7 +8308,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -8404,7 +8368,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-385 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8436,7 +8400,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             class="MuiListItem-container css-oyakqy-MuiListItem-container"
           >
             <div
-              class="MuiListItem-root ContributorRowHeader-header-387 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
             >
               <div
                 class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
@@ -8477,10 +8441,10 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
               >
                 <div
-                  class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                  class="MuiListItemText-root css-564e8j-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-386 ContributorRowHeader-paddingRight-389 css-1vklb8l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -8521,20 +8485,20 @@ exports[`ContributorsEditor should get contributors from props and input value s
           </li>
         </ul>
         <ul
-          class="MuiList-root ContributorList list  MuiList-padding css-h4y409-MuiList-root"
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
           data-analyticsid="test-list"
           data-testid="test-list"
           id="test-list"
         >
           <li
             aria-label="Select this contributor (undefined) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-393 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-392 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -8568,7 +8532,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-403"
+                class="css-rxds9v"
                 data-testid="test-list-row-0-actions"
                 id="test-list-row-0-actions"
               >
@@ -8627,13 +8591,13 @@ exports[`ContributorsEditor should get contributors from props and input value s
           </li>
           <li
             aria-label="Select this contributor (undefined) to assign it as you"
-            class="MuiListItem-root makeStyles-listItem-393 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container makeStyles-listContainer-392 css-11lq3yg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -8667,7 +8631,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 </div>
               </div>
               <div
-                class="makeStyles-actionsContainer-403"
+                class="css-rxds9v"
                 data-testid="test-list-row-1-actions"
                 id="test-list-row-1-actions"
               >
@@ -8731,25 +8695,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
 </div>
 `;
 
-exports[`ContributorsEditor should have a proper style generator 1`] = `
-Object {
-  "list": Object {
-    "@media (max-width:899.95px)": Object {
-      "overflowY": "scroll",
-    },
-    "margin": "0",
-    "marginBottom": 16,
-    "maxHeight": 225,
-    "overflowX": "hidden",
-    "overflowY": "hidden",
-    "width": "100%",
-  },
-  "scroll": Object {
-    "overflowY": "scroll",
-  },
-}
-`;
-
 exports[`ContributorsEditor should render error as html 1`] = `
 <div>
   <div
@@ -8759,7 +8704,6 @@ exports[`ContributorsEditor should render error as html 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -8820,7 +8764,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-425 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8854,7 +8798,6 @@ exports[`ContributorsEditor should render error as one child 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -8915,7 +8858,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-426 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8947,7 +8890,6 @@ exports[`ContributorsEditor should show validation error 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
     >
-      
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
       >
@@ -9008,7 +8950,7 @@ exports[`ContributorsEditor should show validation error 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth makeStyles-contributorFormButton-383 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
