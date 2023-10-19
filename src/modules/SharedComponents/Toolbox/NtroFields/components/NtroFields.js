@@ -471,7 +471,6 @@ export default class NtroFields extends React.PureComponent {
                         </StandardCard>
                     </Grid>
                 )}
-                {console.log('Can edit?', this.props.canEdit)}
                 {!this.props.hideGrants && (
                     <Grid item xs={12}>
                         <StandardCard title={grantEditor.title}>

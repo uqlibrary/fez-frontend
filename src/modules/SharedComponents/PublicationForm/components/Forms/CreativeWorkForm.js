@@ -152,7 +152,6 @@ export default class CreativeWorkForm extends Component {
                             component={ContributorsEditorField}
                             canEdit
                             forceSelectable
-                            hideUqIDFields
                             contributorEditorId="authors"
                             disabled={this.props.submitting}
                             isNtro={this.props.isNtro}
@@ -164,7 +163,6 @@ export default class CreativeWorkForm extends Component {
                         />
                     </StandardCard>
                 </Grid>
-                {console.log('This.props.ntro', this.props.isNtro)}
                 {this.props.isNtro && (
                     <NtroFields
                         canEdit

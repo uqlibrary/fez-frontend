@@ -119,13 +119,16 @@ export const ContributorRow = ({
     const width = useWidth();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
-    const _onDelete = React.useCallback(() => {
-        /* istanbul ignore else */
-        if (!disabled && onDelete) {
-            onDelete(contributor, index);
-        }
+    const _onDelete = React.useCallback(
+        () => {
+            /* istanbul ignore else */
+            if (!disabled && onDelete) {
+                onDelete(contributor, index);
+            }
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [contributor, index]);
+        [contributor, index],
+    );
 
     const _onMoveUp = React.useCallback(
         e => {
@@ -326,7 +329,11 @@ export const ContributorRow = ({
                         >
                             <IconButton
                                 aria-label={deleteHint}
-                                onClick={showConfirmation}
+                                onClick={e => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    showConfirmation();
+                                }}
                                 disabled={disabled || hideDelete}
                                 id={`${contributorRowId}-delete-${index}`}
                                 data-analyticsid={`${contributorRowId}-${index}-delete`}

@@ -163,7 +163,7 @@ export default class BookChapterForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             canEdit
-                            forceSelectable
+                            // forceSelectable
                             hideUqIDFields
                             contributorEditorId="editors"
                             name="editors"

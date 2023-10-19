@@ -303,7 +303,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
         >
           <li
             aria-label="Select this contributor (Researcher, J) to assign it as you"
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1jmcy1d-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1cm6cr6-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
@@ -313,7 +313,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
@@ -337,12 +337,12 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
                     Researcher, J
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -357,12 +357,12 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1823mk6-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1fw85uj-MuiTypography-root"
                   >
                     Professor J Researcher
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1ufh3nt-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1xtrhxz-MuiTypography-root"
                   >
                     The University of Queensland (uqresearcher - 410)
                   </span>
@@ -385,7 +385,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -410,7 +410,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
                     data-testid="DeleteIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
