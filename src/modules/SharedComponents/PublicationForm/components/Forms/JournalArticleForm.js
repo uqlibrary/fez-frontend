@@ -111,6 +111,7 @@ export default class JournalArticleForm extends Component {
                                     component={ContributorsEditorField}
                                     canEdit
                                     forceSelectable
+                                    maintainSelected
                                     hideUqIDFields
                                     contributorEditorId="authors"
                                     showContributorAssignment

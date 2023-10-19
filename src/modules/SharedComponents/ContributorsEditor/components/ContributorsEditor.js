@@ -37,9 +37,11 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
         record: PropTypes.object,
+        maintainSelected: PropTypes.bool,
     };
 
     static defaultProps = {
+        maintainSelected: false,
         canEdit: false,
         forceSelectable: false,
         editMode: false,
@@ -218,11 +220,11 @@ export class ContributorsEditor extends PureComponent {
     };
 
     selectContributor = index => {
-        this.setState(() => ({
-            // contributors: prevState.contributors.map((contributor, itemIndex) => ({
-            //     ...contributor,
-            //     // selected: index === itemIndex,
-            // })),
+        this.setState(prevState => ({
+            contributors: prevState.contributors.map((contributor, itemIndex) => ({
+                ...contributor,
+                ...(!this.props.maintainSelected ? { selected: index === itemIndex } : {}),
+            })),
             contributorIndexSelectedToEdit: index,
         }));
     };

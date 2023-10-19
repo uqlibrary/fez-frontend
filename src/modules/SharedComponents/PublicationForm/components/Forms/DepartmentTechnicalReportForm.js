@@ -128,6 +128,7 @@ export default class DepartmentTechnicalReportForm extends Component {
                             canEdit
                             forceSelectable
                             hideUqIDFields
+                            maintainSelected
                             contributorEditorId="authors"
                             name="authors"
                             locale={txt.authors.field}

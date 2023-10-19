@@ -115,6 +115,7 @@ export default class AudioDocumentForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             canEdit
+                            maintainSelected
                             forceSelectable
                             hideUqIDFields
                             contributorEditorId="creators"
@@ -131,6 +132,7 @@ export default class AudioDocumentForm extends Component {
                         <Field
                             component={ContributorsEditorField}
                             canEdit
+                            maintainSelected
                             forceSelectable
                             hideUqIDFields
                             contributorEditorId="contributors"

@@ -169,6 +169,7 @@ export default class ConferencePaperForm extends Component {
                             canEdit
                             forceSelectable
                             hideUqIDFields
+                            maintainSelected
                             contributorEditorId="authors"
                             name="authors"
                             locale={txt.authors.field}

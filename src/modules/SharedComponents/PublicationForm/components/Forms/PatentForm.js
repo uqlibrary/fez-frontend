@@ -100,6 +100,7 @@ export default class PatentForm extends Component {
                             canEdit
                             forceSelectable
                             hideUqIDFields
+                            maintainSelected
                             contributorEditorId="authors"
                             showContributorAssignment
                             required
