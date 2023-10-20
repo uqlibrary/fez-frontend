@@ -60,7 +60,7 @@ export const FavouriteJournals = () => {
             <Grid container spacing={3} padding={0}>
                 <Grid xs>
                     <Grid container spacing={2} padding={0}>
-                        <Grid xs sm md={12}>
+                        <Grid xs={12} flexGrow={1}>
                             <StandardCard noHeader>
                                 <Grid container spacing={2} padding={0}>
                                     <FavouriteJournalsList
