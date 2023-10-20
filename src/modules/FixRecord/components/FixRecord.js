@@ -207,6 +207,7 @@ export default class FixRecord extends PureComponent {
                                                         component={TextField}
                                                         disabled={this.props.submitting}
                                                         name="comments"
+                                                        textFieldId="comments"
                                                         type="text"
                                                         fullWidth
                                                         multiline
@@ -219,6 +220,7 @@ export default class FixRecord extends PureComponent {
                                                         component={TextField}
                                                         disabled={this.props.submitting}
                                                         name="rek_link"
+                                                        textFieldId="rek_link"
                                                         type="text"
                                                         fullWidth
                                                         label={txtFixForm.comments.fieldLabels.url}

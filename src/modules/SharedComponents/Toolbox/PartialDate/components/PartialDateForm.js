@@ -283,7 +283,7 @@ export class PartialDateForm extends PureComponent {
                 </Grid>
                 <Grid xs={12}>
                     <Grid container spacing={2} padding={0} style={{ marginTop: -12 }} flexWrap={'nowrap'}>
-                        <Grid xs={4}>
+                        <Grid xs>
                             <TextField
                                 variant="standard"
                                 name="day"
@@ -307,7 +307,7 @@ export class PartialDateForm extends PureComponent {
                             />
                             {isError && <FormHelperText error>{isError}</FormHelperText>}
                         </Grid>
-                        <Grid xs={4} flexGrow={1} flexShrink={0}>
+                        <Grid xs>
                             <Select
                                 variant="standard"
                                 id={`${this.props.partialDateFormId}-month`}
@@ -342,7 +342,7 @@ export class PartialDateForm extends PureComponent {
                                 {renderMonths}
                             </Select>
                         </Grid>
-                        <Grid xs={4}>
+                        <Grid xs>
                             <TextField
                                 variant="standard"
                                 name="year"
