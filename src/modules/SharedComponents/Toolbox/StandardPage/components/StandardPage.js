@@ -60,7 +60,7 @@ export class Page extends Component {
                     </Grid>
                 )}
                 {help && (
-                    <Box sx={{ position: 'relative', right: '10px' }}>
+                    <Box sx={{ position: 'absolute', right: '30px' }}>
                         <HelpIcon {...help} />
                     </Box>
                 )}
