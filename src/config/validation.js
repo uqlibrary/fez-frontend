@@ -289,8 +289,13 @@ export const isValidDate = date => {
     }
 };
 
-export const isDateEqualOrGreaterThan = (date, anotherDate) =>
+export const isDateSameOrAfter = (date, anotherDate) =>
     moment(date).isSameOrAfter(moment(anotherDate).format('YYYY-MM-DD'));
+
+export const isDateSameOrBefore = (date, anotherDate) =>
+    moment(date).isSameOrBefore(moment(anotherDate).format('YYYY-MM-DD'));
+
+export const isDateInBetween = (date, from, to) => isDateSameOrAfter(date, from) && isDateSameOrBefore(date, to);
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
 

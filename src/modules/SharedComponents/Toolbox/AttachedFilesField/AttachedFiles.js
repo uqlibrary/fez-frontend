@@ -17,7 +17,7 @@ import viewRecordLocale from 'locale/viewRecord';
 import { useRecordContext, useFormValuesContext } from 'context';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 
-import { isFileValid } from 'config/validation';
+import { isDateInBetween, isFileValid, isValidDate } from 'config/validation';
 import { mui1theme, openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
 import * as fileUploadConfig from '../FileUploader/config';
 
@@ -233,10 +233,10 @@ export const AttachedFiles = ({
     fileRestrictionsConfig,
 }) => {
     const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(Array(dataStreams.length).fill(false));
-    const [errorMessage, setErrorMessage] = useState('');
+    const [fileNameErrorMessage, setFileNameErrorMessage] = useState('');
+    const [embargoDateErrorMessage, setEmbargoDateErrorMessage] = useState('');
 
     const { errorTitle } = locale;
-
     const [preview, showPreview, hidePreview] = usePreview(initialPreviewState);
     const { record } = useRecordContext();
     const isAdmin = userIsAdmin();
@@ -250,11 +250,37 @@ export const AttachedFiles = ({
 
     if (fileData.length === 0) return null;
 
+    const isValidEmbargoDate = date => isValidDate(date) && isDateInBetween(date, moment(), '2099');
+
+    const onEmbargoDateKeyUp = e => {
+        // bail if it's not backspace
+        if (e.key !== 'Backspace' || !embargoDateErrorMessage.length) {
+            return;
+        }
+        /**
+         * if the user hits the backspace key while the focus is in the date's text field, clear invalid any embargo
+         * date related errors
+         * Note: ideally we should not need to do this, but unfortunately for the scenario described above the
+         * onChange function only computes the deletion of a single character and not the removal of the whole date
+         */
+        setEmbargoDateErrorMessage('');
+    };
+
     // tested in cypress
     /* istanbul ignore next */
     const onEmbargoDateChange = id => value => {
         const indexToChange = dataStreams.findIndex(item => item.dsi_id === id);
-        value === null &&
+        const isEmpty = value === null;
+        const isValid = isValidEmbargoDate(value);
+
+        setEmbargoDateErrorMessage('');
+        if (!isEmpty && !isValid) {
+            setEmbargoDateErrorMessage(
+                `Invalid embargo date for ${dataStreams[indexToChange].dsi_dsid}. Date will be ignored.`,
+            );
+        }
+
+        isEmpty &&
             markEmbargoDateAsCleared([
                 ...hasClearedEmbargoDate.slice(0, indexToChange),
                 true,
@@ -263,7 +289,7 @@ export const AttachedFiles = ({
 
         onDateChange(
             'dsi_embargo_date',
-            !!value ? moment(value).format(globalLocale.global.embargoDateFormat) : null,
+            isValid ? moment(value).format(globalLocale.global.embargoDateFormat) : null,
             indexToChange,
         );
     };
@@ -287,10 +313,14 @@ export const AttachedFiles = ({
         }));
 
         const processedFilenames = removeInvalidFileNames(mappedFilenames, fileRestrictionsConfig.fileNameRestrictions);
-        const errormessage = getErrorMessage(processedFilenames, fileUploadLocale.default, fileRestrictionsConfig);
+        const fileNameErrorMessage = getErrorMessage(
+            processedFilenames,
+            fileUploadLocale.default,
+            fileRestrictionsConfig,
+        );
 
-        setErrorMessage(errormessage);
-        return errormessage === '';
+        setFileNameErrorMessage(fileNameErrorMessage);
+        return fileNameErrorMessage === '';
     };
 
     const checkFileNameForErrors = id => fileName => {
@@ -303,9 +333,13 @@ export const AttachedFiles = ({
         ];
 
         const processedFilenames = removeInvalidFileNames(mappedFilename, fileRestrictionsConfig.fileNameRestrictions);
-        const errormessage = getErrorMessage(processedFilenames, fileUploadLocale.default, fileRestrictionsConfig);
-        setErrorMessage(errormessage);
-        return errormessage === '';
+        const fileNameErrorMessage = getErrorMessage(
+            processedFilenames,
+            fileUploadLocale.default,
+            fileRestrictionsConfig,
+        );
+        setFileNameErrorMessage(fileNameErrorMessage);
+        return fileNameErrorMessage === '';
     };
 
     /* istanbul ignore next */
@@ -435,7 +469,7 @@ export const AttachedFiles = ({
                                                 checkFileNamesForDupes={checkFileNamesForDupes(
                                                     dataStreams,
                                                     formValuesFromContext,
-                                                    setErrorMessage,
+                                                    setFileNameErrorMessage,
                                                     getDsIndex(item.id),
                                                 )}
                                                 id={getFilenameId(item.id)}
@@ -521,6 +555,7 @@ export const AttachedFiles = ({
                                                                 item.securityPolicyStatus.embargoDate
                                                             }
                                                             onChange={onEmbargoDateChange(item.id)}
+                                                            onKeyUp={onEmbargoDateKeyUp}
                                                             disabled={disabled}
                                                             fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
                                                             minDate={moment().toDate()}
@@ -617,9 +652,14 @@ export const AttachedFiles = ({
                     <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
                 )}
                 {/* istanbul ignore next*/
-                errorMessage.length > 0 && (
+                (fileNameErrorMessage.length > 0 || embargoDateErrorMessage.length > 0) && (
                     <Grid item xs={12}>
-                        <Alert alertId="alert-files" title={errorTitle} message={errorMessage} type="error" />
+                        <Alert
+                            alertId="alert-files"
+                            title={errorTitle}
+                            message={fileNameErrorMessage || embargoDateErrorMessage}
+                            type={fileNameErrorMessage ? 'error' : 'warning'}
+                        />
                     </Grid>
                 )}
             </StandardCard>
