@@ -132,7 +132,7 @@
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
         "@jwplayer/jwplayer-react": "^1.1.2",
-        "@material-table/core": "^6.1.13",
+        "@material-table/core": "^6.2.11",
         "@mui/icons-material": "^5.10.3",
         "@mui/lab": "^5.0.0-alpha.98",
         "@mui/material": "^5.14.14",
