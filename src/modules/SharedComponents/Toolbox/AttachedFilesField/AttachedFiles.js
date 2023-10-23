@@ -260,8 +260,10 @@ export const AttachedFiles = ({
         /**
          * if the user hits the backspace key while the focus is in the date's text field, clear invalid any embargo
          * date related errors
+         *
          * Note: ideally we should not need to do this, but unfortunately for the scenario described above the
-         * onChange function only computes the deletion of a single character and not the removal of the whole date
+         * onChange event might be triggered only once, upon the deletion of a single character and not the removal
+         * of the whole date.
          */
         setEmbargoDateErrorMessage('');
     };
