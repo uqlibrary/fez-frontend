@@ -417,6 +417,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                             'data-testid': `select-author-${rowData.tableData.id}`,
                         },
                     }),
+                    idSynonym: 'aut_id',
                 }}
                 actions={[
                     {

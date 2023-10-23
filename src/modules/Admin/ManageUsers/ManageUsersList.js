@@ -329,6 +329,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                             'data-testid': `select-user-${rowData.tableData.id}`,
                         },
                     }),
+                    idSynonym: 'usr_id',
                 }}
                 actions={[
                     {
