@@ -384,7 +384,7 @@ describe('isDateSameOrBefore ', () => {
         expect(validation.isDateSameOrBefore('1999-12-31', '2000-01-01')).toBeTruthy();
     });
 
-    it('should return true when the first given date is before the second given date', () => {
+    it('should return false when the first given date is after the second given date', () => {
         expect(validation.isDateSameOrBefore('2000-01-01', '1999-12-31')).toBeFalsy();
     });
 });
