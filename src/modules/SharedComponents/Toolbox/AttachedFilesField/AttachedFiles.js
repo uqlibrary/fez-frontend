@@ -278,7 +278,7 @@ export const AttachedFiles = ({
         setEmbargoDateErrorMessage('');
         if (!isEmpty && !isValid) {
             setEmbargoDateErrorMessage(
-                `Invalid embargo date for ${dataStreams[indexToChange].dsi_dsid}. Date will be ignored.`,
+                fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(dataStreams[indexToChange].dsi_dsid),
             );
         }
 

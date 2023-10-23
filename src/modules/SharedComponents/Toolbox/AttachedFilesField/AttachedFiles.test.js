@@ -300,6 +300,42 @@ describe('AttachedFiles component', () => {
         expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-26', 0);
     });
 
+    it('should yield an warning for when entering an invalid embargo date', async () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
+        userIsAdmin.mockImplementation(() => true);
+
+        const datastream = [
+            {
+                dsi_id: '252236',
+                dsi_pid: 'UQ:252236',
+                dsi_dsid: 'My_UQ_eSpace_UPO_guidelines_2016.pdf',
+                dsi_embargo_date: '2018-01-01',
+                dsi_label: 'UPO Guide v.4',
+                dsi_mimetype: 'application/pdf',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 587005,
+                dsi_security_inherited: 1,
+                dsi_security_policy: 1,
+            },
+        ];
+
+        const { getByTestId } = setup({
+            canEdit: true,
+            dataStreams: datastream,
+            onDateChange: jest.fn(),
+        });
+
+        act(() => {
+            fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, { target: { value: '12122222' } });
+        });
+
+        const alert = await waitFor(() => getByTestId('alert-files'));
+        expect(alert).toHaveTextContent(
+            fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
+        );
+    });
+
     it('should show general alert information for file renaming', () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
