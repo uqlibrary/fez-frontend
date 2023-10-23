@@ -13,6 +13,7 @@ import {
     AV_CHECK_STATE_INFECTED,
     AV_CHECK_STATE_UNSCANNABLE,
     CURRENT_LICENCES,
+    GENERIC_DATE_FORMAT,
     SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
     SENSITIVE_HANDLING_NOTE_TYPE,
 } from '../../../../config/general';
@@ -21,6 +22,7 @@ import { getAvState } from '../../../../helpers/datastreams';
 import { getTestId as getAvStateIconTestId } from '../FileAvStateIcon/FileAvStateIcon';
 import { createFezDatastreamInfoArray, withDatastreams } from '../../../../../utils/test-utils';
 import { getDownloadLinkTestId, getPreviewLinkTestId } from '../../../ViewRecord/components/partials/FileName';
+import moment from 'moment';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const { locale, ...restProps } = testProps;
@@ -326,14 +328,25 @@ describe('AttachedFiles component', () => {
             onDateChange: jest.fn(),
         });
 
+        // set embargo date to an invalid date
         act(() => {
             fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, { target: { value: '12122222' } });
         });
-
+        // make sure the invalid date warning has been raised
         const alert = await waitFor(() => getByTestId('alert-files'));
         expect(alert).toHaveTextContent(
             fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
         );
+        // change to a valid date
+        act(() => {
+            fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, {
+                target: {
+                    value: moment().format(GENERIC_DATE_FORMAT),
+                },
+            });
+        });
+        // make sure the warning has been cleared
+        expect(alert).not.toBeInTheDocument();
     });
 
     it('should show general alert information for file renaming', () => {
