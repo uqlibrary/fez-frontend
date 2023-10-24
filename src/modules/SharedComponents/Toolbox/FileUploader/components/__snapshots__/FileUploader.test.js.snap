@@ -1,5 +1,1155 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component FileUploader should delete all files 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+      >
+        You may add up to 5 files (max 1KB each)
+      </p>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            id="FileUploadDropZone"
+            tabindex="0"
+          >
+            <div
+              aria-disabled="false"
+              class=""
+              style="position: relative; padding: 0px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
+                  >
+                    File upload restrictions
+                  </p>
+                  <div>
+                    Please ensure:
+                    <ul>
+                      <li>
+                        files are under 5GB in size
+                      </li>
+                      <li>
+                        file names begin with a letter and are less than 45 characters long
+                      </li>
+                      <li>
+                        file names contain only upper and lowercase alphanumeric characters, and underscores
+                      </li>
+                      <li>
+                        file names must not contain any spaces
+                      </li>
+                      <li>
+                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                        <br />
+                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                      </li>
+                      <li>
+                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                      </li>
+                      <li>
+                        file names, regardless of extension, must be unique
+                      </li>
+                      <li>
+                        files are uploaded individually and not inside a folder
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
+                        data-testid="CloudUploadIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <p>
+                        Click here to select files,
+                        <br />
+                        or drag files into this area to upload
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input
+                aria-label="Upload files"
+                autocomplete="off"
+                data-analyticsid="fez-datastream-info-input"
+                data-testid="fez-datastream-info-input"
+                id="Uploader"
+                multiple=""
+                style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component FileUploader should delete first file 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+      >
+        You may add up to 5 files (max 1KB each)
+      </p>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            id="FileUploadDropZone"
+            tabindex="0"
+          >
+            <div
+              aria-disabled="false"
+              class=""
+              style="position: relative; padding: 0px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
+                  >
+                    File upload restrictions
+                  </p>
+                  <div>
+                    Please ensure:
+                    <ul>
+                      <li>
+                        files are under 5GB in size
+                      </li>
+                      <li>
+                        file names begin with a letter and are less than 45 characters long
+                      </li>
+                      <li>
+                        file names contain only upper and lowercase alphanumeric characters, and underscores
+                      </li>
+                      <li>
+                        file names must not contain any spaces
+                      </li>
+                      <li>
+                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                        <br />
+                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                      </li>
+                      <li>
+                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                      </li>
+                      <li>
+                        file names, regardless of extension, must be unique
+                      </li>
+                      <li>
+                        files are uploaded individually and not inside a folder
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
+                        data-testid="CloudUploadIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <p>
+                        Click here to select files,
+                        <br />
+                        or drag files into this area to upload
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input
+                aria-label="Upload files"
+                autocomplete="off"
+                data-analyticsid="fez-datastream-info-input"
+                data-testid="fez-datastream-info-input"
+                id="Uploader"
+                multiple=""
+                style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        data-testid="alert"
+        style="margin-top: 5px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DoneIcon"
+                  focusable="false"
+                  id="done-icon"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+              >
+                <b>
+                  Success - 
+                </b>
+                Successfully added 1 file(s) to upload queue.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        data-testid="alert"
+        style="margin-top: 5px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-17z5iqr-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                  data-testid="WarningIcon"
+                  focusable="false"
+                  id="warning-icon"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+              >
+                <b>
+                  Notice - 
+                </b>
+                During peak times, there may be a delay before newly uploaded files appear on the record.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        class="MuiBox-root css-130f8nx"
+      >
+        <div
+          style="flex-grow: 1; padding: 4px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1ec2lpb-MuiGrid-root"
+            gutter="8"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+              >
+                File name
+              </span>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+              >
+                Description
+              </span>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
+            >
+              <span
+                aria-label="Remove all files from the upload queue"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="delete-all-files"
+                  data-testid="delete-all-files"
+                  id="delete-all-files"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      data-testid="fez-datastream-info-list"
+    >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
+      <div
+        class="MuiBox-root css-moxgk8"
+        data-testid="fez-datastream-info-list-row-0"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="new-file-upload-up-0"
+              data-testid="new-file-upload-up-0"
+              disabled=""
+              id="new-file-upload-down-0"
+              tabindex="-1"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandLessIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
+              data-testid="dsi-dsid-0"
+            >
+              hello2.png
+               (
+              6.0B
+              )
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+              data-testid="dsi-label-upload-0"
+            >
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                  data-analyticsid="dsi-label-upload-0-input"
+                  data-testid="dsi-label-upload-0-input"
+                  id="dsi-label-upload-0-input"
+                  maxlength="255"
+                  name="fileDescription"
+                  placeholder="Description"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this file"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="dsi-dsid-0-delete"
+                data-testid="dsi-dsid-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="new-file-upload-down-0"
+              data-testid="new-file-upload-down-0"
+              disabled=""
+              id="new-file-upload-down-0"
+              tabindex="-1"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component FileUploader should drag and drop 2 files 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+      >
+        You may add up to 5 files (max 1KB each)
+      </p>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            id="FileUploadDropZone"
+            tabindex="0"
+          >
+            <div
+              aria-disabled="false"
+              class=""
+              style="position: relative; padding: 0px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
+                  >
+                    File upload restrictions
+                  </p>
+                  <div>
+                    Please ensure:
+                    <ul>
+                      <li>
+                        files are under 5GB in size
+                      </li>
+                      <li>
+                        file names begin with a letter and are less than 45 characters long
+                      </li>
+                      <li>
+                        file names contain only upper and lowercase alphanumeric characters, and underscores
+                      </li>
+                      <li>
+                        file names must not contain any spaces
+                      </li>
+                      <li>
+                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                        <br />
+                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                      </li>
+                      <li>
+                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                      </li>
+                      <li>
+                        file names, regardless of extension, must be unique
+                      </li>
+                      <li>
+                        files are uploaded individually and not inside a folder
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
+                        data-testid="CloudUploadIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <p>
+                        Click here to select files,
+                        <br />
+                        or drag files into this area to upload
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input
+                aria-label="Upload files"
+                autocomplete="off"
+                data-analyticsid="fez-datastream-info-input"
+                data-testid="fez-datastream-info-input"
+                id="Uploader"
+                multiple=""
+                style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        data-testid="alert"
+        style="margin-top: 5px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DoneIcon"
+                  focusable="false"
+                  id="done-icon"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+              >
+                <b>
+                  Success - 
+                </b>
+                Successfully added 2 file(s) to upload queue.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        data-testid="alert"
+        style="margin-top: 5px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-17z5iqr-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                  data-testid="WarningIcon"
+                  focusable="false"
+                  id="warning-icon"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+              >
+                <b>
+                  Notice - 
+                </b>
+                During peak times, there may be a delay before newly uploaded files appear on the record.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        class="MuiBox-root css-130f8nx"
+      >
+        <div
+          style="flex-grow: 1; padding: 4px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1ec2lpb-MuiGrid-root"
+            gutter="8"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+              >
+                File name
+              </span>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+              >
+                Description
+              </span>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
+            >
+              <span
+                aria-label="Remove all files from the upload queue"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="delete-all-files"
+                  data-testid="delete-all-files"
+                  id="delete-all-files"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      data-testid="fez-datastream-info-list"
+    >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
+      <div
+        class="MuiBox-root css-moxgk8"
+        data-testid="fez-datastream-info-list-row-0"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="new-file-upload-up-0"
+              data-testid="new-file-upload-up-0"
+              disabled=""
+              id="new-file-upload-down-0"
+              tabindex="-1"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandLessIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
+              data-testid="dsi-dsid-0"
+            >
+              hello.png
+               (
+              5.0B
+              )
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+              data-testid="dsi-label-upload-0"
+            >
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                  data-analyticsid="dsi-label-upload-0-input"
+                  data-testid="dsi-label-upload-0-input"
+                  id="dsi-label-upload-0-input"
+                  maxlength="255"
+                  name="fileDescription"
+                  placeholder="Description"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this file"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="dsi-dsid-0-delete"
+                data-testid="dsi-dsid-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="new-file-upload-down-0"
+              data-testid="new-file-upload-down-0"
+              id="new-file-upload-down-0"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
+      <div
+        class="MuiBox-root css-moxgk8"
+        data-testid="fez-datastream-info-list-row-1"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="new-file-upload-up-1"
+              data-testid="new-file-upload-up-1"
+              id="new-file-upload-down-1"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandLessIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
+              data-testid="dsi-dsid-1"
+            >
+              hello2.png
+               (
+              6.0B
+              )
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+              data-testid="dsi-label-upload-1"
+            >
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                  data-analyticsid="dsi-label-upload-1-input"
+                  data-testid="dsi-label-upload-1-input"
+                  id="dsi-label-upload-1-input"
+                  maxlength="255"
+                  name="fileDescription"
+                  placeholder="Description"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
+          >
+            <span
+              aria-label="Remove this file"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="dsi-dsid-1-delete"
+                data-testid="dsi-dsid-1-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
+              data-analyticsid="new-file-upload-down-1"
+              data-testid="new-file-upload-down-1"
+              disabled=""
+              id="new-file-upload-down-1"
+              tabindex="-1"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Component FileUploader should handle file order change 1`] = `
 <div>
   <div
@@ -2970,7 +4120,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r24:"
+                  id=":r2k:"
                   placeholder="dd/mm/yyyy"
                   type="tel"
                   value="01/01/2020"
@@ -3567,1141 +4717,6 @@ exports[`Component FileUploader should render disabled component 1`] = `
 `;
 
 exports[`Component FileUploader should render rows for uploaded files 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    >
-      <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
-      >
-        You may add up to 5 files (max 1KB each)
-      </p>
-      <div
-        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        >
-          <div
-            id="FileUploadDropZone"
-            tabindex="0"
-          >
-            <div
-              aria-disabled="false"
-              class=""
-              style="position: relative; padding: 0px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
-                  >
-                    File upload restrictions
-                  </p>
-                  <div>
-                    Please ensure:
-                    <ul>
-                      <li>
-                        files are under 5GB in size
-                      </li>
-                      <li>
-                        file names begin with a letter and are less than 45 characters long
-                      </li>
-                      <li>
-                        file names contain only upper and lowercase alphanumeric characters, and underscores
-                      </li>
-                      <li>
-                        file names must not contain any spaces
-                      </li>
-                      <li>
-                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-                        <br />
-                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                      </li>
-                      <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
-                      </li>
-                      <li>
-                        file names, regardless of extension, must be unique
-                      </li>
-                      <li>
-                        files are uploaded individually and not inside a folder
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
-                        data-testid="CloudUploadIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                    >
-                      <p>
-                        Click here to select files,
-                        <br />
-                        or drag files into this area to upload
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <input
-                aria-label="Upload files"
-                autocomplete="off"
-                data-analyticsid="fez-datastream-info-input"
-                data-testid="fez-datastream-info-input"
-                id="Uploader"
-                multiple=""
-                style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
-                type="file"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component FileUploader should render rows for uploaded files 2`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    >
-      <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
-      >
-        You may add up to 5 files (max 1KB each)
-      </p>
-      <div
-        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        >
-          <div
-            id="FileUploadDropZone"
-            tabindex="0"
-          >
-            <div
-              aria-disabled="false"
-              class=""
-              style="position: relative; padding: 0px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
-                  >
-                    File upload restrictions
-                  </p>
-                  <div>
-                    Please ensure:
-                    <ul>
-                      <li>
-                        files are under 5GB in size
-                      </li>
-                      <li>
-                        file names begin with a letter and are less than 45 characters long
-                      </li>
-                      <li>
-                        file names contain only upper and lowercase alphanumeric characters, and underscores
-                      </li>
-                      <li>
-                        file names must not contain any spaces
-                      </li>
-                      <li>
-                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-                        <br />
-                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                      </li>
-                      <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
-                      </li>
-                      <li>
-                        file names, regardless of extension, must be unique
-                      </li>
-                      <li>
-                        files are uploaded individually and not inside a folder
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
-                        data-testid="CloudUploadIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                    >
-                      <p>
-                        Click here to select files,
-                        <br />
-                        or drag files into this area to upload
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <input
-                aria-label="Upload files"
-                autocomplete="off"
-                data-analyticsid="fez-datastream-info-input"
-                data-testid="fez-datastream-info-input"
-                id="Uploader"
-                multiple=""
-                style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
-                type="file"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    >
-      <div
-        data-testid="alert"
-        style="margin-top: 5px;"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DoneIcon"
-                  focusable="false"
-                  id="done-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
-                  />
-                </svg>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-              >
-                <b>
-                  Success - 
-                </b>
-                Successfully added 2 file(s) to upload queue.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    >
-      <div
-        data-testid="alert"
-        style="margin-top: 5px;"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container css-17z5iqr-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
-                  focusable="false"
-                  id="warning-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
-                  />
-                </svg>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-              >
-                <b>
-                  Notice - 
-                </b>
-                During peak times, there may be a delay before newly uploaded files appear on the record.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    >
-      <div
-        class="MuiBox-root css-130f8nx"
-      >
-        <div
-          style="flex-grow: 1; padding: 4px;"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1ec2lpb-MuiGrid-root"
-            gutter="8"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              >
-                File name
-              </span>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              >
-                Description
-              </span>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
-            >
-              <span
-                aria-label="Remove all files from the upload queue"
-                class=""
-                data-mui-internal-clone-element="true"
-              >
-                <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-analyticsid="delete-all-files"
-                  data-testid="delete-all-files"
-                  id="delete-all-files"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                    data-testid="DeleteForeverIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-      data-testid="fez-datastream-info-list"
-    >
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiBox-root css-moxgk8"
-        data-testid="fez-datastream-info-list-row-0"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
-              data-testid="dsi-dsid-0"
-            >
-              hello.png
-               (
-              5.0B
-              )
-            </p>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-              data-testid="dsi-label-upload-0"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  data-analyticsid="dsi-label-upload-0-input"
-                  data-testid="dsi-label-upload-0-input"
-                  id="dsi-label-upload-0-input"
-                  maxlength="255"
-                  name="fileDescription"
-                  placeholder="Description"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this file"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="dsi-dsid-0-delete"
-                data-testid="dsi-dsid-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiBox-root css-moxgk8"
-        data-testid="fez-datastream-info-list-row-1"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
-              data-testid="dsi-dsid-1"
-            >
-              hello2.png
-               (
-              6.0B
-              )
-            </p>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-              data-testid="dsi-label-upload-1"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  data-analyticsid="dsi-label-upload-1-input"
-                  data-testid="dsi-label-upload-1-input"
-                  id="dsi-label-upload-1-input"
-                  maxlength="255"
-                  name="fileDescription"
-                  placeholder="Description"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this file"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="dsi-dsid-1-delete"
-                data-testid="dsi-dsid-1-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component FileUploader should render rows for uploaded files 3`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    >
-      <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
-      >
-        You may add up to 5 files (max 1KB each)
-      </p>
-      <div
-        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        >
-          <div
-            id="FileUploadDropZone"
-            tabindex="0"
-          >
-            <div
-              aria-disabled="false"
-              class=""
-              style="position: relative; padding: 0px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
-                  >
-                    File upload restrictions
-                  </p>
-                  <div>
-                    Please ensure:
-                    <ul>
-                      <li>
-                        files are under 5GB in size
-                      </li>
-                      <li>
-                        file names begin with a letter and are less than 45 characters long
-                      </li>
-                      <li>
-                        file names contain only upper and lowercase alphanumeric characters, and underscores
-                      </li>
-                      <li>
-                        file names must not contain any spaces
-                      </li>
-                      <li>
-                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-                        <br />
-                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                      </li>
-                      <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
-                      </li>
-                      <li>
-                        file names, regardless of extension, must be unique
-                      </li>
-                      <li>
-                        files are uploaded individually and not inside a folder
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
-                        data-testid="CloudUploadIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                    >
-                      <p>
-                        Click here to select files,
-                        <br />
-                        or drag files into this area to upload
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <input
-                aria-label="Upload files"
-                autocomplete="off"
-                data-analyticsid="fez-datastream-info-input"
-                data-testid="fez-datastream-info-input"
-                id="Uploader"
-                multiple=""
-                style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
-                type="file"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    >
-      <div
-        data-testid="alert"
-        style="margin-top: 5px;"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DoneIcon"
-                  focusable="false"
-                  id="done-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
-                  />
-                </svg>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-              >
-                <b>
-                  Success - 
-                </b>
-                Successfully added 1 file(s) to upload queue.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    >
-      <div
-        data-testid="alert"
-        style="margin-top: 5px;"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container css-17z5iqr-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
-                  focusable="false"
-                  id="warning-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
-                  />
-                </svg>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-              >
-                <b>
-                  Notice - 
-                </b>
-                During peak times, there may be a delay before newly uploaded files appear on the record.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    >
-      <div
-        class="MuiBox-root css-130f8nx"
-      >
-        <div
-          style="flex-grow: 1; padding: 4px;"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1ec2lpb-MuiGrid-root"
-            gutter="8"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              >
-                File name
-              </span>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              >
-                Description
-              </span>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
-            >
-              <span
-                aria-label="Remove all files from the upload queue"
-                class=""
-                data-mui-internal-clone-element="true"
-              >
-                <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-analyticsid="delete-all-files"
-                  data-testid="delete-all-files"
-                  id="delete-all-files"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                    data-testid="DeleteForeverIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-      data-testid="fez-datastream-info-list"
-    >
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiBox-root css-moxgk8"
-        data-testid="fez-datastream-info-list-row-0"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1u02vv9-MuiTypography-root"
-              data-testid="dsi-dsid-0"
-            >
-              hello2.png
-               (
-              6.0B
-              )
-            </p>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-              data-testid="dsi-label-upload-0"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  data-analyticsid="dsi-label-upload-0-input"
-                  data-testid="dsi-label-upload-0-input"
-                  id="dsi-label-upload-0-input"
-                  maxlength="255"
-                  name="fileDescription"
-                  placeholder="Description"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this file"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="dsi-dsid-0-delete"
-                data-testid="dsi-dsid-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                  />
-                </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </span>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component FileUploader should render rows for uploaded files 4`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -7016,7 +7031,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":rg:"
+                  id=":r10:"
                   placeholder="dd/mm/yyyy"
                   type="tel"
                   value="02/02/2022"
@@ -10087,7 +10102,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":ru:"
+                  id=":r1e:"
                   placeholder="dd/mm/yyyy"
                   type="tel"
                   value="01/01/2020"
