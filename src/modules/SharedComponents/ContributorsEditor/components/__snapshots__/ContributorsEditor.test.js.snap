@@ -1237,9 +1237,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this record"
