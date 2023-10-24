@@ -57,6 +57,14 @@ const palette = {
     },
 };
 
+const isJestTest = () => {
+    try {
+        return !!process.env.JEST_WORKER_ID;
+    } finally {
+        return false;
+    }
+};
+
 export const mui1theme = createTheme({
     palette: palette,
     status: {
@@ -74,7 +82,7 @@ export const mui1theme = createTheme({
         MuiButtonBase: {
             defaultProps: {
                 // Disable ripple for jest tests
-                disableRipple: process && process.env && !!process.env.JEST_WORKER_ID,
+                disableRipple: isJestTest(),
             },
         },
         MuiFormLabel: {
@@ -166,7 +174,7 @@ export const adminTheme = createTheme({
         MuiButtonBase: {
             defaultProps: {
                 // Disable ripple for jest tests
-                disableRipple: process && process.env && !!process.env.JEST_WORKER_ID,
+                disableRipple: isJestTest(),
             },
         },
         MuiFormLabel: {
