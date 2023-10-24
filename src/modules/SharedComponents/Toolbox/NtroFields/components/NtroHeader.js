@@ -1,12 +1,12 @@
 import React from 'react';
 import { default as componentLocale } from 'locale/components';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 
 const NtroHeader = ({}) => {
     const txt = componentLocale.components.ntroFields.header;
     return (
-        <Grid item xs={12}>
+        <Grid xs={12}>
             <Alert title={txt.title} message={txt.body} type="info_outline" />
         </Grid>
     );
