@@ -664,6 +664,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         ? '8px solid red'
                         : '',
                 }),
+                idSynonym: 'eap_id',
             }}
         />
     );

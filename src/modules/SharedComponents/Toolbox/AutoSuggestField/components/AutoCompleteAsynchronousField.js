@@ -161,7 +161,6 @@ export const AutoCompleteAsynchronousField = ({
                 {...((!!OptionTemplate && {
                     // eslint-disable-next-line react/prop-types
                     renderOption: (props, option) => {
-                        console.log(props, option);
                         return (
                             // eslint-disable-next-line react/prop-types
                             <li {...props} key={option.id ?? option.key ?? props.id ?? props.key ?? ''}>
