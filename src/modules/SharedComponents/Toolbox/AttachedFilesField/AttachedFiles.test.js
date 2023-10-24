@@ -349,6 +349,55 @@ describe('AttachedFiles component', () => {
         expect(alert).not.toBeInTheDocument();
     });
 
+    it('should hide a raised invalid embargo date warning when using the backspace key', async () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
+        userIsAdmin.mockImplementation(() => true);
+
+        const datastream = [
+            {
+                dsi_id: '252236',
+                dsi_pid: 'UQ:252236',
+                dsi_dsid: 'My_UQ_eSpace_UPO_guidelines_2016.pdf',
+                dsi_embargo_date: '2018-01-01',
+                dsi_label: 'UPO Guide v.4',
+                dsi_mimetype: 'application/pdf',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 587005,
+                dsi_security_inherited: 1,
+                dsi_security_policy: 1,
+            },
+        ];
+
+        const { getByTestId } = setup({
+            canEdit: true,
+            dataStreams: datastream,
+            onDateChange: jest.fn(),
+        });
+
+        // set embargo date to an invalid date
+        act(() => {
+            fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, { target: { value: '12122222' } });
+        });
+        // make sure the invalid date warning has been raised
+        const alert = await waitFor(() => getByTestId('alert-files'));
+        expect(alert).toHaveTextContent(
+            fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
+        );
+        act(() => {
+            fireEvent.keyUp(getByTestId('dsi-embargo-date-0-input').firstChild, { key: '1' });
+        });
+        expect(alert).toHaveTextContent(
+            fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
+        );
+        // clear date with backspace
+        act(() => {
+            fireEvent.keyUp(getByTestId('dsi-embargo-date-0-input').firstChild, { key: 'Backspace' });
+        });
+        // make sure the warning has been cleared
+        expect(alert).not.toBeInTheDocument();
+    });
+
     it('should show general alert information for file renaming', () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
