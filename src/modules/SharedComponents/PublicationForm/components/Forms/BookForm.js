@@ -173,6 +173,7 @@ export default class BookForm extends Component {
                                 canEdit
                                 forceSelectable
                                 hideUqIDFields
+                                maintainSelected
                                 contributorEditorId="rek-contributor"
                                 showContributorAssignment={!authorSelected}
                                 id="editors-name-as-published-field"
