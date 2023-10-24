@@ -74,7 +74,7 @@ export const mui1theme = createTheme({
         MuiButtonBase: {
             defaultProps: {
                 // Disable ripple for jest tests
-                disableRipple: !!process?.env?.JEST_WORKER_ID,
+                disableRipple: process && process.env && !!process.env.JEST_WORKER_ID,
             },
         },
         MuiFormLabel: {
@@ -166,7 +166,7 @@ export const adminTheme = createTheme({
         MuiButtonBase: {
             defaultProps: {
                 // Disable ripple for jest tests
-                disableRipple: !!process?.env?.JEST_WORKER_ID,
+                disableRipple: process && process.env && !!process.env.JEST_WORKER_ID,
             },
         },
         MuiFormLabel: {
