@@ -489,9 +489,6 @@ exports[`Search record results should render a single claimable item with no aut
                             type="button"
                           >
                             Claim this work
-                            <span
-                              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                            />
                           </button>
                         </div>
                       </div>
@@ -525,9 +522,6 @@ exports[`Search record results should render a single claimable item with no aut
               type="button"
             >
               Abandon and search again
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -539,9 +533,6 @@ exports[`Search record results should render a single claimable item with no aut
               type="button"
             >
               Create a new eSpace work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1235,9 +1226,6 @@ exports[`Search record results should render a single unclaimable item with no a
               type="button"
             >
               Abandon and search again
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1249,9 +1237,6 @@ exports[`Search record results should render a single unclaimable item with no a
               type="button"
             >
               Create a new eSpace work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1945,9 +1930,6 @@ exports[`Search record results should render a single unclaimable item with no a
               type="button"
             >
               Abandon and search again
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1959,9 +1941,6 @@ exports[`Search record results should render a single unclaimable item with no a
               type="button"
             >
               Create a new eSpace work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -2561,9 +2540,6 @@ exports[`Search record results should render publications list with one publicat
                             type="button"
                           >
                             Claim this work
-                            <span
-                              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                            />
                           </button>
                         </div>
                       </div>
@@ -2597,9 +2573,6 @@ exports[`Search record results should render publications list with one publicat
               type="button"
             >
               Abandon and search again
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -2611,9 +2584,6 @@ exports[`Search record results should render publications list with one publicat
               type="button"
             >
               Create a new eSpace work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -3416,9 +3386,6 @@ exports[`Search record results should render stepper and no results 1`] = `
               type="button"
             >
               Abandon and search again
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -3430,9 +3397,6 @@ exports[`Search record results should render stepper and no results 1`] = `
               type="button"
             >
               Create a new eSpace work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

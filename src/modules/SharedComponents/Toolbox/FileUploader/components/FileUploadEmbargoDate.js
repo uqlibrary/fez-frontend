@@ -12,6 +12,7 @@ export class FileUploadEmbargoDate extends PureComponent {
         disabled: PropTypes.bool,
         minDate: PropTypes.instanceOf(Date),
         onChange: PropTypes.func,
+        onKeyUp: PropTypes.func,
         value: PropTypes.string,
         fileUploadEmbargoDateId: PropTypes.string,
     };
@@ -40,6 +41,7 @@ export class FileUploadEmbargoDate extends PureComponent {
                     renderInput={params => (
                         <TextField
                             {...params}
+                            onKeyUpCapture={this.props.onKeyUp}
                             variant="standard"
                             sx={{
                                 '& .MuiInput-input': {

@@ -51,9 +51,6 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -241,9 +238,6 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -372,9 +366,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -473,9 +464,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -700,9 +688,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -801,9 +786,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -1028,9 +1010,6 @@ exports[`Component NtroFields should render default view 1`] = `
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -1255,9 +1234,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -1356,9 +1332,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -1547,9 +1520,6 @@ exports[`Component NtroFields should show significance field even if contributio
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -1637,9 +1607,6 @@ exports[`Component NtroFields should show significance field even if contributio
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>

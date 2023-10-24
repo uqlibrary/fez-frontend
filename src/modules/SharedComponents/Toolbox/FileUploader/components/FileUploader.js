@@ -11,7 +11,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import * as config from '../config';
 import locale from '../locale';
-import { isDateEqualOrGreaterThan, isValidDate } from '../../../../../config/validation';
+import { isDateSameOrAfter, isValidDate } from '../../../../../config/validation';
 
 const moment = require('moment');
 
@@ -369,7 +369,7 @@ export class FileUploader extends PureComponent {
         const validEmbargoDates = openAccess.filter(
             file =>
                 isValidDate(file[config.FILE_META_KEY_EMBARGO_DATE]) &&
-                isDateEqualOrGreaterThan(file[config.FILE_META_KEY_EMBARGO_DATE], today),
+                isDateSameOrAfter(file[config.FILE_META_KEY_EMBARGO_DATE], today),
         );
         return openAccess.length !== validEmbargoDates.length;
     };

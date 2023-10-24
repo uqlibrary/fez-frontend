@@ -116,9 +116,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                           d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
                         />
                       </svg>
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-label="Open"
@@ -126,11 +123,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                       tabindex="-1"
                       title="Open"
                       type="button"
-                    >
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
-                    </button>
+                    />
                   </div>
                 </div>
               </div>
@@ -154,9 +147,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
               type="button"
             >
               Change Details
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -172,9 +162,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -287,9 +274,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -394,9 +378,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -419,9 +400,6 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -563,9 +541,6 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -649,9 +624,6 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -674,9 +646,6 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -753,9 +722,6 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -778,9 +744,6 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -896,11 +859,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       tabindex="-1"
                       title="Open"
                       type="button"
-                    >
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
-                    </button>
+                    />
                   </div>
                 </div>
               </div>
@@ -1053,9 +1012,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -1139,9 +1095,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this record"
@@ -1164,9 +1117,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this record"
@@ -1189,9 +1139,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1268,9 +1215,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move record down the order"
@@ -1318,9 +1262,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this record"
@@ -1343,9 +1284,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1422,9 +1360,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this record"
@@ -1447,9 +1382,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this record"
@@ -1472,9 +1404,6 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1603,9 +1532,6 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -1689,9 +1615,6 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -1714,9 +1637,6 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -1739,9 +1659,6 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1818,9 +1735,6 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -1843,9 +1757,6 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -1868,9 +1779,6 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1999,9 +1907,6 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -2085,9 +1990,6 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -2110,9 +2012,6 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2189,9 +2088,6 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -2214,9 +2110,6 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2345,9 +2238,6 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -2431,9 +2321,6 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -2456,9 +2343,6 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2535,9 +2419,6 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -2560,9 +2441,6 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2617,9 +2495,6 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                       d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </span>
@@ -2885,11 +2760,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       tabindex="-1"
                       title="Open"
                       type="button"
-                    >
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
-                    </button>
+                    />
                   </div>
                 </div>
               </div>
@@ -3029,9 +2900,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -3115,9 +2983,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -3140,9 +3005,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -3165,9 +3027,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3244,9 +3103,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -3269,9 +3125,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -3294,9 +3147,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -3319,9 +3169,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3398,9 +3245,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -3423,9 +3267,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -3448,9 +3289,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -3473,9 +3311,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3552,9 +3387,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -3577,9 +3409,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -3602,9 +3431,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -3627,9 +3453,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3706,9 +3529,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -3731,9 +3551,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -3756,9 +3573,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -3781,9 +3595,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3860,9 +3671,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -3885,9 +3693,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -3910,9 +3715,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -3935,9 +3737,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4014,9 +3813,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -4039,9 +3835,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -4064,9 +3857,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -4089,9 +3879,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4168,9 +3955,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -4193,9 +3977,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -4218,9 +3999,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -4243,9 +4021,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4322,9 +4097,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -4347,9 +4119,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -4372,9 +4141,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -4397,9 +4163,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4476,9 +4239,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -4501,9 +4261,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -4526,9 +4283,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -4551,9 +4305,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4630,9 +4381,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -4655,9 +4403,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -4680,9 +4425,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -4705,9 +4447,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4784,9 +4523,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -4809,9 +4545,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -4834,9 +4567,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -4859,9 +4589,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4938,9 +4665,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -4963,9 +4687,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -4988,9 +4709,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -5013,9 +4731,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -5092,9 +4807,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -5117,9 +4829,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -5142,9 +4851,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -5167,9 +4873,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -5246,9 +4949,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -5271,9 +4971,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -5296,9 +4993,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -5321,9 +5015,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -5400,9 +5091,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -5425,9 +5113,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -5450,9 +5135,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -5475,9 +5157,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -5554,9 +5233,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -5579,9 +5255,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -5604,9 +5277,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -5629,9 +5299,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -5708,9 +5375,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -5733,9 +5397,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -5758,9 +5419,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -5783,9 +5441,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -5862,9 +5517,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -5887,9 +5539,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -5912,9 +5561,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -5937,9 +5583,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -6016,9 +5659,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Move item down the order"
@@ -6041,9 +5681,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -6066,9 +5703,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -6091,9 +5725,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -6170,9 +5801,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Edit this item"
@@ -6195,9 +5823,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -6220,9 +5845,6 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -6337,9 +5959,6 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -6418,9 +6037,6 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this record"
@@ -6443,9 +6059,6 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -6561,11 +6174,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                       tabindex="-1"
                       title="Open"
                       type="button"
-                    >
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
-                    </button>
+                    />
                   </div>
                 </div>
               </div>
@@ -6719,11 +6328,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                       tabindex="-1"
                       title="Open"
                       type="button"
-                    >
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
-                    </button>
+                    />
                   </div>
                 </div>
               </div>
@@ -6816,9 +6421,6 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                       d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </span>
@@ -7023,9 +6625,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
                       d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </span>
@@ -7185,11 +6784,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                         style="transition: all ease 200ms; transform: none;"
                         tabindex="0"
                         type="button"
-                      >
-                        <span
-                          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                        />
-                      </button>
+                      />
                     </div>
                   </td>
                   <td
@@ -7319,9 +6914,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
                             d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                           />
                         </svg>
-                        <span
-                          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                        />
                       </button>
                       <button
                         aria-label="Remove this item"
@@ -7342,9 +6934,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
                             d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                           />
                         </svg>
-                        <span
-                          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                        />
                       </button>
                     </div>
                   </td>
@@ -8080,9 +7669,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -8161,9 +7747,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -8186,9 +7769,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -8260,9 +7840,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -8285,9 +7862,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -8476,9 +8050,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -8557,9 +8128,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -8582,9 +8150,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -8656,9 +8221,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
                 <button
                   aria-label="Remove this item"
@@ -8681,9 +8243,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>

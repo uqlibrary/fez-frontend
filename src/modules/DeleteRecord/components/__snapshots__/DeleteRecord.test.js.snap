@@ -271,9 +271,6 @@ exports[`Component DeleteRecord should display general alert if trying to delete
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -288,9 +285,6 @@ exports[`Component DeleteRecord should display general alert if trying to delete
               type="button"
             >
               Delete
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -712,9 +706,6 @@ exports[`Component DeleteRecord should display general alert if trying to delete
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -729,9 +720,6 @@ exports[`Component DeleteRecord should display general alert if trying to delete
               type="button"
             >
               Delete
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1023,9 +1011,6 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1040,9 +1025,6 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
               type="button"
             >
               Delete
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1323,9 +1305,6 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1340,9 +1319,6 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
               type="button"
             >
               Delete
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1796,9 +1772,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1813,9 +1786,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
               type="button"
             >
               Delete
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -2318,9 +2288,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -2335,9 +2302,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
               type="button"
             >
               Delete
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -2815,9 +2779,6 @@ exports[`Component DeleteRecord should render delete record form with data colle
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -2832,9 +2793,6 @@ exports[`Component DeleteRecord should render delete record form with data colle
               type="button"
             >
               Delete
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -3312,9 +3270,6 @@ exports[`Component DeleteRecord should render delete record form with deleted da
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -3329,9 +3284,6 @@ exports[`Component DeleteRecord should render delete record form with deleted da
               type="button"
             >
               Update
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -3708,9 +3660,6 @@ exports[`Component DeleteRecord should render delete record form with deleted re
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -3725,9 +3674,6 @@ exports[`Component DeleteRecord should render delete record form with deleted re
               type="button"
             >
               Update
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -4104,9 +4050,6 @@ exports[`Component DeleteRecord should render delete record form with record cit
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -4121,9 +4064,6 @@ exports[`Component DeleteRecord should render delete record form with record cit
               type="button"
             >
               Delete
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

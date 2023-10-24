@@ -79,14 +79,19 @@ describe('Component FileUploader', () => {
     });
 
     it('should render rows for uploaded files', async () => {
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+        useWidth.mockImplementation(() => 'sm');
+
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should drag and drop 2 files', async () => {
         // default view
         const useWidth = jest.spyOn(Hook, 'useWidth');
         useWidth.mockImplementation(() => 'sm');
 
         const { container, getByText, getByTestId } = setup();
-        expect(container).toMatchSnapshot();
-
-        // drag and drop 2 files
         fireEvent.drop(getByTestId('fez-datastream-info-input'), {
             dataTransfer: {
                 files: [
@@ -96,17 +101,46 @@ describe('Component FileUploader', () => {
                 types: ['Files', 'Files'],
             },
         });
-
         await waitFor(() => getByText(/hello\.png/i));
+        await waitFor(() => getByText(/hello2\.png/i));
+
         expect(getByText('Successfully added 2 file(s) to upload queue.')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
+    });
 
-        // delete first file
+    it('should delete first file', async () => {
+        const { container, getByText, getByTestId } = setup();
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
+        await waitFor(() => getByText(/hello\.png/i));
+        await waitFor(() => getByText(/hello2\.png/i));
+
         fireEvent.click(getByTestId('dsi-dsid-0-delete'));
         fireEvent.click(getByTestId('confirm-dsi-dsid-delete'));
         expect(container).toMatchSnapshot();
+    });
 
-        // delete all files
+    it('should delete all files', async () => {
+        const { container, getByText, getByTestId } = setup();
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['hello'], 'hello.png', { type: 'image/png' }),
+                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
+        await waitFor(() => getByText(/hello\.png/i));
+        await waitFor(() => getByText(/hello2\.png/i));
+
         fireEvent.click(getByTestId('delete-all-files'));
         fireEvent.click(getByTestId('confirm-delete-all-files'));
         expect(container).toMatchSnapshot();
@@ -534,7 +568,9 @@ describe('Component FileUploader', () => {
         fireEvent.click(getByRole('option', { name: 'Open Access' }));
 
         fireEvent.change(within(getByTestId('dsi-embargo-date-1-input')).getByRole('textbox'), {
-            target: { value: moment().format(GENERIC_DATE_FORMAT) },
+            target: {
+                value: moment().format(GENERIC_DATE_FORMAT),
+            },
         });
 
         fireEvent.click(getByTestId('terms-and-conditions-input'));

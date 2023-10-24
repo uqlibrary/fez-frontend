@@ -331,9 +331,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -760,9 +757,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -776,9 +770,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               type="button"
             >
               Submit for approval
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1126,9 +1117,6 @@ exports[`AddDataCollection test should render component with a valid collection 
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -1555,9 +1543,6 @@ exports[`AddDataCollection test should render component with a valid collection 
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1571,9 +1556,6 @@ exports[`AddDataCollection test should render component with a valid collection 
               type="button"
             >
               Submit for approval
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1917,9 +1899,6 @@ exports[`AddDataCollection test should render component with an invalid collecti
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2346,9 +2325,6 @@ exports[`AddDataCollection test should render component with an invalid collecti
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -2362,9 +2338,6 @@ exports[`AddDataCollection test should render component with an invalid collecti
               type="button"
             >
               Submit for approval
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -2708,9 +2681,6 @@ exports[`AddDataCollection test should render data set form 1`] = `
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -3137,9 +3107,6 @@ exports[`AddDataCollection test should render data set form 1`] = `
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -3153,9 +3120,6 @@ exports[`AddDataCollection test should render data set form 1`] = `
               type="button"
             >
               Submit for approval
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
