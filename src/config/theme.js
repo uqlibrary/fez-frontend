@@ -60,7 +60,7 @@ const palette = {
 const isJestTest = () => {
     try {
         return !!process.env.JEST_WORKER_ID;
-    } finally {
+    } catch (e) {
         return false;
     }
 };
