@@ -111,15 +111,15 @@ export const JournalFieldsMap = [
                         <b>Gold open access:</b> A freely accessible, final version of a publication is available for
                         everyone to read immediately after publication.
                     </p>
-                    <p>
+                    <div>
                         For other pathways:
                         <ul>
-                            <li>
+                            <li key={'OPEN'}>
                                 Use the <b>open access: accepted version</b> filter to sort journals by length of
                                 embargo period after which a self-archived or author accepted manuscript can be made
                                 available via UQ eSpace. (Green open access).
                             </li>
-                            <li>
+                            <li key={'APC'}>
                                 Use the <b>open access: published version</b> filter to include or exclude charges
                                 (APCs) which are paid to a publisher to make a publication immediately available and
                                 openly accessible. Some APCs may be pre-paid or discounted, if the Library has
@@ -130,7 +130,7 @@ export const JournalFieldsMap = [
                                 .
                             </li>
                         </ul>
-                    </p>
+                    </div>
                     <p>
                         Policies and agreements can change over time or be subject to limits. Click on the journal title
                         for more information.

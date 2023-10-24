@@ -13,7 +13,7 @@ const JournalsListHeaderCol2Full = ({ journal }) => {
             <Tooltip title={journal.titleTooltip || ''}>
                 <InputLabel
                     shrink
-                    style={{ lineHeight: 1.3, whiteSpace: 'normal', textOverflow: 'ellipsis', fontWeight: 600 }}
+                    style={{ lineHeight: 1.1, whiteSpace: 'normal', textOverflow: 'ellipsis', fontWeight: 600 }}
                 >
                     {journal.label}
                     <span style={{ display: 'block', fontWeight: 400 }}>{journal.subLabel}</span>
