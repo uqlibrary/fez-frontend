@@ -3066,9 +3066,6 @@ exports[`Files Component  should render audio files with _xt in their filename f
                           d="M8 5v14l11-7z"
                         />
                       </svg>
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                 </div>
@@ -3228,9 +3225,6 @@ exports[`Files Component  should render audio files with _xt in their filename f
                           d="M8 5v14l11-7z"
                         />
                       </svg>
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                 </div>
@@ -3704,9 +3698,6 @@ exports[`Files Component  should render component 2`] = `
                 type="button"
               >
                 Click to login
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -4597,9 +4588,6 @@ exports[`Files Component  should render component for public users 1`] = `
                 type="button"
               >
                 Click to login
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -4922,9 +4910,6 @@ exports[`Files Component  should render files based on security policy correctly
                             d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"
                           />
                         </svg>
-                        <span
-                          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                        />
                       </button>
                     </div>
                   </div>
@@ -5532,9 +5517,6 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                           d="M8 5v14l11-7z"
                         />
                       </svg>
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                 </div>

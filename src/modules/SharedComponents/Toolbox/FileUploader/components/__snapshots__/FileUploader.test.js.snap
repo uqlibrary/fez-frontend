@@ -404,9 +404,6 @@ exports[`Component FileUploader should delete first file 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -522,9 +519,6 @@ exports[`Component FileUploader should delete first file 1`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -845,9 +839,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -963,9 +954,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -995,9 +983,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1035,9 +1020,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1108,9 +1090,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -1558,9 +1537,6 @@ exports[`Component FileUploader should handle file order change 2`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -1741,9 +1717,6 @@ exports[`Component FileUploader should handle file order change 2`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -1773,9 +1746,6 @@ exports[`Component FileUploader should handle file order change 2`] = `
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1813,9 +1783,6 @@ exports[`Component FileUploader should handle file order change 2`] = `
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1950,9 +1917,6 @@ exports[`Component FileUploader should handle file order change 2`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -2277,9 +2241,6 @@ exports[`Component FileUploader should handle file order change 3`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -2460,9 +2421,6 @@ exports[`Component FileUploader should handle file order change 3`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -2492,9 +2450,6 @@ exports[`Component FileUploader should handle file order change 3`] = `
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -2532,9 +2487,6 @@ exports[`Component FileUploader should handle file order change 3`] = `
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -2669,9 +2621,6 @@ exports[`Component FileUploader should handle file order change 3`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -3254,9 +3203,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -3372,9 +3318,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -3404,9 +3347,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -3444,9 +3384,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -3517,9 +3454,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -3967,9 +3901,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -4145,9 +4076,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                         d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -4179,9 +4107,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -4211,9 +4136,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -4251,9 +4173,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -4388,9 +4307,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -4454,9 +4370,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
             />
           </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </span>
         <p
           class="MuiTypography-root MuiTypography-body1 css-hpta27-MuiTypography-root"
@@ -5247,9 +5160,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -5429,9 +5339,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -5461,9 +5368,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -5501,9 +5405,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -5638,9 +5539,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -5965,9 +5863,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -6140,9 +6035,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -6172,9 +6064,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -6212,9 +6101,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -6349,9 +6235,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -6676,9 +6559,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -6851,9 +6731,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -6883,9 +6760,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -6923,9 +6797,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -7056,9 +6927,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                         d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -7090,9 +6958,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -7156,9 +7021,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
             />
           </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </span>
         <p
           class="MuiTypography-root MuiTypography-body1 css-hpta27-MuiTypography-root"
@@ -7575,9 +7437,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -7693,9 +7552,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -7725,9 +7581,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -7765,9 +7618,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -7838,9 +7688,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -8288,9 +8135,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -8474,9 +8318,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -8506,9 +8347,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -8546,9 +8384,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -8687,9 +8522,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -9014,9 +8846,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -9195,9 +9024,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -9227,9 +9053,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -9267,9 +9090,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -9408,9 +9228,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -9735,9 +9552,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -9916,9 +9730,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -9948,9 +9759,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -9988,9 +9796,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -10127,9 +9932,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                         d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -10161,9 +9963,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -10227,9 +10026,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
             />
           </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </span>
         <p
           class="MuiTypography-root MuiTypography-body1 css-hpta27-MuiTypography-root"
@@ -10691,9 +10487,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -10809,9 +10602,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -11136,9 +10926,6 @@ exports[`Component FileUploader should update file description 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -11318,9 +11105,6 @@ exports[`Component FileUploader should update file description 1`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>

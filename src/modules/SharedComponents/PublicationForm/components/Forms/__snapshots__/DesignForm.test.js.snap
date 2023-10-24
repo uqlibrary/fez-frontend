@@ -174,9 +174,6 @@ exports[`DesignForm renders  component 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -444,9 +441,6 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -519,9 +513,6 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

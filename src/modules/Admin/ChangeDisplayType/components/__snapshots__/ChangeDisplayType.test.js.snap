@@ -232,9 +232,6 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -249,9 +246,6 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                   type="button"
                 >
                   Change display type
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -453,9 +447,6 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -470,9 +461,6 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                   type="button"
                 >
                   Change display type
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -666,9 +654,6 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -683,9 +668,6 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                   type="button"
                 >
                   Change display type
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>

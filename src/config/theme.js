@@ -71,6 +71,12 @@ export const mui1theme = createTheme({
         suppressDeprecationWarnings: true,
     },
     components: {
+        MuiButtonBase: {
+            defaultProps: {
+                // Disable ripple for jest tests
+                disableRipple: !!process.env.JEST_WORKER_ID,
+            },
+        },
         MuiFormLabel: {
             styleOverrides: {
                 root: {
@@ -157,6 +163,12 @@ export const mui1theme = createTheme({
 export const adminTheme = createTheme({
     palette: palette,
     components: {
+        MuiButtonBase: {
+            defaultProps: {
+                // Disable ripple for jest tests
+                disableRipple: !!process.env.JEST_WORKER_ID,
+            },
+        },
         MuiFormLabel: {
             styleOverrides: {
                 root: {

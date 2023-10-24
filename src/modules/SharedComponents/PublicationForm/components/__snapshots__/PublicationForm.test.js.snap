@@ -61,9 +61,6 @@ exports[`Component PublicationForm Shows an alert 1`] = `
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -107,9 +104,6 @@ exports[`Component PublicationForm Shows an alert 1`] = `
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -178,9 +172,6 @@ exports[`Component PublicationForm Shows an alert 2`] = `
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -262,9 +253,6 @@ exports[`Component PublicationForm Shows an alert 2`] = `
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -395,9 +383,6 @@ exports[`Component PublicationForm Shows an alert 2`] = `
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -461,9 +446,6 @@ exports[`Component PublicationForm Shows an alert 3`] = `
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -507,9 +489,6 @@ exports[`Component PublicationForm Shows an alert 3`] = `
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -573,9 +552,6 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -619,9 +595,6 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -685,9 +658,6 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -742,9 +712,6 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -808,9 +775,6 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -865,9 +829,6 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -931,9 +892,6 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -988,9 +946,6 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -1059,9 +1014,6 @@ exports[`Component PublicationForm should render component initialised with just
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -1105,9 +1057,6 @@ exports[`Component PublicationForm should render component initialised with just
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -1176,9 +1125,6 @@ exports[`Component PublicationForm should render component initialised with two 
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -1233,9 +1179,6 @@ exports[`Component PublicationForm should render component initialised with two 
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -1304,9 +1247,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -1504,9 +1444,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -1754,9 +1691,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -1842,9 +1776,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -1913,9 +1844,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -2098,9 +2026,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2233,9 +2158,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -2321,9 +2243,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -2392,9 +2311,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -2570,9 +2486,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2805,9 +2718,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -2893,9 +2803,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -2964,9 +2871,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -3184,9 +3088,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -3413,9 +3314,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -3501,9 +3399,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -3572,9 +3467,6 @@ exports[`Component PublicationForm should render component with all fields disab
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -3687,9 +3579,6 @@ exports[`Component PublicationForm should render form after selecting both publi
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -3744,9 +3633,6 @@ exports[`Component PublicationForm should render form after selecting both publi
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -3762,9 +3648,6 @@ exports[`Component PublicationForm should render form after selecting both publi
           type="button"
         >
           Submit for approval
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>

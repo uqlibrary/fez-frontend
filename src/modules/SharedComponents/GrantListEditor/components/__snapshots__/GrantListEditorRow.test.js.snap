@@ -162,9 +162,6 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -338,9 +335,6 @@ exports[`GrantListEditorRow should render default view 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -517,9 +511,6 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -692,9 +683,6 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -870,9 +858,6 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1044,9 +1029,6 @@ exports[`GrantListEditorRow should use width hook 1`] = `
                       d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>

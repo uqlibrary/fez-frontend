@@ -169,9 +169,6 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
                 d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </span>
       </div>
@@ -201,9 +198,6 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
               d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
             />
           </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -404,9 +398,6 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
                 d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </span>
       </div>

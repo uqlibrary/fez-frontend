@@ -37,9 +37,6 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
             />
           </svg>
           Previous
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -58,9 +55,6 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
           type="button"
         >
           1
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
@@ -72,9 +66,6 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
           type="button"
         >
           2
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
@@ -86,9 +77,6 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
           type="button"
         >
           3
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -106,9 +94,6 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
             type="button"
           >
             Page 2 of 3
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -132,9 +117,6 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
               d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
             />
           </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -171,9 +153,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
             />
           </svg>
           Previous
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -192,9 +171,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           type="button"
         >
           1
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         ...
         <button
@@ -207,9 +183,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           type="button"
         >
           8
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 9 of 50 result pages"
@@ -221,9 +194,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           type="button"
         >
           9
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 10 of 50 result pages"
@@ -235,9 +205,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           type="button"
         >
           10
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 11 of 50 result pages"
@@ -249,9 +216,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           type="button"
         >
           11
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 12 of 50 result pages"
@@ -263,9 +227,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           type="button"
         >
           12
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         ...
         <button
@@ -278,9 +239,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           type="button"
         >
           50
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -298,9 +256,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
             type="button"
           >
             Page 10 of 50
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -324,9 +279,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
               d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
             />
           </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -390,9 +342,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           type="button"
         >
           1
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
@@ -404,9 +353,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           type="button"
         >
           2
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
@@ -418,9 +364,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           type="button"
         >
           3
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -438,9 +381,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
             type="button"
           >
             Page 1 of 3
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -464,9 +404,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
               d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
             />
           </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -503,9 +440,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
             />
           </svg>
           Previous
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -524,9 +458,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           type="button"
         >
           1
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
@@ -538,9 +469,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           type="button"
         >
           2
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
@@ -552,9 +480,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           type="button"
         >
           3
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -572,9 +497,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
             type="button"
           >
             Page 3 of 3
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -635,9 +557,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
             />
           </svg>
           Previous
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -656,9 +575,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           type="button"
         >
           1
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
@@ -670,9 +586,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           type="button"
         >
           2
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
@@ -684,9 +597,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           type="button"
         >
           3
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -704,9 +614,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
             type="button"
           >
             Page 2 of 3
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -730,9 +637,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
               d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
             />
           </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>

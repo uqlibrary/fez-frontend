@@ -127,9 +127,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div
@@ -484,9 +481,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div
@@ -856,9 +850,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div

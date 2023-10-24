@@ -41,9 +41,6 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -101,9 +98,6 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -192,9 +186,6 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div

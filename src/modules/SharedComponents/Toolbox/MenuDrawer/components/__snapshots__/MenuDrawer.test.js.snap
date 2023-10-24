@@ -81,9 +81,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
                   d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -111,9 +108,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
                 secondary text 0
               </p>
             </div>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </div>
         </span>
         <hr
@@ -143,9 +137,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
                 secondary text 1
               </p>
             </div>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </div>
         </span>
       </nav>
@@ -243,9 +234,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
                     d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -262,9 +250,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               type="button"
             >
               Skip navigation
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <span
@@ -291,9 +276,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
                   secondary text 0
                 </p>
               </div>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </div>
           </span>
           <hr
@@ -323,9 +305,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
                   secondary text 1
                 </p>
               </div>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </div>
           </span>
         </nav>

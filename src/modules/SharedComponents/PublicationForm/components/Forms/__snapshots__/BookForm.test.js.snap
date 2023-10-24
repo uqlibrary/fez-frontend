@@ -153,9 +153,6 @@ exports[`BookForm renders  component 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -756,9 +753,6 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1101,9 +1095,6 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1208,9 +1199,6 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
