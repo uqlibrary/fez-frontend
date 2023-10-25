@@ -54,7 +54,11 @@ const StyledGridCard = styled(Grid)(({ theme }) => ({
         margin: '0 auto 24px auto',
     },
 }));
-const StyledAppTitle = styled(Typography)(({ theme }) => ({
+
+const StyledAppTitle = styled(Typography, {
+    shouldForwardProp: prop => prop !== 'indentTitle',
+})(({ theme, indentTitle }) => ({
+    ...(indentTitle ? { textIndent: '290px' } : {}),
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     color: theme.palette.common.white,
@@ -355,7 +359,12 @@ export class AppClass extends PureComponent {
                                         </Grid>
                                     )}
                                     <Grid item xs={'auto'} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                        <StyledAppTitle variant="h5" component={'h1'} noWrap>
+                                        <StyledAppTitle
+                                            variant="h5"
+                                            component={'h1'}
+                                            noWrap
+                                            indentTitle={this.state.docked}
+                                        >
                                             {locale.global.appTitle}
                                         </StyledAppTitle>
                                     </Grid>
